@@ -134,6 +134,7 @@
     </RadioGroup>
 
     <ScrollView
+        android:id="@+id/class_check_sc"
         android:background="@color/colorGray_White"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">

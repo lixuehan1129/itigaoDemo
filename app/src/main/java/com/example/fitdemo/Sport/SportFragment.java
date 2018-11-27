@@ -35,6 +35,6 @@ public class SportFragment extends BaseFragment {
     @SuppressLint("NewApi")
     private void initView(View view){
         Toolbar toolbar = (Toolbar)view.findViewById(R.id.sportFragment_mainTool);
-        toolbar.setTitle("运动");
+        toolbar.setTitle("运动数据");
     }
 }

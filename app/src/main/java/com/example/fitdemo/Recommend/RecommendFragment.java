@@ -50,7 +50,7 @@ public class RecommendFragment extends BaseFragment implements TabLayout.OnTabSe
         TabLayout mTabLayout = (TabLayout) view.findViewById(R.id.recommendFragment_layout);
         mViewPager = (ViewPager)view.findViewById(R.id.recommendFragment_viewpager);
 
-        mViewPager.setOffscreenPageLimit(3);
+        mViewPager.setOffscreenPageLimit(2);
 
         //设置TabLayout标签的显示方式
         mTabLayout.setTabMode(TabLayout.MODE_FIXED);

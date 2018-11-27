@@ -2,27 +2,53 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/class_video_item_relative"
-    android:padding="12dp"
-    android:background="@color/colorWhite"
+    android:id="@+id/class_select_item_relative"
+    android:padding="10dp"
+    android:gravity="center"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
     <com.example.fitdemo.ViewHelper.CustomRoundAngleImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@mipmap/ic_launcher"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
         android:id="@+id/class_select_item_iv"
         android:padding="3dp"/>
 
     <LinearLayout
         android:id="@+id/class_select_item_l"
         android:gravity="center"
-        android:padding="20dp"
+        android:padding="6dp"
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_toEndOf="@+id/class_select_item_iv">
+
+        <TextView
+            android:id="@+id/class_select_item_itr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="课程名 简短介绍"
+            android:maxLines="1"
+            android:textColor="@color/colorBlack"/>
+
+        <TextView
+            android:paddingTop="2dp"
+            android:id="@+id/class_select_item_coach"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="课程教练 教练介绍 几星教练"
+            android:textSize="10sp"
+            android:textColor="@color/colorBlack"
+            android:maxLines="1"/>
+
+        <TextView
+            android:paddingTop="2dp"
+            android:id="@+id/class_select_item_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="开课时间"
+            android:textSize="10sp"
+            android:maxLines="1"/>
     </LinearLayout>
 
 

@@ -21,6 +21,7 @@ import java.util.List;
  * Created by 最美人间四月天 on 2017/5/11.
  */
 
+
 public class ClassVideoAdapter extends RecyclerView.Adapter<ClassVideoAdapter.ViewHolder> {
 
     private OnItemClickListener mOnItemClickListener;
