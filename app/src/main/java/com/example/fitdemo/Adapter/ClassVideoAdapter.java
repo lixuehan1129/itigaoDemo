@@ -2,11 +2,13 @@ package com.example.fitdemo.Adapter;
 
 import android.content.Context;
 import android.graphics.Bitmap;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 
@@ -23,7 +25,7 @@ public class ClassVideoAdapter extends RecyclerView.Adapter<ClassVideoAdapter.Vi
 
     private OnItemClickListener mOnItemClickListener;
     private OnItemLongClickListener mOnItemLongClickListener;
-    private Context mcontext;
+  //  private Context mContext;
     private List<Class_Video> mDataSet;
 
 
@@ -31,17 +33,21 @@ public class ClassVideoAdapter extends RecyclerView.Adapter<ClassVideoAdapter.Vi
 
         ImageView class_video_iv;
         TextView class_video_itr;
+        RelativeLayout relativeLayout;
+        CardView cardView;
 
         public ViewHolder(View itemView) {
             super(itemView);
             class_video_iv = (ImageView) itemView.findViewById(R.id.class_video_item_iv);
             class_video_itr = (TextView) itemView.findViewById(R.id.class_video_item_itr);
+            relativeLayout = (RelativeLayout) itemView.findViewById(R.id.class_video_item_relative);
+            cardView = (CardView) itemView.findViewById(R.id.class_video_item_cv);
         }
     }
     @Override
     public ClassVideoAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.class_video_item,parent,false);
-        mcontext = parent.getContext();
+      //  mContext = parent.getContext();
         final RecyclerView.ViewHolder vh = new ViewHolder(v);
         return (ViewHolder) vh;
     }
@@ -53,8 +59,22 @@ public class ClassVideoAdapter extends RecyclerView.Adapter<ClassVideoAdapter.Vi
     @Override
     public void onBindViewHolder(final ClassVideoAdapter.ViewHolder holder, int position) {
         Class_Video class_video = mDataSet.get(position);
-        holder.class_video_itr.setText(class_video.getClass_video_itr());
-        holder.class_video_iv.setImageBitmap(class_video.getClass_video_iv());
+        if(class_video.getClass_video_itr().equals("隐藏")){
+            holder.relativeLayout.setPadding(0,0,0,0);
+            holder.cardView.setPadding(0,0,0,0);
+            holder.cardView.setRadius(0);
+            holder.cardView.setCardElevation(0);
+            holder.class_video_itr.setVisibility(View.INVISIBLE);
+            holder.class_video_itr.getLayoutParams().height = 0;
+        }else {
+            holder.class_video_itr.setText(class_video.getClass_video_itr());
+        }
+        if(class_video.getClass_video_iv() != null){
+            holder.class_video_iv.setImageResource(class_video.getClass_video_iv());
+        }else {
+            holder.class_video_iv.setImageResource(R.mipmap.ic_cycling);
+        }
+
        // String url = class_video.getItem_image();
 //        if(url!=null){
 ////          holder.item_text.setImageBitmap(DealBitmap.centerSquareScaleBitmap(url));
@@ -111,7 +131,7 @@ public class ClassVideoAdapter extends RecyclerView.Adapter<ClassVideoAdapter.Vi
 
     public class Class_Video {
         private String class_video_itr;
-        private Bitmap class_video_iv;
+        private Integer class_video_iv;
 
         public String getClass_video_itr() {
             return class_video_itr;
@@ -121,15 +141,15 @@ public class ClassVideoAdapter extends RecyclerView.Adapter<ClassVideoAdapter.Vi
             this.class_video_itr = class_video_itr;
         }
 
-        public Bitmap getClass_video_iv() {
+        public Integer getClass_video_iv() {
             return class_video_iv;
         }
 
-        public void setClass_video_iv(Bitmap class_video_iv) {
+        public void setClass_video_iv(Integer class_video_iv) {
             this.class_video_iv = class_video_iv;
         }
 
-        public Class_Video(String class_video_itr, Bitmap class_video_iv) {
+        public Class_Video(String class_video_itr, Integer class_video_iv) {
             this.class_video_itr = class_video_itr;
             this.class_video_iv = class_video_iv;
         }

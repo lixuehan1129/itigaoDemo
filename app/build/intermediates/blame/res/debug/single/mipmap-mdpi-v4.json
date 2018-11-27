@@ -1,5 +1,9 @@
 [
     {
+        "merged": "C:\\lifiles\\Android graduate\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\ic_cycling.png",
+        "source": "C:\\lifiles\\Android graduate\\FitDemo\\app\\src\\main\\res\\mipmap-mdpi\\ic_cycling.png"
+    },
+    {
         "merged": "C:\\lifiles\\Android graduate\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\ic_launcher.png",
         "source": "C:\\lifiles\\Android graduate\\FitDemo\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
     },

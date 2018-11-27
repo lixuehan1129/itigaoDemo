@@ -44,6 +44,10 @@
         "source": "C:\\Users\\ROBOSOFT\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.2.aar\\a06fe275853bc8025e76b54cc8058496\\res\\drawable\\abc_ratingbar_indicator_material.xml"
     },
     {
+        "merged": "C:\\lifiles\\Android graduate\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\radiobutton_background_checked.xml",
+        "source": "C:\\lifiles\\Android graduate\\FitDemo\\app\\src\\main\\res\\drawable\\radiobutton_background_checked.xml"
+    },
+    {
         "merged": "C:\\lifiles\\Android graduate\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_dialog_material_background.xml",
         "source": "C:\\Users\\ROBOSOFT\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.2.aar\\a06fe275853bc8025e76b54cc8058496\\res\\drawable\\abc_dialog_material_background.xml"
     },
@@ -92,6 +96,10 @@
         "source": "C:\\Users\\ROBOSOFT\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.2.aar\\a06fe275853bc8025e76b54cc8058496\\res\\drawable\\abc_cab_background_internal_bg.xml"
     },
     {
+        "merged": "C:\\lifiles\\Android graduate\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\radiobutton_background_unchecked.xml",
+        "source": "C:\\lifiles\\Android graduate\\FitDemo\\app\\src\\main\\res\\drawable\\radiobutton_background_unchecked.xml"
+    },
+    {
         "merged": "C:\\lifiles\\Android graduate\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_top_material.xml",
         "source": "C:\\Users\\ROBOSOFT\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.2.aar\\a06fe275853bc8025e76b54cc8058496\\res\\drawable\\abc_cab_background_top_material.xml"
     },
@@ -134,6 +142,14 @@
     {
         "merged": "C:\\lifiles\\Android graduate\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\notification_icon_background.xml",
         "source": "C:\\Users\\ROBOSOFT\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.2.aar\\ff3ad9a0de43304572e7053f5e2202ae\\res\\drawable\\notification_icon_background.xml"
+    },
+    {
+        "merged": "C:\\lifiles\\Android graduate\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\radiobutton_textcolor.xml",
+        "source": "C:\\lifiles\\Android graduate\\FitDemo\\app\\src\\main\\res\\drawable\\radiobutton_textcolor.xml"
+    },
+    {
+        "merged": "C:\\lifiles\\Android graduate\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\button_selector.xml",
+        "source": "C:\\lifiles\\Android graduate\\FitDemo\\app\\src\\main\\res\\drawable\\button_selector.xml"
     },
     {
         "merged": "C:\\lifiles\\Android graduate\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_check_material.xml",

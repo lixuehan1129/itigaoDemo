@@ -14,4 +14,12 @@
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
     </android.support.v7.widget.Toolbar>
 
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/classesFragment_rv"
+        android:layout_below="@+id/classesFragment_mainTool"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </android.support.v7.widget.RecyclerView>
+
 </RelativeLayout>

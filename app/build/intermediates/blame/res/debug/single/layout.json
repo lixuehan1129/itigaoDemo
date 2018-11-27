@@ -172,6 +172,10 @@
         "source": "C:\\Users\\ROBOSOFT\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-27.0.2.aar\\8f3b387e3ed32369fc4d4c3d26ced5b1\\res\\layout\\notification_media_cancel_action.xml"
     },
     {
+        "merged": "C:\\lifiles\\Android graduate\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\layout\\class_check.xml",
+        "source": "C:\\lifiles\\Android graduate\\FitDemo\\app\\src\\main\\res\\layout\\class_check.xml"
+    },
+    {
         "merged": "C:\\lifiles\\Android graduate\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_item_material.xml",
         "source": "C:\\Users\\ROBOSOFT\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.2.aar\\a06fe275853bc8025e76b54cc8058496\\res\\layout\\select_dialog_item_material.xml"
     },
