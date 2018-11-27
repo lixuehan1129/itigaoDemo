@@ -1,4 +1,0 @@
-#Tue Nov 27 17:14:38 CST 2018
-base.0=C\:\\lifiles\\Android graduate\\FitDemo\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\1
-renamed.0=classes.dex
-file.0=C\:\\lifiles\\Android graduate\\FitDemo\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\1\\classes.dex
