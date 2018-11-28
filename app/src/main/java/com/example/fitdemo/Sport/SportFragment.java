@@ -8,6 +8,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.example.fitdemo.R;
 import com.example.fitdemo.ViewHelper.BaseFragment;
@@ -36,5 +37,8 @@ public class SportFragment extends BaseFragment {
     private void initView(View view){
         Toolbar toolbar = (Toolbar)view.findViewById(R.id.sportFragment_mainTool);
         toolbar.setTitle("运动数据");
+
+        TextView textView = (TextView) view.findViewById(R.id.sportFragment_data1);
+        textView.setText("4999");
     }
 }

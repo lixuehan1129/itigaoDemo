@@ -3833,9 +3833,9 @@ containing a value of this type.
         public static final int line3=0x7f0d0008;
         public static final int listMode=0x7f0d0026;
         public static final int list_item=0x7f0d0070;
-        public static final int masked=0x7f0d00ff;
+        public static final int masked=0x7f0d0100;
         public static final int media_actions=0x7f0d00e3;
-        public static final int message=0x7f0d00fd;
+        public static final int message=0x7f0d00fe;
         public static final int middle=0x7f0d005b;
         public static final int mini=0x7f0d0055;
         public static final int mode_default=0x7f0d003c;
@@ -3902,6 +3902,7 @@ containing a value of this type.
         public static final int snap=0x7f0d0033;
         public static final int spacer=0x7f0d0073;
         public static final int split_action_bar=0x7f0d000f;
+        public static final int sportFragment_data1=0x7f0d00fa;
         public static final int sportFragment_mainTool=0x7f0d00f9;
         public static final int spread=0x7f0d001e;
         public static final int spread_inside=0x7f0d0021;
@@ -3912,9 +3913,9 @@ containing a value of this type.
         public static final int status_bar_latest_event_content=0x7f0d00e2;
         public static final int submenuarrow=0x7f0d0085;
         public static final int submit_area=0x7f0d0096;
-        public static final int subscribeFragment_mainTool=0x7f0d00fa;
-        public static final int subscribeFragment_rv=0x7f0d00fc;
-        public static final int subscribeFragment_tv=0x7f0d00fb;
+        public static final int subscribeFragment_mainTool=0x7f0d00fb;
+        public static final int subscribeFragment_rv=0x7f0d00fd;
+        public static final int subscribeFragment_tv=0x7f0d00fc;
         public static final int tabMode=0x7f0d0028;
         public static final int tag_transition_group=0x7f0d0010;
         public static final int text=0x7f0d0011;
@@ -3941,7 +3942,7 @@ containing a value of this type.
         public static final int useLogo=0x7f0d002e;
         public static final int view_offset_helper=0x7f0d001c;
         public static final int viewpager=0x7f0d00db;
-        public static final int visible=0x7f0d00fe;
+        public static final int visible=0x7f0d00ff;
         public static final int withText=0x7f0d0066;
         public static final int wrap=0x7f0d001f;
         public static final int wrap_content=0x7f0d003b;

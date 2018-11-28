@@ -1020,9 +1020,9 @@ int id line1 0x7f0d0007
 int id line3 0x7f0d0008
 int id listMode 0x7f0d0026
 int id list_item 0x7f0d0070
-int id masked 0x7f0d00ff
+int id masked 0x7f0d0100
 int id media_actions 0x7f0d00e3
-int id message 0x7f0d00fd
+int id message 0x7f0d00fe
 int id middle 0x7f0d005b
 int id mini 0x7f0d0055
 int id mode_default 0x7f0d003c
@@ -1089,6 +1089,7 @@ int id snackbar_text 0x7f0d00cd
 int id snap 0x7f0d0033
 int id spacer 0x7f0d0073
 int id split_action_bar 0x7f0d000f
+int id sportFragment_data1 0x7f0d00fa
 int id sportFragment_mainTool 0x7f0d00f9
 int id spread 0x7f0d001e
 int id spread_inside 0x7f0d0021
@@ -1099,9 +1100,9 @@ int id start 0x7f0d004d
 int id status_bar_latest_event_content 0x7f0d00e2
 int id submenuarrow 0x7f0d0085
 int id submit_area 0x7f0d0096
-int id subscribeFragment_mainTool 0x7f0d00fa
-int id subscribeFragment_rv 0x7f0d00fc
-int id subscribeFragment_tv 0x7f0d00fb
+int id subscribeFragment_mainTool 0x7f0d00fb
+int id subscribeFragment_rv 0x7f0d00fd
+int id subscribeFragment_tv 0x7f0d00fc
 int id tabMode 0x7f0d0028
 int id tag_transition_group 0x7f0d0010
 int id text 0x7f0d0011
@@ -1128,7 +1129,7 @@ int id up 0x7f0d001b
 int id useLogo 0x7f0d002e
 int id view_offset_helper 0x7f0d001c
 int id viewpager 0x7f0d00db
-int id visible 0x7f0d00fe
+int id visible 0x7f0d00ff
 int id withText 0x7f0d0066
 int id wrap 0x7f0d001f
 int id wrap_content 0x7f0d003b

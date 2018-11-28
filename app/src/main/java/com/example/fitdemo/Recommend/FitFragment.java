@@ -7,6 +7,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -105,48 +106,13 @@ public class FitFragment extends BaseFragment {
         recyclerView6 = view.findViewById(R.id.class_check_rv6);
         recyclerView7 = view.findViewById(R.id.class_check_rv7);
 
-        recyclerView1.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false) {
-            @Override
-            public boolean canScrollVertically() {
-                return false;
-            }
-        });
-        recyclerView2.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false) {
-            @Override
-            public boolean canScrollVertically() {
-                return false;
-            }
-        });
-        recyclerView3.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false) {
-            @Override
-            public boolean canScrollVertically() {
-                return false;
-            }
-        });
-        recyclerView4.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false) {
-            @Override
-            public boolean canScrollVertically() {
-                return false;
-            }
-        });
-        recyclerView5.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false) {
-            @Override
-            public boolean canScrollVertically() {
-                return false;
-            }
-        });
-        recyclerView6.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false) {
-            @Override
-            public boolean canScrollVertically() {
-                return false;
-            }
-        });
-        recyclerView7.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false) {
-            @Override
-            public boolean canScrollVertically() {
-                return false;
-            }
-        });
+        recyclerView1.setLayoutManager(setNoSco());
+        recyclerView2.setLayoutManager(setNoSco());
+        recyclerView3.setLayoutManager(setNoSco());
+        recyclerView4.setLayoutManager(setNoSco());
+        recyclerView5.setLayoutManager(setNoSco());
+        recyclerView6.setLayoutManager(setNoSco());
+        recyclerView7.setLayoutManager(setNoSco());
 
     }
 
@@ -162,7 +128,7 @@ public class FitFragment extends BaseFragment {
                 introduce.add("健身课程  一周拥有好身材");
                 introduce.add("如何健身  你该这么做");
                 coach.add("金牌教练 杰克马 我从来不要工资");
-                coach.add("教学有方 校长 请你吃热狗");
+                coach.add("教学有方 校长 微博抽奖送热狗");
                 time.add("星期一 11-26 08：30-10：00");
                 time.add("星期一 11-26 14：30-16：00");
                 check.add(1);
@@ -196,7 +162,7 @@ public class FitFragment extends BaseFragment {
                 introduce.add("健身课程  一周拥有好身材");
                 introduce.add("如何健身  你该这么做");
                 coach.add("金牌教练 杰克马 我从来不要工资");
-                coach.add("教学有方 校长 请你吃热狗");
+                coach.add("兼职教练 刘美男 开黑吗，我辅助贼6");
                 time.add("星期四 11-26 08：30-10：00");
                 time.add("星期四 11-26 14：30-16：00");
                 image.add(R.mipmap.ic_yoga1);
@@ -208,7 +174,7 @@ public class FitFragment extends BaseFragment {
             case 4:{
                 introduce.add("今天你瘦了吗  教你越吃又瘦");
                 introduce.add("如何健身2  你该这么做");
-                coach.add("特约教练 王老板 先定一个小目标");
+                coach.add("美女教练 锦鲤杨 燃烧我的卡路里");
                 coach.add("特约教练 东子 我这个人脸盲");
                 time.add("星期五 11-26 08：30-10：00");
                 time.add("星期五 11-26 14：30-16：00");
@@ -220,7 +186,7 @@ public class FitFragment extends BaseFragment {
             }
             case 5:{
                 introduce.add("健身课程2  一周拥有好身材");
-                coach.add("金牌教练 老罗 其实我更适合演讲");
+                coach.add("金牌教练 小马 都亏到坐公交了");
                 time.add("星期六 11-26 08：30-10：00");
                 check.add(0);
                 image.add(R.mipmap.ic_yoga1);
@@ -230,7 +196,7 @@ public class FitFragment extends BaseFragment {
                 introduce.add("健身课程  一周拥有好身材");
                 introduce.add("如何健身  你该这么做");
                 coach.add("金牌教练 杰克马 我从来不要工资");
-                coach.add("教学有方 校长 请你吃热狗");
+                coach.add("教学有方 校长 微博抽奖送跑车");
                 time.add("星期日 11-26 08：30-10：00");
                 time.add("星期日 11-26 14：30-16：00");
                 image.add(R.mipmap.ic_run1);
@@ -261,80 +227,31 @@ public class FitFragment extends BaseFragment {
         classSelectAdapter = new ClassSelectAdapter(class_selects);
         switch (week){
             case 0:{
-                recyclerView1.addItemDecoration(new DividerItemChange(getActivity(),DividerItemChange.VERTICAL));
-                recyclerView1.setAdapter(classSelectAdapter);
-                classSelectAdapter.setOnItemClickListener(new ClassSelectAdapter.OnItemClickListener() {
-                    @Override
-                    public void onItemClick(View view, int position) {
-
-                    }
-                });
+                setAdapter(recyclerView1,week);
                 break;
             }
             case 1:{
-                recyclerView2.addItemDecoration(new DividerItemChange(getActivity(),DividerItemChange.VERTICAL));
-                recyclerView2.setAdapter(classSelectAdapter);
-                classSelectAdapter.setOnItemClickListener(new ClassSelectAdapter.OnItemClickListener() {
-                    @Override
-                    public void onItemClick(View view, int position) {
-
-                    }
-                });
+                setAdapter(recyclerView2,week);
                 break;
             }
             case 2:{
-                recyclerView3.addItemDecoration(new DividerItemChange(getActivity(),DividerItemChange.VERTICAL));
-                recyclerView3.setAdapter(classSelectAdapter);
-                classSelectAdapter.setOnItemClickListener(new ClassSelectAdapter.OnItemClickListener() {
-                    @Override
-                    public void onItemClick(View view, int position) {
-
-                    }
-                });
+                setAdapter(recyclerView3,week);
                 break;
             }
             case 3:{
-                recyclerView4.addItemDecoration(new DividerItemChange(getActivity(),DividerItemChange.VERTICAL));
-                recyclerView4.setAdapter(classSelectAdapter);
-                classSelectAdapter.setOnItemClickListener(new ClassSelectAdapter.OnItemClickListener() {
-                    @Override
-                    public void onItemClick(View view, int position) {
-
-                    }
-                });
+                setAdapter(recyclerView4,week);
                 break;
             }
             case 4:{
-                recyclerView5.addItemDecoration(new DividerItemChange(getActivity(),DividerItemChange.VERTICAL));
-                recyclerView5.setAdapter(classSelectAdapter);
-                classSelectAdapter.setOnItemClickListener(new ClassSelectAdapter.OnItemClickListener() {
-                    @Override
-                    public void onItemClick(View view, int position) {
-
-                    }
-                });
+                setAdapter(recyclerView5,week);
                 break;
             }
             case 5:{
-                recyclerView6.addItemDecoration(new DividerItemChange(getActivity(),DividerItemChange.VERTICAL));
-                recyclerView6.setAdapter(classSelectAdapter);
-                classSelectAdapter.setOnItemClickListener(new ClassSelectAdapter.OnItemClickListener() {
-                    @Override
-                    public void onItemClick(View view, int position) {
-
-                    }
-                });
+                setAdapter(recyclerView6,week);
                 break;
             }
             case 6:{
-                recyclerView7.addItemDecoration(new DividerItemChange(getActivity(),DividerItemChange.VERTICAL));
-                recyclerView7.setAdapter(classSelectAdapter);
-                classSelectAdapter.setOnItemClickListener(new ClassSelectAdapter.OnItemClickListener() {
-                    @Override
-                    public void onItemClick(View view, int position) {
-
-                    }
-                });
+                setAdapter(recyclerView7,week);
                 break;
             }
             default:
@@ -347,79 +264,43 @@ public class FitFragment extends BaseFragment {
         radioGroup.check(0);//默认为第一个
         button1.setChecked(true);
         //按钮点击事件
-        button1.setOnClickListener(new View.OnClickListener() {
+        setButton(button1,linearLayout1);
+        setButton(button2,linearLayout2);
+        setButton(button3,linearLayout3);
+        setButton(button4,linearLayout4);
+        setButton(button5,linearLayout5);
+        setButton(button6,linearLayout6);
+        setButton(button7,linearLayout7);
+    }
+
+    private LinearLayoutManager setNoSco(){
+        return new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false) {
             @Override
-            public void onClick(View view) {
-                scrollView.post(new Runnable() {
-                    @Override
-                    public void run() {
-                        scrollView.smoothScrollTo(0,linearLayout1.getTop());
-                    }
-                });
+            public boolean canScrollVertically() {
+                return false;
+            }
+        };
+    }
+
+    private void setAdapter(RecyclerView recyclerView,int week){
+        recyclerView.addItemDecoration(new DividerItemChange(getActivity(),DividerItemChange.VERTICAL));
+        recyclerView.setAdapter(classSelectAdapter);
+        classSelectAdapter.setOnItemClickListener(new ClassSelectAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(View view, int position) {
+
             }
         });
-        button2.setOnClickListener(new View.OnClickListener() {
+    }
+
+    private void setButton(Button button, final LinearLayout linearLayout){
+        button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 scrollView.post(new Runnable() {
                     @Override
                     public void run() {
-                        scrollView.smoothScrollTo(0,linearLayout2.getTop());
-                    }
-                });
-            }
-        });
-        button3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                scrollView.post(new Runnable() {
-                    @Override
-                    public void run() {
-                        scrollView.smoothScrollTo(0,linearLayout3.getTop());
-                    }
-                });
-            }
-        });
-        button4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                scrollView.post(new Runnable() {
-                    @Override
-                    public void run() {
-                        scrollView.smoothScrollTo(0,linearLayout4.getTop());
-                    }
-                });
-            }
-        });
-        button5.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                scrollView.post(new Runnable() {
-                    @Override
-                    public void run() {
-                        scrollView.smoothScrollTo(0,linearLayout5.getTop());
-                    }
-                });
-            }
-        });
-        button6.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                scrollView.post(new Runnable() {
-                    @Override
-                    public void run() {
-                        scrollView.smoothScrollTo(0,linearLayout6.getTop());
-                    }
-                });
-            }
-        });
-        button7.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                scrollView.post(new Runnable() {
-                    @Override
-                    public void run() {
-                        scrollView.smoothScrollTo(0,linearLayout7.getTop());
+                        scrollView.smoothScrollTo(0,linearLayout.getTop());
                     }
                 });
             }
