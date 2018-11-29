@@ -20,4 +20,12 @@
     <color name="colorBlue_W">#ccffff</color>
     <color name="colorPink_W">#ffcccc</color>
     <color name="colorBlueBit">#1296db</color>
+
+    <color name="colorOrange1">#FF8C00</color>
+    <color name="colorPink1">#FFE1FF</color>
+    <color name="colorGreen1">#43CD80</color>
+    <color name="colorYellow1">#FFEC8B</color>
+
+    <color name="colorBrown">#C1FFC1</color>
+
 </resources>

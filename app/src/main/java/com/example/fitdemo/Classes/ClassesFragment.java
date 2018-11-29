@@ -10,6 +10,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 import com.example.fitdemo.Adapter.ClassVideoAdapter;
 import com.example.fitdemo.R;
@@ -25,11 +26,7 @@ import java.util.List;
 
 public class ClassesFragment extends BaseFragment {
 
-    private List<ClassVideoAdapter.Class_Video> class_videos;
-    private RecyclerView recyclerView;
-    private ClassVideoAdapter classVideoAdapter;
-    private ArrayList<String> introduce = new ArrayList<>();
-    private ArrayList<Integer> image = new ArrayList<>();
+    private ImageView imageView1, imageView2, imageView3, imageView4, imageView5;
 
     @Override
     public void onStart(){
@@ -48,41 +45,14 @@ public class ClassesFragment extends BaseFragment {
     private void initView(View view){
         Toolbar toolbar = (Toolbar)view.findViewById(R.id.classesFragment_mainTool);
         toolbar.setTitle("课程");
-        recyclerView = (RecyclerView) view.findViewById(R.id.classesFragment_rv);
-        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-        setData();
-        initData();
-        setAdapter();
-    }
+        imageView1 = (ImageView)view.findViewById(R.id.classFragment_i1);
+        imageView2 = (ImageView)view.findViewById(R.id.classFragment_i2);
+        imageView3 = (ImageView)view.findViewById(R.id.classFragment_i3);
+        imageView4 = (ImageView)view.findViewById(R.id.classFragment_i4);
+        imageView5 = (ImageView)view.findViewById(R.id.classFragment_i5);
 
-    private void setData(){
-        for(int i = 0;i < 7;i++){
-            introduce.add("隐藏");
-            image.add(R.mipmap.ic_cycling);
-        }
 
     }
 
-    private void initData(){
-        class_videos = new ArrayList<>();
-        for(int i = 0; i < 7; i++){
-            ClassVideoAdapter newData = new ClassVideoAdapter(class_videos);
-            ClassVideoAdapter.Class_Video class_video = newData.new Class_Video(introduce.get(i),image.get(i));
-            class_videos.add(class_video);
-        }
-    }
 
-    private void setAdapter(){
-        classVideoAdapter = new ClassVideoAdapter(class_videos);
-        recyclerView.setAdapter(classVideoAdapter);
-        classVideoAdapter.setOnItemClickListener(new ClassVideoAdapter.OnItemClickListener() {
-            @Override
-            public void onItemClick(View view, int position) {
-//                Intent intent = new Intent(getActivity(), SocietyNewMessagePage.class);
-//                intent.putExtra("put_data_mes_id",card_message_id.get(position));
-//                intent.putExtra("put_data_mes_select",1);
-//                startActivity(intent);
-            }
-        });
-    }
 }

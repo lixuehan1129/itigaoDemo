@@ -2,6 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorGray_White"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <android.support.v7.widget.Toolbar
@@ -13,5 +14,222 @@
         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
     </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:id="@+id/personalFragment_l"
+        android:paddingTop="10dp"
+        android:paddingLeft="20dp"
+        android:paddingBottom="15dp"
+        android:paddingRight="20dp"
+        android:background="@color/colorGray_White"
+        android:layout_below="@id/personalFragment_mainTool"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:src="@mipmap/ic_launcher_round"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:civ_border_color="@color/colorDarkBlue"
+            app:civ_border_width="2dp"/>
+
+        <LinearLayout
+            android:paddingTop="8dp"
+            android:paddingLeft="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="智慧体育云用户"
+                android:textSize="13sp"
+                android:textColor="@color/colorBlack"/>
+
+            <TextView
+                android:paddingTop="6dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="废铁会员1级"
+                android:textSize="10sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_below="@id/personalFragment_l"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:orientation="vertical"
+            android:background="@drawable/round_gb">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="我的智能设备"
+                android:textSize="12sp"
+                android:paddingBottom="6dp"
+                android:textColor="@color/colorBlack"
+                android:padding="3dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="已经添加的设备"
+                android:textSize="12sp"
+                android:padding="3dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:orientation="vertical"
+            android:background="@drawable/round_gb">
+
+            <TextView
+                android:paddingLeft="5dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="我添加的课程"
+                android:textSize="12sp"
+                android:textColor="@color/colorBlack"/>
+
+            <TextView
+                android:paddingLeft="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="健身课程（免费）"
+                android:textSize="15sp"
+                android:textColor="@color/colorBlack"/>
+            <TextView
+                android:paddingTop="2dp"
+                android:paddingLeft="5dp"
+                android:paddingBottom="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="已经学习7课时,继续坚持"
+                android:textSize="7sp"
+                android:background="@drawable/bottom_lay"/>
+
+            <TextView
+                android:paddingTop="5dp"
+                android:paddingLeft="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="瑜伽训练课堂（钻石班）"
+                android:textSize="15sp"
+                android:textColor="@color/colorBlack"/>
+            <TextView
+                android:paddingTop="2dp"
+                android:paddingLeft="5dp"
+                android:paddingBottom="3dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="已经学习3课时,继续坚持"
+                android:textSize="7sp" />
+
+            <TextView
+                android:padding="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="......"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:orientation="vertical"
+            android:background="@drawable/round_gb">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="我的关注"
+                android:textSize="12sp"
+                android:paddingBottom="6dp"
+                android:textColor="@color/colorBlack"
+                android:padding="3dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="我关注的主播(开播/未开播)"
+                android:textSize="10sp"
+                android:padding="3dp"/>
+
+            <LinearLayout
+                android:padding="3dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:padding="4dp"
+                    android:src="@mipmap/ic_launcher_round"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    app:civ_border_color="@color/colorDarkBlue"
+                    app:civ_border_width="2dp"/>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:padding="4dp"
+                    android:src="@mipmap/ic_launcher_round"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    app:civ_border_color="@color/colorDarkBlue"
+                    app:civ_border_width="2dp" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:padding="4dp"
+                    android:src="@mipmap/ic_launcher_round"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    app:civ_border_color="@color/colorGray_1"
+                    app:civ_border_width="2dp" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:padding="4dp"
+                    android:src="@mipmap/ic_launcher_round"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    app:civ_border_color="@color/colorGray_1"
+                    app:civ_border_width="2dp" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:padding="4dp"
+                    android:src="@mipmap/ic_launcher_round"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    app:civ_border_color="@color/colorGray_1"
+                    app:civ_border_width="2dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
 
 </RelativeLayout>

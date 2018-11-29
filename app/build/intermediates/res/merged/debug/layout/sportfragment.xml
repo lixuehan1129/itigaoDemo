@@ -21,7 +21,6 @@
         android:layout_height="wrap_content">
 
         <LinearLayout
-            android:layout_below="@+id/sportFragment_mainTool"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
@@ -31,15 +30,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/colorWhite">
-
-                <android.support.v7.widget.CardView
-                    app:cardCornerRadius="8dp"
-                    android:elevation="0dp"
-                    app:cardUseCompatPadding="false"
-                    app:cardBackgroundColor="@color/colorGreen"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                android:background="@drawable/round_gb_green">
 
                     <LinearLayout
                         android:padding="16dp"
@@ -155,7 +146,6 @@
 
                     </LinearLayout>
 
-                </android.support.v7.widget.CardView>
             </LinearLayout>
 
 
@@ -169,24 +159,13 @@
                 android:orientation="horizontal">
 
                 <LinearLayout
-                    android:paddingRight="6dp"
+                    android:padding="10dp"
+                    android:layout_marginRight="6dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:background="@color/colorWhite">
-
-                    <android.support.v7.widget.CardView
-                        app:cardCornerRadius="8dp"
-                        android:elevation="0dp"
-                        app:cardBackgroundColor="@color/colorGray"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:padding="15dp"
-                            android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:background="@drawable/round_gb_gray">
 
                             <LinearLayout
                                 android:paddingBottom="18dp"
@@ -290,10 +269,6 @@
 
                             </LinearLayout>
 
-                        </LinearLayout>
-
-                    </android.support.v7.widget.CardView>
-
                 </LinearLayout>
 
 
@@ -307,25 +282,14 @@
                     android:orientation="vertical">
 
                     <LinearLayout
+                        android:layout_marginBottom="3dp"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="1"
-                        android:paddingBottom="6dp"
+                        android:padding="10dp"
                         tools:ignore="NestedWeights"
-                        android:background="@color/colorWhite">
-
-                        <android.support.v7.widget.CardView
-                            app:cardCornerRadius="8dp"
-                            android:elevation="0dp"
-                            app:cardBackgroundColor="@color/colorGray"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent">
-
-                            <LinearLayout
-                                android:padding="10dp"
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:orientation="vertical">
+                        android:orientation="vertical"
+                        android:background="@drawable/round_gb_orange">
 
                                 <LinearLayout
                                     android:orientation="horizontal"
@@ -372,31 +336,16 @@
 
                                 </LinearLayout>
 
-                            </LinearLayout>
-
-                        </android.support.v7.widget.CardView>
-
                     </LinearLayout>
 
                     <LinearLayout
+                        android:layout_marginTop="4dp"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="1"
-                        android:paddingTop="6dp"
-                        android:background="@color/colorWhite">
-
-                        <android.support.v7.widget.CardView
-                            app:cardCornerRadius="8dp"
-                            android:elevation="0dp"
-                            app:cardBackgroundColor="@color/colorGray"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent">
-
-                            <LinearLayout
-                                android:padding="10dp"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical">
+                        android:padding="10dp"
+                        android:orientation="vertical"
+                        android:background="@drawable/round_gb_gray">
 
                                 <LinearLayout
                                     android:orientation="horizontal"
@@ -443,14 +392,9 @@
 
                                 </LinearLayout>
 
-                            </LinearLayout>
-
-                        </android.support.v7.widget.CardView>
-
                     </LinearLayout>
 
                 </LinearLayout>
-
 
             </LinearLayout>
 
@@ -461,25 +405,14 @@
                 android:orientation="horizontal">
 
                 <LinearLayout
+                    android:layout_marginRight="6dp"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:paddingRight="6dp"
+                    android:padding="10dp"
                     tools:ignore="NestedWeights"
-                    android:background="@color/colorWhite">
-
-                    <android.support.v7.widget.CardView
-                        app:cardCornerRadius="8dp"
-                        android:elevation="0dp"
-                        app:cardBackgroundColor="@color/colorGray"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
-
-                        <LinearLayout
-                            android:padding="10dp"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:background="@drawable/round_gb_green">
 
                             <LinearLayout
                                 android:orientation="horizontal"
@@ -527,31 +460,16 @@
 
                             </LinearLayout>
 
-                        </LinearLayout>
-
-                    </android.support.v7.widget.CardView>
-
                 </LinearLayout>
 
                 <LinearLayout
-                    android:paddingLeft="6dp"
+                    android:layout_marginLeft="6dp"
+                    android:padding="10dp"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:background="@color/colorWhite">
-
-                    <android.support.v7.widget.CardView
-                        app:cardCornerRadius="8dp"
-                        android:elevation="0dp"
-                        app:cardBackgroundColor="@color/colorGray"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
-
-                        <LinearLayout
-                            android:padding="10dp"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:background="@drawable/round_gb_pink">
 
                             <LinearLayout
                                 android:orientation="horizontal"
@@ -599,10 +517,6 @@
 
                             </LinearLayout>
 
-                        </LinearLayout>
-
-                    </android.support.v7.widget.CardView>
-
                 </LinearLayout>
 
             </LinearLayout>
@@ -610,24 +524,12 @@
 
 
             <LinearLayout
+                android:layout_marginTop="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingTop="10dp"
-                android:paddingBottom="10dp"
-                android:background="@color/colorWhite">
-
-                <android.support.v7.widget.CardView
-                    app:cardCornerRadius="8dp"
-                    android:elevation="0dp"
-                    app:cardBackgroundColor="@color/colorGray"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:padding="12dp">
+                android:padding="10dp"
+                android:orientation="vertical"
+                android:background="@drawable/round_gb_gray">
 
                         <TextView
                             android:layout_width="match_parent"
@@ -647,31 +549,17 @@
                             android:layout_width="match_parent"
                             android:layout_height="40dp"/>
 
-                    </LinearLayout>
-
-                </android.support.v7.widget.CardView>
-
             </LinearLayout>
 
 
 
             <LinearLayout
+                android:layout_marginTop="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/colorWhite">
-
-                <android.support.v7.widget.CardView
-                    app:cardCornerRadius="8dp"
-                    android:elevation="0dp"
-                    app:cardBackgroundColor="@color/colorGray"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:padding="12dp">
+                android:padding="10dp"
+                android:orientation="vertical"
+                android:background="@drawable/round_gb_gray">
 
                         <TextView
                             android:layout_width="match_parent"
@@ -691,12 +579,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="80dp"/>
 
-                    </LinearLayout>
-
-                </android.support.v7.widget.CardView>
-
             </LinearLayout>
-
 
 
 
@@ -704,8 +587,6 @@
 
         </LinearLayout>
 
-
     </ScrollView>
-
 
 </RelativeLayout>

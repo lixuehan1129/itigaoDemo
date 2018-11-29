@@ -30,8 +30,7 @@ public class SubscribeFragment extends BaseFragment {
     private List<ClassVideoAdapter.Class_Video> class_videos;
     private RecyclerView recyclerView;
     private ClassVideoAdapter classVideoAdapter;
-    private ArrayList<String> introduce = new ArrayList<>();
-    private ArrayList<Integer> image = new ArrayList<>();
+
 
     @Override
     public void onStart(){
@@ -53,41 +52,40 @@ public class SubscribeFragment extends BaseFragment {
         recyclerView = (RecyclerView) view.findViewById(R.id.subscribeFragment_rv);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         setData();
-        initData();
-        setAdapter();
     }
 
     private void setData(){
-        for(int i = 0;i < 7;i++){
-            introduce.add("最新的健身课程，你值得学习"+i);
+        ArrayList<String> introduce = new ArrayList<>();
+        ArrayList<Integer> image = new ArrayList<>();
+        for(int i = 0;i < 4;i++){
+            introduce.add("流行的健身视频排行榜，每个人都在学，快来学习一下吧"+i);
             image.add(R.mipmap.ic_cycling);
         }
 
+        initData(introduce,image);
+
     }
 
-    private void initData(){
+    private void initData(ArrayList<String> introduce,ArrayList<Integer> image){
         class_videos = new ArrayList<>();
-        for(int i = 0; i < 7; i++){
+        for(int i = 0; i < introduce.size(); i++){
             ClassVideoAdapter newData = new ClassVideoAdapter(class_videos);
             ClassVideoAdapter.Class_Video class_video = newData.new Class_Video(introduce.get(i),image.get(i));
             class_videos.add(class_video);
         }
-    }
 
-    private void setAdapter(){
         classVideoAdapter = new ClassVideoAdapter(class_videos);
         recyclerView.setAdapter(classVideoAdapter);
         classVideoAdapter.setOnItemClickListener(new ClassVideoAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(View view, int position) {
-//                Intent intent = new Intent(getActivity(), SocietyNewMessagePage.class);
-//                intent.putExtra("put_data_mes_id",card_message_id.get(position));
-//                intent.putExtra("put_data_mes_select",1);
-//                startActivity(intent);
+                Intent intent = new Intent(getActivity(), VideoPlayActivity.class);
+                intent.putExtra("video_add",position);
+                startActivity(intent);
             }
         });
-    }
 
+    }
 
 
 }

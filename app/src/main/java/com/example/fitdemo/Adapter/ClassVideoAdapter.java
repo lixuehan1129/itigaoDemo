@@ -60,13 +60,8 @@ public class ClassVideoAdapter extends RecyclerView.Adapter<ClassVideoAdapter.Vi
     @Override
     public void onBindViewHolder(final ClassVideoAdapter.ViewHolder holder, int position) {
         Class_Video class_video = mDataSet.get(position);
-        if(class_video.getClass_video_itr().equals("隐藏")){
-            holder.relativeLayout.setPadding(0,0,0,0);
-            holder.cardView.setPadding(0,0,0,0);
-            holder.cardView.setRadius(0);
-            holder.cardView.setCardElevation(0);
-            holder.class_video_itr.setVisibility(View.INVISIBLE);
-            holder.class_video_itr.getLayoutParams().height = 0;
+        if(class_video.getClass_video_itr() == null){
+            holder.class_video_itr.setText("还没有介绍");
         }else {
             holder.class_video_itr.setText(class_video.getClass_video_itr());
         }

@@ -2,6 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorWhite"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <android.support.v7.widget.Toolbar
@@ -14,12 +15,65 @@
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
     </android.support.v7.widget.Toolbar>
 
-
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/classesFragment_rv"
-        android:layout_below="@+id/classesFragment_mainTool"
+    <ScrollView
+        android:layout_below="@id/classesFragment_mainTool"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-    </android.support.v7.widget.RecyclerView>
+
+        <LinearLayout
+            android:padding="18dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.example.fitdemo.ViewHelper.CustomRoundAngleImageView
+                android:layout_margin="10dp"
+                android:id="@+id/classFragment_i1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:src="@mipmap/ic_fitc"
+                android:scaleType="fitXY" />
+
+            <com.example.fitdemo.ViewHelper.CustomRoundAngleImageView
+                android:layout_margin="10dp"
+                android:id="@+id/classFragment_i2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:src="@mipmap/ic_bikec"
+                android:scaleType="fitXY" />
+
+            <com.example.fitdemo.ViewHelper.CustomRoundAngleImageView
+                android:layout_margin="10dp"
+                android:id="@+id/classFragment_i3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:src="@mipmap/ic_runc"
+                android:scaleType="fitXY" />
+
+            <com.example.fitdemo.ViewHelper.CustomRoundAngleImageView
+                android:layout_margin="10dp"
+                android:id="@+id/classFragment_i4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:src="@mipmap/ic_dancec"
+                android:scaleType="fitXY" />
+
+            <com.example.fitdemo.ViewHelper.CustomRoundAngleImageView
+                android:layout_margin="10dp"
+                android:id="@+id/classFragment_i5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:src="@mipmap/ic_yogac"
+                android:scaleType="fitXY" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
 
 </RelativeLayout>
