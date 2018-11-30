@@ -1,6 +1,7 @@
 package com.example.fitdemo.Classes;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -26,8 +27,6 @@ import java.util.List;
 
 public class ClassesFragment extends BaseFragment {
 
-    private ImageView imageView1, imageView2, imageView3, imageView4, imageView5;
-
     @Override
     public void onStart(){
         super.onStart();
@@ -44,15 +43,55 @@ public class ClassesFragment extends BaseFragment {
     @SuppressLint("NewApi")
     private void initView(View view){
         Toolbar toolbar = (Toolbar)view.findViewById(R.id.classesFragment_mainTool);
-        toolbar.setTitle("课程");
-        imageView1 = (ImageView)view.findViewById(R.id.classFragment_i1);
-        imageView2 = (ImageView)view.findViewById(R.id.classFragment_i2);
-        imageView3 = (ImageView)view.findViewById(R.id.classFragment_i3);
-        imageView4 = (ImageView)view.findViewById(R.id.classFragment_i4);
-        imageView5 = (ImageView)view.findViewById(R.id.classFragment_i5);
+        toolbar.setTitle("课程列表");
+
+        ImageView imageView1 = (ImageView) view.findViewById(R.id.classFragment_i1);
+        ImageView imageView2 = (ImageView) view.findViewById(R.id.classFragment_i2);
+        ImageView imageView3 = (ImageView) view.findViewById(R.id.classFragment_i3);
+        ImageView imageView4 = (ImageView) view.findViewById(R.id.classFragment_i4);
+        ImageView imageView5 = (ImageView) view.findViewById(R.id.classFragment_i5);
+
+        imageView1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(),FitActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        imageView2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(),CyclingActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        imageView3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(),RunActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        imageView4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(),DanceActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        imageView5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(),YogaActivity.class);
+                startActivity(intent);
+            }
+        });
 
 
     }
-
 
 }

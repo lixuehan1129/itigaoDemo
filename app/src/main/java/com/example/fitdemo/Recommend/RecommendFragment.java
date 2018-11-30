@@ -45,7 +45,7 @@ public class RecommendFragment extends BaseFragment implements TabLayout.OnTabSe
     @SuppressLint("NewApi")
     private void initView(View view){
         Toolbar toolbar = (Toolbar)view.findViewById(R.id.recommendFragment_mainTool);
-        toolbar.setTitle("预约");
+        toolbar.setTitle("预约课程");
 
         TabLayout mTabLayout = (TabLayout) view.findViewById(R.id.recommendFragment_layout);
         mViewPager = (ViewPager)view.findViewById(R.id.recommendFragment_viewpager);

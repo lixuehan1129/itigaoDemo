@@ -1,6 +1,7 @@
 package com.example.fitdemo.Recommend;
 
 import android.os.Bundle;
+import android.support.v4.widget.NestedScrollView;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -34,7 +35,8 @@ public class FitFragment extends BaseFragment {
 
     private RadioGroup radioGroup;
     private RadioButton button1, button2, button3, button4, button5, button6, button7;
-    private ScrollView scrollView;
+   // private ScrollView scrollView;
+    private NestedScrollView scrollView;
     private LinearLayout linearLayout1, linearLayout2, linearLayout3, linearLayout4, linearLayout5, linearLayout6, linearLayout7;
     private TextView textView1, textView2, textView3, textView4, textView5, textView6, textView7;
     private RecyclerView recyclerView1, recyclerView2, recyclerView3, recyclerView4, recyclerView5, recyclerView6, recyclerView7;
@@ -141,7 +143,7 @@ public class FitFragment extends BaseFragment {
                 introduce.add("今天你瘦了吗  教你越吃又瘦");
                 introduce.add("如何健身2  你该这么做");
                 coach.add("特约教练 王老板 先定一个小目标");
-                coach.add("特约教练 东子 我这个人脸盲");
+                coach.add("兼职教练 刘美男 买饮料刷脸能免单");
                 time.add("星期二 11-26 08：30-10：00");
                 time.add("星期二 11-26 14：30-16：00");
                 check.add(0);

@@ -48,7 +48,7 @@ public class SubscribeFragment extends BaseFragment {
     @SuppressLint("NewApi")
     private void initView(View view){
         Toolbar toolbar = (Toolbar) view.findViewById(R.id.subscribeFragment_mainTool);
-        toolbar.setTitle("推荐");
+        toolbar.setTitle("推荐内容");
         recyclerView = (RecyclerView) view.findViewById(R.id.subscribeFragment_rv);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         setData();

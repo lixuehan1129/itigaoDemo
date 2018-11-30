@@ -62,12 +62,16 @@
         </activity>
         <activity android:name="com.example.fitdemo.Subscribe.VideoPlayActivity" >
         </activity>
-        <activity
-            android:name="io.vov.vitamio.activity.InitActivity"
-            android:configChanges="orientation|screenSize|smallestScreenSize|keyboard|keyboardHidden|navigation"
-            android:launchMode="singleTop"
-            android:theme="@android:style/Theme.NoTitleBar"
-            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity android:name="com.example.fitdemo.Classes.FitActivity" >
+        </activity>
+        <activity android:name="com.example.fitdemo.Classes.CyclingActivity" >
+        </activity>
+        <activity android:name="com.example.fitdemo.Classes.RunActivity" >
+        </activity>
+        <activity android:name="com.example.fitdemo.Classes.DanceActivity" >
+        </activity>
+        <activity android:name="com.example.fitdemo.Classes.YogaActivity" >
+        </activity>
     </application>
 
 </manifest>

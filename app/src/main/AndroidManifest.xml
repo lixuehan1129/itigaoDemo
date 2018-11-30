@@ -57,16 +57,35 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".Subscribe.VideoPlayActivity">
+        <activity android:name=".Subscribe.VideoPlayActivity"
+            tools:ignore="InnerclassSeparator">
 
         </activity>
 
-        <activity
-            android:name="io.vov.vitamio.activity.InitActivity"
-            android:configChanges="orientation|screenSize|smallestScreenSize|keyboard|keyboardHidden|navigation"
-            android:launchMode="singleTop"
-            android:theme="@android:style/Theme.NoTitleBar"
-            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity android:name=".Classes.FitActivity"
+            tools:ignore="InnerclassSeparator">
+
+        </activity>
+
+        <activity android:name=".Classes.CyclingActivity"
+            tools:ignore="InnerclassSeparator">
+
+        </activity>
+
+        <activity android:name=".Classes.RunActivity"
+            tools:ignore="InnerclassSeparator">
+
+        </activity>
+
+        <activity android:name=".Classes.DanceActivity"
+            tools:ignore="InnerclassSeparator">
+
+        </activity>
+
+        <activity android:name=".Classes.YogaActivity"
+            tools:ignore="InnerclassSeparator">
+
+        </activity>
 
     </application>
 

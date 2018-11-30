@@ -35,6 +35,6 @@ public class PersonalFragment extends BaseFragment {
     @SuppressLint("NewApi")
     private void initView(View view){
         Toolbar toolbar = (Toolbar) view.findViewById(R.id.personalFragment_mainTool);
-        toolbar.setTitle("个人");
+        toolbar.setTitle("个人信息");
     }
 }

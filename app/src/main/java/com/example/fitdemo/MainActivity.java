@@ -68,14 +68,14 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationB
         bottomNavigationBar.clearAll();
         bottomNavigationBar.setMode(BottomNavigationBar.MODE_FIXED);
         bottomNavigationBar.setBackgroundStyle(BottomNavigationBar.BACKGROUND_STYLE_STATIC);
-        bottomNavigationBar.setActiveColor(R.color.colorBlue)
+        bottomNavigationBar.setActiveColor(R.color.colorBlack)
                 .setInActiveColor(R.color.colorGray_1);
         bottomNavigationBar
-                .addItem(new BottomNavigationItem(R.mipmap.ic_sta, "推荐"))
-                .addItem(new BottomNavigationItem(R.mipmap.ic_sta, "课程"))
-                .addItem(new BottomNavigationItem(R.mipmap.ic_sta, "预约"))
-                .addItem(new BottomNavigationItem(R.mipmap.ic_sta, "运动"))
-                .addItem(new BottomNavigationItem(R.mipmap.ic_sta, "个人"))
+                .addItem(new BottomNavigationItem(R.mipmap.ic_sub, "推荐"))
+                .addItem(new BottomNavigationItem(R.mipmap.ic_class, "课程"))
+                .addItem(new BottomNavigationItem(R.mipmap.ic_rec, "预约"))
+                .addItem(new BottomNavigationItem(R.mipmap.ic_sport, "运动"))
+                .addItem(new BottomNavigationItem(R.mipmap.ic_preson, "个人"))
                 .initialise();//所有的设置需在调用该方法前完成
 
         //设置图标文字大小

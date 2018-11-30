@@ -15,7 +15,7 @@
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
     </android.support.v7.widget.Toolbar>
 
-    <ScrollView
+    <android.support.v4.widget.NestedScrollView
         android:layout_below="@id/sportFragment_mainTool"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -177,7 +177,7 @@
                                     android:layout_gravity="center"
                                     android:layout_width="20dp"
                                     android:layout_height="20dp"
-                                    android:src="@mipmap/ic_launcher_round"/>
+                                    android:src="@mipmap/ic_bushu"/>
 
                                 <TextView
                                     android:layout_width="wrap_content"
@@ -301,7 +301,7 @@
                                         android:layout_gravity="center"
                                         android:layout_width="20dp"
                                         android:layout_height="20dp"
-                                        android:src="@mipmap/ic_launcher_round"/>
+                                        android:src="@mipmap/ic_runr"/>
 
                                     <TextView
                                         android:layout_width="wrap_content"
@@ -357,7 +357,7 @@
                                         android:layout_gravity="center"
                                         android:layout_width="20dp"
                                         android:layout_height="20dp"
-                                        android:src="@mipmap/ic_launcher_round"/>
+                                        android:src="@mipmap/ic_biker"/>
 
                                     <TextView
                                         android:layout_width="wrap_content"
@@ -424,7 +424,7 @@
                                     android:layout_gravity="center"
                                     android:layout_width="20dp"
                                     android:layout_height="20dp"
-                                    android:src="@mipmap/ic_launcher_round"/>
+                                    android:src="@mipmap/ic_zour"/>
 
                                 <TextView
                                     android:layout_width="wrap_content"
@@ -481,7 +481,7 @@
                                     android:layout_gravity="center"
                                     android:layout_width="20dp"
                                     android:layout_height="20dp"
-                                    android:src="@mipmap/ic_launcher_round"/>
+                                    android:src="@mipmap/ic_yogar"/>
 
                                 <TextView
                                     android:layout_width="wrap_content"
@@ -587,6 +587,6 @@
 
         </LinearLayout>
 
-    </ScrollView>
+    </android.support.v4.widget.NestedScrollView>
 
 </RelativeLayout>
