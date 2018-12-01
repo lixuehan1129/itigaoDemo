@@ -32,7 +32,6 @@ import java.util.List;
 
 public class FitFragment extends BaseFragment {
 
-    private ClassSelectAdapter classSelectAdapter;
 
     private RadioGroup radioGroup;
     private RadioButton button1, button2, button3, button4, button5, button6, button7;

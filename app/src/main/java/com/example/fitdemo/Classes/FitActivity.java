@@ -7,6 +7,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.Toast;
 
 import com.example.fitdemo.Adapter.ClassActivityAdapter;
 import com.example.fitdemo.Adapter.ClassVideoAdapter;
@@ -116,7 +117,7 @@ public class FitActivity extends AppCompatActivity {
         classActivityAdapter1.setOnItemClickListener(new ClassActivityAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(View view, int position) {
-
+                Toast.makeText(FitActivity.this,"查看主播",Toast.LENGTH_LONG).show();
             }
         });
 
@@ -137,7 +138,7 @@ public class FitActivity extends AppCompatActivity {
         classActivityAdapter2.setOnItemClickListener(new ClassActivityAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(View view, int position) {
-
+                Toast.makeText(FitActivity.this,"查看推荐课程",Toast.LENGTH_LONG).show();
             }
         });
 
@@ -155,6 +156,7 @@ public class FitActivity extends AppCompatActivity {
         classVideoAdapter.setOnItemClickListener(new ClassVideoAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(View view, int position) {
+                Toast.makeText(FitActivity.this,"查看所有课程",Toast.LENGTH_LONG).show();
             }
         });
 
