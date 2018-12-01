@@ -60,8 +60,11 @@ public class RunActivity extends AppCompatActivity {
         ArrayList<Integer> image = new ArrayList<>();
         for(int i = 0;i < 4;i++){
             introduce.add("当前主播"+i);
-            image.add(R.mipmap.ic_cycling);
         }
+        image.add(R.mipmap.ic_run1);
+        image.add(R.mipmap.ic_run01);
+        image.add(R.mipmap.ic_run2);
+        image.add(R.mipmap.ic_run04);
 
         initData1(introduce,image);
 
@@ -72,8 +75,11 @@ public class RunActivity extends AppCompatActivity {
         ArrayList<Integer> image = new ArrayList<>();
         for(int i = 0;i < 4;i++){
             introduce.add("推荐课程"+i);
-            image.add(R.mipmap.ic_cycling);
         }
+        image.add(R.mipmap.ic_run03);
+        image.add(R.mipmap.ic_run01);
+        image.add(R.mipmap.ic_run2);
+        image.add(R.mipmap.ic_run05);
 
         initData2(introduce,image);
 
@@ -83,9 +89,12 @@ public class RunActivity extends AppCompatActivity {
         ArrayList<String> introduce = new ArrayList<>();
         ArrayList<Integer> image = new ArrayList<>();
         for(int i = 0;i < 4;i++){
-            introduce.add("健身课程总览"+i);
-            image.add(R.mipmap.ic_cycling);
+            introduce.add("慢跑课程总览"+i);
         }
+        image.add(R.mipmap.ic_run04);
+        image.add(R.mipmap.ic_run01);
+        image.add(R.mipmap.ic_run2);
+        image.add(R.mipmap.ic_run05);
 
         initData3(introduce,image);
 

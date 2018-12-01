@@ -61,8 +61,11 @@ public class ClassSelectAdapter extends RecyclerView.Adapter<ClassSelectAdapter.
     @Override
     public void onBindViewHolder(final ClassSelectAdapter.ViewHolder holder, int position) {
         Class_Select class_select = mDataSet.get(position);
+        System.out.println(class_select.getCheck());
         if(class_select.getCheck() == 1){
             holder.relativeLayout.setBackgroundColor(mContext.getResources().getColor(R.color.colorBlue_W));
+        }else {
+            holder.relativeLayout.setBackgroundColor(mContext.getResources().getColor(R.color.colorWhite));
         }
         if(class_select.getImage() != null){
             holder.imageView.setImageResource(class_select.getImage());
@@ -106,6 +109,7 @@ public class ClassSelectAdapter extends RecyclerView.Adapter<ClassSelectAdapter.
             });
         }
     }
+
 
     @Override
     public int getItemCount() {

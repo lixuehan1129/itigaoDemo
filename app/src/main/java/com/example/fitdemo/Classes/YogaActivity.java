@@ -60,8 +60,11 @@ public class YogaActivity extends AppCompatActivity {
         ArrayList<Integer> image = new ArrayList<>();
         for(int i = 0;i < 4;i++){
             introduce.add("当前主播"+i);
-            image.add(R.mipmap.ic_cycling);
         }
+        image.add(R.mipmap.ic_yoga01);
+        image.add(R.mipmap.ic_yoga02);
+        image.add(R.mipmap.ic_yoga03);
+        image.add(R.mipmap.ic_yoga04);
 
         initData1(introduce,image);
 
@@ -72,8 +75,11 @@ public class YogaActivity extends AppCompatActivity {
         ArrayList<Integer> image = new ArrayList<>();
         for(int i = 0;i < 4;i++){
             introduce.add("推荐课程"+i);
-            image.add(R.mipmap.ic_cycling);
         }
+        image.add(R.mipmap.ic_yoga05);
+        image.add(R.mipmap.ic_yoga01);
+        image.add(R.mipmap.ic_yoga03);
+        image.add(R.mipmap.ic_yoga04);
 
         initData2(introduce,image);
 
@@ -83,9 +89,12 @@ public class YogaActivity extends AppCompatActivity {
         ArrayList<String> introduce = new ArrayList<>();
         ArrayList<Integer> image = new ArrayList<>();
         for(int i = 0;i < 4;i++){
-            introduce.add("健身课程总览"+i);
-            image.add(R.mipmap.ic_cycling);
+            introduce.add("瑜伽课程总览"+i);
         }
+        image.add(R.mipmap.ic_yoga01);
+        image.add(R.mipmap.ic_yoga02);
+        image.add(R.mipmap.ic_yoga05);
+        image.add(R.mipmap.ic_yoga04);
 
         initData3(introduce,image);
 

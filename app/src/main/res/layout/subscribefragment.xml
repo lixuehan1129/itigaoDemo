@@ -79,7 +79,7 @@
                         android:layout_alignBottom="@+id/textView5"
                         android:layout_toStartOf="@+id/textView5"
                         android:paddingTop="3dp"
-                        android:text="777"
+                        android:text="77"
                         android:textColor="@color/colorBlack"
                         android:textSize="13sp" />
 

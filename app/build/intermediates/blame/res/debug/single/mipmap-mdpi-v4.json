@@ -1,5 +1,9 @@
 [
     {
+        "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\ic_t_video2.PNG",
+        "source": "D:\\Android\\Application\\FitDemo\\app\\src\\main\\res\\mipmap-mdpi\\ic_t_video2.PNG"
+    },
+    {
         "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\ic_bikec.png",
         "source": "D:\\Android\\Application\\FitDemo\\app\\src\\main\\res\\mipmap-mdpi\\ic_bikec.png"
     },
@@ -24,8 +28,16 @@
         "source": "D:\\Android\\Application\\FitDemo\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
     },
     {
+        "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\ic_t_video3.PNG",
+        "source": "D:\\Android\\Application\\FitDemo\\app\\src\\main\\res\\mipmap-mdpi\\ic_t_video3.PNG"
+    },
+    {
         "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\ic_run1.png",
         "source": "D:\\Android\\Application\\FitDemo\\app\\src\\main\\res\\mipmap-mdpi\\ic_run1.png"
+    },
+    {
+        "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\ic_t_video4.PNG",
+        "source": "D:\\Android\\Application\\FitDemo\\app\\src\\main\\res\\mipmap-mdpi\\ic_t_video4.PNG"
     },
     {
         "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\ic_cycling.png",
@@ -38,5 +50,9 @@
     {
         "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\ic_yogac.png",
         "source": "D:\\Android\\Application\\FitDemo\\app\\src\\main\\res\\mipmap-mdpi\\ic_yogac.png"
+    },
+    {
+        "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\ic_t_video1.PNG",
+        "source": "D:\\Android\\Application\\FitDemo\\app\\src\\main\\res\\mipmap-mdpi\\ic_t_video1.PNG"
     }
 ]

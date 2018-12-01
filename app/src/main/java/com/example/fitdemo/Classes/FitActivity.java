@@ -1,6 +1,6 @@
 package com.example.fitdemo.Classes;
 
-import android.content.Intent;
+
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -61,8 +61,11 @@ public class FitActivity extends AppCompatActivity {
         ArrayList<Integer> image = new ArrayList<>();
         for(int i = 0;i < 4;i++){
             introduce.add("当前主播"+i);
-            image.add(R.mipmap.ic_cycling);
         }
+        image.add(R.mipmap.ic_fit1);
+        image.add(R.mipmap.ic_fit2);
+        image.add(R.mipmap.ic_fit3);
+        image.add(R.mipmap.ic_fit4);
 
         initData1(introduce,image);
 
@@ -73,8 +76,11 @@ public class FitActivity extends AppCompatActivity {
         ArrayList<Integer> image = new ArrayList<>();
         for(int i = 0;i < 4;i++){
             introduce.add("推荐课程"+i);
-            image.add(R.mipmap.ic_cycling);
         }
+        image.add(R.mipmap.ic_fit5);
+        image.add(R.mipmap.ic_fit6);
+        image.add(R.mipmap.ic_fit7);
+        image.add(R.mipmap.ic_fit8);
 
         initData2(introduce,image);
 
@@ -85,8 +91,11 @@ public class FitActivity extends AppCompatActivity {
         ArrayList<Integer> image = new ArrayList<>();
         for(int i = 0;i < 4;i++){
             introduce.add("健身课程总览"+i);
-            image.add(R.mipmap.ic_cycling);
         }
+        image.add(R.mipmap.ic_fit2);
+        image.add(R.mipmap.ic_fit3);
+        image.add(R.mipmap.ic_fit6);
+        image.add(R.mipmap.ic_fit8);
 
         initData3(introduce,image);
 

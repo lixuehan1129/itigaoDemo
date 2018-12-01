@@ -59,8 +59,13 @@ public class SubscribeFragment extends BaseFragment {
         ArrayList<Integer> image = new ArrayList<>();
         for(int i = 0;i < 4;i++){
             introduce.add("流行的健身视频排行榜，每个人都在学，快来学习一下吧"+i);
-            image.add(R.mipmap.ic_cycling);
         }
+
+        image.add(R.mipmap.ic_t_video1);
+        image.add(R.mipmap.ic_t_video2);
+        image.add(R.mipmap.ic_t_video3);
+        image.add(R.mipmap.ic_t_video4);
+
 
         initData(introduce,image);
 

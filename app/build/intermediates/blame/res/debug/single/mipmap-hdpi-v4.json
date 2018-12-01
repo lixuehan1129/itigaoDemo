@@ -32,16 +32,16 @@
         "source": "D:\\Android\\Application\\FitDemo\\app\\src\\main\\res\\mipmap-hdpi\\ic_touxiang4.PNG"
     },
     {
+        "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_class.png",
+        "source": "D:\\Android\\Application\\FitDemo\\app\\src\\main\\res\\mipmap-hdpi\\ic_class.png"
+    },
+    {
         "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_touxiang3.PNG",
         "source": "D:\\Android\\Application\\FitDemo\\app\\src\\main\\res\\mipmap-hdpi\\ic_touxiang3.PNG"
     },
     {
         "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_biker.png",
         "source": "D:\\Android\\Application\\FitDemo\\app\\src\\main\\res\\mipmap-hdpi\\ic_biker.png"
-    },
-    {
-        "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_class.png",
-        "source": "D:\\Android\\Application\\FitDemo\\app\\src\\main\\res\\mipmap-hdpi\\ic_class.png"
     },
     {
         "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_yogar.png",

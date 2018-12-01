@@ -80,12 +80,12 @@
         "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\bottom-navigation-bar-2.0.3.aar\\16aab22735a6ce29ad7b7519ffef7701\\res\\layout\\fixed_bottom_navigation_item.xml"
     },
     {
-        "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_button_bar_material.xml",
-        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.2.aar\\3fd61dc53584134b026964635b568c79\\res\\layout\\abc_alert_dialog_button_bar_material.xml"
-    },
-    {
         "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_media_cancel_action.xml",
         "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-27.0.2.aar\\98e08896f4735fe485f56d583933bfa4\\res\\layout\\notification_media_cancel_action.xml"
+    },
+    {
+        "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_button_bar_material.xml",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.2.aar\\3fd61dc53584134b026964635b568c79\\res\\layout\\abc_alert_dialog_button_bar_material.xml"
     },
     {
         "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_layout.xml",
@@ -236,12 +236,12 @@
         "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.2.aar\\3fd61dc53584134b026964635b568c79\\res\\layout\\abc_alert_dialog_material.xml"
     },
     {
-        "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_radio.xml",
-        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.2.aar\\3fd61dc53584134b026964635b568c79\\res\\layout\\abc_list_menu_item_radio.xml"
-    },
-    {
         "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\layout\\class_activity_item.xml",
         "source": "D:\\Android\\Application\\FitDemo\\app\\src\\main\\res\\layout\\class_activity_item.xml"
+    },
+    {
+        "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_radio.xml",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.2.aar\\3fd61dc53584134b026964635b568c79\\res\\layout\\abc_list_menu_item_radio.xml"
     },
     {
         "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_item_layout.xml",

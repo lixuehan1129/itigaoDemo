@@ -43,6 +43,8 @@ public class ClassVideoAdapter extends RecyclerView.Adapter<ClassVideoAdapter.Vi
             class_video_itr = (TextView) itemView.findViewById(R.id.class_video_item_itr);
             relativeLayout = (RelativeLayout) itemView.findViewById(R.id.class_video_item_relative);
             cardView = (CardView) itemView.findViewById(R.id.class_video_item_cv);
+
+
         }
     }
     @Override

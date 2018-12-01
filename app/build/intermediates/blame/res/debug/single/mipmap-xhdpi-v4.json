@@ -1,10 +1,130 @@
 [
     {
+        "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\ic_run04.png",
+        "source": "D:\\Android\\Application\\FitDemo\\app\\src\\main\\res\\mipmap-xhdpi\\ic_run04.png"
+    },
+    {
+        "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\ic_run01.png",
+        "source": "D:\\Android\\Application\\FitDemo\\app\\src\\main\\res\\mipmap-xhdpi\\ic_run01.png"
+    },
+    {
+        "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\ic_run1.png",
+        "source": "D:\\Android\\Application\\FitDemo\\app\\src\\main\\res\\mipmap-xhdpi\\ic_run1.png"
+    },
+    {
+        "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\ic_fit3.png",
+        "source": "D:\\Android\\Application\\FitDemo\\app\\src\\main\\res\\mipmap-xhdpi\\ic_fit3.png"
+    },
+    {
+        "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\ic_fit6.png",
+        "source": "D:\\Android\\Application\\FitDemo\\app\\src\\main\\res\\mipmap-xhdpi\\ic_fit6.png"
+    },
+    {
         "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\ic_launcher.png",
         "source": "D:\\Android\\Application\\FitDemo\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
     },
     {
+        "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\ic_yoga01.png",
+        "source": "D:\\Android\\Application\\FitDemo\\app\\src\\main\\res\\mipmap-xhdpi\\ic_yoga01.png"
+    },
+    {
+        "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\ic_dance3.png",
+        "source": "D:\\Android\\Application\\FitDemo\\app\\src\\main\\res\\mipmap-xhdpi\\ic_dance3.png"
+    },
+    {
+        "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\ic_bike3.png",
+        "source": "D:\\Android\\Application\\FitDemo\\app\\src\\main\\res\\mipmap-xhdpi\\ic_bike3.png"
+    },
+    {
+        "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\ic_yoga04.png",
+        "source": "D:\\Android\\Application\\FitDemo\\app\\src\\main\\res\\mipmap-xhdpi\\ic_yoga04.png"
+    },
+    {
+        "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\ic_bike6.png",
+        "source": "D:\\Android\\Application\\FitDemo\\app\\src\\main\\res\\mipmap-xhdpi\\ic_bike6.png"
+    },
+    {
+        "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\ic_fit8.png",
+        "source": "D:\\Android\\Application\\FitDemo\\app\\src\\main\\res\\mipmap-xhdpi\\ic_fit8.png"
+    },
+    {
+        "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\ic_bike5.png",
+        "source": "D:\\Android\\Application\\FitDemo\\app\\src\\main\\res\\mipmap-xhdpi\\ic_bike5.png"
+    },
+    {
+        "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\ic_yoga03.png",
+        "source": "D:\\Android\\Application\\FitDemo\\app\\src\\main\\res\\mipmap-xhdpi\\ic_yoga03.png"
+    },
+    {
+        "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\ic_run03.png",
+        "source": "D:\\Android\\Application\\FitDemo\\app\\src\\main\\res\\mipmap-xhdpi\\ic_run03.png"
+    },
+    {
+        "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\ic_fit1.png",
+        "source": "D:\\Android\\Application\\FitDemo\\app\\src\\main\\res\\mipmap-xhdpi\\ic_fit1.png"
+    },
+    {
+        "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\ic_fit4.png",
+        "source": "D:\\Android\\Application\\FitDemo\\app\\src\\main\\res\\mipmap-xhdpi\\ic_fit4.png"
+    },
+    {
+        "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\ic_bike2.png",
+        "source": "D:\\Android\\Application\\FitDemo\\app\\src\\main\\res\\mipmap-xhdpi\\ic_bike2.png"
+    },
+    {
+        "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\ic_yoga02.png",
+        "source": "D:\\Android\\Application\\FitDemo\\app\\src\\main\\res\\mipmap-xhdpi\\ic_yoga02.png"
+    },
+    {
+        "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\ic_yoga05.png",
+        "source": "D:\\Android\\Application\\FitDemo\\app\\src\\main\\res\\mipmap-xhdpi\\ic_yoga05.png"
+    },
+    {
+        "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\ic_bike1.png",
+        "source": "D:\\Android\\Application\\FitDemo\\app\\src\\main\\res\\mipmap-xhdpi\\ic_bike1.png"
+    },
+    {
+        "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\ic_fit7.png",
+        "source": "D:\\Android\\Application\\FitDemo\\app\\src\\main\\res\\mipmap-xhdpi\\ic_fit7.png"
+    },
+    {
+        "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\ic_dance1.png",
+        "source": "D:\\Android\\Application\\FitDemo\\app\\src\\main\\res\\mipmap-xhdpi\\ic_dance1.png"
+    },
+    {
+        "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\ic_dance4.png",
+        "source": "D:\\Android\\Application\\FitDemo\\app\\src\\main\\res\\mipmap-xhdpi\\ic_dance4.png"
+    },
+    {
+        "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\ic_bike4.png",
+        "source": "D:\\Android\\Application\\FitDemo\\app\\src\\main\\res\\mipmap-xhdpi\\ic_bike4.png"
+    },
+    {
+        "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\ic_run2.png",
+        "source": "D:\\Android\\Application\\FitDemo\\app\\src\\main\\res\\mipmap-xhdpi\\ic_run2.png"
+    },
+    {
+        "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\ic_fit5.png",
+        "source": "D:\\Android\\Application\\FitDemo\\app\\src\\main\\res\\mipmap-xhdpi\\ic_fit5.png"
+    },
+    {
+        "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\ic_dance2.png",
+        "source": "D:\\Android\\Application\\FitDemo\\app\\src\\main\\res\\mipmap-xhdpi\\ic_dance2.png"
+    },
+    {
+        "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\ic_dance5.png",
+        "source": "D:\\Android\\Application\\FitDemo\\app\\src\\main\\res\\mipmap-xhdpi\\ic_dance5.png"
+    },
+    {
+        "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\ic_fit2.png",
+        "source": "D:\\Android\\Application\\FitDemo\\app\\src\\main\\res\\mipmap-xhdpi\\ic_fit2.png"
+    },
+    {
         "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\ic_launcher_round.png",
         "source": "D:\\Android\\Application\\FitDemo\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\ic_run05.png",
+        "source": "D:\\Android\\Application\\FitDemo\\app\\src\\main\\res\\mipmap-xhdpi\\ic_run05.png"
     }
 ]

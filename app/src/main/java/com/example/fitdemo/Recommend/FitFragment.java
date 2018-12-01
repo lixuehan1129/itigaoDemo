@@ -1,5 +1,7 @@
 package com.example.fitdemo.Recommend;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v4.widget.NestedScrollView;
 import android.support.v7.widget.DividerItemDecoration;
@@ -30,13 +32,21 @@ import java.util.List;
 
 public class FitFragment extends BaseFragment {
 
-    private List<ClassSelectAdapter.Class_Select> class_selects;
     private ClassSelectAdapter classSelectAdapter;
 
     private RadioGroup radioGroup;
     private RadioButton button1, button2, button3, button4, button5, button6, button7;
    // private ScrollView scrollView;
     private NestedScrollView scrollView;
+    private ClassSelectAdapter newData;
+    private List<ClassSelectAdapter.Class_Select> class_selects;
+    private ClassSelectAdapter.Class_Select class_select;
+    ArrayList<String> introduce;
+    ArrayList<String> coach;
+    ArrayList<String> time;
+    ArrayList<Integer> check;
+    ArrayList<Integer> image;
+
     private LinearLayout linearLayout1, linearLayout2, linearLayout3, linearLayout4, linearLayout5, linearLayout6, linearLayout7;
     private TextView textView1, textView2, textView3, textView4, textView5, textView6, textView7;
     private RecyclerView recyclerView1, recyclerView2, recyclerView3, recyclerView4, recyclerView5, recyclerView6, recyclerView7;
@@ -119,11 +129,11 @@ public class FitFragment extends BaseFragment {
     }
 
     private void setData(int week){
-        ArrayList<String> introduce = new ArrayList<>();
-        ArrayList<String> coach = new ArrayList<>();
-        ArrayList<String> time = new ArrayList<>();
-        ArrayList<Integer> check = new ArrayList<>();
-        ArrayList<Integer> image = new ArrayList<>();
+        introduce = new ArrayList<>();
+        coach = new ArrayList<>();
+        time = new ArrayList<>();
+        check = new ArrayList<>();
+        image = new ArrayList<>();
 
         switch (week){
             case 0:{
@@ -211,22 +221,88 @@ public class FitFragment extends BaseFragment {
                 break;
         }
 
-        initData(introduce,coach,time,check,image,week);
+        initData(week);
 
     }
 
-    private void initData(ArrayList<String> introduce, ArrayList<String> coach, ArrayList<String> time,
-                          ArrayList<Integer> check, ArrayList<Integer> image, int week){
+    private void changeData(int week, int position, ClassSelectAdapter classSelectAdapter){
+
+        switch (week){
+            case 0:{
+                if(check.get(position) == 0){
+                    check.set(position,1);
+                }else {
+                    check.set(position,0);
+                }
+                break;
+            }
+            case 1:{
+                if(check.get(position) == 0){
+                    check.set(position,1);
+                }else {
+                    check.set(position,0);
+                }
+                break;
+            }
+            case 2:{
+                if(check.get(position) == 0){
+                    check.set(position,1);
+                }else {
+                    check.set(position,0);
+                }
+                break;
+            }
+            case 3:{
+                if(check.get(position) == 0){
+                    check.set(position,1);
+                }else {
+                    check.set(position,0);
+                }
+                break;
+            }
+            case 4:{
+                if(check.get(position) == 0){
+                    check.set(position,1);
+                }else {
+                    check.set(position,0);
+                }
+                break;
+            }
+            case 5:{
+                if(check.get(position) == 0){
+                    check.set(position,1);
+                }else {
+                    check.set(position,0);
+                }
+                break;
+            }
+            case 6:{
+                if(check.get(position) == 0){
+                    check.set(position,1);
+                }else {
+                    check.set(position,0);
+                }
+                break;
+            }
+            default:
+                break;
+        }
+
+        classSelectAdapter.notifyItemChanged(position);
+
+    }
+
+
+    private void initData(int week){
 
         class_selects = new ArrayList<>();
         for(int i = 0; i < introduce.size(); i++){
-            ClassSelectAdapter newData = new ClassSelectAdapter(class_selects);
-            ClassSelectAdapter.Class_Select class_select = newData.new Class_Select(introduce.get(i),coach.get(i),
+            newData = new ClassSelectAdapter(class_selects);
+            class_select = newData.new Class_Select(introduce.get(i),coach.get(i),
                     time.get(i),image.get(i),check.get(i));
             class_selects.add(class_select);
         }
 
-        classSelectAdapter = new ClassSelectAdapter(class_selects);
         switch (week){
             case 0:{
                 setAdapter(recyclerView1,week);
@@ -284,15 +360,57 @@ public class FitFragment extends BaseFragment {
         };
     }
 
-    private void setAdapter(RecyclerView recyclerView,int week){
+    private void setAdapter(RecyclerView recyclerView, final int week){
+        final ClassSelectAdapter classSelectAdapter = new ClassSelectAdapter(class_selects);
         recyclerView.addItemDecoration(new DividerItemChange(getActivity(),DividerItemChange.VERTICAL));
         recyclerView.setAdapter(classSelectAdapter);
         classSelectAdapter.setOnItemClickListener(new ClassSelectAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(View view, int position) {
-
+                if(check.get(position) != null){
+                    showNormalDialog(week,position,classSelectAdapter);
+                }
             }
         });
+    }
+
+    private void showNormalDialog(final int week, final int position, final ClassSelectAdapter classSelectAdapter){
+        /* @setIcon 设置对话框图标
+         * @setTitle 设置对话框标题
+         * @setMessage 设置对话框消息提示
+         * setXXX方法返回Dialog对象，因此可以链式设置属性
+         */
+        final AlertDialog.Builder normalDialog =
+                new AlertDialog.Builder(getActivity());
+        switch (check.get(position)){
+            case 0:{
+                normalDialog.setMessage("确定要选择该课程？");
+                break;
+            }
+            case 1:{
+                normalDialog.setMessage("取消该课程");
+                break;
+            }
+            default:
+                break;
+        }
+        normalDialog.setPositiveButton("确定",
+                new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        //...To-do
+                        changeData(week,position,classSelectAdapter);
+                    }
+                });
+        normalDialog.setNegativeButton("关闭",
+                new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        //...To-do
+                    }
+                });
+        // 显示
+        normalDialog.show();
     }
 
     private void setButton(Button button, final LinearLayout linearLayout){
