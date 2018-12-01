@@ -35,8 +35,8 @@ public class FitFragment extends BaseFragment {
 
     private RadioGroup radioGroup;
     private RadioButton button1, button2, button3, button4, button5, button6, button7;
-   // private ScrollView scrollView;
-    private NestedScrollView scrollView;
+    private ScrollView scrollView;
+ //   private NestedScrollView scrollView;
     private ClassSelectAdapter newData;
     private List<ClassSelectAdapter.Class_Select> class_selects;
     private ClassSelectAdapter.Class_Select class_select;

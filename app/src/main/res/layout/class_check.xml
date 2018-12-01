@@ -133,7 +133,7 @@
 
     </RadioGroup>
 
-    <android.support.v4.widget.NestedScrollView
+    <ScrollView
         android:id="@+id/class_check_sc"
         android:background="@color/colorGray_White"
         android:layout_width="match_parent"
@@ -313,6 +313,6 @@
 
         </LinearLayout>
 
-    </android.support.v4.widget.NestedScrollView>
+    </ScrollView>
 
 </LinearLayout>

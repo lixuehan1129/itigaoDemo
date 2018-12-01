@@ -32,8 +32,8 @@ public class YogaFragment extends BaseFragment {
 
     private RadioGroup radioGroup;
     private RadioButton button1, button2, button3, button4, button5, button6, button7;
-    //  private ScrollView scrollView;
-    private NestedScrollView scrollView;
+    private ScrollView scrollView;
+    //private NestedScrollView scrollView;
     private LinearLayout linearLayout1, linearLayout2, linearLayout3, linearLayout4, linearLayout5, linearLayout6, linearLayout7;
     private TextView textView1, textView2, textView3, textView4, textView5, textView6, textView7;
     private RecyclerView recyclerView1, recyclerView2, recyclerView3, recyclerView4, recyclerView5, recyclerView6, recyclerView7;
