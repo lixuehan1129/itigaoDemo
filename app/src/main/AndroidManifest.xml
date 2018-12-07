@@ -58,7 +58,9 @@
         </activity>
 
         <activity android:name=".Subscribe.VideoPlayActivity"
-            tools:ignore="InnerclassSeparator">
+            tools:ignore="InnerclassSeparator"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait">
 
         </activity>
 
@@ -86,6 +88,7 @@
             tools:ignore="InnerclassSeparator">
 
         </activity>
+
 
     </application>
 

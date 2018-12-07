@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorGray_White"
@@ -13,6 +14,30 @@
         app:titleTextColor="@color/colorBlack"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        <LinearLayout
+            android:paddingRight="15dp"
+            android:layout_gravity="right"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/personalFragment_code"
+                android:layout_marginRight="12dp"
+                android:layout_width="21dp"
+                android:layout_height="21dp"
+                android:background="@mipmap/ic_code"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@+id/personalFragment_set"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:background="@mipmap/ic_set"
+                tools:ignore="ContentDescription" />
+
+        </LinearLayout>
     </android.support.v7.widget.Toolbar>
 
     <android.support.v4.widget.NestedScrollView
@@ -37,6 +62,7 @@
                 android:orientation="horizontal">
 
                 <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/personalFragment_picture"
                     android:src="@mipmap/ic_touxiang2"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
@@ -52,6 +78,7 @@
 
 
                     <TextView
+                        android:id="@+id/personalFragment_name"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="智慧体育云用户"
@@ -59,6 +86,7 @@
                         android:textColor="@color/colorBlack"/>
 
                     <TextView
+                        android:id="@+id/personalFragment_level"
                         android:paddingTop="6dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -119,6 +147,7 @@
                         android:textColor="@color/colorBlack"/>
 
                     <TextView
+                        android:id="@+id/personalFragment_class1"
                         android:paddingLeft="5dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -126,6 +155,7 @@
                         android:textSize="15sp"
                         android:textColor="@color/colorBlack"/>
                     <TextView
+                        android:id="@+id/personalFragment_class2"
                         android:paddingTop="2dp"
                         android:paddingLeft="5dp"
                         android:paddingBottom="8dp"
@@ -136,6 +166,7 @@
                         android:background="@drawable/bottom_lay"/>
 
                     <TextView
+                        android:id="@+id/personalFragment_class3"
                         android:paddingTop="5dp"
                         android:paddingLeft="5dp"
                         android:layout_width="match_parent"
@@ -144,6 +175,7 @@
                         android:textSize="15sp"
                         android:textColor="@color/colorBlack"/>
                     <TextView
+                        android:id="@+id/personalFragment_class4"
                         android:paddingTop="2dp"
                         android:paddingLeft="5dp"
                         android:paddingBottom="3dp"
@@ -186,53 +218,15 @@
                         android:textSize="10sp"
                         android:padding="3dp"/>
 
-                    <LinearLayout
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/personalFragment_rv"
                         android:padding="3dp"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+                        android:layout_height="wrap_content">
 
-                        <de.hdodenhof.circleimageview.CircleImageView
-                            android:padding="4dp"
-                            android:src="@mipmap/ic_touxiang1"
-                            android:layout_width="35dp"
-                            android:layout_height="35dp"
-                            app:civ_border_color="@color/colorDarkBlue"
-                            app:civ_border_width="2dp"/>
+                    </android.support.v7.widget.RecyclerView>
 
-                        <de.hdodenhof.circleimageview.CircleImageView
-                            android:padding="4dp"
-                            android:src="@mipmap/ic_touxiang2"
-                            android:layout_width="35dp"
-                            android:layout_height="35dp"
-                            app:civ_border_color="@color/colorDarkBlue"
-                            app:civ_border_width="2dp" />
 
-                        <de.hdodenhof.circleimageview.CircleImageView
-                            android:padding="4dp"
-                            android:src="@mipmap/ic_touxiang3"
-                            android:layout_width="35dp"
-                            android:layout_height="35dp"
-                            app:civ_border_color="@color/colorGray_1"
-                            app:civ_border_width="2dp" />
-
-                        <de.hdodenhof.circleimageview.CircleImageView
-                            android:padding="4dp"
-                            android:src="@mipmap/ic_touxiang4"
-                            android:layout_width="35dp"
-                            android:layout_height="35dp"
-                            app:civ_border_color="@color/colorGray_1"
-                            app:civ_border_width="2dp" />
-
-                        <de.hdodenhof.circleimageview.CircleImageView
-                            android:padding="4dp"
-                            android:src="@mipmap/ic_touxiang5"
-                            android:layout_width="35dp"
-                            android:layout_height="35dp"
-                            app:civ_border_color="@color/colorGray_1"
-                            app:civ_border_width="2dp" />
-
-                    </LinearLayout>
 
                 </LinearLayout>
 

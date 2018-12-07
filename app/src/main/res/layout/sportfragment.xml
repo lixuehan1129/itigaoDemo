@@ -89,6 +89,7 @@
                                     android:textSize="10sp"/>
 
                                 <TextView
+                                    android:id="@+id/sportFragment_data2"
                                     android:paddingTop="3dp"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
@@ -111,6 +112,7 @@
                                     android:textSize="10sp"/>
 
                                 <TextView
+                                    android:id="@+id/sportFragment_data3"
                                     android:paddingTop="3dp"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
@@ -133,6 +135,7 @@
                                     android:textSize="10sp"/>
 
                                 <TextView
+                                    android:id="@+id/sportFragment_data4"
                                     android:paddingTop="3dp"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
@@ -159,7 +162,7 @@
                 android:orientation="horizontal">
 
                 <LinearLayout
-                    android:padding="10dp"
+                    android:padding="14dp"
                     android:layout_marginRight="6dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -213,11 +216,12 @@
                                     android:orientation="horizontal">
 
                                     <TextView
+                                        android:id="@+id/sportFragment_data5"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="4396"
                                         android:textStyle="bold"
-                                        android:textColor="@color/colorPrimaryDark"
+                                        android:textColor="@color/colorBrown1"
                                         android:textSize="24sp"/>
 
                                     <TextView
@@ -252,6 +256,7 @@
                                     android:orientation="horizontal">
 
                                     <TextView
+                                        android:id="@+id/sportFragment_data6"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="77777"
@@ -293,7 +298,6 @@
 
                                 <LinearLayout
                                     android:orientation="horizontal"
-                                    android:paddingBottom="15dp"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content">
 
@@ -314,13 +318,44 @@
 
                                 </LinearLayout>
 
+                        <LinearLayout
+                            android:paddingTop="5dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="今日 "
+                                />
+
+                            <TextView
+                                android:id="@+id/sportFragment_data7"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="43.96"
+                                android:textStyle="bold"
+                                android:textColor="@color/colorBrown1"
+                                android:textSize="15sp"/>
+
+
+                        </LinearLayout>
+
+
                                 <LinearLayout
-                                    android:paddingTop="4dp"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:orientation="horizontal">
 
                                     <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="累计 "
+                                        />
+
+                                    <TextView
+                                        android:id="@+id/sportFragment_data8"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="43.96"
@@ -329,10 +364,9 @@
                                         android:textSize="15sp"/>
 
                                     <TextView
-                                        android:paddingLeft="5dp"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:text="公里"/>
+                                        android:text=" 公里"/>
 
                                 </LinearLayout>
 
@@ -349,7 +383,6 @@
 
                                 <LinearLayout
                                     android:orientation="horizontal"
-                                    android:paddingBottom="15dp"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content">
 
@@ -370,27 +403,57 @@
 
                                 </LinearLayout>
 
-                                <LinearLayout
-                                    android:paddingTop="4dp"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:orientation="horizontal">
+                        <LinearLayout
+                            android:paddingTop="5dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
 
-                                    <TextView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:text="43.96"
-                                        android:textStyle="bold"
-                                        android:textColor="@color/colorPrimaryDark"
-                                        android:textSize="15sp"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="今日 "
+                                />
 
-                                    <TextView
-                                        android:paddingLeft="5dp"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:text="公里"/>
+                            <TextView
+                                android:id="@+id/sportFragment_data9"
+                                android:layout_width="wrap_content"
+                                android:layout_height="26dp"
+                                android:text="43.96"
+                                android:textColor="@color/colorBrown1"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
 
-                                </LinearLayout>
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="累计 "
+                                />
+
+                            <TextView
+                                android:id="@+id/sportFragment_data10"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="43.96"
+                                android:textStyle="bold"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textSize="15sp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=" 公里"/>
+
+                        </LinearLayout>
 
                     </LinearLayout>
 
@@ -416,7 +479,6 @@
 
                             <LinearLayout
                                 android:orientation="horizontal"
-                                android:paddingBottom="15dp"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content">
 
@@ -437,28 +499,57 @@
 
                             </LinearLayout>
 
-                            <LinearLayout
-                                android:paddingTop="4dp"
-                                android:paddingBottom="5dp"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="horizontal">
+                    <LinearLayout
+                        android:paddingTop="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
 
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="4.396"
-                                    android:textStyle="bold"
-                                    android:textColor="@color/colorPrimaryDark"
-                                    android:textSize="15sp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="今日 "
+                            />
 
-                                <TextView
-                                    android:paddingLeft="5dp"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="公里"/>
+                        <TextView
+                            android:id="@+id/sportFragment_data11"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="43.96"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorBrown1"
+                            android:textSize="15sp"/>
 
-                            </LinearLayout>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="累计 "
+                            />
+
+                        <TextView
+                            android:id="@+id/sportFragment_data12"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="43.96"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="15sp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" 公里"/>
+
+                    </LinearLayout>
 
                 </LinearLayout>
 
@@ -473,7 +564,6 @@
 
                             <LinearLayout
                                 android:orientation="horizontal"
-                                android:paddingBottom="15dp"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content">
 
@@ -494,28 +584,57 @@
 
                             </LinearLayout>
 
-                            <LinearLayout
-                                android:paddingTop="4dp"
-                                android:paddingBottom="5dp"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="horizontal">
+                    <LinearLayout
+                        android:paddingTop="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
 
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="43.96"
-                                    android:textStyle="bold"
-                                    android:textColor="@color/colorPrimaryDark"
-                                    android:textSize="15sp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="今日 "
+                            />
 
-                                <TextView
-                                    android:paddingLeft="5dp"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="分钟"/>
+                        <TextView
+                            android:id="@+id/sportFragment_data13"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="43.96"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorBrown1"
+                            android:textSize="15sp"/>
 
-                            </LinearLayout>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="累计 "
+                            />
+
+                        <TextView
+                            android:id="@+id/sportFragment_data14"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="43.96"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="15sp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" 分钟"/>
+
+                    </LinearLayout>
 
                 </LinearLayout>
 

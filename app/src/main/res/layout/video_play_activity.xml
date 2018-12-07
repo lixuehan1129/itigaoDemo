@@ -6,10 +6,10 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <VideoView
+    <org.yczbj.ycvideoplayerlib.VideoPlayer
         android:id="@+id/video_play_vv"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="200dp" />
 
     <ScrollView
         android:layout_width="match_parent"

@@ -44,7 +44,7 @@
                     android:layout_height="wrap_content">
 
                     <TextView
-                        android:id="@+id/sportFragment_data1"
+                        android:id="@+id/subscribeFragment_days"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="4396"
@@ -56,23 +56,23 @@
                         android:id="@+id/textView4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_alignBaseline="@+id/sportFragment_data1"
-                        android:layout_alignBottom="@+id/sportFragment_data1"
-                        android:layout_toEndOf="@+id/sportFragment_data1"
+                        android:layout_alignBaseline="@+id/subscribeFragment_days"
+                        android:layout_alignBottom="@+id/subscribeFragment_days"
+                        android:layout_toEndOf="@+id/subscribeFragment_days"
                         android:paddingLeft="5dp"
-                        android:text="   天" />
+                        android:text="  天" />
 
                     <TextView
                         android:id="@+id/textView3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_alignBottom="@+id/textView6"
-                        android:layout_toStartOf="@+id/textView6"
+                        android:layout_alignBottom="@+id/subscribeFragment_minutes"
+                        android:layout_toStartOf="@+id/subscribeFragment_minutes"
                         android:text="今日运动  "
                         android:textSize="11sp" />
 
                     <TextView
-                        android:id="@+id/textView6"
+                        android:id="@+id/subscribeFragment_minutes"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignBaseline="@+id/textView5"

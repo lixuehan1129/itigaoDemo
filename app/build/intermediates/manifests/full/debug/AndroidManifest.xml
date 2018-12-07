@@ -51,6 +51,7 @@
         android:largeHeap="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:testOnly="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
         <activity android:name="com.example.fitdemo.MainActivity" >
             <intent-filter>
@@ -59,7 +60,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.fitdemo.Subscribe.VideoPlayActivity" >
+        <activity
+            android:name="com.example.fitdemo.Subscribe.VideoPlayActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait" >
         </activity>
         <activity android:name="com.example.fitdemo.Classes.FitActivity" >
         </activity>

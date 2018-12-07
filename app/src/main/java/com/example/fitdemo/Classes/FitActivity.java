@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
@@ -36,6 +37,8 @@ public class FitActivity extends AppCompatActivity {
     private void initView(){
         Toolbar toolbar = (Toolbar) findViewById(R.id.class_activity_mainTool);
         toolbar.setTitle("健身课程");
+        back(toolbar);
+
         recyclerView1 = (RecyclerView) findViewById(R.id.class_activity_rv1);
         recyclerView2 = (RecyclerView) findViewById(R.id.class_activity_rv2);
         recyclerView3 = (RecyclerView) findViewById(R.id.class_activity_rv3);
@@ -164,4 +167,27 @@ public class FitActivity extends AppCompatActivity {
     }
 
 
+
+
+
+
+
+    //返回注销事件
+    private void back(Toolbar toolbar){
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                finish();
+                break;
+        }
+        return super.onOptionsItemSelected(item);
+    }
 }

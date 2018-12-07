@@ -12,6 +12,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.example.fitdemo.Adapter.ClassVideoAdapter;
 import com.example.fitdemo.R;
@@ -27,9 +28,8 @@ import java.util.List;
 
 public class SubscribeFragment extends BaseFragment {
 
-    private List<ClassVideoAdapter.Class_Video> class_videos;
     private RecyclerView recyclerView;
-    private ClassVideoAdapter classVideoAdapter;
+    private TextView days, minutes;
 
 
     @Override
@@ -45,15 +45,25 @@ public class SubscribeFragment extends BaseFragment {
         return view;
     }
 
+
+    //定义界面控件
     @SuppressLint("NewApi")
     private void initView(View view){
         Toolbar toolbar = (Toolbar) view.findViewById(R.id.subscribeFragment_mainTool);
         toolbar.setTitle("推荐内容");
         recyclerView = (RecyclerView) view.findViewById(R.id.subscribeFragment_rv);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+        days = (TextView) view.findViewById(R.id.subscribeFragment_days);
+        minutes = (TextView) view.findViewById(R.id.subscribeFragment_minutes);
+
+        //设置累计运动天数和运动时长
+        days.setText("396");
+        minutes.setText("67");
         setData();
     }
 
+
+    //推荐内容列表
     private void setData(){
         ArrayList<String> introduce = new ArrayList<>();
         ArrayList<Integer> image = new ArrayList<>();
@@ -72,14 +82,14 @@ public class SubscribeFragment extends BaseFragment {
     }
 
     private void initData(ArrayList<String> introduce,ArrayList<Integer> image){
-        class_videos = new ArrayList<>();
+        List<ClassVideoAdapter.Class_Video> class_videos = new ArrayList<>();
         for(int i = 0; i < introduce.size(); i++){
             ClassVideoAdapter newData = new ClassVideoAdapter(class_videos);
             ClassVideoAdapter.Class_Video class_video = newData.new Class_Video(introduce.get(i),image.get(i));
             class_videos.add(class_video);
         }
 
-        classVideoAdapter = new ClassVideoAdapter(class_videos);
+        ClassVideoAdapter classVideoAdapter = new ClassVideoAdapter(class_videos);
         recyclerView.setAdapter(classVideoAdapter);
         classVideoAdapter.setOnItemClickListener(new ClassVideoAdapter.OnItemClickListener() {
             @Override

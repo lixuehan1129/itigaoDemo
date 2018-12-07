@@ -3,8 +3,6 @@ package com.example.fitdemo.Recommend;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
-import android.support.v4.widget.NestedScrollView;
-import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -18,8 +16,8 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 
 import com.example.fitdemo.Adapter.ClassSelectAdapter;
-import com.example.fitdemo.Adapter.ClassVideoAdapter;
 import com.example.fitdemo.R;
+import com.example.fitdemo.Utils.DateUtils;
 import com.example.fitdemo.ViewHelper.BaseFragment;
 import com.example.fitdemo.ViewHelper.DividerItemChange;
 
@@ -40,11 +38,6 @@ public class FitFragment extends BaseFragment {
     private ClassSelectAdapter newData;
     private List<ClassSelectAdapter.Class_Select> class_selects;
     private ClassSelectAdapter.Class_Select class_select;
-    ArrayList<String> introduce;
-    ArrayList<String> coach;
-    ArrayList<String> time;
-    ArrayList<Integer> check;
-    ArrayList<Integer> image;
 
     private LinearLayout linearLayout1, linearLayout2, linearLayout3, linearLayout4, linearLayout5, linearLayout6, linearLayout7;
     private TextView textView1, textView2, textView3, textView4, textView5, textView6, textView7;
@@ -56,9 +49,6 @@ public class FitFragment extends BaseFragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.class_check, container, false);
         initView(view);
-        for(int i = 0; i < 7; i++){
-            setData(i);
-        }
         initGroup();
         return view;
     }
@@ -118,21 +108,61 @@ public class FitFragment extends BaseFragment {
         recyclerView7 = view.findViewById(R.id.class_check_rv7);
 
         recyclerView1.setLayoutManager(setNoSco());
+        recyclerView1.addItemDecoration(new DividerItemChange(getActivity(),DividerItemChange.VERTICAL));
         recyclerView2.setLayoutManager(setNoSco());
+        recyclerView2.addItemDecoration(new DividerItemChange(getActivity(),DividerItemChange.VERTICAL));
         recyclerView3.setLayoutManager(setNoSco());
+        recyclerView3.addItemDecoration(new DividerItemChange(getActivity(),DividerItemChange.VERTICAL));
         recyclerView4.setLayoutManager(setNoSco());
+        recyclerView4.addItemDecoration(new DividerItemChange(getActivity(),DividerItemChange.VERTICAL));
         recyclerView5.setLayoutManager(setNoSco());
+        recyclerView5.addItemDecoration(new DividerItemChange(getActivity(),DividerItemChange.VERTICAL));
         recyclerView6.setLayoutManager(setNoSco());
+        recyclerView6.addItemDecoration(new DividerItemChange(getActivity(),DividerItemChange.VERTICAL));
         recyclerView7.setLayoutManager(setNoSco());
+        recyclerView7.addItemDecoration(new DividerItemChange(getActivity(),DividerItemChange.VERTICAL));
+
+        initDate();
+        setData1(0,recyclerView1);
+        setData1(1,recyclerView2);
+        setData1(2,recyclerView3);
+        setData1(3,recyclerView4);
+        setData1(4,recyclerView5);
+        setData1(5,recyclerView6);
+        setData1(6,recyclerView7);
+
 
     }
 
-    private void setData(int week){
-        introduce = new ArrayList<>();
-        coach = new ArrayList<>();
-        time = new ArrayList<>();
-        check = new ArrayList<>();
-        image = new ArrayList<>();
+    private void initDate(){
+        button1.setText(DateUtils.StringWeek(0));
+        button2.setText(DateUtils.StringWeek(1));
+        button3.setText(DateUtils.StringWeek(2));
+        button4.setText(DateUtils.StringWeek(3));
+        button5.setText(DateUtils.StringWeek(4));
+        button6.setText(DateUtils.StringWeek(5));
+        button7.setText(DateUtils.StringWeek(6));
+
+        textView1.setText(DateUtils.StringTime(0));
+        textView2.setText(DateUtils.StringTime(1));
+        textView3.setText(DateUtils.StringTime(2));
+        textView4.setText(DateUtils.StringTime(3));
+        textView5.setText(DateUtils.StringTime(4));
+        textView6.setText(DateUtils.StringTime(5));
+        textView7.setText(DateUtils.StringTime(6));
+
+    }
+
+    private void setData1(int week, RecyclerView recyclerView){
+
+        ArrayList<String> introduce = new ArrayList<>();
+        ArrayList<String> coach = new ArrayList<>();
+        ArrayList<String> time = new ArrayList<>();
+        ArrayList<Integer> check = new ArrayList<>();
+        ArrayList<Integer> image = new ArrayList<>();
+
+
+
 
         switch (week){
             case 0:{
@@ -220,79 +250,15 @@ public class FitFragment extends BaseFragment {
                 break;
         }
 
-        initData(week);
+        initAdapter(week,recyclerView,introduce,coach,time,check,image);
 
-    }
-
-    private void changeData(int week, int position, ClassSelectAdapter classSelectAdapter){
-
-        switch (week){
-            case 0:{
-                if(check.get(position) == 0){
-                    check.set(position,1);
-                }else {
-                    check.set(position,0);
-                }
-                break;
-            }
-            case 1:{
-                if(check.get(position) == 0){
-                    check.set(position,1);
-                }else {
-                    check.set(position,0);
-                }
-                break;
-            }
-            case 2:{
-                if(check.get(position) == 0){
-                    check.set(position,1);
-                }else {
-                    check.set(position,0);
-                }
-                break;
-            }
-            case 3:{
-                if(check.get(position) == 0){
-                    check.set(position,1);
-                }else {
-                    check.set(position,0);
-                }
-                break;
-            }
-            case 4:{
-                if(check.get(position) == 0){
-                    check.set(position,1);
-                }else {
-                    check.set(position,0);
-                }
-                break;
-            }
-            case 5:{
-                if(check.get(position) == 0){
-                    check.set(position,1);
-                }else {
-                    check.set(position,0);
-                }
-                break;
-            }
-            case 6:{
-                if(check.get(position) == 0){
-                    check.set(position,1);
-                }else {
-                    check.set(position,0);
-                }
-                break;
-            }
-            default:
-                break;
-        }
-
-        classSelectAdapter.notifyItemChanged(position);
 
     }
 
 
-    private void initData(int week){
+
+    private void initAdapter(final int week, final RecyclerView recyclerView, final ArrayList<String> introduce, final ArrayList<String> coach, final ArrayList<String> time,
+                             final ArrayList<Integer> check, final ArrayList<Integer> image){
 
         class_selects = new ArrayList<>();
         for(int i = 0; i < introduce.size(); i++){
@@ -302,39 +268,17 @@ public class FitFragment extends BaseFragment {
             class_selects.add(class_select);
         }
 
-        switch (week){
-            case 0:{
-                setAdapter(recyclerView1,week);
-                break;
+        final ClassSelectAdapter classSelectAdapter = new ClassSelectAdapter(class_selects);
+        recyclerView.setAdapter(classSelectAdapter);
+        classSelectAdapter.setOnItemClickListener(new ClassSelectAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(View view, int position) {
+                if(check.get(position) != null){
+                    showNormalDialog(week,recyclerView,position,introduce,coach,time,check,image);
+                }
             }
-            case 1:{
-                setAdapter(recyclerView2,week);
-                break;
-            }
-            case 2:{
-                setAdapter(recyclerView3,week);
-                break;
-            }
-            case 3:{
-                setAdapter(recyclerView4,week);
-                break;
-            }
-            case 4:{
-                setAdapter(recyclerView5,week);
-                break;
-            }
-            case 5:{
-                setAdapter(recyclerView6,week);
-                break;
-            }
-            case 6:{
-                setAdapter(recyclerView7,week);
-                break;
-            }
-            default:
-                break;
+        });
 
-        }
     }
 
     private void initGroup(){
@@ -359,21 +303,9 @@ public class FitFragment extends BaseFragment {
         };
     }
 
-    private void setAdapter(RecyclerView recyclerView, final int week){
-        final ClassSelectAdapter classSelectAdapter = new ClassSelectAdapter(class_selects);
-        recyclerView.addItemDecoration(new DividerItemChange(getActivity(),DividerItemChange.VERTICAL));
-        recyclerView.setAdapter(classSelectAdapter);
-        classSelectAdapter.setOnItemClickListener(new ClassSelectAdapter.OnItemClickListener() {
-            @Override
-            public void onItemClick(View view, int position) {
-                if(check.get(position) != null){
-                    showNormalDialog(week,position,classSelectAdapter);
-                }
-            }
-        });
-    }
 
-    private void showNormalDialog(final int week, final int position, final ClassSelectAdapter classSelectAdapter){
+    private void showNormalDialog(final int week, final RecyclerView recyclerView, final int position, final ArrayList<String> introduce, final ArrayList<String> coach,
+                                  final ArrayList<String> time, final ArrayList<Integer> check, final ArrayList<Integer> image){
         /* @setIcon 设置对话框图标
          * @setTitle 设置对话框标题
          * @setMessage 设置对话框消息提示
@@ -398,7 +330,12 @@ public class FitFragment extends BaseFragment {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         //...To-do
-                        changeData(week,position,classSelectAdapter);
+                        if(check.get(position) == 0){
+                            check.set(position,1);
+                        }else {
+                            check.set(position,0);
+                        }
+                        initAdapter(week,recyclerView,introduce,coach,time,check,image);
                     }
                 });
         normalDialog.setNegativeButton("关闭",
