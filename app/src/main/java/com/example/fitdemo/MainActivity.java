@@ -27,6 +27,7 @@ import com.example.fitdemo.Personal.PersonalFragment;
 import com.example.fitdemo.Recommend.RecommendFragment;
 import com.example.fitdemo.Sport.SportFragment;
 import com.example.fitdemo.Subscribe.SubscribeFragment;
+import com.example.fitdemo.Utils.PermissionUtils;
 import com.example.fitdemo.Utils.StatusBarUtils;
 import com.example.fitdemo.ViewHelper.NoScollViewPager;
 
@@ -52,7 +53,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationB
         setContentView(R.layout.main);
         StatusBarUtils.setWindowStatusBarColor(MainActivity.this, R.color.colorWhite);
         initView();
-        setPermissions();//获取权限
+        PermissionUtils.setPer(MainActivity.this);//获取权限
     }
 
     private void initView(){
@@ -95,47 +96,20 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationB
     }
 
 
-
-    private void setPermissions(){
-        //获取权限
-        List<String> permissionList = new ArrayList<>();
-        if(ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.ACCESS_FINE_LOCATION)!= PackageManager.PERMISSION_GRANTED){
-            permissionList.add(Manifest.permission.ACCESS_FINE_LOCATION);
-        }
-        if(ContextCompat.checkSelfPermission(this,Manifest.permission.READ_PHONE_STATE)!=PackageManager.PERMISSION_GRANTED){
-            permissionList.add(Manifest.permission.READ_PHONE_STATE);
-        }
-        if(ContextCompat.checkSelfPermission(this,Manifest.permission.WRITE_EXTERNAL_STORAGE)!=PackageManager.PERMISSION_GRANTED){
-            permissionList.add(Manifest.permission.WRITE_EXTERNAL_STORAGE);
-        }
-        if(ContextCompat.checkSelfPermission(this,Manifest.permission.BLUETOOTH)!=PackageManager.PERMISSION_GRANTED){
-            permissionList.add(Manifest.permission.BLUETOOTH);
-        }
-        if(ContextCompat.checkSelfPermission(this,Manifest.permission.VIBRATE)!=PackageManager.PERMISSION_GRANTED){
-            permissionList.add(Manifest.permission.VIBRATE);
-        }
-        if(ContextCompat.checkSelfPermission(this,Manifest.permission.CAMERA)!=PackageManager.PERMISSION_GRANTED){
-            permissionList.add(Manifest.permission.CAMERA);
-        }
-        if(!permissionList.isEmpty()){
-            String[] permissions= permissionList.toArray(new String[permissionList.size()]);
-            ActivityCompat.requestPermissions(MainActivity.this,permissions,1);
-        }
-    }
     //Android按返回键，程序进入后台运行，不关闭程序
-    @Override
-    public boolean onKeyDown(int keyCode, KeyEvent event) {
-
-        if (keyCode == KeyEvent.KEYCODE_BACK) {
-            // moveTaskToBack(false);
-            Intent intent = new Intent(Intent.ACTION_MAIN);
-            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            intent.addCategory(Intent.CATEGORY_HOME);
-            startActivity(intent);
-            return true;
-        }
-        return super.onKeyDown(keyCode, event);
-    }
+//    @Override
+//    public boolean onKeyDown(int keyCode, KeyEvent event) {
+//
+//        if (keyCode == KeyEvent.KEYCODE_BACK) {
+//            // moveTaskToBack(false);
+//            Intent intent = new Intent(Intent.ACTION_MAIN);
+//            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+//            intent.addCategory(Intent.CATEGORY_HOME);
+//            startActivity(intent);
+//            return true;
+//        }
+//        return super.onKeyDown(keyCode, event);
+//    }
 
     @Override
     public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {

@@ -49,12 +49,17 @@
         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         android:hardwareAccelerated="true"
         android:largeHeap="true">
-        <activity android:name=".MainActivity">
+        <activity android:name=".User.UserLoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+
+        <activity android:name=".MainActivity"
+            tools:ignore="InnerclassSeparator">
+
         </activity>
 
         <activity android:name=".Subscribe.VideoPlayActivity"
@@ -89,6 +94,11 @@
 
         </activity>
 
+
+        <activity android:name=".User.UserRegistActivity"
+            tools:ignore="InnerclassSeparator">
+
+        </activity>
 
     </application>
 

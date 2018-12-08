@@ -30,6 +30,8 @@ import tv.danmaku.ijk.media.player.IjkMediaPlayer;
 
 public class VideoPlayActivity extends AppCompatActivity {
 
+    VideoPlayer videoPlayer;
+    VideoPlayerController videoPlayerController;
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -37,24 +39,24 @@ public class VideoPlayActivity extends AppCompatActivity {
         StatusBarUtils.setWindowStatusBarColor(VideoPlayActivity.this, R.color.colorWhite);
         Intent intent = getIntent();
         int id = intent.getIntExtra("video_add",0);
-        final VideoPlayer videoView = (VideoPlayer) findViewById(R.id.video_play_vv);
+        videoPlayer = (VideoPlayer) findViewById(R.id.video_play_vv);
 
 
         switch (id){
             case 0:{
-                setPlay(videoView,R.raw.mp_fit1);
+                setPlay("http://39.105.213.41:8080/video/mp_fit1.mp4", R.raw.mp_fit1);
                 break;
             }
             case 1:{
-                setPlay(videoView,R.raw.mp_fit2);
+                setPlay("http://39.105.213.41:8080/video/mp_fit2.mp4", R.raw.mp_fit2);
                 break;
             }
             case 2:{
-                setPlay(videoView,R.raw.mp_fit3);
+                setPlay("http://39.105.213.41:8080/video/mp_fit3.mp4", R.raw.mp_fit3);
                 break;
             }
             case 3:{
-                setPlay(videoView,R.raw.mp_fit4);
+                setPlay("http://39.105.213.41:8080/video/mp_fit4.mp4", R.raw.mp_fit4);
                 break;
             }
             default:
@@ -65,7 +67,7 @@ public class VideoPlayActivity extends AppCompatActivity {
 
     }
 
-    private void setPlay(final VideoPlayer videoPlayer, Integer mp4){
+    private void setPlay(String url, Integer mp4){
         //设置播放类型
         //IJKPlayer or MediaPlayer
         videoPlayer.setPlayerType(ConstantKeys.IjkPlayerType.TYPE_NATIVE);
@@ -81,7 +83,7 @@ public class VideoPlayActivity extends AppCompatActivity {
 
         //创建视频控制器
         VideoPlayerController videoPlayerController = new VideoPlayerController(this);
-        videoPlayerController.setTitle("流行视频");
+        videoPlayerController.setTitle("");
         //设置5秒不操作后隐藏头部和底部布局视图
         videoPlayerController.setHideTime(5000);
         //返回监听
@@ -125,6 +127,9 @@ public class VideoPlayActivity extends AppCompatActivity {
     @Override
     protected void onStop() {
         super.onStop();
+
+        videoPlayer.release();
+        videoPlayer.releasePlayer();
         VideoPlayerManager.instance().releaseVideoPlayer();
     }
 
@@ -133,6 +138,7 @@ public class VideoPlayActivity extends AppCompatActivity {
         if (VideoPlayerManager.instance().onBackPressed()) return;
         super.onBackPressed();
     }
+
 
 
 

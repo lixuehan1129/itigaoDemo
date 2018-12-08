@@ -53,12 +53,14 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
-        <activity android:name="com.example.fitdemo.MainActivity" >
+        <activity android:name="com.example.fitdemo.User.UserLoginActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name="com.example.fitdemo.MainActivity" >
         </activity>
         <activity
             android:name="com.example.fitdemo.Subscribe.VideoPlayActivity"
@@ -74,6 +76,8 @@
         <activity android:name="com.example.fitdemo.Classes.DanceActivity" >
         </activity>
         <activity android:name="com.example.fitdemo.Classes.YogaActivity" >
+        </activity>
+        <activity android:name="com.example.fitdemo.User.UserRegistActivity" >
         </activity>
     </application>
 

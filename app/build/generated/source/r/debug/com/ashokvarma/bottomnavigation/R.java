@@ -776,27 +776,27 @@ public final class R {
         public static final int abc_vector_test = 0x7f020052;
         public static final int avd_hide_password = 0x7f020053;
         public static final int avd_show_password = 0x7f020054;
-        public static final int design_bottom_navigation_item_background = 0x7f020062;
-        public static final int design_fab_background = 0x7f020063;
-        public static final int design_ic_visibility = 0x7f020064;
-        public static final int design_ic_visibility_off = 0x7f020065;
-        public static final int design_password_eye = 0x7f020066;
-        public static final int design_snackbar_background = 0x7f020067;
-        public static final int navigation_empty_icon = 0x7f02009c;
-        public static final int notification_action_background = 0x7f02009d;
-        public static final int notification_bg = 0x7f02009e;
-        public static final int notification_bg_low = 0x7f02009f;
-        public static final int notification_bg_low_normal = 0x7f0200a0;
-        public static final int notification_bg_low_pressed = 0x7f0200a1;
-        public static final int notification_bg_normal = 0x7f0200a2;
-        public static final int notification_bg_normal_pressed = 0x7f0200a3;
-        public static final int notification_icon_background = 0x7f0200a4;
-        public static final int notification_template_icon_bg = 0x7f0200c1;
-        public static final int notification_template_icon_low_bg = 0x7f0200c2;
-        public static final int notification_tile_bg = 0x7f0200a5;
-        public static final int notify_panel_notification_icon_bg = 0x7f0200a6;
-        public static final int tooltip_frame_dark = 0x7f0200bf;
-        public static final int tooltip_frame_light = 0x7f0200c0;
+        public static final int design_bottom_navigation_item_background = 0x7f020065;
+        public static final int design_fab_background = 0x7f020066;
+        public static final int design_ic_visibility = 0x7f020067;
+        public static final int design_ic_visibility_off = 0x7f020068;
+        public static final int design_password_eye = 0x7f020069;
+        public static final int design_snackbar_background = 0x7f02006a;
+        public static final int navigation_empty_icon = 0x7f02009f;
+        public static final int notification_action_background = 0x7f0200a0;
+        public static final int notification_bg = 0x7f0200a1;
+        public static final int notification_bg_low = 0x7f0200a2;
+        public static final int notification_bg_low_normal = 0x7f0200a3;
+        public static final int notification_bg_low_pressed = 0x7f0200a4;
+        public static final int notification_bg_normal = 0x7f0200a5;
+        public static final int notification_bg_normal_pressed = 0x7f0200a6;
+        public static final int notification_icon_background = 0x7f0200a7;
+        public static final int notification_template_icon_bg = 0x7f0200c4;
+        public static final int notification_template_icon_low_bg = 0x7f0200c5;
+        public static final int notification_tile_bg = 0x7f0200a8;
+        public static final int notify_panel_notification_icon_bg = 0x7f0200a9;
+        public static final int tooltip_frame_dark = 0x7f0200c2;
+        public static final int tooltip_frame_light = 0x7f0200c3;
     }
     public static final class id {
         public static final int action0 = 0x7f0e0114;
@@ -875,7 +875,7 @@ public final class R {
         public static final int line3 = 0x7f0e0008;
         public static final int listMode = 0x7f0e0026;
         public static final int list_item = 0x7f0e0070;
-        public static final int masked = 0x7f0e0152;
+        public static final int masked = 0x7f0e016c;
         public static final int media_actions = 0x7f0e0117;
         public static final int message = 0x7f0e014f;
         public static final int mini = 0x7f0e0055;
@@ -961,7 +961,7 @@ public final class R {
         public static final int uniform = 0x7f0e003a;
         public static final int up = 0x7f0e001b;
         public static final int view_offset_helper = 0x7f0e001c;
-        public static final int visible = 0x7f0e0151;
+        public static final int visible = 0x7f0e016b;
         public static final int wrap_content = 0x7f0e003b;
     }
     public static final class integer {
