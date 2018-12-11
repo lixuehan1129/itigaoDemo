@@ -2,7 +2,6 @@ package com.example.fitdemo.Subscribe;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -71,10 +70,10 @@ public class SubscribeFragment extends BaseFragment {
             introduce.add("流行的健身视频排行榜，每个人都在学，快来学习一下吧"+i);
         }
 
-        image.add(R.mipmap.ic_t_video1);
-        image.add(R.mipmap.ic_t_video2);
-        image.add(R.mipmap.ic_t_video3);
-        image.add(R.mipmap.ic_t_video4);
+        image.add(R.mipmap.ic_t_video11);
+        image.add(R.mipmap.ic_t_video21);
+        image.add(R.mipmap.ic_t_video31);
+        image.add(R.mipmap.ic_t_video41);
 
 
         initData(introduce,image);

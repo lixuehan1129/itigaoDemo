@@ -64,10 +64,10 @@ public class RunActivity extends AppCompatActivity {
         for(int i = 0;i < 4;i++){
             introduce.add("当前主播"+i);
         }
-        image.add(R.mipmap.ic_run1);
-        image.add(R.mipmap.ic_run01);
-        image.add(R.mipmap.ic_run2);
-        image.add(R.mipmap.ic_run04);
+        image.add(R.mipmap.ic_run1111);
+        image.add(R.mipmap.ic_run011);
+        image.add(R.mipmap.ic_run21);
+        image.add(R.mipmap.ic_run041);
 
         initData1(introduce,image);
 
@@ -79,10 +79,10 @@ public class RunActivity extends AppCompatActivity {
         for(int i = 0;i < 4;i++){
             introduce.add("推荐课程"+i);
         }
-        image.add(R.mipmap.ic_run03);
-        image.add(R.mipmap.ic_run01);
-        image.add(R.mipmap.ic_run2);
-        image.add(R.mipmap.ic_run05);
+        image.add(R.mipmap.ic_run031);
+        image.add(R.mipmap.ic_run011);
+        image.add(R.mipmap.ic_run21);
+        image.add(R.mipmap.ic_run051);
 
         initData2(introduce,image);
 
@@ -94,10 +94,10 @@ public class RunActivity extends AppCompatActivity {
         for(int i = 0;i < 4;i++){
             introduce.add("慢跑课程总览"+i);
         }
-        image.add(R.mipmap.ic_run04);
-        image.add(R.mipmap.ic_run01);
-        image.add(R.mipmap.ic_run2);
-        image.add(R.mipmap.ic_run05);
+        image.add(R.mipmap.ic_run041);
+        image.add(R.mipmap.ic_run011);
+        image.add(R.mipmap.ic_run21);
+        image.add(R.mipmap.ic_run051);
 
         initData3(introduce,image);
 

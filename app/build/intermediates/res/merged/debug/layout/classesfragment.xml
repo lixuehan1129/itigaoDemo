@@ -28,11 +28,11 @@
 
             <com.example.fitdemo.ViewHelper.CustomRoundAngleImageView
                 android:layout_margin="10dp"
-                android:id="@+id/classFragment_i1"
+                android:id="@+id/classFragment_i3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:adjustViewBounds="true"
-                android:src="@mipmap/ic_fitc"
+                android:src="@mipmap/ic_runc1"
                 android:scaleType="fitXY" />
 
             <com.example.fitdemo.ViewHelper.CustomRoundAngleImageView
@@ -41,25 +41,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:adjustViewBounds="true"
-                android:src="@mipmap/ic_bikec"
+                android:src="@mipmap/ic_bikec1"
                 android:scaleType="fitXY" />
 
             <com.example.fitdemo.ViewHelper.CustomRoundAngleImageView
                 android:layout_margin="10dp"
-                android:id="@+id/classFragment_i3"
+                android:id="@+id/classFragment_i1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:adjustViewBounds="true"
-                android:src="@mipmap/ic_runc"
-                android:scaleType="fitXY" />
-
-            <com.example.fitdemo.ViewHelper.CustomRoundAngleImageView
-                android:layout_margin="10dp"
-                android:id="@+id/classFragment_i4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:adjustViewBounds="true"
-                android:src="@mipmap/ic_dancec"
+                android:src="@mipmap/ic_fitc1"
                 android:scaleType="fitXY" />
 
             <com.example.fitdemo.ViewHelper.CustomRoundAngleImageView
@@ -68,7 +59,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:adjustViewBounds="true"
-                android:src="@mipmap/ic_yogac"
+                android:src="@mipmap/ic_yogac1"
+                android:scaleType="fitXY" />
+
+            <com.example.fitdemo.ViewHelper.CustomRoundAngleImageView
+                android:layout_margin="10dp"
+                android:id="@+id/classFragment_i6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:src="@mipmap/ic_child"
                 android:scaleType="fitXY" />
 
         </LinearLayout>

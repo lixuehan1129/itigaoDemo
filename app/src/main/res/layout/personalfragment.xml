@@ -63,7 +63,7 @@
 
                 <de.hdodenhof.circleimageview.CircleImageView
                     android:id="@+id/personalFragment_picture"
-                    android:src="@mipmap/ic_touxiang2"
+                    android:src="@mipmap/ic_touxiang21"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     app:civ_border_color="@color/colorDarkBlue"

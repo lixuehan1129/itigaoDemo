@@ -56,7 +56,7 @@ public class ClassActivityAdapter extends RecyclerView.Adapter<ClassActivityAdap
         if(class_activity.getClass_video_iv() != null){
             holder.class_video_iv.setImageResource(class_activity.getClass_video_iv());
         }else {
-            holder.class_video_iv.setImageResource(R.mipmap.ic_cycling);
+            holder.class_video_iv.setImageResource(R.mipmap.ic_cycling1);
         }
 
         // String url = class_video.getItem_image();

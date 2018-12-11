@@ -69,7 +69,7 @@ public class ClassSelectAdapter extends RecyclerView.Adapter<ClassSelectAdapter.
         if(class_select.getImage() != null){
             holder.imageView.setImageResource(class_select.getImage());
         }else {
-            holder.imageView.setImageResource(R.mipmap.ic_run1);
+            holder.imageView.setImageResource(R.mipmap.ic_run1111);
         }
         holder.itr.setText(class_select.getItr());
         holder.coach.setText(class_select.getCoach());

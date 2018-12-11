@@ -64,10 +64,10 @@ public class DanceActivity extends AppCompatActivity {
         for(int i = 0;i < 4;i++){
             introduce.add("当前主播"+i);
         }
-        image.add(R.mipmap.ic_dance1);
-        image.add(R.mipmap.ic_dance2);
-        image.add(R.mipmap.ic_dance3);
-        image.add(R.mipmap.ic_dance4);
+        image.add(R.mipmap.ic_dance11);
+        image.add(R.mipmap.ic_dance21);
+        image.add(R.mipmap.ic_dance31);
+        image.add(R.mipmap.ic_dance41);
 
         initData1(introduce,image);
 
@@ -79,10 +79,10 @@ public class DanceActivity extends AppCompatActivity {
         for(int i = 0;i < 4;i++){
             introduce.add("推荐课程"+i);
         }
-        image.add(R.mipmap.ic_dance5);
-        image.add(R.mipmap.ic_dance2);
-        image.add(R.mipmap.ic_dance3);
-        image.add(R.mipmap.ic_dance4);
+        image.add(R.mipmap.ic_dance51);
+        image.add(R.mipmap.ic_dance21);
+        image.add(R.mipmap.ic_dance31);
+        image.add(R.mipmap.ic_dance41);
 
         initData2(introduce,image);
 
@@ -94,10 +94,10 @@ public class DanceActivity extends AppCompatActivity {
         for(int i = 0;i < 4;i++){
             introduce.add("舞蹈课程总览"+i);
         }
-        image.add(R.mipmap.ic_dance1);
-        image.add(R.mipmap.ic_dance3);
-        image.add(R.mipmap.ic_dance5);
-        image.add(R.mipmap.ic_dance2);
+        image.add(R.mipmap.ic_dance11);
+        image.add(R.mipmap.ic_dance31);
+        image.add(R.mipmap.ic_dance51);
+        image.add(R.mipmap.ic_dance21);
 
         initData3(introduce,image);
 

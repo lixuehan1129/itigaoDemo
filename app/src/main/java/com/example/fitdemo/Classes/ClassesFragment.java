@@ -48,8 +48,8 @@ public class ClassesFragment extends BaseFragment {
         ImageView imageView1 = (ImageView) view.findViewById(R.id.classFragment_i1);
         ImageView imageView2 = (ImageView) view.findViewById(R.id.classFragment_i2);
         ImageView imageView3 = (ImageView) view.findViewById(R.id.classFragment_i3);
-        ImageView imageView4 = (ImageView) view.findViewById(R.id.classFragment_i4);
-        ImageView imageView5 = (ImageView) view.findViewById(R.id.classFragment_i5);
+        ImageView imageView4 = (ImageView) view.findViewById(R.id.classFragment_i5);
+        ImageView imageView5 = (ImageView) view.findViewById(R.id.classFragment_i6);
 
         imageView1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -75,10 +75,11 @@ public class ClassesFragment extends BaseFragment {
             }
         });
 
+
         imageView4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getActivity(),DanceActivity.class);
+                Intent intent = new Intent(getActivity(),YogaActivity.class);
                 startActivity(intent);
             }
         });
@@ -86,7 +87,7 @@ public class ClassesFragment extends BaseFragment {
         imageView5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getActivity(),YogaActivity.class);
+                Intent intent = new Intent(getActivity(),ChildActivity.class);
                 startActivity(intent);
             }
         });

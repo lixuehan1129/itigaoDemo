@@ -1,7 +1,5 @@
 package com.example.fitdemo.Adapter;
 
-import android.content.Context;
-import android.graphics.Bitmap;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -12,7 +10,6 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 
-import com.bumptech.glide.Glide;
 import com.example.fitdemo.R;
 
 import java.util.List;
@@ -70,7 +67,7 @@ public class ClassVideoAdapter extends RecyclerView.Adapter<ClassVideoAdapter.Vi
         if(class_video.getClass_video_iv() != null){
             holder.class_video_iv.setImageResource(class_video.getClass_video_iv());
         }else {
-            holder.class_video_iv.setImageResource(R.mipmap.ic_cycling);
+            holder.class_video_iv.setImageResource(R.mipmap.ic_cycling1);
         }
 
        // String url = class_video.getItem_image();

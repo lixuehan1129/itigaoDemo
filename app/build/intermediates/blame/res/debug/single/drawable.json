@@ -48,20 +48,20 @@
         "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\YCVideoPlayerLib-2.4.9.aar\\b69ab7fded1fe23bfcd0375ade85baf1\\res\\drawable\\selector_details_try_see.xml"
     },
     {
-        "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_menu_overflow_material.xml",
-        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.2.aar\\3fd61dc53584134b026964635b568c79\\res\\drawable\\abc_ic_menu_overflow_material.xml"
-    },
-    {
         "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_fab_background.xml",
         "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.0.2.aar\\38d489b3919043c2b8ba9bfe51fa1b59\\res\\drawable\\design_fab_background.xml"
     },
     {
-        "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\select_change_clarity.xml",
-        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\YCVideoPlayerLib-2.4.9.aar\\b69ab7fded1fe23bfcd0375ade85baf1\\res\\drawable\\select_change_clarity.xml"
+        "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_menu_overflow_material.xml",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.2.aar\\3fd61dc53584134b026964635b568c79\\res\\drawable\\abc_ic_menu_overflow_material.xml"
     },
     {
         "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_check_material.xml",
         "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.2.aar\\3fd61dc53584134b026964635b568c79\\res\\drawable\\abc_btn_check_material.xml"
+    },
+    {
+        "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\select_change_clarity.xml",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\YCVideoPlayerLib-2.4.9.aar\\b69ab7fded1fe23bfcd0375ade85baf1\\res\\drawable\\select_change_clarity.xml"
     },
     {
         "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_tick_mark_material.xml",

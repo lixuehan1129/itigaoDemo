@@ -51,7 +51,6 @@
         android:largeHeap="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:testOnly="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
         <activity android:name="com.example.fitdemo.User.UserLoginActivity" >
             <intent-filter>
@@ -78,6 +77,8 @@
         <activity android:name="com.example.fitdemo.Classes.YogaActivity" >
         </activity>
         <activity android:name="com.example.fitdemo.User.UserRegistActivity" >
+        </activity>
+        <activity android:name="com.example.fitdemo.Classes.ChildActivity" >
         </activity>
     </application>
 

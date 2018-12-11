@@ -3,7 +3,6 @@ package com.example.fitdemo.Recommend;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
-import android.support.v4.widget.NestedScrollView;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -174,8 +173,8 @@ public class CyclingFragment extends BaseFragment {
                 time.add("星期一 11-26 14：30-16：00");
                 check.add(1);
                 check.add(0);
-                image.add(R.mipmap.ic_run1);
-                image.add(R.mipmap.ic_yoga1);
+                image.add(R.mipmap.ic_run1111);
+                image.add(R.mipmap.ic_yoga11);
                 break;
             }
             case 1:{
@@ -187,8 +186,8 @@ public class CyclingFragment extends BaseFragment {
                 time.add("星期二 11-26 14：30-16：00");
                 check.add(0);
                 check.add(0);
-                image.add(R.mipmap.ic_yoga1);
-                image.add(R.mipmap.ic_run1);
+                image.add(R.mipmap.ic_yoga11);
+                image.add(R.mipmap.ic_run1111);
                 break;
             }
             case 2:{
@@ -196,7 +195,7 @@ public class CyclingFragment extends BaseFragment {
                 coach.add("金牌教练 老罗 其实我更喜欢演讲");
                 time.add("星期三 11-26 08：30-10：00");
                 check.add(1);
-                image.add(R.mipmap.ic_yoga1);
+                image.add(R.mipmap.ic_yoga11);
                 break;
             }
             case 3:{
@@ -206,8 +205,8 @@ public class CyclingFragment extends BaseFragment {
                 coach.add("兼职教练 刘美男 开黑吗，我辅助贼6");
                 time.add("星期四 11-26 08：30-10：00");
                 time.add("星期四 11-26 14：30-16：00");
-                image.add(R.mipmap.ic_yoga1);
-                image.add(R.mipmap.ic_run1);
+                image.add(R.mipmap.ic_yoga11);
+                image.add(R.mipmap.ic_run1111);
                 check.add(1);
                 check.add(0);
                 break;
@@ -221,8 +220,8 @@ public class CyclingFragment extends BaseFragment {
                 time.add("星期五 11-26 14：30-16：00");
                 check.add(0);
                 check.add(0);
-                image.add(R.mipmap.ic_yoga1);
-                image.add(R.mipmap.ic_run1);
+                image.add(R.mipmap.ic_yoga11);
+                image.add(R.mipmap.ic_run1111);
                 break;
             }
             case 5:{
@@ -230,7 +229,7 @@ public class CyclingFragment extends BaseFragment {
                 coach.add("金牌教练 小马 都亏到坐公交了");
                 time.add("星期六 11-26 08：30-10：00");
                 check.add(0);
-                image.add(R.mipmap.ic_yoga1);
+                image.add(R.mipmap.ic_yoga11);
                 break;
             }
             case 6:{
@@ -240,8 +239,8 @@ public class CyclingFragment extends BaseFragment {
                 coach.add("教学有方 校长 微博抽奖送跑车");
                 time.add("星期日 11-26 08：30-10：00");
                 time.add("星期日 11-26 14：30-16：00");
-                image.add(R.mipmap.ic_run1);
-                image.add(R.mipmap.ic_yoga1);
+                image.add(R.mipmap.ic_run1111);
+                image.add(R.mipmap.ic_yoga11);
                 check.add(1);
                 check.add(0);
                 break;

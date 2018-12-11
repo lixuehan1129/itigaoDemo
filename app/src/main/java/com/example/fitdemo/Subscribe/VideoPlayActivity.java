@@ -44,19 +44,19 @@ public class VideoPlayActivity extends AppCompatActivity {
 
         switch (id){
             case 0:{
-                setPlay("http://39.105.213.41:8080/video/mp_fit1.mp4", R.raw.mp_fit1);
+                setPlay("http://39.105.213.41:8080/video/mp_fit1.mp4");
                 break;
             }
             case 1:{
-                setPlay("http://39.105.213.41:8080/video/mp_fit2.mp4", R.raw.mp_fit2);
+                setPlay("http://39.105.213.41:8080/video/mp_fit2.mp4");
                 break;
             }
             case 2:{
-                setPlay("http://39.105.213.41:8080/video/mp_fit3.mp4", R.raw.mp_fit3);
+                setPlay("http://39.105.213.41:8080/video/mp_fit3.mp4");
                 break;
             }
             case 3:{
-                setPlay("http://39.105.213.41:8080/video/mp_fit4.mp4", R.raw.mp_fit4);
+                setPlay("http://39.105.213.41:8080/video/mp_fit4.mp4");
                 break;
             }
             default:
@@ -67,14 +67,14 @@ public class VideoPlayActivity extends AppCompatActivity {
 
     }
 
-    private void setPlay(String url, Integer mp4){
+    private void setPlay(String url){
         //设置播放类型
         //IJKPlayer or MediaPlayer
         videoPlayer.setPlayerType(ConstantKeys.IjkPlayerType.TYPE_NATIVE);
         //视频地址
-        Uri uri = Uri.parse(ContentResolver.SCHEME_ANDROID_RESOURCE + "://" + getPackageName() + "/" + mp4);
+   //     Uri uri = Uri.parse(ContentResolver.SCHEME_ANDROID_RESOURCE + "://" + getPackageName() + "/" + mp4);
         //设置视频地址和请求头部
-        videoPlayer.setUp(String.valueOf(uri),null);
+        videoPlayer.setUp(url,null);
         //是否从上一次的位置播放
         videoPlayer.continueFromLastPosition(false);
         //设置播放速度

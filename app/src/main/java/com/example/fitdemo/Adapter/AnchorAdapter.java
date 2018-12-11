@@ -56,7 +56,7 @@ public class AnchorAdapter extends RecyclerView.Adapter<AnchorAdapter.ViewHolder
         if(anchor.getImage() != null){
             holder.imageView.setImageResource(anchor.getImage());
         }else {
-            holder.imageView.setImageResource(R.mipmap.ic_touxiang2);
+            holder.imageView.setImageResource(R.mipmap.ic_touxiang21);
         }
 
         if(anchor.getState() == 0){

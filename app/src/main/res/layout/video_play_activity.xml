@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
 
     <org.yczbj.ycvideoplayerlib.VideoPlayer
         android:id="@+id/video_play_vv"
@@ -12,9 +11,21 @@
         android:layout_height="200dp" />
 
     <ScrollView
+        android:layout_below="@id/video_play_vv"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         tools:ignore="UselessParent">
+
+
+
     </ScrollView>
 
-</LinearLayout>
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+    </LinearLayout>
+
+</RelativeLayout>

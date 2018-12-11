@@ -75,15 +75,15 @@ public class PersonalFragment extends BaseFragment {
     private void setData(){
         ArrayList<Integer> image = new ArrayList<>();
         ArrayList<Integer> state = new ArrayList<>();
-        image.add(R.mipmap.ic_touxiang1);
+        image.add(R.mipmap.ic_touxiang11);
         state.add(0);
-        image.add(R.mipmap.ic_touxiang2);
+        image.add(R.mipmap.ic_touxiang21);
         state.add(0);
         image.add(R.mipmap.ic_touxiang3);
         state.add(0);
-        image.add(R.mipmap.ic_touxiang4);
+        image.add(R.mipmap.ic_touxiang41);
         state.add(1);
-        image.add(R.mipmap.ic_touxiang5);
+        image.add(R.mipmap.ic_touxiang51);
         state.add(1);
 
         setAdapter(image, state);

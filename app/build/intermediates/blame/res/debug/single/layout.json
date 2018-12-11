@@ -96,6 +96,10 @@
         "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-27.0.2.aar\\98e08896f4735fe485f56d583933bfa4\\res\\layout\\notification_template_big_media_custom.xml"
     },
     {
+        "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\layout\\child_activity.xml",
+        "source": "D:\\Android\\Application\\FitDemo\\app\\src\\main\\res\\layout\\child_activity.xml"
+    },
+    {
         "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_menu_item_action_area.xml",
         "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.0.2.aar\\38d489b3919043c2b8ba9bfe51fa1b59\\res\\layout\\design_menu_item_action_area.xml"
     },

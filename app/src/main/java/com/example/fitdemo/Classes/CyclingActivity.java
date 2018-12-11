@@ -63,10 +63,10 @@ public class CyclingActivity extends AppCompatActivity {
         for(int i = 0;i < 4;i++){
             introduce.add("当前主播"+i);
         }
-        image.add(R.mipmap.ic_bike1);
-        image.add(R.mipmap.ic_bike2);
-        image.add(R.mipmap.ic_bike3);
-        image.add(R.mipmap.ic_bike4);
+        image.add(R.mipmap.ic_bike11);
+        image.add(R.mipmap.ic_bike21);
+        image.add(R.mipmap.ic_bike31);
+        image.add(R.mipmap.ic_bike41);
 
         initData1(introduce,image);
 
@@ -78,10 +78,10 @@ public class CyclingActivity extends AppCompatActivity {
         for(int i = 0;i < 4;i++){
             introduce.add("推荐课程"+i);
         }
-        image.add(R.mipmap.ic_bike5);
-        image.add(R.mipmap.ic_bike6);
-        image.add(R.mipmap.ic_bike3);
-        image.add(R.mipmap.ic_bike1);
+        image.add(R.mipmap.ic_bike51);
+        image.add(R.mipmap.ic_bike61);
+        image.add(R.mipmap.ic_bike31);
+        image.add(R.mipmap.ic_bike11);
 
         initData2(introduce,image);
 
@@ -93,10 +93,10 @@ public class CyclingActivity extends AppCompatActivity {
         for(int i = 0;i < 4;i++){
             introduce.add("骑车课程总览"+i);
         }
-        image.add(R.mipmap.ic_bike4);
-        image.add(R.mipmap.ic_bike5);
-        image.add(R.mipmap.ic_cycling);
-        image.add(R.mipmap.ic_cycling);
+        image.add(R.mipmap.ic_bike41);
+        image.add(R.mipmap.ic_bike51);
+        image.add(R.mipmap.ic_cycling1);
+        image.add(R.mipmap.ic_cycling1);
 
         initData3(introduce,image);
 

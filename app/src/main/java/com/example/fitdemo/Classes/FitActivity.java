@@ -66,10 +66,10 @@ public class FitActivity extends AppCompatActivity {
         for(int i = 0;i < 4;i++){
             introduce.add("当前主播"+i);
         }
-        image.add(R.mipmap.ic_fit1);
-        image.add(R.mipmap.ic_fit2);
-        image.add(R.mipmap.ic_fit3);
-        image.add(R.mipmap.ic_fit4);
+        image.add(R.mipmap.ic_fit11);
+        image.add(R.mipmap.ic_fit21);
+        image.add(R.mipmap.ic_fit31);
+        image.add(R.mipmap.ic_fit41);
 
         initData1(introduce,image);
 
@@ -81,10 +81,10 @@ public class FitActivity extends AppCompatActivity {
         for(int i = 0;i < 4;i++){
             introduce.add("推荐课程"+i);
         }
-        image.add(R.mipmap.ic_fit5);
-        image.add(R.mipmap.ic_fit6);
-        image.add(R.mipmap.ic_fit7);
-        image.add(R.mipmap.ic_fit8);
+        image.add(R.mipmap.ic_fit51);
+        image.add(R.mipmap.ic_fit61);
+        image.add(R.mipmap.ic_fit71);
+        image.add(R.mipmap.ic_fit81);
 
         initData2(introduce,image);
 
@@ -96,10 +96,10 @@ public class FitActivity extends AppCompatActivity {
         for(int i = 0;i < 4;i++){
             introduce.add("健身课程总览"+i);
         }
-        image.add(R.mipmap.ic_fit2);
-        image.add(R.mipmap.ic_fit3);
-        image.add(R.mipmap.ic_fit6);
-        image.add(R.mipmap.ic_fit8);
+        image.add(R.mipmap.ic_fit21);
+        image.add(R.mipmap.ic_fit31);
+        image.add(R.mipmap.ic_fit61);
+        image.add(R.mipmap.ic_fit81);
 
         initData3(introduce,image);
 
