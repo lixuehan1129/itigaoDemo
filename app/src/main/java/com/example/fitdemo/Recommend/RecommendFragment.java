@@ -26,7 +26,7 @@ import java.util.List;
 public class RecommendFragment extends BaseFragment implements TabLayout.OnTabSelectedListener{
 
     private ViewPager mViewPager;
-    private String[] titles=new String[]{"  跑步机  ", " 动感单车 ", " 力量训练 ", "  瑜伽  "};
+    private String[] titles = new String[]{"  跑步机  ", " 动感单车 ", " 力量训练 ", "  瑜伽  "};
     private List<Fragment> fragments=new ArrayList<>();
 
     @Override

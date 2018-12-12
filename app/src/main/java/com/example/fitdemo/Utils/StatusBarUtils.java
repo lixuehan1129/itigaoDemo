@@ -3,6 +3,8 @@ package com.example.fitdemo.Utils;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.Dialog;
+import android.app.ProgressDialog;
+import android.content.Context;
 import android.os.Build;
 import android.view.Window;
 import android.view.WindowManager;
@@ -42,5 +44,8 @@ public class StatusBarUtils {
             e.printStackTrace();
         }
     }
+
+
+
 
 }

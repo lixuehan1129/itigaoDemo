@@ -23,7 +23,6 @@
         app:tabBackground="@color/colorWhite"
         app:tabIndicatorColor="@color/colorBlack"
         app:tabIndicatorHeight="0dp"
-
         app:tabMode="scrollable"
         app:tabSelectedTextColor="@color/colorBlack"
         app:tabTextColor="@color/colorGray">

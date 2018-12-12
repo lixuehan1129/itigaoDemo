@@ -67,6 +67,9 @@ public class UserLoginActivity extends AppCompatActivity {
         register = (Button)findViewById(R.id.user_login_regist);
         login = (Button)findViewById(R.id.user_login_login);
 
+        Intent intent = new Intent(UserLoginActivity.this,MainActivity.class);
+        startActivity(intent);
+
         initEditText();
         pageClick();
     }

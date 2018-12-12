@@ -88,6 +88,10 @@
         "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.2.aar\\3fd61dc53584134b026964635b568c79\\res\\drawable\\abc_ic_ab_back_material.xml"
     },
     {
+        "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\round_gb_b.xml",
+        "source": "D:\\Android\\Application\\FitDemo\\app\\src\\main\\res\\drawable\\round_gb_b.xml"
+    },
+    {
         "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_top_material.xml",
         "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.2.aar\\3fd61dc53584134b026964635b568c79\\res\\drawable\\abc_cab_background_top_material.xml"
     },
@@ -246,6 +250,10 @@
     {
         "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\loading.xml",
         "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\YCVideoPlayerLib-2.4.9.aar\\b69ab7fded1fe23bfcd0375ade85baf1\\res\\drawable\\loading.xml"
+    },
+    {
+        "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ripple_bg.xml",
+        "source": "D:\\Android\\Application\\FitDemo\\app\\src\\main\\res\\drawable\\ripple_bg.xml"
     },
     {
         "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_spinner_textfield_background_material.xml",
