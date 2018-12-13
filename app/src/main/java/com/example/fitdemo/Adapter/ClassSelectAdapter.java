@@ -3,6 +3,7 @@ package com.example.fitdemo.Adapter;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
+import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -71,7 +72,14 @@ public class ClassSelectAdapter extends RecyclerView.Adapter<ClassSelectAdapter.
         }else {
             holder.imageView.setImageResource(R.mipmap.ic_run1111);
         }
-        holder.itr.setText(class_select.getItr());
+        if(class_select.getPlace() == 0){
+            holder.itr.setText(class_select.getItr());
+        }else {
+            String s = "<font color=\"#000000\">" + class_select.getItr() + "</font>" +
+                    "<font color=\"#FF0000\">" + "(现场)" + "</font>";
+            holder.itr.setText(Html.fromHtml(s));
+        }
+
         holder.coach.setText(class_select.getCoach());
         holder.time.setText(class_select.getTime());
 
@@ -134,7 +142,15 @@ public class ClassSelectAdapter extends RecyclerView.Adapter<ClassSelectAdapter.
     public class Class_Select {
         private String itr,coach,time;
         private Integer image;
-        private int check;
+        private int check,place;
+
+        public int getPlace() {
+            return place;
+        }
+
+        public void setPlace(int place) {
+            this.place = place;
+        }
 
         public int getCheck() {
             return check;
@@ -176,12 +192,13 @@ public class ClassSelectAdapter extends RecyclerView.Adapter<ClassSelectAdapter.
             this.image = image;
         }
 
-        public Class_Select(String itr, String coach, String time, Integer image, int check) {
+        public Class_Select(String itr, String coach, String time, Integer image, int check, int place) {
             this.itr = itr;
             this.coach = coach;
             this.time = time;
             this.image = image;
             this.check = check;
+            this.place = place;
         }
     }
 }

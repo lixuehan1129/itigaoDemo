@@ -104,6 +104,7 @@
                 android:orientation="vertical">
 
                 <LinearLayout
+                    android:id="@+id/personalFragment_device1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="10dp"
@@ -120,6 +121,7 @@
                         android:padding="3dp"/>
 
                     <TextView
+                        android:id="@+id/personalFragment_device2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="已经添加的设备"
@@ -129,6 +131,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/personalFragment_class"
                     android:layout_marginTop="10dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -226,7 +229,61 @@
 
                     </android.support.v7.widget.RecyclerView>
 
+                </LinearLayout>
 
+                <LinearLayout
+                    android:id="@+id/personalFragment_exam1"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:orientation="vertical"
+                    android:background="@drawable/round_gb">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="健康体检"
+                        android:textSize="12sp"
+                        android:paddingBottom="6dp"
+                        android:textColor="@color/colorBlack"
+                        android:padding="3dp"/>
+
+                    <TextView
+                        android:id="@+id/personalFragment_exam2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="我的体检情况，点击查看详情"
+                        android:textSize="12sp"
+                        android:padding="3dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/personalFragment_indoor1"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:orientation="vertical"
+                    android:background="@drawable/round_gb">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="室内检测"
+                        android:textSize="12sp"
+                        android:paddingBottom="6dp"
+                        android:textColor="@color/colorBlack"
+                        android:padding="3dp"/>
+
+                    <TextView
+                        android:id="@+id/personalFragment_indoor2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="室内环境监测，点击查看详情"
+                        android:textSize="12sp"
+                        android:padding="3dp"/>
 
                 </LinearLayout>
 

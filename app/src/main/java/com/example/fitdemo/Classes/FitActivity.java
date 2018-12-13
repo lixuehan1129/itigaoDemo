@@ -3,17 +3,21 @@ package com.example.fitdemo.Classes;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.fitdemo.Adapter.ClassActivityAdapter;
 import com.example.fitdemo.Adapter.ClassVideoAdapter;
 import com.example.fitdemo.R;
 import com.example.fitdemo.Utils.StatusBarUtils;
+import com.example.fitdemo.Utils.Tip;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,6 +29,8 @@ import java.util.List;
 public class FitActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView1, recyclerView2, recyclerView3;
+    private ImageView imageView1, imageView2;
+    private TextView textView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +48,9 @@ public class FitActivity extends AppCompatActivity {
         recyclerView1 = (RecyclerView) findViewById(R.id.class_activity_rv1);
         recyclerView2 = (RecyclerView) findViewById(R.id.class_activity_rv2);
         recyclerView3 = (RecyclerView) findViewById(R.id.class_activity_rv3);
+        imageView1 = (ImageView) findViewById(R.id.class_activity_iv1);
+        imageView2 = (ImageView) findViewById(R.id.class_activity_iv2);
+        textView = (TextView) findViewById(R.id.class_activity_tv1);
 
         LinearLayoutManager linearLayoutManager1 = new LinearLayoutManager(this);
         linearLayoutManager1.setOrientation(LinearLayoutManager.HORIZONTAL);
@@ -51,12 +60,37 @@ public class FitActivity extends AppCompatActivity {
         linearLayoutManager2.setOrientation(LinearLayoutManager.HORIZONTAL);
         recyclerView2.setLayoutManager(linearLayoutManager2);
 
-        recyclerView3.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView3.setLayoutManager(new GridLayoutManager(this,2));
         recyclerView3.setNestedScrollingEnabled(false);
 
         setData1();
         setData2();
         setData3();
+        setClick();
+    }
+
+    private void setClick(){
+        imageView1.setImageResource(R.mipmap.ic_touxiang41);
+        imageView2.setImageResource(R.mipmap.ic_touxiang51);
+        imageView1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Tip.showTip(FitActivity.this,"一");
+            }
+        });
+        imageView2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Tip.showTip(FitActivity.this,"二");
+            }
+        });
+
+        textView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Tip.showTip(FitActivity.this,"进入互动界面");
+            }
+        });
 
     }
 
@@ -141,7 +175,7 @@ public class FitActivity extends AppCompatActivity {
         classActivityAdapter2.setOnItemClickListener(new ClassActivityAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(View view, int position) {
-                Toast.makeText(FitActivity.this,"查看推荐课程",Toast.LENGTH_LONG).show();
+                Toast.makeText(FitActivity.this,"查看记录",Toast.LENGTH_LONG).show();
             }
         });
 

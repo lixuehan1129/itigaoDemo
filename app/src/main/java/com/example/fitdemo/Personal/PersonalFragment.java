@@ -11,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.fitdemo.Adapter.AnchorAdapter;
@@ -32,7 +33,8 @@ public class PersonalFragment extends BaseFragment {
     private ImageView code, set;
     private CircleImageView picture;
     private TextView name, level;
-    private TextView class1, class2, class3, class4;
+    private LinearLayout per, device1, class0, exam1, indoor1;
+    private TextView class1, class2, class3, class4, device2, exam2, indoor2;
 
     private RecyclerView recyclerView;
 
@@ -60,16 +62,63 @@ public class PersonalFragment extends BaseFragment {
         name = (TextView) view.findViewById(R.id.personalFragment_name);
         level = (TextView) view.findViewById(R.id.personalFragment_level);
 
+        per = (LinearLayout) view.findViewById(R.id.personalFragment_l);
+        class0 = (LinearLayout) view.findViewById(R.id.personalFragment_class);
+        device1 = (LinearLayout) view.findViewById(R.id.personalFragment_device1);
+        exam1 = (LinearLayout) view.findViewById(R.id.personalFragment_exam1);
+        indoor1 = (LinearLayout) view.findViewById(R.id.personalFragment_indoor1);
+
         class1 = (TextView) view.findViewById(R.id.personalFragment_class1);
         class2 = (TextView) view.findViewById(R.id.personalFragment_class2);
         class3 = (TextView) view.findViewById(R.id.personalFragment_class3);
         class4 = (TextView) view.findViewById(R.id.personalFragment_class4);
+        device2 = (TextView) view.findViewById(R.id.personalFragment_device2);
+        exam2 = (TextView) view.findViewById(R.id.personalFragment_exam2);
+        indoor2 = (TextView) view.findViewById(R.id.personalFragment_indoor2);
 
         recyclerView = (RecyclerView) view.findViewById(R.id.personalFragment_rv);
         recyclerView.setNestedScrollingEnabled(false); //禁止滑动
         recyclerView.setLayoutManager(new GridLayoutManager(getActivity(),9));
 
         setData();
+    }
+
+    private void setClick(){
+        //个人资料
+        per.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+        //设备
+        device1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+        //课程
+        class0.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+        //体检
+        exam1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+        //室内
+        indoor1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
     }
 
     private void setData(){

@@ -38,7 +38,9 @@
                 android:id="@+id/class_activity_rv1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="10dp">
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
             </android.support.v7.widget.RecyclerView>
 
 
@@ -46,7 +48,7 @@
                 android:padding="8dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="为你推荐的课程"
+                android:text="观看记录"
                 android:textSize="12sp"
                 android:textColor="@color/colorBlack"/>
 
@@ -54,14 +56,86 @@
                 android:id="@+id/class_activity_rv2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="10dp">
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
             </android.support.v7.widget.RecyclerView>
+
 
             <TextView
                 android:padding="8dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="所有课程"
+                android:text="互动天地"
+                android:textSize="12sp"
+                android:textColor="@color/colorBlack"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_weight="25"
+                    android:padding="8dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.example.fitdemo.ViewHelper.CustomRoundAngleImageView
+                        android:id="@+id/class_activity_iv1"
+                        android:layout_width="110dp"
+                        android:layout_height="110dp"
+                        android:layout_marginRight="10dp"
+                        android:adjustViewBounds="true"
+                        android:scaleType="matrix"/>
+
+                    <com.example.fitdemo.ViewHelper.CustomRoundAngleImageView
+                        android:id="@+id/class_activity_iv2"
+                        android:layout_width="110dp"
+                        android:layout_height="110dp"
+                        android:adjustViewBounds="true"
+                        android:scaleType="matrix"/>
+
+                </LinearLayout>
+                
+                <LinearLayout
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_weight="9"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/class_activity_tv1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="110dp"
+                        android:background="@color/colorGray_White"
+                        android:gravity="center"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="2dp"
+                        android:text="查看更多"
+                        android:textSize="10sp" />
+
+                    <ImageView
+                        android:background="@color/colorGray_White"
+                        android:src="@mipmap/ic_right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" />
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:padding="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="精品课程"
                 android:textSize="12sp"
                 android:textColor="@color/colorBlack"/>
 
@@ -69,7 +143,9 @@
                 android:id="@+id/class_activity_rv3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="10dp">
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
             </android.support.v7.widget.RecyclerView>
 
         </LinearLayout>

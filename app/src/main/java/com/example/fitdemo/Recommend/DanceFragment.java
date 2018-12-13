@@ -159,8 +159,7 @@ public class DanceFragment extends BaseFragment {
         ArrayList<String> time = new ArrayList<>();
         ArrayList<Integer> check = new ArrayList<>();
         ArrayList<Integer> image = new ArrayList<>();
-
-
+        ArrayList<Integer> place = new ArrayList<>();
 
 
         switch (week){
@@ -175,6 +174,8 @@ public class DanceFragment extends BaseFragment {
                 check.add(0);
                 image.add(R.mipmap.ic_run1111);
                 image.add(R.mipmap.ic_yoga11);
+                place.add(0);
+                place.add(1);
                 break;
             }
             case 1:{
@@ -188,6 +189,8 @@ public class DanceFragment extends BaseFragment {
                 check.add(0);
                 image.add(R.mipmap.ic_yoga11);
                 image.add(R.mipmap.ic_run1111);
+                place.add(0);
+                place.add(0);
                 break;
             }
             case 2:{
@@ -196,6 +199,7 @@ public class DanceFragment extends BaseFragment {
                 time.add("星期三 11-26 08：30-10：00");
                 check.add(1);
                 image.add(R.mipmap.ic_yoga11);
+                place.add(1);
                 break;
             }
             case 3:{
@@ -209,6 +213,8 @@ public class DanceFragment extends BaseFragment {
                 image.add(R.mipmap.ic_run1111);
                 check.add(1);
                 check.add(0);
+                place.add(0);
+                place.add(0);
                 break;
             }
             case 4:{
@@ -222,6 +228,8 @@ public class DanceFragment extends BaseFragment {
                 check.add(0);
                 image.add(R.mipmap.ic_yoga11);
                 image.add(R.mipmap.ic_run1111);
+                place.add(0);
+                place.add(0);
                 break;
             }
             case 5:{
@@ -230,6 +238,7 @@ public class DanceFragment extends BaseFragment {
                 time.add("星期六 11-26 08：30-10：00");
                 check.add(0);
                 image.add(R.mipmap.ic_yoga11);
+                place.add(0);
                 break;
             }
             case 6:{
@@ -243,13 +252,15 @@ public class DanceFragment extends BaseFragment {
                 image.add(R.mipmap.ic_yoga11);
                 check.add(1);
                 check.add(0);
+                place.add(1);
+                place.add(0);
                 break;
             }
             default:
                 break;
         }
 
-        initAdapter(week,recyclerView,introduce,coach,time,check,image);
+        initAdapter(week,recyclerView,introduce,coach,time,check,image,place);
 
 
     }
@@ -257,13 +268,13 @@ public class DanceFragment extends BaseFragment {
 
 
     private void initAdapter(final int week, final RecyclerView recyclerView, final ArrayList<String> introduce, final ArrayList<String> coach, final ArrayList<String> time,
-                             final ArrayList<Integer> check, final ArrayList<Integer> image){
+                             final ArrayList<Integer> check, final ArrayList<Integer> image, final ArrayList<Integer> place){
 
         class_selects = new ArrayList<>();
         for(int i = 0; i < introduce.size(); i++){
             newData = new ClassSelectAdapter(class_selects);
             class_select = newData.new Class_Select(introduce.get(i),coach.get(i),
-                    time.get(i),image.get(i),check.get(i));
+                    time.get(i),image.get(i),check.get(i),place.get(i));
             class_selects.add(class_select);
         }
 
@@ -273,7 +284,7 @@ public class DanceFragment extends BaseFragment {
             @Override
             public void onItemClick(View view, int position) {
                 if(check.get(position) != null){
-                    showNormalDialog(week,recyclerView,position,introduce,coach,time,check,image);
+                    showNormalDialog(week,recyclerView,position,introduce,coach,time,check,image,place);
                 }
             }
         });
@@ -304,7 +315,8 @@ public class DanceFragment extends BaseFragment {
 
 
     private void showNormalDialog(final int week, final RecyclerView recyclerView, final int position, final ArrayList<String> introduce, final ArrayList<String> coach,
-                                  final ArrayList<String> time, final ArrayList<Integer> check, final ArrayList<Integer> image){
+                                  final ArrayList<String> time, final ArrayList<Integer> check, final ArrayList<Integer> image,
+                                  final ArrayList<Integer> place){
         /* @setIcon 设置对话框图标
          * @setTitle 设置对话框标题
          * @setMessage 设置对话框消息提示
@@ -334,7 +346,7 @@ public class DanceFragment extends BaseFragment {
                         }else {
                             check.set(position,0);
                         }
-                        initAdapter(week,recyclerView,introduce,coach,time,check,image);
+                        initAdapter(week,recyclerView,introduce,coach,time,check,image,place);
                     }
                 });
         normalDialog.setNegativeButton("关闭",
