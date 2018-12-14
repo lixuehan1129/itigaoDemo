@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+apply plugin: 'com.mob.sdk'
 
 android {
     compileSdkVersion 26
@@ -16,6 +17,14 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+}
+
+MobSDK {
+    appKey "29484ff98245b"
+    appSecret "599228c651b4ff884cf563d0ee3395dd"
+    SMSSDK {}
+    MobIM {}
 }
 
 dependencies {

@@ -1,7 +1,11 @@
 package com.example.fitdemo.User;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.support.design.widget.TextInputEditText;
 import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
@@ -19,7 +23,14 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.fitdemo.R;
+import com.example.fitdemo.Utils.CountDownTimerUtils;
+import com.example.fitdemo.Utils.PhoneUtils;
 import com.example.fitdemo.Utils.StatusBarUtils;
+import com.example.fitdemo.Utils.Tip;
+import com.mob.MobSDK;
+
+import cn.smssdk.EventHandler;
+import cn.smssdk.SMSSDK;
 
 /**
  * Created by 最美人间四月天 on 2018/12/8.
@@ -35,6 +46,10 @@ public class UserRegistActivity extends AppCompatActivity{
     private Button register;
     private TextView textView;
 
+    private boolean flag;   // 操作是否成功
+
+    private CountDownTimerUtils mCountDownTimerUtils;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
@@ -44,6 +59,7 @@ public class UserRegistActivity extends AppCompatActivity{
         StatusBarUtils.setWindowStatusBarColor(UserRegistActivity.this, R.color.colorWhite);
         getWindow().setSoftInputMode(
                 WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN); //不弹出输入法
+        MobSDK.init(this);
         initView();
         problem_jiaodian();
     }
@@ -64,6 +80,7 @@ public class UserRegistActivity extends AppCompatActivity{
 
         register = (Button) findViewById(R.id.user_regist_button);
         textView = (TextView) findViewById(R.id.user_regist_get);
+        mCountDownTimerUtils = new CountDownTimerUtils(textView,60000,1000);
 
         initEdit();
         upload();
@@ -73,10 +90,34 @@ public class UserRegistActivity extends AppCompatActivity{
 
 
     private void upload(){
+        // 在尝试读取通信录时以弹窗提示用户（可选功能）
+        SMSSDK.setAskPermisionOnReadContact(true);
+        EventHandler eventHandler = new EventHandler(){       // 操作回调
+            @Override
+            public void afterEvent(int event, int result, Object data) {
+                Message msg = new Message();
+                msg.arg1 = event;
+                msg.arg2 = result;
+                msg.obj = data;
+                handler.sendMessage(msg);
+            }
+        };
+        SMSSDK.registerEventHandler(eventHandler);     // 注册回调接口
+
+
         textView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(UserRegistActivity.this, "获取验证码", Toast.LENGTH_SHORT).show();
+                if(name.getText().toString().length() == 11){
+                    if(PhoneUtils.isMobileNO(name.getText().toString())){
+                        mCountDownTimerUtils.start();
+                        SMSSDK.getVerificationCode("86", name.getText().toString()); // 发送验证码给号码的 phoneNumber 的手机
+                    }else {
+                        Tip.showTip(UserRegistActivity.this,"手机号格式错误");
+                    }
+                }else {
+                    Tip.showTip(UserRegistActivity.this,"手机号格式错误");
+                }
             }
         });
 
@@ -84,25 +125,62 @@ public class UserRegistActivity extends AppCompatActivity{
             @Override
             public void onClick(View view) {
 
-                if(name.getText().toString().length() == 11  && password.getText().toString().length()  > 5){
+                if(yan.getText().toString().length() == 4  && password.getText().toString().length()  > 5){
                     if(password.getText().toString().equals(again.getText().toString()) ){
-                        Toast.makeText(UserRegistActivity.this, "注册成功", Toast.LENGTH_SHORT).show();
-                        finish();
+                        SMSSDK.submitVerificationCode("86", name.getText().toString(), yan.getText().toString());
+                        flag = false;
                     } else {
-                        Toast toast=Toast.makeText(UserRegistActivity.this, "两次密码不相同", Toast.LENGTH_SHORT);
-                        toast.show();
+                        Tip.showTip(UserRegistActivity.this, "两次密码不同");
                     }
                 }else {
-                    Toast toast=Toast.makeText(UserRegistActivity.this, "手机号，密码格式不正确", Toast.LENGTH_SHORT);
-                    toast.show();
+                    Tip.showTip(UserRegistActivity.this, "验证码或密码格式不正确");
                 }
 
             }
         });
     }
 
+    @SuppressLint("HandlerLeak")
+    Handler handler = new Handler() {
+        @Override
+        public void handleMessage(Message msg) {
+            super.handleMessage(msg);
+            int event = msg.arg1;
+            int result = msg.arg2;
+            Object data = msg.obj;
+
+            if (result == SMSSDK.RESULT_COMPLETE) {
+                // 如果操作成功
+                if (event == SMSSDK.EVENT_SUBMIT_VERIFICATION_CODE) {
+                    // 校验验证码，返回校验的手机和国家代码
+                    Tip.showTip(UserRegistActivity.this, "验证成功");
+                } else if (event == SMSSDK.EVENT_GET_VERIFICATION_CODE) {
+                    // 获取验证码成功，true为智能验证，false为普通下发短信
+                    Tip.showTip(UserRegistActivity.this, "验证码已发送");
+                } else if (event == SMSSDK.EVENT_GET_SUPPORTED_COUNTRIES) {
+                    // 返回支持发送验证码的国家列表
+                }
+            } else {
+                // 如果操作失败
+                if (flag) {
+                    Tip.showTip(UserRegistActivity.this, "获取验证码失败");
+                } else {
+                    ((Throwable) data).printStackTrace();
+                    Tip.showTip(UserRegistActivity.this, "验证码错误");
+                }
+            }
+        }
+    };
 
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        SMSSDK.unregisterAllEventHandler();  // 注销回调接口
+    }
+
+
+    @SuppressLint("ClickableViewAccessibility")
     private void initEdit(){
 
         name_l.setCounterEnabled(true);  //设置可以计数
@@ -111,7 +189,7 @@ public class UserRegistActivity extends AppCompatActivity{
         password.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
             public void onFocusChange(View v, boolean hasFocus) {
-                if(hasFocus_pre_password==false && hasFocus){
+                if(!hasFocus_pre_password && hasFocus){
                     ((ScrollView)findViewById(R.id.register_scrollview)).fullScroll(ScrollView.FOCUS_DOWN);
                     hasFocus_pre_password = hasFocus;
                     password.requestFocus();
@@ -122,7 +200,7 @@ public class UserRegistActivity extends AppCompatActivity{
         again.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
             public void onFocusChange(View v, boolean hasFocus) {
-                if(hasFocus_pre_password_again==false && hasFocus){
+                if(!hasFocus_pre_password_again && hasFocus){
                     ((ScrollView)findViewById(R.id.register_scrollview)).fullScroll(ScrollView.FOCUS_DOWN);
                     hasFocus_pre_password_again = hasFocus;
                     again.requestFocus();
@@ -222,6 +300,8 @@ public class UserRegistActivity extends AppCompatActivity{
             }
         });
 
+
+        //验证码
         yan.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
             public void onFocusChange(View v, boolean hasFocus) {
