@@ -51,7 +51,7 @@
         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         android:hardwareAccelerated="true"
         android:largeHeap="true">
-        <activity android:name=".User.UserLoginActivity">
+        <activity android:name=".InitializeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -102,7 +102,22 @@
 
         </activity>
 
+        <activity android:name=".User.UserLoginActivity"
+            tools:ignore="InnerclassSeparator">
+
+        </activity>
+
         <activity android:name=".Classes.ChildActivity"
+            tools:ignore="InnerclassSeparator">
+
+        </activity>
+
+        <activity android:name=".Classes.BroadcastActivity"
+            tools:ignore="InnerclassSeparator">
+
+        </activity>
+
+        <activity android:name=".Classes.HuDongActivity"
             tools:ignore="InnerclassSeparator">
 
         </activity>

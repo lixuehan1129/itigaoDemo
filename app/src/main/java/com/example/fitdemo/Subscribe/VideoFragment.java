@@ -1,6 +1,5 @@
 package com.example.fitdemo.Subscribe;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -8,11 +7,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.fitdemo.Adapter.SelectAdapter;
 import com.example.fitdemo.R;
-import com.example.fitdemo.Utils.Tip;
+import com.example.fitdemo.AutoProject.Tip;
 import com.example.fitdemo.ViewHelper.BaseFragment;
 
 import java.util.ArrayList;
@@ -55,7 +53,7 @@ public class VideoFragment extends BaseFragment {
 
     private void initData(){
         ArrayList<Integer> id = new ArrayList<>();
-        for (int i=0; i<8; i++){
+        for (int i=1; i<8; i++){
             id.add(i);
         }
 

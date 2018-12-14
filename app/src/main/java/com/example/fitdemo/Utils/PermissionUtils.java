@@ -39,9 +39,9 @@ public class PermissionUtils {
         if(ContextCompat.checkSelfPermission(activity,Manifest.permission.CAMERA)!=PackageManager.PERMISSION_GRANTED){
             permissionList.add(Manifest.permission.CAMERA);
         }
-        if(ContextCompat.checkSelfPermission(activity,Manifest.permission.GET_ACCOUNTS)!=PackageManager.PERMISSION_GRANTED){
-            permissionList.add(Manifest.permission.GET_ACCOUNTS);
-        }
+//        if(ContextCompat.checkSelfPermission(activity,Manifest.permission.GET_ACCOUNTS)!=PackageManager.PERMISSION_GRANTED){
+//            permissionList.add(Manifest.permission.GET_ACCOUNTS);
+//        }
         if(!permissionList.isEmpty()){
             String[] permissions= permissionList.toArray(new String[permissionList.size()]);
             ActivityCompat.requestPermissions(activity,permissions,1);

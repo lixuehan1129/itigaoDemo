@@ -1,5 +1,6 @@
 package com.example.fitdemo.Classes;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
@@ -15,8 +16,9 @@ import android.widget.Toast;
 import com.example.fitdemo.Adapter.ClassActivityAdapter;
 import com.example.fitdemo.Adapter.ClassVideoAdapter;
 import com.example.fitdemo.R;
+import com.example.fitdemo.Subscribe.VideoPlayActivity;
 import com.example.fitdemo.Utils.StatusBarUtils;
-import com.example.fitdemo.Utils.Tip;
+import com.example.fitdemo.AutoProject.Tip;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -87,7 +89,8 @@ public class YogaActivity extends AppCompatActivity {
         textView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Tip.showTip(YogaActivity.this,"进入互动界面");
+                Intent intent = new Intent(YogaActivity.this, HuDongActivity.class);
+                startActivity(intent);
             }
         });
 
@@ -153,7 +156,8 @@ public class YogaActivity extends AppCompatActivity {
         classActivityAdapter1.setOnItemClickListener(new ClassActivityAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(View view, int position) {
-                Toast.makeText(YogaActivity.this,"查看主播",Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(YogaActivity.this, BroadcastActivity.class);
+                startActivity(intent);
             }
         });
 
@@ -174,7 +178,9 @@ public class YogaActivity extends AppCompatActivity {
         classActivityAdapter2.setOnItemClickListener(new ClassActivityAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(View view, int position) {
-                Toast.makeText(YogaActivity.this,"查看记录",Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(YogaActivity.this, VideoPlayActivity.class);
+                intent.putExtra("video_add",position);
+                startActivity(intent);
             }
         });
 
@@ -192,7 +198,9 @@ public class YogaActivity extends AppCompatActivity {
         classVideoAdapter.setOnItemClickListener(new ClassVideoAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(View view, int position) {
-                Toast.makeText(YogaActivity.this,"查看所有课程",Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(YogaActivity.this, VideoPlayActivity.class);
+                intent.putExtra("video_add",position);
+                startActivity(intent);
             }
         });
 

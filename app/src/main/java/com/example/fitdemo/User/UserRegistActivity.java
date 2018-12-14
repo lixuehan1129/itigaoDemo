@@ -1,10 +1,11 @@
 package com.example.fitdemo.User;
 
 import android.annotation.SuppressLint;
+import android.app.ProgressDialog;
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.Looper;
 import android.os.Message;
 import android.support.design.widget.TextInputEditText;
 import android.support.design.widget.TextInputLayout;
@@ -12,6 +13,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
@@ -20,14 +22,22 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.ScrollView;
 import android.widget.TextView;
-import android.widget.Toast;
 
+
+import com.example.fitdemo.AutoProject.JDBCTools;
 import com.example.fitdemo.R;
 import com.example.fitdemo.Utils.CountDownTimerUtils;
+import com.example.fitdemo.Utils.DateUtils;
 import com.example.fitdemo.Utils.PhoneUtils;
 import com.example.fitdemo.Utils.StatusBarUtils;
-import com.example.fitdemo.Utils.Tip;
+import com.example.fitdemo.AutoProject.Tip;
 import com.mob.MobSDK;
+import com.mysql.jdbc.Connection;
+
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 
 import cn.smssdk.EventHandler;
 import cn.smssdk.SMSSDK;
@@ -86,10 +96,7 @@ public class UserRegistActivity extends AppCompatActivity{
         upload();
     }
 
-
-
-
-    private void upload(){
+    private void initMob(){
         // 在尝试读取通信录时以弹窗提示用户（可选功能）
         SMSSDK.setAskPermisionOnReadContact(true);
         EventHandler eventHandler = new EventHandler(){       // 操作回调
@@ -103,15 +110,19 @@ public class UserRegistActivity extends AppCompatActivity{
             }
         };
         SMSSDK.registerEventHandler(eventHandler);     // 注册回调接口
+    }
 
 
+    //按键监听
+    private void upload(){
+
+        initMob();
         textView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if(name.getText().toString().length() == 11){
                     if(PhoneUtils.isMobileNO(name.getText().toString())){
-                        mCountDownTimerUtils.start();
-                        SMSSDK.getVerificationCode("86", name.getText().toString()); // 发送验证码给号码的 phoneNumber 的手机
+                        CheckPhone(name.getText().toString());
                     }else {
                         Tip.showTip(UserRegistActivity.this,"手机号格式错误");
                     }
@@ -124,9 +135,9 @@ public class UserRegistActivity extends AppCompatActivity{
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 if(yan.getText().toString().length() == 4  && password.getText().toString().length()  > 5){
                     if(password.getText().toString().equals(again.getText().toString()) ){
+                        //获取验证码
                         SMSSDK.submitVerificationCode("86", name.getText().toString(), yan.getText().toString());
                         flag = false;
                     } else {
@@ -139,6 +150,74 @@ public class UserRegistActivity extends AppCompatActivity{
             }
         });
     }
+
+
+    private void CheckPhone(final String phone){
+        new Thread(){
+            public void run(){
+                Looper.prepare();//用于toast
+                try{
+                    Connection conn = JDBCTools.getConnection();
+                    if(conn != null){
+                        //首先判断手机号是否存在
+                        Statement stmt = conn.createStatement(); //根据返回的Connection对象创建 Statement对象
+                        String sql = "SELECT user_phone FROM user WHERE user_phone = '" +
+                                phone +
+                                "'";
+                        ResultSet resultSet = stmt.executeQuery(sql);
+                        if(resultSet.next()){
+                            Tip.showTip(UserRegistActivity.this,"手机号已存在");
+                        }else {
+                            mCountDownTimerUtils.start();
+                            SMSSDK.getVerificationCode("86", name.getText().toString()); // 发送验证码给号码的 phone 的手机
+                        }
+                        resultSet.close();
+                        JDBCTools.releaseConnection(stmt,conn);
+                    }else {
+                        Tip.showTip(UserRegistActivity.this,"请检查网络");
+                    }
+                }catch (SQLException e) {
+                    e.printStackTrace();
+                }
+                Looper.loop();
+            }
+        }.start();
+    }
+
+    private void update(){
+        final ProgressDialog progressDialog = ProgressDialog.show(UserRegistActivity.this,"","正在注册",true);
+        new Thread(){
+            public void run(){
+                Looper.prepare();//用于toast
+                try{
+                    Connection conn = JDBCTools.getConnection();
+                    if(conn != null){
+                        //首先判断手机号是否存在
+                        Statement stmt = conn.createStatement(); //根据返回的Connection对象创建 Statement对象
+                        String sql = "INSERT INTO user (user_phone,user_password,user_create_time,user_level) VALUES (?,?,?,?)";
+                        PreparedStatement preparedStatement = conn.prepareStatement(sql,Statement.RETURN_GENERATED_KEYS);
+                        preparedStatement.setString(1,name.getText().toString());
+                        preparedStatement.setString(2,password.getText().toString());
+                        preparedStatement.setString(3, DateUtils.StringData());
+                        preparedStatement.setInt(4,1);
+                        preparedStatement.executeUpdate();
+                        preparedStatement.close();
+                        JDBCTools.releaseConnection(stmt,conn);
+                        progressDialog.dismiss();
+                        finish();
+                    }else {
+                        Tip.showTip(UserRegistActivity.this,"请检查网络");
+                        progressDialog.dismiss();
+                    }
+                }catch (SQLException e) {
+                    e.printStackTrace();
+                }
+                Looper.loop();
+            }
+        }.start();
+    }
+
+
 
     @SuppressLint("HandlerLeak")
     Handler handler = new Handler() {
@@ -154,6 +233,7 @@ public class UserRegistActivity extends AppCompatActivity{
                 if (event == SMSSDK.EVENT_SUBMIT_VERIFICATION_CODE) {
                     // 校验验证码，返回校验的手机和国家代码
                     Tip.showTip(UserRegistActivity.this, "验证成功");
+                    update();
                 } else if (event == SMSSDK.EVENT_GET_VERIFICATION_CODE) {
                     // 获取验证码成功，true为智能验证，false为普通下发短信
                     Tip.showTip(UserRegistActivity.this, "验证码已发送");
@@ -171,7 +251,6 @@ public class UserRegistActivity extends AppCompatActivity{
             }
         }
     };
-
 
     @Override
     protected void onDestroy() {

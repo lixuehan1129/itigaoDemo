@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 
 import com.example.fitdemo.Adapter.InteractAdapter;
 import com.example.fitdemo.R;
-import com.example.fitdemo.Utils.Tip;
+import com.example.fitdemo.AutoProject.Tip;
 import com.example.fitdemo.ViewHelper.BaseFragment;
 
 import java.util.ArrayList;
@@ -39,7 +39,6 @@ public class InteractFragment extends BaseFragment {
     private void initView(View view){
         recyclerView = (RecyclerView) view.findViewById(R.id.interact_rv);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-
         initData();
     }
 

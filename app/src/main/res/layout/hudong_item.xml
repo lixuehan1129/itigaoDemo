@@ -1,0 +1,43 @@
+<LinearLayout
+    android:padding="5dp"
+    android:background="@color/colorWhite"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:padding="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/round_gb_b">
+
+            <com.example.fitdemo.ViewHelper.CustomRoundAngleImageView
+                android:id="@+id/hudong_item_iv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"/>
+
+            <TextView
+                android:padding="5dp"
+                android:id="@+id/hudong_item_tv1"
+                android:text="主题"
+                android:textColor="@color/colorBlack"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="2"
+                android:textSize="12sp" />
+
+            <TextView
+                android:paddingLeft="8dp"
+                android:id="@+id/hudong_item_tv2"
+                android:text="内容介绍"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="2"
+                android:textSize="10sp" />
+
+        </LinearLayout>
+
+</LinearLayout>

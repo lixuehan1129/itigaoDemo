@@ -96,20 +96,21 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationB
     }
 
 
-    //Android按返回键，程序进入后台运行，不关闭程序
-//    @Override
-//    public boolean onKeyDown(int keyCode, KeyEvent event) {
-//
-//        if (keyCode == KeyEvent.KEYCODE_BACK) {
-//            // moveTaskToBack(false);
-//            Intent intent = new Intent(Intent.ACTION_MAIN);
-//            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-//            intent.addCategory(Intent.CATEGORY_HOME);
-//            startActivity(intent);
-//            return true;
-//        }
-//        return super.onKeyDown(keyCode, event);
-//    }
+   //
+   // Android按返回键，程序进入后台运行，不关闭程序
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
+            // moveTaskToBack(false);
+            Intent intent = new Intent(Intent.ACTION_MAIN);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            intent.addCategory(Intent.CATEGORY_HOME);
+            startActivity(intent);
+            return true;
+        }
+        return super.onKeyDown(keyCode, event);
+    }
 
     @Override
     public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {

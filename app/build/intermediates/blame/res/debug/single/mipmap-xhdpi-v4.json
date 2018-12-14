@@ -36,8 +36,16 @@
         "source": "D:\\Android\\Application\\FitDemo\\app\\src\\main\\res\\mipmap-xhdpi\\ic_dance51.png"
     },
     {
+        "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\hudong_head3.PNG",
+        "source": "D:\\Android\\Application\\FitDemo\\app\\src\\main\\res\\mipmap-xhdpi\\hudong_head3.PNG"
+    },
+    {
         "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\ic_run041.png",
         "source": "D:\\Android\\Application\\FitDemo\\app\\src\\main\\res\\mipmap-xhdpi\\ic_run041.png"
+    },
+    {
+        "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\hudong_head6.PNG",
+        "source": "D:\\Android\\Application\\FitDemo\\app\\src\\main\\res\\mipmap-xhdpi\\hudong_head6.PNG"
     },
     {
         "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\ic_fit71.png",
@@ -64,8 +72,16 @@
         "source": "D:\\Android\\Application\\FitDemo\\app\\src\\main\\res\\mipmap-xhdpi\\ic_fit51.png"
     },
     {
+        "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\hudong_head5.PNG",
+        "source": "D:\\Android\\Application\\FitDemo\\app\\src\\main\\res\\mipmap-xhdpi\\hudong_head5.PNG"
+    },
+    {
         "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\ic_bike31.png",
         "source": "D:\\Android\\Application\\FitDemo\\app\\src\\main\\res\\mipmap-xhdpi\\ic_bike31.png"
+    },
+    {
+        "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\hudong_head2.PNG",
+        "source": "D:\\Android\\Application\\FitDemo\\app\\src\\main\\res\\mipmap-xhdpi\\hudong_head2.PNG"
     },
     {
         "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\ic_yoga041.png",
@@ -120,6 +136,10 @@
         "source": "D:\\Android\\Application\\FitDemo\\app\\src\\main\\res\\mipmap-xhdpi\\ic_bike21.png"
     },
     {
+        "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\hudong_head1.PNG",
+        "source": "D:\\Android\\Application\\FitDemo\\app\\src\\main\\res\\mipmap-xhdpi\\hudong_head1.PNG"
+    },
+    {
         "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\ic_run21.png",
         "source": "D:\\Android\\Application\\FitDemo\\app\\src\\main\\res\\mipmap-xhdpi\\ic_run21.png"
     },
@@ -130,5 +150,9 @@
     {
         "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\ic_run051.png",
         "source": "D:\\Android\\Application\\FitDemo\\app\\src\\main\\res\\mipmap-xhdpi\\ic_run051.png"
+    },
+    {
+        "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\hudong_head4.PNG",
+        "source": "D:\\Android\\Application\\FitDemo\\app\\src\\main\\res\\mipmap-xhdpi\\hudong_head4.PNG"
     }
 ]

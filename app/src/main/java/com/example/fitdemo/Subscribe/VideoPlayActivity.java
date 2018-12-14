@@ -9,7 +9,10 @@ import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
+import android.util.DisplayMetrics;
 import android.view.View;
+import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -57,14 +60,29 @@ public class VideoPlayActivity extends AppCompatActivity implements TabLayout.On
         super.onCreate(savedInstanceState);
         setContentView(R.layout.video_play_activity);
         StatusBarUtils.setWindowStatusBarColor(VideoPlayActivity.this, R.color.colorWhite);
+
         Intent intent = getIntent();
         int id = intent.getIntExtra("video_add",0);
+
+        initView(id);
+
+    }
+
+    private void initView(int id){
         videoPlayer = (VideoPlayer) findViewById(R.id.video_play_vv);
         tabLayout = (TabLayout) findViewById(R.id.video_play_layout);
         mViewPager = (ViewPager) findViewById(R.id.video_play_viewpager);
         linearLayout = (LinearLayout) findViewById(R.id.video_play_li);
         editText = (EditText) findViewById(R.id.video_play_et);
         imageView = (ImageView) findViewById(R.id.video_play_iv);
+
+        //获取屏幕宽
+        WindowManager wm = (WindowManager) this
+                .getSystemService(Context.WINDOW_SERVICE);
+        int width = wm.getDefaultDisplay().getWidth();
+        setWidthHeightWithRatio(videoPlayer,width,16,9);
+
+
 
         imageOnClick();
         initTab();
@@ -91,9 +109,6 @@ public class VideoPlayActivity extends AppCompatActivity implements TabLayout.On
             default:
                 break;
         }
-
-
-
     }
 
     private void setPlay(String url){
@@ -105,7 +120,7 @@ public class VideoPlayActivity extends AppCompatActivity implements TabLayout.On
         //设置视频地址和请求头部
         videoPlayer.setUp(url,null);
         //是否从上一次的位置播放
-        videoPlayer.continueFromLastPosition(false);
+        videoPlayer.continueFromLastPosition(true);
         //设置播放速度
         videoPlayer.setSpeed(1.0f);
         //
@@ -115,7 +130,7 @@ public class VideoPlayActivity extends AppCompatActivity implements TabLayout.On
         videoPlayerController.setTitle("");
         //设置5秒不操作后隐藏头部和底部布局视图
         videoPlayerController.setHideTime(5000);
-        videoPlayerController.setLoadingType(2);
+       // videoPlayerController.setLoadingType(2);
         //返回监听
         videoPlayerController.setOnVideoBackListener(new OnVideoBackListener() {
             @Override
@@ -191,6 +206,18 @@ public class VideoPlayActivity extends AppCompatActivity implements TabLayout.On
         tabLayout.setupWithViewPager(mViewPager);
     }
 
+    //根据宽高比设置控件宽高, 如设置宽高比为5:4，那么widthRatio为5，heightRatio为4
+    public static void setWidthHeightWithRatio(View view, int width, int widthRatio, int heightRatio) {
+        if (width <= 0) width = view.getWidth();
+        int height = width * heightRatio / widthRatio;
+        ViewGroup.LayoutParams layoutParams = view.getLayoutParams();
+        if (layoutParams != null) {
+            layoutParams.height = height;
+            layoutParams.width = width;
+            view.setLayoutParams(layoutParams);
+        }
+    }
+
 
     @Override
     public void onTabSelected(TabLayout.Tab tab) {
@@ -210,8 +237,6 @@ public class VideoPlayActivity extends AppCompatActivity implements TabLayout.On
     @Override
     protected void onStop() {
         super.onStop();
-
-
         videoPlayer.release();
         videoPlayer.releasePlayer();
         VideoPlayerManager.instance().releaseVideoPlayer();
