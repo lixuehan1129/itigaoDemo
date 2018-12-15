@@ -1,5 +1,6 @@
 package com.example.fitdemo.Classes;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
@@ -81,7 +82,8 @@ public class HuDongActivity extends AppCompatActivity {
         huDongAdapter.setOnItemClickListener(new HuDongAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(View view, int position) {
-
+                Intent intent = new Intent(HuDongActivity.this, BroadcastActivity.class);
+                startActivity(intent);
             }
         });
     }

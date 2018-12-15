@@ -82,26 +82,36 @@
                 android:text="在健身后尽快服用含糖丰富的食品或者运动饮料，可以缓解疲劳的现象，同时可以明显缩短机体的恢复期，加快机体恢复。"
                 android:background="@drawable/bottom_lay"/>
 
-            <TextView
-                android:paddingTop="15dp"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:paddingBottom="5dp"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:id="@+id/video_fragment_li"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="当前观看人数：22人"/>
+                android:orientation="vertical">
 
-            <TextView
-                android:padding="5dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="我的运动排名：2"/>
+                <TextView
+                    android:id="@+id/video_fragment_num"
+                    android:paddingTop="15dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingBottom="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="当前观看人数：22人"/>
 
-            <TextView
-                android:padding="5dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="点击查看完整排名    >"/>
+                <TextView
+                    android:id="@+id/video_fragment_rank"
+                    android:padding="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="我的运动排名：2"/>
+
+                <TextView
+                    android:padding="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="点击查看完整排名    >"/>
+
+            </LinearLayout>
 
         </LinearLayout>
 

@@ -76,13 +76,15 @@ public class RunActivity extends AppCompatActivity {
         imageView1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Tip.showTip(RunActivity.this,"一");
+                Intent intent = new Intent(RunActivity.this, BroadcastActivity.class);
+                startActivity(intent);
             }
         });
         imageView2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Tip.showTip(RunActivity.this,"二");
+                Intent intent = new Intent(RunActivity.this, BroadcastActivity.class);
+                startActivity(intent);
             }
         });
 

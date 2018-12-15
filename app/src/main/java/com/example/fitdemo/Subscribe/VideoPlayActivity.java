@@ -1,5 +1,6 @@
 package com.example.fitdemo.Subscribe;
 
+import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.content.ContentResolver;
 import android.content.Context;
@@ -10,13 +11,16 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.util.DisplayMetrics;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.support.design.widget.TabLayout;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 
@@ -65,7 +69,6 @@ public class VideoPlayActivity extends AppCompatActivity implements TabLayout.On
         int id = intent.getIntExtra("video_add",0);
 
         initView(id);
-
     }
 
     private void initView(int id){
@@ -81,8 +84,6 @@ public class VideoPlayActivity extends AppCompatActivity implements TabLayout.On
                 .getSystemService(Context.WINDOW_SERVICE);
         int width = wm.getDefaultDisplay().getWidth();
         setWidthHeightWithRatio(videoPlayer,width,16,9);
-
-
 
         imageOnClick();
         initTab();
@@ -177,6 +178,11 @@ public class VideoPlayActivity extends AppCompatActivity implements TabLayout.On
                 if(!TextUtils.isEmpty(editText.getText())){
                     ProgressDialog progressDialog = ProgressDialog.show(VideoPlayActivity.this,"","正在上传...",true);
                     progressDialog.setCancelable(true);// 设置是否可以通过点击Back键取消
+                    //将输入法隐藏，mPasswordEditText 代表密码输入框
+                    InputMethodManager imm =(InputMethodManager)getSystemService(
+                            Context.INPUT_METHOD_SERVICE);
+                    imm.hideSoftInputFromWindow(editText.getWindowToken(), 0);
+
                 }else {
                     Toast.makeText(VideoPlayActivity.this,"内容不能为空",Toast.LENGTH_LONG).show();
                 }
@@ -187,7 +193,6 @@ public class VideoPlayActivity extends AppCompatActivity implements TabLayout.On
 
     private void initTab(){
         mViewPager.setOffscreenPageLimit(2);
-
         //设置TabLayout标签的显示方式
         tabLayout.setTabMode(TabLayout.MODE_FIXED);
         for (String tab:titles){
@@ -195,12 +200,8 @@ public class VideoPlayActivity extends AppCompatActivity implements TabLayout.On
         }
         //设置TabLayout点击事件
         tabLayout.setOnTabSelectedListener(this);
-
-
         fragments.add(new VideoFragment());
         fragments.add(new InteractFragment());
-
-
         TabLayoutAdapter mTabLayoutAdapter = new TabLayoutAdapter(getSupportFragmentManager(),titles, fragments);
         mViewPager.setAdapter(mTabLayoutAdapter);
         tabLayout.setupWithViewPager(mViewPager);
@@ -251,7 +252,6 @@ public class VideoPlayActivity extends AppCompatActivity implements TabLayout.On
     @Override
     protected void onDestroy() {
 // TODO Auto-generated method stub
-
         super.onDestroy();
 
     }

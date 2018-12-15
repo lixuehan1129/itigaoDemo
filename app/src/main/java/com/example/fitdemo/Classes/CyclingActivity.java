@@ -77,13 +77,15 @@ public class CyclingActivity extends AppCompatActivity {
         imageView1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Tip.showTip(CyclingActivity.this,"一");
+                Intent intent = new Intent(CyclingActivity.this, BroadcastActivity.class);
+                startActivity(intent);
             }
         });
         imageView2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Tip.showTip(CyclingActivity.this,"二");
+                Intent intent = new Intent(CyclingActivity.this, BroadcastActivity.class);
+                startActivity(intent);
             }
         });
 

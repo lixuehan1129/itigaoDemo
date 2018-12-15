@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/person_change_mainTool"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorWhite"
+        app:titleTextColor="@color/colorBlack"
+        app:navigationIcon="@mipmap/ic_back_black"
+        android:paddingRight="10dp"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+        <!--<Button-->
+            <!--android:id="@+id/person_change_ok"-->
+            <!--android:layout_width="40dp"-->
+            <!--android:layout_height="25dp"-->
+            <!--android:layout_gravity="end"-->
+            <!--android:background="@drawable/round_gb_b"-->
+            <!--android:text="修改"-->
+            <!--android:textColor="@color/colorBlack"-->
+            <!--android:textSize="10sp" />-->
+    </android.support.v7.widget.Toolbar>
+    <TextView
+        android:id="@+id/person_change_tv"
+        android:gravity="center"
+        android:text="可以"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

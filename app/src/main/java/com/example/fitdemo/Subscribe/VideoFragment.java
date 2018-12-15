@@ -1,11 +1,13 @@
 package com.example.fitdemo.Subscribe;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.fitdemo.Adapter.SelectAdapter;
@@ -22,8 +24,9 @@ import java.util.List;
 
 public class VideoFragment extends BaseFragment {
 
-    private TextView title, itr, advice;
+    private TextView title, itr, advice, num, rank;
     private RecyclerView recyclerView;
+    private LinearLayout linearLayout;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -43,13 +46,18 @@ public class VideoFragment extends BaseFragment {
         itr = (TextView) view.findViewById(R.id.video_fragment_itr);
         advice = (TextView) view.findViewById(R.id.video_fragment_advice);
         recyclerView = (RecyclerView) view.findViewById(R.id.video_fragment_rv);
+        linearLayout = (LinearLayout) view.findViewById(R.id.video_fragment_li);
+        num = (TextView) view.findViewById(R.id.video_fragment_num);
+        rank = (TextView) view.findViewById(R.id.video_fragment_rank);
 
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity());
         linearLayoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
         recyclerView.setLayoutManager(linearLayoutManager);
 
+        setClick();
         initData();
     }
+
 
     private void initData(){
         ArrayList<Integer> id = new ArrayList<>();
@@ -75,6 +83,16 @@ public class VideoFragment extends BaseFragment {
             @Override
             public void onItemClick(View view, int position) {
                 Tip.showTip(getActivity(), String.valueOf(id.get(position)));
+            }
+        });
+    }
+
+    private void setClick(){
+        linearLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(),VideoRankActivity.class);
+                startActivity(intent);
             }
         });
     }

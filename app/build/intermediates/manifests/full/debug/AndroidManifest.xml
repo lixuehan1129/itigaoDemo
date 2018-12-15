@@ -37,6 +37,12 @@
     <activity android:name="com.example.fitdemo.Classes.ChildActivity"/>
     <activity android:name="com.example.fitdemo.Classes.BroadcastActivity"/>
     <activity android:name="com.example.fitdemo.Classes.HuDongActivity"/>
+    <activity android:name="com.example.fitdemo.Personal.PersonClassActivity"/>
+    <activity android:name="com.example.fitdemo.Personal.PersonDeviceActivity"/>
+    <activity android:name="com.example.fitdemo.Personal.PersonChangeActivity"/>
+    <activity android:name="com.example.fitdemo.Personal.PersonExamActivity"/>
+    <activity android:name="com.example.fitdemo.Personal.PersonIndoorActivity"/>
+    <activity android:name="com.example.fitdemo.Subscribe.VideoRankActivity"/>
     <meta-data xmlns:tools="http://schemas.android.com/tools" android:name="Mob-AppKey" android:value="29484ff98245b" tools:node="merge"/>
     <meta-data xmlns:tools="http://schemas.android.com/tools" android:name="Mob-AppSeret" android:value="599228c651b4ff884cf563d0ee3395dd" tools:node="merge"/>
     <activity xmlns:tools="http://schemas.android.com/tools" android:windowSoftInputMode="stateHidden|adjustResize" android:name="com.mob.tools.MobUIShell" android:configChanges="keyboardHidden|orientation|screenSize" android:theme="@android:style/Theme.Translucent.NoTitleBar" tools:node="merge"/>

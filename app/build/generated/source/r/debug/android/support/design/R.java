@@ -811,9 +811,9 @@ public final class R {
         public static final int line3 = 0x7f0f0017;
         public static final int listMode = 0x7f0f004d;
         public static final int list_item = 0x7f0f0097;
-        public static final int masked = 0x7f0f01cd;
+        public static final int masked = 0x7f0f01d2;
         public static final int media_actions = 0x7f0f014b;
-        public static final int message = 0x7f0f01a0;
+        public static final int message = 0x7f0f01a2;
         public static final int mini = 0x7f0f007c;
         public static final int multiply = 0x7f0f005c;
         public static final int navigation_header_container = 0x7f0f012e;
@@ -888,7 +888,7 @@ public final class R {
         public static final int uniform = 0x7f0f0061;
         public static final int up = 0x7f0f0041;
         public static final int view_offset_helper = 0x7f0f0042;
-        public static final int visible = 0x7f0f01cc;
+        public static final int visible = 0x7f0f01d1;
         public static final int wrap_content = 0x7f0f0062;
     }
     public static final class integer {
@@ -959,11 +959,11 @@ public final class R {
         public static final int notification_template_media_custom = 0x7f04004e;
         public static final int notification_template_part_chronometer = 0x7f04004f;
         public static final int notification_template_part_time = 0x7f040050;
-        public static final int select_dialog_item_material = 0x7f040053;
-        public static final int select_dialog_multichoice_material = 0x7f040054;
-        public static final int select_dialog_singlechoice_material = 0x7f040055;
-        public static final int support_simple_spinner_dropdown_item = 0x7f04005f;
-        public static final int tooltip = 0x7f040060;
+        public static final int select_dialog_item_material = 0x7f040054;
+        public static final int select_dialog_multichoice_material = 0x7f040055;
+        public static final int select_dialog_singlechoice_material = 0x7f040056;
+        public static final int support_simple_spinner_dropdown_item = 0x7f040060;
+        public static final int tooltip = 0x7f040061;
     }
     public static final class string {
         public static final int abc_action_bar_home_description = 0x7f080000;

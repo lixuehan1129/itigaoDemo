@@ -1,6 +1,7 @@
 package com.example.fitdemo.Personal;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -15,6 +16,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.fitdemo.Adapter.AnchorAdapter;
+import com.example.fitdemo.AutoProject.Tip;
+import com.example.fitdemo.Classes.BroadcastActivity;
 import com.example.fitdemo.R;
 import com.example.fitdemo.ViewHelper.BaseFragment;
 
@@ -78,9 +81,10 @@ public class PersonalFragment extends BaseFragment {
 
         recyclerView = (RecyclerView) view.findViewById(R.id.personalFragment_rv);
         recyclerView.setNestedScrollingEnabled(false); //禁止滑动
-        recyclerView.setLayoutManager(new GridLayoutManager(getActivity(),9));
+        recyclerView.setLayoutManager(new GridLayoutManager(getActivity(),7));
 
         setData();
+        setClick();
     }
 
     private void setClick(){
@@ -88,39 +92,45 @@ public class PersonalFragment extends BaseFragment {
         per.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent = new Intent(getActivity(),PersonChangeActivity.class);
+                startActivity(intent);
             }
         });
         //设备
         device1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent = new Intent(getActivity(),PersonDeviceActivity.class);
+                startActivity(intent);
             }
         });
         //课程
         class0.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent = new Intent(getActivity(),PersonClassActivity.class);
+                startActivity(intent);
             }
         });
         //体检
         exam1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent = new Intent(getActivity(),PersonExamActivity.class);
+                startActivity(intent);
             }
         });
         //室内
         indoor1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent = new Intent(getActivity(),PersonIndoorActivity.class);
+                startActivity(intent);
             }
         });
     }
 
+    //关注的主播列表
     private void setData(){
         ArrayList<Integer> image = new ArrayList<>();
         ArrayList<Integer> state = new ArrayList<>();
@@ -137,7 +147,7 @@ public class PersonalFragment extends BaseFragment {
 
         setAdapter(image, state);
     }
-    private void setAdapter(ArrayList<Integer> image, ArrayList<Integer> state){
+    private void setAdapter(ArrayList<Integer> image, final ArrayList<Integer> state){
         List<AnchorAdapter.Anchor> anchors = new ArrayList<>();
         for(int i=0; i<image.size(); i++){
             AnchorAdapter nAnchorAdapter = new AnchorAdapter(anchors);
@@ -151,6 +161,12 @@ public class PersonalFragment extends BaseFragment {
         anchorAdapter.setOnItemClickListener(new AnchorAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(View view, int position) {
+                if(state.get(position) == 0){
+                    Intent intent = new Intent(getActivity(),BroadcastActivity.class);
+                    startActivity(intent);
+                }else {
+                    Tip.showTip(getActivity(),"当前未开播");
+                }
 
             }
         });

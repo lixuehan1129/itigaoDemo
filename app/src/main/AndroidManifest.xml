@@ -122,6 +122,36 @@
 
         </activity>
 
+        <activity android:name=".Personal.PersonClassActivity"
+            tools:ignore="InnerclassSeparator">
+
+        </activity>
+
+        <activity android:name=".Personal.PersonDeviceActivity"
+            tools:ignore="InnerclassSeparator">
+
+        </activity>
+
+        <activity android:name=".Personal.PersonChangeActivity"
+            tools:ignore="InnerclassSeparator">
+
+        </activity>
+
+        <activity android:name=".Personal.PersonExamActivity"
+            tools:ignore="InnerclassSeparator">
+
+        </activity>
+
+        <activity android:name=".Personal.PersonIndoorActivity"
+            tools:ignore="InnerclassSeparator">
+
+        </activity>
+
+        <activity android:name=".Subscribe.VideoRankActivity"
+            tools:ignore="InnerclassSeparator">
+
+        </activity>
+
     </application>
 
 </manifest>
