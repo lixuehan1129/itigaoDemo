@@ -22,11 +22,15 @@ import java.util.List;
 public class InteractFragment extends BaseFragment {
 
     private RecyclerView recyclerView;
+    private int video_bid;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.interact_fragment, container, false);
+        Bundle bundle = getArguments();
+        assert bundle != null;
+        video_bid = bundle.getInt("video_play_bid",0);
         initView(view);
         return view;
     }

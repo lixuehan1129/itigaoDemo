@@ -56,12 +56,12 @@
         "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\ShortMessageSDKGUI-3.2.1.1.aar\\7750cec517bcdd175503ad18901e9658\\res\\drawable\\smssdk_conners_edittext_bg.xml"
     },
     {
-        "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\selector_details_try_see.xml",
-        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\YCVideoPlayerLib-2.4.9.aar\\e602ec991eafe84bcc6c360f6702b1f6\\res\\drawable\\selector_details_try_see.xml"
-    },
-    {
         "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\smssdk_dialog_btn_back.xml",
         "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\ShortMessageSDKGUI-3.2.1.1.aar\\7750cec517bcdd175503ad18901e9658\\res\\drawable\\smssdk_dialog_btn_back.xml"
+    },
+    {
+        "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\selector_details_try_see.xml",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\YCVideoPlayerLib-2.4.9.aar\\e602ec991eafe84bcc6c360f6702b1f6\\res\\drawable\\selector_details_try_see.xml"
     },
     {
         "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_fab_background.xml",
@@ -96,12 +96,12 @@
         "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\ShortMessageSDKGUI-3.2.1.1.aar\\7750cec517bcdd175503ad18901e9658\\res\\drawable\\smssdk_btn_disenable.xml"
     },
     {
-        "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\bg_change_clarity_normal.xml",
-        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\YCVideoPlayerLib-2.4.9.aar\\e602ec991eafe84bcc6c360f6702b1f6\\res\\drawable\\bg_change_clarity_normal.xml"
-    },
-    {
         "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\radiobutton_textcolor.xml",
         "source": "D:\\Android\\Application\\FitDemo\\app\\src\\main\\res\\drawable\\radiobutton_textcolor.xml"
+    },
+    {
+        "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\bg_change_clarity_normal.xml",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\YCVideoPlayerLib-2.4.9.aar\\e602ec991eafe84bcc6c360f6702b1f6\\res\\drawable\\bg_change_clarity_normal.xml"
     },
     {
         "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\seek_thumb_pressed.xml",
@@ -112,12 +112,12 @@
         "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.2.aar\\15140af22654a329767de0898450f87d\\res\\drawable\\abc_ic_ab_back_material.xml"
     },
     {
-        "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\round_gb_b.xml",
-        "source": "D:\\Android\\Application\\FitDemo\\app\\src\\main\\res\\drawable\\round_gb_b.xml"
-    },
-    {
         "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\smssdk_btn_line_bg.xml",
         "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\ShortMessageSDKGUI-3.2.1.1.aar\\7750cec517bcdd175503ad18901e9658\\res\\drawable\\smssdk_btn_line_bg.xml"
+    },
+    {
+        "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\round_gb_b.xml",
+        "source": "D:\\Android\\Application\\FitDemo\\app\\src\\main\\res\\drawable\\round_gb_b.xml"
     },
     {
         "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_top_material.xml",
@@ -132,12 +132,12 @@
         "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.2.aar\\15140af22654a329767de0898450f87d\\res\\drawable\\abc_btn_radio_material.xml"
     },
     {
-        "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_dark.xml",
-        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.2.aar\\15140af22654a329767de0898450f87d\\res\\drawable\\abc_list_selector_background_transition_holo_dark.xml"
-    },
-    {
         "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\smssdk_country_group_scroll_up.xml",
         "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\ShortMessageSDKGUI-3.2.1.1.aar\\7750cec517bcdd175503ad18901e9658\\res\\drawable\\smssdk_country_group_scroll_up.xml"
+    },
+    {
+        "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_dark.xml",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.2.aar\\15140af22654a329767de0898450f87d\\res\\drawable\\abc_list_selector_background_transition_holo_dark.xml"
     },
     {
         "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\bg_radius_4.xml",

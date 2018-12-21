@@ -69,7 +69,7 @@ public class DanceActivity extends AppCompatActivity {
         image.add(R.mipmap.ic_dance31);
         image.add(R.mipmap.ic_dance41);
 
-        initData1(introduce,image);
+    //    initData1(introduce,image);
 
     }
 
@@ -84,7 +84,7 @@ public class DanceActivity extends AppCompatActivity {
         image.add(R.mipmap.ic_dance31);
         image.add(R.mipmap.ic_dance41);
 
-        initData2(introduce,image);
+  //      initData2(introduce,image);
 
     }
 
@@ -99,69 +99,69 @@ public class DanceActivity extends AppCompatActivity {
         image.add(R.mipmap.ic_dance51);
         image.add(R.mipmap.ic_dance21);
 
-        initData3(introduce,image);
+    //    initData3(introduce,image);
 
     }
 
-    private void initData1(ArrayList<String> introduce,ArrayList<Integer> image){
+//    private void initData1(ArrayList<String> introduce,ArrayList<Integer> image){
+//
+//        List<ClassActivityAdapter.Class_Activity> class_activities1 = new ArrayList<>();
+//
+//        for (int i = 0; i<introduce.size(); i++){
+//            ClassActivityAdapter newData = new ClassActivityAdapter(class_activities1);
+//            ClassActivityAdapter.Class_Activity class_activity = newData.new Class_Activity(introduce.get(i),image.get(i));
+//            class_activities1.add(class_activity);
+//        }
+//
+//        ClassActivityAdapter classActivityAdapter1 = new ClassActivityAdapter(class_activities1);
+//        recyclerView1.setAdapter(classActivityAdapter1);
+//        classActivityAdapter1.setOnItemClickListener(new ClassActivityAdapter.OnItemClickListener() {
+//            @Override
+//            public void onItemClick(View view, int position) {
+//
+//            }
+//        });
+//
+//    }
+//
+//    private void initData2(ArrayList<String> introduce,ArrayList<Integer> image){
+//
+//        List<ClassActivityAdapter.Class_Activity> class_activities2 = new ArrayList<>();
+//
+//        for (int i = 0; i<introduce.size(); i++){
+//            ClassActivityAdapter newData = new ClassActivityAdapter(class_activities2);
+//            ClassActivityAdapter.Class_Activity class_activity = newData.new Class_Activity(introduce.get(i),image.get(i));
+//            class_activities2.add(class_activity);
+//        }
+//
+//        ClassActivityAdapter classActivityAdapter2 = new ClassActivityAdapter(class_activities2);
+//        recyclerView2.setAdapter(classActivityAdapter2);
+//        classActivityAdapter2.setOnItemClickListener(new ClassActivityAdapter.OnItemClickListener() {
+//            @Override
+//            public void onItemClick(View view, int position) {
+//
+//            }
+//        });
+//
+//    }
 
-        List<ClassActivityAdapter.Class_Activity> class_activities1 = new ArrayList<>();
-
-        for (int i = 0; i<introduce.size(); i++){
-            ClassActivityAdapter newData = new ClassActivityAdapter(class_activities1);
-            ClassActivityAdapter.Class_Activity class_activity = newData.new Class_Activity(introduce.get(i),image.get(i));
-            class_activities1.add(class_activity);
-        }
-
-        ClassActivityAdapter classActivityAdapter1 = new ClassActivityAdapter(class_activities1);
-        recyclerView1.setAdapter(classActivityAdapter1);
-        classActivityAdapter1.setOnItemClickListener(new ClassActivityAdapter.OnItemClickListener() {
-            @Override
-            public void onItemClick(View view, int position) {
-
-            }
-        });
-
-    }
-
-    private void initData2(ArrayList<String> introduce,ArrayList<Integer> image){
-
-        List<ClassActivityAdapter.Class_Activity> class_activities2 = new ArrayList<>();
-
-        for (int i = 0; i<introduce.size(); i++){
-            ClassActivityAdapter newData = new ClassActivityAdapter(class_activities2);
-            ClassActivityAdapter.Class_Activity class_activity = newData.new Class_Activity(introduce.get(i),image.get(i));
-            class_activities2.add(class_activity);
-        }
-
-        ClassActivityAdapter classActivityAdapter2 = new ClassActivityAdapter(class_activities2);
-        recyclerView2.setAdapter(classActivityAdapter2);
-        classActivityAdapter2.setOnItemClickListener(new ClassActivityAdapter.OnItemClickListener() {
-            @Override
-            public void onItemClick(View view, int position) {
-
-            }
-        });
-
-    }
-
-    private void initData3(ArrayList<String> introduce,ArrayList<Integer> image){
-        List<ClassVideoAdapter.Class_Video> class_videos = new ArrayList<>();
-        for(int i = 0; i < introduce.size(); i++){
-            ClassVideoAdapter newData = new ClassVideoAdapter(class_videos);
-            ClassVideoAdapter.Class_Video class_video = newData.new Class_Video(introduce.get(i),image.get(i));
-            class_videos.add(class_video);
-        }
-        ClassVideoAdapter classVideoAdapter = new ClassVideoAdapter(class_videos);
-        recyclerView3.setAdapter(classVideoAdapter);
-        classVideoAdapter.setOnItemClickListener(new ClassVideoAdapter.OnItemClickListener() {
-            @Override
-            public void onItemClick(View view, int position) {
-            }
-        });
-
-
-    }
+//    private void initData3(ArrayList<String> introduce,ArrayList<Integer> image){
+//        List<ClassVideoAdapter.Class_Video> class_videos = new ArrayList<>();
+//        for(int i = 0; i < introduce.size(); i++){
+//            ClassVideoAdapter newData = new ClassVideoAdapter(class_videos);
+//            ClassVideoAdapter.Class_Video class_video = newData.new Class_Video(introduce.get(i),image.get(i));
+//            class_videos.add(class_video);
+//        }
+//        ClassVideoAdapter classVideoAdapter = new ClassVideoAdapter(class_videos);
+//        recyclerView3.setAdapter(classVideoAdapter);
+//        classVideoAdapter.setOnItemClickListener(new ClassVideoAdapter.OnItemClickListener() {
+//            @Override
+//            public void onItemClick(View view, int position) {
+//            }
+//        });
+//
+//
+//    }
 
 
 

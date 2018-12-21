@@ -1,5 +1,6 @@
 package com.example.fitdemo.Adapter;
 
+import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -7,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.example.fitdemo.R;
 
 import java.util.List;
@@ -18,6 +20,7 @@ import java.util.List;
 public class HuDongAdapter extends RecyclerView.Adapter<HuDongAdapter.ViewHolder>{
     private OnItemClickListener mOnItemClickListener;
     private List<HuDong> mDataSet;
+    private Context mContext;
 
 
     class ViewHolder extends RecyclerView.ViewHolder{
@@ -34,6 +37,7 @@ public class HuDongAdapter extends RecyclerView.Adapter<HuDongAdapter.ViewHolder
     @Override
     public HuDongAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.hudong_item,parent,false);
+        mContext = parent.getContext();
         final RecyclerView.ViewHolder vh = new ViewHolder(v);
         return (ViewHolder) vh;
     }
@@ -46,9 +50,23 @@ public class HuDongAdapter extends RecyclerView.Adapter<HuDongAdapter.ViewHolder
     public void onBindViewHolder(final HuDongAdapter.ViewHolder holder, int position) {
 
         HuDong huDong = mDataSet.get(position);
-        holder.imageView.setImageResource(huDong.getIv());
         holder.textView1.setText(huDong.getTv1());
         holder.textView2.setText(huDong.getTv2());
+        if(huDong.getIv() != null){
+            String url = huDong.getIv();
+            if(url!=null){
+                Glide.with(mContext)
+                        .load(url)
+                        .asBitmap()  //不可加载动图
+                        .dontAnimate()//取消淡入淡出动画
+                        .placeholder(R.mipmap.hudong_head2)
+                        .error(R.mipmap.hudong_head2)
+                        .thumbnail(0.1f) //先加载十分之一作为缩略图
+                        .into(holder.imageView);
+            }
+        }else {
+            holder.imageView.setImageResource(R.mipmap.hudong_head2);
+        }
 
         // String url = class_video.getItem_image();
 //        if(url!=null){
@@ -90,9 +108,9 @@ public class HuDongAdapter extends RecyclerView.Adapter<HuDongAdapter.ViewHolder
 
     public class HuDong {
         private String tv1, tv2;
-        private Integer iv;
+        private String iv;
 
-        public HuDong(Integer iv, String tv1, String tv2) {
+        public HuDong(String iv, String tv1, String tv2) {
             this.tv1 = tv1;
             this.tv2 = tv2;
             this.iv = iv;
@@ -114,11 +132,11 @@ public class HuDongAdapter extends RecyclerView.Adapter<HuDongAdapter.ViewHolder
             this.tv2 = tv2;
         }
 
-        public Integer getIv() {
+        public String getIv() {
             return iv;
         }
 
-        public void setIv(Integer iv) {
+        public void setIv(String iv) {
             this.iv = iv;
         }
     }

@@ -1,5 +1,6 @@
 package com.example.fitdemo.Adapter;
 
+import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -7,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.example.fitdemo.R;
 
 import java.util.List;
@@ -20,6 +22,7 @@ public class ClassActivityAdapter extends RecyclerView.Adapter<ClassActivityAdap
     private OnItemClickListener mOnItemClickListener;
     private OnItemLongClickListener mOnItemLongClickListener;
     private List<Class_Activity> mDataSet;
+    private Context mContext;
 
 
     class ViewHolder extends RecyclerView.ViewHolder{
@@ -37,6 +40,7 @@ public class ClassActivityAdapter extends RecyclerView.Adapter<ClassActivityAdap
     @Override
     public ClassActivityAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.class_activity_item,parent,false);
+        mContext = parent.getContext();
         final RecyclerView.ViewHolder vh = new ViewHolder(v);
         return (ViewHolder) vh;
     }
@@ -54,21 +58,20 @@ public class ClassActivityAdapter extends RecyclerView.Adapter<ClassActivityAdap
             holder.class_video_itr.setText(class_activity.getClass_video_itr());
         }
         if(class_activity.getClass_video_iv() != null){
-            holder.class_video_iv.setImageResource(class_activity.getClass_video_iv());
+            String url = class_activity.getClass_video_iv();
+            if(url!=null){
+                Glide.with(mContext)
+                        .load(url)
+                        .asBitmap()  //不可加载动图
+                        .dontAnimate()//取消淡入淡出动画
+                        .placeholder(R.mipmap.ic_download)
+                        .error(R.mipmap.ic_download)
+                        .thumbnail(0.1f) //先加载十分之一作为缩略图
+                        .into(holder.class_video_iv);
+            }
         }else {
-            holder.class_video_iv.setImageResource(R.mipmap.ic_cycling1);
+            holder.class_video_iv.setImageResource(R.mipmap.ic_download);
         }
-
-        // String url = class_video.getItem_image();
-//        if(url!=null){
-////          holder.item_text.setImageBitmap(DealBitmap.centerSquareScaleBitmap(url));
-//            Glide.with(mcontext)
-//                    .load(url)
-//                    .asBitmap()  //不可加载动图
-//                    .dontAnimate()//取消淡入淡出动画
-//                    .thumbnail(0.1f) //先加载十分之一作为缩略图
-//                    .into(holder.class_video_iv);
-//        }
 
         //判断是否设置了监听器
         if(mOnItemClickListener != null){
@@ -116,7 +119,7 @@ public class ClassActivityAdapter extends RecyclerView.Adapter<ClassActivityAdap
 
     public class Class_Activity {
         private String class_video_itr;
-        private Integer class_video_iv;
+        private String class_video_iv;
 
         public String getClass_video_itr() {
             return class_video_itr;
@@ -126,15 +129,15 @@ public class ClassActivityAdapter extends RecyclerView.Adapter<ClassActivityAdap
             this.class_video_itr = class_video_itr;
         }
 
-        public Integer getClass_video_iv() {
+        public String getClass_video_iv() {
             return class_video_iv;
         }
 
-        public void setClass_video_iv(Integer class_video_iv) {
+        public void setClass_video_iv(String class_video_iv) {
             this.class_video_iv = class_video_iv;
         }
 
-        public Class_Activity(String class_video_itr, Integer class_video_iv) {
+        public Class_Activity(String class_video_itr, String class_video_iv) {
             this.class_video_itr = class_video_itr;
             this.class_video_iv = class_video_iv;
         }

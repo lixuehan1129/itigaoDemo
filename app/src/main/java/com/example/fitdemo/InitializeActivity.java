@@ -25,9 +25,11 @@ public class InitializeActivity extends AppCompatActivity {
         if(!SharePreferences.getString(InitializeActivity.this, AppConstants.USER_PHONE).isEmpty()){
             Intent intent = new Intent(InitializeActivity.this,MainActivity.class);
             startActivity(intent);
+            finish();
         }else {
             Intent intent = new Intent(InitializeActivity.this,UserLoginActivity.class);
             startActivity(intent);
+            finish();
         }
     }
 }

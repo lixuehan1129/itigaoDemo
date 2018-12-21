@@ -2,6 +2,9 @@ package com.example.fitdemo.Classes;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
+import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
@@ -9,9 +12,15 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 
 import com.example.fitdemo.Adapter.HuDongAdapter;
+import com.example.fitdemo.AutoProject.JDBCTools;
+import com.example.fitdemo.AutoProject.Tip;
 import com.example.fitdemo.R;
 import com.example.fitdemo.Utils.StatusBarUtils;
+import com.mysql.jdbc.Connection;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,9 +32,12 @@ public class HuDongActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
 
-    private ArrayList<Integer> image = new ArrayList<>();
-    private ArrayList<String> title = new ArrayList<>();
-    private ArrayList<String> content = new ArrayList<>();
+    private ArrayList<String> image;
+    private ArrayList<String> title;
+    private ArrayList<String> content;
+    private ArrayList<String> add;
+
+    private int hudong_classify;
 
 
     @Override
@@ -33,6 +45,8 @@ public class HuDongActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.hudong_activity);
         StatusBarUtils.setWindowStatusBarColor(HuDongActivity.this, R.color.colorWhite);
+        Intent intent = getIntent();
+        hudong_classify = intent.getIntExtra("hudong_classify",0);
         initView();
     }
 
@@ -48,26 +62,65 @@ public class HuDongActivity extends AppCompatActivity {
                 new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL);
         recyclerView.setLayoutManager(recyclerViewLayoutManager);
 
-        initData();
+        connectData();
     }
 
-    private void initData(){
-        for(int i=0; i<9; i++){
-            title.add("互动视频" + i);
-            content.add("我在这里发布了的健身视频，快来看吧" + i);
+    private void connectData(){
+        image = new ArrayList<>();
+        title = new ArrayList<>();
+        content = new ArrayList<>();
+        add = new ArrayList<>();
+
+        new Thread(){
+            public void run(){
+                Looper.prepare();
+                try{
+                    Connection conn = JDBCTools.getConnection();
+                    if(conn != null){
+                        Statement stmt = conn.createStatement();
+                        String sql = "SELECT * FROM hudong WHERE hudong_classify = " +
+                                hudong_classify +
+                                " ORDER BY hudong_id DESC LIMIT 20";
+                        ResultSet resultSet = stmt.executeQuery(sql);
+                        while(resultSet.next()){
+                            image.add(resultSet.getString("hudong_cover"));
+                            title.add(resultSet.getString("hudong_name"));
+                            content.add(resultSet.getString("hudong_content"));
+                            add.add(resultSet.getString("hudong_add"));
+                        }
+                        Message message = new Message();
+                        message.what = 1;
+                        handler.sendMessage(message);
+                        resultSet.close();
+                        JDBCTools.releaseConnection(stmt,conn);
+                    }else {
+                        Tip.showTip(HuDongActivity.this,"请检查网络");
+                    }
+                }catch (SQLException e) {
+                    e.printStackTrace();
+                }
+                Looper.loop();
+            }
+        }.start();
+    }
+
+    private Handler handler = new Handler(new Handler.Callback() {
+
+        @Override
+        public boolean handleMessage(Message msg) {
+            // TODO Auto-generated method stub
+            switch (msg.what){
+                case 1:{
+                    setAdapter();
+                    break;
+                }
+                default:
+                    break;
+            }
+            return false;
         }
-        image.add(R.mipmap.hudong_head1);
-        image.add(R.mipmap.hudong_head2);
-        image.add(R.mipmap.hudong_head3);
-        image.add(R.mipmap.hudong_head4);
-        image.add(R.mipmap.hudong_head5);
-        image.add(R.mipmap.hudong_head6);
-        image.add(R.mipmap.hudong_head1);
-        image.add(R.mipmap.hudong_head3);
-        image.add(R.mipmap.hudong_head4);
+    });
 
-        setAdapter();
-    }
 
     private void setAdapter(){
         List<HuDongAdapter.HuDong> huDongs = new ArrayList<>();

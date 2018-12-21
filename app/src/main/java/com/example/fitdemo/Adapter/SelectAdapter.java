@@ -1,5 +1,6 @@
 package com.example.fitdemo.Adapter;
 
+import android.annotation.SuppressLint;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -19,6 +20,7 @@ public class SelectAdapter extends RecyclerView.Adapter<SelectAdapter.ViewHolder
     private OnItemClickListener mOnItemClickListener;
     private OnItemLongClickListener mOnItemLongClickListener;
     private List<Select> selects;
+    //先声明一个int成员变量
 
     class ViewHolder extends RecyclerView.ViewHolder{
         TextView textView;
@@ -29,6 +31,7 @@ public class SelectAdapter extends RecyclerView.Adapter<SelectAdapter.ViewHolder
         }
     }
 
+
     @Override
     public SelectAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.video_select_item, parent, false);
@@ -36,12 +39,12 @@ public class SelectAdapter extends RecyclerView.Adapter<SelectAdapter.ViewHolder
         return (ViewHolder) vh;
     }
 
+    @SuppressLint("ResourceAsColor")
     @Override
     public void onBindViewHolder(final SelectAdapter.ViewHolder holder, int position) {
 
         Select select = selects.get(position);
         holder.textView.setText(String.valueOf(select.getId()));
-
 
         if (mOnItemClickListener != null) {
             //为ItemView设置监听器
