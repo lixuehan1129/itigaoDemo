@@ -35,8 +35,10 @@ public class DanceFragment extends BaseFragment {
     private ScrollView scrollView;
     //   private NestedScrollView scrollView;
     private ClassSelectAdapter newData;
-    private List<ClassSelectAdapter.Class_Select> class_selects;
-    private ClassSelectAdapter.Class_Select class_select;
+
+
+//    private List<ClassSelectAdapter.Class_Select> class_selects;
+//    private ClassSelectAdapter.Class_Select class_select;
 
     private LinearLayout linearLayout1, linearLayout2, linearLayout3, linearLayout4, linearLayout5, linearLayout6, linearLayout7;
     private TextView textView1, textView2, textView3, textView4, textView5, textView6, textView7;
@@ -260,36 +262,36 @@ public class DanceFragment extends BaseFragment {
                 break;
         }
 
-        initAdapter(week,recyclerView,introduce,coach,time,check,image,place);
+   //     initAdapter(week,recyclerView,introduce,coach,time,check,image,place);
 
 
     }
 
 
 
-    private void initAdapter(final int week, final RecyclerView recyclerView, final ArrayList<String> introduce, final ArrayList<String> coach, final ArrayList<String> time,
-                             final ArrayList<Integer> check, final ArrayList<Integer> image, final ArrayList<Integer> place){
-
-        class_selects = new ArrayList<>();
-        for(int i = 0; i < introduce.size(); i++){
-            newData = new ClassSelectAdapter(class_selects);
-            class_select = newData.new Class_Select(introduce.get(i),coach.get(i),
-                    time.get(i),image.get(i),check.get(i),place.get(i));
-            class_selects.add(class_select);
-        }
-
-        final ClassSelectAdapter classSelectAdapter = new ClassSelectAdapter(class_selects);
-        recyclerView.setAdapter(classSelectAdapter);
-        classSelectAdapter.setOnItemClickListener(new ClassSelectAdapter.OnItemClickListener() {
-            @Override
-            public void onItemClick(View view, int position) {
-                if(check.get(position) != null){
-                    showNormalDialog(week,recyclerView,position,introduce,coach,time,check,image,place);
-                }
-            }
-        });
-
-    }
+//    private void initAdapter(final int week, final RecyclerView recyclerView, final ArrayList<String> introduce, final ArrayList<String> coach, final ArrayList<String> time,
+//                             final ArrayList<Integer> check, final ArrayList<Integer> image, final ArrayList<Integer> place){
+//
+//        class_selects = new ArrayList<>();
+//        for(int i = 0; i < introduce.size(); i++){
+//            newData = new ClassSelectAdapter(class_selects);
+//            class_select = newData.new Class_Select(introduce.get(i),coach.get(i),
+//                    time.get(i),image.get(i),check.get(i),place.get(i));
+//            class_selects.add(class_select);
+//        }
+//
+//        final ClassSelectAdapter classSelectAdapter = new ClassSelectAdapter(class_selects);
+//        recyclerView.setAdapter(classSelectAdapter);
+//        classSelectAdapter.setOnItemClickListener(new ClassSelectAdapter.OnItemClickListener() {
+//            @Override
+//            public void onItemClick(View view, int position) {
+//                if(check.get(position) != null){
+//                    showNormalDialog(week,recyclerView,position,introduce,coach,time,check,image,place);
+//                }
+//            }
+//        });
+//
+//    }
 
     private void initGroup(){
         radioGroup.check(0);//默认为第一个
@@ -346,7 +348,7 @@ public class DanceFragment extends BaseFragment {
                         }else {
                             check.set(position,0);
                         }
-                        initAdapter(week,recyclerView,introduce,coach,time,check,image,place);
+                        //initAdapter(week,recyclerView,introduce,coach,time,check,image,place);
                     }
                 });
         normalDialog.setNegativeButton("关闭",

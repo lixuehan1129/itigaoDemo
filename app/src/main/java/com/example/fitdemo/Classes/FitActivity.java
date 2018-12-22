@@ -22,6 +22,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.util.Util;
 import com.example.fitdemo.Adapter.ClassActivityAdapter;
 import com.example.fitdemo.Adapter.ClassVideoAdapter;
 import com.example.fitdemo.AutoProject.AppConstants;
@@ -97,6 +98,9 @@ public class FitActivity extends AppCompatActivity {
     public void onDestroy() {
         super.onDestroy();
         broadcastManager.unregisterReceiver(mReceiver);
+        if (Util.isOnMainThread()) {
+            Glide.with(getApplicationContext()).pauseRequests();
+        }
     }
 
     @Override

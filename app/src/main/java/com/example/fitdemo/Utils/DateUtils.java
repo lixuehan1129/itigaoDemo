@@ -72,6 +72,45 @@ public class DateUtils {
         } else if ("7".equals(mWay)) {
             mWay = "六";
         }
-        return "星期" + mWay + "," + mMonth + "-" + mDay;
+        return "星期" + mWay + " " + mMonth + "-" + mDay;
+    }
+
+    public static int IntWeek(int week){
+        final Calendar c = Calendar.getInstance();
+        c.add(Calendar.DATE, +week);
+        c.setTimeZone(TimeZone.getTimeZone("GMT+8:00"));
+        int re = 0;
+        switch (c.get(Calendar.DAY_OF_WEEK)){
+            case 1 :{
+                re = 6;
+               break; 
+            }
+            case 2 :{
+                re = 0;
+                break;
+            }
+            case 3 :{
+                re = 1;
+                break;
+            }
+            case 4 :{
+                re = 2;
+                break;
+            }
+            case 5 :{
+                re = 3;
+                break;
+            }
+            case 6 :{
+                re = 4;
+                break;
+            }
+            case 7 :{
+                re = 5;
+                break;
+            }
+        }
+        
+        return re;
     }
 }

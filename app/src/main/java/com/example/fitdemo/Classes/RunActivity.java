@@ -21,6 +21,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.util.Util;
 import com.example.fitdemo.Adapter.ClassActivityAdapter;
 import com.example.fitdemo.Adapter.ClassVideoAdapter;
 import com.example.fitdemo.AutoProject.AppConstants;
@@ -97,6 +98,9 @@ public class RunActivity extends AppCompatActivity {
     public void onDestroy() {
         super.onDestroy();
         broadcastManager.unregisterReceiver(mReceiver);
+        if (Util.isOnMainThread()) {
+            Glide.with(getApplicationContext()).pauseRequests();
+        }
     }
 
     @Override
@@ -274,32 +278,34 @@ public class RunActivity extends AppCompatActivity {
     });
 
     private void setImage(){
-        if(cover4.size() == 2){
-            Glide.with(RunActivity.this)
-                    .load(cover4.get(0))
-                    .asBitmap()  //不可加载动图
-                    .dontAnimate()//取消淡入淡出动画
-     //               .placeholder(R.mipmap.ic_download)
-     //               .error(R.mipmap.ic_download)
-                    .thumbnail(0.1f) //先加载十分之一作为缩略图
-                    .into(imageView1);
-            Glide.with(RunActivity.this)
-                    .load(cover4.get(1))
-                    .asBitmap()  //不可加载动图
-                    .dontAnimate()//取消淡入淡出动画
-     //               .placeholder(R.mipmap.ic_download)
-      //              .error(R.mipmap.ic_download)
-                    .thumbnail(0.1f) //先加载十分之一作为缩略图
-                    .into(imageView2);
-        }else if(cover4.size() == 1){
-            Glide.with(RunActivity.this)
-                    .load(cover4.get(0))
-                    .asBitmap()  //不可加载动图
-                    .dontAnimate()//取消淡入淡出动画
-         //           .placeholder(R.mipmap.ic_download)
-         //           .error(R.mipmap.ic_download)
-                    .thumbnail(0.1f) //先加载十分之一作为缩略图
-                    .into(imageView2);
+        if(Util.isOnMainThread()) {
+            if (cover4.size() == 2) {
+                Glide.with(RunActivity.this)
+                        .load(cover4.get(0))
+                        .asBitmap()  //不可加载动图
+                        .dontAnimate()//取消淡入淡出动画
+                        //               .placeholder(R.mipmap.ic_download)
+                        //               .error(R.mipmap.ic_download)
+                        .thumbnail(0.1f) //先加载十分之一作为缩略图
+                        .into(imageView1);
+                Glide.with(RunActivity.this)
+                        .load(cover4.get(1))
+                        .asBitmap()  //不可加载动图
+                        .dontAnimate()//取消淡入淡出动画
+                        //               .placeholder(R.mipmap.ic_download)
+                        //              .error(R.mipmap.ic_download)
+                        .thumbnail(0.1f) //先加载十分之一作为缩略图
+                        .into(imageView2);
+            } else if (cover4.size() == 1) {
+                Glide.with(RunActivity.this)
+                        .load(cover4.get(0))
+                        .asBitmap()  //不可加载动图
+                        .dontAnimate()//取消淡入淡出动画
+                        //           .placeholder(R.mipmap.ic_download)
+                        //           .error(R.mipmap.ic_download)
+                        .thumbnail(0.1f) //先加载十分之一作为缩略图
+                        .into(imageView2);
+            }
         }
 
     }

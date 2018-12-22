@@ -3,6 +3,9 @@ package com.example.fitdemo.Recommend;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
+import android.os.Message;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -16,11 +19,19 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 
 import com.example.fitdemo.Adapter.ClassSelectAdapter;
+import com.example.fitdemo.AutoProject.JDBCTools;
+import com.example.fitdemo.AutoProject.Tip;
+import com.example.fitdemo.Classes.RunActivity;
 import com.example.fitdemo.R;
+import com.example.fitdemo.Utils.Class_select;
 import com.example.fitdemo.Utils.DateUtils;
 import com.example.fitdemo.ViewHelper.BaseFragment;
 import com.example.fitdemo.ViewHelper.DividerItemChange;
+import com.mysql.jdbc.Connection;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -33,14 +44,12 @@ public class RunningFragment extends BaseFragment {
     private RadioGroup radioGroup;
     private RadioButton button1, button2, button3, button4, button5, button6, button7;
     private ScrollView scrollView;
-    //   private NestedScrollView scrollView;
-    private ClassSelectAdapter newData;
-    private List<ClassSelectAdapter.Class_Select> class_selects;
-    private ClassSelectAdapter.Class_Select class_select;
 
     private LinearLayout linearLayout1, linearLayout2, linearLayout3, linearLayout4, linearLayout5, linearLayout6, linearLayout7;
     private TextView textView1, textView2, textView3, textView4, textView5, textView6, textView7;
     private RecyclerView recyclerView1, recyclerView2, recyclerView3, recyclerView4, recyclerView5, recyclerView6, recyclerView7;
+
+    private ArrayList<Class_select> data1,data2,data3,data4,data5,data6,data7;
 
 
     @Override
@@ -49,6 +58,7 @@ public class RunningFragment extends BaseFragment {
         View view = inflater.inflate(R.layout.class_check, container, false);
         initView(view);
         initGroup();
+        connectData();
         return view;
     }
 
@@ -71,6 +81,12 @@ public class RunningFragment extends BaseFragment {
         } else {
             //TODO now it's invisible to user
         }
+    }
+
+    @Override
+    protected void onFragmentFirstVisible(){
+       // initView(getView());
+       // connectData();
     }
 
     private void initView(View view){
@@ -122,13 +138,6 @@ public class RunningFragment extends BaseFragment {
         recyclerView7.addItemDecoration(new DividerItemChange(getActivity(),DividerItemChange.VERTICAL));
 
         initDate();
-        setData1(0,recyclerView1);
-        setData1(1,recyclerView2);
-        setData1(2,recyclerView3);
-        setData1(3,recyclerView4);
-        setData1(4,recyclerView5);
-        setData1(5,recyclerView6);
-        setData1(6,recyclerView7);
 
 
     }
@@ -152,143 +161,194 @@ public class RunningFragment extends BaseFragment {
 
     }
 
-    private void setData1(int week, RecyclerView recyclerView){
-
-        ArrayList<String> introduce = new ArrayList<>();
-        ArrayList<String> coach = new ArrayList<>();
-        ArrayList<String> time = new ArrayList<>();
-        ArrayList<Integer> check = new ArrayList<>();
-        ArrayList<Integer> image = new ArrayList<>();
-        ArrayList<Integer> place = new ArrayList<>();
-
-
-        switch (week){
-            case 0:{
-                introduce.add("健身课程  一周拥有好身材");
-                introduce.add("如何健身  你该这么做");
-                coach.add("金牌教练 杰克马 我从来不要工资");
-                coach.add("教学有方 校长 微博抽奖送热狗");
-                time.add("星期一 11-26 08：30-10：00");
-                time.add("星期一 11-26 14：30-16：00");
-                check.add(1);
-                check.add(0);
-                image.add(R.mipmap.ic_run1111);
-                image.add(R.mipmap.ic_yoga11);
-                place.add(0);
-                place.add(1);
-                break;
-            }
-            case 1:{
-                introduce.add("今天你瘦了吗  教你越吃又瘦");
-                introduce.add("如何健身2  你该这么做");
-                coach.add("特约教练 王老板 先定一个小目标");
-                coach.add("兼职教练 刘美男 买饮料刷脸能免单");
-                time.add("星期二 11-26 08：30-10：00");
-                time.add("星期二 11-26 14：30-16：00");
-                check.add(0);
-                check.add(0);
-                image.add(R.mipmap.ic_yoga11);
-                image.add(R.mipmap.ic_run1111);
-                place.add(0);
-                place.add(0);
-                break;
-            }
-            case 2:{
-                introduce.add("健身课程2  一周拥有好身材");
-                coach.add("金牌教练 老罗 其实我更喜欢演讲");
-                time.add("星期三 11-26 08：30-10：00");
-                check.add(1);
-                image.add(R.mipmap.ic_yoga11);
-                place.add(1);
-                break;
-            }
-            case 3:{
-                introduce.add("健身课程  一周拥有好身材");
-                introduce.add("如何健身  你该这么做");
-                coach.add("金牌教练 杰克马 我从来不要工资");
-                coach.add("兼职教练 刘美男 开黑吗，我辅助贼6");
-                time.add("星期四 11-26 08：30-10：00");
-                time.add("星期四 11-26 14：30-16：00");
-                image.add(R.mipmap.ic_yoga11);
-                image.add(R.mipmap.ic_run1111);
-                check.add(1);
-                check.add(0);
-                place.add(0);
-                place.add(0);
-                break;
-            }
-            case 4:{
-                introduce.add("今天你瘦了吗  教你越吃又瘦");
-                introduce.add("如何健身2  你该这么做");
-                coach.add("美女教练 锦鲤杨 燃烧我的卡路里");
-                coach.add("特约教练 东子 我这个人脸盲");
-                time.add("星期五 11-26 08：30-10：00");
-                time.add("星期五 11-26 14：30-16：00");
-                check.add(0);
-                check.add(0);
-                image.add(R.mipmap.ic_yoga11);
-                image.add(R.mipmap.ic_run1111);
-                place.add(0);
-                place.add(0);
-                break;
-            }
-            case 5:{
-                introduce.add("健身课程2  一周拥有好身材");
-                coach.add("金牌教练 小马 都亏到坐公交了");
-                time.add("星期六 11-26 08：30-10：00");
-                check.add(0);
-                image.add(R.mipmap.ic_yoga11);
-                place.add(0);
-                break;
-            }
-            case 6:{
-                introduce.add("健身课程  一周拥有好身材");
-                introduce.add("如何健身  你该这么做");
-                coach.add("金牌教练 杰克马 我从来不要工资");
-                coach.add("教学有方 校长 微博抽奖送跑车");
-                time.add("星期日 11-26 08：30-10：00");
-                time.add("星期日 11-26 14：30-16：00");
-                image.add(R.mipmap.ic_run1111);
-                image.add(R.mipmap.ic_yoga11);
-                check.add(1);
-                check.add(0);
-                place.add(1);
-                place.add(0);
-                break;
-            }
-            default:
-                break;
-        }
-
-        initAdapter(week,recyclerView,introduce,coach,time,check,image,place);
-
+    private void setArray(){
+        data1 = new ArrayList<>();
+        data2 = new ArrayList<>();
+        data3 = new ArrayList<>();
+        data4 = new ArrayList<>();
+        data5 = new ArrayList<>();
+        data6 = new ArrayList<>();
+        data7 = new ArrayList<>();
 
     }
 
+    private void connectData(){
 
+        setArray();
+        new Thread(){
+            public void run(){
+                Looper.prepare();
+                try{
+                    Connection conn = JDBCTools.getConnection();
+                    if(conn != null){
+                        Statement stmt = conn.createStatement();
+                        String sql = "SELECT * FROM appoint WHERE appoint_classify = 1 ORDER BY appoint_time";
+                        ResultSet resultSet = stmt.executeQuery(sql);
+                        while(resultSet.next()){
+                            int week = resultSet.getInt("appoint_week");
+                            int time = resultSet.getInt("appoint_time");
+                            String rTime;
+                            if(time == 2){
+                                rTime = "08:30-10:00";
+                            }else {
+                                rTime = "14:30-16:00";
+                            }
+                            switch (week){
+                                case 1:{
+                                    data1.add(new Class_select(resultSet.getString("appoint_name"),
+                                            resultSet.getString("appoint_coach"),rTime,resultSet.getString("appoint_cover"),
+                                            0,resultSet.getInt("appoint_place")));
+                                    break;
+                                }
+                                case 2:{
+                                    data2.add(new Class_select(resultSet.getString("appoint_name"),
+                                            resultSet.getString("appoint_coach"),rTime,resultSet.getString("appoint_cover"),
+                                            0,resultSet.getInt("appoint_place")));
+                                    break;
+                                }
+                                case 3:{
+                                    data3.add(new Class_select(resultSet.getString("appoint_name"),
+                                            resultSet.getString("appoint_coach"),rTime,resultSet.getString("appoint_cover"),
+                                            0,resultSet.getInt("appoint_place")));
+                                    break;
+                                }
+                                case 4:{
+                                    data4.add(new Class_select(resultSet.getString("appoint_name"),
+                                            resultSet.getString("appoint_coach"),rTime,resultSet.getString("appoint_cover"),
+                                            0,resultSet.getInt("appoint_place")));
+                                    break;
+                                }
+                                case 5:{
+                                    data5.add(new Class_select(resultSet.getString("appoint_name"),
+                                            resultSet.getString("appoint_coach"),rTime,resultSet.getString("appoint_cover"),
+                                            0,resultSet.getInt("appoint_place")));
+                                    break;
+                                }
+                                case 6:{
+                                    data6.add(new Class_select(resultSet.getString("appoint_name"),
+                                            resultSet.getString("appoint_coach"),rTime,resultSet.getString("appoint_cover"),
+                                            0,resultSet.getInt("appoint_place")));
+                                    break;
+                                }
+                                case 7:{
+                                    data7.add(new Class_select(resultSet.getString("appoint_name"),
+                                            resultSet.getString("appoint_coach"),rTime,resultSet.getString("appoint_cover"),
+                                            0,resultSet.getInt("appoint_place")));
+                                    break;
+                                }
+                                default:
+                                    break;
+                            }
+                        }
+                        System.out.println(data1);
+                        Message message = new Message();
+                        message.what = 1;
+                        handler.sendMessage(message);
+                        resultSet.close();
+                        JDBCTools.releaseConnection(stmt,conn);
+                    }else {
+                        Tip.showTip(getActivity(),"请检查网络");
+                    }
+                }catch (SQLException e) {
+                    e.printStackTrace();
+                }
+                Looper.loop();
+            }
+        }.start();
+    }
 
-    private void initAdapter(final int week, final RecyclerView recyclerView, final ArrayList<String> introduce, final ArrayList<String> coach, final ArrayList<String> time,
-                             final ArrayList<Integer> check, final ArrayList<Integer> image, final ArrayList<Integer> place){
+    private Handler handler = new Handler(new Handler.Callback() {
 
-        class_selects = new ArrayList<>();
-        for(int i = 0; i < introduce.size(); i++){
-            newData = new ClassSelectAdapter(class_selects);
-            class_select = newData.new Class_Select(introduce.get(i),coach.get(i),
-                    time.get(i),image.get(i),check.get(i),place.get(i));
-            class_selects.add(class_select);
+        @Override
+        public boolean handleMessage(Message msg) {
+            // TODO Auto-generated method stub
+            switch (msg.what){
+                case 1:{
+                    ArrayList<ArrayList<Class_select>> Data = new ArrayList<>();
+                    Data.add(data1);
+                    Data.add(data2);
+                    Data.add(data3);
+                    Data.add(data4);
+                    Data.add(data5);
+                    Data.add(data6);
+                    Data.add(data7);
+
+                    System.out.println(DateUtils.IntWeek(0));
+                    initAdapter(recyclerView1, Data.get(DateUtils.IntWeek(0)));
+                    initAdapter(recyclerView2, Data.get(DateUtils.IntWeek(1)));
+                    initAdapter(recyclerView3, Data.get(DateUtils.IntWeek(2)));
+                    initAdapter(recyclerView4, Data.get(DateUtils.IntWeek(3)));
+                    initAdapter(recyclerView5, Data.get(DateUtils.IntWeek(4)));
+                    initAdapter(recyclerView6, Data.get(DateUtils.IntWeek(5)));
+                    initAdapter(recyclerView7, Data.get(DateUtils.IntWeek(6)));
+                    break;
+                }
+                default:
+                    break;
+            }
+            return false;
         }
+    });
 
+    private void initAdapter(final RecyclerView recyclerView, final ArrayList<Class_select> class_selects){
         final ClassSelectAdapter classSelectAdapter = new ClassSelectAdapter(class_selects);
         recyclerView.setAdapter(classSelectAdapter);
         classSelectAdapter.setOnItemClickListener(new ClassSelectAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(View view, int position) {
-                if(check.get(position) != null){
-                    showNormalDialog(week,recyclerView,position,introduce,coach,time,check,image,place);
+                if(class_selects.get(position) != null){
+                    showNormalDialog(recyclerView,position,class_selects);
                 }
             }
         });
 
+    }
+
+    private void showNormalDialog(final RecyclerView recyclerView, final int position, final ArrayList<Class_select> class_selects){
+        /* @setIcon 设置对话框图标
+         * @setTitle 设置对话框标题
+         * @setMessage 设置对话框消息提示
+         * setXXX方法返回Dialog对象，因此可以链式设置属性
+         */
+        final AlertDialog.Builder normalDialog =
+                new AlertDialog.Builder(getActivity());
+        switch (class_selects.get(position).getCheck()){
+            case 0:{
+                normalDialog.setMessage("确定要选择该课程？");
+                break;
+            }
+            case 1:{
+                normalDialog.setMessage("取消该课程");
+                break;
+            }
+            default:
+                break;
+        }
+        normalDialog.setPositiveButton("确定",
+                new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        //...To-do
+                        if(class_selects.get(position).getCheck() == 0){
+                            //   check.set(position,1);
+                            class_selects.get(position).setCheck(1);
+                        }else {
+                            class_selects.get(position).setCheck(0);
+                            //   check.set(position,0);
+                        }
+
+                        initAdapter(recyclerView,class_selects);
+                    }
+                });
+        normalDialog.setNegativeButton("关闭",
+                new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        //...To-do
+                    }
+                });
+        // 显示
+        normalDialog.show();
     }
 
     private void initGroup(){
@@ -311,53 +371,6 @@ public class RunningFragment extends BaseFragment {
                 return false;
             }
         };
-    }
-
-
-    private void showNormalDialog(final int week, final RecyclerView recyclerView, final int position, final ArrayList<String> introduce, final ArrayList<String> coach,
-                                  final ArrayList<String> time, final ArrayList<Integer> check, final ArrayList<Integer> image,
-                                  final ArrayList<Integer> place){
-        /* @setIcon 设置对话框图标
-         * @setTitle 设置对话框标题
-         * @setMessage 设置对话框消息提示
-         * setXXX方法返回Dialog对象，因此可以链式设置属性
-         */
-        final AlertDialog.Builder normalDialog =
-                new AlertDialog.Builder(getActivity());
-        switch (check.get(position)){
-            case 0:{
-                normalDialog.setMessage("确定要选择该课程？");
-                break;
-            }
-            case 1:{
-                normalDialog.setMessage("取消该课程");
-                break;
-            }
-            default:
-                break;
-        }
-        normalDialog.setPositiveButton("确定",
-                new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        //...To-do
-                        if(check.get(position) == 0){
-                            check.set(position,1);
-                        }else {
-                            check.set(position,0);
-                        }
-                        initAdapter(week,recyclerView,introduce,coach,time,check,image,place);
-                    }
-                });
-        normalDialog.setNegativeButton("关闭",
-                new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        //...To-do
-                    }
-                });
-        // 显示
-        normalDialog.show();
     }
 
     private void setButton(Button button, final LinearLayout linearLayout){

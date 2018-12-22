@@ -80,7 +80,7 @@ public class HuDongActivity extends AppCompatActivity {
                         Statement stmt = conn.createStatement();
                         String sql = "SELECT * FROM hudong WHERE hudong_classify = " +
                                 hudong_classify +
-                                " ORDER BY hudong_id DESC LIMIT 20";
+                                " ORDER BY hudong_id DESC LIMIT 40";
                         ResultSet resultSet = stmt.executeQuery(sql);
                         while(resultSet.next()){
                             image.add(resultSet.getString("hudong_cover"));

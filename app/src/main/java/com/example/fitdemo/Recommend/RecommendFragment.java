@@ -50,7 +50,7 @@ public class RecommendFragment extends BaseFragment implements TabLayout.OnTabSe
         TabLayout mTabLayout = (TabLayout) view.findViewById(R.id.recommendFragment_layout);
         mViewPager = (ViewPager)view.findViewById(R.id.recommendFragment_viewpager);
 
-        mViewPager.setOffscreenPageLimit(2);
+        mViewPager.setOffscreenPageLimit(3);
 
         //设置TabLayout标签的显示方式
         mTabLayout.setTabMode(TabLayout.MODE_FIXED);
@@ -61,11 +61,11 @@ public class RecommendFragment extends BaseFragment implements TabLayout.OnTabSe
         mTabLayout.setOnTabSelectedListener(this);
 
         //课程选择跳转
-        fragments.add(new FitFragment());
         fragments.add(new RunningFragment());
-        fragments.add(new YogaFragment());
-    //    fragments.add(new DanceFragment());
         fragments.add(new CyclingFragment());
+        fragments.add(new FitFragment());
+        fragments.add(new YogaFragment());
+
 
         TabLayoutAdapter mTabLayoutAdapter = new TabLayoutAdapter(getChildFragmentManager(), titles, fragments);
         mViewPager.setAdapter(mTabLayoutAdapter);
