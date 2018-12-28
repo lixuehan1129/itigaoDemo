@@ -4,7 +4,17 @@
             "outputFile": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\values-lv\\values-lv.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.2.aar\\0649346b4012d203c0e754e66b3d47b7\\res\\values-lv\\values-lv.xml",
+                    "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.2.aar\\67dabe975a1be42a80ea5cbfd18ee8eb\\res\\values-lv\\values-lv.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,225,333,442,528,632,754,836,918,1003,1112,1224,1323,1434,1543,1648,1822,1921",
+                        "endColumns": "119,107,108,85,103,121,81,81,84,108,111,98,110,108,104,173,98,81",
+                        "endOffsets": "220,328,437,523,627,749,831,913,998,1107,1219,1318,1429,1538,1643,1817,1916,1998"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.2.aar\\b11478435db17dc109efcf0de046f599\\res\\values-lv\\values-lv.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -18,16 +28,6 @@
                         "startOffsets": "2003",
                         "endColumns": "100",
                         "endOffsets": "2099"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.2.aar\\15140af22654a329767de0898450f87d\\res\\values-lv\\values-lv.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,225,333,442,528,632,754,836,918,1003,1112,1224,1323,1434,1543,1648,1822,1921",
-                        "endColumns": "119,107,108,85,103,121,81,81,84,108,111,98,110,108,104,173,98,81",
-                        "endOffsets": "220,328,437,523,627,749,831,913,998,1107,1219,1318,1429,1538,1643,1817,1916,1998"
                     }
                 }
             ]
@@ -36,7 +36,17 @@
             "outputFile": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-lv\\values-lv.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.2.aar\\0649346b4012d203c0e754e66b3d47b7\\res\\values-lv\\values-lv.xml",
+                    "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.2.aar\\67dabe975a1be42a80ea5cbfd18ee8eb\\res\\values-lv\\values-lv.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,225,333,442,528,632,754,836,918,1003,1112,1224,1323,1434,1543,1648,1822,1921",
+                        "endColumns": "119,107,108,85,103,121,81,81,84,108,111,98,110,108,104,173,98,81",
+                        "endOffsets": "220,328,437,523,627,749,831,913,998,1107,1219,1318,1429,1538,1643,1817,1916,1998"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.2.aar\\b11478435db17dc109efcf0de046f599\\res\\values-lv\\values-lv.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -50,16 +60,6 @@
                         "startOffsets": "2003",
                         "endColumns": "100",
                         "endOffsets": "2099"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.2.aar\\15140af22654a329767de0898450f87d\\res\\values-lv\\values-lv.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,225,333,442,528,632,754,836,918,1003,1112,1224,1323,1434,1543,1648,1822,1921",
-                        "endColumns": "119,107,108,85,103,121,81,81,84,108,111,98,110,108,104,173,98,81",
-                        "endOffsets": "220,328,437,523,627,749,831,913,998,1107,1219,1318,1429,1538,1643,1817,1916,1998"
                     }
                 }
             ]

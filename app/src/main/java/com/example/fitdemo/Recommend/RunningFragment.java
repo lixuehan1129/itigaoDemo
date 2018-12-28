@@ -1,7 +1,9 @@
 package com.example.fitdemo.Recommend;
 
 import android.app.AlertDialog;
+import android.app.ProgressDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
@@ -19,16 +21,21 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 
 import com.example.fitdemo.Adapter.ClassSelectAdapter;
+import com.example.fitdemo.AutoProject.AppConstants;
 import com.example.fitdemo.AutoProject.JDBCTools;
+import com.example.fitdemo.AutoProject.SharePreferences;
 import com.example.fitdemo.AutoProject.Tip;
 import com.example.fitdemo.Classes.RunActivity;
+import com.example.fitdemo.MainActivity;
 import com.example.fitdemo.R;
+import com.example.fitdemo.User.UserLoginActivity;
 import com.example.fitdemo.Utils.Class_select;
 import com.example.fitdemo.Utils.DateUtils;
 import com.example.fitdemo.ViewHelper.BaseFragment;
 import com.example.fitdemo.ViewHelper.DividerItemChange;
 import com.mysql.jdbc.Connection;
 
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -184,11 +191,29 @@ public class RunningFragment extends BaseFragment {
                         Statement stmt = conn.createStatement();
                         String sql = "SELECT * FROM appoint WHERE appoint_classify = 1 ORDER BY appoint_time";
                         ResultSet resultSet = stmt.executeQuery(sql);
+                     //   ResultSet resultSet1 = null;
                         while(resultSet.next()){
+                            int bid = resultSet.getInt("appoint_bid");
                             int week = resultSet.getInt("appoint_week");
                             int time = resultSet.getInt("appoint_time");
+                            int check = 0;
+                            int Today = DateUtils.IntTime(0)-1;//是否大于当前日期
+                            String sql_check = "SELECT * From yu WHERE yu_user = '" +
+                                    SharePreferences.getString(getActivity(), AppConstants.USER_PHONE) +
+                                    "' AND yu_bid = " +
+                                    bid +
+                                    " AND yu_time > " +
+                                    Today +
+                                    "";
+
+                            Statement stmt1 = conn.createStatement();
+                            ResultSet resultSet1 = stmt1.executeQuery(sql_check);
+                            if(resultSet1.first()){
+                                check = 1;
+                            }
+                            resultSet1.close();
                             String rTime;
-                            if(time == 2){
+                            if(time == 1){
                                 rTime = "08:30-10:00";
                             }else {
                                 rTime = "14:30-16:00";
@@ -197,43 +222,43 @@ public class RunningFragment extends BaseFragment {
                                 case 1:{
                                     data1.add(new Class_select(resultSet.getString("appoint_name"),
                                             resultSet.getString("appoint_coach"),rTime,resultSet.getString("appoint_cover"),
-                                            0,resultSet.getInt("appoint_place")));
+                                            check,resultSet.getInt("appoint_place"),bid,week));
                                     break;
                                 }
                                 case 2:{
                                     data2.add(new Class_select(resultSet.getString("appoint_name"),
                                             resultSet.getString("appoint_coach"),rTime,resultSet.getString("appoint_cover"),
-                                            0,resultSet.getInt("appoint_place")));
+                                            check,resultSet.getInt("appoint_place"),bid,week));
                                     break;
                                 }
                                 case 3:{
                                     data3.add(new Class_select(resultSet.getString("appoint_name"),
                                             resultSet.getString("appoint_coach"),rTime,resultSet.getString("appoint_cover"),
-                                            0,resultSet.getInt("appoint_place")));
+                                            check,resultSet.getInt("appoint_place"),bid,week));
                                     break;
                                 }
                                 case 4:{
                                     data4.add(new Class_select(resultSet.getString("appoint_name"),
                                             resultSet.getString("appoint_coach"),rTime,resultSet.getString("appoint_cover"),
-                                            0,resultSet.getInt("appoint_place")));
+                                            check,resultSet.getInt("appoint_place"),bid,week));
                                     break;
                                 }
                                 case 5:{
                                     data5.add(new Class_select(resultSet.getString("appoint_name"),
                                             resultSet.getString("appoint_coach"),rTime,resultSet.getString("appoint_cover"),
-                                            0,resultSet.getInt("appoint_place")));
+                                            check,resultSet.getInt("appoint_place"),bid,week));
                                     break;
                                 }
                                 case 6:{
                                     data6.add(new Class_select(resultSet.getString("appoint_name"),
                                             resultSet.getString("appoint_coach"),rTime,resultSet.getString("appoint_cover"),
-                                            0,resultSet.getInt("appoint_place")));
+                                            check,resultSet.getInt("appoint_place"),bid,week));
                                     break;
                                 }
                                 case 7:{
                                     data7.add(new Class_select(resultSet.getString("appoint_name"),
                                             resultSet.getString("appoint_coach"),rTime,resultSet.getString("appoint_cover"),
-                                            0,resultSet.getInt("appoint_place")));
+                                            check,resultSet.getInt("appoint_place"),bid,week));
                                     break;
                                 }
                                 default:
@@ -244,6 +269,7 @@ public class RunningFragment extends BaseFragment {
                         Message message = new Message();
                         message.what = 1;
                         handler.sendMessage(message);
+
                         resultSet.close();
                         JDBCTools.releaseConnection(stmt,conn);
                     }else {
@@ -256,6 +282,7 @@ public class RunningFragment extends BaseFragment {
             }
         }.start();
     }
+
 
     private Handler handler = new Handler(new Handler.Callback() {
 
@@ -273,14 +300,14 @@ public class RunningFragment extends BaseFragment {
                     Data.add(data6);
                     Data.add(data7);
 
-                    System.out.println(DateUtils.IntWeek(0));
-                    initAdapter(recyclerView1, Data.get(DateUtils.IntWeek(0)));
-                    initAdapter(recyclerView2, Data.get(DateUtils.IntWeek(1)));
-                    initAdapter(recyclerView3, Data.get(DateUtils.IntWeek(2)));
-                    initAdapter(recyclerView4, Data.get(DateUtils.IntWeek(3)));
-                    initAdapter(recyclerView5, Data.get(DateUtils.IntWeek(4)));
-                    initAdapter(recyclerView6, Data.get(DateUtils.IntWeek(5)));
-                    initAdapter(recyclerView7, Data.get(DateUtils.IntWeek(6)));
+
+                    initAdapter(recyclerView1, Data.get(DateUtils.IntWeek(0)),0);
+                    initAdapter(recyclerView2, Data.get(DateUtils.IntWeek(1)),1);
+                    initAdapter(recyclerView3, Data.get(DateUtils.IntWeek(2)),2);
+                    initAdapter(recyclerView4, Data.get(DateUtils.IntWeek(3)),3);
+                    initAdapter(recyclerView5, Data.get(DateUtils.IntWeek(4)),4);
+                    initAdapter(recyclerView6, Data.get(DateUtils.IntWeek(5)),5);
+                    initAdapter(recyclerView7, Data.get(DateUtils.IntWeek(6)),6);
                     break;
                 }
                 default:
@@ -290,21 +317,21 @@ public class RunningFragment extends BaseFragment {
         }
     });
 
-    private void initAdapter(final RecyclerView recyclerView, final ArrayList<Class_select> class_selects){
+    private void initAdapter(final RecyclerView recyclerView, final ArrayList<Class_select> class_selects, final int week){
         final ClassSelectAdapter classSelectAdapter = new ClassSelectAdapter(class_selects);
         recyclerView.setAdapter(classSelectAdapter);
         classSelectAdapter.setOnItemClickListener(new ClassSelectAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(View view, int position) {
                 if(class_selects.get(position) != null){
-                    showNormalDialog(recyclerView,position,class_selects);
+                    showNormalDialog(recyclerView,position,class_selects,week);
                 }
             }
         });
 
     }
 
-    private void showNormalDialog(final RecyclerView recyclerView, final int position, final ArrayList<Class_select> class_selects){
+    private void showNormalDialog(final RecyclerView recyclerView, final int position, final ArrayList<Class_select> class_selects, final int week){
         /* @setIcon 设置对话框图标
          * @setTitle 设置对话框标题
          * @setMessage 设置对话框消息提示
@@ -330,14 +357,14 @@ public class RunningFragment extends BaseFragment {
                     public void onClick(DialogInterface dialog, int which) {
                         //...To-do
                         if(class_selects.get(position).getCheck() == 0){
-                            //   check.set(position,1);
                             class_selects.get(position).setCheck(1);
+                            setCheck(class_selects.get(position).getBid(),week);
                         }else {
                             class_selects.get(position).setCheck(0);
-                            //   check.set(position,0);
+                            deleteCheck(class_selects.get(position).getBid());
                         }
 
-                        initAdapter(recyclerView,class_selects);
+                        initAdapter(recyclerView,class_selects,week);
                     }
                 });
         normalDialog.setNegativeButton("关闭",
@@ -349,6 +376,70 @@ public class RunningFragment extends BaseFragment {
                 });
         // 显示
         normalDialog.show();
+    }
+
+    private void setCheck(final int bid, final int week){
+        final ProgressDialog progressDialog = ProgressDialog.show(getActivity(),"","请稍后...",true);
+        new Thread(){
+            public void run(){
+                Looper.prepare();//用于toast
+                try{
+                    Connection conn = JDBCTools.getConnection();
+                    if(conn != null){
+                        //根据手机号查找数据库
+                        Statement stmt = conn.createStatement();
+                        String sql = "INSERT INTO yu (yu_user,yu_time,yu_bid) VALUES (?,?,?)";
+                        PreparedStatement preparedStatement = conn.prepareStatement(sql,Statement.RETURN_GENERATED_KEYS);
+                        preparedStatement.setString(1,SharePreferences.getString(getActivity(),AppConstants.USER_PHONE));
+                        preparedStatement.setInt(2,DateUtils.IntTime(week));
+                        preparedStatement.setInt(3,bid);
+                        preparedStatement.executeUpdate();
+                        preparedStatement.close();
+                        JDBCTools.releaseConnection(stmt,conn);
+                        progressDialog.dismiss();
+                    }else {
+                        Tip.showTip(getActivity(),"请检查网络");
+                        progressDialog.dismiss();
+                    }
+                }catch (SQLException e) {
+                    e.printStackTrace();
+                    progressDialog.dismiss();
+                }
+                Looper.loop();
+            }
+        }.start();
+    }
+
+    private void deleteCheck(final int bid){
+        final ProgressDialog progressDialog = ProgressDialog.show(getActivity(),"","请稍后...",true);
+        new Thread(){
+            public void run(){
+                Looper.prepare();//用于toast
+                try{
+                    Connection conn = JDBCTools.getConnection();
+                    if(conn != null){
+                        //根据手机号查找数据库
+                        Statement stmt = conn.createStatement();
+                        String sql = "DELETE FROM yu WHERE yu_bid = " +
+                                bid +
+                                "";
+                        PreparedStatement preparedStatement = conn.prepareStatement(sql,Statement.RETURN_GENERATED_KEYS);
+                        preparedStatement.executeUpdate();
+                        preparedStatement.close();
+                        preparedStatement.close();
+                        JDBCTools.releaseConnection(stmt,conn);
+                        progressDialog.dismiss();
+                    }else {
+                        Tip.showTip(getActivity(),"请检查网络");
+                        progressDialog.dismiss();
+                    }
+                }catch (SQLException e) {
+                    e.printStackTrace();
+                    progressDialog.dismiss();
+                }
+                Looper.loop();
+            }
+        }.start();
     }
 
     private void initGroup(){

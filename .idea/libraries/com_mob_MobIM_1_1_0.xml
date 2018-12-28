@@ -1,9 +1,9 @@
 <component name="libraryTable">
   <library name="com.mob:MobIM-1.1.0">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/MobIM-1.1.0.aar/e735e3638966e77b85ce4fe12b98bf9c/jars/libs/MobIM_1.1.0.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/MobIM-1.1.0.aar/e735e3638966e77b85ce4fe12b98bf9c/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/MobIM-1.1.0.aar/e735e3638966e77b85ce4fe12b98bf9c/jars/classes.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/MobIM-1.1.0.aar/7c7ff1e8c692daf66db444e5ec935b8d/jars/libs/MobIM_1.1.0.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/MobIM-1.1.0.aar/7c7ff1e8c692daf66db444e5ec935b8d/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/MobIM-1.1.0.aar/7c7ff1e8c692daf66db444e5ec935b8d/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

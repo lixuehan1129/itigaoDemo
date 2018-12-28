@@ -18,17 +18,17 @@ public class PersonExamActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.person_change_activity);
+        setContentView(R.layout.person_exam);
         StatusBarUtils.setWindowStatusBarColor(PersonExamActivity.this, R.color.colorWhite);
         initView();
     }
 
     private void initView(){
-        Toolbar toolbar = (Toolbar) findViewById(R.id.person_change_mainTool);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.person_exam_mainTool);
         toolbar.setTitle("健康体检");
         back(toolbar);
 
-        TextView textView = (TextView) findViewById(R.id.person_change_tv);
+        TextView textView = (TextView) findViewById(R.id.person_exam_tv);
         textView.setText("个人健康情况");
 
     }

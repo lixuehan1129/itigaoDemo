@@ -2,8 +2,10 @@ package com.example.fitdemo.User;
 
 import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
+import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.os.Looper;
 import android.support.design.widget.TextInputEditText;
@@ -26,6 +28,7 @@ import com.example.fitdemo.AutoProject.AppConstants;
 import com.example.fitdemo.AutoProject.JDBCTools;
 import com.example.fitdemo.AutoProject.SharePreferences;
 import com.example.fitdemo.AutoProject.Tip;
+import com.example.fitdemo.Database.DataBaseHelper;
 import com.example.fitdemo.MainActivity;
 import com.example.fitdemo.R;
 import com.example.fitdemo.Utils.PermissionUtils;
@@ -46,6 +49,7 @@ import de.hdodenhof.circleimageview.CircleImageView;
 
 public class UserLoginActivity extends AppCompatActivity {
 
+    private DataBaseHelper dataBaseHelper;
     private TextInputLayout name_l, password_l;
     private TextInputEditText name, password;
     private Button register, forget, login;
@@ -79,6 +83,8 @@ public class UserLoginActivity extends AppCompatActivity {
         forget = (Button)findViewById(R.id.user_login_forget);
         register = (Button)findViewById(R.id.user_login_regist);
         login = (Button)findViewById(R.id.user_login_login);
+
+        dataBaseHelper = new DataBaseHelper(UserLoginActivity.this,AppConstants.SQL_VISION);
 
         initEditText();
         pageClick();
@@ -125,17 +131,35 @@ public class UserLoginActivity extends AppCompatActivity {
                     if(conn != null){
                         //根据手机号查找数据库
                         Statement stmt = conn.createStatement(); //根据返回的Connection对象创建 Statement对象
-                        String sql = "SELECT user_phone,user_password FROM user WHERE user_phone = '" +
+                        String sql = "SELECT * FROM user WHERE user_phone = '" +
                                 name.getText().toString() +
                                 "'";
                         ResultSet resultSet = stmt.executeQuery(sql);
+                        SQLiteDatabase sqLiteDatabase = dataBaseHelper.getReadableDatabase();
+                        String delete = "delete from user where user_phone ='" +
+                                name.getText().toString() +
+                                "'";
+                        sqLiteDatabase.execSQL(delete);
                         if(resultSet.next()){
                             //判断输入的密码和数据库是否匹配
                             String user_password = resultSet.getString("user_password");
                             if(user_password.equals(password.getText().toString())){
                                 //密码正确，记录手机号和密码
+                                ContentValues values = new ContentValues();
                                 SharePreferences.putString(UserLoginActivity.this, AppConstants.USER_PHONE, name.getText().toString());
                                 SharePreferences.putString(UserLoginActivity.this, AppConstants.USER_PASSWORD, password.getText().toString());
+                                String phone = resultSet.getString("user_phone");
+                                String name = resultSet.getString("user_name");
+                                String picture = resultSet.getString("user_picture");
+                                int sex = resultSet.getInt("user_sex");
+                                int sort = resultSet.getInt("user_sort");
+                                values.put("user_name",name);
+                                values.put("user_phone",phone);
+                                values.put("user_sort",sort);
+                                values.put("user_sex",sex);
+                                values.put("user_picture",picture);
+                                sqLiteDatabase.insert("user",null,values);
+                                sqLiteDatabase.close();
                                 resultSet.close();
                                 JDBCTools.releaseConnection(stmt,conn);
                                 progressDialog.dismiss();
@@ -145,6 +169,10 @@ public class UserLoginActivity extends AppCompatActivity {
                                 Tip.showTip(UserLoginActivity.this,"密码错误");
                                 progressDialog.dismiss();
                             }
+                        }else {
+                            sqLiteDatabase.close();
+                            Tip.showTip(UserLoginActivity.this,"手机号不存在");
+                            progressDialog.dismiss();
                         }
                         resultSet.close();
                         JDBCTools.releaseConnection(stmt,conn);

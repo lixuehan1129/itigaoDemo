@@ -75,8 +75,8 @@ public class SubscribeFragment extends BaseFragment {
         minutes = (TextView) view.findViewById(R.id.subscribeFragment_minutes);
 
         //设置累计运动天数和运动时长
-        days.setText("396");
-        minutes.setText("67");
+        days.setText("15");
+        minutes.setText("37");
 
         if(name.size() > 0){
             initData();

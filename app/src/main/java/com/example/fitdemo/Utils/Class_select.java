@@ -7,7 +7,23 @@ package com.example.fitdemo.Utils;
 public class Class_select {
     private String itr,coach,time;
     private String image;
-    private int check,place;
+    private int check,place,bid,week;
+
+    public int getWeek() {
+        return week;
+    }
+
+    public void setWeek(int week) {
+        this.week = week;
+    }
+
+    public int getBid() {
+        return bid;
+    }
+
+    public void setBid(int bid) {
+        this.bid = bid;
+    }
 
     public int getPlace() {
         return place;
@@ -57,12 +73,15 @@ public class Class_select {
         this.image = image;
     }
 
-    public Class_select(String itr, String coach, String time, String image, int check, int place) {
+    public Class_select(String itr, String coach, String time, String image, int check, int place, int bid, int week) {
         this.itr = itr;
         this.coach = coach;
         this.time = time;
         this.image = image;
         this.check = check;
         this.place = place;
+        this.bid = bid;
+        this.week = week;
     }
+
 }

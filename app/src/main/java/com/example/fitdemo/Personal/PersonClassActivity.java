@@ -18,17 +18,17 @@ public class PersonClassActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.person_change_activity);
+        setContentView(R.layout.person_class);
         StatusBarUtils.setWindowStatusBarColor(PersonClassActivity.this, R.color.colorWhite);
         initView();
     }
 
     private void initView(){
-        Toolbar toolbar = (Toolbar) findViewById(R.id.person_change_mainTool);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.person_class_mainTool);
         toolbar.setTitle("课程");
         back(toolbar);
 
-        TextView textView = (TextView) findViewById(R.id.person_change_tv);
+        TextView textView = (TextView) findViewById(R.id.person_class_tv);
         textView.setText("查看添加的课程");
 
     }

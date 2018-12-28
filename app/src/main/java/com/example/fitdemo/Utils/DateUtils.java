@@ -113,4 +113,14 @@ public class DateUtils {
         
         return re;
     }
+
+    public static int IntTime(int week){
+        final Calendar c = Calendar.getInstance();
+        c.add(Calendar.DATE, +week);
+        c.setTimeZone(TimeZone.getTimeZone("GMT+8:00"));
+        mYear = String.valueOf(c.get(Calendar.YEAR)); // 获取当前年份
+        mMonth = String.valueOf(c.get(Calendar.MONTH) + 1);// 获取当前月份
+        mDay = String.valueOf(c.get(Calendar.DAY_OF_MONTH));// 获取当前月份的日期号码
+        return Integer.parseInt(mYear + mMonth + mDay);
+    }
 }

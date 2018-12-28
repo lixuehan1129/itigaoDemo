@@ -131,13 +131,10 @@ public class RunActivity extends AppCompatActivity {
         recyclerView3.setLayoutManager(new GridLayoutManager(this,2));
         recyclerView3.setNestedScrollingEnabled(false);
 
-//        setData1();
         connectData1();
         connectData2();
         connectData3();
         connectHu();
- //       setData2();
-        //setData3();
         setClick();
     }
 
@@ -147,14 +144,14 @@ public class RunActivity extends AppCompatActivity {
         imageView1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(RunActivity.this, BroadcastActivity.class);
+                Intent intent = new Intent(RunActivity.this, HuDongPlayActivity.class);
                 startActivity(intent);
             }
         });
         imageView2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(RunActivity.this, BroadcastActivity.class);
+                Intent intent = new Intent(RunActivity.this, HuDongPlayActivity.class);
                 startActivity(intent);
             }
         });
@@ -167,53 +164,6 @@ public class RunActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
-    }
-
-
-
-    private void setData1(){
-        ArrayList<String> introduce = new ArrayList<>();
-        ArrayList<Integer> image = new ArrayList<>();
-        for(int i = 0;i < 4;i++){
-            introduce.add("当前主播"+i);
-        }
-        image.add(R.mipmap.ic_run1111);
-        image.add(R.mipmap.ic_run011);
-        image.add(R.mipmap.ic_run21);
-        image.add(R.mipmap.ic_run041);
-
-      //  initData1(introduce,image);
-
-    }
-
-    private void setData2(){
-        ArrayList<String> introduce = new ArrayList<>();
-        ArrayList<Integer> image = new ArrayList<>();
-        for(int i = 0;i < 4;i++){
-            introduce.add("推荐课程"+i);
-        }
-        image.add(R.mipmap.ic_run031);
-        image.add(R.mipmap.ic_run011);
-        image.add(R.mipmap.ic_run21);
-        image.add(R.mipmap.ic_run051);
-
-     //   initData2(introduce,image);
-
-    }
-
-    private void setData3(){
-        ArrayList<String> introduce = new ArrayList<>();
-        ArrayList<Integer> image = new ArrayList<>();
-        for(int i = 0;i < 4;i++){
-            introduce.add("慢跑课程总览"+i);
-        }
-        image.add(R.mipmap.ic_run041);
-        image.add(R.mipmap.ic_run011);
-        image.add(R.mipmap.ic_run21);
-        image.add(R.mipmap.ic_run051);
-
-        // initData3(introduce,image);
 
     }
 
@@ -284,26 +234,26 @@ public class RunActivity extends AppCompatActivity {
                         .load(cover4.get(0))
                         .asBitmap()  //不可加载动图
                         .dontAnimate()//取消淡入淡出动画
-                        //               .placeholder(R.mipmap.ic_download)
-                        //               .error(R.mipmap.ic_download)
-                        .thumbnail(0.1f) //先加载十分之一作为缩略图
+                        .placeholder(R.mipmap.ic_touxiang11)
+                        .error(R.mipmap.ic_touxiang11)
+               //         .thumbnail(0.1f) //先加载十分之一作为缩略图
                         .into(imageView1);
                 Glide.with(RunActivity.this)
                         .load(cover4.get(1))
                         .asBitmap()  //不可加载动图
                         .dontAnimate()//取消淡入淡出动画
-                        //               .placeholder(R.mipmap.ic_download)
-                        //              .error(R.mipmap.ic_download)
-                        .thumbnail(0.1f) //先加载十分之一作为缩略图
+                        .placeholder(R.mipmap.ic_touxiang11)
+                        .error(R.mipmap.ic_touxiang11)
+                //        .thumbnail(0.1f) //先加载十分之一作为缩略图
                         .into(imageView2);
             } else if (cover4.size() == 1) {
                 Glide.with(RunActivity.this)
                         .load(cover4.get(0))
                         .asBitmap()  //不可加载动图
                         .dontAnimate()//取消淡入淡出动画
-                        //           .placeholder(R.mipmap.ic_download)
-                        //           .error(R.mipmap.ic_download)
-                        .thumbnail(0.1f) //先加载十分之一作为缩略图
+                        .placeholder(R.mipmap.ic_touxiang11)
+                        .error(R.mipmap.ic_touxiang11)
+                 //       .thumbnail(0.1f) //先加载十分之一作为缩略图
                         .into(imageView2);
             }
         }

@@ -131,9 +131,6 @@ public class FitActivity extends AppCompatActivity {
         recyclerView3.setLayoutManager(new GridLayoutManager(this,2));
         recyclerView3.setNestedScrollingEnabled(false);
 
-      //  setData1();
-      //  setData2();
-      //  setData3();
         connectData1();
         connectData2();
         connectData3();
@@ -170,50 +167,6 @@ public class FitActivity extends AppCompatActivity {
 
     }
 
-    private void setData1(){
-        ArrayList<String> introduce = new ArrayList<>();
-        ArrayList<Integer> image = new ArrayList<>();
-        for(int i = 0;i < 4;i++){
-            introduce.add("当前主播"+i);
-        }
-        image.add(R.mipmap.ic_fit11);
-        image.add(R.mipmap.ic_fit21);
-        image.add(R.mipmap.ic_fit31);
-        image.add(R.mipmap.ic_fit41);
-
-   //     initData1(introduce,image);
-
-    }
-
-    private void setData2(){
-        ArrayList<String> introduce = new ArrayList<>();
-        ArrayList<Integer> image = new ArrayList<>();
-        for(int i = 0;i < 4;i++){
-            introduce.add("推荐课程"+i);
-        }
-        image.add(R.mipmap.ic_fit51);
-        image.add(R.mipmap.ic_fit61);
-        image.add(R.mipmap.ic_fit71);
-        image.add(R.mipmap.ic_fit81);
-
-   //     initData2(introduce,image);
-
-    }
-
-    private void setData3(){
-        ArrayList<String> introduce = new ArrayList<>();
-        ArrayList<Integer> image = new ArrayList<>();
-        for(int i = 0;i < 4;i++){
-            introduce.add("健身课程总览"+i);
-        }
-        image.add(R.mipmap.ic_fit21);
-        image.add(R.mipmap.ic_fit31);
-        image.add(R.mipmap.ic_fit61);
-        image.add(R.mipmap.ic_fit81);
-
-     //   initData3(introduce,image);
-
-    }
 
     private void connectHu(){
         cover4 = new ArrayList<>();
@@ -280,26 +233,26 @@ public class FitActivity extends AppCompatActivity {
                     .load(cover4.get(0))
                     .asBitmap()  //不可加载动图
                     .dontAnimate()//取消淡入淡出动画
-                    //               .placeholder(R.mipmap.ic_download)
-                    //               .error(R.mipmap.ic_download)
-                    .thumbnail(0.1f) //先加载十分之一作为缩略图
+                    .placeholder(R.mipmap.ic_touxiang11)
+                    .error(R.mipmap.ic_touxiang11)
+             //       .thumbnail(0.1f) //先加载十分之一作为缩略图
                     .into(imageView1);
             Glide.with(FitActivity.this)
                     .load(cover4.get(1))
                     .asBitmap()  //不可加载动图
                     .dontAnimate()//取消淡入淡出动画
-                    //               .placeholder(R.mipmap.ic_download)
-                    //              .error(R.mipmap.ic_download)
-                    .thumbnail(0.1f) //先加载十分之一作为缩略图
+                    .placeholder(R.mipmap.ic_touxiang11)
+                    .error(R.mipmap.ic_touxiang11)
+            //        .thumbnail(0.1f) //先加载十分之一作为缩略图
                     .into(imageView2);
         }else if(cover4.size() == 1){
             Glide.with(FitActivity.this)
                     .load(cover4.get(0))
                     .asBitmap()  //不可加载动图
                     .dontAnimate()//取消淡入淡出动画
-                    //           .placeholder(R.mipmap.ic_download)
-                    //           .error(R.mipmap.ic_download)
-                    .thumbnail(0.1f) //先加载十分之一作为缩略图
+                    .placeholder(R.mipmap.ic_touxiang11)
+                    .error(R.mipmap.ic_touxiang11)
+            //        .thumbnail(0.1f) //先加载十分之一作为缩略图
                     .into(imageView2);
         }
 

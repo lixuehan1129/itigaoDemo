@@ -84,13 +84,14 @@ public class ClassSelectAdapter extends RecyclerView.Adapter<ClassSelectAdapter.
         }else {
             holder.imageView.setImageResource(R.mipmap.ic_run1111);
         }
-        if(class_select.getPlace() == 0){
-            holder.itr.setText(class_select.getItr());
-        }else {
-            String s = "<font color=\"#000000\">" + class_select.getItr() + "</font>" +
-                    "<font color=\"#FF0000\">" + "(现场)" + "</font>";
-            holder.itr.setText(Html.fromHtml(s));
-        }
+//        if(class_select.getPlace() == 0){
+//            holder.itr.setText(class_select.getItr());
+//        }else {
+//            String s = "<font color=\"#000000\">" + class_select.getItr() + "</font>" +
+//                    "<font color=\"#FF0000\">" + "(现场)" + "</font>";
+//            holder.itr.setText(Html.fromHtml(s));
+//        }
+        holder.itr.setText(class_select.getItr());
 
         holder.coach.setText(class_select.getCoach());
         holder.time.setText(class_select.getTime());

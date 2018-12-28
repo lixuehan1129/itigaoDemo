@@ -4,7 +4,17 @@
             "outputFile": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\values-zh-rTW\\values-zh-rTW.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.2.aar\\0649346b4012d203c0e754e66b3d47b7\\res\\values-zh-rTW\\values-zh-rTW.xml",
+                    "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.2.aar\\67dabe975a1be42a80ea5cbfd18ee8eb\\res\\values-zh-rTW\\values-zh-rTW.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,200,293,393,475,572,680,756,832,910,1006,1102,1197,1294,1389,1489,1639,1733",
+                        "endColumns": "94,92,99,81,96,107,75,75,77,95,95,94,96,94,99,149,93,77",
+                        "endOffsets": "195,288,388,470,567,675,751,827,905,1001,1097,1192,1289,1384,1484,1634,1728,1806"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.2.aar\\b11478435db17dc109efcf0de046f599\\res\\values-zh-rTW\\values-zh-rTW.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -18,16 +28,6 @@
                         "startOffsets": "1811",
                         "endColumns": "100",
                         "endOffsets": "1907"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.2.aar\\15140af22654a329767de0898450f87d\\res\\values-zh-rTW\\values-zh-rTW.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,200,293,393,475,572,680,756,832,910,1006,1102,1197,1294,1389,1489,1639,1733",
-                        "endColumns": "94,92,99,81,96,107,75,75,77,95,95,94,96,94,99,149,93,77",
-                        "endOffsets": "195,288,388,470,567,675,751,827,905,1001,1097,1192,1289,1384,1484,1634,1728,1806"
                     }
                 }
             ]
@@ -36,7 +36,17 @@
             "outputFile": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-zh-rTW\\values-zh-rTW.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.2.aar\\0649346b4012d203c0e754e66b3d47b7\\res\\values-zh-rTW\\values-zh-rTW.xml",
+                    "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.2.aar\\67dabe975a1be42a80ea5cbfd18ee8eb\\res\\values-zh-rTW\\values-zh-rTW.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,200,293,393,475,572,680,756,832,910,1006,1102,1197,1294,1389,1489,1639,1733",
+                        "endColumns": "94,92,99,81,96,107,75,75,77,95,95,94,96,94,99,149,93,77",
+                        "endOffsets": "195,288,388,470,567,675,751,827,905,1001,1097,1192,1289,1384,1484,1634,1728,1806"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.2.aar\\b11478435db17dc109efcf0de046f599\\res\\values-zh-rTW\\values-zh-rTW.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -50,16 +60,6 @@
                         "startOffsets": "1811",
                         "endColumns": "100",
                         "endOffsets": "1907"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.2.aar\\15140af22654a329767de0898450f87d\\res\\values-zh-rTW\\values-zh-rTW.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,200,293,393,475,572,680,756,832,910,1006,1102,1197,1294,1389,1489,1639,1733",
-                        "endColumns": "94,92,99,81,96,107,75,75,77,95,95,94,96,94,99,149,93,77",
-                        "endOffsets": "195,288,388,470,567,675,751,827,905,1001,1097,1192,1289,1384,1484,1634,1728,1806"
                     }
                 }
             ]

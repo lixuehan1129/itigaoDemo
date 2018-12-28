@@ -194,12 +194,16 @@ public class UserRegistActivity extends AppCompatActivity{
                     if(conn != null){
                         //首先判断手机号是否存在
                         Statement stmt = conn.createStatement(); //根据返回的Connection对象创建 Statement对象
-                        String sql = "INSERT INTO user (user_phone,user_password,user_create_time,user_level) VALUES (?,?,?,?)";
+                        String sql = "INSERT INTO user (user_phone,user_password,user_create_time,user_level,user_name,user_sex,user_sort,user_picture) VALUES (?,?,?,?,?,?,?,?)";
                         PreparedStatement preparedStatement = conn.prepareStatement(sql,Statement.RETURN_GENERATED_KEYS);
                         preparedStatement.setString(1,name.getText().toString());
                         preparedStatement.setString(2,password.getText().toString());
                         preparedStatement.setString(3, DateUtils.StringData());
                         preparedStatement.setInt(4,1);
+                        preparedStatement.setString(5,"智慧体育云用户");
+                        preparedStatement.setInt(6,0);
+                        preparedStatement.setInt(7,0);
+                        preparedStatement.setString(8,"http://ty.tipass.com/images/head/head_name(1).PNG");
                         preparedStatement.executeUpdate();
                         preparedStatement.close();
                         JDBCTools.releaseConnection(stmt,conn);
@@ -211,6 +215,7 @@ public class UserRegistActivity extends AppCompatActivity{
                     }
                 }catch (SQLException e) {
                     e.printStackTrace();
+                    progressDialog.dismiss();
                 }
                 Looper.loop();
             }

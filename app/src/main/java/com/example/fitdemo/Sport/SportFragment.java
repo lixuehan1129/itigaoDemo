@@ -62,18 +62,18 @@ public class SportFragment extends BaseFragment {
 
     private void setData(){
         tv1.setText("165");
-        tv2.setText("777");
-        tv3.setText("77");
-        tv4.setText("95");
-        tv5.setText("7777");
-        tv6.setText("77777");
-        tv7.setText("2.7");
-        tv8.setText("77");
-        tv9.setText("7.7");
-        tv10.setText("77");
-        tv11.setText("2.7");
-        tv12.setText("7.77");
-        tv13.setText("77");
-        tv14.setText("777");
+        tv2.setText("127");
+        tv3.setText("15");
+        tv4.setText("85");
+        tv5.setText("6337");
+        tv6.setText("32400");
+        tv7.setText("1.7");
+        tv8.setText("12");
+        tv9.setText("0");
+        tv10.setText("8");
+        tv11.setText("2.3");
+        tv12.setText("35");
+        tv13.setText("30");
+        tv14.setText("130");
     }
 }

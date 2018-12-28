@@ -68,16 +68,6 @@ public class HuDongAdapter extends RecyclerView.Adapter<HuDongAdapter.ViewHolder
             holder.imageView.setImageResource(R.mipmap.hudong_head2);
         }
 
-        // String url = class_video.getItem_image();
-//        if(url!=null){
-////          holder.item_text.setImageBitmap(DealBitmap.centerSquareScaleBitmap(url));
-//            Glide.with(mcontext)
-//                    .load(url)
-//                    .asBitmap()  //不可加载动图
-//                    .dontAnimate()//取消淡入淡出动画
-//                    .thumbnail(0.1f) //先加载十分之一作为缩略图
-//                    .into(holder.class_video_iv);
-//        }
         //判断是否设置了监听器
         if(mOnItemClickListener != null){
             //为ItemView设置监听器

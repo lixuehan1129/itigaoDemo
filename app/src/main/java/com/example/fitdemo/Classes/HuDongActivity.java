@@ -10,6 +10,7 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.ImageView;
 
 import com.example.fitdemo.Adapter.HuDongAdapter;
 import com.example.fitdemo.AutoProject.JDBCTools;
@@ -31,6 +32,7 @@ import java.util.List;
 public class HuDongActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
+    private ImageView imageView;
 
     private ArrayList<String> image;
     private ArrayList<String> title;
@@ -56,11 +58,19 @@ public class HuDongActivity extends AppCompatActivity {
         back(toolbar);
 
         recyclerView = (RecyclerView) findViewById(R.id.hudong_rv);
-
         //使用瀑布流布局,第一个参数 spanCount 列数,第二个参数 orentation 排列方向
         StaggeredGridLayoutManager recyclerViewLayoutManager =
                 new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL);
         recyclerView.setLayoutManager(recyclerViewLayoutManager);
+
+        imageView = (ImageView) findViewById(R.id.hudong_video);
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(HuDongActivity.this,HuDongPutActivity.class);
+                startActivity(intent);
+            }
+        });
 
         connectData();
     }
@@ -135,7 +145,7 @@ public class HuDongActivity extends AppCompatActivity {
         huDongAdapter.setOnItemClickListener(new HuDongAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(View view, int position) {
-                Intent intent = new Intent(HuDongActivity.this, BroadcastActivity.class);
+                Intent intent = new Intent(HuDongActivity.this, HuDongPlayActivity.class);
                 startActivity(intent);
             }
         });

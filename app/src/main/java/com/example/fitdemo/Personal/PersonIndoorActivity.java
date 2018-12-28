@@ -18,17 +18,17 @@ public class PersonIndoorActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.person_change_activity);
+        setContentView(R.layout.person_indoor);
         StatusBarUtils.setWindowStatusBarColor(PersonIndoorActivity.this, R.color.colorWhite);
         initView();
     }
 
     private void initView(){
-        Toolbar toolbar = (Toolbar) findViewById(R.id.person_change_mainTool);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.person_indoor_mainTool);
         toolbar.setTitle("室内监测");
         back(toolbar);
 
-        TextView textView = (TextView) findViewById(R.id.person_change_tv);
+        TextView textView = (TextView) findViewById(R.id.person_indoor_tv);
         textView.setText("室内环境监测");
 
     }

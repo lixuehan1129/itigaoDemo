@@ -64,14 +64,15 @@
                 <de.hdodenhof.circleimageview.CircleImageView
                     android:id="@+id/personalFragment_picture"
                     android:src="@mipmap/ic_touxiang21"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    app:civ_border_color="@color/colorDarkBlue"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_gravity="center"
+                    app:civ_border_color="@color/colorGray_1"
                     app:civ_border_width="2dp"/>
 
                 <LinearLayout
-                    android:paddingTop="3dp"
-                    android:paddingLeft="20dp"
+                    android:paddingLeft="25dp"
+                    android:layout_gravity="center"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
@@ -96,7 +97,7 @@
                         android:layout_height="wrap_content"
                         android:text="点击查看详情"
                         android:textColor="@color/colorBlack"
-                        android:textSize="9sp" />
+                        android:textSize="8sp" />
 
                 </LinearLayout>
 

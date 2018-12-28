@@ -18,17 +18,17 @@ public class PersonDeviceActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.person_change_activity);
+        setContentView(R.layout.person_device);
         StatusBarUtils.setWindowStatusBarColor(PersonDeviceActivity.this, R.color.colorWhite);
         initView();
     }
 
     private void initView(){
-        Toolbar toolbar = (Toolbar) findViewById(R.id.person_change_mainTool);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.person_device_mainTool);
         toolbar.setTitle("智能设备");
         back(toolbar);
 
-        TextView textView = (TextView) findViewById(R.id.person_change_tv);
+        TextView textView = (TextView) findViewById(R.id.person_device_tv);
         textView.setText("查看并添加智能设备");
 
     }

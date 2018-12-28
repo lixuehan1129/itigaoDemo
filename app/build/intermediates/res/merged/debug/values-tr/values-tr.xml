@@ -17,6 +17,13 @@
     <string msgid="3421042268587513524" name="abc_shareactionprovider_share_with">"Şununla paylaş"</string>
     <string msgid="3300176832234831527" name="abc_shareactionprovider_share_with_application">"<ns1:g id="APPLICATION_NAME">%s</ns1:g> ile paylaş"</string>
     <string msgid="1603543279005712093" name="abc_toolbar_collapse_description">"Daralt"</string>
+    <string name="click_to_restart">Tekrar denemek için tıklayın</string>
+    <string name="no_url">URL Bulunamadı</string>
+    <string name="replay">Tekrar</string>
     <string msgid="146198913615257606" name="search_menu_title">"Ara"</string>
     <string msgid="2869576371154716097" name="status_bar_notification_info_overflow">"999+"</string>
+    <string name="tips_not_wifi">Şu anda mobil veriyi kullanıyorsunuz, yüksek veri kaybına yol açabilir</string>
+    <string name="tips_not_wifi_cancel">Durdur</string>
+    <string name="tips_not_wifi_confirm">Devam Et</string>
+    <string name="video_loading_failed">Video yüklenemedi</string>
 </resources>

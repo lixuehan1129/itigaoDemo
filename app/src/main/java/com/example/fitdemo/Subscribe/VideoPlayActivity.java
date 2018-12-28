@@ -27,6 +27,7 @@ import android.widget.Toast;
 
 import com.example.fitdemo.Adapter.TabLayoutAdapter;
 import com.example.fitdemo.AutoProject.Tip;
+import com.example.fitdemo.Classes.HuDongPlayActivity;
 import com.example.fitdemo.R;
 import com.example.fitdemo.Recommend.FitFragment;
 import com.example.fitdemo.Recommend.RunningFragment;
@@ -38,6 +39,7 @@ import org.yczbj.ycvideoplayerlib.VideoPlayerController;
 import org.yczbj.ycvideoplayerlib.VideoPlayerManager;
 import org.yczbj.ycvideoplayerlib.listener.OnCompletedListener;
 import org.yczbj.ycvideoplayerlib.listener.OnVideoBackListener;
+import org.yczbj.ycvideoplayerlib.listener.OnVideoControlListener;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -245,7 +247,9 @@ public class VideoPlayActivity extends AppCompatActivity implements TabLayout.On
     protected void onDestroy() {
 // TODO Auto-generated method stub
         super.onDestroy();
-
+        videoPlayer.release();
+        videoPlayer.releasePlayer();
+        VideoPlayerManager.instance().releaseVideoPlayer();
     }
 
 }

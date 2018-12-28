@@ -19,17 +19,17 @@ public class VideoRankActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.person_change_activity);
+        setContentView(R.layout.video_rank);
         StatusBarUtils.setWindowStatusBarColor(VideoRankActivity.this, R.color.colorWhite);
         initView();
     }
 
     private void initView(){
-        Toolbar toolbar = (Toolbar) findViewById(R.id.person_change_mainTool);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.rank_mainTool);
         toolbar.setTitle("排名");
         back(toolbar);
 
-        TextView textView = (TextView) findViewById(R.id.person_change_tv);
+        TextView textView = (TextView) findViewById(R.id.rank_tv);
         textView.setText("详细排名");
 
     }

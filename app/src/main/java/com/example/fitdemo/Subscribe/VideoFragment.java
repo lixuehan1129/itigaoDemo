@@ -148,7 +148,9 @@ public class VideoFragment extends BaseFragment {
                         //观看记录上传
                         String sql_query = "SELECT record_bid FROM record WHERE record_bid = " +
                                 video_bid +
-                                "";
+                                " AND record_user ='" +
+                                SharePreferences.getString(getActivity(),AppConstants.USER_PHONE) +
+                                "'";
                         ResultSet resultSet1 = stmt.executeQuery(sql_query);
                         if(!resultSet1.next()){
                             if(video_record == 1 && name.size()>0){

@@ -17,6 +17,13 @@
     <string msgid="3421042268587513524" name="abc_shareactionprovider_share_with">"Compartilhar com"</string>
     <string msgid="3300176832234831527" name="abc_shareactionprovider_share_with_application">"Compartilhar com <ns1:g id="APPLICATION_NAME">%s</ns1:g>"</string>
     <string msgid="1603543279005712093" name="abc_toolbar_collapse_description">"Recolher"</string>
+    <string name="click_to_restart">Clique para tentar novamente</string>
+    <string name="no_url">Sem vídeo</string>
+    <string name="replay">Replay</string>
     <string msgid="146198913615257606" name="search_menu_title">"Pesquisar"</string>
     <string msgid="2869576371154716097" name="status_bar_notification_info_overflow">"999+"</string>
+    <string name="tips_not_wifi">Você está usando a rede móvel, você deseja mesmo ver o vídeo?</string>
+    <string name="tips_not_wifi_cancel">Parar</string>
+    <string name="tips_not_wifi_confirm">Continuar</string>
+    <string name="video_loading_failed">O carregamento de vídeo falhou</string>
 </resources>

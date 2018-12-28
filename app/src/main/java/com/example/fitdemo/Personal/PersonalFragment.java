@@ -1,10 +1,16 @@
 package com.example.fitdemo.Personal;
 
 import android.annotation.SuppressLint;
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v4.content.LocalBroadcastManager;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
@@ -15,9 +21,15 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.util.Util;
 import com.example.fitdemo.Adapter.AnchorAdapter;
+import com.example.fitdemo.AutoProject.AppConstants;
+import com.example.fitdemo.AutoProject.SharePreferences;
 import com.example.fitdemo.AutoProject.Tip;
 import com.example.fitdemo.Classes.BroadcastActivity;
+import com.example.fitdemo.Classes.RunActivity;
+import com.example.fitdemo.Database.DataBaseHelper;
 import com.example.fitdemo.R;
 import com.example.fitdemo.ViewHelper.BaseFragment;
 
@@ -33,13 +45,21 @@ import de.hdodenhof.circleimageview.CircleImageView;
 
 public class PersonalFragment extends BaseFragment {
 
+    private DataBaseHelper dataBaseHelper;
+
+    private LocalBroadcastManager broadcastManager;
+    private IntentFilter intentFilter;
+    private BroadcastReceiver mReceiver;
+
     private ImageView code, set;
     private CircleImageView picture;
     private TextView name, level;
     private LinearLayout per, device1, class0, exam1, indoor1;
     private TextView class1, class2, class3, class4, device2, exam2, indoor2;
-
     private RecyclerView recyclerView;
+
+    private String userName,userPicture;
+    private int userLevel = 1,userSta = 0;
 
     @Override
     public void onStart(){
@@ -54,6 +74,25 @@ public class PersonalFragment extends BaseFragment {
         return view;
     }
 
+    @Override
+    public void onActivityCreated(Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        broadcastManager = LocalBroadcastManager.getInstance(getActivity());
+        intentFilter = new IntentFilter();
+        intentFilter.addAction(AppConstants.BROAD_CHANGE);
+        // intentFilter.addAction(AppConstants.BROAD_LOGIN);
+        mReceiver = new BroadcastReceiver() {
+            @Override
+            public void onReceive(Context context, Intent intent){
+                //收到广播后所作的操作
+                localData();
+            }
+        };
+        broadcastManager.registerReceiver(mReceiver, intentFilter);
+    }
+
+
+
     @SuppressLint("NewApi")
     private void initView(View view){
         Toolbar toolbar = (Toolbar) view.findViewById(R.id.personalFragment_mainTool);
@@ -61,6 +100,7 @@ public class PersonalFragment extends BaseFragment {
 
         code = (ImageView) view.findViewById(R.id.personalFragment_code);
         set = (ImageView) view.findViewById(R.id.personalFragment_set);
+
         picture = (CircleImageView) view.findViewById(R.id.personalFragment_picture);
         name = (TextView) view.findViewById(R.id.personalFragment_name);
         level = (TextView) view.findViewById(R.id.personalFragment_level);
@@ -83,8 +123,36 @@ public class PersonalFragment extends BaseFragment {
         recyclerView.setNestedScrollingEnabled(false); //禁止滑动
         recyclerView.setLayoutManager(new GridLayoutManager(getActivity(),7));
 
+        dataBaseHelper = new DataBaseHelper(getActivity(), AppConstants.SQL_VISION);
+        localData();
+
+
         setData();
         setClick();
+    }
+
+    private void localData(){
+        SQLiteDatabase sqLiteDatabase = dataBaseHelper.getReadableDatabase();
+        Cursor cursor = sqLiteDatabase.query("user",null,"user_phone = ?",new String[]{
+                SharePreferences.getString(getActivity(),AppConstants.USER_PHONE)
+        },null,null,null,"1");
+        if(cursor.moveToFirst()){
+            userName = cursor.getString(cursor.getColumnIndex("user_name"));
+            userPicture = cursor.getString(cursor.getColumnIndex("user_picture"));
+        }
+        cursor.close();
+        sqLiteDatabase.close();
+
+        name.setText(userName);
+        if(Util.isOnMainThread()) {
+            Glide.with(getActivity())
+                    .load(userPicture)
+                    .asBitmap()
+                    .dontAnimate()
+                    .placeholder(R.mipmap.ic_touxiang11)
+                    .error(R.mipmap.ic_touxiang11)
+                    .into(picture);
+        }
     }
 
     private void setClick(){
@@ -93,6 +161,8 @@ public class PersonalFragment extends BaseFragment {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getActivity(),PersonChangeActivity.class);
+                intent.putExtra("userLevel",userLevel);
+                intent.putExtra("userSta",userSta);
                 startActivity(intent);
             }
         });
@@ -129,6 +199,8 @@ public class PersonalFragment extends BaseFragment {
             }
         });
     }
+
+
 
     //关注的主播列表
     private void setData(){
@@ -171,5 +243,14 @@ public class PersonalFragment extends BaseFragment {
             }
         });
 
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        broadcastManager.unregisterReceiver(mReceiver);
+        if (Util.isOnMainThread()) {
+            Glide.with(getActivity()).pauseRequests();
+        }
     }
 }
