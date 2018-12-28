@@ -52,7 +52,6 @@ public class HuDongPutActivity extends AppCompatActivity {
         intent.putExtra(MediaStore.EXTRA_DURATION_LIMIT, 120);
         startActivityForResult(intent, AppConstants.VIDEO);
 
-
     }
 
     @Override

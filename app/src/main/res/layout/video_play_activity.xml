@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <org.yczbj.ycvideoplayerlib.VideoPlayer
+    <cn.jzvd.JzvdStd
         android:id="@+id/video_play_vv"
         android:layout_width="match_parent"
         android:layout_height="210dp" />

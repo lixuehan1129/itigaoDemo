@@ -1,18 +1,13 @@
 package com.example.fitdemo.Subscribe;
 
-import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
-import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
-import android.util.DisplayMetrics;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
@@ -21,39 +16,33 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.support.design.widget.TabLayout;
-import android.widget.RelativeLayout;
 import android.widget.Toast;
 
-
 import com.example.fitdemo.Adapter.TabLayoutAdapter;
-import com.example.fitdemo.AutoProject.Tip;
-import com.example.fitdemo.Classes.HuDongPlayActivity;
+import com.example.fitdemo.AutoProject.AppConstants;
+import com.example.fitdemo.AutoProject.SharePreferences;
 import com.example.fitdemo.R;
-import com.example.fitdemo.Recommend.FitFragment;
-import com.example.fitdemo.Recommend.RunningFragment;
 import com.example.fitdemo.Utils.StatusBarUtils;
+import com.mob.MobSDK;
+import com.mob.imsdk.MobIM;
+import com.mob.imsdk.MobIMCallback;
+import com.mob.imsdk.model.IMGroup;
 
-import org.yczbj.ycvideoplayerlib.ConstantKeys;
-import org.yczbj.ycvideoplayerlib.VideoPlayer;
-import org.yczbj.ycvideoplayerlib.VideoPlayerController;
-import org.yczbj.ycvideoplayerlib.VideoPlayerManager;
-import org.yczbj.ycvideoplayerlib.listener.OnCompletedListener;
-import org.yczbj.ycvideoplayerlib.listener.OnVideoBackListener;
-import org.yczbj.ycvideoplayerlib.listener.OnVideoControlListener;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import cn.jzvd.Jzvd;
+import cn.jzvd.JzvdStd;
 
 
 /**
  * Created by 最美人间四月天 on 2018/11/29.
  */
 
-public class VideoPlayActivity extends AppCompatActivity implements TabLayout.OnTabSelectedListener,VideoFragment.CallBackValue{
+public class VideoPlayActivity extends AppCompatActivity implements TabLayout.OnTabSelectedListener,VideoFragment.CallBackValue,InteractFragment.CallBackValue{
 
-    private VideoPlayerController videoPlayerController;
-    private VideoPlayer videoPlayer;
+    private JzvdStd jzvdStd;
     private TabLayout tabLayout;
     private ViewPager mViewPager;
     private LinearLayout linearLayout;
@@ -63,6 +52,9 @@ public class VideoPlayActivity extends AppCompatActivity implements TabLayout.On
     private String[] titles = new String[]{"    视频    ", "    互动    "};
     private List<Fragment> fragments=new ArrayList<>();
 
+    private String userPhone;
+    private int createPhone = 0;
+    private String groupPhone;
     private String video_add;
     private int video_bid;
     private int video_section;
@@ -74,7 +66,6 @@ public class VideoPlayActivity extends AppCompatActivity implements TabLayout.On
         super.onCreate(savedInstanceState);
         setContentView(R.layout.video_play_activity);
         StatusBarUtils.setWindowStatusBarColor(VideoPlayActivity.this, R.color.colorWhite);
-
         Intent intent = getIntent();
         video_add = intent.getStringExtra("video_add");
         video_bid = intent.getIntExtra("video_bid",0);
@@ -82,11 +73,13 @@ public class VideoPlayActivity extends AppCompatActivity implements TabLayout.On
         video_select = intent.getIntExtra("video_select",1);
         video_record = intent.getIntExtra("video_record",1);
 
+        userPhone = SharePreferences.getString(VideoPlayActivity.this, AppConstants.USER_PHONE);
+
         initView();
     }
 
     private void initView(){
-        videoPlayer = (VideoPlayer) findViewById(R.id.video_play_vv);
+        jzvdStd = (JzvdStd) findViewById(R.id.video_play_vv);
         tabLayout = (TabLayout) findViewById(R.id.video_play_layout);
         mViewPager = (ViewPager) findViewById(R.id.video_play_viewpager);
         linearLayout = (LinearLayout) findViewById(R.id.video_play_li);
@@ -99,9 +92,7 @@ public class VideoPlayActivity extends AppCompatActivity implements TabLayout.On
 
         assert wm != null;
         int width = wm.getDefaultDisplay().getWidth();
-        setWidthHeightWithRatio(videoPlayer,width,16,9);
-
-        imageOnClick();
+        setWidthHeightWithRatio(jzvdStd,width,16,9);
         initTab();
 
         setPlay(video_add);
@@ -109,34 +100,60 @@ public class VideoPlayActivity extends AppCompatActivity implements TabLayout.On
     }
 
     private void setPlay(String url){
-        //设置播放类型
-        //IJKPlayer or MediaPlayer
-        videoPlayer.setPlayerType(ConstantKeys.IjkPlayerType.TYPE_IJK);
-        //设置视频地址和请求头部
-        videoPlayer.setUp(url,null);
-        //是否从上一次的位置播放
-        videoPlayer.continueFromLastPosition(false);
-        //设置播放速度
-        videoPlayer.setSpeed(1.0f);
+        jzvdStd.setUp(url, "", Jzvd.SCREEN_WINDOW_NORMAL);
+        jzvdStd.startVideo();
+    }
 
-        //创建视频控制器
-        videoPlayerController = new VideoPlayerController(this);
-        videoPlayerController.setTitle("");
-        //设置5秒不操作后隐藏头部和底部布局视图
-        videoPlayerController.setHideTime(5000);
-       // videoPlayerController.setLoadingType(2);
-        //返回监听
-        videoPlayerController.setOnVideoBackListener(new OnVideoBackListener() {
+    //要获取的值  就是这个参数的值
+    @Override
+    public void SendMessageValue(String strValue) {
+        // TODO Auto-generated method stub
+        Jzvd.releaseAllVideos();
+        setPlay(strValue);
+    }
+
+    //要获取的值  就是这个参数的值
+    @Override
+    public void SendMessageValueGroup(String strValue) {
+        // TODO Auto-generated method stub
+        System.out.println("群号"+strValue);
+        groupPhone = strValue;
+        //加入群
+        MobIM.getGroupManager().joinGroup(strValue, new MobIMCallback<IMGroup>() {
             @Override
-            public void onBackClick() {
-                onBackPressed();
-                finish();
+            public void onSuccess(IMGroup imGroup) {
+                System.out.println("加入群");
+                createPhone = 1;
+                imageOnClick();
+            }
+
+            @Override
+            public void onError(int i, String s) {
+
             }
         });
-        videoPlayer.start();
-        videoPlayer.setController(videoPlayerController);
 
+        MobIM.getGroupManager().getGroupInfo(strValue, true, new MobIMCallback<IMGroup>() {
+            @Override
+            public void onSuccess(IMGroup imGroup) {
+                System.out.println("群主"+imGroup.getOwnerInfo().getId());
+                if(imGroup.getOwnerInfo().getId().equals(userPhone)){
+                    System.out.println("这个人是群主");
+                    createPhone = 2;//表示群主
+                    imageOnClick();
+                }else {
+                    System.out.println("这个人不是群主");
+                    createPhone = 1;
+                    imageOnClick();
+                }
 
+            }
+
+            @Override
+            public void onError(int i, String s) {
+
+            }
+        });
     }
 
     private void imageOnClick(){
@@ -144,8 +161,6 @@ public class VideoPlayActivity extends AppCompatActivity implements TabLayout.On
             @Override
             public void onClick(View view) {
                 if(!TextUtils.isEmpty(editText.getText())){
-                    ProgressDialog progressDialog = ProgressDialog.show(VideoPlayActivity.this,"","正在上传...",true);
-                    progressDialog.setCancelable(true);// 设置是否可以通过点击Back键取消
                     //将输入法隐藏，mPasswordEditText 代表密码输入框
                     InputMethodManager imm =(InputMethodManager)getSystemService(
                             Context.INPUT_METHOD_SERVICE);
@@ -203,17 +218,6 @@ public class VideoPlayActivity extends AppCompatActivity implements TabLayout.On
         }
     }
 
-    //要获取的值  就是这个参数的值
-    @Override
-    public void SendMessageValue(String strValue) {
-        // TODO Auto-generated method stub
-        videoPlayer.release();
-        videoPlayer.releasePlayer();
-        VideoPlayerManager.instance().releaseVideoPlayer();
-        setPlay(strValue);
-    }
-
-
     @Override
     public void onTabSelected(TabLayout.Tab tab) {
         mViewPager.setCurrentItem(tab.getPosition());
@@ -232,24 +236,47 @@ public class VideoPlayActivity extends AppCompatActivity implements TabLayout.On
     @Override
     protected void onStop() {
         super.onStop();
-        videoPlayer.release();
-        videoPlayer.releasePlayer();
-        VideoPlayerManager.instance().releaseVideoPlayer();
     }
+
 
     @Override
     public void onBackPressed() {
-        if (VideoPlayerManager.instance().onBackPressed()) return;
+        if (Jzvd.backPress()) {
+            return;
+        }
+        if(createPhone == 1){
+            MobIM.getGroupManager().exitGroup(groupPhone, new MobIMCallback<Void>() {
+                @Override
+                public void onSuccess(Void aVoid) {
+                    System.out.println("退出");
+                }
+
+                @Override
+                public void onError(int i, String s) {
+
+                }
+            });
+        }
         super.onBackPressed();
     }
 
     @Override
+    protected void onPause() {
+        super.onPause();
+        Jzvd.releaseAllVideos();
+        JzvdStd.goOnPlayOnPause();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        //home back
+        JzvdStd.goOnPlayOnResume();
+    }
+    @Override
     protected void onDestroy() {
-// TODO Auto-generated method stub
+        // TODO Auto-generated method stub
         super.onDestroy();
-        videoPlayer.release();
-        videoPlayer.releasePlayer();
-        VideoPlayerManager.instance().releaseVideoPlayer();
     }
 
 }

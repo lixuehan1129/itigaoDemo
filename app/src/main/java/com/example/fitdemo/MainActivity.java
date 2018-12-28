@@ -3,6 +3,8 @@ package com.example.fitdemo;
 import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
@@ -21,8 +23,13 @@ import android.widget.TextView;
 
 import com.ashokvarma.bottomnavigation.BottomNavigationBar;
 import com.ashokvarma.bottomnavigation.BottomNavigationItem;
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.util.Util;
 import com.example.fitdemo.Adapter.SectionsPagerAdapter;
+import com.example.fitdemo.AutoProject.AppConstants;
+import com.example.fitdemo.AutoProject.SharePreferences;
 import com.example.fitdemo.Classes.ClassesFragment;
+import com.example.fitdemo.Database.DataBaseHelper;
 import com.example.fitdemo.Personal.PersonalFragment;
 import com.example.fitdemo.Recommend.RecommendFragment;
 import com.example.fitdemo.Sport.SportFragment;
@@ -30,6 +37,8 @@ import com.example.fitdemo.Subscribe.SubscribeFragment;
 import com.example.fitdemo.Utils.PermissionUtils;
 import com.example.fitdemo.Utils.StatusBarUtils;
 import com.example.fitdemo.ViewHelper.NoScollViewPager;
+import com.mob.MobSDK;
+import com.mob.imsdk.MobIM;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
@@ -44,14 +53,19 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements BottomNavigationBar.OnTabSelectedListener, ViewPager.OnPageChangeListener{
 
+    private DataBaseHelper dataBaseHelper;
     private NoScollViewPager viewPager;
     private BottomNavigationBar bottomNavigationBar;
+
+    private String userId,userName,userPicture;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
         StatusBarUtils.setWindowStatusBarColor(MainActivity.this, R.color.colorWhite);
+        MobSDK.init(this);
+        localData();
         initView();
         PermissionUtils.setPer(MainActivity.this);//获取权限
     }
@@ -62,6 +76,22 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationB
         viewPager.setOffscreenPageLimit(2);
         initBottomNavigationBar();
         initViewPager();
+    }
+
+    private void localData(){
+        userId = SharePreferences.getString(MainActivity.this, AppConstants.USER_PHONE);
+        dataBaseHelper = new DataBaseHelper(MainActivity.this,AppConstants.SQL_VISION);
+        SQLiteDatabase sqLiteDatabase = dataBaseHelper.getReadableDatabase();
+        Cursor cursor = sqLiteDatabase.query("user",null,"user_phone = ?",new String[]{
+                userId},null,null,null,"1");
+        if(cursor.moveToFirst()){
+            userName = cursor.getString(cursor.getColumnIndex("user_name"));
+            userPicture = cursor.getString(cursor.getColumnIndex("user_picture"));
+        }
+        cursor.close();
+        sqLiteDatabase.close();
+
+        MobSDK.setUser(userId, userName,null, null);
     }
 
     private void initBottomNavigationBar() {

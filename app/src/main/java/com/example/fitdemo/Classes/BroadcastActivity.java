@@ -20,22 +20,21 @@ import com.example.fitdemo.Adapter.InteractAdapter;
 import com.example.fitdemo.R;
 import com.example.fitdemo.Utils.StatusBarUtils;
 
-import org.yczbj.ycvideoplayerlib.ConstantKeys;
-import org.yczbj.ycvideoplayerlib.VideoPlayer;
-import org.yczbj.ycvideoplayerlib.VideoPlayerController;
-import org.yczbj.ycvideoplayerlib.VideoPlayerManager;
-import org.yczbj.ycvideoplayerlib.listener.OnVideoBackListener;
+
 
 import java.util.ArrayList;
 import java.util.List;
+
+import cn.jzvd.Jzvd;
+import cn.jzvd.JzvdStd;
 
 /**
  * Created by 最美人间四月天 on 2018/12/14.
  */
 
 public class BroadcastActivity extends AppCompatActivity {
-    private VideoPlayerController videoPlayerController;
-    private VideoPlayer videoPlayer;
+
+    private JzvdStd jzvdStd;
     private LinearLayout linearLayout;
     private RecyclerView recyclerView;
     private EditText editText;
@@ -52,7 +51,8 @@ public class BroadcastActivity extends AppCompatActivity {
     }
 
     private void initView(){
-        videoPlayer = (VideoPlayer) findViewById(R.id.video_broad_vv);
+       // videoPlayer = (VideoPlayer) findViewById(R.id.video_broad_vv);
+        jzvdStd = (JzvdStd) findViewById(R.id.video_broad_vv);
         recyclerView = (RecyclerView) findViewById(R.id.video_broad_rv) ;
         linearLayout = (LinearLayout) findViewById(R.id.video_broad_li);
         editText = (EditText) findViewById(R.id.video_broad_et);
@@ -63,7 +63,7 @@ public class BroadcastActivity extends AppCompatActivity {
         WindowManager wm = (WindowManager) this
                 .getSystemService(Context.WINDOW_SERVICE);
         int width = wm.getDefaultDisplay().getWidth();
-        setWidthHeightWithRatio(videoPlayer,width,16,9);
+        setWidthHeightWithRatio(jzvdStd,width,16,9);
 
         imageOnClick();
         initData();
@@ -100,33 +100,8 @@ public class BroadcastActivity extends AppCompatActivity {
     }
 
     private void setPlay(String url){
-        //设置播放类型
-        //IJKPlayer or MediaPlayer
-        videoPlayer.setPlayerType(ConstantKeys.IjkPlayerType.TYPE_NATIVE);
-        //视频地址
-        //     Uri uri = Uri.parse(ContentResolver.SCHEME_ANDROID_RESOURCE + "://" + getPackageName() + "/" + mp4);
-        //设置视频地址和请求头部
-        videoPlayer.setUp(url,null);
-        //是否从上一次的位置播放
-        videoPlayer.continueFromLastPosition(true);
-        //设置播放速度
-        videoPlayer.setSpeed(1.0f);
-
-        //创建视频控制器
-        videoPlayerController = new VideoPlayerController(this);
-        videoPlayerController.setTitle("");
-        //设置5秒不操作后隐藏头部和底部布局视图
-        videoPlayerController.setHideTime(5000);
-        // videoPlayerController.setLoadingType(2);
-        //返回监听
-        videoPlayerController.setOnVideoBackListener(new OnVideoBackListener() {
-            @Override
-            public void onBackClick() {
-                onBackPressed();
-                finish();
-            }
-        });
-        videoPlayer.setController(videoPlayerController);
+        jzvdStd.setUp(url, "", Jzvd.SCREEN_WINDOW_NORMAL);
+        jzvdStd.startVideo();
 
     }
 
@@ -159,15 +134,28 @@ public class BroadcastActivity extends AppCompatActivity {
     @Override
     protected void onStop() {
         super.onStop();
-        videoPlayer.release();
-        videoPlayer.releasePlayer();
-        VideoPlayerManager.instance().releaseVideoPlayer();
     }
 
     @Override
     public void onBackPressed() {
-        if (VideoPlayerManager.instance().onBackPressed()) return;
+        if (Jzvd.backPress()) {
+            return;
+        }
         super.onBackPressed();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Jzvd.releaseAllVideos();
+        JzvdStd.goOnPlayOnPause();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        //home back
+        JzvdStd.goOnPlayOnResume();
     }
 
     @Override
