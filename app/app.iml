@@ -124,6 +124,7 @@
     <orderEntry type="library" name="de.hdodenhof:circleimageview-2.1.0" level="project" />
     <orderEntry type="library" name="com.android.support:transition-27.0.2" level="project" />
     <orderEntry type="library" scope="TEST" name="javax.inject:javax.inject:1@jar" level="project" />
+    <orderEntry type="library" name="cn.jiguang.sdk:jmessage-2.8.0" level="project" />
     <orderEntry type="library" scope="TEST" name="com.squareup:javawriter:2.1.1@jar" level="project" />
     <orderEntry type="library" name="com.mob:MobIM-1.1.0" level="project" />
     <orderEntry type="library" name="com.android.support:recyclerview-v7-27.0.2" level="project" />
@@ -155,7 +156,9 @@
     <orderEntry type="library" name="com.android.support:support-fragment-27.0.2" level="project" />
     <orderEntry type="library" name="com.mob:MobTools:2018.1128.1916@jar" level="project" />
     <orderEntry type="library" name="com.mob:MobCommons:2018.1128.1916@jar" level="project" />
+    <orderEntry type="library" name="org.greenrobot:eventbus:3.0.0@jar" level="project" />
     <orderEntry type="library" name="com.android.support:support-media-compat-27.0.2" level="project" />
+    <orderEntry type="library" name="cn.jiguang.sdk:jcore-1.2.6" level="project" />
     <orderEntry type="library" name="cn.smssdk:ShortMessageSDKGUI-3.3.0" level="project" />
     <orderEntry type="library" name="com.github.bumptech.glide:glide:3.7.0@jar" level="project" />
     <orderEntry type="library" name="com.android.support:support-v4-27.0.2" level="project" />

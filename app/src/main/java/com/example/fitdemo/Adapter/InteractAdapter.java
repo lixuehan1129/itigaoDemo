@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 import com.example.fitdemo.R;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -18,7 +19,7 @@ import java.util.List;
 public class InteractAdapter extends RecyclerView.Adapter<InteractAdapter.ViewHolder> {
 
     private OnItemClickListener mOnItemClickListener;
-    private List<Interact> interacts;
+    private List<Interact> interacts = new ArrayList<>();
 
 
     class ViewHolder extends RecyclerView.ViewHolder{
@@ -59,13 +60,28 @@ public class InteractAdapter extends RecyclerView.Adapter<InteractAdapter.ViewHo
 
     }
 
+
+
+    /**
+     * 添加并更新数据，同时具有动画效果
+     */
+    public void addDataAt(int position, Interact data) {
+        interacts.add(position, data);
+        notifyItemInserted(position);//更新数据集，注意如果用adapter.notifyDataSetChanged()将没有动画效果
+    }
+
     public InteractAdapter(List<Interact> interact){
         interacts = interact;
     }
 
     @Override
     public int getItemCount() {
-        return interacts.size();
+        if(interacts != null){
+            return interacts.size();
+        }else {
+            return 0;
+        }
+
     }
 
 

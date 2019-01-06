@@ -8,6 +8,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
@@ -21,17 +22,29 @@ import android.widget.Toast;
 import com.example.fitdemo.Adapter.TabLayoutAdapter;
 import com.example.fitdemo.AutoProject.AppConstants;
 import com.example.fitdemo.AutoProject.SharePreferences;
+import com.example.fitdemo.AutoProject.Tip;
 import com.example.fitdemo.R;
 import com.example.fitdemo.Utils.StatusBarUtils;
 import com.mob.MobSDK;
 import com.mob.imsdk.MobIM;
 import com.mob.imsdk.MobIMCallback;
+import com.mob.imsdk.model.IMConversation;
 import com.mob.imsdk.model.IMGroup;
+import com.mob.imsdk.model.IMMessage;
+import com.mob.imsdk.model.IMUser;
 
 
 import java.util.ArrayList;
 import java.util.List;
 
+import cn.jpush.im.android.api.ChatRoomManager;
+import cn.jpush.im.android.api.JMessageClient;
+import cn.jpush.im.android.api.callback.RequestCallback;
+import cn.jpush.im.android.api.event.ChatRoomMessageEvent;
+import cn.jpush.im.android.api.model.Conversation;
+import cn.jpush.im.android.api.model.Message;
+import cn.jpush.im.android.api.model.UserInfo;
+import cn.jpush.im.api.BasicCallback;
 import cn.jzvd.Jzvd;
 import cn.jzvd.JzvdStd;
 
@@ -53,8 +66,7 @@ public class VideoPlayActivity extends AppCompatActivity implements TabLayout.On
     private List<Fragment> fragments=new ArrayList<>();
 
     private String userPhone;
-    private int createPhone = 0;
-    private String groupPhone;
+    private long roomID;
     private String video_add;
     private int video_bid;
     private int video_section;
@@ -74,7 +86,6 @@ public class VideoPlayActivity extends AppCompatActivity implements TabLayout.On
         video_record = intent.getIntExtra("video_record",1);
 
         userPhone = SharePreferences.getString(VideoPlayActivity.this, AppConstants.USER_PHONE);
-
         initView();
     }
 
@@ -114,46 +125,52 @@ public class VideoPlayActivity extends AppCompatActivity implements TabLayout.On
 
     //要获取的值  就是这个参数的值
     @Override
-    public void SendMessageValueGroup(String strValue) {
+    public void SendMessageValueGroup(long strValue) {
         // TODO Auto-generated method stub
-        System.out.println("群号"+strValue);
-        groupPhone = strValue;
-        //加入群
-        MobIM.getGroupManager().joinGroup(strValue, new MobIMCallback<IMGroup>() {
-            @Override
-            public void onSuccess(IMGroup imGroup) {
-                System.out.println("加入群");
-                createPhone = 1;
-                imageOnClick();
-            }
+        System.out.println("聊天室号"+strValue);
+        roomID = strValue;
+        //获取聊天室信息
+        Tip.showTip(VideoPlayActivity.this,"现在可以发出消息");
+        if(roomID != 0){
+            imageOnClick();
+        }
 
-            @Override
-            public void onError(int i, String s) {
 
-            }
-        });
-
-        MobIM.getGroupManager().getGroupInfo(strValue, true, new MobIMCallback<IMGroup>() {
-            @Override
-            public void onSuccess(IMGroup imGroup) {
-                System.out.println("群主"+imGroup.getOwnerInfo().getId());
-                if(imGroup.getOwnerInfo().getId().equals(userPhone)){
-                    System.out.println("这个人是群主");
-                    createPhone = 2;//表示群主
-                    imageOnClick();
-                }else {
-                    System.out.println("这个人不是群主");
-                    createPhone = 1;
-                    imageOnClick();
-                }
-
-            }
-
-            @Override
-            public void onError(int i, String s) {
-
-            }
-        });
+//        MobIM.getGroupManager().joinGroup(strValue, new MobIMCallback<IMGroup>() {
+//            @Override
+//            public void onSuccess(IMGroup imGroup) {
+//                System.out.println("加入群");
+//                createPhone = 1;
+//                imageOnClick();
+//            }
+//
+//            @Override
+//            public void onError(int i, String s) {
+//
+//            }
+//        });
+//
+//        MobIM.getGroupManager().getGroupInfo(strValue, true, new MobIMCallback<IMGroup>() {
+//            @Override
+//            public void onSuccess(IMGroup imGroup) {
+//                System.out.println("群主"+imGroup.getOwnerInfo().getId());
+//                if(imGroup.getOwnerInfo().getId().equals(userPhone)){
+//                    System.out.println("这个人是群主");
+//                    createPhone = 2;//表示群主
+//                    imageOnClick();
+//                }else {
+//                    System.out.println("这个人不是群主");
+//                    createPhone = 1;
+//                    imageOnClick();
+//                }
+//
+//            }
+//
+//            @Override
+//            public void onError(int i, String s) {
+//
+//            }
+//        });
     }
 
     private void imageOnClick(){
@@ -166,6 +183,65 @@ public class VideoPlayActivity extends AppCompatActivity implements TabLayout.On
                             Context.INPUT_METHOD_SERVICE);
                     assert imm != null;
                     imm.hideSoftInputFromWindow(editText.getWindowToken(), 0);
+
+                    System.out.println("发送群消息:");
+
+                    // 发送聊天室消息
+                    Conversation conv = JMessageClient.getChatRoomConversation(roomID);
+                    if (null == conv) {
+                        conv = Conversation.createChatRoomConversation(roomID);
+                    }
+                    String text = editText.getText().toString();
+                    final Message msg = conv.createSendTextMessage(text);
+                    msg.setOnSendCompleteCallback(new BasicCallback() {
+                        @Override
+                        public void gotResult(int responseCode, String responseMessage) {
+                            if (0 == responseCode) {
+                                System.out.println("MessageSent" + responseCode + responseMessage + msg);
+                            } else {
+                                System.out.println("MessageSent" + responseCode + responseMessage + "失败");
+                            }
+                        }
+                    });
+                    JMessageClient.sendMessage(msg);
+
+//                    IMMessage imMessage = MobIM.getChatManager().createTextMessage(groupPhone,editText.getText().toString(),IMConversation.TYPE_GROUP);
+//                    MobIM.getChatManager().sendMessage(imMessage, new MobIMCallback<Void>() {
+//                        @Override
+//                        public void onSuccess(Void aVoid) {
+//                            System.out.println("发送群消息");
+//                        }
+//
+//                        @Override
+//                        public void onError(int i, String s) {
+//
+//                        }
+//                    });
+//
+//                    MobIM.getChatManager().setConversationDisturb(groupPhone, IMConversation.TYPE_GROUP, true, new MobIMCallback<Boolean>() {
+//                        @Override
+//                        public void onSuccess(Boolean aBoolean) {
+//                            System.out.println("这是群回话");
+//
+//                            IMMessage imMessage = MobIM.getChatManager().createTextMessage(groupPhone,editText.getText().toString(),IMConversation.TYPE_GROUP);
+//                            MobIM.getChatManager().sendMessage(imMessage, new MobIMCallback<Void>() {
+//                                @Override
+//                                public void onSuccess(Void aVoid) {
+//                                    System.out.println("发送群消息");
+//                                }
+//
+//                                @Override
+//                                public void onError(int i, String s) {
+//
+//                                }
+//                            });
+//                        }
+//
+//                        @Override
+//                        public void onError(int i, String s) {
+//
+//                        }
+//                    });
 
                 }else {
                     Toast.makeText(VideoPlayActivity.this,"内容不能为空",Toast.LENGTH_LONG).show();
@@ -218,6 +294,7 @@ public class VideoPlayActivity extends AppCompatActivity implements TabLayout.On
         }
     }
 
+
     @Override
     public void onTabSelected(TabLayout.Tab tab) {
         mViewPager.setCurrentItem(tab.getPosition());
@@ -243,19 +320,6 @@ public class VideoPlayActivity extends AppCompatActivity implements TabLayout.On
     public void onBackPressed() {
         if (Jzvd.backPress()) {
             return;
-        }
-        if(createPhone == 1){
-            MobIM.getGroupManager().exitGroup(groupPhone, new MobIMCallback<Void>() {
-                @Override
-                public void onSuccess(Void aVoid) {
-                    System.out.println("退出");
-                }
-
-                @Override
-                public void onError(int i, String s) {
-
-                }
-            });
         }
         super.onBackPressed();
     }

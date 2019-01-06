@@ -24,6 +24,7 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 
 
+import com.example.fitdemo.AutoProject.AppConstants;
 import com.example.fitdemo.AutoProject.JDBCTools;
 import com.example.fitdemo.R;
 import com.example.fitdemo.Utils.CountDownTimerUtils;
@@ -39,6 +40,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+import cn.jpush.im.android.api.JMessageClient;
+import cn.jpush.im.android.api.options.RegisterOptionalUserInfo;
+import cn.jpush.im.api.BasicCallback;
 import cn.smssdk.EventHandler;
 import cn.smssdk.SMSSDK;
 
@@ -208,7 +212,9 @@ public class UserRegistActivity extends AppCompatActivity{
                         preparedStatement.close();
                         JDBCTools.releaseConnection(stmt,conn);
                         progressDialog.dismiss();
-                        finish();
+
+                        Im();
+                      //  finish();
                     }else {
                         Tip.showTip(UserRegistActivity.this,"请检查网络");
                         progressDialog.dismiss();
@@ -220,6 +226,17 @@ public class UserRegistActivity extends AppCompatActivity{
                 Looper.loop();
             }
         }.start();
+    }
+
+    private void Im(){
+        RegisterOptionalUserInfo registerOptionalUserInfo = new RegisterOptionalUserInfo();
+        registerOptionalUserInfo.setNickname("智慧体育云用户");
+        JMessageClient.register(name.getText().toString(), AppConstants.IM_PASS, registerOptionalUserInfo, new BasicCallback() {
+            @Override
+            public void gotResult(int i, String s) {
+                finish();
+            }
+        });
     }
 
 

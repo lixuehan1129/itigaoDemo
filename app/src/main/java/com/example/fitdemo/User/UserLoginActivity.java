@@ -40,6 +40,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+import cn.jpush.im.android.api.JMessageClient;
+import cn.jpush.im.api.BasicCallback;
 import cn.smssdk.SMSSDK;
 import de.hdodenhof.circleimageview.CircleImageView;
 
@@ -54,6 +56,7 @@ public class UserLoginActivity extends AppCompatActivity {
     private TextInputEditText name, password;
     private Button register, forget, login;
     private ImageView imageView;
+    private ProgressDialog progressDialog;
 
 
     @Override
@@ -122,7 +125,7 @@ public class UserLoginActivity extends AppCompatActivity {
     }
 
     private void login(){
-        final ProgressDialog progressDialog = ProgressDialog.show(UserLoginActivity.this,"","正在登录...",true);
+        progressDialog = ProgressDialog.show(UserLoginActivity.this,"","正在登录...",true);
         new Thread(){
             public void run(){
                 Looper.prepare();//用于toast
@@ -162,9 +165,7 @@ public class UserLoginActivity extends AppCompatActivity {
                                 sqLiteDatabase.close();
                                 resultSet.close();
                                 JDBCTools.releaseConnection(stmt,conn);
-                                progressDialog.dismiss();
-                                Intent intent = new Intent(UserLoginActivity.this,MainActivity.class);
-                                startActivity(intent);
+                                Im();
                             }else {
                                 Tip.showTip(UserLoginActivity.this,"密码错误");
                                 progressDialog.dismiss();
@@ -186,6 +187,17 @@ public class UserLoginActivity extends AppCompatActivity {
                 Looper.loop();
             }
         }.start();
+    }
+
+    private void Im(){
+        JMessageClient.login(name.getText().toString(), AppConstants.IM_PASS, new BasicCallback() {
+            @Override
+            public void gotResult(int i, String s) {
+                progressDialog.dismiss();
+                Intent intent = new Intent(UserLoginActivity.this,MainActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void initEditText(){

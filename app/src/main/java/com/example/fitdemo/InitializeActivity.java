@@ -11,6 +11,8 @@ import com.example.fitdemo.AutoProject.AppConstants;
 import com.example.fitdemo.AutoProject.SharePreferences;
 import com.example.fitdemo.User.UserLoginActivity;
 
+import cn.jpush.im.android.api.JMessageClient;
+
 /**
  * Created by 最美人间四月天 on 2018/12/14.
  */
@@ -22,6 +24,9 @@ public class InitializeActivity extends AppCompatActivity {
         supportRequestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        JMessageClient.setDebugMode(true);
+        JMessageClient.init(this); //极光IM
+
         if(!SharePreferences.getString(InitializeActivity.this, AppConstants.USER_PHONE).isEmpty()){
             Intent intent = new Intent(InitializeActivity.this,MainActivity.class);
             startActivity(intent);

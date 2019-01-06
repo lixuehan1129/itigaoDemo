@@ -71,8 +71,7 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:background="@drawable/ripple_bg"
-            android:src="@mipmap/ic_pingjia"
-            tools:ignore="ContentDescription" />
+            android:src="@mipmap/ic_pingjia" />
 
     </LinearLayout>
 

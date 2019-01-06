@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="cn.jiguang.sdk:jmessage-2.8.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/jmessage-2.8.0.aar/00a0e95dbb717012d6dd528618437406/jars/libs/jmessage-sdk-android-2.8.0.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/jmessage-2.8.0.aar/00a0e95dbb717012d6dd528618437406/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/jmessage-2.8.0.aar/00a0e95dbb717012d6dd528618437406/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/cn.jiguang.sdk/jmessage/2.8.0/ef3ffcae73136b05d094d71a28a1843fe5926571/jmessage-2.8.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

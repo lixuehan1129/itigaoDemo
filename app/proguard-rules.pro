@@ -25,3 +25,27 @@
 -keep class com.mob.**{*;}
 -keep class cn.smssdk.**{*;}
 -dontwarn com.mob.**
+
+-dontoptimize
+-dontpreverify
+-keepattributes  EnclosingMethod,Signature
+-dontwarn cn.jpush.**
+-keep class cn.jpush.** { *; }
+
+-dontwarn cn.jiguang.**
+-keep class cn.jiguang.** { *; }
+
+ -keepclassmembers class ** {
+     public void onEvent*(**);
+ }
+
+#========================gson================================
+-dontwarn com.google.**
+-keep class com.google.gson.** {*;}
+
+#========================protobuf================================
+-keep class com.google.protobuf.** {*;}
+
+#========================support=================================
+-dontwarn cn.jmessage.support.**
+-keep class cn.jmessage.support.**{*;}

@@ -50,6 +50,9 @@ import java.sql.Statement;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import cn.jpush.im.android.api.JMessageClient;
+import cn.jpush.im.android.api.model.UserInfo;
+import cn.jpush.im.api.BasicCallback;
 import de.hdodenhof.circleimageview.CircleImageView;
 import top.zibin.luban.CompressionPredicate;
 import top.zibin.luban.Luban;
@@ -67,6 +70,8 @@ public class PersonChangeActivity extends AppCompatActivity{
     private Uri photoUri;
     private String picPath = null;
     private String phone;
+
+    private ProgressDialog progressDialog;
 
     private RelativeLayout relativeLayout1,relativeLayout2,relativeLayout3,relativeLayout4;
     private CircleImageView circleImageView;
@@ -235,7 +240,7 @@ public class PersonChangeActivity extends AppCompatActivity{
     }
 
     private void upload(){
-        final ProgressDialog progressDialog = ProgressDialog.show(PersonChangeActivity.this,"","修改中...",true);
+        progressDialog = ProgressDialog.show(PersonChangeActivity.this,"","修改中...",true);
         new Thread(){
             public void run(){
                 Looper.prepare();
@@ -266,8 +271,7 @@ public class PersonChangeActivity extends AppCompatActivity{
                         Intent intent_broad = new Intent(AppConstants.BROAD_CHANGE);
                         LocalBroadcastManager.getInstance(PersonChangeActivity.this).sendBroadcast(intent_broad);
 
-                        progressDialog.dismiss();
-                        finish();
+                        Im();
                     }else {
                         Tip.showTip(PersonChangeActivity.this,"请检查网络");
                         progressDialog.dismiss();
@@ -279,6 +283,20 @@ public class PersonChangeActivity extends AppCompatActivity{
                 Looper.loop();
             }
         }.start();
+    }
+
+    private void Im(){
+        UserInfo userInfo = JMessageClient.getMyInfo();
+        userInfo.setNickname(editText.getText().toString());
+        UserInfo.Field updateField = UserInfo.Field.nickname;
+
+        JMessageClient.updateMyInfo(updateField, userInfo, new BasicCallback() {
+            @Override
+            public void gotResult(int i, String s) {
+                progressDialog.dismiss();
+                finish();
+            }
+        });
     }
 
 

@@ -34,15 +34,24 @@ import com.example.fitdemo.Personal.PersonalFragment;
 import com.example.fitdemo.Recommend.RecommendFragment;
 import com.example.fitdemo.Sport.SportFragment;
 import com.example.fitdemo.Subscribe.SubscribeFragment;
+import com.example.fitdemo.User.UserLoginActivity;
 import com.example.fitdemo.Utils.PermissionUtils;
 import com.example.fitdemo.Utils.StatusBarUtils;
 import com.example.fitdemo.ViewHelper.NoScollViewPager;
 import com.mob.MobSDK;
+import com.mob.MobUser;
 import com.mob.imsdk.MobIM;
+import com.mob.imsdk.MobIMCallback;
+import com.mob.imsdk.model.IMUser;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;
+
+import cn.jpush.im.android.api.JMessageClient;
+import cn.jpush.im.android.api.model.UserInfo;
+import cn.jpush.im.android.api.options.RegisterOptionalUserInfo;
+import cn.jpush.im.api.BasicCallback;
 
 /**
  * 主界面
@@ -91,7 +100,20 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationB
         cursor.close();
         sqLiteDatabase.close();
 
-        MobSDK.setUser(userId, userName,null, null);
+       // MobSDK.setUser(userId, userName,null, null);
+       // UserInfo userInfo = JMessageClient.getMyInfo();
+       // System.out.println("userInfo" + userInfo);
+
+        Im();
+    }
+
+    private void Im(){
+        JMessageClient.login(userId, AppConstants.IM_PASS, new BasicCallback() {
+            @Override
+            public void gotResult(int i, String s) {
+                System.out.println("登录" + s);
+            }
+        });
     }
 
     private void initBottomNavigationBar() {
