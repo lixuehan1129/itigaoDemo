@@ -16,6 +16,7 @@ public class AppConstants {
     public static final String BROAD_RECORD3 = "android.intent.action.broadcast.record3";
     public static final String BROAD_RECORD4 = "android.intent.action.broadcast.record4";
     public static final String BROAD_CHANGE = "android.intent.action.broadcast.change";
+    public static final String BROAD_IM = "android.intent.action.broadcast.im";
 
 
     public static final int SQL_VISION = 1;

@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.content.LocalBroadcastManager;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
@@ -23,27 +24,17 @@ import com.example.fitdemo.Adapter.TabLayoutAdapter;
 import com.example.fitdemo.AutoProject.AppConstants;
 import com.example.fitdemo.AutoProject.SharePreferences;
 import com.example.fitdemo.AutoProject.Tip;
+import com.example.fitdemo.Personal.PersonChangeActivity;
 import com.example.fitdemo.R;
 import com.example.fitdemo.Utils.StatusBarUtils;
-import com.mob.MobSDK;
-import com.mob.imsdk.MobIM;
-import com.mob.imsdk.MobIMCallback;
-import com.mob.imsdk.model.IMConversation;
-import com.mob.imsdk.model.IMGroup;
-import com.mob.imsdk.model.IMMessage;
-import com.mob.imsdk.model.IMUser;
 
 
 import java.util.ArrayList;
 import java.util.List;
 
-import cn.jpush.im.android.api.ChatRoomManager;
 import cn.jpush.im.android.api.JMessageClient;
-import cn.jpush.im.android.api.callback.RequestCallback;
-import cn.jpush.im.android.api.event.ChatRoomMessageEvent;
 import cn.jpush.im.android.api.model.Conversation;
 import cn.jpush.im.android.api.model.Message;
-import cn.jpush.im.android.api.model.UserInfo;
 import cn.jpush.im.api.BasicCallback;
 import cn.jzvd.Jzvd;
 import cn.jzvd.JzvdStd;
@@ -61,6 +52,7 @@ public class VideoPlayActivity extends AppCompatActivity implements TabLayout.On
     private LinearLayout linearLayout;
     private EditText editText;
     private ImageView imageView;
+
 
     private String[] titles = new String[]{"    视频    ", "    互动    "};
     private List<Fragment> fragments=new ArrayList<>();
@@ -134,43 +126,6 @@ public class VideoPlayActivity extends AppCompatActivity implements TabLayout.On
         if(roomID != 0){
             imageOnClick();
         }
-
-
-//        MobIM.getGroupManager().joinGroup(strValue, new MobIMCallback<IMGroup>() {
-//            @Override
-//            public void onSuccess(IMGroup imGroup) {
-//                System.out.println("加入群");
-//                createPhone = 1;
-//                imageOnClick();
-//            }
-//
-//            @Override
-//            public void onError(int i, String s) {
-//
-//            }
-//        });
-//
-//        MobIM.getGroupManager().getGroupInfo(strValue, true, new MobIMCallback<IMGroup>() {
-//            @Override
-//            public void onSuccess(IMGroup imGroup) {
-//                System.out.println("群主"+imGroup.getOwnerInfo().getId());
-//                if(imGroup.getOwnerInfo().getId().equals(userPhone)){
-//                    System.out.println("这个人是群主");
-//                    createPhone = 2;//表示群主
-//                    imageOnClick();
-//                }else {
-//                    System.out.println("这个人不是群主");
-//                    createPhone = 1;
-//                    imageOnClick();
-//                }
-//
-//            }
-//
-//            @Override
-//            public void onError(int i, String s) {
-//
-//            }
-//        });
     }
 
     private void imageOnClick(){
@@ -183,8 +138,6 @@ public class VideoPlayActivity extends AppCompatActivity implements TabLayout.On
                             Context.INPUT_METHOD_SERVICE);
                     assert imm != null;
                     imm.hideSoftInputFromWindow(editText.getWindowToken(), 0);
-
-                    System.out.println("发送群消息:");
 
                     // 发送聊天室消息
                     Conversation conv = JMessageClient.getChatRoomConversation(roomID);
@@ -203,45 +156,12 @@ public class VideoPlayActivity extends AppCompatActivity implements TabLayout.On
                             }
                         }
                     });
-                    JMessageClient.sendMessage(msg);
+                    Intent intent_broad = new Intent(AppConstants.BROAD_IM);
+                    intent_broad.putExtra("video_con",editText.getText().toString());
+                    LocalBroadcastManager.getInstance(VideoPlayActivity.this).sendBroadcast(intent_broad);
 
-//                    IMMessage imMessage = MobIM.getChatManager().createTextMessage(groupPhone,editText.getText().toString(),IMConversation.TYPE_GROUP);
-//                    MobIM.getChatManager().sendMessage(imMessage, new MobIMCallback<Void>() {
-//                        @Override
-//                        public void onSuccess(Void aVoid) {
-//                            System.out.println("发送群消息");
-//                        }
-//
-//                        @Override
-//                        public void onError(int i, String s) {
-//
-//                        }
-//                    });
-//
-//                    MobIM.getChatManager().setConversationDisturb(groupPhone, IMConversation.TYPE_GROUP, true, new MobIMCallback<Boolean>() {
-//                        @Override
-//                        public void onSuccess(Boolean aBoolean) {
-//                            System.out.println("这是群回话");
-//
-//                            IMMessage imMessage = MobIM.getChatManager().createTextMessage(groupPhone,editText.getText().toString(),IMConversation.TYPE_GROUP);
-//                            MobIM.getChatManager().sendMessage(imMessage, new MobIMCallback<Void>() {
-//                                @Override
-//                                public void onSuccess(Void aVoid) {
-//                                    System.out.println("发送群消息");
-//                                }
-//
-//                                @Override
-//                                public void onError(int i, String s) {
-//
-//                                }
-//                            });
-//                        }
-//
-//                        @Override
-//                        public void onError(int i, String s) {
-//
-//                        }
-//                    });
+                    JMessageClient.sendMessage(msg);
+                    editText.setText("");
 
                 }else {
                     Toast.makeText(VideoPlayActivity.this,"内容不能为空",Toast.LENGTH_LONG).show();
@@ -249,6 +169,7 @@ public class VideoPlayActivity extends AppCompatActivity implements TabLayout.On
             }
         });
     }
+
 
 
     private void initTab(){
@@ -340,6 +261,7 @@ public class VideoPlayActivity extends AppCompatActivity implements TabLayout.On
     @Override
     protected void onDestroy() {
         // TODO Auto-generated method stub
+//        JMessageClient.registerEventReceiver(this);
         super.onDestroy();
     }
 

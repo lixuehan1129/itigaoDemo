@@ -1,10 +1,15 @@
 package com.example.fitdemo.Subscribe;
 
 import android.app.Activity;
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
+import android.support.v4.content.LocalBroadcastManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -13,7 +18,9 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.fitdemo.Adapter.InteractAdapter;
+import com.example.fitdemo.AutoProject.AppConstants;
 import com.example.fitdemo.AutoProject.JDBCTools;
+import com.example.fitdemo.AutoProject.SharePreferences;
 import com.example.fitdemo.R;
 import com.example.fitdemo.AutoProject.Tip;
 import com.example.fitdemo.ViewHelper.BaseFragment;
@@ -33,13 +40,11 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-import cn.jmessage.biz.httptask.task.GetEventNotificationTaskMng;
 import cn.jpush.im.android.api.ChatRoomManager;
 import cn.jpush.im.android.api.JMessageClient;
 import cn.jpush.im.android.api.callback.RequestCallback;
 import cn.jpush.im.android.api.event.ChatRoomMessageEvent;
-import cn.jpush.im.android.api.event.MessageEvent;
-import cn.jpush.im.android.api.model.ChatRoomInfo;
+
 import cn.jpush.im.android.api.model.Conversation;
 import cn.jpush.im.api.BasicCallback;
 
@@ -49,15 +54,16 @@ import cn.jpush.im.api.BasicCallback;
 
 public class InteractFragment extends BaseFragment {
 
+    private LocalBroadcastManager broadcastManager;
+    private IntentFilter intentFilter;
+    private BroadcastReceiver mReceiver;
+
     private RecyclerView recyclerView;
     private int video_bid;
     private long groupId = 0;
     CallBackValue callBackValue;
     private InteractAdapter interactAdapter;
     private List<InteractAdapter.Interact> interacts = new ArrayList<>();
-
-    private ArrayList<String> name = new ArrayList<>();
-    private ArrayList<String> content = new ArrayList<>();
 
 
 
@@ -70,6 +76,7 @@ public class InteractFragment extends BaseFragment {
         super.onAttach(activity);
         //当前fragment从activity重写了回调接口  得到接口的实例化对象
         callBackValue =(InteractFragment.CallBackValue) getActivity();
+
     }
 
     //定义一个回调接口
@@ -92,6 +99,21 @@ public class InteractFragment extends BaseFragment {
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
+
+        broadcastManager = LocalBroadcastManager.getInstance(getActivity());
+        intentFilter = new IntentFilter();
+        intentFilter.addAction(AppConstants.BROAD_IM);
+        mReceiver = new BroadcastReceiver() {
+            @Override
+            public void onReceive(Context context, Intent intent){
+                //收到广播后所作的操作
+                InteractAdapter.Interact interact = interactAdapter.new Interact(
+                        "我", intent.getExtras().getString("video_con"));
+                interactAdapter.addDataAt(0,interact);
+                recyclerView.scrollToPosition(0);
+            }
+        };
+        broadcastManager.registerReceiver(mReceiver, intentFilter);
     }
 
     public void onStart() {
@@ -99,6 +121,9 @@ public class InteractFragment extends BaseFragment {
         //注册
         JMessageClient.registerEventReceiver(this);
     }
+
+
+
 
     // 接收聊天室消息
     // 主线程
@@ -117,14 +142,15 @@ public class InteractFragment extends BaseFragment {
                 e.printStackTrace();
             }
             if(getCon != null){
-                InteractAdapter.Interact interact = interactAdapter.new Interact(msg.getFromName(), getCon);
-              //  interacts.add(interact);
-                System.out.println(interact);
-                interactAdapter.addDataAt(0,interact);
-              //  interactAdapter.notifyItemInserted(0);
+                if(msg.getFromID().equals(SharePreferences.getString(getActivity(),AppConstants.USER_PHONE))){
+                    InteractAdapter.Interact interact = interactAdapter.new Interact("我", getCon);
+                    interactAdapter.addDataAt(0,interact);
+                }else {
+                    InteractAdapter.Interact interact = interactAdapter.new Interact(msg.getFromName(), getCon);
+                    interactAdapter.addDataAt(0,interact);
+                }
+                recyclerView.scrollToPosition(0);
             }
-
-            System.out.println("聊天消息"+ msg.getFromName()+getCon);
         }
 
     }
@@ -135,52 +161,17 @@ public class InteractFragment extends BaseFragment {
         interactAdapter = new InteractAdapter(interacts);
         recyclerView.setAdapter(interactAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-        setAdapter();
-
-//        if(groupId != null){
-//            MobIM.getChatManager().setConversationDisturb(groupId, IMConversation.TYPE_GROUP, true, new MobIMCallback<Boolean>() {
-//                @Override
-//                public void onSuccess(Boolean aBoolean) {
-//                    System.out.println("这是群回话");
-//                }
-//
-//                @Override
-//                public void onError(int i, String s) {
-//
-//                }
-//            });
-//
-//            MobIM.addMessageReceiver(new MobIMMessageReceiver() {
-//                @Override
-//                public void onMessageReceived(List<IMMessage> list) {
-//                    list.get(0).getBody();
-//                    System.out.println("是否接受消息"+list.get(0).getBody());
-//                }
-//
-//                @Override
-//                public void onMsgWithDraw(String s, String s1) {
-//
-//                }
-//            });
-//        }
-
+    //    setAdapter();
     }
 
 
     private void setAdapter(){
-//        for(int i=0; i<name.size(); i++){
-//            InteractAdapter interactAdapter = new InteractAdapter(interacts);
-//            InteractAdapter.Interact interact = interactAdapter.new Interact(name.get(i), content.get(i));
-//            interacts.add(interact);
-//        }
-
-
         interactAdapter.setOnItemClickListener(new InteractAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(View view, int position) {
-                Tip.showTip(getActivity(),name.get(position));
             }
         });
+
     }
 
 
@@ -200,21 +191,6 @@ public class InteractFragment extends BaseFragment {
                             groupId = resultSet.getInt("class_group");
                             if(groupId == 0){
                                 Tip.showTip(getActivity(),"暂时没有聊天室");
-//                                MobIM.getGroupManager().createGroup(resultSet.getString("class_name"), resultSet.getString("class_name"), new String[]{
-//                                        "15333101110"
-//                                }, new MobIMCallback<IMGroup>() {
-//                                    @Override
-//                                    public void onSuccess(IMGroup imGroup) {
-//                                        //更新数据
-//                                        groupId = imGroup.getId();
-//                                        updateGroup();
-//                                    }
-//
-//                                    @Override
-//                                    public void onError(int i, String s) {
-//                                        Log.e("错误码",s);
-//                                    }
-//                                });
                             }
 
                         }
@@ -326,7 +302,8 @@ public class InteractFragment extends BaseFragment {
         if(groupId != 0){
             ImRemove();
         }
-        JMessageClient.registerEventReceiver(getActivity());
+        JMessageClient.registerEventReceiver(this);
+        broadcastManager.unregisterReceiver(mReceiver);
         super.onDestroy();
     }
 
