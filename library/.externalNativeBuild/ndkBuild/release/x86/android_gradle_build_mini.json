@@ -1,0 +1,23 @@
+{
+  "buildFiles": [
+    "D:\\Android\\Application\\FitDemo\\library\\src\\main\\cpp\\Android.mk",
+    "D:\\Android\\Application\\FitDemo\\library\\src\\main\\cpp\\Application.mk"
+  ],
+  "cleanCommands": [
+    "D:\\Android\\SDK\\ndk-bundle\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dD:\\Android\\Application\\FitDemo\\library\\src\\main\\cpp\\Android.mk NDK_APPLICATION_MK\u003dD:\\Android\\Application\\FitDemo\\library\\src\\main\\cpp\\Application.mk APP_ABI\u003dx86 NDK_ALL_ABIS\u003dx86 NDK_DEBUG\u003d0 APP_PLATFORM\u003dandroid-21 NDK_OUT\u003dD:/Android/Application/FitDemo/library/build/intermediates/ndkBuild/release/obj NDK_LIBS_OUT\u003dD:\\Android\\Application\\FitDemo\\library\\build\\intermediates\\ndkBuild\\release\\lib clean"
+  ],
+  "libraries": {
+    "enc-release-x86": {
+      "artifactName": "enc",
+      "buildCommand": "D:\\Android\\SDK\\ndk-bundle\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dD:\\Android\\Application\\FitDemo\\library\\src\\main\\cpp\\Android.mk NDK_APPLICATION_MK\u003dD:\\Android\\Application\\FitDemo\\library\\src\\main\\cpp\\Application.mk APP_ABI\u003dx86 NDK_ALL_ABIS\u003dx86 NDK_DEBUG\u003d0 APP_PLATFORM\u003dandroid-21 NDK_OUT\u003dD:/Android/Application/FitDemo/library/build/intermediates/ndkBuild/release/obj NDK_LIBS_OUT\u003dD:\\Android\\Application\\FitDemo\\library\\build\\intermediates\\ndkBuild\\release\\lib D:/Android/Application/FitDemo/library/build/intermediates/ndkBuild/release/obj/local/x86/libenc.so",
+      "abi": "x86",
+      "output": "D:\\Android\\Application\\FitDemo\\library\\build\\intermediates\\ndkBuild\\release\\obj\\local\\x86\\libenc.so"
+    },
+    "yuv-release-x86": {
+      "artifactName": "yuv",
+      "buildCommand": "D:\\Android\\SDK\\ndk-bundle\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dD:\\Android\\Application\\FitDemo\\library\\src\\main\\cpp\\Android.mk NDK_APPLICATION_MK\u003dD:\\Android\\Application\\FitDemo\\library\\src\\main\\cpp\\Application.mk APP_ABI\u003dx86 NDK_ALL_ABIS\u003dx86 NDK_DEBUG\u003d0 APP_PLATFORM\u003dandroid-21 NDK_OUT\u003dD:/Android/Application/FitDemo/library/build/intermediates/ndkBuild/release/obj NDK_LIBS_OUT\u003dD:\\Android\\Application\\FitDemo\\library\\build\\intermediates\\ndkBuild\\release\\lib D:/Android/Application/FitDemo/library/build/intermediates/ndkBuild/release/obj/local/x86/libyuv.so",
+      "abi": "x86",
+      "output": "D:\\Android\\Application\\FitDemo\\library\\build\\intermediates\\ndkBuild\\release\\obj\\local\\x86\\libyuv.so"
+    }
+  }
+}

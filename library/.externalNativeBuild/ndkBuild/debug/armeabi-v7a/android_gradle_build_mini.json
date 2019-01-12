@@ -1,0 +1,23 @@
+{
+  "buildFiles": [
+    "D:\\Android\\Application\\FitDemo\\library\\src\\main\\cpp\\Android.mk",
+    "D:\\Android\\Application\\FitDemo\\library\\src\\main\\cpp\\Application.mk"
+  ],
+  "cleanCommands": [
+    "D:\\Android\\SDK\\ndk-bundle\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dD:\\Android\\Application\\FitDemo\\library\\src\\main\\cpp\\Android.mk NDK_APPLICATION_MK\u003dD:\\Android\\Application\\FitDemo\\library\\src\\main\\cpp\\Application.mk APP_ABI\u003darmeabi-v7a NDK_ALL_ABIS\u003darmeabi-v7a NDK_DEBUG\u003d1 APP_PLATFORM\u003dandroid-21 NDK_OUT\u003dD:/Android/Application/FitDemo/library/build/intermediates/ndkBuild/debug/obj NDK_LIBS_OUT\u003dD:\\Android\\Application\\FitDemo\\library\\build\\intermediates\\ndkBuild\\debug\\lib clean"
+  ],
+  "libraries": {
+    "yuv-debug-armeabi-v7a": {
+      "artifactName": "yuv",
+      "buildCommand": "D:\\Android\\SDK\\ndk-bundle\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dD:\\Android\\Application\\FitDemo\\library\\src\\main\\cpp\\Android.mk NDK_APPLICATION_MK\u003dD:\\Android\\Application\\FitDemo\\library\\src\\main\\cpp\\Application.mk APP_ABI\u003darmeabi-v7a NDK_ALL_ABIS\u003darmeabi-v7a NDK_DEBUG\u003d1 APP_PLATFORM\u003dandroid-21 NDK_OUT\u003dD:/Android/Application/FitDemo/library/build/intermediates/ndkBuild/debug/obj NDK_LIBS_OUT\u003dD:\\Android\\Application\\FitDemo\\library\\build\\intermediates\\ndkBuild\\debug\\lib D:/Android/Application/FitDemo/library/build/intermediates/ndkBuild/debug/obj/local/armeabi-v7a/libyuv.so",
+      "abi": "armeabi-v7a",
+      "output": "D:\\Android\\Application\\FitDemo\\library\\build\\intermediates\\ndkBuild\\debug\\obj\\local\\armeabi-v7a\\libyuv.so"
+    },
+    "enc-debug-armeabi-v7a": {
+      "artifactName": "enc",
+      "buildCommand": "D:\\Android\\SDK\\ndk-bundle\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dD:\\Android\\Application\\FitDemo\\library\\src\\main\\cpp\\Android.mk NDK_APPLICATION_MK\u003dD:\\Android\\Application\\FitDemo\\library\\src\\main\\cpp\\Application.mk APP_ABI\u003darmeabi-v7a NDK_ALL_ABIS\u003darmeabi-v7a NDK_DEBUG\u003d1 APP_PLATFORM\u003dandroid-21 NDK_OUT\u003dD:/Android/Application/FitDemo/library/build/intermediates/ndkBuild/debug/obj NDK_LIBS_OUT\u003dD:\\Android\\Application\\FitDemo\\library\\build\\intermediates\\ndkBuild\\debug\\lib D:/Android/Application/FitDemo/library/build/intermediates/ndkBuild/debug/obj/local/armeabi-v7a/libenc.so",
+      "abi": "armeabi-v7a",
+      "output": "D:\\Android\\Application\\FitDemo\\library\\build\\intermediates\\ndkBuild\\debug\\obj\\local\\armeabi-v7a\\libenc.so"
+    }
+  }
+}
