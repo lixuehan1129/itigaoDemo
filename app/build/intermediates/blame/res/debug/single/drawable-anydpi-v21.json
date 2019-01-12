@@ -1,10 +1,66 @@
 [
     {
+        "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21\\exo_icon_previous.xml",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\exoplayer-ui-2.9.1.aar\\99da173a3b80ee76c2718bb9de3de3ac\\res\\drawable-anydpi-v21\\exo_icon_previous.xml"
+    },
+    {
+        "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21\\exo_icon_pause.xml",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\exoplayer-ui-2.9.1.aar\\99da173a3b80ee76c2718bb9de3de3ac\\res\\drawable-anydpi-v21\\exo_icon_pause.xml"
+    },
+    {
+        "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21\\exo_edit_mode_logo.xml",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\exoplayer-ui-2.9.1.aar\\99da173a3b80ee76c2718bb9de3de3ac\\res\\drawable-anydpi-v21\\exo_edit_mode_logo.xml"
+    },
+    {
+        "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21\\exo_icon_fastforward.xml",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\exoplayer-ui-2.9.1.aar\\99da173a3b80ee76c2718bb9de3de3ac\\res\\drawable-anydpi-v21\\exo_icon_fastforward.xml"
+    },
+    {
         "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21\\design_ic_visibility.xml",
-        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.0.2.aar\\e07cb102851723ca4b582bd7e353103d\\res\\drawable-anydpi-v21\\design_ic_visibility.xml"
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.0.2.aar\\6f175e6da0c13080f6ae60310f238165\\res\\drawable-anydpi-v21\\design_ic_visibility.xml"
+    },
+    {
+        "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21\\exo_controls_repeat_one.xml",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\exoplayer-ui-2.9.1.aar\\99da173a3b80ee76c2718bb9de3de3ac\\res\\drawable-anydpi-v21\\exo_controls_repeat_one.xml"
+    },
+    {
+        "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21\\exo_icon_next.xml",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\exoplayer-ui-2.9.1.aar\\99da173a3b80ee76c2718bb9de3de3ac\\res\\drawable-anydpi-v21\\exo_icon_next.xml"
+    },
+    {
+        "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21\\exo_controls_repeat_off.xml",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\exoplayer-ui-2.9.1.aar\\99da173a3b80ee76c2718bb9de3de3ac\\res\\drawable-anydpi-v21\\exo_controls_repeat_off.xml"
+    },
+    {
+        "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21\\exo_controls_repeat_all.xml",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\exoplayer-ui-2.9.1.aar\\99da173a3b80ee76c2718bb9de3de3ac\\res\\drawable-anydpi-v21\\exo_controls_repeat_all.xml"
+    },
+    {
+        "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21\\exo_icon_rewind.xml",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\exoplayer-ui-2.9.1.aar\\99da173a3b80ee76c2718bb9de3de3ac\\res\\drawable-anydpi-v21\\exo_icon_rewind.xml"
     },
     {
         "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21\\design_ic_visibility_off.xml",
-        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.0.2.aar\\e07cb102851723ca4b582bd7e353103d\\res\\drawable-anydpi-v21\\design_ic_visibility_off.xml"
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.0.2.aar\\6f175e6da0c13080f6ae60310f238165\\res\\drawable-anydpi-v21\\design_ic_visibility_off.xml"
+    },
+    {
+        "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21\\exo_icon_stop.xml",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\exoplayer-ui-2.9.1.aar\\99da173a3b80ee76c2718bb9de3de3ac\\res\\drawable-anydpi-v21\\exo_icon_stop.xml"
+    },
+    {
+        "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21\\exo_icon_play.xml",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\exoplayer-ui-2.9.1.aar\\99da173a3b80ee76c2718bb9de3de3ac\\res\\drawable-anydpi-v21\\exo_icon_play.xml"
+    },
+    {
+        "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21\\exo_controls_shuffle.xml",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\exoplayer-ui-2.9.1.aar\\99da173a3b80ee76c2718bb9de3de3ac\\res\\drawable-anydpi-v21\\exo_controls_shuffle.xml"
+    },
+    {
+        "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21\\exo_controls_fullscreen_exit.xml",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\exoplayer-ui-2.9.1.aar\\99da173a3b80ee76c2718bb9de3de3ac\\res\\drawable-anydpi-v21\\exo_controls_fullscreen_exit.xml"
+    },
+    {
+        "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21\\exo_controls_fullscreen_enter.xml",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\exoplayer-ui-2.9.1.aar\\99da173a3b80ee76c2718bb9de3de3ac\\res\\drawable-anydpi-v21\\exo_controls_fullscreen_enter.xml"
     }
 ]

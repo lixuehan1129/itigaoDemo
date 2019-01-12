@@ -2,6 +2,7 @@ package com.example.fitdemo.Classes;
 
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -19,14 +20,17 @@ import com.example.fitdemo.Adapter.InteractAdapter;
 
 import com.example.fitdemo.R;
 import com.example.fitdemo.Utils.StatusBarUtils;
-
+import com.shuyu.gsyvideoplayer.GSYVideoManager;
+import com.shuyu.gsyvideoplayer.player.IjkPlayerManager;
+import com.shuyu.gsyvideoplayer.player.PlayerFactory;
+import com.shuyu.gsyvideoplayer.utils.OrientationUtils;
+import com.shuyu.gsyvideoplayer.video.StandardGSYVideoPlayer;
 
 
 import java.util.ArrayList;
 import java.util.List;
 
-import cn.jzvd.Jzvd;
-import cn.jzvd.JzvdStd;
+
 
 /**
  * Created by 最美人间四月天 on 2018/12/14.
@@ -34,25 +38,26 @@ import cn.jzvd.JzvdStd;
 
 public class BroadcastActivity extends AppCompatActivity {
 
-    private JzvdStd jzvdStd;
+
     private LinearLayout linearLayout;
     private RecyclerView recyclerView;
     private EditText editText;
     private ImageView imageView;
 
+    private StandardGSYVideoPlayer videoPlayer;
+    private OrientationUtils orientationUtils;
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.video_broad_activity);
         StatusBarUtils.setWindowStatusBarColor(BroadcastActivity.this, R.color.colorWhite);
-
+        PlayerFactory.setPlayManager(IjkPlayerManager.class);//ijk模式
         initView();
     }
 
     private void initView(){
-       // videoPlayer = (VideoPlayer) findViewById(R.id.video_broad_vv);
-        jzvdStd = (JzvdStd) findViewById(R.id.video_broad_vv);
+        videoPlayer = (StandardGSYVideoPlayer) findViewById(R.id.video_broad_vv);
         recyclerView = (RecyclerView) findViewById(R.id.video_broad_rv) ;
         linearLayout = (LinearLayout) findViewById(R.id.video_broad_li);
         editText = (EditText) findViewById(R.id.video_broad_et);
@@ -63,10 +68,13 @@ public class BroadcastActivity extends AppCompatActivity {
         WindowManager wm = (WindowManager) this
                 .getSystemService(Context.WINDOW_SERVICE);
         int width = wm.getDefaultDisplay().getWidth();
-        setWidthHeightWithRatio(jzvdStd,width,16,9);
+        //   setWidthHeightWithRatio(ijkVideoView,width,16,9);
 
         imageOnClick();
         initData();
+
+        setPlay();
+
     }
 
     private void initData(){
@@ -99,10 +107,59 @@ public class BroadcastActivity extends AppCompatActivity {
         });
     }
 
-    private void setPlay(String url){
-        jzvdStd.setUp(url, "", Jzvd.SCREEN_WINDOW_NORMAL);
-        jzvdStd.startVideo();
+    private void setPlay(){
 
+        /**
+         * 设置右下角 显示切换到全屏 的按键资源
+         * 必须在setUp之前设置
+         * 不设置使用默认
+         */
+        videoPlayer.setEnlargeImageRes(R.mipmap.ic_full);
+        /**
+         * 设置右下角 显示退出全屏 的按键资源
+         * 必须在setUp之前设置
+         * 不设置使用默认
+         */
+        videoPlayer.setShrinkImageRes(R.mipmap.ic_full_b);
+
+
+        videoPlayer.setUp("rtmp://39.105.213.41:1935/live/1233",false,null);
+        videoPlayer.getBackButton().setVisibility(View.VISIBLE);
+        videoPlayer.setNeedShowWifiTip(true);
+        videoPlayer.setIsTouchWiget(false);
+
+
+        //设置旋转
+        orientationUtils = new OrientationUtils(this, videoPlayer);
+        //初始化不打开外部的旋转
+        orientationUtils.setEnable(false);
+
+
+        //设置全屏按键功能,这是使用的是选择屏幕，而不是全屏
+        videoPlayer.getFullscreenButton().setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                videoPlayer.startWindowFullscreen(BroadcastActivity.this,true,true);
+            }
+        });
+
+        //是否根据视频尺寸，自动选择竖屏全屏或者横屏全屏
+        videoPlayer.setAutoFullWithSize(true);
+//        //音频焦点冲突时是否释放
+//        videoPlayer.setReleaseWhenLossAudio(false);
+//        //自动转屏
+//        videoPlayer.setRotateViewAuto(true);
+
+        //设置返回按键功能
+        videoPlayer.getBackButton().setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
+
+
+        videoPlayer.startPlayLogic();
     }
 
     private void imageOnClick(){
@@ -131,36 +188,48 @@ public class BroadcastActivity extends AppCompatActivity {
         }
     }
 
-    @Override
-    protected void onStop() {
-        super.onStop();
-    }
 
-    @Override
-    public void onBackPressed() {
-        if (Jzvd.backPress()) {
-            return;
-        }
-        super.onBackPressed();
-    }
 
     @Override
     protected void onPause() {
         super.onPause();
-        Jzvd.releaseAllVideos();
-        JzvdStd.goOnPlayOnPause();
+        videoPlayer.onVideoPause();
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        //home back
-        JzvdStd.goOnPlayOnResume();
+        videoPlayer.onVideoResume();
     }
 
     @Override
     protected void onDestroy() {
         // TODO Auto-generated method stub
         super.onDestroy();
+        videoPlayer.onVideoResume();
     }
+
+    @Override
+    public void onBackPressed() {
+
+//        先返回正常状态
+        if (orientationUtils.getScreenType() == ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE) {
+            videoPlayer.getFullscreenButton().performClick();
+            return;
+        }
+
+        if (GSYVideoManager.backFromWindowFull(this)) {
+            return;
+        }
+
+        //释放所有
+        videoPlayer.setVideoAllCallBack(null);
+        super.onBackPressed();
+    }
+    @Override
+    protected void onStop() {
+        super.onStop();
+        //点击返回或不允许后台播放时 释放资源
+    }
+
 }

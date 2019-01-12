@@ -1,5 +1,6 @@
 package com.example.fitdemo.Utils;
 
+import java.sql.PreparedStatement;
 import java.util.Calendar;
 import java.util.TimeZone;
 
@@ -121,6 +122,12 @@ public class DateUtils {
         mYear = String.valueOf(c.get(Calendar.YEAR)); // 获取当前年份
         mMonth = String.valueOf(c.get(Calendar.MONTH) + 1);// 获取当前月份
         mDay = String.valueOf(c.get(Calendar.DAY_OF_MONTH));// 获取当前月份的日期号码
+        if(mMonth.length()==1){
+            mMonth = "0" + mMonth;
+        }
+        if(mDay.length() == 1){
+            mDay = "0" + mDay;
+        }
         return Integer.parseInt(mYear + mMonth + mDay);
     }
 }

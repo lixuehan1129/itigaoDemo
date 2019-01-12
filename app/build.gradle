@@ -31,6 +31,12 @@ android {
         }
     }
 
+    compileOptions {
+        sourceCompatibility 1.8
+        targetCompatibility 1.8
+    }
+
+
 
 }
 
@@ -38,12 +44,12 @@ MobSDK {
     appKey "29a1046b75e37"
     appSecret "a765aa7a6d46a64bba7e537c8d05ee13"
     SMSSDK {}
-    MobIM {}
+//    MobIM {}
 }
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    //noinspection GradleDependency
+    //noinspection GradleCompatible,GradleDependency
     implementation 'com.android.support:appcompat-v7:26.0.0'
     //noinspection GradleDependency
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
@@ -63,15 +69,30 @@ dependencies {
     compile 'com.ashokvarma.android:bottom-navigation-bar:2.0.3'
     compile 'de.hdodenhof:circleimageview:2.1.0'
     compile 'com.github.bumptech.glide:glide:3.7.0'
-
     implementation files('libs/mysql-connector-java-5.1.40-bin.jar')
-
-  //  compile 'cn.yc:YCVideoPlayerLib:2.4.9'
+    //compile 'cn.yc:YCVideoPlayerLib:2.4.9'
     implementation 'cn.jzvd:jiaozivideoplayer:6.4.1'
+
+
     implementation 'top.zibin:Luban:1.1.8'
-
-    compile 'cn.jiguang.sdk:jmessage:2.8.0'  // 此处以JMessage 2.8.0 版本为例。
-    compile 'cn.jiguang.sdk:jcore:1.2.6'  // 此处以JCore 1.2.6 版本为例。
-
+    compile 'cn.jiguang.sdk:jmessage:2.8.0'
+    // 此处以JMessage 2.8.0 版本为例。
+    compile 'cn.jiguang.sdk:jcore:1.2.6'
+    // 此处以JCore 1.2.6 版本为例。
     compile 'org.greenrobot:eventbus:3.0.0'
+    implementation project(':library')
+
+    // ijkplayer
+  //  compile 'tv.danmaku.ijk.media:ijkplayer-java:0.8.3'
+
+    //完整版引入
+    implementation 'com.shuyu:GSYVideoPlayer:6.0.2'
+
+    //根据你的需求ijk模式的so
+    implementation 'com.shuyu:gsyVideoPlayer-armv5:6.0.2'
+    implementation 'com.shuyu:gsyVideoPlayer-armv7a:6.0.2'
+    implementation 'com.shuyu:gsyVideoPlayer-arm64:6.0.2'
+    implementation 'com.shuyu:gsyVideoPlayer-x64:6.0.2'
+    implementation 'com.shuyu:gsyVideoPlayer-x86:6.0.2'
+
 }

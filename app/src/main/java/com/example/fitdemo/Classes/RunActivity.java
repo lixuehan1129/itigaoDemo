@@ -24,6 +24,7 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.util.Util;
 import com.example.fitdemo.Adapter.ClassActivityAdapter;
 import com.example.fitdemo.Adapter.ClassVideoAdapter;
+import com.example.fitdemo.Adapter.InteractAdapter;
 import com.example.fitdemo.AutoProject.AppConstants;
 import com.example.fitdemo.AutoProject.JDBCTools;
 import com.example.fitdemo.AutoProject.SharePreferences;
@@ -52,6 +53,8 @@ public class RunActivity extends AppCompatActivity {
     private LocalBroadcastManager broadcastManager;
     private IntentFilter intentFilter;
     private BroadcastReceiver mReceiver;
+
+    private TextView to;
 
     ArrayList<String> name1;
     ArrayList<Integer> bid1;
@@ -120,6 +123,8 @@ public class RunActivity extends AppCompatActivity {
         imageView2 = (ImageView) findViewById(R.id.class_activity_iv2);
         textView = (TextView) findViewById(R.id.class_activity_tv1);
 
+        to = (TextView) findViewById(R.id.class_activity_to);
+
         LinearLayoutManager linearLayoutManager1 = new LinearLayoutManager(this);
         linearLayoutManager1.setOrientation(LinearLayoutManager.HORIZONTAL);
         recyclerView1.setLayoutManager(linearLayoutManager1);
@@ -161,6 +166,14 @@ public class RunActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(RunActivity.this, HuDongActivity.class);
                 intent.putExtra("hudong_classify",1);
+                startActivity(intent);
+            }
+        });
+
+        to.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(RunActivity.this,GoBroadActivity.class);
                 startActivity(intent);
             }
         });

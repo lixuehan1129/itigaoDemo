@@ -39,6 +39,11 @@ public class PermissionUtils {
         if(ContextCompat.checkSelfPermission(activity,Manifest.permission.CAMERA)!=PackageManager.PERMISSION_GRANTED){
             permissionList.add(Manifest.permission.CAMERA);
         }
+        if(ContextCompat.checkSelfPermission(activity,Manifest.permission.RECORD_AUDIO) != PackageManager.PERMISSION_GRANTED) {
+
+            permissionList.add(Manifest.permission.RECORD_AUDIO);
+        }
+
 //        if(ContextCompat.checkSelfPermission(activity,Manifest.permission.GET_ACCOUNTS)!=PackageManager.PERMISSION_GRANTED){
 //            permissionList.add(Manifest.permission.GET_ACCOUNTS);
 //        }

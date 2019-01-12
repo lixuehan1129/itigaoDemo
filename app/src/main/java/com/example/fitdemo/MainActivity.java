@@ -39,10 +39,7 @@ import com.example.fitdemo.Utils.PermissionUtils;
 import com.example.fitdemo.Utils.StatusBarUtils;
 import com.example.fitdemo.ViewHelper.NoScollViewPager;
 import com.mob.MobSDK;
-import com.mob.MobUser;
-import com.mob.imsdk.MobIM;
-import com.mob.imsdk.MobIMCallback;
-import com.mob.imsdk.model.IMUser;
+
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
@@ -100,9 +97,6 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationB
         cursor.close();
         sqLiteDatabase.close();
 
-       // MobSDK.setUser(userId, userName,null, null);
-       // UserInfo userInfo = JMessageClient.getMyInfo();
-       // System.out.println("userInfo" + userInfo);
 
         Im();
     }
