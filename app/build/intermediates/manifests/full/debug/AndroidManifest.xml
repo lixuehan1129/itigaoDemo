@@ -69,7 +69,7 @@
     <activity android:name="com.example.fitdemo.Subscribe.VideoRankActivity"/>
     <activity android:screenOrientation="portrait" android:name="com.example.fitdemo.Classes.HuDongPlayActivity" android:configChanges="orientation|screenSize|keyboardHidden"/>
     <activity android:name="com.example.fitdemo.Classes.HuDongPutActivity"/>
-    <activity android:name="com.example.fitdemo.Classes.GoBroadActivity"/>
+    <activity android:name="com.example.fitdemo.Classes.GoBroadActivity" android:screenOrientation="portrait"/>
     <receiver android:enabled="true" android:name="cn.jpush.android.service.PushReceiver" android:exported="false">
       <intent-filter android:priority="1000">
         <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY"/>

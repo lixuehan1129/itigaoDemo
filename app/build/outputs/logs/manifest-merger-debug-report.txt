@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:2:1-232:12
-INJECTED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:2:1-232:12
-INJECTED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:2:1-232:12
-INJECTED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:2:1-232:12
+ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:2:1-233:12
+INJECTED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:2:1-233:12
+INJECTED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:2:1-233:12
+INJECTED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:2:1-233:12
 MERGED from [com.ashokvarma.android:bottom-navigation-bar:2.0.3] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\bottom-navigation-bar-2.0.3.aar\0acb10fe3f28d39b0de2086e6931a4a0\AndroidManifest.xml:2:1-13:12
 MERGED from [de.hdodenhof:circleimageview:2.1.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\circleimageview-2.1.0.aar\5158022ee20ef1ef175638e28943002f\AndroidManifest.xml:2:1-11:12
 MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\4b78f0ac695071bc91e5f5a7d7f7630b\AndroidManifest.xml:2:1-134:12
@@ -48,22 +48,22 @@ MERGED from [com.shuyu:gsyVideoPlayer-base:6.0.2] C:\Users\最美人间四月天\.gradl
 MERGED from [tv.danmaku.ijk.media:ijkplayer-java:0.8.8] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\ijkplayer-java-0.8.8.aar\a654833e9e3423c32a4dbbba580b85d8\AndroidManifest.xml:2:1-9:12
 MERGED from [com.shuyu:gsyvideoplayer-androidvideocache:6.0.2] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\gsyvideoplayer-androidvideocache-6.0.2.aar\5824c6b593dfed2c2b06d0839c154ef3\AndroidManifest.xml:2:1-17:12
 MERGED from [net.butterflytv.utils:rtmp-client:3.0.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\rtmp-client-3.0.1.aar\6e80e88c64effec804c7215469fdc18e\AndroidManifest.xml:2:1-13:12
-INJECTED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:2:1-232:12
-INJECTED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:2:1-232:12
-INJECTED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:2:1-232:12
+INJECTED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:2:1-233:12
+INJECTED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:2:1-233:12
+INJECTED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:2:1-233:12
 	package
 		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:4:5-34
 		INJECTED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml
 		INJECTED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml
-		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:2:1-232:12
+		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:2:1-233:12
 		INJECTED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml
 	xmlns:tools
 		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:3:5-51
 	android:versionCode
 		INJECTED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml
-		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:2:1-232:12
+		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:2:1-233:12
 		INJECTED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:2:11-69
@@ -200,7 +200,7 @@ MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\cach
 	android:name
 		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:53:22-68
 application
-ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:55:5-230:19
+ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:55:5-231:19
 MERGED from [com.ashokvarma.android:bottom-navigation-bar:2.0.3] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\bottom-navigation-bar-2.0.3.aar\0acb10fe3f28d39b0de2086e6931a4a0\AndroidManifest.xml:11:5-47
 MERGED from [com.ashokvarma.android:bottom-navigation-bar:2.0.3] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\bottom-navigation-bar-2.0.3.aar\0acb10fe3f28d39b0de2086e6931a4a0\AndroidManifest.xml:11:5-47
 MERGED from [de.hdodenhof:circleimageview:2.1.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\circleimageview-2.1.0.aar\5158022ee20ef1ef175638e28943002f\AndroidManifest.xml:9:5-20
@@ -472,9 +472,11 @@ ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:219:9
 	android:name
 		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:219:19-60
 activity#com.example.fitdemo.Classes.GoBroadActivity
-ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:224:9-227:20
+ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:224:9-228:20
+	android:screenOrientation
+		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:225:13-50
 	tools:ignore
-		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:225:13-47
+		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:226:13-47
 	android:name
 		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:224:19-58
 uses-sdk
@@ -591,7 +593,7 @@ ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\cache
 		ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\4b78f0ac695071bc91e5f5a7d7f7630b\AndroidManifest.xml:17:22-76
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
 ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\4b78f0ac695071bc91e5f5a7d7f7630b\AndroidManifest.xml:22:5-80
-IMPLIED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:2:1-232:12 reason: com.jiguang.im.jcenter requested WRITE_EXTERNAL_STORAGE
+IMPLIED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:2:1-233:12 reason: com.jiguang.im.jcenter requested WRITE_EXTERNAL_STORAGE
 	android:name
 		ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\4b78f0ac695071bc91e5f5a7d7f7630b\AndroidManifest.xml:22:22-77
 uses-permission#android.permission.SYSTEM_ALERT_WINDOW
