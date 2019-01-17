@@ -2,6 +2,7 @@ package com.example.fitdemo.Classes;
 
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -44,6 +45,10 @@ public class BroadcastActivity extends AppCompatActivity {
     private EditText editText;
     private ImageView imageView;
 
+    private int anchorId, anchorRoom;
+    private String url;
+    private String URL_F = "rtmp://39.105.213.41:1935/live/";
+
     private StandardGSYVideoPlayer videoPlayer;
     private OrientationUtils orientationUtils;
 
@@ -53,6 +58,9 @@ public class BroadcastActivity extends AppCompatActivity {
         setContentView(R.layout.video_broad_activity);
         StatusBarUtils.setWindowStatusBarColor(BroadcastActivity.this, R.color.colorWhite);
         PlayerFactory.setPlayManager(IjkPlayerManager.class);//ijk模式
+        Intent intent = getIntent();
+        anchorId = intent.getIntExtra("anchor_bid",0);
+        anchorRoom = intent.getIntExtra("anchor_room",0);
         initView();
     }
 
@@ -68,7 +76,7 @@ public class BroadcastActivity extends AppCompatActivity {
         WindowManager wm = (WindowManager) this
                 .getSystemService(Context.WINDOW_SERVICE);
         int width = wm.getDefaultDisplay().getWidth();
-        //   setWidthHeightWithRatio(ijkVideoView,width,16,9);
+           setWidthHeightWithRatio(videoPlayer,width,16,9);
 
         imageOnClick();
         initData();
@@ -108,6 +116,7 @@ public class BroadcastActivity extends AppCompatActivity {
     }
 
     private void setPlay(){
+        url = URL_F + anchorRoom;
 
         /**
          * 设置右下角 显示切换到全屏 的按键资源
@@ -123,7 +132,7 @@ public class BroadcastActivity extends AppCompatActivity {
         videoPlayer.setShrinkImageRes(R.mipmap.ic_full_b);
 
 
-        videoPlayer.setUp("rtmp://39.105.213.41:1935/live/1233",false,null);
+        videoPlayer.setUp(url,false,null);
         videoPlayer.getBackButton().setVisibility(View.VISIBLE);
         videoPlayer.setNeedShowWifiTip(true);
         videoPlayer.setIsTouchWiget(false);

@@ -56,9 +56,12 @@ public class RunActivity extends AppCompatActivity {
 
     private TextView to;
 
+    private int userSta,userStyle;
+
     ArrayList<String> name1;
     ArrayList<Integer> bid1;
     ArrayList<String> cover1;
+    ArrayList<Integer> roomId;
 
     ArrayList<String> name2;
     ArrayList<Integer> bid2;
@@ -75,6 +78,8 @@ public class RunActivity extends AppCompatActivity {
     ArrayList<String> add3;
 
     ArrayList<String> cover4;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -116,6 +121,10 @@ public class RunActivity extends AppCompatActivity {
         toolbar.setTitle("跑步课程");
         back(toolbar);
 
+        to = (TextView) findViewById(R.id.class_activity_to);
+        userSta = SharePreferences.getInt(RunActivity.this,AppConstants.USER_sta);
+        userStyle = SharePreferences.getInt(RunActivity.this,AppConstants.USER_STYLE);
+
         recyclerView1 = (RecyclerView) findViewById(R.id.class_activity_rv1);
         recyclerView2 = (RecyclerView) findViewById(R.id.class_activity_rv2);
         recyclerView3 = (RecyclerView) findViewById(R.id.class_activity_rv3);
@@ -123,7 +132,6 @@ public class RunActivity extends AppCompatActivity {
         imageView2 = (ImageView) findViewById(R.id.class_activity_iv2);
         textView = (TextView) findViewById(R.id.class_activity_tv1);
 
-        to = (TextView) findViewById(R.id.class_activity_to);
 
         LinearLayoutManager linearLayoutManager1 = new LinearLayoutManager(this);
         linearLayoutManager1.setOrientation(LinearLayoutManager.HORIZONTAL);
@@ -144,22 +152,8 @@ public class RunActivity extends AppCompatActivity {
     }
 
     private void setClick(){
-        imageView1.setImageResource(R.mipmap.ic_touxiang41);
-        imageView2.setImageResource(R.mipmap.ic_touxiang51);
-        imageView1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(RunActivity.this, HuDongPlayActivity.class);
-                startActivity(intent);
-            }
-        });
-        imageView2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(RunActivity.this, HuDongPlayActivity.class);
-                startActivity(intent);
-            }
-        });
+//        imageView1.setImageResource(R.mipmap.ic_touxiang41);
+//        imageView2.setImageResource(R.mipmap.ic_touxiang51);
 
         textView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -173,8 +167,12 @@ public class RunActivity extends AppCompatActivity {
         to.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(RunActivity.this,GoBroadActivity.class);
-                startActivity(intent);
+                if(userSta == 1 && userStyle == 1){
+                    Intent intent = new Intent(RunActivity.this,GoBroadActivity.class);
+                    startActivity(intent);
+                }else {
+                    Tip.showTip(RunActivity.this,"还不是主播");
+                }
             }
         });
 
@@ -271,6 +269,21 @@ public class RunActivity extends AppCompatActivity {
             }
         }
 
+        imageView1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(RunActivity.this, HuDongPlayActivity.class);
+                startActivity(intent);
+            }
+        });
+        imageView2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(RunActivity.this, HuDongPlayActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
 
@@ -278,6 +291,8 @@ public class RunActivity extends AppCompatActivity {
     private void connectData1(){
         name1 = new ArrayList<>();
         cover1 = new ArrayList<>();
+        bid1 = new ArrayList<>();
+        roomId = new ArrayList<>();
         new Thread(){
             public void run(){
                 Looper.prepare();
@@ -289,6 +304,8 @@ public class RunActivity extends AppCompatActivity {
                         ResultSet resultSet = stmt.executeQuery(sql);
                         while(resultSet.next()){
                             name1.add(resultSet.getString("anchor_name"));
+                            bid1.add(resultSet.getInt("anchor_bid"));
+                            roomId.add(resultSet.getInt("anchor_room"));
                             cover1.add(resultSet.getString("anchor_cover"));
                         }
                         Message message = new Message();
@@ -320,6 +337,8 @@ public class RunActivity extends AppCompatActivity {
                     @Override
                     public void onItemClick(View view, int position) {
                         Intent intent = new Intent(RunActivity.this, BroadcastActivity.class);
+                        intent.putExtra("anchor_bid",bid1.get(position));
+                        intent.putExtra("anchor_room",roomId.get(position));
                         startActivity(intent);
                     }
                 });

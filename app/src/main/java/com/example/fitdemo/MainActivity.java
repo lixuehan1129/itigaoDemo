@@ -27,6 +27,7 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.util.Util;
 import com.example.fitdemo.Adapter.SectionsPagerAdapter;
 import com.example.fitdemo.AutoProject.AppConstants;
+import com.example.fitdemo.AutoProject.JDBCTools;
 import com.example.fitdemo.AutoProject.SharePreferences;
 import com.example.fitdemo.Classes.ClassesFragment;
 import com.example.fitdemo.Database.DataBaseHelper;
@@ -39,9 +40,13 @@ import com.example.fitdemo.Utils.PermissionUtils;
 import com.example.fitdemo.Utils.StatusBarUtils;
 import com.example.fitdemo.ViewHelper.NoScollViewPager;
 import com.mob.MobSDK;
+import com.mysql.jdbc.Connection;
 
 
 import java.lang.reflect.Field;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -79,7 +84,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationB
     private void initView(){
         viewPager = (NoScollViewPager) findViewById(R.id.viewpager);
         bottomNavigationBar = (BottomNavigationBar) findViewById(R.id.bottom_navigation);
-        viewPager.setOffscreenPageLimit(2);
+        viewPager.setOffscreenPageLimit(3);
         initBottomNavigationBar();
         initViewPager();
     }
@@ -96,8 +101,6 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationB
         }
         cursor.close();
         sqLiteDatabase.close();
-
-
         Im();
     }
 
@@ -109,6 +112,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationB
             }
         });
     }
+
 
     private void initBottomNavigationBar() {
         bottomNavigationBar.setTabSelectedListener(this);

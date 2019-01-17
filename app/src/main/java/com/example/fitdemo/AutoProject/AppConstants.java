@@ -9,6 +9,12 @@ public class AppConstants {
     public static final String USER_PHONE = "phone";
     public static final String USER_PASSWORD = "pass";
 
+
+    //如果是主播 1是不是 2是哪个 3主播id
+    public static final String USER_sta = "user";
+    public static final String USER_STYLE = "style";
+    public static final String USER_ID = "id";
+
     public static final String IM_PASS = "123456";
 
     public static final String BROAD_RECORD1 = "android.intent.action.broadcast.record1";

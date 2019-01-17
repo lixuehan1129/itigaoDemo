@@ -12,6 +12,7 @@ import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
+import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
 import android.provider.ContactsContract;
@@ -39,6 +40,8 @@ import com.example.fitdemo.Classes.RunActivity;
 import com.example.fitdemo.Database.DataBaseHelper;
 import com.example.fitdemo.R;
 import com.example.fitdemo.User.UserLoginActivity;
+import com.example.fitdemo.Utils.Class_select;
+import com.example.fitdemo.Utils.DateUtils;
 import com.example.fitdemo.Utils.StatusBarUtils;
 import com.mysql.jdbc.Connection;
 
@@ -48,6 +51,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 
 import cn.jpush.im.android.api.JMessageClient;
@@ -78,7 +82,7 @@ public class PersonChangeActivity extends AppCompatActivity{
     private EditText editText;
     private TextView ok,sta,textView1,textView2;
 
-    private int userLevel,userSta,userSex;
+    private int userLevel,userSta,userSex,anchorId;
     private String userName,userPicture;
 
     @Override
@@ -90,6 +94,7 @@ public class PersonChangeActivity extends AppCompatActivity{
         userLevel = intent.getIntExtra("userLevel",1);
         userSta = intent.getIntExtra("userSta",0);
         phone = SharePreferences.getString(PersonChangeActivity.this,AppConstants.USER_PHONE);
+        anchorId = SharePreferences.getInt(PersonChangeActivity.this,AppConstants.USER_ID);
         initView();
     }
 
@@ -144,7 +149,7 @@ public class PersonChangeActivity extends AppCompatActivity{
                 break;
         }
 
-        sta.setText(userSta == 0 ? "普通会员":"正式主播");
+        sta.setText(userSta == 0 ? "普通会员":"正式主播" + "房间号（" + anchorId + ")");
 
 
         onClick();
@@ -223,12 +228,15 @@ public class PersonChangeActivity extends AppCompatActivity{
 
 
         //申请主播
-        relativeLayout4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Tip.showTip(PersonChangeActivity.this,"申请");
-            }
-        });
+        if(sta.getText().toString().equals("普通会员")){
+            relativeLayout4.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                 //   Tip.showTip(PersonChangeActivity.this,"申请");
+                    showDialog();
+                }
+            });
+        }
 
         //保存
         ok.setOnClickListener(new View.OnClickListener() {
@@ -238,6 +246,106 @@ public class PersonChangeActivity extends AppCompatActivity{
             }
         });
     }
+
+    private void showDialog(){
+        final String[] items = new String[] { "跑步机", "动感单车", "力量训练", "瑜伽" };
+        // 创建对话框构建器
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        // 设置参数
+        builder.setTitle("选择后不能修改，请慎重~~~")
+                .setItems(items, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        setData(which+1);
+                        Tip.showTip(PersonChangeActivity.this,items[which]);
+                    }
+                });
+        builder.create().show();
+    }
+
+    private void setData(int which){
+        final ProgressDialog progressDialog = ProgressDialog.show(PersonChangeActivity.this,"","请稍等...",true);
+        new Thread(){
+            public void run(){
+                try {
+                    Connection conn = JDBCTools.getConnection();
+                    if(conn != null) {
+                        Statement stmt = conn.createStatement();
+                        String sqlSize = "SELECT anchor_bid FROM anchor WHERE anchor_classify = " +
+                                which +
+                                " ORDER BY anchor_bid DESC LIMIT 1";
+                        ResultSet resultSet = stmt.executeQuery(sqlSize);
+                        int size = 0;
+                        if(resultSet.first()){
+                            size = resultSet.getInt("anchor_bid") + 1;
+                        }
+
+                        String sql = "SELECT room_num FROM room WHERE room_sta = 0 LIMIT 1";
+                        ResultSet resultSet1 = stmt.executeQuery(sql);
+                        if(resultSet1.first()){
+                            int roomId = resultSet1.getInt("room_num");
+
+                            String sql1 = "INSERT INTO anchor (anchor_classify,anchor_phone,anchor_name,anchor_bid,anchor_num,anchor_cover,anchor_state,anchor_room) VALUES (?,?,?,?,?,?,?,?)";
+                            PreparedStatement preparedStatement = conn.prepareStatement(sql1,Statement.RETURN_GENERATED_KEYS);
+                            preparedStatement.setInt(1,which);
+                            preparedStatement.setString(2,phone);
+                            preparedStatement.setString(3,userName);
+                            preparedStatement.setInt(4,size);
+                            preparedStatement.setInt(5,0);
+                            preparedStatement.setString(6,"http://ty.tipass.com/images/cover/fit_running(1).png");
+                            preparedStatement.setInt(7,0);
+                            preparedStatement.setInt(8,roomId);
+                            preparedStatement.executeUpdate();
+                            preparedStatement.close();
+
+                            String sql2 = "UPDATE room SET room_sta = ? WHERE room_num = " +
+                                    roomId +
+                                    "";
+                            PreparedStatement preparedStatement1 = conn.prepareStatement(sql2,Statement.RETURN_GENERATED_KEYS);
+                            preparedStatement1.setInt(1,1);
+                            preparedStatement1.executeUpdate();
+                            preparedStatement1.close();
+
+                            SharePreferences.remove(PersonChangeActivity.this,AppConstants.USER_sta);
+                            SharePreferences.putInt(PersonChangeActivity.this,AppConstants.USER_sta,1);
+                            SharePreferences.putInt(PersonChangeActivity.this,AppConstants.USER_STYLE,which);
+                            SharePreferences.putInt(PersonChangeActivity.this,AppConstants.USER_ID,size);
+
+                            Message message = new Message();
+                            message.what = 101;
+                            handler.sendMessage(message);
+                        }
+
+                        resultSet.close();
+                        resultSet1.close();
+                        JDBCTools.releaseConnection(stmt,conn);
+                    }
+                    progressDialog.dismiss();
+                }catch (SQLException e){
+                    e.printStackTrace();
+                    progressDialog.dismiss();
+                    Tip.showTip(PersonChangeActivity.this,"请检查网络");
+                }
+            }
+        }.start();
+    }
+
+    private Handler handler = new Handler(new Handler.Callback() {
+
+        @Override
+        public boolean handleMessage(Message msg) {
+            // TODO Auto-generated method stub
+            switch (msg.what){
+                case 101:{
+                    sta.setText("正式主播");
+                    break;
+                }
+                default:
+                    break;
+            }
+            return false;
+        }
+    });
 
     private void upload(){
         progressDialog = ProgressDialog.show(PersonChangeActivity.this,"","修改中...",true);

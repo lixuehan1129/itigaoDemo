@@ -151,12 +151,13 @@ public class UserLoginActivity extends AppCompatActivity {
                                 ContentValues values = new ContentValues();
                                 SharePreferences.putString(UserLoginActivity.this, AppConstants.USER_PHONE, name.getText().toString());
                                 SharePreferences.putString(UserLoginActivity.this, AppConstants.USER_PASSWORD, password.getText().toString());
+                                SharePreferences.putInt(UserLoginActivity.this,AppConstants.USER_sta,0);
                                 String phone = resultSet.getString("user_phone");
-                                String name = resultSet.getString("user_name");
+                                String name1 = resultSet.getString("user_name");
                                 String picture = resultSet.getString("user_picture");
                                 int sex = resultSet.getInt("user_sex");
                                 int sort = resultSet.getInt("user_sort");
-                                values.put("user_name",name);
+                                values.put("user_name",name1);
                                 values.put("user_phone",phone);
                                 values.put("user_sort",sort);
                                 values.put("user_sex",sex);
@@ -164,6 +165,18 @@ public class UserLoginActivity extends AppCompatActivity {
                                 sqLiteDatabase.insert("user",null,values);
                                 sqLiteDatabase.close();
                                 resultSet.close();
+
+                                String sqlS = "SELECT * FROM anchor WHERE anchor_phone = '" +
+                                         name.getText().toString()+
+                                        "' LIMIT 1";
+                                ResultSet resultSet1 = stmt.executeQuery(sqlS);
+                                if(resultSet1.first()){
+                                    SharePreferences.putInt(UserLoginActivity.this,AppConstants.USER_sta,1);
+                                    SharePreferences.putInt(UserLoginActivity.this,AppConstants.USER_STYLE,resultSet1.getInt("anchor_classify"));
+                                    SharePreferences.putInt(UserLoginActivity.this,AppConstants.USER_ID,resultSet1.getInt("anchor_bid"));
+                                }
+                                resultSet1.close();
+
                                 JDBCTools.releaseConnection(stmt,conn);
                                 Im();
                             }else {
@@ -176,6 +189,7 @@ public class UserLoginActivity extends AppCompatActivity {
                             progressDialog.dismiss();
                         }
                         resultSet.close();
+
                         JDBCTools.releaseConnection(stmt,conn);
                     }else {
                         Tip.showTip(UserLoginActivity.this,"请检查网络");

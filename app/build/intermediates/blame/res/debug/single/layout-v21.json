@@ -1,18 +1,18 @@
 [
     {
         "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_action_tombstone.xml",
-        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\58ec5f78e013559d4bc6a7be7188aa11\\res\\layout-v21\\notification_action_tombstone.xml"
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\35c78eb3c47ae2e510945dfde83f16c0\\res\\layout-v21\\notification_action_tombstone.xml"
     },
     {
         "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_template_icon_group.xml",
-        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\58ec5f78e013559d4bc6a7be7188aa11\\res\\layout-v21\\notification_template_icon_group.xml"
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\35c78eb3c47ae2e510945dfde83f16c0\\res\\layout-v21\\notification_template_icon_group.xml"
     },
     {
         "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_template_custom_big.xml",
-        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\58ec5f78e013559d4bc6a7be7188aa11\\res\\layout-v21\\notification_template_custom_big.xml"
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\35c78eb3c47ae2e510945dfde83f16c0\\res\\layout-v21\\notification_template_custom_big.xml"
     },
     {
         "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_action.xml",
-        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\58ec5f78e013559d4bc6a7be7188aa11\\res\\layout-v21\\notification_action.xml"
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\35c78eb3c47ae2e510945dfde83f16c0\\res\\layout-v21\\notification_action.xml"
     }
 ]

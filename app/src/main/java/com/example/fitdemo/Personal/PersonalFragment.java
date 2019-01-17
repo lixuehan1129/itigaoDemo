@@ -59,7 +59,7 @@ public class PersonalFragment extends BaseFragment {
     private RecyclerView recyclerView;
 
     private String userName,userPicture;
-    private int userLevel = 1,userSta = 0;
+    private int userLevel = 1,userSta;
 
     @Override
     public void onStart(){
@@ -97,6 +97,7 @@ public class PersonalFragment extends BaseFragment {
     private void initView(View view){
         Toolbar toolbar = (Toolbar) view.findViewById(R.id.personalFragment_mainTool);
         toolbar.setTitle("个人信息");
+        
 
         code = (ImageView) view.findViewById(R.id.personalFragment_code);
         set = (ImageView) view.findViewById(R.id.personalFragment_set);
@@ -140,6 +141,7 @@ public class PersonalFragment extends BaseFragment {
             userName = cursor.getString(cursor.getColumnIndex("user_name"));
             userPicture = cursor.getString(cursor.getColumnIndex("user_picture"));
         }
+        userSta = SharePreferences.getInt(getActivity(),AppConstants.USER_sta);
         cursor.close();
         sqLiteDatabase.close();
 

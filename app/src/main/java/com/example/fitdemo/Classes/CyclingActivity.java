@@ -54,8 +54,13 @@ public class CyclingActivity extends AppCompatActivity {
     private IntentFilter intentFilter;
     private BroadcastReceiver mReceiver;
 
+    private TextView to;
+
+    private int userSta,userStyle;
+
     ArrayList<String> name1;
     ArrayList<Integer> bid1;
+    ArrayList<Integer> roomId;
     ArrayList<String> cover1;
 
     ArrayList<String> name2;
@@ -112,7 +117,11 @@ public class CyclingActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.class_activity_mainTool);
         toolbar.setTitle("骑车课程");
         back(toolbar);
-        
+
+        to = (TextView) findViewById(R.id.class_activity_to);
+        userSta = SharePreferences.getInt(CyclingActivity.this,AppConstants.USER_sta);
+        userStyle = SharePreferences.getInt(CyclingActivity.this,AppConstants.USER_STYLE);
+
         recyclerView1 = (RecyclerView) findViewById(R.id.class_activity_rv1);
         recyclerView2 = (RecyclerView) findViewById(R.id.class_activity_rv2);
         recyclerView3 = (RecyclerView) findViewById(R.id.class_activity_rv3);
@@ -140,22 +149,8 @@ public class CyclingActivity extends AppCompatActivity {
     }
 
     private void setClick(){
-        imageView1.setImageResource(R.mipmap.ic_touxiang41);
-        imageView2.setImageResource(R.mipmap.ic_touxiang51);
-        imageView1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(CyclingActivity.this, BroadcastActivity.class);
-                startActivity(intent);
-            }
-        });
-        imageView2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(CyclingActivity.this, BroadcastActivity.class);
-                startActivity(intent);
-            }
-        });
+//        imageView1.setImageResource(R.mipmap.ic_touxiang41);
+//        imageView2.setImageResource(R.mipmap.ic_touxiang51);
 
         textView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -163,6 +158,18 @@ public class CyclingActivity extends AppCompatActivity {
                 Intent intent = new Intent(CyclingActivity.this, HuDongActivity.class);
                 intent.putExtra("hudong_classify",2);
                 startActivity(intent);
+            }
+        });
+
+        to.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(userSta == 1 && userStyle == 2){
+                    Intent intent = new Intent(CyclingActivity.this,GoBroadActivity.class);
+                    startActivity(intent);
+                }else {
+                    Tip.showTip(CyclingActivity.this,"还不是主播");
+                }
             }
         });
 
@@ -257,12 +264,29 @@ public class CyclingActivity extends AppCompatActivity {
                     .into(imageView2);
         }
 
+        imageView1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(CyclingActivity.this, BroadcastActivity.class);
+                startActivity(intent);
+            }
+        });
+        imageView2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(CyclingActivity.this, BroadcastActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
 
     //主播列表
     private void connectData1(){
         name1 = new ArrayList<>();
+        bid1 = new ArrayList<>();
+        roomId = new ArrayList<>();
         cover1 = new ArrayList<>();
         new Thread(){
             public void run(){
@@ -276,6 +300,8 @@ public class CyclingActivity extends AppCompatActivity {
                         while(resultSet.next()){
                             name1.add(resultSet.getString("anchor_name"));
                             cover1.add(resultSet.getString("anchor_cover"));
+                            bid1.add(resultSet.getInt("anchor_bid"));
+                            roomId.add(resultSet.getInt("anchor_room"));
                         }
                         Message message = new Message();
                         message.what = 1;
@@ -306,6 +332,8 @@ public class CyclingActivity extends AppCompatActivity {
                     @Override
                     public void onItemClick(View view, int position) {
                         Intent intent = new Intent(CyclingActivity.this, BroadcastActivity.class);
+                        intent.putExtra("anchor_bid",bid1.get(position));
+                        intent.putExtra("anchor_room",roomId.get(position));
                         startActivity(intent);
                     }
                 });

@@ -206,6 +206,7 @@ public class FitFragment extends BaseFragment {
                                 check = 1;
                             }
                             resultSet1.close();
+                            stmt1.close();
 
                             String rTime;
                             if(time == 1){
