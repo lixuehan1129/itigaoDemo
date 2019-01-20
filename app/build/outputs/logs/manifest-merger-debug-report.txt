@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:2:1-233:12
-INJECTED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:2:1-233:12
-INJECTED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:2:1-233:12
-INJECTED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:2:1-233:12
+ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:2:1-247:12
+INJECTED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:2:1-247:12
+INJECTED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:2:1-247:12
+INJECTED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:2:1-247:12
 MERGED from [com.ashokvarma.android:bottom-navigation-bar:2.0.3] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\bottom-navigation-bar-2.0.3.aar\33e3918b5d343d34ca8afab652d3003d\AndroidManifest.xml:2:1-13:12
 MERGED from [de.hdodenhof:circleimageview:2.1.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\circleimageview-2.1.0.aar\3815968487ba00d544ed269dbaf7a33c\AndroidManifest.xml:2:1-11:12
 MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\b4d0e537479ae22b65deee13bceb3765\AndroidManifest.xml:2:1-134:12
@@ -51,22 +51,22 @@ MERGED from [net.butterflytv.utils:rtmp-client:3.0.1] C:\Users\最美人间四月天\.g
 MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\f2205b9c8cbdd2d8a033320ad864ae4d\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.core:runtime:1.1.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\38c6180b57c234f39540cb06dd2a3155\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\f6e3dd88d5e418faf93cec0b41d89e5d\AndroidManifest.xml:17:1-22:12
-INJECTED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:2:1-233:12
-INJECTED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:2:1-233:12
-INJECTED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:2:1-233:12
+INJECTED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:2:1-247:12
+INJECTED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:2:1-247:12
+INJECTED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:2:1-247:12
 	package
 		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:4:5-34
 		INJECTED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml
 		INJECTED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml
-		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:2:1-233:12
+		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:2:1-247:12
 		INJECTED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml
 	xmlns:tools
 		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:3:5-51
 	android:versionCode
 		INJECTED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml
-		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:2:1-233:12
+		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:2:1-247:12
 		INJECTED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:2:11-69
@@ -203,7 +203,7 @@ MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\cach
 	android:name
 		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:53:22-68
 application
-ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:55:5-231:19
+ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:55:5-245:19
 MERGED from [com.ashokvarma.android:bottom-navigation-bar:2.0.3] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\bottom-navigation-bar-2.0.3.aar\33e3918b5d343d34ca8afab652d3003d\AndroidManifest.xml:11:5-47
 MERGED from [com.ashokvarma.android:bottom-navigation-bar:2.0.3] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\bottom-navigation-bar-2.0.3.aar\33e3918b5d343d34ca8afab652d3003d\AndroidManifest.xml:11:5-47
 MERGED from [de.hdodenhof:circleimageview:2.1.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\circleimageview-2.1.0.aar\3815968487ba00d544ed269dbaf7a33c\AndroidManifest.xml:9:5-20
@@ -237,251 +237,267 @@ MERGED from [com.shuyu:gsyVideoPlayer-x86:6.0.2] C:\Users\最美人间四月天\.gradle
 MERGED from [com.shuyu:gsyvideoplayer-androidvideocache:6.0.2] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\gsyvideoplayer-androidvideocache-6.0.2.aar\2425195569087ebc76dc0df8cc366537\AndroidManifest.xml:11:5-15:19
 MERGED from [com.shuyu:gsyvideoplayer-androidvideocache:6.0.2] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\gsyvideoplayer-androidvideocache-6.0.2.aar\2425195569087ebc76dc0df8cc366537\AndroidManifest.xml:11:5-15:19
 	android:supportsRtl
-		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:60:9-35
+		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:59:9-35
 	android:label
 		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:58:9-41
 	android:hardwareAccelerated
-		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:62:9-43
-	android:roundIcon
-		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:59:9-54
+		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:61:9-43
 	android:largeHeap
-		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:63:9-33
+		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:62:9-33
 	android:icon
-		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:57:9-43
+		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:57:9-44
 	android:allowBackup
 		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:56:9-35
 	android:theme
-		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:61:9-65
+		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:60:9-65
 activity#com.example.fitdemo.InitializeActivity
-ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:64:9-70:20
+ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:63:9-69:20
 	android:name
-		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:64:19-53
+		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:63:19-53
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:65:13-69:29
+ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:64:13-68:29
 action#android.intent.action.MAIN
-ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:66:17-69
+ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:65:17-69
 	android:name
-		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:66:25-66
+		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:65:25-66
 category#android.intent.category.LAUNCHER
-ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:68:17-77
+ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:67:17-77
 	android:name
-		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:68:27-74
+		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:67:27-74
 service#cn.jpush.android.service.PushService
-ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:74:9-84:19
+ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:73:9-83:19
 MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\b4d0e537479ae22b65deee13bceb3765\AndroidManifest.xml:46:9-57:19
 MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\b4d0e537479ae22b65deee13bceb3765\AndroidManifest.xml:46:9-57:19
 	android:process
 		ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\b4d0e537479ae22b65deee13bceb3765\AndroidManifest.xml:50:13-40
 	android:enabled
-		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:76:13-35
+		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:75:13-35
 	android:exported
-		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:77:13-37
+		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:76:13-37
 	android:name
-		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:75:13-64
+		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:74:13-64
 intent-filter#cn.jpush.android.intent.PUSH_TIME+cn.jpush.android.intent.PushService+cn.jpush.android.intent.REGISTER+cn.jpush.android.intent.REPORT
-ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:78:13-83:29
+ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:77:13-82:29
 action#cn.jpush.android.intent.REGISTER
-ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:79:17-75
+ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:78:17-75
 	android:name
-		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:79:25-72
+		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:78:25-72
 action#cn.jpush.android.intent.REPORT
-ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:80:17-73
+ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:79:17-73
 	android:name
-		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:80:25-70
+		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:79:25-70
 action#cn.jpush.android.intent.PushService
-ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:81:17-78
+ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:80:17-78
 	android:name
-		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:81:25-75
+		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:80:25-75
 action#cn.jpush.android.intent.PUSH_TIME
-ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:82:17-76
+ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:81:17-76
 	android:name
-		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:82:25-73
+		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:81:25-73
 receiver#cn.jpush.android.service.AlarmReceiver
-ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:87:9-89:40
+ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:86:9-88:40
 MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\b4d0e537479ae22b65deee13bceb3765\AndroidManifest.xml:90:9-92:40
 MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\b4d0e537479ae22b65deee13bceb3765\AndroidManifest.xml:90:9-92:40
 	android:exported
-		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:89:13-37
+		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:88:13-37
 	android:name
-		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:88:13-66
+		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:87:13-66
 provider#cn.jpush.android.service.DataProvider
-ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:92:9-95:40
+ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:91:9-94:40
 MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\b4d0e537479ae22b65deee13bceb3765\AndroidManifest.xml:95:9-98:40
 MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\b4d0e537479ae22b65deee13bceb3765\AndroidManifest.xml:95:9-98:40
 	android:authorities
-		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:94:13-67
+		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:93:13-67
 	android:exported
-		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:95:13-37
+		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:94:13-37
 	android:name
-		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:93:13-65
+		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:92:13-65
 provider#cn.jpush.im.android.helpers.ipc.IMProvider
-ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:98:9-101:40
+ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:97:9-100:40
 MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\b4d0e537479ae22b65deee13bceb3765\AndroidManifest.xml:114:9-117:40
 MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\b4d0e537479ae22b65deee13bceb3765\AndroidManifest.xml:114:9-117:40
 	android:authorities
-		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:100:13-65
+		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:99:13-65
 	android:exported
-		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:101:13-37
+		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:100:13-37
 	android:name
-		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:99:13-70
+		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:98:13-70
 receiver#cn.jpush.im.android.helpers.IMReceiver
-ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:104:9-108:20
+ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:103:9-107:20
 MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\b4d0e537479ae22b65deee13bceb3765\AndroidManifest.xml:83:9-87:20
 MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\b4d0e537479ae22b65deee13bceb3765\AndroidManifest.xml:83:9-87:20
 	android:enabled
-		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:106:13-35
+		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:105:13-35
 	android:exported
-		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:107:13-37
+		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:106:13-37
 	android:name
-		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:105:13-66
+		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:104:13-66
 meta-data#JPUSH_CHANNEL
-ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:116:9-118:49
+ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:115:9-117:49
 MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\b4d0e537479ae22b65deee13bceb3765\AndroidManifest.xml:125:9-127:48
 MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\b4d0e537479ae22b65deee13bceb3765\AndroidManifest.xml:125:9-127:48
 	android:value
-		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:118:13-46
+		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:117:13-46
 	android:name
-		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:117:13-41
+		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:116:13-41
 meta-data#JPUSH_APPKEY
-ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:121:9-123:56
+ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:120:9-122:56
 MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\b4d0e537479ae22b65deee13bceb3765\AndroidManifest.xml:129:9-131:47
 MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\b4d0e537479ae22b65deee13bceb3765\AndroidManifest.xml:129:9-131:47
 	android:value
-		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:123:13-53
+		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:122:13-53
 	android:name
-		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:122:13-40
+		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:121:13-40
 activity#com.example.fitdemo.MainActivity
-ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:125:9-128:20
+ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:124:9-127:20
 	tools:ignore
-		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:126:13-47
+		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:125:13-47
 	android:name
-		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:125:19-47
+		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:124:19-47
 activity#com.example.fitdemo.Subscribe.VideoPlayActivity
-ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:130:9-135:20
+ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:129:9-134:20
 	android:screenOrientation
-		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:133:13-49
+		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:132:13-49
 	tools:ignore
-		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:131:13-47
+		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:130:13-47
 	android:configChanges
-		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:132:13-74
+		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:131:13-74
 	android:name
-		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:130:19-62
+		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:129:19-62
 activity#com.example.fitdemo.Classes.FitActivity
-ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:137:9-140:20
+ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:136:9-139:20
 	tools:ignore
-		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:138:13-47
+		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:137:13-47
 	android:name
-		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:137:19-54
+		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:136:19-54
 activity#com.example.fitdemo.Classes.CyclingActivity
-ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:142:9-145:20
+ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:141:9-144:20
 	tools:ignore
-		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:143:13-47
+		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:142:13-47
 	android:name
-		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:142:19-58
+		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:141:19-58
 activity#com.example.fitdemo.Classes.RunActivity
-ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:147:9-150:20
+ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:146:9-149:20
 	tools:ignore
-		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:148:13-47
+		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:147:13-47
 	android:name
-		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:147:19-54
+		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:146:19-54
 activity#com.example.fitdemo.Classes.YogaActivity
-ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:152:9-155:20
+ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:151:9-154:20
 	tools:ignore
-		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:153:13-47
+		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:152:13-47
 	android:name
-		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:152:19-55
+		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:151:19-55
 activity#com.example.fitdemo.User.UserRegistActivity
-ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:158:9-161:20
+ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:157:9-160:20
 	tools:ignore
-		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:159:13-47
+		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:158:13-47
 	android:name
-		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:158:19-58
+		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:157:19-58
 activity#com.example.fitdemo.User.UserLoginActivity
-ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:163:9-166:20
+ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:162:9-165:20
 	tools:ignore
-		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:164:13-47
+		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:163:13-47
 	android:name
-		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:163:19-57
+		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:162:19-57
 activity#com.example.fitdemo.Classes.ChildActivity
-ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:168:9-171:20
+ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:167:9-170:20
 	tools:ignore
-		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:169:13-47
+		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:168:13-47
 	android:name
-		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:168:19-56
+		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:167:19-56
 activity#com.example.fitdemo.Classes.BroadcastActivity
-ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:173:9-178:20
+ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:172:9-177:20
 	android:screenOrientation
-		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:175:13-49
+		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:174:13-49
 	tools:ignore
-		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:176:13-47
+		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:175:13-47
 	android:configChanges
-		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:174:13-74
+		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:173:13-74
 	android:name
-		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:173:19-60
+		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:172:19-60
 activity#com.example.fitdemo.Classes.HuDongActivity
-ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:180:9-183:20
+ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:179:9-182:20
 	tools:ignore
-		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:181:13-47
+		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:180:13-47
 	android:name
-		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:180:19-57
+		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:179:19-57
 activity#com.example.fitdemo.Personal.PersonClassActivity
-ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:185:9-188:20
+ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:184:9-187:20
 	tools:ignore
-		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:186:13-47
+		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:185:13-47
 	android:name
-		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:185:19-63
+		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:184:19-63
 activity#com.example.fitdemo.Personal.PersonDeviceActivity
-ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:190:9-193:20
+ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:189:9-192:20
 	tools:ignore
-		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:191:13-47
+		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:190:13-47
 	android:name
-		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:190:19-64
+		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:189:19-64
 activity#com.example.fitdemo.Personal.PersonChangeActivity
-ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:195:9-198:20
+ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:194:9-197:20
 	tools:ignore
-		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:196:13-47
+		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:195:13-47
 	android:name
-		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:195:19-64
+		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:194:19-64
 activity#com.example.fitdemo.Personal.PersonExamActivity
-ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:200:9-203:20
+ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:199:9-202:20
 	tools:ignore
-		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:201:13-47
+		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:200:13-47
 	android:name
-		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:200:19-62
+		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:199:19-62
 activity#com.example.fitdemo.Personal.PersonIndoorActivity
-ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:205:9-208:20
+ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:204:9-207:20
 	tools:ignore
-		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:206:13-47
+		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:205:13-47
 	android:name
-		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:205:19-64
+		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:204:19-64
 activity#com.example.fitdemo.Subscribe.VideoRankActivity
-ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:210:9-213:20
+ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:209:9-212:20
 	tools:ignore
-		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:211:13-47
+		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:210:13-47
 	android:name
-		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:210:19-62
+		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:209:19-62
 activity#com.example.fitdemo.Classes.HuDongPlayActivity
-ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:215:9-217:52
+ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:214:9-216:52
 	android:screenOrientation
-		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:217:13-49
+		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:216:13-49
 	android:configChanges
-		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:216:13-74
+		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:215:13-74
 	android:name
-		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:215:19-61
+		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:214:19-61
 activity#com.example.fitdemo.Classes.HuDongPutActivity
-ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:219:9-222:20
+ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:218:9-221:20
 	tools:ignore
-		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:220:13-47
+		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:219:13-47
 	android:name
-		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:219:19-60
+		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:218:19-60
 activity#com.example.fitdemo.Classes.GoBroadActivity
-ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:224:9-228:20
+ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:223:9-227:20
 	android:screenOrientation
-		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:225:13-50
+		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:224:13-50
 	tools:ignore
-		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:226:13-47
+		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:225:13-47
 	android:name
-		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:224:19-58
+		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:223:19-58
+activity#com.example.fitdemo.Classes.TextActivity
+ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:229:9-232:20
+	tools:ignore
+		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:230:13-47
+	android:name
+		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:229:19-55
+activity#com.example.fitdemo.Classes.BaseActivity
+ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:234:9-237:20
+	tools:ignore
+		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:235:13-47
+	android:name
+		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:234:19-55
+activity#com.example.fitdemo.Subscribe.VideoActivity
+ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:239:9-242:20
+	tools:ignore
+		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:240:13-47
+	android:name
+		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:239:19-58
 uses-sdk
 INJECTED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml
@@ -602,7 +618,7 @@ ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\cache
 		ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\b4d0e537479ae22b65deee13bceb3765\AndroidManifest.xml:17:22-76
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
 ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\b4d0e537479ae22b65deee13bceb3765\AndroidManifest.xml:22:5-80
-IMPLIED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:2:1-233:12 reason: com.jiguang.im.jcenter requested WRITE_EXTERNAL_STORAGE
+IMPLIED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:2:1-247:12 reason: com.jiguang.im.jcenter requested WRITE_EXTERNAL_STORAGE
 	android:name
 		ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\b4d0e537479ae22b65deee13bceb3765\AndroidManifest.xml:22:22-77
 uses-permission#android.permission.SYSTEM_ALERT_WINDOW

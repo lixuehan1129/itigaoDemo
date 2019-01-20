@@ -293,6 +293,34 @@
 
                 </LinearLayout>
 
+                <LinearLayout
+                    android:id="@+id/personalFragment_go"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:orientation="vertical"
+                    android:background="@drawable/round_gb">
+
+                    <TextView
+                        android:id="@+id/personalFragment_go3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:paddingBottom="6dp"
+                        android:textColor="@color/colorBlack"
+                        android:padding="3dp"/>
+
+                    <TextView
+                        android:id="@+id/personalFragment_go2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:visibility="gone"
+                        android:padding="3dp"/>
+
+                </LinearLayout>
+
             </LinearLayout>
 
         </LinearLayout>

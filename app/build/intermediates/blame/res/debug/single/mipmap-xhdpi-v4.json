@@ -28,6 +28,10 @@
         "source": "D:\\Android\\Application\\FitDemo\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
     },
     {
+        "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\ic_launcher1.png",
+        "source": "D:\\Android\\Application\\FitDemo\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher1.png"
+    },
+    {
         "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\ic_full.png",
         "source": "D:\\Android\\Application\\FitDemo\\app\\src\\main\\res\\mipmap-xhdpi\\ic_full.png"
     }

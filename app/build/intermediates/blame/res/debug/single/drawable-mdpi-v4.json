@@ -20,12 +20,12 @@
         "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\58595d87c3aa053db670dfcb5ed41af2\\res\\drawable-mdpi-v4\\abc_ic_star_black_36dp.png"
     },
     {
-        "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_switch_track_mtrl_alpha.9.png",
-        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\58595d87c3aa053db670dfcb5ed41af2\\res\\drawable-mdpi-v4\\abc_switch_track_mtrl_alpha.9.png"
-    },
-    {
         "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\exo_icon_previous.png",
         "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\exoplayer-ui-2.9.1.aar\\f5250e7b4c08dc73237382ee25cdd722\\res\\drawable-mdpi-v4\\exo_icon_previous.png"
+    },
+    {
+        "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_switch_track_mtrl_alpha.9.png",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\58595d87c3aa053db670dfcb5ed41af2\\res\\drawable-mdpi-v4\\abc_switch_track_mtrl_alpha.9.png"
     },
     {
         "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_menu_hardkey_panel_mtrl_mult.9.png",
@@ -68,12 +68,12 @@
         "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\58595d87c3aa053db670dfcb5ed41af2\\res\\drawable-mdpi-v4\\abc_btn_radio_to_on_mtrl_000.png"
     },
     {
-        "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_popup_background_mtrl_mult.9.png",
-        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\58595d87c3aa053db670dfcb5ed41af2\\res\\drawable-mdpi-v4\\abc_popup_background_mtrl_mult.9.png"
-    },
-    {
         "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\exo_controls_repeat_all.png",
         "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\exoplayer-ui-2.9.1.aar\\f5250e7b4c08dc73237382ee25cdd722\\res\\drawable-mdpi-v4\\exo_controls_repeat_all.png"
+    },
+    {
+        "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_popup_background_mtrl_mult.9.png",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\58595d87c3aa053db670dfcb5ed41af2\\res\\drawable-mdpi-v4\\abc_popup_background_mtrl_mult.9.png"
     },
     {
         "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_btn_switch_to_on_mtrl_00001.9.png",

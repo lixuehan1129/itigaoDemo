@@ -166,7 +166,7 @@ public class SubscribeFragment extends BaseFragment {
         classVideoAdapter.setOnItemClickListener(new ClassVideoAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(View view, int position) {
-                Intent intent = new Intent(getActivity(), VideoPlayActivity.class);
+                Intent intent = new Intent(getActivity(), VideoActivity.class);
                 intent.putExtra("video_bid",bid.get(position));
                 intent.putExtra("video_section",section.get(position));
                 intent.putExtra("video_add",add.get(position));

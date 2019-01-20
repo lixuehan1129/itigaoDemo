@@ -11,16 +11,14 @@ public class AppConstants {
 
 
     //如果是主播 1是不是 2是哪个 3主播id
-    public static final String USER_sta = "user";
-    public static final String USER_STYLE = "style";
-    public static final String USER_ID = "id";
+  //  public static final String USER_sta = "user";
+ //   public static final String USER_STYLE = "style";
+  //  public static final String USER_ID = "id";
+
 
     public static final String IM_PASS = "123456";
 
-    public static final String BROAD_RECORD1 = "android.intent.action.broadcast.record1";
-    public static final String BROAD_RECORD2 = "android.intent.action.broadcast.record2";
-    public static final String BROAD_RECORD3 = "android.intent.action.broadcast.record3";
-    public static final String BROAD_RECORD4 = "android.intent.action.broadcast.record4";
+    public static final String BROAD_RECORD = "android.intent.action.broadcast.record2";
     public static final String BROAD_CHANGE = "android.intent.action.broadcast.change";
     public static final String BROAD_IM = "android.intent.action.broadcast.im";
 

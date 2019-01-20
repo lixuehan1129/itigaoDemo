@@ -116,13 +116,12 @@ public class InteractFragment extends BaseFragment {
         broadcastManager.registerReceiver(mReceiver, intentFilter);
     }
 
+    @Override
     public void onStart() {
         super.onStart();
         //注册
         JMessageClient.registerEventReceiver(this);
     }
-
-
 
 
     // 接收聊天室消息
@@ -163,17 +162,6 @@ public class InteractFragment extends BaseFragment {
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
     //    setAdapter();
     }
-
-
-    private void setAdapter(){
-        interactAdapter.setOnItemClickListener(new InteractAdapter.OnItemClickListener() {
-            @Override
-            public void onItemClick(View view, int position) {
-            }
-        });
-
-    }
-
 
     private void getGroup(){
         new Thread(){
@@ -276,8 +264,6 @@ public class InteractFragment extends BaseFragment {
 
     }
 
-
-
     private void ImRemove(){
 
         /**
@@ -307,32 +293,4 @@ public class InteractFragment extends BaseFragment {
         super.onDestroy();
     }
 
-
-
-
-//    private void updateGroup(){
-//        new Thread(){
-//            public void run(){
-//                try {
-//                    final Connection conn = JDBCTools.getConnection();
-//                    if(conn != null){
-//                        String sql = "UPDATE class SET class_group = ? WHERE class_bid = '" +
-//                                video_bid +
-//                                "'";
-//                        PreparedStatement preparedStatement = conn.prepareStatement(sql);
-//                        preparedStatement.setString(1,groupId);
-//                        preparedStatement.executeUpdate();
-//                        preparedStatement.close();
-//                        JDBCTools.releaseConnection(null,conn);
-//
-//                        if(groupId != null){
-//                            callBackValue.SendMessageValueGroup(groupId);
-//                        }
-//                    }
-//                } catch (SQLException e) {
-//                    e.printStackTrace();
-//                }
-//            }
-//        }.start();
-//    }
 }

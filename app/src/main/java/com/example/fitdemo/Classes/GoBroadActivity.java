@@ -1,5 +1,6 @@
 package com.example.fitdemo.Classes;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
@@ -43,12 +44,11 @@ public class GoBroadActivity extends AppCompatActivity implements RtmpHandler.Rt
     private static final String TAG = "Yasea";
 
     private Button btnPublish;
-   // private Button btnSwitchCamera;
     private ImageView btnSwitchCamera;
-    private Toolbar mToolbar;
 
-  //  private Button btnRecord;
-  //  private Button btnSwitchEncoder;
+    private int GoBid;
+
+    private String url = "rtmp://39.105.213.41:1935/live/";
 
     private SrsPublisher mPublisher;
 
@@ -58,6 +58,9 @@ public class GoBroadActivity extends AppCompatActivity implements RtmpHandler.Rt
 
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
         setContentView(R.layout.go_broad);
+
+        Intent intent = getIntent();
+        GoBid = intent.getIntExtra("GoBroadBid",0);
 
         // response screen rotation event
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_FULL_SENSOR);
@@ -72,10 +75,6 @@ public class GoBroadActivity extends AppCompatActivity implements RtmpHandler.Rt
         btnPublish = (Button) findViewById(R.id.publish);
         btnSwitchCamera = (ImageView) findViewById(R.id.swCam);
 
-      //  btnRecord = (Button) findViewById(R.id.record);
-      //  btnSwitchEncoder = (Button) findViewById(R.id.swEnc);
-
-
         mPublisher = new SrsPublisher((SrsCameraView) findViewById(R.id.glsurfaceview_camera));
         //设置编码消息处理
         mPublisher.setEncodeHandler(new SrsEncodeHandler(this));
@@ -84,11 +83,11 @@ public class GoBroadActivity extends AppCompatActivity implements RtmpHandler.Rt
         //设置记录消息处理
         mPublisher.setRecordHandler(new SrsRecordHandler(this));
         //设置展示界面大小
-        mPublisher.setPreviewResolution(width/2, heigth/2);
+        mPublisher.setPreviewResolution(width, heigth);
         //设置横屏推流 1为竖屏 2为横屏
         mPublisher.setScreenOrientation(1);
         //设置输出界面大小
-        mPublisher.setOutputResolution(width/2, heigth/2);
+        mPublisher.setOutputResolution(width, heigth);
         //设置视频高清模式
         mPublisher.setVideoHDMode();
         //打开摄像头
@@ -99,24 +98,17 @@ public class GoBroadActivity extends AppCompatActivity implements RtmpHandler.Rt
             @Override
             public void onClick(View v) {
                 if (btnPublish.getText().toString().contentEquals("Push")) {
-                    mPublisher.startPublish("rtmp://39.105.213.41:1935/live/1233");
+                    mPublisher.startPublish(url + GoBid);
                     mPublisher.startCamera();
                     Tip.showTip(GoBroadActivity.this,"开始直播");
 
-//                    if (btnSwitchEncoder.getText().toString().contentEquals("soft encoder")) {
-//                        Toast.makeText(getApplicationContext(), "Use hard encoder", Toast.LENGTH_SHORT).show();
-//                    } else {
-//                        Toast.makeText(getApplicationContext(), "Use soft encoder", Toast.LENGTH_SHORT).show();
-//                    }
                     btnPublish.setText("Stop");
-//                    btnSwitchEncoder.setEnabled(false);
                 } else if (btnPublish.getText().toString().contentEquals("Stop")) {
                     mPublisher.stopPublish();
                     mPublisher.stopRecord();
                     btnPublish.setText("Push");
                     Tip.showTip(GoBroadActivity.this,"停止直播");
-//                    btnRecord.setText("record");
-//                    btnSwitchEncoder.setEnabled(true);
+
                 }
             }
         });
@@ -128,18 +120,6 @@ public class GoBroadActivity extends AppCompatActivity implements RtmpHandler.Rt
             }
         });
 
-//        btnSwitchEncoder.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                if (btnSwitchEncoder.getText().toString().contentEquals("soft encoder")) {
-//                    mPublisher.switchToSoftEncoder();
-//                    btnSwitchEncoder.setText("hard encoder");
-//                } else if (btnSwitchEncoder.getText().toString().contentEquals("hard encoder")) {
-//                    mPublisher.switchToHardEncoder();
-//                    btnSwitchEncoder.setText("soft encoder");
-//                }
-//            }
-//        });
     }
 
 //    @Override

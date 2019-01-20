@@ -48,6 +48,10 @@
         "source": "D:\\Android\\Application\\FitDemo\\app\\src\\main\\res\\mipmap-mdpi\\ic_yogac1.png"
     },
     {
+        "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\ic_launcher1.png",
+        "source": "D:\\Android\\Application\\FitDemo\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher1.png"
+    },
+    {
         "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\ic_t_video41.PNG",
         "source": "D:\\Android\\Application\\FitDemo\\app\\src\\main\\res\\mipmap-mdpi\\ic_t_video41.PNG"
     },

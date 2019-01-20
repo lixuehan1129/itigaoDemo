@@ -9,22 +9,12 @@
     <android.support.v7.widget.Toolbar
         android:id="@+id/class_activity_mainTool"
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
+        android:layout_height="wrap_content"
         android:background="@color/colorWhite"
         app:titleTextColor="@color/colorBlack"
         app:navigationIcon="@mipmap/ic_back_black"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
-        <TextView
-            android:id="@+id/class_activity_to"
-            android:layout_width="40dp"
-            android:layout_height="25dp"
-            android:layout_gravity="end"
-            android:layout_marginRight="15dp"
-            android:background="@color/colorWhite"
-            android:text="开播"
-            android:textColor="@color/colorBlack"
-            android:textSize="15sp" />
     </android.support.v7.widget.Toolbar>
 
     <android.support.v4.widget.NestedScrollView

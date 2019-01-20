@@ -151,7 +151,7 @@ public class UserLoginActivity extends AppCompatActivity {
                                 ContentValues values = new ContentValues();
                                 SharePreferences.putString(UserLoginActivity.this, AppConstants.USER_PHONE, name.getText().toString());
                                 SharePreferences.putString(UserLoginActivity.this, AppConstants.USER_PASSWORD, password.getText().toString());
-                                SharePreferences.putInt(UserLoginActivity.this,AppConstants.USER_sta,0);
+                               // SharePreferences.putInt(UserLoginActivity.this,AppConstants.USER_sta,0);
                                 String phone = resultSet.getString("user_phone");
                                 String name1 = resultSet.getString("user_name");
                                 String picture = resultSet.getString("user_picture");
@@ -166,16 +166,16 @@ public class UserLoginActivity extends AppCompatActivity {
                                 sqLiteDatabase.close();
                                 resultSet.close();
 
-                                String sqlS = "SELECT * FROM anchor WHERE anchor_phone = '" +
-                                         name.getText().toString()+
-                                        "' LIMIT 1";
-                                ResultSet resultSet1 = stmt.executeQuery(sqlS);
-                                if(resultSet1.first()){
-                                    SharePreferences.putInt(UserLoginActivity.this,AppConstants.USER_sta,1);
-                                    SharePreferences.putInt(UserLoginActivity.this,AppConstants.USER_STYLE,resultSet1.getInt("anchor_classify"));
-                                    SharePreferences.putInt(UserLoginActivity.this,AppConstants.USER_ID,resultSet1.getInt("anchor_bid"));
-                                }
-                                resultSet1.close();
+//                                String sqlS = "SELECT * FROM anchor WHERE anchor_phone = '" +
+//                                         name.getText().toString()+
+//                                        "' LIMIT 1";
+//                                ResultSet resultSet1 = stmt.executeQuery(sqlS);
+//                                if(resultSet1.first()){
+//                                    SharePreferences.putInt(UserLoginActivity.this,AppConstants.USER_sta,1);
+//                                    SharePreferences.putInt(UserLoginActivity.this,AppConstants.USER_STYLE,resultSet1.getInt("anchor_classify"));
+//                                    SharePreferences.putInt(UserLoginActivity.this,AppConstants.USER_ID,resultSet1.getInt("anchor_bid"));
+//                                }
+//                                resultSet1.close();
 
                                 JDBCTools.releaseConnection(stmt,conn);
                                 Im();

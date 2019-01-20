@@ -94,7 +94,7 @@ public class PersonChangeActivity extends AppCompatActivity{
         userLevel = intent.getIntExtra("userLevel",1);
         userSta = intent.getIntExtra("userSta",0);
         phone = SharePreferences.getString(PersonChangeActivity.this,AppConstants.USER_PHONE);
-        anchorId = SharePreferences.getInt(PersonChangeActivity.this,AppConstants.USER_ID);
+        anchorId = intent.getIntExtra("userGoBid",0);
         initView();
     }
 
@@ -149,7 +149,7 @@ public class PersonChangeActivity extends AppCompatActivity{
                 break;
         }
 
-        sta.setText(userSta == 0 ? "普通会员":"正式主播" + "房间号（" + anchorId + ")");
+        sta.setText(userSta == 0 ? "普通会员":"正式主播  : " + "房间号（" + anchorId + ")");
 
 
         onClick();
@@ -306,10 +306,10 @@ public class PersonChangeActivity extends AppCompatActivity{
                             preparedStatement1.executeUpdate();
                             preparedStatement1.close();
 
-                            SharePreferences.remove(PersonChangeActivity.this,AppConstants.USER_sta);
-                            SharePreferences.putInt(PersonChangeActivity.this,AppConstants.USER_sta,1);
-                            SharePreferences.putInt(PersonChangeActivity.this,AppConstants.USER_STYLE,which);
-                            SharePreferences.putInt(PersonChangeActivity.this,AppConstants.USER_ID,size);
+//                            SharePreferences.remove(PersonChangeActivity.this,AppConstants.USER_sta);
+//                            SharePreferences.putInt(PersonChangeActivity.this,AppConstants.USER_sta,1);
+//                            SharePreferences.putInt(PersonChangeActivity.this,AppConstants.USER_STYLE,which);
+//                            SharePreferences.putInt(PersonChangeActivity.this,AppConstants.USER_ID,size);
 
                             Message message = new Message();
                             message.what = 101;

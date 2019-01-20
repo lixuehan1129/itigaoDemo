@@ -5,13 +5,16 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
+import android.support.v4.content.LocalBroadcastManager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -19,7 +22,10 @@ import android.widget.Toast;
 
 import com.example.fitdemo.Adapter.InteractAdapter;
 
+import com.example.fitdemo.AutoProject.AppConstants;
+import com.example.fitdemo.AutoProject.SharePreferences;
 import com.example.fitdemo.R;
+import com.example.fitdemo.Subscribe.VideoPlayActivity;
 import com.example.fitdemo.Utils.StatusBarUtils;
 import com.shuyu.gsyvideoplayer.GSYVideoManager;
 import com.shuyu.gsyvideoplayer.player.IjkPlayerManager;
@@ -28,9 +34,21 @@ import com.shuyu.gsyvideoplayer.utils.OrientationUtils;
 import com.shuyu.gsyvideoplayer.video.StandardGSYVideoPlayer;
 
 
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.util.ArrayList;
 import java.util.List;
 
+import cn.jpush.im.android.api.ChatRoomManager;
+import cn.jpush.im.android.api.JMessageClient;
+import cn.jpush.im.android.api.callback.RequestCallback;
+import cn.jpush.im.android.api.event.ChatRoomMessageEvent;
+import cn.jpush.im.android.api.model.Conversation;
+import cn.jpush.im.android.api.model.Message;
+import cn.jpush.im.api.BasicCallback;
 
 
 /**
@@ -52,6 +70,9 @@ public class BroadcastActivity extends AppCompatActivity {
     private StandardGSYVideoPlayer videoPlayer;
     private OrientationUtils orientationUtils;
 
+    private InteractAdapter interactAdapter;
+    private List<InteractAdapter.Interact> interacts = new ArrayList<>();
+
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -71,52 +92,26 @@ public class BroadcastActivity extends AppCompatActivity {
         editText = (EditText) findViewById(R.id.video_broad_et);
         imageView = (ImageView) findViewById(R.id.video_broad_iv);
 
+        interactAdapter = new InteractAdapter(interacts);
+        recyclerView.setAdapter(interactAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(BroadcastActivity.this));
+
         //获取屏幕宽
         WindowManager wm = (WindowManager) this
                 .getSystemService(Context.WINDOW_SERVICE);
         int width = wm.getDefaultDisplay().getWidth();
            setWidthHeightWithRatio(videoPlayer,width,16,9);
 
-        imageOnClick();
-        initData();
-
         setPlay();
-
-    }
-
-    private void initData(){
-        ArrayList<String> name = new ArrayList<>();
-        ArrayList<String> content = new ArrayList<>();
-        for(int i=0; i<8; i++){
-            name.add("用户名" + i);
-            content.add("看完这个视频，我想说点什么呢" + i);
-        }
-        name.add("用户名");
-        content.add("看完这个视频，我想说点什么呢，我觉得真的很好很有用，6666666666");
-        setAdapter(name,content);
-    }
-
-    private void setAdapter(final ArrayList<String> name, ArrayList<String> content){
-        List<InteractAdapter.Interact> interacts = new ArrayList<>();
-        for(int i=0; i<name.size(); i++){
-            InteractAdapter interactAdapter = new InteractAdapter(interacts);
-            InteractAdapter.Interact interact = interactAdapter.new Interact(name.get(i), content.get(i));
-            interacts.add(interact);
+        if(anchorRoom != 0){
+            ImRoom();
         }
 
-        InteractAdapter interactAdapter = new InteractAdapter(interacts);
-        recyclerView.setAdapter(interactAdapter);
-        interactAdapter.setOnItemClickListener(new InteractAdapter.OnItemClickListener() {
-            @Override
-            public void onItemClick(View view, int position) {
-
-            }
-        });
     }
+
 
     private void setPlay(){
-        url = URL_F + anchorRoom;
+        url = URL_F + anchorId;
 
         /**
          * 设置右下角 显示切换到全屏 的按键资源
@@ -171,18 +166,143 @@ public class BroadcastActivity extends AppCompatActivity {
         videoPlayer.startPlayLogic();
     }
 
+    private void ImRoom(){
+
+        /**
+         * 进入聊天室.
+         * 用户只有成功调用此接口之后，才能收到聊天室消息，以及在此聊天室中发言。
+         * 成功进入聊天室之后，会将聊天室中最近若干条聊天记录同步到本地并以{@link cn.jpush.im.android.api.event.ChatRoomMessageEvent}事件的形式通知到上层。
+         *
+         * @param roomID   聊天室的roomID
+         * @param callback 接口回调
+         * @since 2.4.0
+         */
+        ChatRoomManager.enterChatRoom(anchorRoom, new RequestCallback<Conversation>() {
+            @Override
+            public void gotResult(int i, String s, Conversation conversation) {
+                System.out.println("进入聊天室" + anchorRoom);
+                imageOnClick();
+            }
+        });
+
+
+        /**
+         * 创建聊天室会话，如果本地已存在对应会话，则不会重新创建，直接返回本地会话对象。
+         *
+         * @param roomID 聊天室的roomID
+         * @return 会话对象
+         * @since 2.4.0
+         */
+        Conversation.createChatRoomConversation(anchorRoom);
+
+        /**
+         * 获取聊天室会话信息
+         *
+         * @param roomID 群组的groupID
+         * @return 返回会话信息，若不存在和指定对象的会话则返回null
+         * @since 2.4.0
+         */
+        JMessageClient.getChatRoomConversation(anchorRoom);
+
+//        onEventMainThread(new ChatRoomMessageEvent(0,null,null));
+
+
+
+    }
+
+
+
+    private void ImRemove(){
+
+        /**
+         * 离开聊天室.
+         * 成功调用此接口之后，用户将能不在此聊天室收发消息。
+         *
+         * @param roomID   聊天室的roomID
+         * @param callback 接口回调
+         * @since 2.4.0
+         */
+        ChatRoomManager.leaveChatRoom(anchorRoom, new BasicCallback() {
+            @Override
+            public void gotResult(int i, String s) {
+                System.out.println("退出");
+            }
+        });
+    }
+
     private void imageOnClick(){
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if(!TextUtils.isEmpty(editText.getText())){
-                    ProgressDialog progressDialog = ProgressDialog.show(BroadcastActivity.this,"","正在上传...",true);
-                    progressDialog.setCancelable(true);// 设置是否可以通过点击Back键取消
+                    //将输入法隐藏，mPasswordEditText 代表密码输入框
+                    InputMethodManager imm =(InputMethodManager)getSystemService(
+                            Context.INPUT_METHOD_SERVICE);
+                    assert imm != null;
+                    imm.hideSoftInputFromWindow(editText.getWindowToken(), 0);
+
+                    // 发送聊天室消息
+                    Conversation conv = JMessageClient.getChatRoomConversation(anchorRoom);
+                    if (null == conv) {
+                        conv = Conversation.createChatRoomConversation(anchorRoom);
+                    }
+                    String text = editText.getText().toString();
+                    final Message msg = conv.createSendTextMessage(text);
+                    msg.setOnSendCompleteCallback(new BasicCallback() {
+                        @Override
+                        public void gotResult(int responseCode, String responseMessage) {
+                            if (0 == responseCode) {
+                                System.out.println("MessageSent" + responseCode + responseMessage + msg);
+                            } else {
+                                System.out.println("MessageSent" + responseCode + responseMessage + "失败");
+                            }
+                        }
+                    });
+                    JMessageClient.sendMessage(msg);
+                    editText.setText("");
+                    InteractAdapter.Interact interact = interactAdapter.new Interact("我", text);
+                    interactAdapter.addDataAt(interactAdapter.getItemCount(),interact);
+                    if(interactAdapter.getItemCount() != 0){
+                        recyclerView.scrollToPosition(interactAdapter.getItemCount()-1);
+                    }
                 }else {
                     Toast.makeText(BroadcastActivity.this,"内容不能为空",Toast.LENGTH_LONG).show();
                 }
             }
         });
+    }
+
+    // 接收聊天室消息
+    // 主线程
+    @Subscribe(sticky = true, threadMode = ThreadMode.ASYNC)
+    public void onEventMainThread(ChatRoomMessageEvent event) {
+        Log.d("tag", "ChatRoomMessageEvent received .");
+        List<cn.jpush.im.android.api.model.Message> msgs = event.getMessages();
+        for (cn.jpush.im.android.api.model.Message msg : msgs) {
+            //这个页面仅仅展示聊天室会话的消息
+            String msgCon = msg.getContent().toJson();
+            String getCon = null;
+            try {
+                JSONObject jsonObject = new JSONObject(msgCon);
+                getCon = jsonObject.getString("text");
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+            if(getCon != null){
+                //System.out.println("我的数字"+interacts.size());
+                if(msg.getFromID().equals(SharePreferences.getString(BroadcastActivity.this, AppConstants.USER_PHONE))){
+                    InteractAdapter.Interact interact = interactAdapter.new Interact("我", getCon);
+                    interactAdapter.addDataAt(interactAdapter.getItemCount(),interact);
+                }else {
+                    InteractAdapter.Interact interact = interactAdapter.new Interact(msg.getFromName(), getCon);
+                    interactAdapter.addDataAt(interactAdapter.getItemCount(),interact);
+                }
+                if(interactAdapter.getItemCount() != 0){
+                    recyclerView.scrollToPosition(interactAdapter.getItemCount()-1);
+                }
+            }
+        }
+
     }
 
     //根据宽高比设置控件宽高, 如设置宽高比为5:4，那么widthRatio为5，heightRatio为4
@@ -198,6 +318,12 @@ public class BroadcastActivity extends AppCompatActivity {
     }
 
 
+    @Override
+    public void onStart() {
+        super.onStart();
+        //注册
+        JMessageClient.registerEventReceiver(this);
+    }
 
     @Override
     protected void onPause() {
@@ -214,13 +340,16 @@ public class BroadcastActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         // TODO Auto-generated method stub
-        super.onDestroy();
         videoPlayer.onVideoResume();
+        if(anchorRoom != 0){
+            ImRemove();
+        }
+        JMessageClient.registerEventReceiver(this);
+        super.onDestroy();
     }
 
     @Override
     public void onBackPressed() {
-
 //        先返回正常状态
         if (orientationUtils.getScreenType() == ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE) {
             videoPlayer.getFullscreenButton().performClick();
@@ -235,6 +364,7 @@ public class BroadcastActivity extends AppCompatActivity {
         videoPlayer.setVideoAllCallBack(null);
         super.onBackPressed();
     }
+
     @Override
     protected void onStop() {
         super.onStop();

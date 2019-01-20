@@ -12,10 +12,11 @@
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/video_broad_rv"
-        android:layout_below="@id/video_broad_vv"
-        android:padding="12dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/video_broad_li"
+        android:layout_below="@id/video_broad_vv"
+        android:padding="12dp">
     </android.support.v7.widget.RecyclerView>
 
 

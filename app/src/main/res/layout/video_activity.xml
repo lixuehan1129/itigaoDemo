@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <cn.jzvd.JzvdStd
+        android:id="@+id/video_play1_vv"
+        android:layout_width="match_parent"
+        android:layout_height="210dp" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/video_play1_scr"
+        android:layout_below="@+id/video_play1_vv"
+        android:layout_above="@+id/video_play1_li"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/video_play1_lin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/video_fragment1_title"
+                    android:text="课程主题：健身"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="3dp"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorBlack"/>
+
+                <TextView
+                    android:id="@+id/video_fragment1_itr"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="3dp"
+                    android:paddingBottom="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:text="你只要每周训练三次,每次十至十五分钟,在深层肌肉得到训练的同时,腹部,臀部以及胸部和臂部也得到训练,新陈代谢会增加。飞力仕可以相当有效的解决背部问题。"
+                    android:maxLines="2"
+                    android:ellipsize="end"
+                    android:background="@drawable/bottom_lay" />
+
+
+                <TextView
+                    android:paddingTop="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="课时"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorBlack"/>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/video_fragment1_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorWhite"
+                    android:padding="5dp">
+
+                </android.support.v7.widget.RecyclerView>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="@drawable/bottom_lay"/>
+
+                <TextView
+                    android:text="锻炼完，也要注意补充营养"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="3dp"
+                    android:paddingTop="12dp"
+                    android:paddingBottom="3dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/colorBlack"/>
+
+                <TextView
+                    android:id="@+id/video_fragment1_advice"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="3dp"
+                    android:paddingBottom="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:text="在健身后尽快服用含糖丰富的食品或者运动饮料，可以缓解疲劳的现象，同时可以明显缩短机体的恢复期，加快机体恢复。"
+                    android:background="@drawable/bottom_lay"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:padding="10dp"
+                android:background="@color/colorWhite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="热门评论"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorBlack"/>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/interact1_rv"
+                    android:layout_marginTop="10dp"
+                    android:paddingTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </android.support.v7.widget.RecyclerView>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+    <LinearLayout
+        android:id="@+id/video_play1_li"
+        android:background="@color/colorGray_White"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <EditText
+            android:id="@+id/video_play1_et"
+            android:textSize="13sp"
+            android:textColor="@color/colorBlack"
+            android:padding="5dp"
+            android:hint="发布你的评论吧。。。"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:background="@drawable/round_gb_gray"/>
+
+
+        <ImageView
+            android:id="@+id/video_play1_iv"
+            android:layout_marginRight="10dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/ripple_bg"
+            android:src="@mipmap/ic_pingjia" />
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -12,24 +12,24 @@
         "source": "D:\\Android\\Application\\FitDemo\\app\\src\\main\\res\\layout\\classesfragment.xml"
     },
     {
-        "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\layout\\go_broad.xml",
-        "source": "D:\\Android\\Application\\FitDemo\\app\\src\\main\\res\\layout\\go_broad.xml"
-    },
-    {
         "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\layout\\table_media_info.xml",
         "source": "D:\\Android\\Application\\FitDemo\\app\\src\\main\\res\\layout\\table_media_info.xml"
+    },
+    {
+        "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\layout\\go_broad.xml",
+        "source": "D:\\Android\\Application\\FitDemo\\app\\src\\main\\res\\layout\\go_broad.xml"
     },
     {
         "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\layout\\jz_dialog_volume.xml",
         "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\jiaozivideoplayer-6.4.1.aar\\871d0893ee6653d1ab44aaaac31dfb59\\res\\layout\\jz_dialog_volume.xml"
     },
     {
-        "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_bottom_sheet_dialog.xml",
-        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.1.aar\\5853bdba8fe7d3b689cca25cdaa2615c\\res\\layout\\design_bottom_sheet_dialog.xml"
-    },
-    {
         "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_tab_text.xml",
         "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.1.aar\\5853bdba8fe7d3b689cca25cdaa2615c\\res\\layout\\design_layout_tab_text.xml"
+    },
+    {
+        "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_bottom_sheet_dialog.xml",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.1.aar\\5853bdba8fe7d3b689cca25cdaa2615c\\res\\layout\\design_bottom_sheet_dialog.xml"
     },
     {
         "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\layout\\video_brightness.xml",
@@ -72,20 +72,24 @@
         "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\exoplayer-ui-2.9.1.aar\\f5250e7b4c08dc73237382ee25cdd722\\res\\layout\\exo_playback_control_view.xml"
     },
     {
-        "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_tab_icon.xml",
-        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.1.aar\\5853bdba8fe7d3b689cca25cdaa2615c\\res\\layout\\design_layout_tab_icon.xml"
+        "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\layout\\video_activity.xml",
+        "source": "D:\\Android\\Application\\FitDemo\\app\\src\\main\\res\\layout\\video_activity.xml"
     },
     {
         "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_item_material.xml",
         "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\58595d87c3aa053db670dfcb5ed41af2\\res\\layout\\select_dialog_item_material.xml"
     },
     {
-        "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\layout\\person_class.xml",
-        "source": "D:\\Android\\Application\\FitDemo\\app\\src\\main\\res\\layout\\person_class.xml"
+        "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_tab_icon.xml",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.1.aar\\5853bdba8fe7d3b689cca25cdaa2615c\\res\\layout\\design_layout_tab_icon.xml"
     },
     {
         "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_bar.xml",
         "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\58595d87c3aa053db670dfcb5ed41af2\\res\\layout\\abc_action_mode_bar.xml"
+    },
+    {
+        "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\layout\\person_class.xml",
+        "source": "D:\\Android\\Application\\FitDemo\\app\\src\\main\\res\\layout\\person_class.xml"
     },
     {
         "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\layout\\person_device.xml",
@@ -104,12 +108,12 @@
         "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\jiaozivideoplayer-6.4.1.aar\\871d0893ee6653d1ab44aaaac31dfb59\\res\\layout\\jz_dialog_brightness.xml"
     },
     {
-        "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_snackbar_include.xml",
-        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.1.aar\\5853bdba8fe7d3b689cca25cdaa2615c\\res\\layout\\design_layout_snackbar_include.xml"
-    },
-    {
         "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\layout\\video_volume_dialog.xml",
         "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\gsyVideoPlayer-java-6.0.2.aar\\29a7a9187bb3fa7802f5a8e96d3ddb82\\res\\layout\\video_volume_dialog.xml"
+    },
+    {
+        "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_snackbar_include.xml",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.1.aar\\5853bdba8fe7d3b689cca25cdaa2615c\\res\\layout\\design_layout_snackbar_include.xml"
     },
     {
         "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view.xml",

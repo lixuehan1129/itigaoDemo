@@ -214,26 +214,25 @@ public class VideoFragment extends BaseFragment {
     }
 
     private void setBroad(){
-        Intent intent = null;
-        switch (classify.get(0)){
-            case 1:{
-                intent = new Intent(AppConstants.BROAD_RECORD1);
-                break;
-            }
-            case 2:{
-                intent = new Intent(AppConstants.BROAD_RECORD2);
-                break;
-            }
-            case 3:{
-                intent = new Intent(AppConstants.BROAD_RECORD3);
-                break;
-            }
-            case 4:{
-                intent = new Intent(AppConstants.BROAD_RECORD4);
-                break;
-            }
-        }
-        assert intent != null;
+//        switch (classify.get(0)){
+//            case 1:{
+//                intent = new Intent(AppConstants.BROAD_RECORD1);
+//                break;
+//            }
+//            case 2:{
+//                intent = new Intent(AppConstants.BROAD_RECORD2);
+//                break;
+//            }
+//            case 3:{
+//                intent = new Intent(AppConstants.BROAD_RECORD3);
+//                break;
+//            }
+//            case 4:{
+//                intent = new Intent(AppConstants.BROAD_RECORD4);
+//                break;
+//            }
+//        }
+        Intent intent = new Intent(AppConstants.BROAD_RECORD);
         LocalBroadcastManager.getInstance(getActivity()).sendBroadcast(intent);
     }
 

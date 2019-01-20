@@ -98,7 +98,6 @@
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/instant-run-support" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/javaPrecompile" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/jniLibs" />
-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/lint" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/manifests" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/prebuild" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/reload-dex" />
@@ -120,10 +119,10 @@
     <orderEntry type="library" name="com.android.support:appcompat-v7-27.1.1" level="project" />
     <orderEntry type="library" name="com.android.support:design-27.1.1" level="project" />
     <orderEntry type="library" name="com.shuyu:gsyVideoPlayer-base-6.0.2" level="project" />
-    <orderEntry type="library" name="com.mob:MobTools:2019.0109.1416@jar" level="project" />
     <orderEntry type="library" name="com.android.support:transition-27.1.1" level="project" />
     <orderEntry type="library" scope="TEST" name="com.squareup:javawriter:2.1.1@jar" level="project" />
     <orderEntry type="library" name="com.android.support:recyclerview-v7-27.1.1" level="project" />
+    <orderEntry type="library" name="com.mob:MobTools:2019.0119.1403@jar" level="project" />
     <orderEntry type="library" name="com.shuyu:gsyVideoPlayer-armv5-6.0.2" level="project" />
     <orderEntry type="library" name="com.ashokvarma.android:bottom-navigation-bar-2.0.3" level="project" />
     <orderEntry type="library" name="com.google.android.exoplayer:exoplayer-ui-2.9.1" level="project" />
@@ -136,7 +135,6 @@
     <orderEntry type="library" scope="TEST" name="com.android.support.test.espresso:espresso-core-2.2.2" level="project" />
     <orderEntry type="library" name="com.google.android.exoplayer:exoplayer-smoothstreaming-2.9.1" level="project" />
     <orderEntry type="library" name="com.shuyu:GSYVideoPlayer-6.0.2" level="project" />
-    <orderEntry type="library" name="com.mob:MobGUI:2019.0109.1416@jar" level="project" />
     <orderEntry type="library" name="com.google.android.exoplayer:exoplayer-2.9.1" level="project" />
     <orderEntry type="library" scope="TEST" name="com.android.support.test:rules-0.5" level="project" />
     <orderEntry type="library" name="android.arch.lifecycle:viewmodel-1.1.0" level="project" />
@@ -148,7 +146,6 @@
     <orderEntry type="library" scope="TEST" name="javax.annotation:javax.annotation-api:1.2@jar" level="project" />
     <orderEntry type="library" name="org.greenrobot:eventbus:3.0.0@jar" level="project" />
     <orderEntry type="library" name="com.google.android.exoplayer:exoplayer-core-2.9.1" level="project" />
-    <orderEntry type="library" name="com.mob:MobCommons:2019.0114.1454@jar" level="project" />
     <orderEntry type="library" name="cn.smssdk:ShortMessageSDKGUI-3.3.0" level="project" />
     <orderEntry type="library" name="com.android.support:support-annotations:27.1.1@jar" level="project" />
     <orderEntry type="library" name="com.shuyu:GSYVideoPlayer-exo2-6.0.2" level="project" />
@@ -169,6 +166,7 @@
     <orderEntry type="library" name="android.arch.lifecycle:common:1.1.0@jar" level="project" />
     <orderEntry type="library" name="com.shuyu:gsyVideoPlayer-armv7a-6.0.2" level="project" />
     <orderEntry type="library" name="com.google.android.exoplayer:exoplayer-dash-2.9.1" level="project" />
+    <orderEntry type="library" name="com.mob:MobCommons:2019.0119.1621@jar" level="project" />
     <orderEntry type="library" name="tv.danmaku.ijk.media:ijkplayer-java-0.8.8" level="project" />
     <orderEntry type="library" name="cn.smssdk:SMSSDK-3.3.0" level="project" />
     <orderEntry type="library" name="com.android.support:support-core-ui-27.1.1" level="project" />
@@ -179,6 +177,7 @@
     <orderEntry type="library" scope="TEST" name="com.android.support.test:runner-0.5" level="project" />
     <orderEntry type="library" name="android.arch.lifecycle:livedata-core-1.1.0" level="project" />
     <orderEntry type="library" name="com.google.android.exoplayer:exoplayer-hls-2.9.1" level="project" />
+    <orderEntry type="library" name="com.mob:MobGUI:2019.0119.1403@jar" level="project" />
     <orderEntry type="library" name="com.android.support:support-fragment-27.1.1" level="project" />
     <orderEntry type="library" name="com.android.support:support-media-compat-27.1.1" level="project" />
     <orderEntry type="library" name="cn.jiguang.sdk:jcore-1.2.6" level="project" />
