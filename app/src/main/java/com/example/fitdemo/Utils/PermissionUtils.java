@@ -33,6 +33,9 @@ public class PermissionUtils {
         if(ContextCompat.checkSelfPermission(activity,Manifest.permission.WRITE_EXTERNAL_STORAGE)!=PackageManager.PERMISSION_GRANTED){
             permissionList.add(Manifest.permission.WRITE_EXTERNAL_STORAGE);
         }
+        if(ContextCompat.checkSelfPermission(activity,Manifest.permission.READ_EXTERNAL_STORAGE)!=PackageManager.PERMISSION_GRANTED){
+            permissionList.add(Manifest.permission.READ_EXTERNAL_STORAGE);
+        }
         if(ContextCompat.checkSelfPermission(activity,Manifest.permission.VIBRATE)!=PackageManager.PERMISSION_GRANTED){
             permissionList.add(Manifest.permission.VIBRATE);
         }

@@ -124,6 +124,10 @@
         "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\gsyVideoPlayer-java-6.0.2.aar\\29a7a9187bb3fa7802f5a8e96d3ddb82\\res\\layout\\video_layout_custom.xml"
     },
     {
+        "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\layout\\movie_recorder_view.xml",
+        "source": "D:\\Android\\Application\\FitDemo\\app\\src\\main\\res\\layout\\movie_recorder_view.xml"
+    },
+    {
         "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_media_action.xml",
         "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-27.1.1.aar\\741f12994d6beb5f0b3c79dd37ba2014\\res\\layout\\notification_media_action.xml"
     },
