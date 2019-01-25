@@ -77,6 +77,7 @@ public class BaseActivity extends AppCompatActivity {
     ArrayList<String> add3;
 
     ArrayList<String> cover4;
+    ArrayList<String> add4;
 
     public int getmClassify() {
         return mClassify;
@@ -187,6 +188,7 @@ public class BaseActivity extends AppCompatActivity {
 
     private void connectHu(){
         cover4 = new ArrayList<>();
+        add4 = new ArrayList<>();
         new Thread(){
             public void run(){
                 Looper.prepare();
@@ -194,12 +196,13 @@ public class BaseActivity extends AppCompatActivity {
                     Connection conn = JDBCTools.getConnection();
                     if(conn != null){
                         Statement stmt = conn.createStatement();
-                        String sql = "SELECT hudong_cover FROM hudong WHERE hudong_classify = " +
+                        String sql = "SELECT hudong_cover,hudong_add FROM hudong WHERE hudong_classify = " +
                                 mClassify +
                                 " ORDER BY hudong_id DESC LIMIT 2";
                         ResultSet resultSet = stmt.executeQuery(sql);
                         while(resultSet.next()){
                             cover4.add(resultSet.getString("hudong_cover"));
+                            add4.add(resultSet.getString("hudong_add"));
                         }
                         Message message = new Message();
                         message.what = 4;
@@ -281,6 +284,9 @@ public class BaseActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(mActivity, HuDongPlayActivity.class);
+                if(cover4.size() ==2){
+                    intent.putExtra("hudong_c_add",add4.get(0));
+                }
                 startActivity(intent);
             }
         });
@@ -288,6 +294,12 @@ public class BaseActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(mActivity, HuDongPlayActivity.class);
+                if(cover4.size() == 2){
+                    intent.putExtra("hudong_c_add",add4.get(1));
+                }else if(cover4.size() == 1){
+                    intent.putExtra("hudong_c_add",add4.get(0));
+                }
+
                 startActivity(intent);
             }
         });

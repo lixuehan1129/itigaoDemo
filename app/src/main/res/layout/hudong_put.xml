@@ -37,6 +37,22 @@
         android:orientation="vertical">
 
         <EditText
+            android:id="@+id/hudong_put_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            android:background="@drawable/round_gb"
+            android:inputType="textMultiLine"
+            android:lineSpacingMultiplier="1.5"
+            android:textSize="15sp"
+            android:hint="标题"
+            android:maxLines="1"
+            android:gravity="top"
+            android:theme="@style/MyEditText"
+            tools:ignore="LabelFor" />
+
+        <EditText
+            android:layout_marginTop="5dp"
             android:id="@+id/hudong_put_content"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -51,10 +67,11 @@
             android:theme="@style/MyEditText"
             tools:ignore="LabelFor" />
 
-        <ImageView
+        <cn.jzvd.JzvdStd
+            android:layout_marginTop="5dp"
             android:id="@+id/hudong_put_iv"
-            android:layout_width="100dp"
-            android:layout_height="100dp" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
     </LinearLayout>
 

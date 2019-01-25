@@ -24,6 +24,7 @@ import com.example.fitdemo.Adapter.TabLayoutAdapter;
 import com.example.fitdemo.AutoProject.AppConstants;
 import com.example.fitdemo.AutoProject.SharePreferences;
 import com.example.fitdemo.AutoProject.Tip;
+import com.example.fitdemo.Media.JZMediaIjkplayer;
 import com.example.fitdemo.Personal.PersonChangeActivity;
 import com.example.fitdemo.R;
 import com.example.fitdemo.Utils.StatusBarUtils;
@@ -36,6 +37,7 @@ import cn.jpush.im.android.api.JMessageClient;
 import cn.jpush.im.android.api.model.Conversation;
 import cn.jpush.im.android.api.model.Message;
 import cn.jpush.im.api.BasicCallback;
+import cn.jzvd.JZMediaSystem;
 import cn.jzvd.Jzvd;
 import cn.jzvd.JzvdStd;
 
@@ -70,6 +72,9 @@ public class VideoPlayActivity extends AppCompatActivity implements TabLayout.On
         super.onCreate(savedInstanceState);
         setContentView(R.layout.video_play_activity);
         StatusBarUtils.setWindowStatusBarColor(VideoPlayActivity.this, R.color.colorWhite);
+        Jzvd.setMediaInterface(new JZMediaIjkplayer());
+        Jzvd.SAVE_PROGRESS = false;
+
         Intent intent = getIntent();
         video_add = intent.getStringExtra("video_add");
         video_bid = intent.getIntExtra("video_bid",0);
@@ -248,7 +253,7 @@ public class VideoPlayActivity extends AppCompatActivity implements TabLayout.On
     @Override
     protected void onPause() {
         super.onPause();
-        Jzvd.releaseAllVideos();
+     //   Jzvd.releaseAllVideos();
         JzvdStd.goOnPlayOnPause();
     }
 
@@ -262,6 +267,7 @@ public class VideoPlayActivity extends AppCompatActivity implements TabLayout.On
     protected void onDestroy() {
         // TODO Auto-generated method stub
 //        JMessageClient.registerEventReceiver(this);
+        JzvdStd.releaseAllVideos();
         super.onDestroy();
     }
 

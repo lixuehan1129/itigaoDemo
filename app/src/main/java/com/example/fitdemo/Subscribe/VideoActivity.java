@@ -32,6 +32,7 @@ import com.example.fitdemo.AutoProject.JDBCTools;
 import com.example.fitdemo.AutoProject.SharePreferences;
 import com.example.fitdemo.AutoProject.Tip;
 import com.example.fitdemo.Classes.BroadcastActivity;
+import com.example.fitdemo.Media.JZMediaIjkplayer;
 import com.example.fitdemo.R;
 import com.example.fitdemo.Utils.StatusBarUtils;
 import com.mysql.jdbc.Connection;
@@ -102,6 +103,9 @@ public class VideoActivity extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.video_activity);
         StatusBarUtils.setWindowStatusBarColor(VideoActivity.this, R.color.colorWhite);
+        Jzvd.setMediaInterface(new JZMediaIjkplayer());
+       // Jzvd.SAVE_PROGRESS = false;
+
         Intent intent = getIntent();
         video_add = intent.getStringExtra("video_add");
         video_bid = intent.getIntExtra("video_bid",0);
@@ -513,7 +517,7 @@ public class VideoActivity extends AppCompatActivity{
     @Override
     protected void onPause() {
         super.onPause();
-        Jzvd.releaseAllVideos();
+     //   Jzvd.releaseAllVideos();
         JzvdStd.goOnPlayOnPause();
     }
 
@@ -530,6 +534,7 @@ public class VideoActivity extends AppCompatActivity{
         if(roomID != 0){
             ImRemove();
         }
+        JzvdStd.releaseAllVideos();
         JMessageClient.registerEventReceiver(this);
         super.onDestroy();
     }

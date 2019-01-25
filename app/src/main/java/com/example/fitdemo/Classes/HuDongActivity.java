@@ -1,10 +1,14 @@
 package com.example.fitdemo.Classes;
 
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
+import android.support.v4.content.LocalBroadcastManager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
@@ -12,7 +16,10 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ImageView;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.util.Util;
 import com.example.fitdemo.Adapter.HuDongAdapter;
+import com.example.fitdemo.AutoProject.AppConstants;
 import com.example.fitdemo.AutoProject.JDBCTools;
 import com.example.fitdemo.AutoProject.Tip;
 import com.example.fitdemo.R;
@@ -42,6 +49,11 @@ public class HuDongActivity extends AppCompatActivity {
     private int hudong_classify;
 
 
+    private LocalBroadcastManager broadcastManager;
+    private IntentFilter intentFilter;
+    private BroadcastReceiver mReceiver;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,6 +62,24 @@ public class HuDongActivity extends AppCompatActivity {
         Intent intent = getIntent();
         hudong_classify = intent.getIntExtra("hudong_classify",0);
         initView();
+
+        broadcastManager = LocalBroadcastManager.getInstance(HuDongActivity.this);
+        intentFilter = new IntentFilter();
+        intentFilter.addAction(AppConstants.BROAD_HU);
+        mReceiver = new BroadcastReceiver() {
+            @Override
+            public void onReceive(Context context, Intent intent){
+                //收到广播后所作的操作
+                connectData();
+            }
+        };
+        broadcastManager.registerReceiver(mReceiver, intentFilter);
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        broadcastManager.unregisterReceiver(mReceiver);
     }
 
     private void initView(){
@@ -68,6 +98,7 @@ public class HuDongActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(HuDongActivity.this,HuDongPutActivity.class);
+                intent.putExtra("hudong_ccc",hudong_classify);
                 startActivity(intent);
             }
         });
@@ -146,6 +177,7 @@ public class HuDongActivity extends AppCompatActivity {
             @Override
             public void onItemClick(View view, int position) {
                 Intent intent = new Intent(HuDongActivity.this, HuDongPlayActivity.class);
+                intent.putExtra("hudong_c_add",add.get(position));
                 startActivity(intent);
             }
         });
