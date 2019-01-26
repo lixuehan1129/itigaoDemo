@@ -48,7 +48,7 @@ public class GoBroadActivity extends AppCompatActivity implements RtmpHandler.Rt
 
     private int GoBid;
 
-    private String url = "rtmp://39.105.213.41:1935/live/";
+    private String url = "rtmp://zb.tipass.com:1935/live/";
 
     private SrsPublisher mPublisher;
 

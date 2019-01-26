@@ -127,8 +127,11 @@ public class HuDongPutActivity extends AppCompatActivity {
                     // 图片Bitmap转file
                  //   imageView.setImageBitmap(bitmap);
 
+                    jzvdStd.fullscreenButton.setVisibility(View.INVISIBLE);
+                    jzvdStd.fullscreenButton.setOnClickListener(null);
                     jzvdStd.thumbImageView.setImageBitmap(bitmap);
                     jzvdStd.setUp(filePath,"", Jzvd.SCREEN_WINDOW_NORMAL);
+
 
                   //  File file = CommonUtils.compressImage(bitmap);
                     // 保存成功后插入到图库，其中的file是保存成功后的图片path。这里只是插入单张图片
@@ -137,6 +140,8 @@ public class HuDongPutActivity extends AppCompatActivity {
                     cursor.close();
                 }
             }
+        }else {
+            finish();
         }
     }
 

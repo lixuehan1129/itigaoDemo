@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:2:1-249:12
-INJECTED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:2:1-249:12
-INJECTED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:2:1-249:12
-INJECTED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:2:1-249:12
+ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:2:1-251:12
+INJECTED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:2:1-251:12
+INJECTED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:2:1-251:12
+INJECTED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:2:1-251:12
 MERGED from [com.ashokvarma.android:bottom-navigation-bar:2.0.3] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\bottom-navigation-bar-2.0.3.aar\fca251b6b8360d3a92ce99c983d8b9ac\AndroidManifest.xml:2:1-13:12
 MERGED from [de.hdodenhof:circleimageview:2.1.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\circleimageview-2.1.0.aar\05fe9415b8c39a356ffbc06f965e81d2\AndroidManifest.xml:2:1-11:12
 MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\01c9b476f077b34a9c4272a140f25178\AndroidManifest.xml:2:1-134:12
@@ -52,22 +52,22 @@ MERGED from [net.butterflytv.utils:rtmp-client:3.0.1] C:\Users\最美人间四月天\.g
 MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\b14a24d2c4247a1e83c936a140ecd1eb\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.core:runtime:1.1.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\70877f1e2db618b15bb7d08df1354013\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\ef37f64f27911be30bec37db1f523912\AndroidManifest.xml:17:1-22:12
-INJECTED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:2:1-249:12
-INJECTED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:2:1-249:12
-INJECTED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:2:1-249:12
+INJECTED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:2:1-251:12
+INJECTED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:2:1-251:12
+INJECTED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:2:1-251:12
 	package
 		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:4:5-34
 		INJECTED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml
 		INJECTED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml
-		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:2:1-249:12
+		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:2:1-251:12
 		INJECTED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml
 	xmlns:tools
 		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:3:5-51
 	android:versionCode
 		INJECTED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml
-		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:2:1-249:12
+		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:2:1-251:12
 		INJECTED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:2:11-69
@@ -214,7 +214,7 @@ MERGED from [:silicompressor] D:\Android\Application\FitDemo\silicompressor\buil
 	android:name
 		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:55:22-77
 application
-ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:57:5-247:19
+ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:57:5-249:19
 MERGED from [com.ashokvarma.android:bottom-navigation-bar:2.0.3] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\bottom-navigation-bar-2.0.3.aar\fca251b6b8360d3a92ce99c983d8b9ac\AndroidManifest.xml:11:5-47
 MERGED from [com.ashokvarma.android:bottom-navigation-bar:2.0.3] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\bottom-navigation-bar-2.0.3.aar\fca251b6b8360d3a92ce99c983d8b9ac\AndroidManifest.xml:11:5-47
 MERGED from [de.hdodenhof:circleimageview:2.1.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\circleimageview-2.1.0.aar\05fe9415b8c39a356ffbc06f965e81d2\AndroidManifest.xml:9:5-20
@@ -480,37 +480,41 @@ ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:216:9
 	android:name
 		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:216:19-61
 activity#com.example.fitdemo.Classes.HuDongPutActivity
-ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:220:9-223:20
+ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:220:9-225:20
+	android:screenOrientation
+		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:222:13-49
 	tools:ignore
-		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:221:13-47
+		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:223:13-47
+	android:configChanges
+		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:221:13-74
 	android:name
 		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:220:19-60
 activity#com.example.fitdemo.Classes.GoBroadActivity
-ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:225:9-229:20
+ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:227:9-231:20
 	android:screenOrientation
-		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:226:13-50
+		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:228:13-50
 	tools:ignore
-		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:227:13-47
+		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:229:13-47
 	android:name
-		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:225:19-58
+		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:227:19-58
 activity#com.example.fitdemo.Classes.TextActivity
-ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:231:9-234:20
+ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:233:9-236:20
 	tools:ignore
-		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:232:13-47
+		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:234:13-47
 	android:name
-		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:231:19-55
+		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:233:19-55
 activity#com.example.fitdemo.Classes.BaseActivity
-ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:236:9-239:20
+ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:238:9-241:20
 	tools:ignore
-		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:237:13-47
+		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:239:13-47
 	android:name
-		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:236:19-55
+		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:238:19-55
 activity#com.example.fitdemo.Subscribe.VideoActivity
-ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:241:9-244:20
+ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:243:9-246:20
 	tools:ignore
-		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:242:13-47
+		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:244:13-47
 	android:name
-		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:241:19-58
+		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:243:19-58
 uses-sdk
 INJECTED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml

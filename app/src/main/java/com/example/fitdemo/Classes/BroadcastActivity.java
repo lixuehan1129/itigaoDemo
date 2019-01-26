@@ -25,7 +25,6 @@ import com.example.fitdemo.Adapter.InteractAdapter;
 import com.example.fitdemo.AutoProject.AppConstants;
 import com.example.fitdemo.AutoProject.SharePreferences;
 import com.example.fitdemo.R;
-import com.example.fitdemo.Subscribe.VideoPlayActivity;
 import com.example.fitdemo.Utils.StatusBarUtils;
 import com.shuyu.gsyvideoplayer.GSYVideoManager;
 import com.shuyu.gsyvideoplayer.player.IjkPlayerManager;
@@ -65,7 +64,7 @@ public class BroadcastActivity extends AppCompatActivity {
 
     private int anchorId, anchorRoom;
     private String url;
-    private String URL_F = "rtmp://39.105.213.41:1935/live/";
+    private String URL_F = "rtmp://zb.tipass.com:1935/live/";
 
     private StandardGSYVideoPlayer videoPlayer;
     private OrientationUtils orientationUtils;

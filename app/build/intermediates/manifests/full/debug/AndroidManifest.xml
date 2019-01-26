@@ -67,7 +67,7 @@
     <activity android:name="com.example.fitdemo.Personal.PersonIndoorActivity"/>
     <activity android:name="com.example.fitdemo.Subscribe.VideoRankActivity"/>
     <activity android:screenOrientation="portrait" android:name="com.example.fitdemo.Classes.HuDongPlayActivity" android:configChanges="orientation|screenSize|keyboardHidden"/>
-    <activity android:name="com.example.fitdemo.Classes.HuDongPutActivity"/>
+    <activity android:screenOrientation="portrait" android:name="com.example.fitdemo.Classes.HuDongPutActivity" android:configChanges="orientation|keyboardHidden|screenSize"/>
     <activity android:name="com.example.fitdemo.Classes.GoBroadActivity" android:screenOrientation="portrait"/>
     <activity android:name="com.example.fitdemo.Classes.TextActivity"/>
     <activity android:name="com.example.fitdemo.Classes.BaseActivity"/>

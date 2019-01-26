@@ -218,6 +218,8 @@
             android:screenOrientation="portrait" /> <!-- or android:screenOrientation="landscape"-->
 
         <activity android:name=".Classes.HuDongPutActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
             tools:ignore="InnerclassSeparator">
 
         </activity>

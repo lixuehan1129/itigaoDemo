@@ -250,7 +250,7 @@ public class PersonalFragment extends BaseFragment {
                                 updateSta(1);
                                 go3.setText("关闭直播");
                                 go3.setTextColor(getResources().getColor(R.color.colorRed));
-                                go2.setText("直播地址:rtmp://39.105.213.41:1935/live" + "\n" + "直播码:" + goBid);
+                                go2.setText("直播地址:rtmp://zb.tipass.com:1935/live" + "\n" + "直播码:" + goBid);
                                 go2.setVisibility(View.VISIBLE);
                                 break;
                             }
