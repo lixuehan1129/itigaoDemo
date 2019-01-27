@@ -14,6 +14,7 @@ import android.provider.MediaStore;
 import android.support.v4.content.LocalBroadcastManager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
@@ -52,6 +53,9 @@ import cn.jzvd.JzvdStd;
 import okhttp3.Call;
 import okhttp3.Callback;
 import okhttp3.Response;
+import top.zibin.luban.CompressionPredicate;
+import top.zibin.luban.Luban;
+import top.zibin.luban.OnCompressListener;
 
 /**
  * Created by 最美人间四月天 on 2018/12/26.
@@ -148,7 +152,7 @@ public class HuDongPutActivity extends AppCompatActivity {
     private void setOnClick(){
         final String createPath = createPath();
         button.setOnClickListener(view -> {
-            VideoCompress.compressVideoMedium(filePath, createPath, new VideoCompress.CompressListener() {
+            VideoCompress.compressVideoLow(filePath, createPath, new VideoCompress.CompressListener() {
                 @Override
                 public void onStart() {
                     progressDialog = ProgressDialog.show(HuDongPutActivity.this,"","请稍等...",true);
@@ -203,35 +207,76 @@ public class HuDongPutActivity extends AppCompatActivity {
         }, file);
     }
 
+
     private void upLoadPic(){
         if(bitmap != null){
             String picPath = createPicPath();
             File file = saveBitmapFile(bitmap,picPath);
             if(file.exists()){
-                String postUrl = "http://39.105.213.41:8080/upLoadVideo/UploadFileServlet";
-
-                OkHttpUtil.postFile(postUrl, (currentBytes, contentLength, done) -> {
-                    Log.i("看一下图片", "currentBytes==" + currentBytes + "==contentLength==" + contentLength + "==done==" + done);
-                }, new Callback() {
-                    @Override
-                    public void onFailure(Call call, IOException e) {
-                        System.out.println("开始上传失败" + call.toString() + e);
-                        progressDialog.dismiss();
-                    }
-
-                    @Override
-                    public void onResponse(Call call, Response response) throws IOException {
-                        if (response != null) {
-                            String result = response.body().string();
-                            Log.i("再看一下", "result===" + result);
-                            pathPic = result;
-                            updateHu();
-                        }
-                    }
-                }, file);
+                compressWithLs(file);
             }
+        }else {
+            progressDialog.dismiss();
         }
 
+    }
+
+    /**
+     * 压缩单张图片 Listener 方式
+     */
+    private void compressWithLs(File file) {
+        Luban.with(this)
+                .load(file)
+                .ignoreBy(100)
+                .filter(new CompressionPredicate() {
+                    @Override
+                    public boolean apply(String path) {
+                        return !(TextUtils.isEmpty(path) || path.toLowerCase().endsWith(".gif"));
+                    }
+                })
+                .setCompressListener(new OnCompressListener() {
+                    @Override
+                    public void onStart() {
+                        // TODO 压缩开始前调用，可以在方法内启动 loading UI
+                    }
+
+                    @Override
+                    public void onSuccess(File file) {
+                        // TODO 压缩成功后调用，返回压缩后的图片文件
+                        upPic(file);
+
+                    }
+
+                    @Override
+                    public void onError(Throwable e) {
+                        // TODO 当压缩过程出现问题时调用
+                        progressDialog.dismiss();
+                    }
+                }).launch();
+    }
+
+    private void upPic(File file){
+        String postUrl = "http://39.105.213.41:8080/upLoadVideo/UploadFileServlet";
+
+        OkHttpUtil.postFile(postUrl, (currentBytes, contentLength, done) -> {
+            Log.i("看一下图片", "currentBytes==" + currentBytes + "==contentLength==" + contentLength + "==done==" + done);
+        }, new Callback() {
+            @Override
+            public void onFailure(Call call, IOException e) {
+                System.out.println("开始上传失败" + call.toString() + e);
+                progressDialog.dismiss();
+            }
+
+            @Override
+            public void onResponse(Call call, Response response) throws IOException {
+                if (response != null) {
+                    String result = response.body().string();
+                    Log.i("再看一下", "result===" + result);
+                    pathPic = result;
+                    updateHu();
+                }
+            }
+        }, file);
     }
 
     private void updateHu(){
