@@ -43,9 +43,11 @@ import com.example.fitdemo.User.UserLoginActivity;
 import com.example.fitdemo.Utils.Class_select;
 import com.example.fitdemo.Utils.DateUtils;
 import com.example.fitdemo.Utils.StatusBarUtils;
+import com.example.fitdemo.okHttp.OkHttpUtil;
 import com.mysql.jdbc.Connection;
 
 import java.io.File;
+import java.io.IOException;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -58,6 +60,9 @@ import cn.jpush.im.android.api.JMessageClient;
 import cn.jpush.im.android.api.model.UserInfo;
 import cn.jpush.im.api.BasicCallback;
 import de.hdodenhof.circleimageview.CircleImageView;
+import okhttp3.Call;
+import okhttp3.Callback;
+import okhttp3.Response;
 import top.zibin.luban.CompressionPredicate;
 import top.zibin.luban.Luban;
 import top.zibin.luban.OnCompressListener;
@@ -72,7 +77,7 @@ public class PersonChangeActivity extends AppCompatActivity{
 
     private DataBaseHelper dataBaseHelper;
     private Uri photoUri;
-    private String picPath = null;
+    private String picPath = "http://ty.tipass.com/images/head/head_name(2).PNG";
     private String phone;
 
     private ProgressDialog progressDialog;
@@ -84,6 +89,8 @@ public class PersonChangeActivity extends AppCompatActivity{
 
     private int userLevel,userSta,userSex,anchorId;
     private String userName,userPicture;
+    private boolean picIs;
+    private String picImagePath = null; //这是拍照的照片地址
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -114,9 +121,13 @@ public class PersonChangeActivity extends AppCompatActivity{
         textView1 = (TextView) findViewById(R.id.person_change_sex); //性别
         textView2 = (TextView) findViewById(R.id.person_change_level); //等级
 
+        picIs = false;
+
         editText.setCursorVisible(false);
 
         dataBaseHelper = new DataBaseHelper(PersonChangeActivity.this,AppConstants.SQL_VISION);
+
+
         localData();
         editText.setText(userName);
         if(Util.isOnMainThread()) {
@@ -166,6 +177,7 @@ public class PersonChangeActivity extends AppCompatActivity{
             userPicture = cursor.getString(cursor.getColumnIndex("user_picture"));
             userSex = cursor.getInt(cursor.getColumnIndex("user_sex"));
         }
+        picPath = userPicture;
         cursor.close();
         sqLiteDatabase.close();
     }
@@ -242,7 +254,13 @@ public class PersonChangeActivity extends AppCompatActivity{
         ok.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                upload();
+                progressDialog = ProgressDialog.show(PersonChangeActivity.this,"","修改中...",true);
+                if(picIs){
+                    compressWithLs(new File(picImagePath));
+                }else {
+                    upload();
+                }
+
             }
         });
     }
@@ -292,7 +310,7 @@ public class PersonChangeActivity extends AppCompatActivity{
                             preparedStatement.setString(3,userName);
                             preparedStatement.setInt(4,size);
                             preparedStatement.setInt(5,0);
-                            preparedStatement.setString(6,"http://ty.tipass.com/images/cover/fit_running(1).png");
+                            preparedStatement.setString(6,picPath);
                             preparedStatement.setInt(7,0);
                             preparedStatement.setInt(8,roomId);
                             preparedStatement.executeUpdate();
@@ -348,7 +366,6 @@ public class PersonChangeActivity extends AppCompatActivity{
     });
 
     private void upload(){
-        progressDialog = ProgressDialog.show(PersonChangeActivity.this,"","修改中...",true);
         new Thread(){
             public void run(){
                 Looper.prepare();
@@ -362,7 +379,7 @@ public class PersonChangeActivity extends AppCompatActivity{
                         PreparedStatement preparedStatement = conn.prepareStatement(sql);
                         preparedStatement.setString(1,editText.getText().toString());
                         preparedStatement.setInt(2,userSex);
-                        preparedStatement.setString(3,"http://ty.tipass.com/images/head/head_name(2).PNG");
+                        preparedStatement.setString(3,picPath);
                         preparedStatement.setInt(4,userSta);
                         preparedStatement.executeUpdate();
                         preparedStatement.close();
@@ -371,7 +388,7 @@ public class PersonChangeActivity extends AppCompatActivity{
                         ContentValues contentValues = new ContentValues();
                         contentValues.put("user_name",editText.getText().toString());
                         contentValues.put("user_sex",userSex);
-                        contentValues.put("user_picture","http://ty.tipass.com/images/head/head_name(2).PNG");
+                        contentValues.put("user_picture",picPath);
                         contentValues.put("user_sort",userSta);
                         sqLiteDatabase.update("user",contentValues,"user_phone = ?",new String[]{phone});
                         sqLiteDatabase.close();
@@ -391,20 +408,6 @@ public class PersonChangeActivity extends AppCompatActivity{
                 Looper.loop();
             }
         }.start();
-    }
-
-    private void Im(){
-        UserInfo userInfo = JMessageClient.getMyInfo();
-        userInfo.setNickname(editText.getText().toString());
-        UserInfo.Field updateField = UserInfo.Field.nickname;
-
-        JMessageClient.updateMyInfo(updateField, userInfo, new BasicCallback() {
-            @Override
-            public void gotResult(int i, String s) {
-                progressDialog.dismiss();
-                finish();
-            }
-        });
     }
 
 
@@ -464,13 +467,14 @@ public class PersonChangeActivity extends AppCompatActivity{
         }
     }
 
-
     /*
-    * 加载更换头像
-    * */
+  * 加载更换头像
+  * */
     private void showImage(String imagePath){
         Bitmap bm = BitmapFactory.decodeFile(imagePath);
-        compressWithLs(new File(imagePath));
+        // compressWithLs(new File(imagePath));
+        picIs = true;
+        picImagePath = imagePath;
         circleImageView.setImageBitmap(bm);
     }
 
@@ -496,17 +500,57 @@ public class PersonChangeActivity extends AppCompatActivity{
                     @Override
                     public void onSuccess(File file) {
                         // TODO 压缩成功后调用，返回压缩后的图片文件
-                        picPath = file.getAbsolutePath();
-                        Log.i("path", picPath);
+                        //  picPath = file.getAbsolutePath();
+                        //  Log.i("path", picPath);
+                        upPic(file);
                     }
 
                     @Override
                     public void onError(Throwable e) {
                         // TODO 当压缩过程出现问题时调用
+                        progressDialog.dismiss();
                     }
                 }).launch();
     }
 
+    private void upPic(File file){
+        String postUrl = "http://39.105.213.41:8080/upLoadVideo/UploadFileServlet";
+
+        OkHttpUtil.postFile(postUrl, (currentBytes, contentLength, done) -> {
+            Log.i("看一下图片", "currentBytes==" + currentBytes + "==contentLength==" + contentLength + "==done==" + done);
+        }, new Callback() {
+            @Override
+            public void onFailure(Call call, IOException e) {
+                System.out.println("开始上传失败" + call.toString() + e);
+                progressDialog.dismiss();
+            }
+
+            @Override
+            public void onResponse(Call call, Response response) throws IOException {
+                if (response != null) {
+                    String result = response.body().string();
+                    Log.i("再看一下", "result===" + result);
+                    picPath = result;
+                    upload();
+                }
+            }
+        }, file);
+    }
+
+
+    private void Im(){
+        UserInfo userInfo = JMessageClient.getMyInfo();
+        userInfo.setNickname(editText.getText().toString());
+        UserInfo.Field updateField = UserInfo.Field.nickname;
+
+        JMessageClient.updateMyInfo(updateField, userInfo, new BasicCallback() {
+            @Override
+            public void gotResult(int i, String s) {
+                progressDialog.dismiss();
+                finish();
+            }
+        });
+    }
 
 
     //返回注销事件

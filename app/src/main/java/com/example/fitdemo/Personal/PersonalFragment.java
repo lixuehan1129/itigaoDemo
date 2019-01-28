@@ -217,8 +217,9 @@ public class PersonalFragment extends BaseFragment {
         indoor1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getActivity(),PersonIndoorActivity.class);
-                startActivity(intent);
+//                Intent intent = new Intent(getActivity(),PersonIndoorActivity.class);
+//                startActivity(intent);
+                Tip.showTip(getActivity(),"室内检测");
             }
         });
 
