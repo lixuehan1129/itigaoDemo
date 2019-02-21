@@ -28,8 +28,8 @@ public class PersonClassActivity extends AppCompatActivity {
         toolbar.setTitle("课程");
         back(toolbar);
 
-        TextView textView = (TextView) findViewById(R.id.person_class_tv);
-        textView.setText("查看添加的课程");
+      //  TextView textView = (TextView) findViewById(R.id.person_class_tv);
+      //  textView.setText("查看添加的课程");
 
     }
 

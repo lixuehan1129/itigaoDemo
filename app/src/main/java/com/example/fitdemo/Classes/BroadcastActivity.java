@@ -9,7 +9,9 @@ import android.support.v4.content.LocalBroadcastManager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.text.Editable;
 import android.text.TextUtils;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,6 +20,7 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.fitdemo.Adapter.InteractAdapter;
@@ -60,7 +63,7 @@ public class BroadcastActivity extends AppCompatActivity {
     private LinearLayout linearLayout;
     private RecyclerView recyclerView;
     private EditText editText;
-    private ImageView imageView;
+    private TextView imageView;
 
     private int anchorId, anchorRoom;
     private String url;
@@ -89,11 +92,32 @@ public class BroadcastActivity extends AppCompatActivity {
         recyclerView = (RecyclerView) findViewById(R.id.video_broad_rv) ;
         linearLayout = (LinearLayout) findViewById(R.id.video_broad_li);
         editText = (EditText) findViewById(R.id.video_broad_et);
-        imageView = (ImageView) findViewById(R.id.video_broad_iv);
+        imageView = (TextView) findViewById(R.id.video_broad_iv);
 
         interactAdapter = new InteractAdapter(interacts);
         recyclerView.setAdapter(interactAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(BroadcastActivity.this));
+
+        editText.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+                if(TextUtils.isEmpty(editText.getText().toString())){
+                    imageView.setTextColor(getResources().getColor(R.color.colorGray_1));
+                }else {
+                    imageView.setTextColor(getResources().getColor(R.color.colorGreen));
+                }
+            }
+        });
 
         //获取屏幕宽
         WindowManager wm = (WindowManager) this

@@ -1,145 +1,145 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:2:1-251:12
-INJECTED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:2:1-251:12
-INJECTED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:2:1-251:12
-INJECTED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:2:1-251:12
-MERGED from [com.ashokvarma.android:bottom-navigation-bar:2.0.3] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\bottom-navigation-bar-2.0.3.aar\fca251b6b8360d3a92ce99c983d8b9ac\AndroidManifest.xml:2:1-13:12
-MERGED from [de.hdodenhof:circleimageview:2.1.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\circleimageview-2.1.0.aar\05fe9415b8c39a356ffbc06f965e81d2\AndroidManifest.xml:2:1-11:12
-MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\01c9b476f077b34a9c4272a140f25178\AndroidManifest.xml:2:1-134:12
-MERGED from [cn.jiguang.sdk:jcore:1.2.6] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jcore-1.2.6.aar\7d5ae4924c808b2981f8bfc19fd22d7e\AndroidManifest.xml:2:1-14:12
-MERGED from [cn.smssdk:SMSSDK:3.3.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\SMSSDK-3.3.0.aar\38aec0128ff689e17757262bed379f88\AndroidManifest.xml:2:1-11:12
-MERGED from [cn.smssdk:ShortMessageSDKGUI:3.3.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\ShortMessageSDKGUI-3.3.0.aar\6d2c643cb91791f85f7e5ca4b34aa25b\AndroidManifest.xml:2:1-16:12
+ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:2:1-253:12
+INJECTED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:2:1-253:12
+INJECTED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:2:1-253:12
+INJECTED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:2:1-253:12
+MERGED from [com.ashokvarma.android:bottom-navigation-bar:2.0.3] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\bottom-navigation-bar-2.0.3.aar\8f828714eb68ef20a73852e4321fd9a4\AndroidManifest.xml:2:1-13:12
+MERGED from [de.hdodenhof:circleimageview:2.1.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\circleimageview-2.1.0.aar\ba874dc32ace61d0bc2aabc9d3a46bd8\AndroidManifest.xml:2:1-11:12
+MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\7f4098a957cce350f9deeb04c2dd33fe\AndroidManifest.xml:2:1-134:12
+MERGED from [cn.jiguang.sdk:jcore:1.2.6] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jcore-1.2.6.aar\dc5d98990349d1a06f9df7d2e473c6f7\AndroidManifest.xml:2:1-14:12
+MERGED from [cn.smssdk:SMSSDK:3.3.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\SMSSDK-3.3.0.aar\2a0e88e0ce7cff40665b988c0e050697\AndroidManifest.xml:2:1-11:12
+MERGED from [cn.smssdk:ShortMessageSDKGUI:3.3.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\ShortMessageSDKGUI-3.3.0.aar\ab21677b39dd09ea928eaf58a52d9bf0\AndroidManifest.xml:2:1-16:12
 MERGED from [:library] D:\Android\Application\FitDemo\library\build\intermediates\manifests\full\debug\AndroidManifest.xml:2:1-17:12
 MERGED from [:silicompressor] D:\Android\Application\FitDemo\silicompressor\build\intermediates\manifests\full\debug\AndroidManifest.xml:2:1-20:12
-MERGED from [com.android.support:design:27.1.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\design-27.1.1.aar\cdc7d0379cf199617f000a41432ec222\AndroidManifest.xml:17:1-22:12
-MERGED from [com.shuyu:GSYVideoPlayer:6.0.2] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\GSYVideoPlayer-6.0.2.aar\ce5341c5e5088803a24716b140700ef8\AndroidManifest.xml:2:1-17:12
-MERGED from [com.shuyu:gsyVideoPlayer-java:6.0.2] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-java-6.0.2.aar\987df321ee8afb18dd839242b4e9ad27\AndroidManifest.xml:2:1-17:12
-MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\777b3d8d1547e5d766362170c0e8fa73\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\b2582fea899e7a9d0ef31120b8529e4a\AndroidManifest.xml:2:1-11:12
-MERGED from [com.andkulikov:transitionseverywhere:1.7.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\transitionseverywhere-1.7.0.aar\53f88deb81b1ef49ca7c5ed69f8c322c\AndroidManifest.xml:2:1-14:12
-MERGED from [com.android.support:support-v4:27.1.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.1.aar\b8ab714ee263cf813cb964894c098d4c\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:cardview-v7:27.0.2] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\cardview-v7-27.0.2.aar\4fa0a44ddf895c67e8642e30204b6a0c\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:recyclerview-v7:27.1.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.1.1.aar\c268276bcc994be78223721d1e8eb3ae\AndroidManifest.xml:17:1-22:12
-MERGED from [cn.jzvd:jiaozivideoplayer:6.4.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jiaozivideoplayer-6.4.1.aar\5c6f9a9b955f282b7f6e1cbc450aa9bd\AndroidManifest.xml:2:1-13:12
-MERGED from [top.zibin:Luban:1.1.8] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\Luban-1.1.8.aar\89d0daf3e252d9ed84a2b928abba22a5\AndroidManifest.xml:2:1-11:12
-MERGED from [com.shuyu:gsyVideoPlayer-armv5:6.0.2] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-armv5-6.0.2.aar\bc73177bb9ed9699fdbe47cae1858405\AndroidManifest.xml:2:1-17:12
-MERGED from [com.shuyu:gsyVideoPlayer-armv7a:6.0.2] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-armv7a-6.0.2.aar\fb70b62dc20f35da80fa45e99a89c2cf\AndroidManifest.xml:2:1-17:12
-MERGED from [com.shuyu:gsyVideoPlayer-arm64:6.0.2] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-arm64-6.0.2.aar\e8c08686336fc34726f0fbd467e5ff43\AndroidManifest.xml:2:1-17:12
-MERGED from [com.shuyu:gsyVideoPlayer-x64:6.0.2] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-x64-6.0.2.aar\00511f2f394a0e3c6f350a612212aad6\AndroidManifest.xml:2:1-17:12
-MERGED from [com.shuyu:gsyVideoPlayer-x86:6.0.2] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-x86-6.0.2.aar\71033d7ec7d403ea426663e518d37973\AndroidManifest.xml:2:1-17:12
-MERGED from [com.android.support:transition:27.1.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\transition-27.1.1.aar\4f57a81cc7c7bac11bf67585e73e579a\AndroidManifest.xml:17:1-22:12
-MERGED from [com.shuyu:GSYVideoPlayer-exo2:6.0.2] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\GSYVideoPlayer-exo2-6.0.2.aar\e2eaaf79fa29fe4dbc9b0533101405b3\AndroidManifest.xml:2:1-11:12
-MERGED from [com.google.android.exoplayer:exoplayer:2.9.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\exoplayer-2.9.1.aar\a29426a8620a7344808f9cb7f75f3651\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.exoplayer:exoplayer-ui:2.9.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\exoplayer-ui-2.9.1.aar\f748f067f2d19a4e12b92e8c5e6dbe7b\AndroidManifest.xml:17:1-24:12
-MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.1.aar\3af798e56c36f1eae5761a10d2dcb839\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\eebe6919544637d0bf7adcfc89aced58\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:animated-vector-drawable:27.1.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.1.aar\54daad698431f8af51e0e5602ed6e0d7\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\40173eceba62ebb5bc76d2628013d6c2\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\62111eb176545545e966552f1a6f5a30\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-vector-drawable:27.1.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.1.aar\be4cfdbf456ecce36f7ad81394596f5a\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-compat:27.1.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\0a8cba704f6cc236000903db5870169a\AndroidManifest.xml:17:1-22:12
-MERGED from [com.google.android.exoplayer:extension-rtmp:2.9.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\extension-rtmp-2.9.1.aar\d957b0cbfce12134f5cdad81382f1457\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.exoplayer:exoplayer-dash:2.9.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\exoplayer-dash-2.9.1.aar\e65393e91d0f45cf872ca0431fc3dcfc\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.exoplayer:exoplayer-hls:2.9.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\exoplayer-hls-2.9.1.aar\98c35df220fdf71322e7f1aad4f77b7b\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.exoplayer:exoplayer-smoothstreaming:2.9.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\exoplayer-smoothstreaming-2.9.1.aar\5dec5de1950fe95effe46352c8813488\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.exoplayer:exoplayer-core:2.9.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\exoplayer-core-2.9.1.aar\c79d0e7c06d53edf002ada6278d7d8d9\AndroidManifest.xml:17:1-26:12
-MERGED from [com.shuyu:gsyVideoPlayer-base:6.0.2] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-base-6.0.2.aar\a7baa196625a4905f902fb91c8c05d92\AndroidManifest.xml:2:1-11:12
-MERGED from [tv.danmaku.ijk.media:ijkplayer-java:0.8.8] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\ijkplayer-java-0.8.8.aar\70a7c74093ed83efbe7ad903b1efdb50\AndroidManifest.xml:2:1-9:12
-MERGED from [com.shuyu:gsyvideoplayer-androidvideocache:6.0.2] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\gsyvideoplayer-androidvideocache-6.0.2.aar\8bc667fdf48fb5bff02f98c6d18fc0bb\AndroidManifest.xml:2:1-17:12
-MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\9444d6e2511f4df5f7ca6b1a91fa4c6f\AndroidManifest.xml:17:1-22:12
-MERGED from [net.butterflytv.utils:rtmp-client:3.0.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\rtmp-client-3.0.1.aar\8e425055f297cfab6d521baa8463a54f\AndroidManifest.xml:2:1-13:12
-MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\b14a24d2c4247a1e83c936a140ecd1eb\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.core:runtime:1.1.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\70877f1e2db618b15bb7d08df1354013\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\ef37f64f27911be30bec37db1f523912\AndroidManifest.xml:17:1-22:12
-INJECTED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:2:1-251:12
-INJECTED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:2:1-251:12
-INJECTED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:2:1-251:12
+MERGED from [com.android.support:design:27.1.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\design-27.1.1.aar\ff068d199e6fdb678e58b8d130c9fda3\AndroidManifest.xml:17:1-22:12
+MERGED from [com.shuyu:GSYVideoPlayer:6.0.2] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\GSYVideoPlayer-6.0.2.aar\d75c80c1ae14a8847c00076ab26650ef\AndroidManifest.xml:2:1-17:12
+MERGED from [com.shuyu:gsyVideoPlayer-java:6.0.2] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-java-6.0.2.aar\44dc7a657f77845717742872844321b5\AndroidManifest.xml:2:1-17:12
+MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\a9b407ceb262701c82e65cfb4c66ff47\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\1c68a57c9ad81deba44b82f0c2f2884b\AndroidManifest.xml:2:1-11:12
+MERGED from [com.andkulikov:transitionseverywhere:1.7.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\transitionseverywhere-1.7.0.aar\2aff9b3a23ad5b8caa215233086e32d6\AndroidManifest.xml:2:1-14:12
+MERGED from [com.android.support:support-v4:27.1.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.1.aar\e9aa9f27c9aa6ddb2bc5a12385acf55b\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:cardview-v7:27.0.2] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\cardview-v7-27.0.2.aar\31055d2a314928d1507c3e1c5bfeb57d\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:recyclerview-v7:27.1.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.1.1.aar\9751b2f521bd512bedcaf32de91f789c\AndroidManifest.xml:17:1-22:12
+MERGED from [cn.jzvd:jiaozivideoplayer:6.4.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jiaozivideoplayer-6.4.1.aar\32c827cc333df41b690b3df9103d01db\AndroidManifest.xml:2:1-13:12
+MERGED from [top.zibin:Luban:1.1.8] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\Luban-1.1.8.aar\b711a1fd7592ff4ea8cf48915029fe31\AndroidManifest.xml:2:1-11:12
+MERGED from [com.shuyu:gsyVideoPlayer-armv5:6.0.2] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-armv5-6.0.2.aar\ca89e8457c7f2a499a5b01b01f1afd51\AndroidManifest.xml:2:1-17:12
+MERGED from [com.shuyu:gsyVideoPlayer-armv7a:6.0.2] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-armv7a-6.0.2.aar\5d934a440e8481b42efe6cb2bd3de03c\AndroidManifest.xml:2:1-17:12
+MERGED from [com.shuyu:gsyVideoPlayer-arm64:6.0.2] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-arm64-6.0.2.aar\7c7225c182211f3ed386ba072932e616\AndroidManifest.xml:2:1-17:12
+MERGED from [com.shuyu:gsyVideoPlayer-x64:6.0.2] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-x64-6.0.2.aar\649bcb32ce1b5df1174f28211f636c43\AndroidManifest.xml:2:1-17:12
+MERGED from [com.shuyu:gsyVideoPlayer-x86:6.0.2] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-x86-6.0.2.aar\6d2f1ce879c76e17a0426b9ab1294905\AndroidManifest.xml:2:1-17:12
+MERGED from [com.android.support:transition:27.1.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\transition-27.1.1.aar\9696bae57e93fb7cb3323c5338cd00d6\AndroidManifest.xml:17:1-22:12
+MERGED from [com.shuyu:GSYVideoPlayer-exo2:6.0.2] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\GSYVideoPlayer-exo2-6.0.2.aar\54bfeeb2e5e26cdc9418770cb6068563\AndroidManifest.xml:2:1-11:12
+MERGED from [com.google.android.exoplayer:exoplayer:2.9.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\exoplayer-2.9.1.aar\e095f0ed859b4ee96d31063a3e811a68\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.exoplayer:exoplayer-ui:2.9.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\exoplayer-ui-2.9.1.aar\7bd8417e6f86810bce0884c98fc35c71\AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.1.aar\9716e70937b3718d9cf14bd1a4bb42fe\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\dfb5a7998935e7f6773bffa41eba5ea4\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.1.aar\1a16a3f6a167b7c219f8317567c34172\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\bc244ea460f3867cec6c4616437ad731\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\49b32c61b166f7d6fc51ec92bf47c99b\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:27.1.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.1.aar\a583b0807a1c2a2b66b9980b41885c93\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:27.1.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\a6d52d2702d130a87ed80841e1169d14\AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.exoplayer:extension-rtmp:2.9.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\extension-rtmp-2.9.1.aar\7bdb96c31dbd3a35b0637c8160c835bc\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.exoplayer:exoplayer-dash:2.9.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\exoplayer-dash-2.9.1.aar\850cf80ac35262c0616eefea6eff1a93\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.exoplayer:exoplayer-hls:2.9.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\exoplayer-hls-2.9.1.aar\2686afb9ad9eb93257004fa7cbf0f097\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.exoplayer:exoplayer-smoothstreaming:2.9.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\exoplayer-smoothstreaming-2.9.1.aar\5c66bce971e8a971ae641e77f099a80f\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.exoplayer:exoplayer-core:2.9.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\exoplayer-core-2.9.1.aar\6667ac7d002999288a4ea67e84d86d31\AndroidManifest.xml:17:1-26:12
+MERGED from [com.shuyu:gsyVideoPlayer-base:6.0.2] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-base-6.0.2.aar\0e8fce3eb5967547ac49e71e64813ee5\AndroidManifest.xml:2:1-11:12
+MERGED from [tv.danmaku.ijk.media:ijkplayer-java:0.8.8] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\ijkplayer-java-0.8.8.aar\38dda3c4a8b5967bfed4e106455a8bb4\AndroidManifest.xml:2:1-9:12
+MERGED from [com.shuyu:gsyvideoplayer-androidvideocache:6.0.2] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\gsyvideoplayer-androidvideocache-6.0.2.aar\584de7142b18575b17a54b16291c355f\AndroidManifest.xml:2:1-17:12
+MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\aae368347d3a60d5205ccde5c2c7eaab\AndroidManifest.xml:17:1-22:12
+MERGED from [net.butterflytv.utils:rtmp-client:3.0.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\rtmp-client-3.0.1.aar\295eddc3898a6a9bc313cc6d180734a0\AndroidManifest.xml:2:1-13:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\741c749b153a229dc72659f02f306a54\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\781cfb71b7685fc61ebc9196aec60a1b\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\37a28ae57d67ed87fc03026f7a5b3375\AndroidManifest.xml:17:1-22:12
+INJECTED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:2:1-253:12
+INJECTED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:2:1-253:12
+INJECTED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:2:1-253:12
 	package
 		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:4:5-34
 		INJECTED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml
 		INJECTED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml
-		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:2:1-251:12
+		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:2:1-253:12
 		INJECTED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml
 	xmlns:tools
 		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:3:5-51
 	android:versionCode
 		INJECTED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml
-		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:2:1-251:12
+		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:2:1-253:12
 		INJECTED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:2:11-69
 permission#com.example.fitdemo.permission.JPUSH_MESSAGE
 ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:6:5-8:46
-MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\01c9b476f077b34a9c4272a140f25178\AndroidManifest.xml:11:5-13:47
+MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\7f4098a957cce350f9deeb04c2dd33fe\AndroidManifest.xml:11:5-13:47
 	android:protectionLevel
 		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:8:9-44
 	android:name
 		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:7:9-68
 uses-permission#android.permission.INTERNET
 ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:11:5-67
-MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\01c9b476f077b34a9c4272a140f25178\AndroidManifest.xml:18:5-67
-MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\01c9b476f077b34a9c4272a140f25178\AndroidManifest.xml:18:5-67
-MERGED from [net.butterflytv.utils:rtmp-client:3.0.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\rtmp-client-3.0.1.aar\8e425055f297cfab6d521baa8463a54f\AndroidManifest.xml:11:5-67
-MERGED from [net.butterflytv.utils:rtmp-client:3.0.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\rtmp-client-3.0.1.aar\8e425055f297cfab6d521baa8463a54f\AndroidManifest.xml:11:5-67
+MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\7f4098a957cce350f9deeb04c2dd33fe\AndroidManifest.xml:18:5-67
+MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\7f4098a957cce350f9deeb04c2dd33fe\AndroidManifest.xml:18:5-67
+MERGED from [net.butterflytv.utils:rtmp-client:3.0.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\rtmp-client-3.0.1.aar\295eddc3898a6a9bc313cc6d180734a0\AndroidManifest.xml:11:5-67
+MERGED from [net.butterflytv.utils:rtmp-client:3.0.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\rtmp-client-3.0.1.aar\295eddc3898a6a9bc313cc6d180734a0\AndroidManifest.xml:11:5-67
 	android:name
 		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:11:22-64
 uses-permission#android.permission.ACCESS_NETWORK_STATE
 ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:13:5-79
-MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\01c9b476f077b34a9c4272a140f25178\AndroidManifest.xml:25:5-79
-MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\01c9b476f077b34a9c4272a140f25178\AndroidManifest.xml:25:5-79
-MERGED from [cn.jzvd:jiaozivideoplayer:6.4.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jiaozivideoplayer-6.4.1.aar\5c6f9a9b955f282b7f6e1cbc450aa9bd\AndroidManifest.xml:11:5-79
-MERGED from [cn.jzvd:jiaozivideoplayer:6.4.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jiaozivideoplayer-6.4.1.aar\5c6f9a9b955f282b7f6e1cbc450aa9bd\AndroidManifest.xml:11:5-79
-MERGED from [com.google.android.exoplayer:exoplayer-core:2.9.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\exoplayer-core-2.9.1.aar\c79d0e7c06d53edf002ada6278d7d8d9\AndroidManifest.xml:24:5-79
-MERGED from [com.google.android.exoplayer:exoplayer-core:2.9.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\exoplayer-core-2.9.1.aar\c79d0e7c06d53edf002ada6278d7d8d9\AndroidManifest.xml:24:5-79
+MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\7f4098a957cce350f9deeb04c2dd33fe\AndroidManifest.xml:25:5-79
+MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\7f4098a957cce350f9deeb04c2dd33fe\AndroidManifest.xml:25:5-79
+MERGED from [cn.jzvd:jiaozivideoplayer:6.4.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jiaozivideoplayer-6.4.1.aar\32c827cc333df41b690b3df9103d01db\AndroidManifest.xml:11:5-79
+MERGED from [cn.jzvd:jiaozivideoplayer:6.4.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jiaozivideoplayer-6.4.1.aar\32c827cc333df41b690b3df9103d01db\AndroidManifest.xml:11:5-79
+MERGED from [com.google.android.exoplayer:exoplayer-core:2.9.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\exoplayer-core-2.9.1.aar\6667ac7d002999288a4ea67e84d86d31\AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.exoplayer:exoplayer-core:2.9.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\exoplayer-core-2.9.1.aar\6667ac7d002999288a4ea67e84d86d31\AndroidManifest.xml:24:5-79
 	android:name
 		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:13:22-76
 uses-permission#android.permission.ACCESS_WIFI_STATE
 ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:15:5-76
-MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\01c9b476f077b34a9c4272a140f25178\AndroidManifest.xml:27:5-76
-MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\01c9b476f077b34a9c4272a140f25178\AndroidManifest.xml:27:5-76
+MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\7f4098a957cce350f9deeb04c2dd33fe\AndroidManifest.xml:27:5-76
+MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\7f4098a957cce350f9deeb04c2dd33fe\AndroidManifest.xml:27:5-76
 	android:name
 		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:15:22-73
 uses-permission#android.permission.WAKE_LOCK
 ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:17:5-68
-MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\01c9b476f077b34a9c4272a140f25178\AndroidManifest.xml:19:5-68
-MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\01c9b476f077b34a9c4272a140f25178\AndroidManifest.xml:19:5-68
+MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\7f4098a957cce350f9deeb04c2dd33fe\AndroidManifest.xml:19:5-68
+MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\7f4098a957cce350f9deeb04c2dd33fe\AndroidManifest.xml:19:5-68
 	android:name
 		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:17:22-65
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
 ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:19:5-81
-MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\01c9b476f077b34a9c4272a140f25178\AndroidManifest.xml:21:5-81
-MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\01c9b476f077b34a9c4272a140f25178\AndroidManifest.xml:21:5-81
+MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\7f4098a957cce350f9deeb04c2dd33fe\AndroidManifest.xml:21:5-81
+MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\7f4098a957cce350f9deeb04c2dd33fe\AndroidManifest.xml:21:5-81
 MERGED from [:silicompressor] D:\Android\Application\FitDemo\silicompressor\build\intermediates\manifests\full\debug\AndroidManifest.xml:12:5-81
 MERGED from [:silicompressor] D:\Android\Application\FitDemo\silicompressor\build\intermediates\manifests\full\debug\AndroidManifest.xml:12:5-81
 	android:name
 		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:19:22-78
 uses-permission#android.permission.READ_PHONE_STATE
 ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:21:5-75
-MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\01c9b476f077b34a9c4272a140f25178\AndroidManifest.xml:20:5-75
-MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\01c9b476f077b34a9c4272a140f25178\AndroidManifest.xml:20:5-75
+MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\7f4098a957cce350f9deeb04c2dd33fe\AndroidManifest.xml:20:5-75
+MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\7f4098a957cce350f9deeb04c2dd33fe\AndroidManifest.xml:20:5-75
 	android:name
 		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:21:22-72
 uses-permission#android.permission.VIBRATE
 ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:23:5-66
-MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\01c9b476f077b34a9c4272a140f25178\AndroidManifest.xml:23:5-66
-MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\01c9b476f077b34a9c4272a140f25178\AndroidManifest.xml:23:5-66
+MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\7f4098a957cce350f9deeb04c2dd33fe\AndroidManifest.xml:23:5-66
+MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\7f4098a957cce350f9deeb04c2dd33fe\AndroidManifest.xml:23:5-66
 	android:name
 		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:23:22-63
 uses-permission#android.permission.MOUNT_UNMOUNT_FILESYSTEMS
 ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:25:5-26:47
-MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\01c9b476f077b34a9c4272a140f25178\AndroidManifest.xml:24:5-84
-MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\01c9b476f077b34a9c4272a140f25178\AndroidManifest.xml:24:5-84
+MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\7f4098a957cce350f9deeb04c2dd33fe\AndroidManifest.xml:24:5-84
+MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\7f4098a957cce350f9deeb04c2dd33fe\AndroidManifest.xml:24:5-84
 	tools:ignore
 		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:26:9-44
 	android:name
 		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:25:22-81
 uses-permission#android.permission.CAMERA
 ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:28:5-65
-MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\01c9b476f077b34a9c4272a140f25178\AndroidManifest.xml:39:5-65
-MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\01c9b476f077b34a9c4272a140f25178\AndroidManifest.xml:39:5-65
+MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\7f4098a957cce350f9deeb04c2dd33fe\AndroidManifest.xml:39:5-65
+MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\7f4098a957cce350f9deeb04c2dd33fe\AndroidManifest.xml:39:5-65
 	android:name
 		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:28:22-62
 uses-permission#com.google.android.c2dm.permission.RECEIVE
@@ -148,20 +148,20 @@ ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:30:5-
 		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:30:22-79
 uses-permission#android.permission.ACCESS_COARSE_LOCATION
 ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:32:5-80
-MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\01c9b476f077b34a9c4272a140f25178\AndroidManifest.xml:31:5-81
-MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\01c9b476f077b34a9c4272a140f25178\AndroidManifest.xml:31:5-81
+MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\7f4098a957cce350f9deeb04c2dd33fe\AndroidManifest.xml:31:5-81
+MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\7f4098a957cce350f9deeb04c2dd33fe\AndroidManifest.xml:31:5-81
 	android:name
 		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:32:22-78
 uses-permission#android.permission.ACCESS_FINE_LOCATION
 ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:34:5-78
-MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\01c9b476f077b34a9c4272a140f25178\AndroidManifest.xml:32:5-79
-MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\01c9b476f077b34a9c4272a140f25178\AndroidManifest.xml:32:5-79
+MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\7f4098a957cce350f9deeb04c2dd33fe\AndroidManifest.xml:32:5-79
+MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\7f4098a957cce350f9deeb04c2dd33fe\AndroidManifest.xml:32:5-79
 	android:name
 		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:34:22-76
 uses-permission#android.permission.CHANGE_WIFI_STATE
 ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:36:5-75
-MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\01c9b476f077b34a9c4272a140f25178\AndroidManifest.xml:34:5-76
-MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\01c9b476f077b34a9c4272a140f25178\AndroidManifest.xml:34:5-76
+MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\7f4098a957cce350f9deeb04c2dd33fe\AndroidManifest.xml:34:5-76
+MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\7f4098a957cce350f9deeb04c2dd33fe\AndroidManifest.xml:34:5-76
 	android:name
 		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:36:22-73
 uses-permission#android.permission.READ_LOGS
@@ -172,8 +172,8 @@ ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:38:5-
 		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:38:22-65
 uses-permission#android.permission.WRITE_SETTINGS
 ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:41:5-42:47
-MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\01c9b476f077b34a9c4272a140f25178\AndroidManifest.xml:26:5-73
-MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\01c9b476f077b34a9c4272a140f25178\AndroidManifest.xml:26:5-73
+MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\7f4098a957cce350f9deeb04c2dd33fe\AndroidManifest.xml:26:5-73
+MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\7f4098a957cce350f9deeb04c2dd33fe\AndroidManifest.xml:26:5-73
 	tools:ignore
 		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:42:9-44
 	android:name
@@ -192,7 +192,7 @@ ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:47:5-
 		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:47:22-68
 uses-permission#com.example.fitdemo.permission.JPUSH_MESSAGE
 ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:49:5-84
-MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\01c9b476f077b34a9c4272a140f25178\AndroidManifest.xml:16:5-81
+MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\7f4098a957cce350f9deeb04c2dd33fe\AndroidManifest.xml:16:5-81
 	android:name
 		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:49:22-81
 uses-permission#android.permission.GET_TASKS
@@ -201,54 +201,54 @@ ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:50:5-
 		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:50:22-65
 uses-permission#android.permission.RECORD_AUDIO
 ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:53:5-70
-MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\01c9b476f077b34a9c4272a140f25178\AndroidManifest.xml:38:5-71
-MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\01c9b476f077b34a9c4272a140f25178\AndroidManifest.xml:38:5-71
+MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\7f4098a957cce350f9deeb04c2dd33fe\AndroidManifest.xml:38:5-71
+MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\7f4098a957cce350f9deeb04c2dd33fe\AndroidManifest.xml:38:5-71
 	android:name
 		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:53:22-68
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
 ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:55:5-79
-MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\01c9b476f077b34a9c4272a140f25178\AndroidManifest.xml:22:5-80
-MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\01c9b476f077b34a9c4272a140f25178\AndroidManifest.xml:22:5-80
+MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\7f4098a957cce350f9deeb04c2dd33fe\AndroidManifest.xml:22:5-80
+MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\7f4098a957cce350f9deeb04c2dd33fe\AndroidManifest.xml:22:5-80
 MERGED from [:silicompressor] D:\Android\Application\FitDemo\silicompressor\build\intermediates\manifests\full\debug\AndroidManifest.xml:11:5-80
 MERGED from [:silicompressor] D:\Android\Application\FitDemo\silicompressor\build\intermediates\manifests\full\debug\AndroidManifest.xml:11:5-80
 	android:name
 		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:55:22-77
 application
-ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:57:5-249:19
-MERGED from [com.ashokvarma.android:bottom-navigation-bar:2.0.3] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\bottom-navigation-bar-2.0.3.aar\fca251b6b8360d3a92ce99c983d8b9ac\AndroidManifest.xml:11:5-47
-MERGED from [com.ashokvarma.android:bottom-navigation-bar:2.0.3] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\bottom-navigation-bar-2.0.3.aar\fca251b6b8360d3a92ce99c983d8b9ac\AndroidManifest.xml:11:5-47
-MERGED from [de.hdodenhof:circleimageview:2.1.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\circleimageview-2.1.0.aar\05fe9415b8c39a356ffbc06f965e81d2\AndroidManifest.xml:9:5-20
-MERGED from [de.hdodenhof:circleimageview:2.1.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\circleimageview-2.1.0.aar\05fe9415b8c39a356ffbc06f965e81d2\AndroidManifest.xml:9:5-20
-MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\01c9b476f077b34a9c4272a140f25178\AndroidManifest.xml:42:5-132:19
-MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\01c9b476f077b34a9c4272a140f25178\AndroidManifest.xml:42:5-132:19
-MERGED from [cn.jiguang.sdk:jcore:1.2.6] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jcore-1.2.6.aar\7d5ae4924c808b2981f8bfc19fd22d7e\AndroidManifest.xml:11:5-12:19
-MERGED from [cn.jiguang.sdk:jcore:1.2.6] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jcore-1.2.6.aar\7d5ae4924c808b2981f8bfc19fd22d7e\AndroidManifest.xml:11:5-12:19
-MERGED from [cn.smssdk:ShortMessageSDKGUI:3.3.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\ShortMessageSDKGUI-3.3.0.aar\6d2c643cb91791f85f7e5ca4b34aa25b\AndroidManifest.xml:13:5-14:19
-MERGED from [cn.smssdk:ShortMessageSDKGUI:3.3.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\ShortMessageSDKGUI-3.3.0.aar\6d2c643cb91791f85f7e5ca4b34aa25b\AndroidManifest.xml:13:5-14:19
+ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:57:5-251:19
+MERGED from [com.ashokvarma.android:bottom-navigation-bar:2.0.3] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\bottom-navigation-bar-2.0.3.aar\8f828714eb68ef20a73852e4321fd9a4\AndroidManifest.xml:11:5-47
+MERGED from [com.ashokvarma.android:bottom-navigation-bar:2.0.3] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\bottom-navigation-bar-2.0.3.aar\8f828714eb68ef20a73852e4321fd9a4\AndroidManifest.xml:11:5-47
+MERGED from [de.hdodenhof:circleimageview:2.1.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\circleimageview-2.1.0.aar\ba874dc32ace61d0bc2aabc9d3a46bd8\AndroidManifest.xml:9:5-20
+MERGED from [de.hdodenhof:circleimageview:2.1.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\circleimageview-2.1.0.aar\ba874dc32ace61d0bc2aabc9d3a46bd8\AndroidManifest.xml:9:5-20
+MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\7f4098a957cce350f9deeb04c2dd33fe\AndroidManifest.xml:42:5-132:19
+MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\7f4098a957cce350f9deeb04c2dd33fe\AndroidManifest.xml:42:5-132:19
+MERGED from [cn.jiguang.sdk:jcore:1.2.6] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jcore-1.2.6.aar\dc5d98990349d1a06f9df7d2e473c6f7\AndroidManifest.xml:11:5-12:19
+MERGED from [cn.jiguang.sdk:jcore:1.2.6] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jcore-1.2.6.aar\dc5d98990349d1a06f9df7d2e473c6f7\AndroidManifest.xml:11:5-12:19
+MERGED from [cn.smssdk:ShortMessageSDKGUI:3.3.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\ShortMessageSDKGUI-3.3.0.aar\ab21677b39dd09ea928eaf58a52d9bf0\AndroidManifest.xml:13:5-14:19
+MERGED from [cn.smssdk:ShortMessageSDKGUI:3.3.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\ShortMessageSDKGUI-3.3.0.aar\ab21677b39dd09ea928eaf58a52d9bf0\AndroidManifest.xml:13:5-14:19
 MERGED from [:library] D:\Android\Application\FitDemo\library\build\intermediates\manifests\full\debug\AndroidManifest.xml:11:5-15:19
 MERGED from [:library] D:\Android\Application\FitDemo\library\build\intermediates\manifests\full\debug\AndroidManifest.xml:11:5-15:19
 MERGED from [:silicompressor] D:\Android\Application\FitDemo\silicompressor\build\intermediates\manifests\full\debug\AndroidManifest.xml:14:5-18:19
 MERGED from [:silicompressor] D:\Android\Application\FitDemo\silicompressor\build\intermediates\manifests\full\debug\AndroidManifest.xml:14:5-18:19
-MERGED from [com.shuyu:GSYVideoPlayer:6.0.2] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\GSYVideoPlayer-6.0.2.aar\ce5341c5e5088803a24716b140700ef8\AndroidManifest.xml:11:5-15:19
-MERGED from [com.shuyu:GSYVideoPlayer:6.0.2] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\GSYVideoPlayer-6.0.2.aar\ce5341c5e5088803a24716b140700ef8\AndroidManifest.xml:11:5-15:19
-MERGED from [com.shuyu:gsyVideoPlayer-java:6.0.2] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-java-6.0.2.aar\987df321ee8afb18dd839242b4e9ad27\AndroidManifest.xml:11:5-15:19
-MERGED from [com.shuyu:gsyVideoPlayer-java:6.0.2] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-java-6.0.2.aar\987df321ee8afb18dd839242b4e9ad27\AndroidManifest.xml:11:5-15:19
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\b2582fea899e7a9d0ef31120b8529e4a\AndroidManifest.xml:9:5-20
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\b2582fea899e7a9d0ef31120b8529e4a\AndroidManifest.xml:9:5-20
-MERGED from [com.andkulikov:transitionseverywhere:1.7.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\transitionseverywhere-1.7.0.aar\53f88deb81b1ef49ca7c5ed69f8c322c\AndroidManifest.xml:12:5-20
-MERGED from [com.andkulikov:transitionseverywhere:1.7.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\transitionseverywhere-1.7.0.aar\53f88deb81b1ef49ca7c5ed69f8c322c\AndroidManifest.xml:12:5-20
-MERGED from [com.shuyu:gsyVideoPlayer-armv5:6.0.2] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-armv5-6.0.2.aar\bc73177bb9ed9699fdbe47cae1858405\AndroidManifest.xml:11:5-15:19
-MERGED from [com.shuyu:gsyVideoPlayer-armv5:6.0.2] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-armv5-6.0.2.aar\bc73177bb9ed9699fdbe47cae1858405\AndroidManifest.xml:11:5-15:19
-MERGED from [com.shuyu:gsyVideoPlayer-armv7a:6.0.2] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-armv7a-6.0.2.aar\fb70b62dc20f35da80fa45e99a89c2cf\AndroidManifest.xml:11:5-15:19
-MERGED from [com.shuyu:gsyVideoPlayer-armv7a:6.0.2] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-armv7a-6.0.2.aar\fb70b62dc20f35da80fa45e99a89c2cf\AndroidManifest.xml:11:5-15:19
-MERGED from [com.shuyu:gsyVideoPlayer-arm64:6.0.2] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-arm64-6.0.2.aar\e8c08686336fc34726f0fbd467e5ff43\AndroidManifest.xml:11:5-15:19
-MERGED from [com.shuyu:gsyVideoPlayer-arm64:6.0.2] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-arm64-6.0.2.aar\e8c08686336fc34726f0fbd467e5ff43\AndroidManifest.xml:11:5-15:19
-MERGED from [com.shuyu:gsyVideoPlayer-x64:6.0.2] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-x64-6.0.2.aar\00511f2f394a0e3c6f350a612212aad6\AndroidManifest.xml:11:5-15:19
-MERGED from [com.shuyu:gsyVideoPlayer-x64:6.0.2] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-x64-6.0.2.aar\00511f2f394a0e3c6f350a612212aad6\AndroidManifest.xml:11:5-15:19
-MERGED from [com.shuyu:gsyVideoPlayer-x86:6.0.2] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-x86-6.0.2.aar\71033d7ec7d403ea426663e518d37973\AndroidManifest.xml:11:5-15:19
-MERGED from [com.shuyu:gsyVideoPlayer-x86:6.0.2] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-x86-6.0.2.aar\71033d7ec7d403ea426663e518d37973\AndroidManifest.xml:11:5-15:19
-MERGED from [com.shuyu:gsyvideoplayer-androidvideocache:6.0.2] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\gsyvideoplayer-androidvideocache-6.0.2.aar\8bc667fdf48fb5bff02f98c6d18fc0bb\AndroidManifest.xml:11:5-15:19
-MERGED from [com.shuyu:gsyvideoplayer-androidvideocache:6.0.2] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\gsyvideoplayer-androidvideocache-6.0.2.aar\8bc667fdf48fb5bff02f98c6d18fc0bb\AndroidManifest.xml:11:5-15:19
+MERGED from [com.shuyu:GSYVideoPlayer:6.0.2] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\GSYVideoPlayer-6.0.2.aar\d75c80c1ae14a8847c00076ab26650ef\AndroidManifest.xml:11:5-15:19
+MERGED from [com.shuyu:GSYVideoPlayer:6.0.2] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\GSYVideoPlayer-6.0.2.aar\d75c80c1ae14a8847c00076ab26650ef\AndroidManifest.xml:11:5-15:19
+MERGED from [com.shuyu:gsyVideoPlayer-java:6.0.2] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-java-6.0.2.aar\44dc7a657f77845717742872844321b5\AndroidManifest.xml:11:5-15:19
+MERGED from [com.shuyu:gsyVideoPlayer-java:6.0.2] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-java-6.0.2.aar\44dc7a657f77845717742872844321b5\AndroidManifest.xml:11:5-15:19
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\1c68a57c9ad81deba44b82f0c2f2884b\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\1c68a57c9ad81deba44b82f0c2f2884b\AndroidManifest.xml:9:5-20
+MERGED from [com.andkulikov:transitionseverywhere:1.7.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\transitionseverywhere-1.7.0.aar\2aff9b3a23ad5b8caa215233086e32d6\AndroidManifest.xml:12:5-20
+MERGED from [com.andkulikov:transitionseverywhere:1.7.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\transitionseverywhere-1.7.0.aar\2aff9b3a23ad5b8caa215233086e32d6\AndroidManifest.xml:12:5-20
+MERGED from [com.shuyu:gsyVideoPlayer-armv5:6.0.2] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-armv5-6.0.2.aar\ca89e8457c7f2a499a5b01b01f1afd51\AndroidManifest.xml:11:5-15:19
+MERGED from [com.shuyu:gsyVideoPlayer-armv5:6.0.2] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-armv5-6.0.2.aar\ca89e8457c7f2a499a5b01b01f1afd51\AndroidManifest.xml:11:5-15:19
+MERGED from [com.shuyu:gsyVideoPlayer-armv7a:6.0.2] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-armv7a-6.0.2.aar\5d934a440e8481b42efe6cb2bd3de03c\AndroidManifest.xml:11:5-15:19
+MERGED from [com.shuyu:gsyVideoPlayer-armv7a:6.0.2] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-armv7a-6.0.2.aar\5d934a440e8481b42efe6cb2bd3de03c\AndroidManifest.xml:11:5-15:19
+MERGED from [com.shuyu:gsyVideoPlayer-arm64:6.0.2] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-arm64-6.0.2.aar\7c7225c182211f3ed386ba072932e616\AndroidManifest.xml:11:5-15:19
+MERGED from [com.shuyu:gsyVideoPlayer-arm64:6.0.2] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-arm64-6.0.2.aar\7c7225c182211f3ed386ba072932e616\AndroidManifest.xml:11:5-15:19
+MERGED from [com.shuyu:gsyVideoPlayer-x64:6.0.2] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-x64-6.0.2.aar\649bcb32ce1b5df1174f28211f636c43\AndroidManifest.xml:11:5-15:19
+MERGED from [com.shuyu:gsyVideoPlayer-x64:6.0.2] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-x64-6.0.2.aar\649bcb32ce1b5df1174f28211f636c43\AndroidManifest.xml:11:5-15:19
+MERGED from [com.shuyu:gsyVideoPlayer-x86:6.0.2] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-x86-6.0.2.aar\6d2f1ce879c76e17a0426b9ab1294905\AndroidManifest.xml:11:5-15:19
+MERGED from [com.shuyu:gsyVideoPlayer-x86:6.0.2] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-x86-6.0.2.aar\6d2f1ce879c76e17a0426b9ab1294905\AndroidManifest.xml:11:5-15:19
+MERGED from [com.shuyu:gsyvideoplayer-androidvideocache:6.0.2] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\gsyvideoplayer-androidvideocache-6.0.2.aar\584de7142b18575b17a54b16291c355f\AndroidManifest.xml:11:5-15:19
+MERGED from [com.shuyu:gsyvideoplayer-androidvideocache:6.0.2] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\gsyvideoplayer-androidvideocache-6.0.2.aar\584de7142b18575b17a54b16291c355f\AndroidManifest.xml:11:5-15:19
 	android:supportsRtl
 		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:61:9-35
 	android:label
@@ -279,10 +279,10 @@ ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:69:17
 		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:69:27-74
 service#cn.jpush.android.service.PushService
 ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:75:9-85:19
-MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\01c9b476f077b34a9c4272a140f25178\AndroidManifest.xml:46:9-57:19
-MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\01c9b476f077b34a9c4272a140f25178\AndroidManifest.xml:46:9-57:19
+MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\7f4098a957cce350f9deeb04c2dd33fe\AndroidManifest.xml:46:9-57:19
+MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\7f4098a957cce350f9deeb04c2dd33fe\AndroidManifest.xml:46:9-57:19
 	android:process
-		ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\01c9b476f077b34a9c4272a140f25178\AndroidManifest.xml:50:13-40
+		ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\7f4098a957cce350f9deeb04c2dd33fe\AndroidManifest.xml:50:13-40
 	android:enabled
 		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:77:13-35
 	android:exported
@@ -309,16 +309,16 @@ ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:83:17
 		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:83:25-73
 receiver#cn.jpush.android.service.AlarmReceiver
 ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:88:9-90:40
-MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\01c9b476f077b34a9c4272a140f25178\AndroidManifest.xml:90:9-92:40
-MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\01c9b476f077b34a9c4272a140f25178\AndroidManifest.xml:90:9-92:40
+MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\7f4098a957cce350f9deeb04c2dd33fe\AndroidManifest.xml:90:9-92:40
+MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\7f4098a957cce350f9deeb04c2dd33fe\AndroidManifest.xml:90:9-92:40
 	android:exported
 		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:90:13-37
 	android:name
 		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:89:13-66
 provider#cn.jpush.android.service.DataProvider
 ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:93:9-96:40
-MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\01c9b476f077b34a9c4272a140f25178\AndroidManifest.xml:95:9-98:40
-MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\01c9b476f077b34a9c4272a140f25178\AndroidManifest.xml:95:9-98:40
+MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\7f4098a957cce350f9deeb04c2dd33fe\AndroidManifest.xml:95:9-98:40
+MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\7f4098a957cce350f9deeb04c2dd33fe\AndroidManifest.xml:95:9-98:40
 	android:authorities
 		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:95:13-67
 	android:exported
@@ -327,8 +327,8 @@ MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\cach
 		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:94:13-65
 provider#cn.jpush.im.android.helpers.ipc.IMProvider
 ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:99:9-102:40
-MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\01c9b476f077b34a9c4272a140f25178\AndroidManifest.xml:114:9-117:40
-MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\01c9b476f077b34a9c4272a140f25178\AndroidManifest.xml:114:9-117:40
+MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\7f4098a957cce350f9deeb04c2dd33fe\AndroidManifest.xml:114:9-117:40
+MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\7f4098a957cce350f9deeb04c2dd33fe\AndroidManifest.xml:114:9-117:40
 	android:authorities
 		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:101:13-65
 	android:exported
@@ -337,8 +337,8 @@ MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\cach
 		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:100:13-70
 receiver#cn.jpush.im.android.helpers.IMReceiver
 ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:105:9-109:20
-MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\01c9b476f077b34a9c4272a140f25178\AndroidManifest.xml:83:9-87:20
-MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\01c9b476f077b34a9c4272a140f25178\AndroidManifest.xml:83:9-87:20
+MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\7f4098a957cce350f9deeb04c2dd33fe\AndroidManifest.xml:83:9-87:20
+MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\7f4098a957cce350f9deeb04c2dd33fe\AndroidManifest.xml:83:9-87:20
 	android:enabled
 		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:107:13-35
 	android:exported
@@ -347,16 +347,16 @@ MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\cach
 		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:106:13-66
 meta-data#JPUSH_CHANNEL
 ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:117:9-119:49
-MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\01c9b476f077b34a9c4272a140f25178\AndroidManifest.xml:125:9-127:48
-MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\01c9b476f077b34a9c4272a140f25178\AndroidManifest.xml:125:9-127:48
+MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\7f4098a957cce350f9deeb04c2dd33fe\AndroidManifest.xml:125:9-127:48
+MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\7f4098a957cce350f9deeb04c2dd33fe\AndroidManifest.xml:125:9-127:48
 	android:value
 		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:119:13-46
 	android:name
 		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:118:13-41
 meta-data#JPUSH_APPKEY
 ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:122:9-124:56
-MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\01c9b476f077b34a9c4272a140f25178\AndroidManifest.xml:129:9-131:47
-MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\01c9b476f077b34a9c4272a140f25178\AndroidManifest.xml:129:9-131:47
+MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\7f4098a957cce350f9deeb04c2dd33fe\AndroidManifest.xml:129:9-131:47
+MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\7f4098a957cce350f9deeb04c2dd33fe\AndroidManifest.xml:129:9-131:47
 	android:value
 		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:124:13-53
 	android:name
@@ -510,115 +510,119 @@ ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:238:9
 	android:name
 		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:238:19-55
 activity#com.example.fitdemo.Subscribe.VideoActivity
-ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:243:9-246:20
+ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:243:9-248:20
+	android:screenOrientation
+		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:246:13-49
 	tools:ignore
 		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:244:13-47
+	android:configChanges
+		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:245:13-74
 	android:name
 		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml:243:19-58
 uses-sdk
 INJECTED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml
 INJECTED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml
-MERGED from [com.ashokvarma.android:bottom-navigation-bar:2.0.3] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\bottom-navigation-bar-2.0.3.aar\fca251b6b8360d3a92ce99c983d8b9ac\AndroidManifest.xml:7:5-9:41
-MERGED from [com.ashokvarma.android:bottom-navigation-bar:2.0.3] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\bottom-navigation-bar-2.0.3.aar\fca251b6b8360d3a92ce99c983d8b9ac\AndroidManifest.xml:7:5-9:41
-MERGED from [de.hdodenhof:circleimageview:2.1.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\circleimageview-2.1.0.aar\05fe9415b8c39a356ffbc06f965e81d2\AndroidManifest.xml:5:5-7:41
-MERGED from [de.hdodenhof:circleimageview:2.1.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\circleimageview-2.1.0.aar\05fe9415b8c39a356ffbc06f965e81d2\AndroidManifest.xml:5:5-7:41
-MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\01c9b476f077b34a9c4272a140f25178\AndroidManifest.xml:7:5-9:41
-MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\01c9b476f077b34a9c4272a140f25178\AndroidManifest.xml:7:5-9:41
-MERGED from [cn.jiguang.sdk:jcore:1.2.6] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jcore-1.2.6.aar\7d5ae4924c808b2981f8bfc19fd22d7e\AndroidManifest.xml:7:5-9:41
-MERGED from [cn.jiguang.sdk:jcore:1.2.6] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jcore-1.2.6.aar\7d5ae4924c808b2981f8bfc19fd22d7e\AndroidManifest.xml:7:5-9:41
-MERGED from [cn.smssdk:SMSSDK:3.3.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\SMSSDK-3.3.0.aar\38aec0128ff689e17757262bed379f88\AndroidManifest.xml:7:5-9:41
-MERGED from [cn.smssdk:SMSSDK:3.3.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\SMSSDK-3.3.0.aar\38aec0128ff689e17757262bed379f88\AndroidManifest.xml:7:5-9:41
-MERGED from [cn.smssdk:ShortMessageSDKGUI:3.3.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\ShortMessageSDKGUI-3.3.0.aar\6d2c643cb91791f85f7e5ca4b34aa25b\AndroidManifest.xml:8:5-11:45
-MERGED from [cn.smssdk:ShortMessageSDKGUI:3.3.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\ShortMessageSDKGUI-3.3.0.aar\6d2c643cb91791f85f7e5ca4b34aa25b\AndroidManifest.xml:8:5-11:45
+MERGED from [com.ashokvarma.android:bottom-navigation-bar:2.0.3] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\bottom-navigation-bar-2.0.3.aar\8f828714eb68ef20a73852e4321fd9a4\AndroidManifest.xml:7:5-9:41
+MERGED from [com.ashokvarma.android:bottom-navigation-bar:2.0.3] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\bottom-navigation-bar-2.0.3.aar\8f828714eb68ef20a73852e4321fd9a4\AndroidManifest.xml:7:5-9:41
+MERGED from [de.hdodenhof:circleimageview:2.1.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\circleimageview-2.1.0.aar\ba874dc32ace61d0bc2aabc9d3a46bd8\AndroidManifest.xml:5:5-7:41
+MERGED from [de.hdodenhof:circleimageview:2.1.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\circleimageview-2.1.0.aar\ba874dc32ace61d0bc2aabc9d3a46bd8\AndroidManifest.xml:5:5-7:41
+MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\7f4098a957cce350f9deeb04c2dd33fe\AndroidManifest.xml:7:5-9:41
+MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\7f4098a957cce350f9deeb04c2dd33fe\AndroidManifest.xml:7:5-9:41
+MERGED from [cn.jiguang.sdk:jcore:1.2.6] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jcore-1.2.6.aar\dc5d98990349d1a06f9df7d2e473c6f7\AndroidManifest.xml:7:5-9:41
+MERGED from [cn.jiguang.sdk:jcore:1.2.6] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jcore-1.2.6.aar\dc5d98990349d1a06f9df7d2e473c6f7\AndroidManifest.xml:7:5-9:41
+MERGED from [cn.smssdk:SMSSDK:3.3.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\SMSSDK-3.3.0.aar\2a0e88e0ce7cff40665b988c0e050697\AndroidManifest.xml:7:5-9:41
+MERGED from [cn.smssdk:SMSSDK:3.3.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\SMSSDK-3.3.0.aar\2a0e88e0ce7cff40665b988c0e050697\AndroidManifest.xml:7:5-9:41
+MERGED from [cn.smssdk:ShortMessageSDKGUI:3.3.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\ShortMessageSDKGUI-3.3.0.aar\ab21677b39dd09ea928eaf58a52d9bf0\AndroidManifest.xml:8:5-11:45
+MERGED from [cn.smssdk:ShortMessageSDKGUI:3.3.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\ShortMessageSDKGUI-3.3.0.aar\ab21677b39dd09ea928eaf58a52d9bf0\AndroidManifest.xml:8:5-11:45
 MERGED from [:library] D:\Android\Application\FitDemo\library\build\intermediates\manifests\full\debug\AndroidManifest.xml:7:5-9:41
 MERGED from [:library] D:\Android\Application\FitDemo\library\build\intermediates\manifests\full\debug\AndroidManifest.xml:7:5-9:41
 MERGED from [:silicompressor] D:\Android\Application\FitDemo\silicompressor\build\intermediates\manifests\full\debug\AndroidManifest.xml:7:5-9:41
 MERGED from [:silicompressor] D:\Android\Application\FitDemo\silicompressor\build\intermediates\manifests\full\debug\AndroidManifest.xml:7:5-9:41
-MERGED from [com.android.support:design:27.1.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\design-27.1.1.aar\cdc7d0379cf199617f000a41432ec222\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:design:27.1.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\design-27.1.1.aar\cdc7d0379cf199617f000a41432ec222\AndroidManifest.xml:20:5-44
-MERGED from [com.shuyu:GSYVideoPlayer:6.0.2] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\GSYVideoPlayer-6.0.2.aar\ce5341c5e5088803a24716b140700ef8\AndroidManifest.xml:7:5-9:41
-MERGED from [com.shuyu:GSYVideoPlayer:6.0.2] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\GSYVideoPlayer-6.0.2.aar\ce5341c5e5088803a24716b140700ef8\AndroidManifest.xml:7:5-9:41
-MERGED from [com.shuyu:gsyVideoPlayer-java:6.0.2] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-java-6.0.2.aar\987df321ee8afb18dd839242b4e9ad27\AndroidManifest.xml:7:5-9:41
-MERGED from [com.shuyu:gsyVideoPlayer-java:6.0.2] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-java-6.0.2.aar\987df321ee8afb18dd839242b4e9ad27\AndroidManifest.xml:7:5-9:41
-MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\777b3d8d1547e5d766362170c0e8fa73\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\777b3d8d1547e5d766362170c0e8fa73\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\b2582fea899e7a9d0ef31120b8529e4a\AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\b2582fea899e7a9d0ef31120b8529e4a\AndroidManifest.xml:5:5-7:41
-MERGED from [com.andkulikov:transitionseverywhere:1.7.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\transitionseverywhere-1.7.0.aar\53f88deb81b1ef49ca7c5ed69f8c322c\AndroidManifest.xml:8:5-10:41
-MERGED from [com.andkulikov:transitionseverywhere:1.7.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\transitionseverywhere-1.7.0.aar\53f88deb81b1ef49ca7c5ed69f8c322c\AndroidManifest.xml:8:5-10:41
-MERGED from [com.android.support:support-v4:27.1.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.1.aar\b8ab714ee263cf813cb964894c098d4c\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-v4:27.1.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.1.aar\b8ab714ee263cf813cb964894c098d4c\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cardview-v7:27.0.2] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\cardview-v7-27.0.2.aar\4fa0a44ddf895c67e8642e30204b6a0c\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cardview-v7:27.0.2] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\cardview-v7-27.0.2.aar\4fa0a44ddf895c67e8642e30204b6a0c\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:recyclerview-v7:27.1.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.1.1.aar\c268276bcc994be78223721d1e8eb3ae\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:recyclerview-v7:27.1.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.1.1.aar\c268276bcc994be78223721d1e8eb3ae\AndroidManifest.xml:20:5-44
-MERGED from [cn.jzvd:jiaozivideoplayer:6.4.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jiaozivideoplayer-6.4.1.aar\5c6f9a9b955f282b7f6e1cbc450aa9bd\AndroidManifest.xml:7:5-9:41
-MERGED from [cn.jzvd:jiaozivideoplayer:6.4.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jiaozivideoplayer-6.4.1.aar\5c6f9a9b955f282b7f6e1cbc450aa9bd\AndroidManifest.xml:7:5-9:41
-MERGED from [top.zibin:Luban:1.1.8] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\Luban-1.1.8.aar\89d0daf3e252d9ed84a2b928abba22a5\AndroidManifest.xml:7:5-9:41
-MERGED from [top.zibin:Luban:1.1.8] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\Luban-1.1.8.aar\89d0daf3e252d9ed84a2b928abba22a5\AndroidManifest.xml:7:5-9:41
-MERGED from [com.shuyu:gsyVideoPlayer-armv5:6.0.2] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-armv5-6.0.2.aar\bc73177bb9ed9699fdbe47cae1858405\AndroidManifest.xml:7:5-9:41
-MERGED from [com.shuyu:gsyVideoPlayer-armv5:6.0.2] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-armv5-6.0.2.aar\bc73177bb9ed9699fdbe47cae1858405\AndroidManifest.xml:7:5-9:41
-MERGED from [com.shuyu:gsyVideoPlayer-armv7a:6.0.2] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-armv7a-6.0.2.aar\fb70b62dc20f35da80fa45e99a89c2cf\AndroidManifest.xml:7:5-9:41
-MERGED from [com.shuyu:gsyVideoPlayer-armv7a:6.0.2] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-armv7a-6.0.2.aar\fb70b62dc20f35da80fa45e99a89c2cf\AndroidManifest.xml:7:5-9:41
-MERGED from [com.shuyu:gsyVideoPlayer-arm64:6.0.2] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-arm64-6.0.2.aar\e8c08686336fc34726f0fbd467e5ff43\AndroidManifest.xml:7:5-9:41
-MERGED from [com.shuyu:gsyVideoPlayer-arm64:6.0.2] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-arm64-6.0.2.aar\e8c08686336fc34726f0fbd467e5ff43\AndroidManifest.xml:7:5-9:41
-MERGED from [com.shuyu:gsyVideoPlayer-x64:6.0.2] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-x64-6.0.2.aar\00511f2f394a0e3c6f350a612212aad6\AndroidManifest.xml:7:5-9:41
-MERGED from [com.shuyu:gsyVideoPlayer-x64:6.0.2] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-x64-6.0.2.aar\00511f2f394a0e3c6f350a612212aad6\AndroidManifest.xml:7:5-9:41
-MERGED from [com.shuyu:gsyVideoPlayer-x86:6.0.2] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-x86-6.0.2.aar\71033d7ec7d403ea426663e518d37973\AndroidManifest.xml:7:5-9:41
-MERGED from [com.shuyu:gsyVideoPlayer-x86:6.0.2] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-x86-6.0.2.aar\71033d7ec7d403ea426663e518d37973\AndroidManifest.xml:7:5-9:41
-MERGED from [com.android.support:transition:27.1.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\transition-27.1.1.aar\4f57a81cc7c7bac11bf67585e73e579a\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:transition:27.1.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\transition-27.1.1.aar\4f57a81cc7c7bac11bf67585e73e579a\AndroidManifest.xml:20:5-44
-MERGED from [com.shuyu:GSYVideoPlayer-exo2:6.0.2] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\GSYVideoPlayer-exo2-6.0.2.aar\e2eaaf79fa29fe4dbc9b0533101405b3\AndroidManifest.xml:7:5-9:41
-MERGED from [com.shuyu:GSYVideoPlayer-exo2:6.0.2] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\GSYVideoPlayer-exo2-6.0.2.aar\e2eaaf79fa29fe4dbc9b0533101405b3\AndroidManifest.xml:7:5-9:41
-MERGED from [com.google.android.exoplayer:exoplayer:2.9.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\exoplayer-2.9.1.aar\a29426a8620a7344808f9cb7f75f3651\AndroidManifest.xml:20:5-22:41
-MERGED from [com.google.android.exoplayer:exoplayer:2.9.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\exoplayer-2.9.1.aar\a29426a8620a7344808f9cb7f75f3651\AndroidManifest.xml:20:5-22:41
-MERGED from [com.google.android.exoplayer:exoplayer-ui:2.9.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\exoplayer-ui-2.9.1.aar\f748f067f2d19a4e12b92e8c5e6dbe7b\AndroidManifest.xml:20:5-22:41
-MERGED from [com.google.android.exoplayer:exoplayer-ui:2.9.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\exoplayer-ui-2.9.1.aar\f748f067f2d19a4e12b92e8c5e6dbe7b\AndroidManifest.xml:20:5-22:41
-MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.1.aar\3af798e56c36f1eae5761a10d2dcb839\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.1.aar\3af798e56c36f1eae5761a10d2dcb839\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\eebe6919544637d0bf7adcfc89aced58\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\eebe6919544637d0bf7adcfc89aced58\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:27.1.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.1.aar\54daad698431f8af51e0e5602ed6e0d7\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:27.1.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.1.aar\54daad698431f8af51e0e5602ed6e0d7\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\40173eceba62ebb5bc76d2628013d6c2\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\40173eceba62ebb5bc76d2628013d6c2\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\62111eb176545545e966552f1a6f5a30\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\62111eb176545545e966552f1a6f5a30\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:27.1.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.1.aar\be4cfdbf456ecce36f7ad81394596f5a\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:27.1.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.1.aar\be4cfdbf456ecce36f7ad81394596f5a\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:27.1.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\0a8cba704f6cc236000903db5870169a\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:27.1.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\0a8cba704f6cc236000903db5870169a\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.exoplayer:extension-rtmp:2.9.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\extension-rtmp-2.9.1.aar\d957b0cbfce12134f5cdad81382f1457\AndroidManifest.xml:20:5-22:41
-MERGED from [com.google.android.exoplayer:extension-rtmp:2.9.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\extension-rtmp-2.9.1.aar\d957b0cbfce12134f5cdad81382f1457\AndroidManifest.xml:20:5-22:41
-MERGED from [com.google.android.exoplayer:exoplayer-dash:2.9.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\exoplayer-dash-2.9.1.aar\e65393e91d0f45cf872ca0431fc3dcfc\AndroidManifest.xml:20:5-22:41
-MERGED from [com.google.android.exoplayer:exoplayer-dash:2.9.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\exoplayer-dash-2.9.1.aar\e65393e91d0f45cf872ca0431fc3dcfc\AndroidManifest.xml:20:5-22:41
-MERGED from [com.google.android.exoplayer:exoplayer-hls:2.9.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\exoplayer-hls-2.9.1.aar\98c35df220fdf71322e7f1aad4f77b7b\AndroidManifest.xml:20:5-22:41
-MERGED from [com.google.android.exoplayer:exoplayer-hls:2.9.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\exoplayer-hls-2.9.1.aar\98c35df220fdf71322e7f1aad4f77b7b\AndroidManifest.xml:20:5-22:41
-MERGED from [com.google.android.exoplayer:exoplayer-smoothstreaming:2.9.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\exoplayer-smoothstreaming-2.9.1.aar\5dec5de1950fe95effe46352c8813488\AndroidManifest.xml:20:5-22:41
-MERGED from [com.google.android.exoplayer:exoplayer-smoothstreaming:2.9.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\exoplayer-smoothstreaming-2.9.1.aar\5dec5de1950fe95effe46352c8813488\AndroidManifest.xml:20:5-22:41
-MERGED from [com.google.android.exoplayer:exoplayer-core:2.9.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\exoplayer-core-2.9.1.aar\c79d0e7c06d53edf002ada6278d7d8d9\AndroidManifest.xml:20:5-22:41
-MERGED from [com.google.android.exoplayer:exoplayer-core:2.9.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\exoplayer-core-2.9.1.aar\c79d0e7c06d53edf002ada6278d7d8d9\AndroidManifest.xml:20:5-22:41
-MERGED from [com.shuyu:gsyVideoPlayer-base:6.0.2] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-base-6.0.2.aar\a7baa196625a4905f902fb91c8c05d92\AndroidManifest.xml:7:5-9:41
-MERGED from [com.shuyu:gsyVideoPlayer-base:6.0.2] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-base-6.0.2.aar\a7baa196625a4905f902fb91c8c05d92\AndroidManifest.xml:7:5-9:41
-MERGED from [tv.danmaku.ijk.media:ijkplayer-java:0.8.8] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\ijkplayer-java-0.8.8.aar\70a7c74093ed83efbe7ad903b1efdb50\AndroidManifest.xml:5:5-7:41
-MERGED from [tv.danmaku.ijk.media:ijkplayer-java:0.8.8] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\ijkplayer-java-0.8.8.aar\70a7c74093ed83efbe7ad903b1efdb50\AndroidManifest.xml:5:5-7:41
-MERGED from [com.shuyu:gsyvideoplayer-androidvideocache:6.0.2] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\gsyvideoplayer-androidvideocache-6.0.2.aar\8bc667fdf48fb5bff02f98c6d18fc0bb\AndroidManifest.xml:7:5-9:41
-MERGED from [com.shuyu:gsyvideoplayer-androidvideocache:6.0.2] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\gsyvideoplayer-androidvideocache-6.0.2.aar\8bc667fdf48fb5bff02f98c6d18fc0bb\AndroidManifest.xml:7:5-9:41
-MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\9444d6e2511f4df5f7ca6b1a91fa4c6f\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\9444d6e2511f4df5f7ca6b1a91fa4c6f\AndroidManifest.xml:20:5-44
-MERGED from [net.butterflytv.utils:rtmp-client:3.0.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\rtmp-client-3.0.1.aar\8e425055f297cfab6d521baa8463a54f\AndroidManifest.xml:7:5-9:41
-MERGED from [net.butterflytv.utils:rtmp-client:3.0.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\rtmp-client-3.0.1.aar\8e425055f297cfab6d521baa8463a54f\AndroidManifest.xml:7:5-9:41
-MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\b14a24d2c4247a1e83c936a140ecd1eb\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\b14a24d2c4247a1e83c936a140ecd1eb\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.core:runtime:1.1.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\70877f1e2db618b15bb7d08df1354013\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.core:runtime:1.1.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\70877f1e2db618b15bb7d08df1354013\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\ef37f64f27911be30bec37db1f523912\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\ef37f64f27911be30bec37db1f523912\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:design:27.1.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\design-27.1.1.aar\ff068d199e6fdb678e58b8d130c9fda3\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:design:27.1.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\design-27.1.1.aar\ff068d199e6fdb678e58b8d130c9fda3\AndroidManifest.xml:20:5-44
+MERGED from [com.shuyu:GSYVideoPlayer:6.0.2] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\GSYVideoPlayer-6.0.2.aar\d75c80c1ae14a8847c00076ab26650ef\AndroidManifest.xml:7:5-9:41
+MERGED from [com.shuyu:GSYVideoPlayer:6.0.2] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\GSYVideoPlayer-6.0.2.aar\d75c80c1ae14a8847c00076ab26650ef\AndroidManifest.xml:7:5-9:41
+MERGED from [com.shuyu:gsyVideoPlayer-java:6.0.2] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-java-6.0.2.aar\44dc7a657f77845717742872844321b5\AndroidManifest.xml:7:5-9:41
+MERGED from [com.shuyu:gsyVideoPlayer-java:6.0.2] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-java-6.0.2.aar\44dc7a657f77845717742872844321b5\AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\a9b407ceb262701c82e65cfb4c66ff47\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\a9b407ceb262701c82e65cfb4c66ff47\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\1c68a57c9ad81deba44b82f0c2f2884b\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\1c68a57c9ad81deba44b82f0c2f2884b\AndroidManifest.xml:5:5-7:41
+MERGED from [com.andkulikov:transitionseverywhere:1.7.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\transitionseverywhere-1.7.0.aar\2aff9b3a23ad5b8caa215233086e32d6\AndroidManifest.xml:8:5-10:41
+MERGED from [com.andkulikov:transitionseverywhere:1.7.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\transitionseverywhere-1.7.0.aar\2aff9b3a23ad5b8caa215233086e32d6\AndroidManifest.xml:8:5-10:41
+MERGED from [com.android.support:support-v4:27.1.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.1.aar\e9aa9f27c9aa6ddb2bc5a12385acf55b\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:27.1.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.1.aar\e9aa9f27c9aa6ddb2bc5a12385acf55b\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:27.0.2] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\cardview-v7-27.0.2.aar\31055d2a314928d1507c3e1c5bfeb57d\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:27.0.2] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\cardview-v7-27.0.2.aar\31055d2a314928d1507c3e1c5bfeb57d\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:27.1.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.1.1.aar\9751b2f521bd512bedcaf32de91f789c\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:27.1.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.1.1.aar\9751b2f521bd512bedcaf32de91f789c\AndroidManifest.xml:20:5-44
+MERGED from [cn.jzvd:jiaozivideoplayer:6.4.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jiaozivideoplayer-6.4.1.aar\32c827cc333df41b690b3df9103d01db\AndroidManifest.xml:7:5-9:41
+MERGED from [cn.jzvd:jiaozivideoplayer:6.4.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jiaozivideoplayer-6.4.1.aar\32c827cc333df41b690b3df9103d01db\AndroidManifest.xml:7:5-9:41
+MERGED from [top.zibin:Luban:1.1.8] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\Luban-1.1.8.aar\b711a1fd7592ff4ea8cf48915029fe31\AndroidManifest.xml:7:5-9:41
+MERGED from [top.zibin:Luban:1.1.8] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\Luban-1.1.8.aar\b711a1fd7592ff4ea8cf48915029fe31\AndroidManifest.xml:7:5-9:41
+MERGED from [com.shuyu:gsyVideoPlayer-armv5:6.0.2] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-armv5-6.0.2.aar\ca89e8457c7f2a499a5b01b01f1afd51\AndroidManifest.xml:7:5-9:41
+MERGED from [com.shuyu:gsyVideoPlayer-armv5:6.0.2] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-armv5-6.0.2.aar\ca89e8457c7f2a499a5b01b01f1afd51\AndroidManifest.xml:7:5-9:41
+MERGED from [com.shuyu:gsyVideoPlayer-armv7a:6.0.2] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-armv7a-6.0.2.aar\5d934a440e8481b42efe6cb2bd3de03c\AndroidManifest.xml:7:5-9:41
+MERGED from [com.shuyu:gsyVideoPlayer-armv7a:6.0.2] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-armv7a-6.0.2.aar\5d934a440e8481b42efe6cb2bd3de03c\AndroidManifest.xml:7:5-9:41
+MERGED from [com.shuyu:gsyVideoPlayer-arm64:6.0.2] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-arm64-6.0.2.aar\7c7225c182211f3ed386ba072932e616\AndroidManifest.xml:7:5-9:41
+MERGED from [com.shuyu:gsyVideoPlayer-arm64:6.0.2] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-arm64-6.0.2.aar\7c7225c182211f3ed386ba072932e616\AndroidManifest.xml:7:5-9:41
+MERGED from [com.shuyu:gsyVideoPlayer-x64:6.0.2] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-x64-6.0.2.aar\649bcb32ce1b5df1174f28211f636c43\AndroidManifest.xml:7:5-9:41
+MERGED from [com.shuyu:gsyVideoPlayer-x64:6.0.2] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-x64-6.0.2.aar\649bcb32ce1b5df1174f28211f636c43\AndroidManifest.xml:7:5-9:41
+MERGED from [com.shuyu:gsyVideoPlayer-x86:6.0.2] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-x86-6.0.2.aar\6d2f1ce879c76e17a0426b9ab1294905\AndroidManifest.xml:7:5-9:41
+MERGED from [com.shuyu:gsyVideoPlayer-x86:6.0.2] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-x86-6.0.2.aar\6d2f1ce879c76e17a0426b9ab1294905\AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:transition:27.1.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\transition-27.1.1.aar\9696bae57e93fb7cb3323c5338cd00d6\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:27.1.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\transition-27.1.1.aar\9696bae57e93fb7cb3323c5338cd00d6\AndroidManifest.xml:20:5-44
+MERGED from [com.shuyu:GSYVideoPlayer-exo2:6.0.2] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\GSYVideoPlayer-exo2-6.0.2.aar\54bfeeb2e5e26cdc9418770cb6068563\AndroidManifest.xml:7:5-9:41
+MERGED from [com.shuyu:GSYVideoPlayer-exo2:6.0.2] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\GSYVideoPlayer-exo2-6.0.2.aar\54bfeeb2e5e26cdc9418770cb6068563\AndroidManifest.xml:7:5-9:41
+MERGED from [com.google.android.exoplayer:exoplayer:2.9.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\exoplayer-2.9.1.aar\e095f0ed859b4ee96d31063a3e811a68\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer:2.9.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\exoplayer-2.9.1.aar\e095f0ed859b4ee96d31063a3e811a68\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-ui:2.9.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\exoplayer-ui-2.9.1.aar\7bd8417e6f86810bce0884c98fc35c71\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-ui:2.9.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\exoplayer-ui-2.9.1.aar\7bd8417e6f86810bce0884c98fc35c71\AndroidManifest.xml:20:5-22:41
+MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.1.aar\9716e70937b3718d9cf14bd1a4bb42fe\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.1.aar\9716e70937b3718d9cf14bd1a4bb42fe\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\dfb5a7998935e7f6773bffa41eba5ea4\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\dfb5a7998935e7f6773bffa41eba5ea4\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.1.aar\1a16a3f6a167b7c219f8317567c34172\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.1.aar\1a16a3f6a167b7c219f8317567c34172\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\bc244ea460f3867cec6c4616437ad731\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\bc244ea460f3867cec6c4616437ad731\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\49b32c61b166f7d6fc51ec92bf47c99b\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\49b32c61b166f7d6fc51ec92bf47c99b\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.1.aar\a583b0807a1c2a2b66b9980b41885c93\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.1.aar\a583b0807a1c2a2b66b9980b41885c93\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\a6d52d2702d130a87ed80841e1169d14\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\a6d52d2702d130a87ed80841e1169d14\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.exoplayer:extension-rtmp:2.9.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\extension-rtmp-2.9.1.aar\7bdb96c31dbd3a35b0637c8160c835bc\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:extension-rtmp:2.9.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\extension-rtmp-2.9.1.aar\7bdb96c31dbd3a35b0637c8160c835bc\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-dash:2.9.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\exoplayer-dash-2.9.1.aar\850cf80ac35262c0616eefea6eff1a93\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-dash:2.9.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\exoplayer-dash-2.9.1.aar\850cf80ac35262c0616eefea6eff1a93\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-hls:2.9.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\exoplayer-hls-2.9.1.aar\2686afb9ad9eb93257004fa7cbf0f097\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-hls:2.9.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\exoplayer-hls-2.9.1.aar\2686afb9ad9eb93257004fa7cbf0f097\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-smoothstreaming:2.9.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\exoplayer-smoothstreaming-2.9.1.aar\5c66bce971e8a971ae641e77f099a80f\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-smoothstreaming:2.9.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\exoplayer-smoothstreaming-2.9.1.aar\5c66bce971e8a971ae641e77f099a80f\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-core:2.9.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\exoplayer-core-2.9.1.aar\6667ac7d002999288a4ea67e84d86d31\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-core:2.9.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\exoplayer-core-2.9.1.aar\6667ac7d002999288a4ea67e84d86d31\AndroidManifest.xml:20:5-22:41
+MERGED from [com.shuyu:gsyVideoPlayer-base:6.0.2] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-base-6.0.2.aar\0e8fce3eb5967547ac49e71e64813ee5\AndroidManifest.xml:7:5-9:41
+MERGED from [com.shuyu:gsyVideoPlayer-base:6.0.2] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-base-6.0.2.aar\0e8fce3eb5967547ac49e71e64813ee5\AndroidManifest.xml:7:5-9:41
+MERGED from [tv.danmaku.ijk.media:ijkplayer-java:0.8.8] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\ijkplayer-java-0.8.8.aar\38dda3c4a8b5967bfed4e106455a8bb4\AndroidManifest.xml:5:5-7:41
+MERGED from [tv.danmaku.ijk.media:ijkplayer-java:0.8.8] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\ijkplayer-java-0.8.8.aar\38dda3c4a8b5967bfed4e106455a8bb4\AndroidManifest.xml:5:5-7:41
+MERGED from [com.shuyu:gsyvideoplayer-androidvideocache:6.0.2] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\gsyvideoplayer-androidvideocache-6.0.2.aar\584de7142b18575b17a54b16291c355f\AndroidManifest.xml:7:5-9:41
+MERGED from [com.shuyu:gsyvideoplayer-androidvideocache:6.0.2] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\gsyvideoplayer-androidvideocache-6.0.2.aar\584de7142b18575b17a54b16291c355f\AndroidManifest.xml:7:5-9:41
+MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\aae368347d3a60d5205ccde5c2c7eaab\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\aae368347d3a60d5205ccde5c2c7eaab\AndroidManifest.xml:20:5-44
+MERGED from [net.butterflytv.utils:rtmp-client:3.0.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\rtmp-client-3.0.1.aar\295eddc3898a6a9bc313cc6d180734a0\AndroidManifest.xml:7:5-9:41
+MERGED from [net.butterflytv.utils:rtmp-client:3.0.1] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\rtmp-client-3.0.1.aar\295eddc3898a6a9bc313cc6d180734a0\AndroidManifest.xml:7:5-9:41
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\741c749b153a229dc72659f02f306a54\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\741c749b153a229dc72659f02f306a54\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\781cfb71b7685fc61ebc9196aec60a1b\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\781cfb71b7685fc61ebc9196aec60a1b\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\37a28ae57d67ed87fc03026f7a5b3375\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\37a28ae57d67ed87fc03026f7a5b3375\AndroidManifest.xml:20:5-44
 INJECTED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml
 INJECTED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml
 	tools:overrideLibrary
-		ADDED from [cn.smssdk:ShortMessageSDKGUI:3.3.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\ShortMessageSDKGUI-3.3.0.aar\6d2c643cb91791f85f7e5ca4b34aa25b\AndroidManifest.xml:11:9-42
+		ADDED from [cn.smssdk:ShortMessageSDKGUI:3.3.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\ShortMessageSDKGUI-3.3.0.aar\ab21677b39dd09ea928eaf58a52d9bf0\AndroidManifest.xml:11:9-42
 	android:targetSdkVersion
 		INJECTED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml
 		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml
@@ -628,94 +632,94 @@ INJECTED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml
 		ADDED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml
 		INJECTED from D:\Android\Application\FitDemo\app\src\main\AndroidManifest.xml
 permission#${JPUSH_PKGNAME}.permission.JPUSH_MESSAGE
-MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\01c9b476f077b34a9c4272a140f25178\AndroidManifest.xml:11:5-13:47
+MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\7f4098a957cce350f9deeb04c2dd33fe\AndroidManifest.xml:11:5-13:47
 uses-permission#${JPUSH_PKGNAME}.permission.JPUSH_MESSAGE
-MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\01c9b476f077b34a9c4272a140f25178\AndroidManifest.xml:16:5-81
+MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\7f4098a957cce350f9deeb04c2dd33fe\AndroidManifest.xml:16:5-81
 uses-permission#android.permission.RECEIVE_USER_PRESENT
-ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\01c9b476f077b34a9c4272a140f25178\AndroidManifest.xml:17:5-79
+ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\7f4098a957cce350f9deeb04c2dd33fe\AndroidManifest.xml:17:5-79
 	android:name
-		ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\01c9b476f077b34a9c4272a140f25178\AndroidManifest.xml:17:22-76
+		ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\7f4098a957cce350f9deeb04c2dd33fe\AndroidManifest.xml:17:22-76
 uses-permission#android.permission.SYSTEM_ALERT_WINDOW
-ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\01c9b476f077b34a9c4272a140f25178\AndroidManifest.xml:30:5-78
+ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\7f4098a957cce350f9deeb04c2dd33fe\AndroidManifest.xml:30:5-78
 	android:name
-		ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\01c9b476f077b34a9c4272a140f25178\AndroidManifest.xml:30:22-75
+		ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\7f4098a957cce350f9deeb04c2dd33fe\AndroidManifest.xml:30:22-75
 uses-permission#android.permission.ACCESS_LOCATION_EXTRA_COMMANDS
-ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\01c9b476f077b34a9c4272a140f25178\AndroidManifest.xml:33:5-89
+ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\7f4098a957cce350f9deeb04c2dd33fe\AndroidManifest.xml:33:5-89
 	android:name
-		ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\01c9b476f077b34a9c4272a140f25178\AndroidManifest.xml:33:22-86
+		ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\7f4098a957cce350f9deeb04c2dd33fe\AndroidManifest.xml:33:22-86
 uses-permission#android.permission.CHANGE_NETWORK_STATE
-ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\01c9b476f077b34a9c4272a140f25178\AndroidManifest.xml:35:5-79
+ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\7f4098a957cce350f9deeb04c2dd33fe\AndroidManifest.xml:35:5-79
 	android:name
-		ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\01c9b476f077b34a9c4272a140f25178\AndroidManifest.xml:35:22-76
+		ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\7f4098a957cce350f9deeb04c2dd33fe\AndroidManifest.xml:35:22-76
 uses-permission#android.permission.MODIFY_AUDIO_SETTINGS
-ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\01c9b476f077b34a9c4272a140f25178\AndroidManifest.xml:40:5-80
+ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\7f4098a957cce350f9deeb04c2dd33fe\AndroidManifest.xml:40:5-80
 	android:name
-		ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\01c9b476f077b34a9c4272a140f25178\AndroidManifest.xml:40:22-77
+		ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\7f4098a957cce350f9deeb04c2dd33fe\AndroidManifest.xml:40:22-77
 receiver#cn.jpush.android.service.PushReceiver
-ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\01c9b476f077b34a9c4272a140f25178\AndroidManifest.xml:60:9-80:20
+ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\7f4098a957cce350f9deeb04c2dd33fe\AndroidManifest.xml:60:9-80:20
 	android:enabled
-		ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\01c9b476f077b34a9c4272a140f25178\AndroidManifest.xml:62:13-35
+		ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\7f4098a957cce350f9deeb04c2dd33fe\AndroidManifest.xml:62:13-35
 	android:exported
-		ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\01c9b476f077b34a9c4272a140f25178\AndroidManifest.xml:63:13-37
+		ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\7f4098a957cce350f9deeb04c2dd33fe\AndroidManifest.xml:63:13-37
 	android:name
-		ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\01c9b476f077b34a9c4272a140f25178\AndroidManifest.xml:61:13-65
+		ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\7f4098a957cce350f9deeb04c2dd33fe\AndroidManifest.xml:61:13-65
 intent-filter#${JPUSH_PKGNAME}+cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY
-ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\01c9b476f077b34a9c4272a140f25178\AndroidManifest.xml:64:13-68:29
+ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\7f4098a957cce350f9deeb04c2dd33fe\AndroidManifest.xml:64:13-68:29
 	android:priority
-		ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\01c9b476f077b34a9c4272a140f25178\AndroidManifest.xml:64:28-51
+		ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\7f4098a957cce350f9deeb04c2dd33fe\AndroidManifest.xml:64:28-51
 intent-filter#cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY+com.example.fitdemo
-ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\01c9b476f077b34a9c4272a140f25178\AndroidManifest.xml:64:13-68:29
+ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\7f4098a957cce350f9deeb04c2dd33fe\AndroidManifest.xml:64:13-68:29
 	android:priority
-		ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\01c9b476f077b34a9c4272a140f25178\AndroidManifest.xml:64:28-51
+		ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\7f4098a957cce350f9deeb04c2dd33fe\AndroidManifest.xml:64:28-51
 action#cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY
-ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\01c9b476f077b34a9c4272a140f25178\AndroidManifest.xml:65:17-94
+ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\7f4098a957cce350f9deeb04c2dd33fe\AndroidManifest.xml:65:17-94
 	android:name
-		ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\01c9b476f077b34a9c4272a140f25178\AndroidManifest.xml:65:25-91
+		ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\7f4098a957cce350f9deeb04c2dd33fe\AndroidManifest.xml:65:25-91
 category#${JPUSH_PKGNAME}
-ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\01c9b476f077b34a9c4272a140f25178\AndroidManifest.xml:67:17-61
+ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\7f4098a957cce350f9deeb04c2dd33fe\AndroidManifest.xml:67:17-61
 	android:name
-		ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\01c9b476f077b34a9c4272a140f25178\AndroidManifest.xml:67:27-58
+		ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\7f4098a957cce350f9deeb04c2dd33fe\AndroidManifest.xml:67:27-58
 category#com.example.fitdemo
-ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\01c9b476f077b34a9c4272a140f25178\AndroidManifest.xml:67:17-61
+ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\7f4098a957cce350f9deeb04c2dd33fe\AndroidManifest.xml:67:17-61
 	android:name
-		ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\01c9b476f077b34a9c4272a140f25178\AndroidManifest.xml:67:27-58
+		ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\7f4098a957cce350f9deeb04c2dd33fe\AndroidManifest.xml:67:27-58
 intent-filter#android.intent.action.USER_PRESENT+android.net.conn.CONNECTIVITY_CHANGE
-ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\01c9b476f077b34a9c4272a140f25178\AndroidManifest.xml:69:13-72:29
+ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\7f4098a957cce350f9deeb04c2dd33fe\AndroidManifest.xml:69:13-72:29
 action#android.intent.action.USER_PRESENT
-ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\01c9b476f077b34a9c4272a140f25178\AndroidManifest.xml:70:17-77
+ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\7f4098a957cce350f9deeb04c2dd33fe\AndroidManifest.xml:70:17-77
 	android:name
-		ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\01c9b476f077b34a9c4272a140f25178\AndroidManifest.xml:70:25-74
+		ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\7f4098a957cce350f9deeb04c2dd33fe\AndroidManifest.xml:70:25-74
 action#android.net.conn.CONNECTIVITY_CHANGE
-ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\01c9b476f077b34a9c4272a140f25178\AndroidManifest.xml:71:17-79
+ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\7f4098a957cce350f9deeb04c2dd33fe\AndroidManifest.xml:71:17-79
 	android:name
-		ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\01c9b476f077b34a9c4272a140f25178\AndroidManifest.xml:71:25-76
+		ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\7f4098a957cce350f9deeb04c2dd33fe\AndroidManifest.xml:71:25-76
 intent-filter#android.intent.action.PACKAGE_ADDED+android.intent.action.PACKAGE_REMOVED
-ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\01c9b476f077b34a9c4272a140f25178\AndroidManifest.xml:74:13-79:29
+ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\7f4098a957cce350f9deeb04c2dd33fe\AndroidManifest.xml:74:13-79:29
 action#android.intent.action.PACKAGE_ADDED
-ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\01c9b476f077b34a9c4272a140f25178\AndroidManifest.xml:75:17-78
+ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\7f4098a957cce350f9deeb04c2dd33fe\AndroidManifest.xml:75:17-78
 	android:name
-		ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\01c9b476f077b34a9c4272a140f25178\AndroidManifest.xml:75:25-75
+		ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\7f4098a957cce350f9deeb04c2dd33fe\AndroidManifest.xml:75:25-75
 action#android.intent.action.PACKAGE_REMOVED
-ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\01c9b476f077b34a9c4272a140f25178\AndroidManifest.xml:76:17-80
+ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\7f4098a957cce350f9deeb04c2dd33fe\AndroidManifest.xml:76:17-80
 	android:name
-		ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\01c9b476f077b34a9c4272a140f25178\AndroidManifest.xml:76:25-77
+		ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\7f4098a957cce350f9deeb04c2dd33fe\AndroidManifest.xml:76:25-77
 data
-ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\01c9b476f077b34a9c4272a140f25178\AndroidManifest.xml:78:17-50
+ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\7f4098a957cce350f9deeb04c2dd33fe\AndroidManifest.xml:78:17-50
 	android:scheme
-		ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\01c9b476f077b34a9c4272a140f25178\AndroidManifest.xml:78:23-47
+		ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\7f4098a957cce350f9deeb04c2dd33fe\AndroidManifest.xml:78:23-47
 service#cn.jpush.android.service.DaemonService
-ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\01c9b476f077b34a9c4272a140f25178\AndroidManifest.xml:102:9-111:19
+ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\7f4098a957cce350f9deeb04c2dd33fe\AndroidManifest.xml:102:9-111:19
 	android:enabled
-		ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\01c9b476f077b34a9c4272a140f25178\AndroidManifest.xml:104:13-35
+		ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\7f4098a957cce350f9deeb04c2dd33fe\AndroidManifest.xml:104:13-35
 	android:exported
-		ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\01c9b476f077b34a9c4272a140f25178\AndroidManifest.xml:105:13-36
+		ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\7f4098a957cce350f9deeb04c2dd33fe\AndroidManifest.xml:105:13-36
 	android:name
-		ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\01c9b476f077b34a9c4272a140f25178\AndroidManifest.xml:103:13-66
+		ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\7f4098a957cce350f9deeb04c2dd33fe\AndroidManifest.xml:103:13-66
 intent-filter#${JPUSH_PKGNAME}+cn.jpush.android.intent.DaemonService
-ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\01c9b476f077b34a9c4272a140f25178\AndroidManifest.xml:106:13-110:29
+ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\7f4098a957cce350f9deeb04c2dd33fe\AndroidManifest.xml:106:13-110:29
 intent-filter#cn.jpush.android.intent.DaemonService+com.example.fitdemo
-ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\01c9b476f077b34a9c4272a140f25178\AndroidManifest.xml:106:13-110:29
+ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\7f4098a957cce350f9deeb04c2dd33fe\AndroidManifest.xml:106:13-110:29
 action#cn.jpush.android.intent.DaemonService
-ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\01c9b476f077b34a9c4272a140f25178\AndroidManifest.xml:107:17-80
+ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\7f4098a957cce350f9deeb04c2dd33fe\AndroidManifest.xml:107:17-80
 	android:name
-		ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\01c9b476f077b34a9c4272a140f25178\AndroidManifest.xml:107:25-77
+		ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\最美人间四月天\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\7f4098a957cce350f9deeb04c2dd33fe\AndroidManifest.xml:107:25-77

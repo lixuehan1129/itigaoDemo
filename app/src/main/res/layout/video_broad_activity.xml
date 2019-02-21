@@ -44,14 +44,24 @@
             android:background="@drawable/round_gb_gray"/>
 
 
-        <ImageView
+
+        <TextView
             android:id="@+id/video_broad_iv"
-            android:layout_marginRight="10dp"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:background="@drawable/ripple_bg"
-            android:src="@mipmap/ic_pingjia"
-            tools:ignore="ContentDescription" />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="发送"
+            android:textSize="16sp"
+            android:textColor="@color/colorGray_1"
+            android:layout_marginRight="10dp"/>
+
+        <!--<ImageView-->
+            <!--android:id="@+id/video_broad_iv"-->
+            <!--android:layout_marginRight="10dp"-->
+            <!--android:layout_width="30dp"-->
+            <!--android:layout_height="30dp"-->
+            <!--android:background="@drawable/ripple_bg"-->
+            <!--android:src="@mipmap/ic_pingjia"-->
+            <!--tools:ignore="ContentDescription" />-->
 
     </LinearLayout>
 

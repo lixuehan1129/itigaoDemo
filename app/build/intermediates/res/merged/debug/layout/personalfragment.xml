@@ -167,31 +167,30 @@
                         android:id="@+id/personalFragment_class2"
                         android:paddingTop="2dp"
                         android:paddingLeft="5dp"
-                        android:paddingBottom="8dp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="已经学习7课时,继续坚持"
-                        android:textSize="7sp"
-                        android:background="@drawable/bottom_lay"/>
-
-                    <TextView
-                        android:id="@+id/personalFragment_class3"
-                        android:paddingTop="5dp"
-                        android:paddingLeft="5dp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="瑜伽训练课堂（钻石班）"
-                        android:textSize="15sp"
-                        android:textColor="@color/colorBlack"/>
-                    <TextView
-                        android:id="@+id/personalFragment_class4"
-                        android:paddingTop="2dp"
-                        android:paddingLeft="5dp"
                         android:paddingBottom="3dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="已经学习3课时,继续坚持"
+                        android:text="已经学习7课时,继续坚持"
                         android:textSize="7sp" />
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/personalFragment_class3"-->
+                        <!--android:paddingTop="5dp"-->
+                        <!--android:paddingLeft="5dp"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:text="瑜伽训练课堂（钻石班）"-->
+                        <!--android:textSize="15sp"-->
+                        <!--android:textColor="@color/colorBlack"/>-->
+                    <!--<TextView-->
+                        <!--android:id="@+id/personalFragment_class4"-->
+                        <!--android:paddingTop="2dp"-->
+                        <!--android:paddingLeft="5dp"-->
+                        <!--android:paddingBottom="3dp"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:text="已经学习3课时,继续坚持"-->
+                        <!--android:textSize="7sp" />-->
 
                     <TextView
                         android:padding="5dp"

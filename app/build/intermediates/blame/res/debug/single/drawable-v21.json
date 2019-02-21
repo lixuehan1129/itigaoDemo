@@ -1,34 +1,34 @@
 [
     {
         "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\avd_hide_password.xml",
-        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.1.aar\\cdc7d0379cf199617f000a41432ec222\\res\\drawable-v21\\avd_hide_password.xml"
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.1.aar\\ff068d199e6fdb678e58b8d130c9fda3\\res\\drawable-v21\\avd_hide_password.xml"
     },
     {
         "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\design_password_eye.xml",
-        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.1.aar\\cdc7d0379cf199617f000a41432ec222\\res\\drawable-v21\\design_password_eye.xml"
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.1.aar\\ff068d199e6fdb678e58b8d130c9fda3\\res\\drawable-v21\\design_password_eye.xml"
     },
     {
         "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_action_bar_item_background_material.xml",
-        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\777b3d8d1547e5d766362170c0e8fa73\\res\\drawable-v21\\abc_action_bar_item_background_material.xml"
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\a9b407ceb262701c82e65cfb4c66ff47\\res\\drawable-v21\\abc_action_bar_item_background_material.xml"
     },
     {
         "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\notification_action_background.xml",
-        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\0a8cba704f6cc236000903db5870169a\\res\\drawable-v21\\notification_action_background.xml"
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\a6d52d2702d130a87ed80841e1169d14\\res\\drawable-v21\\notification_action_background.xml"
     },
     {
         "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\design_bottom_navigation_item_background.xml",
-        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.1.aar\\cdc7d0379cf199617f000a41432ec222\\res\\drawable-v21\\design_bottom_navigation_item_background.xml"
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.1.aar\\ff068d199e6fdb678e58b8d130c9fda3\\res\\drawable-v21\\design_bottom_navigation_item_background.xml"
     },
     {
         "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_edit_text_material.xml",
-        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\777b3d8d1547e5d766362170c0e8fa73\\res\\drawable-v21\\abc_edit_text_material.xml"
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\a9b407ceb262701c82e65cfb4c66ff47\\res\\drawable-v21\\abc_edit_text_material.xml"
     },
     {
         "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_btn_colored_material.xml",
-        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\777b3d8d1547e5d766362170c0e8fa73\\res\\drawable-v21\\abc_btn_colored_material.xml"
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\a9b407ceb262701c82e65cfb4c66ff47\\res\\drawable-v21\\abc_btn_colored_material.xml"
     },
     {
         "merged": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\avd_show_password.xml",
-        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.1.aar\\cdc7d0379cf199617f000a41432ec222\\res\\drawable-v21\\avd_show_password.xml"
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.1.aar\\ff068d199e6fdb678e58b8d130c9fda3\\res\\drawable-v21\\avd_show_password.xml"
     }
 ]

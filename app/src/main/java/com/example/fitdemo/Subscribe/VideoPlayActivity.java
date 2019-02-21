@@ -18,6 +18,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.support.design.widget.TabLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.fitdemo.Adapter.TabLayoutAdapter;
@@ -53,7 +54,7 @@ public class VideoPlayActivity extends AppCompatActivity implements TabLayout.On
     private ViewPager mViewPager;
     private LinearLayout linearLayout;
     private EditText editText;
-    private ImageView imageView;
+    private TextView imageView;
 
 
     private String[] titles = new String[]{"    视频    ", "    互动    "};
@@ -92,7 +93,7 @@ public class VideoPlayActivity extends AppCompatActivity implements TabLayout.On
         mViewPager = (ViewPager) findViewById(R.id.video_play_viewpager);
         linearLayout = (LinearLayout) findViewById(R.id.video_play_li);
         editText = (EditText) findViewById(R.id.video_play_et);
-        imageView = (ImageView) findViewById(R.id.video_play_iv);
+        imageView = (TextView) findViewById(R.id.video_play_iv);
 
         //获取屏幕宽
         WindowManager wm = (WindowManager) this
@@ -129,6 +130,11 @@ public class VideoPlayActivity extends AppCompatActivity implements TabLayout.On
         //获取聊天室信息
         Tip.showTip(VideoPlayActivity.this,"现在可以发出消息");
         if(roomID != 0){
+            if(TextUtils.isEmpty(editText.getText().toString())){
+                imageView.setTextColor(getResources().getColor(R.color.colorGray));
+            }else {
+                imageView.setTextColor(getResources().getColor(R.color.colorGreen));
+            }
             imageOnClick();
         }
     }
@@ -138,7 +144,6 @@ public class VideoPlayActivity extends AppCompatActivity implements TabLayout.On
             @Override
             public void onClick(View view) {
                 if(!TextUtils.isEmpty(editText.getText())){
-                    //将输入法隐藏，mPasswordEditText 代表密码输入框
                     InputMethodManager imm =(InputMethodManager)getSystemService(
                             Context.INPUT_METHOD_SERVICE);
                     assert imm != null;

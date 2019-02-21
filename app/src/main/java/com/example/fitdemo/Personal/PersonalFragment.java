@@ -69,6 +69,8 @@ public class PersonalFragment extends BaseFragment {
     private TextView class1, class2, class3, class4, device2, exam2, indoor2, go2, go3;
     private RecyclerView recyclerView;
 
+    private String class01,class02;
+
     private String userName,userPicture;
     private int userLevel = 1, userSta, goGo = 2;
     private int goBid;
@@ -129,8 +131,8 @@ public class PersonalFragment extends BaseFragment {
 
         class1 = (TextView) view.findViewById(R.id.personalFragment_class1);
         class2 = (TextView) view.findViewById(R.id.personalFragment_class2);
-        class3 = (TextView) view.findViewById(R.id.personalFragment_class3);
-        class4 = (TextView) view.findViewById(R.id.personalFragment_class4);
+//        class3 = (TextView) view.findViewById(R.id.personalFragment_class3);
+//        class4 = (TextView) view.findViewById(R.id.personalFragment_class4);
         device2 = (TextView) view.findViewById(R.id.personalFragment_device2);
         exam2 = (TextView) view.findViewById(R.id.personalFragment_exam2);
         indoor2 = (TextView) view.findViewById(R.id.personalFragment_indoor2);
@@ -146,6 +148,7 @@ public class PersonalFragment extends BaseFragment {
         localData();
 
         connect();
+        connectClass();
 
         setData();
        // setClick();
@@ -299,6 +302,45 @@ public class PersonalFragment extends BaseFragment {
         }.start();
     }
 
+    private void connectClass(){
+        new Thread(){
+            public void run(){
+                try {
+                    Connection conn = JDBCTools.getConnection();
+                    if(conn != null) {
+                        Statement stmt = conn.createStatement();
+                        String sql = "SELECT yu_bid FROM yu WHERE yu_user = " +
+                                SharePreferences.getString(getActivity(),AppConstants.USER_PHONE) +
+                                " ORDER BY yu_time DESC LIMIT 1";
+                        ResultSet resultSet = stmt.executeQuery(sql);
+                        if (resultSet.first()){
+                            int yuBid = resultSet.getInt("yu_bid");
+                            String sqlBid = "SELECT appoint_name,appoint_coach FROM appoint WHERE appoint_bid = " +
+                                    yuBid +
+                                    " LIMIT 1";
+                            ResultSet resultSetAppoint = stmt.executeQuery(sqlBid);
+                            if(resultSetAppoint.first()){
+                                class01 = resultSetAppoint.getString("appoint_name");
+                                class02 = resultSetAppoint.getString("appoint_coach");
+                            }
+                            resultSetAppoint.close();
+
+                            Message message = new Message();
+                            message.what = 113;
+                            handler.sendMessage(message);
+
+                        }
+
+                        resultSet.close();
+                        JDBCTools.releaseConnection(stmt,conn);
+                    }
+                }catch (java.sql.SQLException e){
+                    e.printStackTrace();
+                }
+            }
+        }.start();
+    }
+
     private void updateSta(final int i){
         new Thread(){
             public void run(){
@@ -341,6 +383,11 @@ public class PersonalFragment extends BaseFragment {
                         go3.setTextColor(getResources().getColor(R.color.colorBlack));
                     }
                     setClick();
+                    break;
+                }
+                case 113:{
+                    class1.setText(class01);
+                    class2.setText(class02);
                     break;
                 }
                 default:

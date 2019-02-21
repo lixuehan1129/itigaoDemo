@@ -17,11 +17,11 @@
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
 
     </android.support.v7.widget.Toolbar>
-    <TextView
-        android:id="@+id/person_class_tv"
-        android:gravity="center"
-        android:text="可以"
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/person_class_rv"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="wrap_content">
+
+    </android.support.v7.widget.RecyclerView>
 
 </LinearLayout>

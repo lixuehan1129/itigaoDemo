@@ -12,7 +12,9 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.text.Editable;
 import android.text.TextUtils;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
@@ -68,7 +70,7 @@ public class VideoActivity extends AppCompatActivity{
     private JzvdStd jzvdStd;
     private LinearLayout linearLayout;
     private EditText editText;
-    private ImageView imageView;
+    private TextView imageView;
 
 
 
@@ -121,7 +123,7 @@ public class VideoActivity extends AppCompatActivity{
         jzvdStd = (JzvdStd) findViewById(R.id.video_play1_vv);
         linearLayout = (LinearLayout) findViewById(R.id.video_play1_li);
         editText = (EditText) findViewById(R.id.video_play1_et);
-        imageView = (ImageView) findViewById(R.id.video_play1_iv);
+        imageView = (TextView) findViewById(R.id.video_play1_iv);
 
         title = (TextView) findViewById(R.id.video_fragment1_title);
         itr = (TextView) findViewById(R.id.video_fragment1_itr);
@@ -149,6 +151,27 @@ public class VideoActivity extends AppCompatActivity{
         interactAdapter = new InteractAdapter(interacts);
         recyclerView.setAdapter(interactAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(VideoActivity.this));
+
+        editText.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+                if(TextUtils.isEmpty(editText.getText().toString())){
+                    imageView.setTextColor(getResources().getColor(R.color.colorGray_1));
+                }else {
+                    imageView.setTextColor(getResources().getColor(R.color.colorGreen));
+                }
+            }
+        });
 
     }
 

@@ -4,7 +4,7 @@
             "outputFile": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v16\\values-v16.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\0a8cba704f6cc236000903db5870169a\\res\\values-v16\\values-v16.xml",
+                    "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\a6d52d2702d130a87ed80841e1169d14\\res\\values-v16\\values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\777b3d8d1547e5d766362170c0e8fa73\\res\\values-v16\\values-v16.xml",
+                    "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\a9b407ceb262701c82e65cfb4c66ff47\\res\\values-v16\\values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -38,7 +38,7 @@
             "outputFile": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\values-v16\\values-v16.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\0a8cba704f6cc236000903db5870169a\\res\\values-v16\\values-v16.xml",
+                    "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\a6d52d2702d130a87ed80841e1169d14\\res\\values-v16\\values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -48,7 +48,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\777b3d8d1547e5d766362170c0e8fa73\\res\\values-v16\\values-v16.xml",
+                    "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\a9b407ceb262701c82e65cfb4c66ff47\\res\\values-v16\\values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
