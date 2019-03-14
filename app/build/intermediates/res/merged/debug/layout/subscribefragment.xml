@@ -25,23 +25,29 @@
         android:background="@drawable/round_gb">
 
             <LinearLayout
-                android:padding="15dp"
+                android:paddingTop="15dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingBottom="5dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:text="已经坚持锻炼"
-                    android:textSize="10sp"
-                    android:textColor="@color/colorBlack" />
-
-                <RelativeLayout
-                    android:paddingTop="8dp"
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="10dp"
+                    android:background="@drawable/bottom_lay"
+                    android:gravity="center">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="已经坚持学习"
+                        android:textSize="12sp"
+                        android:textColor="@color/colorBlack" />
 
                     <TextView
                         android:id="@+id/subscribeFragment_days"
@@ -56,42 +62,64 @@
                         android:id="@+id/textView4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_alignBaseline="@+id/subscribeFragment_days"
-                        android:layout_alignBottom="@+id/subscribeFragment_days"
-                        android:layout_toEndOf="@+id/subscribeFragment_days"
                         android:paddingLeft="5dp"
                         android:text="  天" />
+                </LinearLayout>
 
-                    <TextView
-                        android:id="@+id/textView3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignBottom="@+id/subscribeFragment_minutes"
-                        android:layout_toStartOf="@+id/subscribeFragment_minutes"
-                        android:text="今日运动  "
-                        android:textSize="11sp" />
 
-                    <TextView
-                        android:id="@+id/subscribeFragment_minutes"
-                        android:layout_width="wrap_content"
+
+                <RelativeLayout
+                    android:layout_marginTop="4dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ViewFlipper
+                        android:id="@+id/view_flipper"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_alignBaseline="@+id/textView5"
-                        android:layout_alignBottom="@+id/textView5"
-                        android:layout_toStartOf="@+id/textView5"
                         android:paddingTop="3dp"
-                        android:text="77"
-                        android:textColor="@color/colorBlack"
-                        android:textSize="13sp" />
+                        android:paddingBottom="3dp"
+                        android:layout_centerInParent="true"
+                        android:autoStart="true"
+                        android:background="@color/colorWhite"
+                        android:flipInterval="3000"
+                        android:inAnimation="@anim/slide_in_bottom"
+                        android:outAnimation="@anim/slide_out_top">
 
-                    <TextView
-                        android:id="@+id/textView5"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignBottom="@+id/textView4"
-                        android:layout_alignParentEnd="true"
-                        android:layout_marginEnd="36dp"
-                        android:text="  分钟"
-                        android:textSize="11sp" />
+                        <TextView
+                            android:id="@+id/tv_warning_content1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:ellipsize="middle"
+                            android:gravity="center"
+                            android:singleLine="true"
+                            android:text="不想学习怎么办？？？"
+                            android:textColor="@color/colorGray_1"
+                            android:textSize="11sp"/>
+
+                        <TextView
+                            android:id="@+id/tv_warning_content2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:ellipsize="middle"
+                            android:gravity="center"
+                            android:singleLine="true"
+                            android:text="还能怎么办，不想就算了！！！"
+                            android:textColor="@color/colorGray_1"
+                            android:textSize="11sp"/>
+
+                        <TextView
+                            android:id="@+id/tv_warning_content3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:ellipsize="middle"
+                            android:gravity="center"
+                            android:singleLine="true"
+                            android:text="那就这样吧，哈哈。。。。。"
+                            android:textColor="@color/colorGray_1"
+                            android:textSize="11sp"/>
+                    </ViewFlipper>
+
 
                 </RelativeLayout>
 

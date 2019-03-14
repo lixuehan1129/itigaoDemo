@@ -22,7 +22,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <com.example.fitdemo.ViewHelper.CustomRoundAngleImageView
+            <com.example.itigao.ViewHelper.CustomRoundAngleImageView
                 android:id="@+id/class_video_item_iv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

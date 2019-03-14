@@ -1,10 +1,27 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-hr\\values-hr.xml",
+            "outputFile": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\debug\\values-hr\\values-hr.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\a9b407ceb262701c82e65cfb4c66ff47\\res\\values-hr\\values-hr.xml",
+                    "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\34a6927afa04c5fd566251d08b59640e\\res\\values-hr\\values-hr.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "52",
+                        "startColumns": "4",
+                        "startOffsets": "4207",
+                        "endColumns": "100",
+                        "endOffsets": "4303"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\cc7206f99d9b49785b63b5993fb4ba06\\res\\values-hr\\values-hr.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -21,7 +38,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\exoplayer-ui-2.9.1.aar\\7bd8417e6f86810bce0884c98fc35c71\\res\\values-hr\\values-hr.xml",
+                    "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\exoplayer-ui-2.9.1.aar\\088adf82ba08d6a907b57bb87802667c\\res\\values-hr\\values-hr.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -35,32 +52,32 @@
                         "startOffsets": "1893,1973,2063,2136,2201,2272,2350,2425,2505,2582,2650,2734,2801,2876,2937,3002,3075,3154,3227,3280,3338,3386,3447,3511,3570,3641,3706,3777,3829,3892,3977,4062",
                         "endColumns": "79,89,72,64,70,77,74,79,76,67,83,66,74,60,64,72,78,72,52,57,47,60,63,58,70,64,70,51,62,84,84,55",
                         "endOffsets": "1968,2058,2131,2196,2267,2345,2420,2500,2577,2645,2729,2796,2871,2932,2997,3070,3149,3222,3275,3333,3381,3442,3506,3565,3636,3701,3772,3824,3887,3972,4057,4113"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\a6d52d2702d130a87ed80841e1169d14\\res\\values-hr\\values-hr.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    },
-                    "to": {
-                        "startLines": "52",
-                        "startColumns": "4",
-                        "startOffsets": "4207",
-                        "endColumns": "100",
-                        "endOffsets": "4303"
                     }
                 }
             ]
         },
         {
-            "outputFile": "D:\\Android\\Application\\FitDemo\\app\\build\\intermediates\\res\\merged\\debug\\values-hr\\values-hr.xml",
+            "outputFile": "E:\\android\\Itigao\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-hr\\values-hr.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\a9b407ceb262701c82e65cfb4c66ff47\\res\\values-hr\\values-hr.xml",
+                    "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\34a6927afa04c5fd566251d08b59640e\\res\\values-hr\\values-hr.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "52",
+                        "startColumns": "4",
+                        "startOffsets": "4207",
+                        "endColumns": "100",
+                        "endOffsets": "4303"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\cc7206f99d9b49785b63b5993fb4ba06\\res\\values-hr\\values-hr.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -77,7 +94,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\exoplayer-ui-2.9.1.aar\\7bd8417e6f86810bce0884c98fc35c71\\res\\values-hr\\values-hr.xml",
+                    "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\exoplayer-ui-2.9.1.aar\\088adf82ba08d6a907b57bb87802667c\\res\\values-hr\\values-hr.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -91,23 +108,6 @@
                         "startOffsets": "1893,1973,2063,2136,2201,2272,2350,2425,2505,2582,2650,2734,2801,2876,2937,3002,3075,3154,3227,3280,3338,3386,3447,3511,3570,3641,3706,3777,3829,3892,3977,4062",
                         "endColumns": "79,89,72,64,70,77,74,79,76,67,83,66,74,60,64,72,78,72,52,57,47,60,63,58,70,64,70,51,62,84,84,55",
                         "endOffsets": "1968,2058,2131,2196,2267,2345,2420,2500,2577,2645,2729,2796,2871,2932,2997,3070,3149,3222,3275,3333,3381,3442,3506,3565,3636,3701,3772,3824,3887,3972,4057,4113"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\a6d52d2702d130a87ed80841e1169d14\\res\\values-hr\\values-hr.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    },
-                    "to": {
-                        "startLines": "52",
-                        "startColumns": "4",
-                        "startOffsets": "4207",
-                        "endColumns": "100",
-                        "endOffsets": "4303"
                     }
                 }
             ]

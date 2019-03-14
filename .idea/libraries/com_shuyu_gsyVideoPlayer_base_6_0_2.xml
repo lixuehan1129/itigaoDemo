@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="com.shuyu:gsyVideoPlayer-base-6.0.2">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/gsyVideoPlayer-base-6.0.2.aar/0e8fce3eb5967547ac49e71e64813ee5/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/gsyVideoPlayer-base-6.0.2.aar/0e8fce3eb5967547ac49e71e64813ee5/jars/classes.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/gsyVideoPlayer-base-6.0.2.aar/47daa2fd8446a1dbb0a81c40c66e95fd/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/gsyVideoPlayer-base-6.0.2.aar/47daa2fd8446a1dbb0a81c40c66e95fd/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

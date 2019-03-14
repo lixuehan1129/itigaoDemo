@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <com.example.itigao.Media.NewVideoPlayer
+        android:id="@+id/broad_new_vv"
+        android:layout_width="match_parent"
+        android:layout_height="210dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/colorGray_White">
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/broad_new_layout"
+            android:layout_weight="4"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:background="@color/colorGray_White"
+            app:tabIndicatorHeight="2dp"
+            app:tabMode="scrollable"
+            app:tabSelectedTextColor="@color/colorOrange"
+            app:tabTextColor="@color/colorGray_1"
+            app:tabIndicatorColor="@color/colorOrange"
+            app:tabGravity="center"
+            app:tabPaddingStart="20dp"
+            app:tabPaddingEnd="15dp"
+            app:tabMaxWidth="200dp"
+            app:tabMinWidth="20dp">
+        </android.support.design.widget.TabLayout>
+
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textColor="@color/colorWhite"
+            android:text=" + 关注 "
+            android:textSize="15sp"
+            android:background="@color/colorOrange"/>
+
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/broad_new_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </android.support.v4.view.ViewPager>
+
+</LinearLayout>

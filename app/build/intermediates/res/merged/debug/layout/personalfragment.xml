@@ -120,7 +120,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="我的智能设备"
+                        android:text="我的智能学习设备"
                         android:textSize="12sp"
                         android:paddingBottom="6dp"
                         android:textColor="@color/colorBlack"
@@ -151,7 +151,7 @@
                         android:paddingBottom="10dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="我添加的课程"
+                        android:text="我喜欢的课程"
                         android:textSize="12sp"
                         android:textColor="@color/colorBlack"/>
 
@@ -160,7 +160,7 @@
                         android:paddingLeft="5dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="健身课程（免费）"
+                        android:text="学习课程"
                         android:textSize="15sp"
                         android:textColor="@color/colorBlack"/>
                     <TextView
@@ -170,7 +170,7 @@
                         android:paddingBottom="3dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="已经学习7课时,继续坚持"
+                        android:text="刘老师    已经学习2课时,继续坚持"
                         android:textSize="7sp" />
 
                     <!--<TextView-->
@@ -248,7 +248,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="健康体检"
+                        android:text="校园生活"
                         android:textSize="12sp"
                         android:paddingBottom="6dp"
                         android:textColor="@color/colorBlack"
@@ -258,7 +258,7 @@
                         android:id="@+id/personalFragment_exam2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="我的体检情况，点击查看详情"
+                        android:text="我的校园生活，点击查看详情"
                         android:textSize="12sp"
                         android:padding="3dp"/>
 
@@ -276,7 +276,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="室内检测"
+                        android:text="学习历程"
                         android:textSize="12sp"
                         android:paddingBottom="6dp"
                         android:textColor="@color/colorBlack"
@@ -286,7 +286,7 @@
                         android:id="@+id/personalFragment_indoor2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="室内环境监测，点击查看详情"
+                        android:text="记录了我的学习历程，点击查看详情"
                         android:textSize="12sp"
                         android:padding="3dp"/>
 

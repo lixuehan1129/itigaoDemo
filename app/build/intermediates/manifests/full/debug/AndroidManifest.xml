@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.example.fitdemo" android:versionName="1.0" android:versionCode="1">
+<?xml version="1.0" encoding="UTF-8"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.example.itigao" android:versionName="1.0" android:versionCode="1">
   <uses-sdk android:targetSdkVersion="26" android:minSdkVersion="21"/>
-  <permission android:name="com.example.fitdemo.permission.JPUSH_MESSAGE" android:protectionLevel="signature"/>
+  <permission android:name="com.example.itigao.permission.JPUSH_MESSAGE" android:protectionLevel="signature"/>
   <uses-permission android:name="android.permission.INTERNET"/>
   <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
   <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
@@ -23,13 +23,14 @@
   <uses-permission android:name="android.permission.GET_TASKS"/>
   <uses-permission android:name="android.permission.RECORD_AUDIO"/>
   <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+  <uses-permission android:name="com.example.itigao.permission.JPUSH_MESSAGE"/>
   <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT"/>
   <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
   <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"/>
   <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
   <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
-  <application android:supportsRtl="true" android:hardwareAccelerated="true" android:debuggable="true" android:label="@string/app_name" android:name="com.mob.MobApplication" android:theme="@style/Theme.AppCompat.Light.NoActionBar" android:largeHeap="true" android:icon="@mipmap/ic_launcher1" android:allowBackup="true" android:testOnly="true">
-    <activity android:name="com.example.fitdemo.InitializeActivity">
+  <application android:supportsRtl="true" android:hardwareAccelerated="true" android:debuggable="true" android:label="@string/app_name" android:name="com.mob.MobApplication" android:theme="@style/Theme.AppCompat.Light.NoActionBar" android:largeHeap="true" android:icon="@mipmap/ic_launcher1" android:allowBackup="true">
+    <activity android:name="com.example.itigao.InitializeActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN"/>
         <category android:name="android.intent.category.LAUNCHER"/>
@@ -44,38 +45,34 @@
       </intent-filter>
     </service>
     <receiver android:name="cn.jpush.android.service.AlarmReceiver" android:exported="false"/>
-    <provider android:name="cn.jpush.android.service.DataProvider" android:exported="false" android:authorities="com.example.fitdemo.DataProvider"/>
-    <provider android:name="cn.jpush.im.android.helpers.ipc.IMProvider" android:exported="false" android:authorities="com.example.fitdemo.IMProvider"/>
+    <provider android:name="cn.jpush.android.service.DataProvider" android:exported="false" android:authorities="com.example.itigao.DataProvider"/>
+    <provider android:name="cn.jpush.im.android.helpers.ipc.IMProvider" android:exported="false" android:authorities="com.example.itigao.IMProvider"/>
     <receiver android:enabled="true" android:name="cn.jpush.im.android.helpers.IMReceiver" android:exported="false"/>
     <meta-data android:name="JPUSH_CHANNEL" android:value="developer-default"/>
-    <meta-data android:name="JPUSH_APPKEY" android:value="219f818893447ba1162c4d71"/>
-    <activity android:name="com.example.fitdemo.MainActivity"/>
-    <activity android:screenOrientation="portrait" android:name="com.example.fitdemo.Subscribe.VideoPlayActivity" android:configChanges="orientation|keyboardHidden|screenSize"/>
-    <activity android:name="com.example.fitdemo.Classes.FitActivity"/>
-    <activity android:name="com.example.fitdemo.Classes.CyclingActivity"/>
-    <activity android:name="com.example.fitdemo.Classes.RunActivity"/>
-    <activity android:name="com.example.fitdemo.Classes.YogaActivity"/>
-    <activity android:name="com.example.fitdemo.User.UserRegistActivity"/>
-    <activity android:name="com.example.fitdemo.User.UserLoginActivity"/>
-    <activity android:name="com.example.fitdemo.Classes.ChildActivity"/>
-    <activity android:screenOrientation="portrait" android:name="com.example.fitdemo.Classes.BroadcastActivity" android:configChanges="orientation|keyboardHidden|screenSize"/>
-    <activity android:name="com.example.fitdemo.Classes.HuDongActivity"/>
-    <activity android:name="com.example.fitdemo.Personal.PersonClassActivity"/>
-    <activity android:name="com.example.fitdemo.Personal.PersonDeviceActivity"/>
-    <activity android:name="com.example.fitdemo.Personal.PersonChangeActivity"/>
-    <activity android:name="com.example.fitdemo.Personal.PersonExamActivity"/>
-    <activity android:name="com.example.fitdemo.Personal.PersonIndoorActivity"/>
-    <activity android:name="com.example.fitdemo.Subscribe.VideoRankActivity"/>
-    <activity android:screenOrientation="portrait" android:name="com.example.fitdemo.Classes.HuDongPlayActivity" android:configChanges="orientation|screenSize|keyboardHidden"/>
-    <activity android:screenOrientation="portrait" android:name="com.example.fitdemo.Classes.HuDongPutActivity" android:configChanges="orientation|keyboardHidden|screenSize"/>
-    <activity android:name="com.example.fitdemo.Classes.GoBroadActivity" android:screenOrientation="portrait"/>
-    <activity android:name="com.example.fitdemo.Classes.TextActivity"/>
-    <activity android:name="com.example.fitdemo.Classes.BaseActivity"/>
-    <activity android:screenOrientation="portrait" android:name="com.example.fitdemo.Subscribe.VideoActivity" android:configChanges="orientation|keyboardHidden|screenSize"/>
+    <meta-data android:name="JPUSH_APPKEY" android:value="784339f676cfaa94e767844a"/>
+    <activity android:name="com.example.itigao.MainActivity"/>
+    <activity android:screenOrientation="portrait" android:name="com.example.itigao.Subscribe.VideoPlayActivity" android:configChanges="orientation|keyboardHidden|screenSize"/>
+    <activity android:name="com.example.itigao.User.UserRegistActivity"/>
+    <activity android:name="com.example.itigao.User.UserLoginActivity"/>
+    <activity android:screenOrientation="portrait" android:name="com.example.itigao.Broad.BroadcastActivity" android:configChanges="orientation|keyboardHidden|screenSize"/>
+    <activity android:name="com.example.itigao.HuDong.HuDongActivity"/>
+    <activity android:name="com.example.itigao.Personal.PersonClassActivity"/>
+    <activity android:name="com.example.itigao.Personal.PersonDeviceActivity"/>
+    <activity android:name="com.example.itigao.Personal.PersonChangeActivity"/>
+    <activity android:name="com.example.itigao.Personal.PersonExamActivity"/>
+    <activity android:name="com.example.itigao.Personal.PersonIndoorActivity"/>
+    <activity android:name="com.example.itigao.Subscribe.VideoRankActivity"/>
+    <activity android:screenOrientation="portrait" android:name="com.example.itigao.HuDong.HuDongPlayActivity" android:configChanges="orientation|screenSize|keyboardHidden"/>
+    <activity android:screenOrientation="portrait" android:name="com.example.itigao.HuDong.HuDongPutActivity" android:configChanges="orientation|keyboardHidden|screenSize"/>
+    <activity android:name="com.example.itigao.Broad.GoBroadActivity" android:screenOrientation="portrait"/>
+    <activity android:name="com.example.itigao.Classes.BaseActivity"/>
+    <activity android:screenOrientation="portrait" android:name="com.example.itigao.Subscribe.VideoActivity" android:configChanges="orientation|keyboardHidden|screenSize"/>
+    <activity android:screenOrientation="portrait" android:name="com.example.itigao.Video.VideoNewActivity" android:configChanges="orientation|keyboardHidden|screenSize"/>
+    <activity android:screenOrientation="portrait" android:name="com.example.itigao.Broad.BroadNewActivity" android:configChanges="orientation|keyboardHidden|screenSize"/>
     <receiver android:enabled="true" android:name="cn.jpush.android.service.PushReceiver" android:exported="false">
       <intent-filter android:priority="1000">
         <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY"/>
-        <category android:name="com.example.fitdemo"/>
+        <category android:name="com.example.itigao"/>
       </intent-filter>
       <intent-filter>
         <action android:name="android.intent.action.USER_PRESENT"/>
@@ -90,11 +87,11 @@
     <service android:enabled="true" android:name="cn.jpush.android.service.DaemonService" android:exported="true">
       <intent-filter>
         <action android:name="cn.jpush.android.intent.DaemonService"/>
-        <category android:name="com.example.fitdemo"/>
+        <category android:name="com.example.itigao"/>
       </intent-filter>
     </service>
-    <meta-data xmlns:tools="http://schemas.android.com/tools" android:name="Mob-AppKey" android:value="29a1046b75e37" tools:node="merge"/>
-    <meta-data xmlns:tools="http://schemas.android.com/tools" android:name="Mob-AppSeret" android:value="a765aa7a6d46a64bba7e537c8d05ee13" tools:node="merge"/>
+    <meta-data xmlns:tools="http://schemas.android.com/tools" android:name="Mob-AppKey" android:value="2a628933960e4" tools:node="merge"/>
+    <meta-data xmlns:tools="http://schemas.android.com/tools" android:name="Mob-AppSeret" android:value="b98fbea375084b85a024410f43754ff6" tools:node="merge"/>
     <activity xmlns:tools="http://schemas.android.com/tools" android:windowSoftInputMode="stateHidden|adjustResize" android:name="com.mob.tools.MobUIShell" android:configChanges="keyboardHidden|orientation|screenSize" android:theme="@android:style/Theme.Translucent.NoTitleBar" tools:node="merge"/>
   </application>
   <uses-permission android:name="android.permission.PACKAGE_USAGE_STATS"/>

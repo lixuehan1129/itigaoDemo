@@ -42,7 +42,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="0dp"
                             android:layout_weight="1"
-                            android:text="累计运动时长"
+                            android:text="累计学习时长"
                             android:textSize="10sp"
                             android:textColor="@color/colorBlack"
                             tools:ignore="NestedWeights" />
@@ -85,7 +85,7 @@
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="累计消耗（千卡）"
+                                    android:text="学习状态"
                                     android:textSize="10sp"/>
 
                                 <TextView
@@ -93,7 +93,7 @@
                                     android:paddingTop="3dp"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="777"
+                                    android:text="良好"
                                     android:textSize="12sp"
                                     android:textColor="@color/colorBlack"/>
 
@@ -108,7 +108,7 @@
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="累计运动（天）"
+                                    android:text="累计学习（天）"
                                     android:textSize="10sp"/>
 
                                 <TextView
@@ -131,7 +131,7 @@
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="运动指数"
+                                    android:text="学习评价指数"
                                     android:textSize="10sp"/>
 
                                 <TextView
@@ -154,491 +154,491 @@
 
 
 
-            <LinearLayout
-                android:paddingTop="10dp"
-                android:paddingBottom="10dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <LinearLayout
-                    android:padding="14dp"
-                    android:layout_marginRight="6dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical"
-                    android:background="@drawable/round_gb_gray">
-
-                            <LinearLayout
-                                android:paddingBottom="18dp"
-                                android:orientation="horizontal"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content">
-
-                                <de.hdodenhof.circleimageview.CircleImageView
-                                    android:layout_gravity="center"
-                                    android:layout_width="20dp"
-                                    android:layout_height="20dp"
-                                    android:src="@mipmap/ic_bushu"/>
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="步数"
-                                    android:textSize="12sp"
-                                    android:textColor="@color/colorBlack"
-                                    android:paddingLeft="5dp"
-                                    android:layout_gravity="center"/>
-
-                            </LinearLayout>
-
-
-                            <LinearLayout
-                                android:layout_weight="1"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical"
-                                android:paddingBottom="15dp">
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="0dp"
-                                    android:layout_weight="1"
-                                    android:text="今日步数"
-                                    android:textSize="10sp"
-                                    android:textColor="@color/colorBlack"
-                                    tools:ignore="NestedWeights" />
-
-                                <LinearLayout
-                                    android:paddingTop="4dp"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:orientation="horizontal">
-
-                                    <TextView
-                                        android:id="@+id/sportFragment_data5"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:text="4396"
-                                        android:textStyle="bold"
-                                        android:textColor="@color/colorBrown1"
-                                        android:textSize="24sp"/>
-
-                                    <TextView
-                                        android:paddingLeft="5dp"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:text="步"/>
-
-                                </LinearLayout>
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_weight="1"
-                                android:paddingBottom="8dp"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical">
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="0dp"
-                                    android:layout_weight="1"
-                                    android:text="累计步数记录"
-                                    android:textSize="10sp"
-                                    android:textColor="@color/colorBlack"
-                                    tools:ignore="NestedWeights" />
-
-                                <LinearLayout
-                                    android:paddingTop="4dp"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:orientation="horizontal">
-
-                                    <TextView
-                                        android:id="@+id/sportFragment_data6"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:text="77777"
-                                        android:textStyle="bold"
-                                        android:textColor="@color/colorPrimaryDark"
-                                        android:textSize="24sp"/>
-
-                                    <TextView
-                                        android:paddingLeft="5dp"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:text="步"/>
-
-                                </LinearLayout>
-
-                            </LinearLayout>
-
-                </LinearLayout>
-
-
-
-
-                <LinearLayout
-                    android:layout_weight="1"
-                    android:paddingLeft="6dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-
-                    <LinearLayout
-                        android:layout_marginBottom="3dp"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:padding="10dp"
-                        tools:ignore="NestedWeights"
-                        android:orientation="vertical"
-                        android:background="@drawable/round_gb_orange">
-
-                                <LinearLayout
-                                    android:orientation="horizontal"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content">
-
-                                    <de.hdodenhof.circleimageview.CircleImageView
-                                        android:layout_gravity="center"
-                                        android:layout_width="20dp"
-                                        android:layout_height="20dp"
-                                        android:src="@mipmap/ic_runr"/>
-
-                                    <TextView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:text="跑步"
-                                        android:textSize="12sp"
-                                        android:textColor="@color/colorBlack"
-                                        android:paddingLeft="5dp"
-                                        android:layout_gravity="center"/>
-
-                                </LinearLayout>
-
-                        <LinearLayout
-                            android:paddingTop="5dp"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="今日 "
-                                />
-
-                            <TextView
-                                android:id="@+id/sportFragment_data7"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="43.96"
-                                android:textStyle="bold"
-                                android:textColor="@color/colorBrown1"
-                                android:textSize="15sp"/>
-
-
-                        </LinearLayout>
-
-
-                                <LinearLayout
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:orientation="horizontal">
-
-                                    <TextView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:text="累计 "
-                                        />
-
-                                    <TextView
-                                        android:id="@+id/sportFragment_data8"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:text="43.96"
-                                        android:textStyle="bold"
-                                        android:textColor="@color/colorPrimaryDark"
-                                        android:textSize="15sp"/>
-
-                                    <TextView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:text=" 公里"/>
-
-                                </LinearLayout>
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_marginTop="4dp"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:padding="10dp"
-                        android:orientation="vertical"
-                        android:background="@drawable/round_gb_gray">
-
-                                <LinearLayout
-                                    android:orientation="horizontal"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content">
-
-                                    <de.hdodenhof.circleimageview.CircleImageView
-                                        android:layout_gravity="center"
-                                        android:layout_width="20dp"
-                                        android:layout_height="20dp"
-                                        android:src="@mipmap/ic_biker"/>
-
-                                    <TextView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:text="骑行"
-                                        android:textSize="12sp"
-                                        android:textColor="@color/colorBlack"
-                                        android:paddingLeft="5dp"
-                                        android:layout_gravity="center"/>
-
-                                </LinearLayout>
-
-                        <LinearLayout
-                            android:paddingTop="5dp"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="今日 "
-                                />
-
-                            <TextView
-                                android:id="@+id/sportFragment_data9"
-                                android:layout_width="wrap_content"
-                                android:layout_height="26dp"
-                                android:text="43.96"
-                                android:textColor="@color/colorBrown1"
-                                android:textSize="15sp"
-                                android:textStyle="bold" />
-
-
-                        </LinearLayout>
-
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="累计 "
-                                />
-
-                            <TextView
-                                android:id="@+id/sportFragment_data10"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="43.96"
-                                android:textStyle="bold"
-                                android:textColor="@color/colorPrimaryDark"
-                                android:textSize="15sp"/>
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text=" 公里"/>
-
-                        </LinearLayout>
-
-                    </LinearLayout>
-
-                </LinearLayout>
-
-            </LinearLayout>
-
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-                <LinearLayout
-                    android:layout_marginRight="6dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:padding="10dp"
-                    tools:ignore="NestedWeights"
-                    android:orientation="vertical"
-                    android:background="@drawable/round_gb_green">
-
-                            <LinearLayout
-                                android:orientation="horizontal"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content">
-
-                                <de.hdodenhof.circleimageview.CircleImageView
-                                    android:layout_gravity="center"
-                                    android:layout_width="20dp"
-                                    android:layout_height="20dp"
-                                    android:src="@mipmap/ic_zour"/>
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="行走"
-                                    android:textSize="12sp"
-                                    android:textColor="@color/colorBlack"
-                                    android:paddingLeft="5dp"
-                                    android:layout_gravity="center"/>
-
-                            </LinearLayout>
-
-                    <LinearLayout
-                        android:paddingTop="5dp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="今日 "
-                            />
-
-                        <TextView
-                            android:id="@+id/sportFragment_data11"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="43.96"
-                            android:textStyle="bold"
-                            android:textColor="@color/colorBrown1"
-                            android:textSize="15sp"/>
-
-
-                    </LinearLayout>
-
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="累计 "
-                            />
-
-                        <TextView
-                            android:id="@+id/sportFragment_data12"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="43.96"
-                            android:textStyle="bold"
-                            android:textColor="@color/colorPrimaryDark"
-                            android:textSize="15sp"/>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text=" 公里"/>
-
-                    </LinearLayout>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_marginLeft="6dp"
-                    android:padding="10dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:orientation="vertical"
-                    android:background="@drawable/round_gb_pink">
-
-                            <LinearLayout
-                                android:orientation="horizontal"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content">
-
-                                <de.hdodenhof.circleimageview.CircleImageView
-                                    android:layout_gravity="center"
-                                    android:layout_width="20dp"
-                                    android:layout_height="20dp"
-                                    android:src="@mipmap/ic_yogar"/>
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="瑜伽"
-                                    android:textSize="12sp"
-                                    android:textColor="@color/colorBlack"
-                                    android:paddingLeft="5dp"
-                                    android:layout_gravity="center"/>
-
-                            </LinearLayout>
-
-                    <LinearLayout
-                        android:paddingTop="5dp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="今日 "
-                            />
-
-                        <TextView
-                            android:id="@+id/sportFragment_data13"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="43.96"
-                            android:textStyle="bold"
-                            android:textColor="@color/colorBrown1"
-                            android:textSize="15sp"/>
-
-
-                    </LinearLayout>
-
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="累计 "
-                            />
-
-                        <TextView
-                            android:id="@+id/sportFragment_data14"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="43.96"
-                            android:textStyle="bold"
-                            android:textColor="@color/colorPrimaryDark"
-                            android:textSize="15sp"/>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text=" 分钟"/>
-
-                    </LinearLayout>
-
-                </LinearLayout>
-
-            </LinearLayout>
+            <!--<LinearLayout-->
+                <!--android:paddingTop="10dp"-->
+                <!--android:paddingBottom="10dp"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:orientation="horizontal">-->
+
+                <!--<LinearLayout-->
+                    <!--android:padding="14dp"-->
+                    <!--android:layout_marginRight="6dp"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:orientation="vertical"-->
+                    <!--android:background="@drawable/round_gb_gray">-->
+
+                            <!--<LinearLayout-->
+                                <!--android:paddingBottom="18dp"-->
+                                <!--android:orientation="horizontal"-->
+                                <!--android:layout_width="match_parent"-->
+                                <!--android:layout_height="wrap_content">-->
+
+                                <!--<de.hdodenhof.circleimageview.CircleImageView-->
+                                    <!--android:layout_gravity="center"-->
+                                    <!--android:layout_width="20dp"-->
+                                    <!--android:layout_height="20dp"-->
+                                    <!--android:src="@mipmap/ic_bushu"/>-->
+
+                                <!--<TextView-->
+                                    <!--android:layout_width="wrap_content"-->
+                                    <!--android:layout_height="wrap_content"-->
+                                    <!--android:text="观看视频"-->
+                                    <!--android:textSize="12sp"-->
+                                    <!--android:textColor="@color/colorBlack"-->
+                                    <!--android:paddingLeft="5dp"-->
+                                    <!--android:layout_gravity="center"/>-->
+
+                            <!--</LinearLayout>-->
+
+
+                            <!--<LinearLayout-->
+                                <!--android:layout_weight="1"-->
+                                <!--android:layout_width="match_parent"-->
+                                <!--android:layout_height="wrap_content"-->
+                                <!--android:orientation="vertical"-->
+                                <!--android:paddingBottom="15dp">-->
+                                <!--<TextView-->
+                                    <!--android:layout_width="wrap_content"-->
+                                    <!--android:layout_height="0dp"-->
+                                    <!--android:layout_weight="1"-->
+                                    <!--android:text="今日观看时长"-->
+                                    <!--android:textSize="10sp"-->
+                                    <!--android:textColor="@color/colorBlack"-->
+                                    <!--tools:ignore="NestedWeights" />-->
+
+                                <!--<LinearLayout-->
+                                    <!--android:paddingTop="4dp"-->
+                                    <!--android:layout_width="match_parent"-->
+                                    <!--android:layout_height="wrap_content"-->
+                                    <!--android:orientation="horizontal">-->
+
+                                    <!--<TextView-->
+                                        <!--android:id="@+id/sportFragment_data5"-->
+                                        <!--android:layout_width="wrap_content"-->
+                                        <!--android:layout_height="wrap_content"-->
+                                        <!--android:text="4396"-->
+                                        <!--android:textStyle="bold"-->
+                                        <!--android:textColor="@color/colorBrown1"-->
+                                        <!--android:textSize="24sp"/>-->
+
+                                    <!--<TextView-->
+                                        <!--android:paddingLeft="5dp"-->
+                                        <!--android:layout_width="wrap_content"-->
+                                        <!--android:layout_height="wrap_content"-->
+                                        <!--android:text=""/>-->
+
+                                <!--</LinearLayout>-->
+
+                            <!--</LinearLayout>-->
+
+                            <!--<LinearLayout-->
+                                <!--android:layout_weight="1"-->
+                                <!--android:paddingBottom="8dp"-->
+                                <!--android:layout_width="match_parent"-->
+                                <!--android:layout_height="wrap_content"-->
+                                <!--android:orientation="vertical">-->
+                                <!--<TextView-->
+                                    <!--android:layout_width="wrap_content"-->
+                                    <!--android:layout_height="0dp"-->
+                                    <!--android:layout_weight="1"-->
+                                    <!--android:text="累计观看时长"-->
+                                    <!--android:textSize="10sp"-->
+                                    <!--android:textColor="@color/colorBlack"-->
+                                    <!--tools:ignore="NestedWeights" />-->
+
+                                <!--<LinearLayout-->
+                                    <!--android:paddingTop="4dp"-->
+                                    <!--android:layout_width="match_parent"-->
+                                    <!--android:layout_height="wrap_content"-->
+                                    <!--android:orientation="horizontal">-->
+
+                                    <!--<TextView-->
+                                        <!--android:id="@+id/sportFragment_data6"-->
+                                        <!--android:layout_width="wrap_content"-->
+                                        <!--android:layout_height="wrap_content"-->
+                                        <!--android:text="77777"-->
+                                        <!--android:textStyle="bold"-->
+                                        <!--android:textColor="@color/colorPrimaryDark"-->
+                                        <!--android:textSize="24sp"/>-->
+
+                                    <!--<TextView-->
+                                        <!--android:paddingLeft="5dp"-->
+                                        <!--android:layout_width="wrap_content"-->
+                                        <!--android:layout_height="wrap_content"-->
+                                        <!--android:text=""/>-->
+
+                                <!--</LinearLayout>-->
+
+                            <!--</LinearLayout>-->
+
+                <!--</LinearLayout>-->
+
+
+
+
+                <!--<LinearLayout-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:paddingLeft="6dp"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:orientation="vertical">-->
+
+                    <!--<LinearLayout-->
+                        <!--android:layout_marginBottom="3dp"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="0dp"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:padding="10dp"-->
+                        <!--tools:ignore="NestedWeights"-->
+                        <!--android:orientation="vertical"-->
+                        <!--android:background="@drawable/round_gb_orange">-->
+
+                                <!--<LinearLayout-->
+                                    <!--android:orientation="horizontal"-->
+                                    <!--android:layout_width="match_parent"-->
+                                    <!--android:layout_height="wrap_content">-->
+
+                                    <!--<de.hdodenhof.circleimageview.CircleImageView-->
+                                        <!--android:layout_gravity="center"-->
+                                        <!--android:layout_width="20dp"-->
+                                        <!--android:layout_height="20dp"-->
+                                        <!--android:src="@mipmap/ic_runr"/>-->
+
+                                    <!--<TextView-->
+                                        <!--android:layout_width="wrap_content"-->
+                                        <!--android:layout_height="wrap_content"-->
+                                        <!--android:text="读书"-->
+                                        <!--android:textSize="12sp"-->
+                                        <!--android:textColor="@color/colorBlack"-->
+                                        <!--android:paddingLeft="5dp"-->
+                                        <!--android:layout_gravity="center"/>-->
+
+                                <!--</LinearLayout>-->
+
+                        <!--<LinearLayout-->
+                            <!--android:paddingTop="5dp"-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:orientation="horizontal">-->
+
+                            <!--<TextView-->
+                                <!--android:layout_width="wrap_content"-->
+                                <!--android:layout_height="wrap_content"-->
+                                <!--android:text="今日 "-->
+                                <!--/>-->
+
+                            <!--<TextView-->
+                                <!--android:id="@+id/sportFragment_data7"-->
+                                <!--android:layout_width="wrap_content"-->
+                                <!--android:layout_height="wrap_content"-->
+                                <!--android:text="43.96"-->
+                                <!--android:textStyle="bold"-->
+                                <!--android:textColor="@color/colorBrown1"-->
+                                <!--android:textSize="15sp"/>-->
+
+
+                        <!--</LinearLayout>-->
+
+
+                                <!--<LinearLayout-->
+                                    <!--android:layout_width="match_parent"-->
+                                    <!--android:layout_height="wrap_content"-->
+                                    <!--android:orientation="horizontal">-->
+
+                                    <!--<TextView-->
+                                        <!--android:layout_width="wrap_content"-->
+                                        <!--android:layout_height="wrap_content"-->
+                                        <!--android:text="累计 "-->
+                                        <!--/>-->
+
+                                    <!--<TextView-->
+                                        <!--android:id="@+id/sportFragment_data8"-->
+                                        <!--android:layout_width="wrap_content"-->
+                                        <!--android:layout_height="wrap_content"-->
+                                        <!--android:text="43.96"-->
+                                        <!--android:textStyle="bold"-->
+                                        <!--android:textColor="@color/colorPrimaryDark"-->
+                                        <!--android:textSize="15sp"/>-->
+
+                                    <!--<TextView-->
+                                        <!--android:layout_width="wrap_content"-->
+                                        <!--android:layout_height="wrap_content"-->
+                                        <!--android:text=" "/>-->
+
+                                <!--</LinearLayout>-->
+
+                    <!--</LinearLayout>-->
+
+                    <!--<LinearLayout-->
+                        <!--android:layout_marginTop="4dp"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="0dp"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:padding="10dp"-->
+                        <!--android:orientation="vertical"-->
+                        <!--android:background="@drawable/round_gb_gray">-->
+
+                                <!--<LinearLayout-->
+                                    <!--android:orientation="horizontal"-->
+                                    <!--android:layout_width="match_parent"-->
+                                    <!--android:layout_height="wrap_content">-->
+
+                                    <!--<de.hdodenhof.circleimageview.CircleImageView-->
+                                        <!--android:layout_gravity="center"-->
+                                        <!--android:layout_width="20dp"-->
+                                        <!--android:layout_height="20dp"-->
+                                        <!--android:src="@mipmap/ic_biker"/>-->
+
+                                    <!--<TextView-->
+                                        <!--android:layout_width="wrap_content"-->
+                                        <!--android:layout_height="wrap_content"-->
+                                        <!--android:text="思考"-->
+                                        <!--android:textSize="12sp"-->
+                                        <!--android:textColor="@color/colorBlack"-->
+                                        <!--android:paddingLeft="5dp"-->
+                                        <!--android:layout_gravity="center"/>-->
+
+                                <!--</LinearLayout>-->
+
+                        <!--<LinearLayout-->
+                            <!--android:paddingTop="5dp"-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:orientation="horizontal">-->
+
+                            <!--<TextView-->
+                                <!--android:layout_width="wrap_content"-->
+                                <!--android:layout_height="wrap_content"-->
+                                <!--android:text="今日 "-->
+                                <!--/>-->
+
+                            <!--<TextView-->
+                                <!--android:id="@+id/sportFragment_data9"-->
+                                <!--android:layout_width="wrap_content"-->
+                                <!--android:layout_height="26dp"-->
+                                <!--android:text="43.96"-->
+                                <!--android:textColor="@color/colorBrown1"-->
+                                <!--android:textSize="15sp"-->
+                                <!--android:textStyle="bold" />-->
+
+
+                        <!--</LinearLayout>-->
+
+
+                        <!--<LinearLayout-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:orientation="horizontal">-->
+
+                            <!--<TextView-->
+                                <!--android:layout_width="wrap_content"-->
+                                <!--android:layout_height="wrap_content"-->
+                                <!--android:text="累计 "-->
+                                <!--/>-->
+
+                            <!--<TextView-->
+                                <!--android:id="@+id/sportFragment_data10"-->
+                                <!--android:layout_width="wrap_content"-->
+                                <!--android:layout_height="wrap_content"-->
+                                <!--android:text="43.96"-->
+                                <!--android:textStyle="bold"-->
+                                <!--android:textColor="@color/colorPrimaryDark"-->
+                                <!--android:textSize="15sp"/>-->
+
+                            <!--<TextView-->
+                                <!--android:layout_width="wrap_content"-->
+                                <!--android:layout_height="wrap_content"-->
+                                <!--android:text=" "/>-->
+
+                        <!--</LinearLayout>-->
+
+                    <!--</LinearLayout>-->
+
+                <!--</LinearLayout>-->
+
+            <!--</LinearLayout>-->
+
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:orientation="horizontal">-->
+
+                <!--<LinearLayout-->
+                    <!--android:layout_marginRight="6dp"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:padding="10dp"-->
+                    <!--tools:ignore="NestedWeights"-->
+                    <!--android:orientation="vertical"-->
+                    <!--android:background="@drawable/round_gb_green">-->
+
+                            <!--<LinearLayout-->
+                                <!--android:orientation="horizontal"-->
+                                <!--android:layout_width="match_parent"-->
+                                <!--android:layout_height="wrap_content">-->
+
+                                <!--<de.hdodenhof.circleimageview.CircleImageView-->
+                                    <!--android:layout_gravity="center"-->
+                                    <!--android:layout_width="20dp"-->
+                                    <!--android:layout_height="20dp"-->
+                                    <!--android:src="@mipmap/ic_zour"/>-->
+
+                                <!--<TextView-->
+                                    <!--android:layout_width="wrap_content"-->
+                                    <!--android:layout_height="wrap_content"-->
+                                    <!--android:text="写作业"-->
+                                    <!--android:textSize="12sp"-->
+                                    <!--android:textColor="@color/colorBlack"-->
+                                    <!--android:paddingLeft="5dp"-->
+                                    <!--android:layout_gravity="center"/>-->
+
+                            <!--</LinearLayout>-->
+
+                    <!--<LinearLayout-->
+                        <!--android:paddingTop="5dp"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:orientation="horizontal">-->
+
+                        <!--<TextView-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:text="今日 "-->
+                            <!--/>-->
+
+                        <!--<TextView-->
+                            <!--android:id="@+id/sportFragment_data11"-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:text="43.96"-->
+                            <!--android:textStyle="bold"-->
+                            <!--android:textColor="@color/colorBrown1"-->
+                            <!--android:textSize="15sp"/>-->
+
+
+                    <!--</LinearLayout>-->
+
+
+                    <!--<LinearLayout-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:orientation="horizontal">-->
+
+                        <!--<TextView-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:text="累计 "-->
+                            <!--/>-->
+
+                        <!--<TextView-->
+                            <!--android:id="@+id/sportFragment_data12"-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:text="43.96"-->
+                            <!--android:textStyle="bold"-->
+                            <!--android:textColor="@color/colorPrimaryDark"-->
+                            <!--android:textSize="15sp"/>-->
+
+                        <!--<TextView-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:text=" "/>-->
+
+                    <!--</LinearLayout>-->
+
+                <!--</LinearLayout>-->
+
+                <!--<LinearLayout-->
+                    <!--android:layout_marginLeft="6dp"-->
+                    <!--android:padding="10dp"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:orientation="vertical"-->
+                    <!--android:background="@drawable/round_gb_pink">-->
+
+                            <!--<LinearLayout-->
+                                <!--android:orientation="horizontal"-->
+                                <!--android:layout_width="match_parent"-->
+                                <!--android:layout_height="wrap_content">-->
+
+                                <!--<de.hdodenhof.circleimageview.CircleImageView-->
+                                    <!--android:layout_gravity="center"-->
+                                    <!--android:layout_width="20dp"-->
+                                    <!--android:layout_height="20dp"-->
+                                    <!--android:src="@mipmap/ic_yogar"/>-->
+
+                                <!--<TextView-->
+                                    <!--android:layout_width="wrap_content"-->
+                                    <!--android:layout_height="wrap_content"-->
+                                    <!--android:text="看论文"-->
+                                    <!--android:textSize="12sp"-->
+                                    <!--android:textColor="@color/colorBlack"-->
+                                    <!--android:paddingLeft="5dp"-->
+                                    <!--android:layout_gravity="center"/>-->
+
+                            <!--</LinearLayout>-->
+
+                    <!--<LinearLayout-->
+                        <!--android:paddingTop="5dp"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:orientation="horizontal">-->
+
+                        <!--<TextView-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:text="今日 "-->
+                            <!--/>-->
+
+                        <!--<TextView-->
+                            <!--android:id="@+id/sportFragment_data13"-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:text="43.96"-->
+                            <!--android:textStyle="bold"-->
+                            <!--android:textColor="@color/colorBrown1"-->
+                            <!--android:textSize="15sp"/>-->
+
+
+                    <!--</LinearLayout>-->
+
+
+                    <!--<LinearLayout-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:orientation="horizontal">-->
+
+                        <!--<TextView-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:text="累计 "-->
+                            <!--/>-->
+
+                        <!--<TextView-->
+                            <!--android:id="@+id/sportFragment_data14"-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:text="43.96"-->
+                            <!--android:textStyle="bold"-->
+                            <!--android:textColor="@color/colorPrimaryDark"-->
+                            <!--android:textSize="15sp"/>-->
+
+                        <!--<TextView-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:text=" "/>-->
+
+                    <!--</LinearLayout>-->
+
+                <!--</LinearLayout>-->
+
+            <!--</LinearLayout>-->
 
 
 
@@ -657,16 +657,34 @@
                             android:textSize="12sp"
                             android:textColor="@color/colorBlack"/>
 
-                        <TextView
-                            android:paddingTop="10dp"
+
+                        <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="还没有目标"
-                            android:textSize="12sp" />
+                            android:orientation="horizontal"
+                            android:paddingTop="10dp">
 
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="40dp"/>
+                            <TextView
+                                android:layout_weight="4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:singleLine="false"
+                                android:textSize="12sp"
+                                android:lineSpacingExtra="5dp"
+                                android:text=" 写作目标：5000\n 每日读书：30分钟\n 背单词：50个\n 数学题：1套\n 教学视频:30分钟\n   ......"/>
+
+                            <TextView
+                                android:layout_weight="1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:singleLine="false"
+                                android:textSize="12sp"
+                                android:lineSpacingExtra="5dp"
+                                android:textColor="@color/colorGreen1"
+                                android:text=" √\n √\n √\n √\n √\n"/>
+
+                        </LinearLayout>
+
 
             </LinearLayout>
 
@@ -680,23 +698,56 @@
                 android:orientation="vertical"
                 android:background="@drawable/round_gb_gray">
 
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="每周周报"
-                            android:textSize="12sp"
-                            android:textColor="@color/colorBlack"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="每周周报"
+                    android:textSize="12sp"
+                    android:textColor="@color/colorBlack"/>
 
-                        <TextView
-                            android:paddingTop="10dp"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="查看你的运动周报"
-                            android:textSize="12sp" />
+                <TextView
+                    android:paddingTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="查看你的学习周报"
+                    android:textSize="12sp" />
 
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="80dp"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="10dp">
+
+                    <TextView
+                        android:layout_weight="4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:singleLine="false"
+                        android:textSize="12sp"
+                        android:textColor="@color/colorBlack"
+                        android:lineSpacingExtra="5dp"
+                        android:text=" 每日记单词10个\n 累计阅读3小时\n 英语口语练习\n 坚持奥数题\n 每周一篇作文\n 宇哥考研讲座\n "/>
+
+                    <TextView
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:singleLine="false"
+                        android:textSize="12sp"
+                        android:lineSpacingExtra="5dp"
+                        android:textColor="@color/colorRed"
+                        android:text=" +5\n +1\n +1\n +1\n +1\n +4\n"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="13sp"
+                    android:text="......"/>
+
 
             </LinearLayout>
 

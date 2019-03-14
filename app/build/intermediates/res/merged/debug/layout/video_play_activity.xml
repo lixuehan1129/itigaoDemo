@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <cn.jzvd.JzvdStd
+        android:id="@+id/video_play_vv"
+        android:layout_width="match_parent"
+        android:layout_height="210dp" />
+    <LinearLayout
+        android:id="@+id/video_play_lii"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorGray_White"
+        android:layout_below="@id/video_play_vv"
+        android:paddingTop="7dp"
+        android:gravity="center">
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/video_play_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            app:tabBackground="@color/colorGray_White"
+            app:tabIndicatorColor="@color/colorGray_1"
+            app:tabIndicatorHeight="1dp"
+            app:tabMode="scrollable"
+            app:tabSelectedTextColor="@color/colorBlack"
+            app:tabTextColor="@color/colorGray">
+        </android.support.design.widget.TabLayout>
+
+    </LinearLayout>
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/video_play_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/video_play_li"
+        android:layout_below="@id/video_play_lii">
+
+    </android.support.v4.view.ViewPager>
+
+    <LinearLayout
+        android:id="@+id/video_play_li"
+        android:background="@color/colorGray_White"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <EditText
+            android:id="@+id/video_play_et"
+            android:textSize="13sp"
+            android:textColor="@color/colorBlack"
+            android:padding="5dp"
+            android:hint="发布你的评论吧。。。"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:background="@color/colorWhite"/>
+
+
+        <TextView
+            android:id="@+id/video_play_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="发送"
+            android:textColor="@color/colorGray_1"
+            android:layout_marginRight="10dp"/>
+
+        <!--<ImageView-->
+            <!--android:id="@+id/video_play_iv"-->
+            <!--android:layout_marginRight="10dp"-->
+            <!--android:layout_width="30dp"-->
+            <!--android:layout_height="30dp"-->
+            <!--android:background="@drawable/ripple_bg"-->
+            <!--android:src="@mipmap/ic_pingjia" />-->
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGray_White"
+    android:orientation="vertical">
+
+    <RadioGroup
+        android:id="@+id/class_check_group"
+        android:paddingTop="10dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:background="@color/colorWhite"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        tools:ignore="UselessParent">
+
+        <RadioButton
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:id="@+id/class_check_button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="一"
+            android:padding="4dp"
+            android:textSize="15sp"
+            android:button="@null"
+            android:gravity="center"
+            android:checked="true"
+            android:textColor="@drawable/radiobutton_textcolor"
+            android:background="@drawable/button_selector"/>
+
+        <RadioButton
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:id="@+id/class_check_button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="二"
+            android:padding="4dp"
+            android:textSize="15sp"
+            android:button="@null"
+            android:gravity="center"
+            android:checked="true"
+            android:textColor="@drawable/radiobutton_textcolor"
+            android:background="@drawable/button_selector"/>
+
+        <RadioButton
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:id="@+id/class_check_button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="三"
+            android:padding="4dp"
+            android:textSize="15sp"
+            android:button="@null"
+            android:gravity="center"
+            android:checked="true"
+            android:textColor="@drawable/radiobutton_textcolor"
+            android:background="@drawable/button_selector"/>
+
+        <RadioButton
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:id="@+id/class_check_button4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="四"
+            android:padding="4dp"
+            android:textSize="15sp"
+            android:button="@null"
+            android:gravity="center"
+            android:checked="true"
+            android:textColor="@drawable/radiobutton_textcolor"
+            android:background="@drawable/button_selector"/>
+
+        <RadioButton
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:id="@+id/class_check_button5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="五"
+            android:padding="4dp"
+            android:textSize="15sp"
+            android:button="@null"
+            android:gravity="center"
+            android:checked="true"
+            android:textColor="@drawable/radiobutton_textcolor"
+            android:background="@drawable/button_selector"/>
+
+        <RadioButton
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:id="@+id/class_check_button6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="六"
+            android:padding="4dp"
+            android:textSize="15sp"
+            android:button="@null"
+            android:gravity="center"
+            android:checked="true"
+            android:textColor="@drawable/radiobutton_textcolor"
+            android:background="@drawable/button_selector"/>
+
+        <RadioButton
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:id="@+id/class_check_button7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="日"
+            android:padding="4dp"
+            android:textSize="15sp"
+            android:button="@null"
+            android:gravity="center"
+            android:checked="true"
+            android:textColor="@drawable/radiobutton_textcolor"
+            android:background="@drawable/button_selector"/>
+
+    </RadioGroup>
+
+    <ScrollView
+        android:id="@+id/class_check_sc"
+        android:background="@color/colorGray_White"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/class_check_l1"
+                android:padding="5dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/class_check_tv1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13sp"
+                    android:text="星期一，11-26"/>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/class_check_rv1"
+                    android:padding="3dp"
+                    android:background="@drawable/round_gb"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </android.support.v7.widget.RecyclerView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/class_check_l2"
+                android:padding="5dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/class_check_tv2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13sp"
+                    android:text="星期二，11-27"/>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/class_check_rv2"
+                    android:padding="3dp"
+                    android:background="@drawable/round_gb"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </android.support.v7.widget.RecyclerView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/class_check_l3"
+                android:padding="5dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/class_check_tv3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13sp"
+                    android:text="星期三，11-28"/>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/class_check_rv3"
+                    android:padding="3dp"
+                    android:background="@drawable/round_gb"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </android.support.v7.widget.RecyclerView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/class_check_l4"
+                android:padding="5dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/class_check_tv4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13sp"
+                    android:text="星期四，11-29"/>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/class_check_rv4"
+                    android:padding="3dp"
+                    android:background="@drawable/round_gb"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </android.support.v7.widget.RecyclerView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/class_check_l5"
+                android:padding="5dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/class_check_tv5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13sp"
+                    android:text="星期五，11-30"/>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/class_check_rv5"
+                    android:padding="3dp"
+                    android:background="@drawable/round_gb"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </android.support.v7.widget.RecyclerView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/class_check_l6"
+                android:padding="5dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/class_check_tv6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13sp"
+                    android:text="星期六，12-01"/>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/class_check_rv6"
+                    android:padding="3dp"
+                    android:background="@drawable/round_gb"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </android.support.v7.widget.RecyclerView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/class_check_l7"
+                android:padding="5dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/class_check_tv7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13sp"
+                    android:text="星期日，12-02"/>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/class_check_rv7"
+                    android:padding="3dp"
+                    android:background="@drawable/round_gb"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </android.support.v7.widget.RecyclerView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
