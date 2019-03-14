@@ -205,7 +205,7 @@ public class PersonalFragment extends BaseFragment {
                 startActivity(intent);
             }
         });
-        //体检
+        //校园生活
         exam1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -213,12 +213,12 @@ public class PersonalFragment extends BaseFragment {
                 startActivity(intent);
             }
         });
-        //室内
+        //学习历程
         indoor1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                Intent intent = new Intent(getActivity(),PersonIndoorActivity.class);
-//                startActivity(intent);
+                Intent intent = new Intent(getActivity(),PersonIndoorActivity.class);
+                startActivity(intent);
                 Tip.showTip(getActivity(),"学习历程");
             }
         });

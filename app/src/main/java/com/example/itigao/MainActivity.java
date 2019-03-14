@@ -30,7 +30,7 @@ import com.example.itigao.Database.DataBaseHelper;
 import com.example.itigao.Personal.PersonalFragment;
 import com.example.itigao.Recommend.RecommendFragment;
 import com.example.itigao.Sport.SportFragment;
-import com.example.itigao.Video.SubscribeFragment;
+import com.example.itigao.Subscribe.SubscribeFragment;
 import com.example.itigao.Utils.PermissionUtils;
 import com.example.itigao.Utils.StatusBarUtils;
 import com.example.itigao.ViewHelper.NoScollViewPager;

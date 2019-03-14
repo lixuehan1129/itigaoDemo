@@ -1,0 +1,214 @@
+[
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\constrast.glsl",
+        "source": "E:\\android\\Itigao\\library\\build\\intermediates\\bundles\\debug\\res\\raw\\constrast.glsl"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\calm.glsl",
+        "source": "E:\\android\\Itigao\\library\\build\\intermediates\\bundles\\debug\\res\\raw\\calm.glsl"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\sierra.glsl",
+        "source": "E:\\android\\Itigao\\library\\build\\intermediates\\bundles\\debug\\res\\raw\\sierra.glsl"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\rise.glsl",
+        "source": "E:\\android\\Itigao\\library\\build\\intermediates\\bundles\\debug\\res\\raw\\rise.glsl"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\xproii_filter_shader.glsl",
+        "source": "E:\\android\\Itigao\\library\\build\\intermediates\\bundles\\debug\\res\\raw\\xproii_filter_shader.glsl"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\sunrise.glsl",
+        "source": "E:\\android\\Itigao\\library\\build\\intermediates\\bundles\\debug\\res\\raw\\sunrise.glsl"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\sharpen.glsl",
+        "source": "E:\\android\\Itigao\\library\\build\\intermediates\\bundles\\debug\\res\\raw\\sharpen.glsl"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\sutro.glsl",
+        "source": "E:\\android\\Itigao\\library\\build\\intermediates\\bundles\\debug\\res\\raw\\sutro.glsl"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\inkwell.glsl",
+        "source": "E:\\android\\Itigao\\library\\build\\intermediates\\bundles\\debug\\res\\raw\\inkwell.glsl"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\lomo.glsl",
+        "source": "E:\\android\\Itigao\\library\\build\\intermediates\\bundles\\debug\\res\\raw\\lomo.glsl"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\antique.glsl",
+        "source": "E:\\android\\Itigao\\library\\build\\intermediates\\bundles\\debug\\res\\raw\\antique.glsl"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\pixar.glsl",
+        "source": "E:\\android\\Itigao\\library\\build\\intermediates\\bundles\\debug\\res\\raw\\pixar.glsl"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\hudson.glsl",
+        "source": "E:\\android\\Itigao\\library\\build\\intermediates\\bundles\\debug\\res\\raw\\hudson.glsl"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\beauty.glsl",
+        "source": "E:\\android\\Itigao\\library\\build\\intermediates\\bundles\\debug\\res\\raw\\beauty.glsl"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\whitecat.glsl",
+        "source": "E:\\android\\Itigao\\library\\build\\intermediates\\bundles\\debug\\res\\raw\\whitecat.glsl"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\toaster2_filter_shader.glsl",
+        "source": "E:\\android\\Itigao\\library\\build\\intermediates\\bundles\\debug\\res\\raw\\toaster2_filter_shader.glsl"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\blackcat.glsl",
+        "source": "E:\\android\\Itigao\\library\\build\\intermediates\\bundles\\debug\\res\\raw\\blackcat.glsl"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\fragment.glsl",
+        "source": "E:\\android\\Itigao\\library\\build\\intermediates\\bundles\\debug\\res\\raw\\fragment.glsl"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\tender.glsl",
+        "source": "E:\\android\\Itigao\\library\\build\\intermediates\\bundles\\debug\\res\\raw\\tender.glsl"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\brannan.glsl",
+        "source": "E:\\android\\Itigao\\library\\build\\intermediates\\bundles\\debug\\res\\raw\\brannan.glsl"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\brightness.glsl",
+        "source": "E:\\android\\Itigao\\library\\build\\intermediates\\bundles\\debug\\res\\raw\\brightness.glsl"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\crayon.glsl",
+        "source": "E:\\android\\Itigao\\library\\build\\intermediates\\bundles\\debug\\res\\raw\\crayon.glsl"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\amaro.glsl",
+        "source": "E:\\android\\Itigao\\library\\build\\intermediates\\bundles\\debug\\res\\raw\\amaro.glsl"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\healthy.glsl",
+        "source": "E:\\android\\Itigao\\library\\build\\intermediates\\bundles\\debug\\res\\raw\\healthy.glsl"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\brooklyn.glsl",
+        "source": "E:\\android\\Itigao\\library\\build\\intermediates\\bundles\\debug\\res\\raw\\brooklyn.glsl"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\hefe.glsl",
+        "source": "E:\\android\\Itigao\\library\\build\\intermediates\\bundles\\debug\\res\\raw\\hefe.glsl"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\walden.glsl",
+        "source": "E:\\android\\Itigao\\library\\build\\intermediates\\bundles\\debug\\res\\raw\\walden.glsl"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\cool.glsl",
+        "source": "E:\\android\\Itigao\\library\\build\\intermediates\\bundles\\debug\\res\\raw\\cool.glsl"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\sunset.glsl",
+        "source": "E:\\android\\Itigao\\library\\build\\intermediates\\bundles\\debug\\res\\raw\\sunset.glsl"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\sweets.glsl",
+        "source": "E:\\android\\Itigao\\library\\build\\intermediates\\bundles\\debug\\res\\raw\\sweets.glsl"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\valencia.glsl",
+        "source": "E:\\android\\Itigao\\library\\build\\intermediates\\bundles\\debug\\res\\raw\\valencia.glsl"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\freud.glsl",
+        "source": "E:\\android\\Itigao\\library\\build\\intermediates\\bundles\\debug\\res\\raw\\freud.glsl"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\vertex_sharpen.glsl",
+        "source": "E:\\android\\Itigao\\library\\build\\intermediates\\bundles\\debug\\res\\raw\\vertex_sharpen.glsl"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\suger_tablets.glsl",
+        "source": "E:\\android\\Itigao\\library\\build\\intermediates\\bundles\\debug\\res\\raw\\suger_tablets.glsl"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\emerald.glsl",
+        "source": "E:\\android\\Itigao\\library\\build\\intermediates\\bundles\\debug\\res\\raw\\emerald.glsl"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\skinwhiten.glsl",
+        "source": "E:\\android\\Itigao\\library\\build\\intermediates\\bundles\\debug\\res\\raw\\skinwhiten.glsl"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\romance.glsl",
+        "source": "E:\\android\\Itigao\\library\\build\\intermediates\\bundles\\debug\\res\\raw\\romance.glsl"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\latte.glsl",
+        "source": "E:\\android\\Itigao\\library\\build\\intermediates\\bundles\\debug\\res\\raw\\latte.glsl"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\vertex.glsl",
+        "source": "E:\\android\\Itigao\\library\\build\\intermediates\\bundles\\debug\\res\\raw\\vertex.glsl"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\sketch.glsl",
+        "source": "E:\\android\\Itigao\\library\\build\\intermediates\\bundles\\debug\\res\\raw\\sketch.glsl"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\evergreen.glsl",
+        "source": "E:\\android\\Itigao\\library\\build\\intermediates\\bundles\\debug\\res\\raw\\evergreen.glsl"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\exposure.glsl",
+        "source": "E:\\android\\Itigao\\library\\build\\intermediates\\bundles\\debug\\res\\raw\\exposure.glsl"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\earlybird.glsl",
+        "source": "E:\\android\\Itigao\\library\\build\\intermediates\\bundles\\debug\\res\\raw\\earlybird.glsl"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\warm.glsl",
+        "source": "E:\\android\\Itigao\\library\\build\\intermediates\\bundles\\debug\\res\\raw\\warm.glsl"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\hue.glsl",
+        "source": "E:\\android\\Itigao\\library\\build\\intermediates\\bundles\\debug\\res\\raw\\hue.glsl"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\lookup.glsl",
+        "source": "E:\\android\\Itigao\\library\\build\\intermediates\\bundles\\debug\\res\\raw\\lookup.glsl"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\n1977.glsl",
+        "source": "E:\\android\\Itigao\\library\\build\\intermediates\\bundles\\debug\\res\\raw\\n1977.glsl"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\saturation.glsl",
+        "source": "E:\\android\\Itigao\\library\\build\\intermediates\\bundles\\debug\\res\\raw\\saturation.glsl"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\smssdk_pydb",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\ShortMessageSDKGUI-3.3.0.aar\\a25bb2f8d576471c8bc4d6d3817c7b95\\res\\raw\\smssdk_pydb"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\kevin_new.glsl",
+        "source": "E:\\android\\Itigao\\library\\build\\intermediates\\bundles\\debug\\res\\raw\\kevin_new.glsl"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\nostalgia.glsl",
+        "source": "E:\\android\\Itigao\\library\\build\\intermediates\\bundles\\debug\\res\\raw\\nostalgia.glsl"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\sakura.glsl",
+        "source": "E:\\android\\Itigao\\library\\build\\intermediates\\bundles\\debug\\res\\raw\\sakura.glsl"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\nashville.glsl",
+        "source": "E:\\android\\Itigao\\library\\build\\intermediates\\bundles\\debug\\res\\raw\\nashville.glsl"
+    }
+]

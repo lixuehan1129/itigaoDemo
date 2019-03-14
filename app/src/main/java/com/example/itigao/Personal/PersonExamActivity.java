@@ -25,11 +25,11 @@ public class PersonExamActivity extends AppCompatActivity {
 
     private void initView(){
         Toolbar toolbar = (Toolbar) findViewById(R.id.person_exam_mainTool);
-        toolbar.setTitle("健康体检");
+        toolbar.setTitle("校园生活");
         back(toolbar);
 
         TextView textView = (TextView) findViewById(R.id.person_exam_tv);
-        textView.setText("个人健康情况");
+        textView.setText("2014年9月，来到北京科技大学\n开始军训\n慢慢适应了大学生活，认识了许多同学\n时间过得很快，转眼间四年就过去了\n开始读研究生\n。。。。。。");
 
     }
 

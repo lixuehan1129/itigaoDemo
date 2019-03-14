@@ -1,6 +1,5 @@
 package com.example.itigao.Classes;
 
-import android.app.Activity;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -17,7 +16,6 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.BaseExpandableListAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -33,9 +31,7 @@ import com.example.itigao.Broad.BroadNewActivity;
 import com.example.itigao.HuDong.HuDongActivity;
 import com.example.itigao.HuDong.HuDongPlayActivity;
 import com.example.itigao.R;
-import com.example.itigao.Subscribe.VideoActivity;
 import com.example.itigao.Utils.StatusBarUtils;
-import com.example.itigao.Broad.BroadcastActivity;
 import com.example.itigao.Video.VideoNewActivity;
 import com.mysql.jdbc.Connection;
 

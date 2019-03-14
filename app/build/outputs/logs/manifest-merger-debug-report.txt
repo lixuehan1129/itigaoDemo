@@ -366,7 +366,7 @@ ADDED from E:\android\Itigao\app\src\main\AndroidManifest.xml:126:9-129:20
 		ADDED from E:\android\Itigao\app\src\main\AndroidManifest.xml:127:13-47
 	android:name
 		ADDED from E:\android\Itigao\app\src\main\AndroidManifest.xml:126:19-47
-activity#com.example.itigao.Subscribe.VideoPlayActivity
+activity#com.example.itigao.None.VideoPlayActivity
 ADDED from E:\android\Itigao\app\src\main\AndroidManifest.xml:131:9-136:20
 	android:screenOrientation
 		ADDED from E:\android\Itigao\app\src\main\AndroidManifest.xml:134:13-49
@@ -375,7 +375,7 @@ ADDED from E:\android\Itigao\app\src\main\AndroidManifest.xml:131:9-136:20
 	android:configChanges
 		ADDED from E:\android\Itigao\app\src\main\AndroidManifest.xml:133:13-74
 	android:name
-		ADDED from E:\android\Itigao\app\src\main\AndroidManifest.xml:131:19-62
+		ADDED from E:\android\Itigao\app\src\main\AndroidManifest.xml:131:19-57
 activity#com.example.itigao.User.UserRegistActivity
 ADDED from E:\android\Itigao\app\src\main\AndroidManifest.xml:140:9-143:20
 	tools:ignore
@@ -434,12 +434,12 @@ ADDED from E:\android\Itigao\app\src\main\AndroidManifest.xml:183:9-186:20
 		ADDED from E:\android\Itigao\app\src\main\AndroidManifest.xml:184:13-47
 	android:name
 		ADDED from E:\android\Itigao\app\src\main\AndroidManifest.xml:183:19-64
-activity#com.example.itigao.Subscribe.VideoRankActivity
+activity#com.example.itigao.None.VideoRankActivity
 ADDED from E:\android\Itigao\app\src\main\AndroidManifest.xml:188:9-191:20
 	tools:ignore
 		ADDED from E:\android\Itigao\app\src\main\AndroidManifest.xml:189:13-47
 	android:name
-		ADDED from E:\android\Itigao\app\src\main\AndroidManifest.xml:188:19-62
+		ADDED from E:\android\Itigao\app\src\main\AndroidManifest.xml:188:19-57
 activity#com.example.itigao.HuDong.HuDongPlayActivity
 ADDED from E:\android\Itigao\app\src\main\AndroidManifest.xml:193:9-195:52
 	android:screenOrientation
@@ -472,7 +472,7 @@ ADDED from E:\android\Itigao\app\src\main\AndroidManifest.xml:211:9-213:20
 		ADDED from E:\android\Itigao\app\src\main\AndroidManifest.xml:212:13-47
 	android:name
 		ADDED from E:\android\Itigao\app\src\main\AndroidManifest.xml:211:19-55
-activity#com.example.itigao.Subscribe.VideoActivity
+activity#com.example.itigao.None.VideoActivity
 ADDED from E:\android\Itigao\app\src\main\AndroidManifest.xml:215:9-219:20
 	android:screenOrientation
 		ADDED from E:\android\Itigao\app\src\main\AndroidManifest.xml:218:13-49
@@ -481,7 +481,7 @@ ADDED from E:\android\Itigao\app\src\main\AndroidManifest.xml:215:9-219:20
 	android:configChanges
 		ADDED from E:\android\Itigao\app\src\main\AndroidManifest.xml:217:13-74
 	android:name
-		ADDED from E:\android\Itigao\app\src\main\AndroidManifest.xml:215:19-58
+		ADDED from E:\android\Itigao\app\src\main\AndroidManifest.xml:215:19-53
 activity#com.example.itigao.Video.VideoNewActivity
 ADDED from E:\android\Itigao\app\src\main\AndroidManifest.xml:221:9-225:20
 	android:screenOrientation

@@ -154,6 +154,7 @@ public class UserLoginActivity extends AppCompatActivity {
                                 String phone = resultSet.getString("user_phone");
                                 String name1 = resultSet.getString("user_name");
                                 String picture = resultSet.getString("user_picture");
+                                String birth = resultSet.getString("user_birth");
                                 int sex = resultSet.getInt("user_sex");
                                 int sort = resultSet.getInt("user_sort");
                                 values.put("user_name",name1);
@@ -161,6 +162,7 @@ public class UserLoginActivity extends AppCompatActivity {
                                 values.put("user_sort",sort);
                                 values.put("user_sex",sex);
                                 values.put("user_picture",picture);
+                                values.put("user_birth",birth);
                                 sqLiteDatabase.insert("user",null,values);
                                 sqLiteDatabase.close();
                                 resultSet.close();

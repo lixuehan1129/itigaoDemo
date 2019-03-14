@@ -22,23 +22,19 @@ public class PersonIndoorActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.person_indoor);
+        setContentView(R.layout.person_exam);
         StatusBarUtils.setWindowStatusBarColor(PersonIndoorActivity.this, R.color.colorWhite);
-        Jzvd.setMediaInterface(new JZMediaIjkplayer());
         initView();
     }
 
     private void initView(){
-        Toolbar toolbar = (Toolbar) findViewById(R.id.person_indoor_mainTool);
-        toolbar.setTitle("室内监测");
+        Toolbar toolbar = (Toolbar) findViewById(R.id.person_exam_mainTool);
+        toolbar.setTitle("学习历程");
         back(toolbar);
 
-        TextView textView = (TextView) findViewById(R.id.person_indoor_tv);
-        textView.setText("室内环境监测");
+        TextView textView = (TextView) findViewById(R.id.person_exam_tv);
+        textView.setText("坚持学习 35天\n背单词 235个\n写代码 220小时\n阅读 5本\n打游戏 100小时\n看论文 15篇\n。。。。。。");
 
-        JzvdStd jzvdStd = (JzvdStd) findViewById(R.id.person_indoor_ij);
-        jzvdStd.setUp("rtmp://zb.tipass.com:1935/live/1233","",Jzvd.SCREEN_WINDOW_NORMAL);
-        jzvdStd.startVideo();
     }
 
     //返回注销事件
@@ -51,27 +47,59 @@ public class PersonIndoorActivity extends AppCompatActivity {
         });
     }
 
-    @Override
-    protected void onStop() {
-        super.onStop();
-    }
-
-    @Override
-    public void onBackPressed() {
-        if (Jzvd.backPress()) {
-            return;
-        }
-        super.onBackPressed();
-    }
-    @Override
-    protected void onPause() {
-        super.onPause();
-        Jzvd.releaseAllVideos();
-    }
-
-    @Override
-    protected void onDestroy() {
-        // TODO Auto-generated method stub
-        super.onDestroy();
-    }
+//    @Override
+//    protected void onCreate(Bundle savedInstanceState) {
+//        super.onCreate(savedInstanceState);
+//        setContentView(R.layout.person_indoor);
+//        StatusBarUtils.setWindowStatusBarColor(PersonIndoorActivity.this, R.color.colorWhite);
+//        Jzvd.setMediaInterface(new JZMediaIjkplayer());
+//        initView();
+//    }
+//
+//    private void initView(){
+//        Toolbar toolbar = (Toolbar) findViewById(R.id.person_indoor_mainTool);
+//        toolbar.setTitle("室内监测");
+//        back(toolbar);
+//
+//        TextView textView = (TextView) findViewById(R.id.person_indoor_tv);
+//        textView.setText("室内环境监测");
+//
+//        JzvdStd jzvdStd = (JzvdStd) findViewById(R.id.person_indoor_ij);
+//        jzvdStd.setUp("rtmp://zb.tipass.com:1935/live/1233","",Jzvd.SCREEN_WINDOW_NORMAL);
+//        jzvdStd.startVideo();
+//    }
+//
+//    //返回注销事件
+//    private void back(Toolbar toolbar){
+//        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                finish();
+//            }
+//        });
+//    }
+//
+//    @Override
+//    protected void onStop() {
+//        super.onStop();
+//    }
+//
+//    @Override
+//    public void onBackPressed() {
+//        if (Jzvd.backPress()) {
+//            return;
+//        }
+//        super.onBackPressed();
+//    }
+//    @Override
+//    protected void onPause() {
+//        super.onPause();
+//        Jzvd.releaseAllVideos();
+//    }
+//
+//    @Override
+//    protected void onDestroy() {
+//        // TODO Auto-generated method stub
+//        super.onDestroy();
+//    }
 }

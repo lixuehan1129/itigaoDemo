@@ -25,11 +25,11 @@ public class PersonDeviceActivity extends AppCompatActivity {
 
     private void initView(){
         Toolbar toolbar = (Toolbar) findViewById(R.id.person_device_mainTool);
-        toolbar.setTitle("智能设备");
+        toolbar.setTitle("学习设备");
         back(toolbar);
 
         TextView textView = (TextView) findViewById(R.id.person_device_tv);
-        textView.setText("查看并添加智能设备");
+        textView.setText("学习机\n手机\n平板电脑\n电子书\n");
 
     }
 

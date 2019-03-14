@@ -1,6 +1,9 @@
 package com.example.itigao.Personal;
 
+import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.DatePickerDialog;
 import android.app.ProgressDialog;
 import android.content.ContentValues;
 import android.content.DialogInterface;
@@ -22,6 +25,7 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.support.v7.widget.Toolbar;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -46,6 +50,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 
 import cn.jpush.im.android.api.JMessageClient;
@@ -74,13 +79,13 @@ public class PersonChangeActivity extends AppCompatActivity{
 
     private ProgressDialog progressDialog;
 
-    private RelativeLayout relativeLayout1,relativeLayout2,relativeLayout3,relativeLayout4;
+    private RelativeLayout relativeLayout1,relativeLayout2,relativeLayout3,relativeLayout4,relativeLayout5;
     private CircleImageView circleImageView;
     private EditText editText;
-    private TextView ok,sta,textView1,textView2;
+    private TextView ok,sta,textView1,textView2,birth;
 
     private int userLevel,userSta,userSex,anchorId;
-    private String userName,userPicture;
+    private String userName,userPicture,userBirth;
     private boolean picIs;
     private String picImagePath = null; //这是拍照的照片地址
 
@@ -94,6 +99,7 @@ public class PersonChangeActivity extends AppCompatActivity{
         userSta = intent.getIntExtra("userSta",0);
         phone = SharePreferences.getString(PersonChangeActivity.this,AppConstants.USER_PHONE);
         anchorId = intent.getIntExtra("userGoBid",0);
+
         initView();
     }
 
@@ -106,12 +112,14 @@ public class PersonChangeActivity extends AppCompatActivity{
         relativeLayout2 = (RelativeLayout) findViewById(R.id.person_change_rv2);
         relativeLayout3 = (RelativeLayout) findViewById(R.id.person_change_rv3);
         relativeLayout4 = (RelativeLayout) findViewById(R.id.person_change_rv4);
+        relativeLayout5 = (RelativeLayout) findViewById(R.id.person_change_rv5);
         circleImageView = (CircleImageView) findViewById(R.id.person_change_ci);
         ok = (TextView) findViewById(R.id.person_change_ok);
         sta = (TextView) findViewById(R.id.person_change_sta);
         editText = (EditText) findViewById(R.id.person_change_name);
         textView1 = (TextView) findViewById(R.id.person_change_sex); //性别
         textView2 = (TextView) findViewById(R.id.person_change_level); //等级
+        birth = (TextView) findViewById(R.id.person_change_bir);
 
         picIs = false;
 
@@ -122,6 +130,11 @@ public class PersonChangeActivity extends AppCompatActivity{
 
         localData();
         editText.setText(userName);
+        if(!TextUtils.isEmpty(userBirth)){
+            birth.setText(userBirth);
+        }else {
+            birth.setText("1990-01-01");
+        }
         if(Util.isOnMainThread()) {
             Glide.with(PersonChangeActivity.this)
                     .load(userPicture)
@@ -168,6 +181,7 @@ public class PersonChangeActivity extends AppCompatActivity{
             userName = cursor.getString(cursor.getColumnIndex("user_name"));
             userPicture = cursor.getString(cursor.getColumnIndex("user_picture"));
             userSex = cursor.getInt(cursor.getColumnIndex("user_sex"));
+            userBirth = cursor.getString(cursor.getColumnIndex("user_birth"));
         }
         picPath = userPicture;
         cursor.close();
@@ -215,19 +229,20 @@ public class PersonChangeActivity extends AppCompatActivity{
         });
 
         //修改性别
-        relativeLayout3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                final String[] items = new String[] {"男","女"};
-                AlertDialog.Builder builder = new AlertDialog.Builder(PersonChangeActivity.this);
-                builder.setItems(items, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        userSex = i;
-                        textView1.setText(userSex == 0 ? "男":"女");
-                    }
-                }).create().show();
-            }
+        relativeLayout3.setOnClickListener(view -> {
+            final String[] items = new String[] {"男","女"};
+            AlertDialog.Builder builder = new AlertDialog.Builder(PersonChangeActivity.this);
+            builder.setItems(items, new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+                    userSex = i;
+                    textView1.setText(userSex == 0 ? "男":"女");
+                }
+            }).create().show();
+        });
+
+        relativeLayout5.setOnClickListener(View ->{
+            showDatePickerDialog(this,3,birth,Calendar.getInstance());
         });
 
 
@@ -271,6 +286,25 @@ public class PersonChangeActivity extends AppCompatActivity{
                     }
                 });
         builder.create().show();
+    }
+
+    @SuppressLint("SetTextI18n")
+    private void showDatePickerDialog(Activity activity, int themeResId, final TextView tv, Calendar calendar) {
+        // 直接创建一个DatePickerDialog对话框实例，并将它显示出来
+        new DatePickerDialog(activity
+                ,  themeResId
+                // 绑定监听器(How the parent is notified that the date is set.)
+                , (view, year, monthOfYear, dayOfMonth) -> {
+                    // 此处得到选择的时间，可以进行你想要的操作
+
+                    monthOfYear = monthOfYear + 1;
+                    tv.setText(year + "-" + monthOfYear
+                            + "-" + dayOfMonth);
+                }
+                // 设置初始日期
+                , calendar.get(Calendar.YEAR)
+                ,calendar.get(Calendar.MONTH )
+                ,calendar.get(Calendar.DAY_OF_MONTH)).show();
     }
 
     private void setData(int which){
@@ -365,7 +399,7 @@ public class PersonChangeActivity extends AppCompatActivity{
                     Connection conn = JDBCTools.getConnection();
                     if(conn != null){
                         Statement stmt = conn.createStatement();
-                        String sql = "UPDATE user SET user_name = ?, user_sex = ?, user_picture = ?, user_sort = ? WHERE user_phone = '" +
+                        String sql = "UPDATE user SET user_name = ?, user_sex = ?, user_picture = ?, user_sort = ? , user_birth = ? WHERE user_phone = '" +
                                 phone +
                                 "'";
                         PreparedStatement preparedStatement = conn.prepareStatement(sql);
@@ -373,6 +407,7 @@ public class PersonChangeActivity extends AppCompatActivity{
                         preparedStatement.setInt(2,userSex);
                         preparedStatement.setString(3,picPath);
                         preparedStatement.setInt(4,userSta);
+                        preparedStatement.setString(5,birth.getText().toString());
                         preparedStatement.executeUpdate();
                         preparedStatement.close();
                         JDBCTools.releaseConnection(stmt,conn);
@@ -382,6 +417,7 @@ public class PersonChangeActivity extends AppCompatActivity{
                         contentValues.put("user_sex",userSex);
                         contentValues.put("user_picture",picPath);
                         contentValues.put("user_sort",userSta);
+                        contentValues.put("user_birth",birth.getText().toString());
                         sqLiteDatabase.update("user",contentValues,"user_phone = ?",new String[]{phone});
                         sqLiteDatabase.close();
 

@@ -8,7 +8,7 @@
     <android.support.v7.widget.Toolbar
         android:id="@+id/person_device_mainTool"
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
+        android:layout_height="wrap_content"
         android:background="@color/colorWhite"
         app:titleTextColor="@color/colorBlack"
         app:navigationIcon="@mipmap/ic_back_black"
@@ -19,8 +19,12 @@
     </android.support.v7.widget.Toolbar>
     <TextView
         android:id="@+id/person_device_tv"
-        android:gravity="center"
-        android:text="可以"
+        android:padding="15dp"
+        android:lineSpacingExtra="8dp"
+        android:textSize="13sp"
+        android:textColor="@color/colorBlack"
+        android:singleLine="false"
+        android:text="2014年9月，来到北京科技大学"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 

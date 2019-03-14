@@ -1,0 +1,342 @@
+[
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\shifting_bottom_navigation_item.xml",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\bottom-navigation-bar-2.0.3.aar\\d2d09d8a22b5f2cadfa28926e2bf8796\\res\\layout\\shifting_bottom_navigation_item.xml"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\select_dialog_singlechoice_material.xml",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\cc7206f99d9b49785b63b5993fb4ba06\\res\\layout\\select_dialog_singlechoice_material.xml"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\video_layout_custom.xml",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\gsyVideoPlayer-java-6.0.2.aar\\e23550f0ba0473b3c210d1623a173493\\res\\layout\\video_layout_custom.xml"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\video_brightness.xml",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\gsyVideoPlayer-java-6.0.2.aar\\e23550f0ba0473b3c210d1623a173493\\res\\layout\\video_brightness.xml"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\abc_action_menu_layout.xml",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\cc7206f99d9b49785b63b5993fb4ba06\\res\\layout\\abc_action_menu_layout.xml"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\abc_action_bar_title_item.xml",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\cc7206f99d9b49785b63b5993fb4ba06\\res\\layout\\abc_action_bar_title_item.xml"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\smssdk_avatar_picker_item.xml",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\ShortMessageSDKGUI-3.3.0.aar\\a25bb2f8d576471c8bc4d6d3817c7b95\\res\\layout\\smssdk_avatar_picker_item.xml"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\design_layout_snackbar.xml",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.1.aar\\b7a772f75bead1c125975fa599a3d712\\res\\layout\\design_layout_snackbar.xml"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\notification_template_big_media.xml",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-27.1.1.aar\\e56c5978486ddbe4418fe710a2c094e6\\res\\layout\\notification_template_big_media.xml"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\video_volume_dialog.xml",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\gsyVideoPlayer-java-6.0.2.aar\\e23550f0ba0473b3c210d1623a173493\\res\\layout\\video_volume_dialog.xml"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\smssdk_avatar_page.xml",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\ShortMessageSDKGUI-3.3.0.aar\\a25bb2f8d576471c8bc4d6d3817c7b95\\res\\layout\\smssdk_avatar_page.xml"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\select_dialog_multichoice_material.xml",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\cc7206f99d9b49785b63b5993fb4ba06\\res\\layout\\select_dialog_multichoice_material.xml"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\design_navigation_item_subheader.xml",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.1.aar\\b7a772f75bead1c125975fa599a3d712\\res\\layout\\design_navigation_item_subheader.xml"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\abc_action_bar_up_container.xml",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\cc7206f99d9b49785b63b5993fb4ba06\\res\\layout\\abc_action_bar_up_container.xml"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\smssdk_titlebar.xml",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\ShortMessageSDKGUI-3.3.0.aar\\a25bb2f8d576471c8bc4d6d3817c7b95\\res\\layout\\smssdk_titlebar.xml"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\design_bottom_navigation_item.xml",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.1.aar\\b7a772f75bead1c125975fa599a3d712\\res\\layout\\design_bottom_navigation_item.xml"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\jz_layout_clarity_item.xml",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\jiaozivideoplayer-6.4.1.aar\\0f4c0b8ccdcb69a9a78777f23c526cc3\\res\\layout\\jz_layout_clarity_item.xml"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\abc_action_mode_bar.xml",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\cc7206f99d9b49785b63b5993fb4ba06\\res\\layout\\abc_action_mode_bar.xml"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\jz_dialog_volume.xml",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\jiaozivideoplayer-6.4.1.aar\\0f4c0b8ccdcb69a9a78777f23c526cc3\\res\\layout\\jz_dialog_volume.xml"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\abc_activity_chooser_view.xml",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\cc7206f99d9b49785b63b5993fb4ba06\\res\\layout\\abc_activity_chooser_view.xml"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\smssdk_personal_info.xml",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\ShortMessageSDKGUI-3.3.0.aar\\a25bb2f8d576471c8bc4d6d3817c7b95\\res\\layout\\smssdk_personal_info.xml"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\abc_search_view.xml",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\cc7206f99d9b49785b63b5993fb4ba06\\res\\layout\\abc_search_view.xml"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\exo_track_selection_dialog.xml",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\exoplayer-ui-2.9.1.aar\\088adf82ba08d6a907b57bb87802667c\\res\\layout\\exo_track_selection_dialog.xml"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\jz_layout_clarity.xml",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\jiaozivideoplayer-6.4.1.aar\\0f4c0b8ccdcb69a9a78777f23c526cc3\\res\\layout\\jz_layout_clarity.xml"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\design_menu_item_action_area.xml",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.1.aar\\b7a772f75bead1c125975fa599a3d712\\res\\layout\\design_menu_item_action_area.xml"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\notification_template_lines_media.xml",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-27.1.1.aar\\e56c5978486ddbe4418fe710a2c094e6\\res\\layout\\notification_template_lines_media.xml"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\abc_alert_dialog_material.xml",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\cc7206f99d9b49785b63b5993fb4ba06\\res\\layout\\abc_alert_dialog_material.xml"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\exo_list_divider.xml",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\exoplayer-ui-2.9.1.aar\\088adf82ba08d6a907b57bb87802667c\\res\\layout\\exo_list_divider.xml"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\exo_simple_player_view.xml",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\exoplayer-ui-2.9.1.aar\\088adf82ba08d6a907b57bb87802667c\\res\\layout\\exo_simple_player_view.xml"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\abc_screen_content_include.xml",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\cc7206f99d9b49785b63b5993fb4ba06\\res\\layout\\abc_screen_content_include.xml"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\video_layout_normal.xml",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\gsyVideoPlayer-java-6.0.2.aar\\e23550f0ba0473b3c210d1623a173493\\res\\layout\\video_layout_normal.xml"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\notification_template_part_chronometer.xml",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\34a6927afa04c5fd566251d08b59640e\\res\\layout\\notification_template_part_chronometer.xml"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\notification_template_big_media_custom.xml",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-27.1.1.aar\\e56c5978486ddbe4418fe710a2c094e6\\res\\layout\\notification_template_big_media_custom.xml"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\jz_layout_std.xml",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\jiaozivideoplayer-6.4.1.aar\\0f4c0b8ccdcb69a9a78777f23c526cc3\\res\\layout\\jz_layout_std.xml"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\abc_list_menu_item_checkbox.xml",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\cc7206f99d9b49785b63b5993fb4ba06\\res\\layout\\abc_list_menu_item_checkbox.xml"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\abc_action_mode_close_item_material.xml",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\cc7206f99d9b49785b63b5993fb4ba06\\res\\layout\\abc_action_mode_close_item_material.xml"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\abc_list_menu_item_radio.xml",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\cc7206f99d9b49785b63b5993fb4ba06\\res\\layout\\abc_list_menu_item_radio.xml"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\bottom_navigation_bar_container.xml",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\bottom-navigation-bar-2.0.3.aar\\d2d09d8a22b5f2cadfa28926e2bf8796\\res\\layout\\bottom_navigation_bar_container.xml"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\support_simple_spinner_dropdown_item.xml",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\cc7206f99d9b49785b63b5993fb4ba06\\res\\layout\\support_simple_spinner_dropdown_item.xml"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\notification_media_cancel_action.xml",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-27.1.1.aar\\e56c5978486ddbe4418fe710a2c094e6\\res\\layout\\notification_media_cancel_action.xml"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\abc_expanded_menu_layout.xml",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\cc7206f99d9b49785b63b5993fb4ba06\\res\\layout\\abc_expanded_menu_layout.xml"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\smssdk_avatar_picker_page.xml",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\ShortMessageSDKGUI-3.3.0.aar\\a25bb2f8d576471c8bc4d6d3817c7b95\\res\\layout\\smssdk_avatar_picker_page.xml"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\abc_search_dropdown_item_icons_2line.xml",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\cc7206f99d9b49785b63b5993fb4ba06\\res\\layout\\abc_search_dropdown_item_icons_2line.xml"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\exo_player_view.xml",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\exoplayer-ui-2.9.1.aar\\088adf82ba08d6a907b57bb87802667c\\res\\layout\\exo_player_view.xml"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\notification_template_media_custom.xml",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-27.1.1.aar\\e56c5978486ddbe4418fe710a2c094e6\\res\\layout\\notification_template_media_custom.xml"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\smssdk_popup_dialog.xml",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\ShortMessageSDKGUI-3.3.0.aar\\a25bb2f8d576471c8bc4d6d3817c7b95\\res\\layout\\smssdk_popup_dialog.xml"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\exo_player_control_view.xml",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\exoplayer-ui-2.9.1.aar\\088adf82ba08d6a907b57bb87802667c\\res\\layout\\exo_player_control_view.xml"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\video_layout_sample_ad.xml",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\gsyVideoPlayer-java-6.0.2.aar\\e23550f0ba0473b3c210d1623a173493\\res\\layout\\video_layout_sample_ad.xml"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\notification_template_big_media_narrow_custom.xml",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-27.1.1.aar\\e56c5978486ddbe4418fe710a2c094e6\\res\\layout\\notification_template_big_media_narrow_custom.xml"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\design_navigation_item.xml",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.1.aar\\b7a772f75bead1c125975fa599a3d712\\res\\layout\\design_navigation_item.xml"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\jz_dialog_progress.xml",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\jiaozivideoplayer-6.4.1.aar\\0f4c0b8ccdcb69a9a78777f23c526cc3\\res\\layout\\jz_dialog_progress.xml"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\abc_alert_dialog_button_bar_material.xml",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\cc7206f99d9b49785b63b5993fb4ba06\\res\\layout\\abc_alert_dialog_button_bar_material.xml"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\exo_playback_control_view.xml",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\exoplayer-ui-2.9.1.aar\\088adf82ba08d6a907b57bb87802667c\\res\\layout\\exo_playback_control_view.xml"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\abc_screen_simple.xml",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\cc7206f99d9b49785b63b5993fb4ba06\\res\\layout\\abc_screen_simple.xml"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\select_dialog_item_material.xml",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\cc7206f99d9b49785b63b5993fb4ba06\\res\\layout\\select_dialog_item_material.xml"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\design_navigation_item_separator.xml",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.1.aar\\b7a772f75bead1c125975fa599a3d712\\res\\layout\\design_navigation_item_separator.xml"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\design_navigation_menu.xml",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.1.aar\\b7a772f75bead1c125975fa599a3d712\\res\\layout\\design_navigation_menu.xml"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\design_layout_tab_text.xml",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.1.aar\\b7a772f75bead1c125975fa599a3d712\\res\\layout\\design_layout_tab_text.xml"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\abc_screen_toolbar.xml",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\cc7206f99d9b49785b63b5993fb4ba06\\res\\layout\\abc_screen_toolbar.xml"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\notification_template_media.xml",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-27.1.1.aar\\e56c5978486ddbe4418fe710a2c094e6\\res\\layout\\notification_template_media.xml"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\abc_action_menu_item_layout.xml",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\cc7206f99d9b49785b63b5993fb4ba06\\res\\layout\\abc_action_menu_item_layout.xml"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\jz_dialog_brightness.xml",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\jiaozivideoplayer-6.4.1.aar\\0f4c0b8ccdcb69a9a78777f23c526cc3\\res\\layout\\jz_dialog_brightness.xml"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\notification_template_big_media_narrow.xml",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-27.1.1.aar\\e56c5978486ddbe4418fe710a2c094e6\\res\\layout\\notification_template_big_media_narrow.xml"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\abc_activity_chooser_view_list_item.xml",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\cc7206f99d9b49785b63b5993fb4ba06\\res\\layout\\abc_activity_chooser_view_list_item.xml"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\fixed_bottom_navigation_item.xml",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\bottom-navigation-bar-2.0.3.aar\\d2d09d8a22b5f2cadfa28926e2bf8796\\res\\layout\\fixed_bottom_navigation_item.xml"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\abc_screen_simple_overlay_action_mode.xml",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\cc7206f99d9b49785b63b5993fb4ba06\\res\\layout\\abc_screen_simple_overlay_action_mode.xml"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\abc_list_menu_item_layout.xml",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\cc7206f99d9b49785b63b5993fb4ba06\\res\\layout\\abc_list_menu_item_layout.xml"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\video_progress_dialog.xml",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\gsyVideoPlayer-java-6.0.2.aar\\e23550f0ba0473b3c210d1623a173493\\res\\layout\\video_progress_dialog.xml"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\abc_dialog_title_material.xml",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\cc7206f99d9b49785b63b5993fb4ba06\\res\\layout\\abc_dialog_title_material.xml"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\abc_popup_menu_header_item_layout.xml",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\cc7206f99d9b49785b63b5993fb4ba06\\res\\layout\\abc_popup_menu_header_item_layout.xml"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\notification_template_part_time.xml",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\34a6927afa04c5fd566251d08b59640e\\res\\layout\\notification_template_part_time.xml"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\design_text_input_password_icon.xml",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.1.aar\\b7a772f75bead1c125975fa599a3d712\\res\\layout\\design_text_input_password_icon.xml"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\abc_popup_menu_item_layout.xml",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\cc7206f99d9b49785b63b5993fb4ba06\\res\\layout\\abc_popup_menu_item_layout.xml"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\video_layout_standard.xml",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\gsyVideoPlayer-java-6.0.2.aar\\e23550f0ba0473b3c210d1623a173493\\res\\layout\\video_layout_standard.xml"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\abc_list_menu_item_icon.xml",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\cc7206f99d9b49785b63b5993fb4ba06\\res\\layout\\abc_list_menu_item_icon.xml"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\video_layout_ad.xml",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\gsyVideoPlayer-java-6.0.2.aar\\e23550f0ba0473b3c210d1623a173493\\res\\layout\\video_layout_ad.xml"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\design_layout_snackbar_include.xml",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.1.aar\\b7a772f75bead1c125975fa599a3d712\\res\\layout\\design_layout_snackbar_include.xml"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\abc_select_dialog_material.xml",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\cc7206f99d9b49785b63b5993fb4ba06\\res\\layout\\abc_select_dialog_material.xml"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\design_layout_tab_icon.xml",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.1.aar\\b7a772f75bead1c125975fa599a3d712\\res\\layout\\design_layout_tab_icon.xml"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\abc_alert_dialog_title_material.xml",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\cc7206f99d9b49785b63b5993fb4ba06\\res\\layout\\abc_alert_dialog_title_material.xml"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\design_navigation_menu_item.xml",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.1.aar\\b7a772f75bead1c125975fa599a3d712\\res\\layout\\design_navigation_menu_item.xml"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\design_bottom_sheet_dialog.xml",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.1.aar\\b7a772f75bead1c125975fa599a3d712\\res\\layout\\design_bottom_sheet_dialog.xml"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\design_navigation_item_header.xml",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.1.aar\\b7a772f75bead1c125975fa599a3d712\\res\\layout\\design_navigation_item_header.xml"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\notification_media_action.xml",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-27.1.1.aar\\e56c5978486ddbe4418fe710a2c094e6\\res\\layout\\notification_media_action.xml"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\abc_tooltip.xml",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\cc7206f99d9b49785b63b5993fb4ba06\\res\\layout\\abc_tooltip.xml"
+    }
+]

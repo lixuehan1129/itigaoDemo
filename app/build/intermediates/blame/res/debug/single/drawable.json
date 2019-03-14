@@ -52,28 +52,28 @@
         "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\34a6927afa04c5fd566251d08b59640e\\res\\drawable\\notification_icon_background.xml"
     },
     {
-        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\smssdk_conners_edittext_bg.xml",
-        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\ShortMessageSDKGUI-3.3.0.aar\\a25bb2f8d576471c8bc4d6d3817c7b95\\res\\drawable\\smssdk_conners_edittext_bg.xml"
-    },
-    {
         "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\smssdk_corners_bg_nor.xml",
         "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\ShortMessageSDKGUI-3.3.0.aar\\a25bb2f8d576471c8bc4d6d3817c7b95\\res\\drawable\\smssdk_corners_bg_nor.xml"
     },
     {
-        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\video_click_pause_selector.xml",
-        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\gsyVideoPlayer-java-6.0.2.aar\\e23550f0ba0473b3c210d1623a173493\\res\\drawable\\video_click_pause_selector.xml"
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\smssdk_conners_edittext_bg.xml",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\ShortMessageSDKGUI-3.3.0.aar\\a25bb2f8d576471c8bc4d6d3817c7b95\\res\\drawable\\smssdk_conners_edittext_bg.xml"
     },
     {
         "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\jz_seek_thumb_pressed.xml",
         "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\jiaozivideoplayer-6.4.1.aar\\0f4c0b8ccdcb69a9a78777f23c526cc3\\res\\drawable\\jz_seek_thumb_pressed.xml"
     },
     {
-        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\radiobutton_textcolor.xml",
-        "source": "E:\\android\\Itigao\\app\\src\\main\\res\\drawable\\radiobutton_textcolor.xml"
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\video_click_pause_selector.xml",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\gsyVideoPlayer-java-6.0.2.aar\\e23550f0ba0473b3c210d1623a173493\\res\\drawable\\video_click_pause_selector.xml"
     },
     {
         "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_material.xml",
         "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\cc7206f99d9b49785b63b5993fb4ba06\\res\\drawable\\abc_ratingbar_material.xml"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\radiobutton_textcolor.xml",
+        "source": "E:\\android\\Itigao\\app\\src\\main\\res\\drawable\\radiobutton_textcolor.xml"
     },
     {
         "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\video_title_bg.xml",
@@ -84,12 +84,12 @@
         "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\cc7206f99d9b49785b63b5993fb4ba06\\res\\drawable\\abc_ic_go_search_api_material.xml"
     },
     {
-        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_fab_background.xml",
-        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.1.aar\\b7a772f75bead1c125975fa599a3d712\\res\\drawable\\design_fab_background.xml"
-    },
-    {
         "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_light.xml",
         "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\cc7206f99d9b49785b63b5993fb4ba06\\res\\drawable\\abc_item_background_holo_light.xml"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_fab_background.xml",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.1.aar\\b7a772f75bead1c125975fa599a3d712\\res\\drawable\\design_fab_background.xml"
     },
     {
         "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\round_gb_green.xml",
@@ -172,16 +172,16 @@
         "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\cc7206f99d9b49785b63b5993fb4ba06\\res\\drawable\\abc_vector_test.xml"
     },
     {
-        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\button_selector.xml",
-        "source": "E:\\android\\Itigao\\app\\src\\main\\res\\drawable\\button_selector.xml"
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\notification_bg_low.xml",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\34a6927afa04c5fd566251d08b59640e\\res\\drawable\\notification_bg_low.xml"
     },
     {
         "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_spinner_textfield_background_material.xml",
         "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\cc7206f99d9b49785b63b5993fb4ba06\\res\\drawable\\abc_spinner_textfield_background_material.xml"
     },
     {
-        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\notification_bg_low.xml",
-        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\34a6927afa04c5fd566251d08b59640e\\res\\drawable\\notification_bg_low.xml"
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\button_selector.xml",
+        "source": "E:\\android\\Itigao\\app\\src\\main\\res\\drawable\\button_selector.xml"
     },
     {
         "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_light.xml",

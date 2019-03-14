@@ -674,12 +674,12 @@ public final class R {
         public static final int activity_chooser_view_content = 0x7f1000c8;
         public static final int ad_full_id = 0x7f100004;
         public static final int ad_small_id = 0x7f100005;
-        public static final int ad_time = 0x7f100226;
+        public static final int ad_time = 0x7f100228;
         public static final int add = 0x7f100089;
         public static final int alertTitle = 0x7f1000db;
-        public static final int app_video_brightness = 0x7f10021b;
-        public static final int app_video_brightness_box = 0x7f100218;
-        public static final int app_video_brightness_icon = 0x7f10021a;
+        public static final int app_video_brightness = 0x7f10021d;
+        public static final int app_video_brightness_box = 0x7f10021a;
+        public static final int app_video_brightness_icon = 0x7f10021c;
         public static final int async = 0x7f1000ad;
         public static final int back = 0x7f100172;
         public static final int back_tiny = 0x7f100170;
@@ -689,7 +689,7 @@ public final class R {
         public static final int buttonPanel = 0x7f1000ce;
         public static final int checkbox = 0x7f1000de;
         public static final int chronometer = 0x7f10018f;
-        public static final int content = 0x7f100219;
+        public static final int content = 0x7f10021b;
         public static final int contentPanel = 0x7f1000d1;
         public static final int current = 0x7f10016a;
         public static final int current_scene = 0x7f10000f;
@@ -715,7 +715,7 @@ public final class R {
         public static final int image = 0x7f1000ca;
         public static final int info = 0x7f100190;
         public static final int italic = 0x7f1000b0;
-        public static final int jump_ad = 0x7f100225;
+        public static final int jump_ad = 0x7f100227;
         public static final int layout_bottom = 0x7f100169;
         public static final int layout_top = 0x7f100171;
         public static final int left = 0x7f1000a0;
@@ -738,7 +738,7 @@ public final class R {
         public static final int overlay_view = 0x7f100039;
         public static final int parentMatrix = 0x7f10003a;
         public static final int parentPanel = 0x7f1000d0;
-        public static final int preview_layout = 0x7f100227;
+        public static final int preview_layout = 0x7f100229;
         public static final int progress = 0x7f10017f;
         public static final int progress_circular = 0x7f10003c;
         public static final int progress_horizontal = 0x7f10003d;
@@ -800,7 +800,7 @@ public final class R {
         public static final int uniform = 0x7f10008f;
         public static final int up = 0x7f100066;
         public static final int volume_progressbar = 0x7f100164;
-        public static final int widget_container = 0x7f100228;
+        public static final int widget_container = 0x7f10022a;
         public static final int wrap_content = 0x7f100090;
     }
     public static final class integer {

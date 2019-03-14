@@ -128,7 +128,7 @@
 
         </activity>
 
-        <activity android:name=".Subscribe.VideoPlayActivity"
+        <activity android:name=".None.VideoPlayActivity"
             tools:ignore="InnerclassSeparator"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:screenOrientation="portrait">
@@ -185,7 +185,7 @@
 
         </activity>
 
-        <activity android:name=".Subscribe.VideoRankActivity"
+        <activity android:name=".None.VideoRankActivity"
             tools:ignore="InnerclassSeparator">
 
         </activity>
@@ -212,7 +212,7 @@
             tools:ignore="InnerclassSeparator">
         </activity>
 
-        <activity android:name=".Subscribe.VideoActivity"
+        <activity android:name=".None.VideoActivity"
             tools:ignore="InnerclassSeparator"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:screenOrientation="portrait">

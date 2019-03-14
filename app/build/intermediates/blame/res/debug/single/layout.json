@@ -16,12 +16,12 @@
         "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\cc7206f99d9b49785b63b5993fb4ba06\\res\\layout\\select_dialog_singlechoice_material.xml"
     },
     {
-        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\person_indoor.xml",
-        "source": "E:\\android\\Itigao\\app\\src\\main\\res\\layout\\person_indoor.xml"
-    },
-    {
         "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_media_action.xml",
         "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-27.1.1.aar\\e56c5978486ddbe4418fe710a2c094e6\\res\\layout\\notification_media_action.xml"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\person_indoor.xml",
+        "source": "E:\\android\\Itigao\\app\\src\\main\\res\\layout\\person_indoor.xml"
     },
     {
         "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_layout.xml",
@@ -88,32 +88,32 @@
         "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\jiaozivideoplayer-6.4.1.aar\\0f4c0b8ccdcb69a9a78777f23c526cc3\\res\\layout\\jz_layout_clarity_item.xml"
     },
     {
-        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\person_exam.xml",
-        "source": "E:\\android\\Itigao\\app\\src\\main\\res\\layout\\person_exam.xml"
-    },
-    {
         "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_menu_item.xml",
         "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.1.aar\\b7a772f75bead1c125975fa599a3d712\\res\\layout\\design_navigation_menu_item.xml"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\person_exam.xml",
+        "source": "E:\\android\\Itigao\\app\\src\\main\\res\\layout\\person_exam.xml"
     },
     {
         "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_button_bar_material.xml",
         "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\cc7206f99d9b49785b63b5993fb4ba06\\res\\layout\\abc_alert_dialog_button_bar_material.xml"
     },
     {
-        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\video_hudong.xml",
-        "source": "E:\\android\\Itigao\\app\\src\\main\\res\\layout\\video_hudong.xml"
-    },
-    {
-        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_up_container.xml",
-        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\cc7206f99d9b49785b63b5993fb4ba06\\res\\layout\\abc_action_bar_up_container.xml"
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\personalfragment.xml",
+        "source": "E:\\android\\Itigao\\app\\src\\main\\res\\layout\\personalfragment.xml"
     },
     {
         "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\video_volume_dialog.xml",
         "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\gsyVideoPlayer-java-6.0.2.aar\\e23550f0ba0473b3c210d1623a173493\\res\\layout\\video_volume_dialog.xml"
     },
     {
-        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\personalfragment.xml",
-        "source": "E:\\android\\Itigao\\app\\src\\main\\res\\layout\\personalfragment.xml"
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_up_container.xml",
+        "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\cc7206f99d9b49785b63b5993fb4ba06\\res\\layout\\abc_action_bar_up_container.xml"
+    },
+    {
+        "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\video_hudong.xml",
+        "source": "E:\\android\\Itigao\\app\\src\\main\\res\\layout\\video_hudong.xml"
     },
     {
         "merged": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\debug\\layout\\user_regist.xml",
