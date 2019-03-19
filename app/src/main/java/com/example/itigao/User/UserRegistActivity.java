@@ -206,7 +206,7 @@ public class UserRegistActivity extends AppCompatActivity{
                         preparedStatement.setString(5,"智慧云用户");
                         preparedStatement.setInt(6,0);
                         preparedStatement.setInt(7,0);
-                        preparedStatement.setString(8,"http://ty.tipass.com/images/head/head_name(1).PNG");
+                        preparedStatement.setString(8,"http://ty01.tipass.com/images/head/head_name(2).PNG");
                         preparedStatement.executeUpdate();
                         preparedStatement.close();
                         JDBCTools.releaseConnection(stmt,conn);
@@ -229,7 +229,7 @@ public class UserRegistActivity extends AppCompatActivity{
 
     private void Im(){
         RegisterOptionalUserInfo registerOptionalUserInfo = new RegisterOptionalUserInfo();
-        registerOptionalUserInfo.setNickname("智慧体育云用户");
+        registerOptionalUserInfo.setNickname("智慧云用户");
         JMessageClient.register(name.getText().toString(), AppConstants.IM_PASS, registerOptionalUserInfo, new BasicCallback() {
             @Override
             public void gotResult(int i, String s) {

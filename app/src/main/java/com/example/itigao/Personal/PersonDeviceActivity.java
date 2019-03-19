@@ -65,8 +65,8 @@ public class PersonDeviceActivity extends AppCompatActivity {
                 .add("user_sex","0")
                 .add("user_sort","0")
                 .add("user_online_time","0")
-                .add("user_birth", null)
-                .add("user_picture", "http://ty.tipass.com/images/head/head_name(1).PNG")
+//                .add("user_birth", null)
+                .add("user_picture", "http://ty01.tipass.com/images/head/head_name(2).PNG")
                 .build();
         //构建一个请求对象
         Request request = new Request.Builder()
