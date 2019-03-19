@@ -1,25 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "E:\\android\\Itigao\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ko-rKR\\values-ko-rKR.xml",
+            "outputFile": "C:\\lifiles\\clone\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ko-rKR\\values-ko-rKR.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\jiaozivideoplayer-6.4.1.aar\\0f4c0b8ccdcb69a9a78777f23c526cc3\\res\\values-ko-rKR\\values-ko-rKR.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8",
-                        "startColumns": "4,4,4,4,4,4,4",
-                        "startOffsets": "55,111,155,199,281,337,396",
-                        "endColumns": "55,43,43,81,55,58,55",
-                        "endOffsets": "106,150,194,276,332,391,447"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\debug\\values-ko-rKR\\values-ko-rKR.xml",
-            "map": [
-                {
-                    "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\jiaozivideoplayer-6.4.1.aar\\0f4c0b8ccdcb69a9a78777f23c526cc3\\res\\values-ko-rKR\\values-ko-rKR.xml",
+                    "source": "C:\\Users\\ROBOSOFT\\.gradle\\caches\\transforms-1\\files-1.1\\jiaozivideoplayer-6.4.1.aar\\eed6de88e5b928cb247d5d8a4ae05277\\res\\values-ko-rKR\\values-ko-rKR.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8",
                         "startColumns": "4,4,4,4,4,4,4",

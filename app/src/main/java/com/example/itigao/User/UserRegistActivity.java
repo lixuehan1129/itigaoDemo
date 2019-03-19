@@ -203,7 +203,7 @@ public class UserRegistActivity extends AppCompatActivity{
                         preparedStatement.setString(2,password.getText().toString());
                         preparedStatement.setString(3, DateUtils.StringData());
                         preparedStatement.setInt(4,1);
-                        preparedStatement.setString(5,"智慧体育云用户");
+                        preparedStatement.setString(5,"智慧云用户");
                         preparedStatement.setInt(6,0);
                         preparedStatement.setInt(7,0);
                         preparedStatement.setString(8,"http://ty.tipass.com/images/head/head_name(1).PNG");

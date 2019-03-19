@@ -1,1 +1,1 @@
-include ':app', ':silicompressor', ':library'
+include ':app', ':silicompressor', ':libWSLive'

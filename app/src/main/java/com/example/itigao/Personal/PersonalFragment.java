@@ -179,48 +179,32 @@ public class PersonalFragment extends BaseFragment {
     @SuppressLint("SetTextI18n")
     private void setClick(){
         //个人资料
-        per.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getActivity(),PersonChangeActivity.class);
-                intent.putExtra("userLevel",userLevel);
-                intent.putExtra("userSta",userSta);
-                intent.putExtra("userGoBid",goBid);
-                startActivity(intent);
-            }
+        per.setOnClickListener(view -> {
+            Intent intent = new Intent(getActivity(),PersonChangeActivity.class);
+            intent.putExtra("userLevel",userLevel);
+            intent.putExtra("userSta",userSta);
+            intent.putExtra("userGoBid",goBid);
+            startActivity(intent);
         });
         //设备
-        device1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getActivity(),PersonDeviceActivity.class);
-                startActivity(intent);
-            }
+        device1.setOnClickListener(view -> {
+            Intent intent = new Intent(getActivity(),PersonDeviceActivity.class);
+            startActivity(intent);
         });
         //课程
-        class0.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getActivity(),PersonClassActivity.class);
-                startActivity(intent);
-            }
+        class0.setOnClickListener(view -> {
+            Intent intent = new Intent(getActivity(),PersonClassActivity.class);
+            startActivity(intent);
         });
         //校园生活
-        exam1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getActivity(),PersonExamActivity.class);
-                startActivity(intent);
-            }
+        exam1.setOnClickListener(view -> {
+            Intent intent = new Intent(getActivity(),PersonExamActivity.class);
+            startActivity(intent);
         });
         //学习历程
-        indoor1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getActivity(),PersonIndoorActivity.class);
-                startActivity(intent);
-                Tip.showTip(getActivity(),"学习历程");
-            }
+        indoor1.setOnClickListener(view -> {
+            Intent intent = new Intent(getActivity(),PersonIndoorActivity.class);
+            startActivity(intent);
         });
 
         //开播

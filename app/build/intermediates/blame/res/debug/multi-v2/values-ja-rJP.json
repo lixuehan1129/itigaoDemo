@@ -1,25 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "E:\\android\\Itigao\\app\\build\\intermediates\\res\\merged\\debug\\values-ja-rJP\\values-ja-rJP.xml",
+            "outputFile": "C:\\lifiles\\clone\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ja-rJP\\values-ja-rJP.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\jiaozivideoplayer-6.4.1.aar\\0f4c0b8ccdcb69a9a78777f23c526cc3\\res\\values-ja-rJP\\values-ja-rJP.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8",
-                        "startColumns": "4,4,4,4,4,4,4",
-                        "startOffsets": "55,110,152,192,260,317,376",
-                        "endColumns": "54,41,39,67,56,58,59",
-                        "endOffsets": "105,147,187,255,312,371,431"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "E:\\android\\Itigao\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ja-rJP\\values-ja-rJP.xml",
-            "map": [
-                {
-                    "source": "C:\\Users\\最美人间四月天\\.gradle\\caches\\transforms-1\\files-1.1\\jiaozivideoplayer-6.4.1.aar\\0f4c0b8ccdcb69a9a78777f23c526cc3\\res\\values-ja-rJP\\values-ja-rJP.xml",
+                    "source": "C:\\Users\\ROBOSOFT\\.gradle\\caches\\transforms-1\\files-1.1\\jiaozivideoplayer-6.4.1.aar\\eed6de88e5b928cb247d5d8a4ae05277\\res\\values-ja-rJP\\values-ja-rJP.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8",
                         "startColumns": "4,4,4,4,4,4,4",

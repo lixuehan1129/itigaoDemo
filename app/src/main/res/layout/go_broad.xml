@@ -6,15 +6,23 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
 
-    <net.ossrs.yasea.SrsCameraView
-        android:id="@+id/glsurfaceview_camera"
+
+    <me.lake.librestreaming.ws.StreamLiveCameraView
+        android:id="@+id/stream_previewView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true" />
+        android:layout_height="match_parent">
+
+    </me.lake.librestreaming.ws.StreamLiveCameraView>
+
+    <!--<net.ossrs.yasea.SrsCameraView-->
+        <!--android:id="@+id/glsurfaceview_camera"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_alignParentEnd="true"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_alignParentStart="true"-->
+        <!--android:layout_alignParentTop="true" />-->
 
     <!--<Button-->
         <!--android:layout_width="wrap_content"-->
