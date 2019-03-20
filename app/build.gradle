@@ -78,8 +78,8 @@ dependencies {
     implementation 'cn.jiguang.sdk:jcore:1.2.6'
     // 此处以JCore 1.2.6 版本为例。
     implementation 'org.greenrobot:eventbus:3.0.0'
-    implementation 'com.squareup.okhttp3:okhttp:3.7.0'
-    implementation 'com.squareup.okio:okio:1.7.0'
+    implementation 'com.squareup.okhttp3:okhttp:3.10.0'
+    implementation 'com.squareup.okio:okio:1.14.0'
     //完整版引入
     implementation 'com.shuyu:GSYVideoPlayer:6.0.2'
     //根据你的需求ijk模式的so
@@ -91,4 +91,5 @@ dependencies {
     implementation 'cn.jzvd:jiaozivideoplayer:6.4.1'
     implementation project(':silicompressor')
     implementation project(':libWSLive')
+    implementation 'com.google.code.gson:gson:2.8.2'
 }

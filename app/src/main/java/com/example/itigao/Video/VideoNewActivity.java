@@ -19,7 +19,6 @@ import com.example.itigao.AutoProject.AppConstants;
 import com.example.itigao.AutoProject.SharePreferences;
 import com.example.itigao.Media.JZMediaIjkplayer;
 import com.example.itigao.R;
-import com.example.itigao.None.VideoFragment;
 import com.example.itigao.Utils.StatusBarUtils;
 
 import java.lang.reflect.Field;

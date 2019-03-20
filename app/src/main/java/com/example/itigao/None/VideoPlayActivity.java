@@ -25,6 +25,7 @@ import com.example.itigao.AutoProject.Tip;
 import com.example.itigao.Media.JZMediaIjkplayer;
 import com.example.itigao.R;
 import com.example.itigao.Utils.StatusBarUtils;
+import com.example.itigao.Video.VideoFragment;
 
 
 import java.util.ArrayList;
@@ -42,7 +43,7 @@ import cn.jzvd.JzvdStd;
  * Created by 最美人间四月天 on 2018/11/29.
  */
 
-public class VideoPlayActivity extends AppCompatActivity implements TabLayout.OnTabSelectedListener,VideoFragment.CallBackValue,InteractFragment.CallBackValue{
+public class VideoPlayActivity extends AppCompatActivity implements TabLayout.OnTabSelectedListener, VideoFragment.CallBackValue,InteractFragment.CallBackValue{
 
     private JzvdStd jzvdStd;
     private TabLayout tabLayout;

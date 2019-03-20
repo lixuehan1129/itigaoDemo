@@ -44,6 +44,7 @@ import java.util.Date;
 import java.util.List;
 
 import cn.jpush.im.android.api.JMessageClient;
+import cn.jpush.im.android.api.options.RegisterOptionalUserInfo;
 import cn.jpush.im.api.BasicCallback;
 
 /**
@@ -96,11 +97,26 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationB
         Im();
     }
 
+
+    //聊天室登陆
     private void Im(){
         JMessageClient.login(userId, AppConstants.IM_PASS, new BasicCallback() {
             @Override
             public void gotResult(int i, String s) {
-                System.out.println("登录" + s);
+                System.out.println("IM登陆成功");
+                if(i != 0){
+                    RegisterOptionalUserInfo registerOptionalUserInfo = new RegisterOptionalUserInfo();
+                    registerOptionalUserInfo.setNickname("智慧云用户");
+                    JMessageClient.register(userId, AppConstants.IM_PASS, registerOptionalUserInfo, new BasicCallback() {
+                        @Override
+                        public void gotResult(int i, String s) {
+                            if(i == 0){
+                                System.out.println("IM重新注册");
+                                Im();
+                            }
+                        }
+                    });
+                }
             }
         });
     }

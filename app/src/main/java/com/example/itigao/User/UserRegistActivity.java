@@ -25,6 +25,7 @@ import android.widget.TextView;
 
 import com.example.itigao.AutoProject.AppConstants;
 import com.example.itigao.AutoProject.JDBCTools;
+import com.example.itigao.AutoProject.JsonCode;
 import com.example.itigao.R;
 import com.example.itigao.Utils.CountDownTimerUtils;
 import com.example.itigao.Utils.DateUtils;
@@ -34,22 +35,32 @@ import com.example.itigao.AutoProject.Tip;
 import com.mob.MobSDK;
 import com.mysql.jdbc.Connection;
 
+import java.io.IOException;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.HashMap;
 
 import cn.jpush.im.android.api.JMessageClient;
 import cn.jpush.im.android.api.options.RegisterOptionalUserInfo;
 import cn.jpush.im.api.BasicCallback;
 import cn.smssdk.EventHandler;
 import cn.smssdk.SMSSDK;
+import okhttp3.MediaType;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.RequestBody;
+import okhttp3.Response;
 
 /**
  * Created by 最美人间四月天 on 2018/12/8.
  */
 
 public class UserRegistActivity extends AppCompatActivity{
+
+    public static final MediaType FORM_CONTENT_TYPE
+            = MediaType.parse("application/x-www-form-urlencoded; charset=utf-8");
 
     boolean hasFocus_pre_password = false;
     boolean hasFocus_pre_password_again = false;
@@ -62,6 +73,7 @@ public class UserRegistActivity extends AppCompatActivity{
     private boolean flag;   // 操作是否成功
 
     private CountDownTimerUtils mCountDownTimerUtils;
+    private ProgressDialog progressDialog;
 
 
     @Override
@@ -125,7 +137,10 @@ public class UserRegistActivity extends AppCompatActivity{
             public void onClick(View view) {
                 if(name.getText().toString().length() == 11){
                     if(PhoneUtils.isMobileNO(name.getText().toString())){
-                        CheckPhone(name.getText().toString());
+                     //   CheckPhone(name.getText().toString());
+                        //这里直接发送验证码
+                        mCountDownTimerUtils.start();
+                        SMSSDK.getVerificationCode("86", name.getText().toString()); // 发送验证码给号码的 phone 的手机
                     }else {
                         Tip.showTip(UserRegistActivity.this,"手机号格式错误");
                     }
@@ -188,7 +203,7 @@ public class UserRegistActivity extends AppCompatActivity{
     }
 
     private void update(){
-        final ProgressDialog progressDialog = ProgressDialog.show(UserRegistActivity.this,"","正在注册",true);
+   //     final ProgressDialog progressDialog = ProgressDialog.show(UserRegistActivity.this,"","正在注册",true);
         new Thread(){
             public void run(){
                 Looper.prepare();//用于toast
@@ -210,17 +225,17 @@ public class UserRegistActivity extends AppCompatActivity{
                         preparedStatement.executeUpdate();
                         preparedStatement.close();
                         JDBCTools.releaseConnection(stmt,conn);
-                        progressDialog.dismiss();
+               //         progressDialog.dismiss();
 
                         Im();
                       //  finish();
                     }else {
                         Tip.showTip(UserRegistActivity.this,"请检查网络");
-                        progressDialog.dismiss();
+              //          progressDialog.dismiss();
                     }
                 }catch (SQLException e) {
                     e.printStackTrace();
-                    progressDialog.dismiss();
+             //       progressDialog.dismiss();
                 }
                 Looper.loop();
             }
@@ -233,9 +248,89 @@ public class UserRegistActivity extends AppCompatActivity{
         JMessageClient.register(name.getText().toString(), AppConstants.IM_PASS, registerOptionalUserInfo, new BasicCallback() {
             @Override
             public void gotResult(int i, String s) {
+                progressDialog.dismiss();
                 finish();
             }
         });
+    }
+
+
+    private void goRegister(){
+        progressDialog = ProgressDialog.show(UserRegistActivity.this,"","正在注册",true);
+        new Thread(){
+            public void run(){
+                Looper.prepare();
+                postRegister();
+            }
+        }.start();
+    }
+
+    private void postRegister(){
+        //创建一个OkHttpClient对象
+        OkHttpClient okHttpClient = new OkHttpClient();
+        HashMap<String,String> formParams = new HashMap<>();
+        //传参
+        formParams.put("user_phone", name.getText().toString());
+        formParams.put("user_password", password.getText().toString());
+        formParams.put("user_name", "智慧云用户");
+        formParams.put("user_create_time", DateUtils.StringData());
+        formParams.put("user_level", "0");
+        formParams.put("user_sex","0");
+        formParams.put("user_sort","0");
+        formParams.put("user_online_time","0");
+        formParams.put("user_picture", "http://ty01.tipass.com/images/head/head_name(2).PNG");
+
+        StringBuffer sb = new StringBuffer();
+        for (String key: formParams.keySet()) {
+            sb.append(key+"="+formParams.get(key)+"&");
+        }
+
+        RequestBody requestBody = RequestBody.create(FORM_CONTENT_TYPE, sb.toString());
+
+        //构建一个请求对象
+        Request request = new Request.Builder()
+                .url("http://39.105.213.41:8080/StudyAppService/StudyServlet/register")
+                .post(requestBody)
+                .build();
+        //发送请求获取响应
+        Response response = null;
+        try {
+            response = okHttpClient.newCall(request).execute();
+            //判断请求是否成功
+            if(response.isSuccessful()){
+                //打印服务端返回结果
+                assert response.body() != null;
+                String regData = response.body().string();
+
+                switch (JsonCode.getCode(regData)){
+                    case 0:{
+                        Tip.showTip(this,"出现错误，请稍后再试");
+                        progressDialog.dismiss();
+                        break;
+                    }
+                    case 200:{
+                        //成功
+                        Im();
+                        break;
+                    }
+                    case 300:{
+                        Tip.showTip(this,"出现错误，请稍后再试");
+                        progressDialog.dismiss();
+                        break;
+                    }
+                    case 400:{
+                        Tip.showTip(this,"手机号已存在");
+                        progressDialog.dismiss();
+                        break;
+                    }
+                }
+
+            }
+        } catch (IOException e) {
+            progressDialog.dismiss();
+            e.printStackTrace();
+        }
+        Looper.loop();
     }
 
 
@@ -253,8 +348,9 @@ public class UserRegistActivity extends AppCompatActivity{
                 // 如果操作成功
                 if (event == SMSSDK.EVENT_SUBMIT_VERIFICATION_CODE) {
                     // 校验验证码，返回校验的手机和国家代码
-                    Tip.showTip(UserRegistActivity.this, "验证成功");
-                    update();
+                 //   Tip.showTip(UserRegistActivity.this, "验证成功");
+                  //  update();
+                    goRegister();
                 } else if (event == SMSSDK.EVENT_GET_VERIFICATION_CODE) {
                     // 获取验证码成功，true为智能验证，false为普通下发短信
                     Tip.showTip(UserRegistActivity.this, "验证码已发送");

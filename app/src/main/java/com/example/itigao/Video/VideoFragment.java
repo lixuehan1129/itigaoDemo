@@ -1,4 +1,4 @@
-package com.example.itigao.None;
+package com.example.itigao.Video;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -50,6 +50,7 @@ public class VideoFragment extends BaseFragment {
     ArrayList<String> nut;
     ArrayList<String> add;
     ArrayList<Integer> select,classify;
+    ArrayList<String> cover;
     CallBackValue callBackValue;
 
     /**
@@ -92,16 +93,11 @@ public class VideoFragment extends BaseFragment {
         itr = (TextView) view.findViewById(R.id.video_fragment_itr);
         advice = (TextView) view.findViewById(R.id.video_fragment_advice);
         recyclerView = (RecyclerView) view.findViewById(R.id.video_fragment_rv);
-     //   linearLayout = (LinearLayout) view.findViewById(R.id.video_fragment_li);
-     //   num = (TextView) view.findViewById(R.id.video_fragment_num);
-       // rank = (TextView) view.findViewById(R.id.video_fragment_rank);
 
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity());
         linearLayoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
         recyclerView.setLayoutManager(linearLayoutManager);
 
-        //setClick();
-    //    initData();
         connectData();
     }
 
@@ -114,7 +110,7 @@ public class VideoFragment extends BaseFragment {
         select = new ArrayList<>();
         classify = new ArrayList<>();
 
-        final ArrayList<String> cover = new ArrayList<>();
+        cover = new ArrayList<>();
 
         new Thread(){
             public void run(){
@@ -212,24 +208,6 @@ public class VideoFragment extends BaseFragment {
     }
 
     private void setBroad(){
-//        switch (classify.get(0)){
-//            case 1:{
-//                intent = new Intent(AppConstants.BROAD_RECORD1);
-//                break;
-//            }
-//            case 2:{
-//                intent = new Intent(AppConstants.BROAD_RECORD2);
-//                break;
-//            }
-//            case 3:{
-//                intent = new Intent(AppConstants.BROAD_RECORD3);
-//                break;
-//            }
-//            case 4:{
-//                intent = new Intent(AppConstants.BROAD_RECORD4);
-//                break;
-//            }
-//        }
         Intent intent = new Intent(AppConstants.BROAD_RECORD);
         LocalBroadcastManager.getInstance(getActivity()).sendBroadcast(intent);
     }
