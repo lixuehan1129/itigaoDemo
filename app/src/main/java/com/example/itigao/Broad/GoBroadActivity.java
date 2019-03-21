@@ -20,6 +20,8 @@ import com.example.itigao.R;
 import me.lake.librestreaming.core.listener.RESConnectionListener;
 import me.lake.librestreaming.ws.StreamAVOption;
 import me.lake.librestreaming.ws.StreamLiveCameraView;
+import me.lake.librestreaming.ws.filter.hardfilter.GPUImageBeautyFilter;
+import me.lake.librestreaming.ws.filter.hardfilter.extra.GPUImageCompatibleFilter;
 
 /**
  * Created by 最美人间四月天 on 2019/1/10.
@@ -90,6 +92,7 @@ public class GoBroadActivity extends AppCompatActivity{
 //        files.add(new GPUImageCompatibleFilter(new GPUImageBeautyFilter()));
 //        files.add(new WatermarkFilter(BitmapFactory.decodeResource(getResources(),R.mipmap.live),new Rect(100,100,200,200)));
 //        mLiveCameraView.setHardVideoFilter(new HardVideoGroupFilter(files));
+
 
         btnPublish.setOnClickListener(new View.OnClickListener() {
             @Override

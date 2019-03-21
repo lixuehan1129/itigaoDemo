@@ -25,9 +25,13 @@ import com.example.itigao.Adapter.ClassActivityAdapter;
 import com.example.itigao.Adapter.ClassVideoAdapter;
 import com.example.itigao.AutoProject.AppConstants;
 import com.example.itigao.AutoProject.JDBCTools;
+import com.example.itigao.AutoProject.JsonCode;
 import com.example.itigao.AutoProject.SharePreferences;
 import com.example.itigao.AutoProject.Tip;
 import com.example.itigao.Broad.BroadNewActivity;
+import com.example.itigao.ClassAb.Anchor;
+import com.example.itigao.ClassAb.Classes;
+import com.example.itigao.ClassAb.Record;
 import com.example.itigao.HuDong.HuDongActivity;
 import com.example.itigao.HuDong.HuDongPlayActivity;
 import com.example.itigao.R;
@@ -35,11 +39,18 @@ import com.example.itigao.Utils.StatusBarUtils;
 import com.example.itigao.Video.VideoNewActivity;
 import com.mysql.jdbc.Connection;
 
+import java.io.IOException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
+
+import okhttp3.FormBody;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.RequestBody;
+import okhttp3.Response;
 
 /**
  * Created by 最美人间四月天 on 2019/1/17.
@@ -58,27 +69,19 @@ public class BaseActivity extends AppCompatActivity {
     private IntentFilter intentFilter;
     private BroadcastReceiver mReceiver;
 
-    ArrayList<String> name1;
-    ArrayList<Integer> bid1;
-    ArrayList<String> cover1;
-    ArrayList<Integer> roomId;
+    private ClassVideoAdapter videoAdapter;
+    private ClassActivityAdapter anchorAdapter, recordAdapter;
 
-    ArrayList<String> name2;
-    ArrayList<Integer> bid2;
-    ArrayList<String> cover2;
-    ArrayList<Integer> section2;
-    ArrayList<String> add2;
-    ArrayList<Integer> select2;
+    private List<ClassActivityAdapter.Class_Activity> anchors = new ArrayList<>();
+    private List<ClassActivityAdapter.Class_Activity> records = new ArrayList<>();
+    private List<ClassVideoAdapter.Class_Video> videos = new ArrayList<>();
 
+    private List<Anchor> anchors_get;
+    private List<Record> records_get;
+    private List<Classes> classes_get;
 
-    ArrayList<String> name3;
-    ArrayList<Integer> bid3;
-    ArrayList<String> cover3;
-    ArrayList<Integer> section3;
-    ArrayList<String> add3;
-
-    ArrayList<String> cover4;
-    ArrayList<String> add4;
+    private ArrayList<String> cover4;
+    private ArrayList<String> add4;
 
 
 
@@ -100,7 +103,7 @@ public class BaseActivity extends AppCompatActivity {
             @Override
             public void onReceive(Context context, Intent intent){
                 //收到广播后所作的操作
-                connectData2();
+                connectRecord();
             }
         };
         broadcastManager.registerReceiver(mReceiver, intentFilter);
@@ -131,9 +134,9 @@ public class BaseActivity extends AppCompatActivity {
         back(toolbar);
 
 
-        recyclerView1 = (RecyclerView) findViewById(R.id.class_activity_rv1);
-        recyclerView2 = (RecyclerView) findViewById(R.id.class_activity_rv2);
-        recyclerView3 = (RecyclerView) findViewById(R.id.class_activity_rv3);
+        recyclerView1 = (RecyclerView) findViewById(R.id.class_activity_rv1);//anchor
+        recyclerView2 = (RecyclerView) findViewById(R.id.class_activity_rv2);//record
+        recyclerView3 = (RecyclerView) findViewById(R.id.class_activity_rv3);//video
         imageView1 = (ImageView) findViewById(R.id.class_activity_iv1);
         imageView2 = (ImageView) findViewById(R.id.class_activity_iv2);
         textView = (TextView) findViewById(R.id.class_activity_tv1);
@@ -141,18 +144,24 @@ public class BaseActivity extends AppCompatActivity {
 
         LinearLayoutManager linearLayoutManager1 = new LinearLayoutManager(this);
         linearLayoutManager1.setOrientation(LinearLayoutManager.HORIZONTAL);
+        anchorAdapter = new ClassActivityAdapter(anchors);
         recyclerView1.setLayoutManager(linearLayoutManager1);
+        recyclerView1.setAdapter(anchorAdapter);
 
         LinearLayoutManager linearLayoutManager2 = new LinearLayoutManager(this);
         linearLayoutManager2.setOrientation(LinearLayoutManager.HORIZONTAL);
+        recordAdapter = new ClassActivityAdapter(records);
         recyclerView2.setLayoutManager(linearLayoutManager2);
+        recyclerView2.setAdapter(recordAdapter);
 
         recyclerView3.setLayoutManager(new GridLayoutManager(this,2));
         recyclerView3.setNestedScrollingEnabled(false);
+        videoAdapter = new ClassVideoAdapter(videos);
+        recyclerView3.setAdapter(videoAdapter);
 
-        connectData1();
-        connectData2();
-        connectData3();
+        connectAnchor();
+        connectRecord();
+        connectVideo();
         connectHu();
         setClick();
     }
@@ -169,18 +178,6 @@ public class BaseActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
-//        to.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                if(userSta == 1 && userStyle == mClassify){
-//                    Intent intent = new Intent(mActivity,GoBroadActivity.class);
-//                    startActivity(intent);
-//                }else {
-//                    Tip.showTip(mActivity,"还不是主播");
-//                }
-//            }
-//        });
 
     }
 
@@ -226,15 +223,15 @@ public class BaseActivity extends AppCompatActivity {
             // TODO Auto-generated method stub
             switch (msg.what){
                 case 1:{
-                    initData1(name1,cover1);
+                    initDataAnchor();
                     break;
                 }
                 case 2:{
-                    initData2(name2,cover2,bid2,section2,add2,select2);
+                    initDataRecord();
                     break;
                 }
                 case 3:{
-                    initData3(name3,cover3,bid3,section3,add3);
+                    initDataVideo();
                     break;
                 }
                 case 4:{
@@ -305,235 +302,209 @@ public class BaseActivity extends AppCompatActivity {
 
     }
 
-
-    //主播列表
-    private void connectData1(){
-        name1 = new ArrayList<>();
-        cover1 = new ArrayList<>();
-        bid1 = new ArrayList<>();
-        roomId = new ArrayList<>();
-        new Thread(){
-            public void run(){
+    //获取主播列表
+    private void connectAnchor(){
+        anchors_get = new ArrayList<>();
+        new Thread() {
+            public void run() {
                 Looper.prepare();
-                try{
-                    Connection conn = JDBCTools.getConnection();
-                    if(conn != null){
-                        Statement stmt = conn.createStatement();
-                        String sql = "SELECT * FROM anchor WHERE anchor_classify = " +
-                                mClassify +
-                                " and anchor_state = 1";
-                        ResultSet resultSet = stmt.executeQuery(sql);
-                        while(resultSet.next()){
-                            name1.add(resultSet.getString("anchor_name"));
-                            bid1.add(resultSet.getInt("anchor_bid"));
-                            roomId.add(resultSet.getInt("anchor_room"));
-                            cover1.add(resultSet.getString("anchor_cover"));
+
+                OkHttpClient okHttpClient = new OkHttpClient();
+                RequestBody requestBody = new FormBody.Builder()
+                        .add("anchor_classify", String.valueOf(mClassify))
+                        .add("anchor_state","1")
+                        .build();
+                //构建一个请求对象
+                Request request = new Request.Builder()
+                        .url("http://39.105.213.41:8080/StudyAppService/StudyServlet/anchor")
+                        .post(requestBody)
+                        .build();
+                //发送请求获取响应
+                Response response = null;
+                try {
+                    response = okHttpClient.newCall(request).execute();
+                    //判断请求是否成功
+                    if(response.isSuccessful()){
+                        assert response.body() != null;
+                        String regData = response.body().string();
+                        System.out.println("返回anchor"+regData);
+                        if(JsonCode.getCode(regData) == 200){
+                            //
+                            String jsonData = JsonCode.getData(regData);
+                            anchors_get = JsonCode.jsonToList(jsonData,Anchor.class);
+                            Message message = new Message();
+                            message.what = 1;
+                            handler.sendMessage(message);
                         }
-                        Message message = new Message();
-                        message.what = 1;
-                        handler.sendMessage(message);
-                        resultSet.close();
-                        JDBCTools.releaseConnection(stmt,conn);
-                    }else {
-                        Tip.showTip(BaseActivity.this,"请检查网络");
+
                     }
-                }catch (SQLException e) {
+                } catch (IOException e) {
                     e.printStackTrace();
                 }
+
                 Looper.loop();
             }
         }.start();
     }
 
-    private void initData1(ArrayList<String> introduce,ArrayList<String> image){
-        List<ClassActivityAdapter.Class_Activity> class_activities1 = new ArrayList<>();
-        if(introduce.size() > 0){
-            for (int i = 0; i<introduce.size(); i++){
-                ClassActivityAdapter newData = new ClassActivityAdapter(class_activities1);
-                ClassActivityAdapter.Class_Activity class_activity = newData.new Class_Activity(introduce.get(i),image.get(i));
-                class_activities1.add(class_activity);
-                ClassActivityAdapter classActivityAdapter1 = new ClassActivityAdapter(class_activities1);
-                recyclerView1.setAdapter(classActivityAdapter1);
-                classActivityAdapter1.setOnItemClickListener(new ClassActivityAdapter.OnItemClickListener() {
-                    @Override
-                    public void onItemClick(View view, int position) {
-                        Intent intent = new Intent(BaseActivity.this, BroadNewActivity.class);
-                        intent.putExtra("anchor_bid",bid1.get(position));
-                        intent.putExtra("anchor_room",roomId.get(position));
-                        startActivity(intent);
-                    }
-                });
+    private void initDataAnchor(){
+        if(anchors_get.size() > 0){
+            for(int i = 0; i<anchors_get.size(); i++){
+                anchorAdapter.addDataAt(anchorAdapter.getItemCount(),
+                        anchorAdapter.new Class_Activity(anchors_get.get(i).getAnchor_name(),
+                                anchors_get.get(i).getAnchor_cover()));
             }
+
+            anchorAdapter.setOnItemClickListener(new ClassActivityAdapter.OnItemClickListener() {
+                @Override
+                public void onItemClick(View view, int position) {
+                    Intent intent = new Intent(BaseActivity.this, BroadNewActivity.class);
+                    intent.putExtra("anchor_bid",anchors_get.get(position).getAnchor_bid());
+                    intent.putExtra("anchor_room",anchors_get.get(position).getAnchor_room());
+                    startActivity(intent);
+                }
+            });
         }else {
-            ClassActivityAdapter newData = new ClassActivityAdapter(class_activities1);
-            ClassActivityAdapter.Class_Activity class_activity = newData.new Class_Activity("暂无",null);
-            class_activities1.add(class_activity);
-            ClassActivityAdapter classActivityAdapter1 = new ClassActivityAdapter(class_activities1);
-            recyclerView1.setAdapter(classActivityAdapter1);
+            anchorAdapter.addDataAt(0,anchorAdapter.new Class_Activity("暂无",null));
         }
     }
 
-    //观看记录
-    private void connectData2(){
-
-        name2 = new ArrayList<>();
-        bid2 = new ArrayList<>();
-        cover2 = new ArrayList<>();
-        section2 = new ArrayList<>();
-        add2 = new ArrayList<>();
-        select2 = new ArrayList<>();
-
-        new Thread(){
-            public void run(){
+    //record
+    private void connectRecord(){
+        records_get = new ArrayList<>();
+        new Thread() {
+            public void run() {
                 Looper.prepare();
-                try{
-                    Connection conn = JDBCTools.getConnection();
-                    if(conn != null){
-                        Statement stmt = conn.createStatement();
-                        String sql = "SELECT * FROM record WHERE record_user = '" +
-                                SharePreferences.getString(BaseActivity.this, AppConstants.USER_PHONE) +
-                                "' AND record_classify = " +
-                                mClassify +
-                                "";
-                        ResultSet resultSet = stmt.executeQuery(sql);
-                        while(resultSet.next()){
-                            name2.add(resultSet.getString("record_name"));
-                            bid2.add(resultSet.getInt("record_bid"));
-                            cover2.add(resultSet.getString("record_cover"));
-                            section2.add(resultSet.getInt("record_section"));
-                            add2.add(resultSet.getString("record_add"));
-                            select2.add(resultSet.getInt("record_select"));
+
+                OkHttpClient okHttpClient = new OkHttpClient();
+                RequestBody requestBody = new FormBody.Builder()
+                        .add("record_user", SharePreferences.getString(BaseActivity.this,AppConstants.USER_PHONE))
+                        .add("record_classify", String.valueOf(mClassify))
+                        .build();
+                //构建一个请求对象
+                Request request = new Request.Builder()
+                        .url("http://39.105.213.41:8080/StudyAppService/StudyServlet/record")
+                        .post(requestBody)
+                        .build();
+                //发送请求获取响应
+                Response response = null;
+                try {
+                    response = okHttpClient.newCall(request).execute();
+                    //判断请求是否成功
+                    if(response.isSuccessful()){
+                        assert response.body() != null;
+                        String regData = response.body().string();
+                        System.out.println("返回record"+regData);
+                        if(JsonCode.getCode(regData) == 200){
+                            String jsonData = JsonCode.getData(regData);
+                            records_get = JsonCode.jsonToList(jsonData,Record.class);
+                            Message message = new Message();
+                            message.what = 2;
+                            handler.sendMessage(message);
                         }
-                        Message message = new Message();
-                        message.what = 2;
-                        handler.sendMessage(message);
-                        resultSet.close();
-                        JDBCTools.releaseConnection(stmt,conn);
-                    }else {
-                        Tip.showTip(BaseActivity.this,"请检查网络");
+
                     }
-                }catch (SQLException e) {
+                } catch (IOException e) {
                     e.printStackTrace();
                 }
+
                 Looper.loop();
             }
         }.start();
     }
 
-    private void initData2(ArrayList<String> introduce, ArrayList<String> image, final ArrayList<Integer> id,
-                           final ArrayList<Integer> section,final ArrayList<String> add,final ArrayList<Integer> select){
-
-        List<ClassActivityAdapter.Class_Activity> class_activities2 = new ArrayList<>();
-
-        if(introduce.size() > 0){
-            for (int i = 0; i<introduce.size(); i++){
-                ClassActivityAdapter newData = new ClassActivityAdapter(class_activities2);
-                ClassActivityAdapter.Class_Activity class_activity = newData.new Class_Activity(introduce.get(i),image.get(i));
-                class_activities2.add(class_activity);
-                ClassActivityAdapter classActivityAdapter2 = new ClassActivityAdapter(class_activities2);
-                recyclerView2.setAdapter(classActivityAdapter2);
-                classActivityAdapter2.setOnItemClickListener(new ClassActivityAdapter.OnItemClickListener() {
-                    @Override
-                    public void onItemClick(View view, int position) {
-                        Intent intent = new Intent(BaseActivity.this, VideoNewActivity.class);
-                        intent.putExtra("video_bid",id.get(position));
-                        intent.putExtra("video_section",section.get(position));
-                        intent.putExtra("video_add",add.get(position));
-                        intent.putExtra("video_select",select.get(position));
-                        intent.putExtra("video_record",2);
-                        startActivity(intent);
-                    }
-                });
+    private void initDataRecord(){
+        if(records_get.size() > 0){
+            for(int i = 0; i<records_get.size(); i++){
+                recordAdapter.addDataAt(recordAdapter.getItemCount(),
+                        recordAdapter.new Class_Activity(records_get.get(i).getRecord_name(),
+                                records_get.get(i).getRecord_cover()));
             }
+
+            recordAdapter.setOnItemClickListener(new ClassActivityAdapter.OnItemClickListener() {
+                @Override
+                public void onItemClick(View view, int position) {
+                    Intent intent = new Intent(BaseActivity.this, VideoNewActivity.class);
+                    intent.putExtra("video_bid",records_get.get(position).getRecord_bid());
+                    intent.putExtra("video_section",records_get.get(position).getRecord_section());
+                    intent.putExtra("video_add",records_get.get(position).getRecord_add());
+                    intent.putExtra("video_select",records_get.get(position).getRecord_select());
+                    intent.putExtra("video_record",2);
+                    startActivity(intent);
+                }
+            });
         }else {
-            ClassActivityAdapter newData = new ClassActivityAdapter(class_activities2);
-            ClassActivityAdapter.Class_Activity class_activity = newData.new Class_Activity("暂无",null);
-            class_activities2.add(class_activity);
-            ClassActivityAdapter classActivityAdapter2 = new ClassActivityAdapter(class_activities2);
-            recyclerView2.setAdapter(classActivityAdapter2);
+            recordAdapter.addDataAt(0,recordAdapter.new Class_Activity("暂无",null));
         }
-
-
-
     }
 
-    //课程列表
-    private void connectData3(){
-
-        name3 = new ArrayList<>();
-        bid3 = new ArrayList<>();
-        cover3 = new ArrayList<>();
-        section3 = new ArrayList<>();
-        add3 = new ArrayList<>();
-
-        new Thread(){
-            public void run(){
+    //video
+    private void connectVideo(){
+        classes_get = new ArrayList<>();
+        new Thread() {
+            public void run() {
                 Looper.prepare();
-                try{
-                    Connection conn = JDBCTools.getConnection();
-                    if(conn != null){
-                        Statement stmt = conn.createStatement();
-                        String sql = "SELECT * FROM class WHERE class_classify = " +
-                                mClassify +
-                                " AND class_select = 1";
-                        ResultSet resultSet = stmt.executeQuery(sql);
-                        while(resultSet.next()){
-                            String rName = resultSet.getString("class_name");
-                            int rBid = resultSet.getInt("class_bid");
-                            String rCover = resultSet.getString("class_cover");
-                            String rAdd = resultSet.getString("class_add");
-                            int rSection = resultSet.getInt("class_section");
-                            name3.add(rName);
-                            bid3.add(rBid);
-                            cover3.add(rCover);
-                            section3.add(rSection);
-                            add3.add(rAdd);
+
+                OkHttpClient okHttpClient = new OkHttpClient();
+                RequestBody requestBody = new FormBody.Builder()
+                        .add("class_classify", String.valueOf(mClassify))
+                        .add("class_select", "1")
+                        .build();
+                //构建一个请求对象
+                Request request = new Request.Builder()
+                        .url("http://39.105.213.41:8080/StudyAppService/StudyServlet/class")
+                        .post(requestBody)
+                        .build();
+                //发送请求获取响应
+                Response response = null;
+                try {
+                    response = okHttpClient.newCall(request).execute();
+                    //判断请求是否成功
+                    if(response.isSuccessful()){
+                        assert response.body() != null;
+                        String regData = response.body().string();
+                        System.out.println("返回classes"+regData);
+                        if(JsonCode.getCode(regData) == 200){
+                            String jsonData = JsonCode.getData(regData);
+                            classes_get = JsonCode.jsonToList(jsonData,Classes.class);
+                            Message message = new Message();
+                            message.what = 3;
+                            handler.sendMessage(message);
                         }
-                        Message message = new Message();
-                        message.what = 3;
-                        handler.sendMessage(message);
-                        resultSet.close();
-                        JDBCTools.releaseConnection(stmt,conn);
-                    }else {
-                        Tip.showTip(BaseActivity.this,"请检查网络");
+
                     }
-                }catch (SQLException e) {
+                } catch (IOException e) {
                     e.printStackTrace();
                 }
+
                 Looper.loop();
             }
         }.start();
     }
 
-
-
-    private void initData3(ArrayList<String> introduce, ArrayList<String> image, final ArrayList<Integer> id,
-                           final ArrayList<Integer> section,final ArrayList<String> add){
-        List<ClassVideoAdapter.Class_Video> class_videos = new ArrayList<>();
-        for(int i = 0; i < introduce.size(); i++){
-            ClassVideoAdapter newData = new ClassVideoAdapter(class_videos);
-            ClassVideoAdapter.Class_Video class_video = newData.new Class_Video(introduce.get(i),image.get(i));
-            class_videos.add(class_video);
-        }
-        ClassVideoAdapter classVideoAdapter = new ClassVideoAdapter(class_videos);
-        recyclerView3.setAdapter(classVideoAdapter);
-        classVideoAdapter.setOnItemClickListener(new ClassVideoAdapter.OnItemClickListener() {
-            @Override
-            public void onItemClick(View view, int position) {
-                Intent intent = new Intent(BaseActivity.this, VideoNewActivity.class);
-                intent.putExtra("video_bid",id.get(position));
-                intent.putExtra("video_section",section.get(position));
-                intent.putExtra("video_add",add.get(position));
-                intent.putExtra("video_select",1);
-                intent.putExtra("video_record",1);
-                startActivity(intent);
+    private void initDataVideo(){
+        if(classes_get.size() > 0){
+            for(int i = 0; i<classes_get.size(); i++){
+                videoAdapter.addDataAt(videoAdapter.getItemCount(),
+                        videoAdapter.new Class_Video(classes_get.get(i).getClass_name(),
+                                classes_get.get(i).getClass_cover()));
             }
-        });
 
+            videoAdapter.setOnItemClickListener(new ClassVideoAdapter.OnItemClickListener() {
+                @Override
+                public void onItemClick(View view, int position) {
+                    Intent intent = new Intent(BaseActivity.this, VideoNewActivity.class);
+                    intent.putExtra("video_bid",classes_get.get(position).getClass_bid());
+                    intent.putExtra("video_section",classes_get.get(position).getClass_section());
+                    intent.putExtra("video_add",classes_get.get(position).getClass_add());
+                    intent.putExtra("video_select",1);
+                    intent.putExtra("video_record",1);
+                    startActivity(intent);
+                }
+            });
 
+        }
     }
-
-
 
     //返回注销事件
     private void back(Toolbar toolbar){

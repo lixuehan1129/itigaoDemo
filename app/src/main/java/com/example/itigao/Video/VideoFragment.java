@@ -37,9 +37,8 @@ import java.util.List;
 
 public class VideoFragment extends BaseFragment {
 
-    private TextView title, itr, advice, num, rank;
+    private TextView title, itr, advice;
     private RecyclerView recyclerView;
-    private LinearLayout linearLayout;
     private int video_section;
     private int video_bid;
     private int video_select;
@@ -66,7 +65,7 @@ public class VideoFragment extends BaseFragment {
 
     //定义一个回调接口
     public interface CallBackValue{
-        public void SendMessageValue(String strValue);
+        void SendMessageValue(String strValue);
     }
 
     @Override
@@ -268,19 +267,6 @@ public class VideoFragment extends BaseFragment {
             }
         });
     }
-
-
-
-//    private void setClick(){
-//        linearLayout.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent = new Intent(getActivity(),VideoRankActivity.class);
-//                startActivity(intent);
-//            }
-//        });
-//    }
-
 
 
 }

@@ -150,6 +150,7 @@ public class UserLoginActivity extends AppCompatActivity {
                                 ContentValues values = new ContentValues();
                                 SharePreferences.putString(UserLoginActivity.this, AppConstants.USER_PHONE, name.getText().toString());
                                 SharePreferences.putString(UserLoginActivity.this, AppConstants.USER_PASSWORD, password.getText().toString());
+                                SharePreferences.putInt(UserLoginActivity.this, AppConstants.USER_LOGIN_COUNT, 1);
                                // SharePreferences.putInt(UserLoginActivity.this,AppConstants.USER_sta,0);
                                 String phone = resultSet.getString("user_phone");
                                 String name1 = resultSet.getString("user_name");

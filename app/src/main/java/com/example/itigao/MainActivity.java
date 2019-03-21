@@ -60,8 +60,8 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationB
     private NoScollViewPager viewPager;
     private BottomNavigationBar bottomNavigationBar;
 
-    private String userId,userName,userPicture;
-    private String todayTime;
+    private String userId,userName;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -84,16 +84,18 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationB
 
     private void localData(){
         userId = SharePreferences.getString(MainActivity.this, AppConstants.USER_PHONE);
+
         dataBaseHelper = new DataBaseHelper(MainActivity.this,AppConstants.SQL_VISION);
         SQLiteDatabase sqLiteDatabase = dataBaseHelper.getReadableDatabase();
         Cursor cursor = sqLiteDatabase.query("user",null,"user_phone = ?",new String[]{
                 userId},null,null,null,"1");
         if(cursor.moveToFirst()){
             userName = cursor.getString(cursor.getColumnIndex("user_name"));
-            userPicture = cursor.getString(cursor.getColumnIndex("user_picture"));
         }
         cursor.close();
         sqLiteDatabase.close();
+
+
         Im();
     }
 
@@ -106,7 +108,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationB
                 System.out.println("IM登陆成功");
                 if(i != 0){
                     RegisterOptionalUserInfo registerOptionalUserInfo = new RegisterOptionalUserInfo();
-                    registerOptionalUserInfo.setNickname("智慧云用户");
+                    registerOptionalUserInfo.setNickname(userName);
                     JMessageClient.register(userId, AppConstants.IM_PASS, registerOptionalUserInfo, new BasicCallback() {
                         @Override
                         public void gotResult(int i, String s) {
@@ -153,44 +155,10 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationB
         viewPager.setCurrentItem(0);
     }
 
-    /**
-     * 判断是否是当日第一次登陆
-     */
-    private void isTodayFirstLogin() {
-        //取
-        SharedPreferences preferences = getSharedPreferences("LastLoginTime", MODE_PRIVATE);
-        String lastTime = preferences.getString("LoginTime", "2019-02-25");
-        // Toast.makeText(MainActivity.this, "value="+date, Toast.LENGTH_SHORT).show();
-        SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");// 设置日期格式
-        todayTime = df.format(new Date());// 获取当前的日期
-
-        if (lastTime.equals(todayTime)) { //如果两个时间段相等
-            Toast.makeText(this, "不是当日首次登陆", Toast.LENGTH_SHORT).show();
-            Log.e("Time", lastTime);
-        } else {
-            Toast.makeText(this, "当日首次登陆", Toast.LENGTH_SHORT).show();
-            Log.e("date", lastTime);
-            Log.e("todayDate", todayTime);
-        }
-    }
-
-    /**
-     * 保存每次退出的时间
-     * @param extiLoginTime
-     */
-    private void saveExitTime(String extiLoginTime) {
-        SharedPreferences.Editor editor = getSharedPreferences("LastLoginTime", MODE_PRIVATE).edit();
-        editor.putString("LoginTime", extiLoginTime);
-        //这里用apply()而没有用commit()是因为apply()是异步处理提交，不需要返回结果，而我也没有后续操作
-        //而commit()是同步的，效率相对较低
-        //apply()提交的数据会覆盖之前的,这个需求正是我们需要的结果
-        editor.apply();
-    }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        saveExitTime(todayTime);
     }
 
 

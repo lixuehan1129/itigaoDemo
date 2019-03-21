@@ -9,6 +9,8 @@ public class AppConstants {
     public static final String USER_PHONE = "phone";
     public static final String USER_PASSWORD = "pass";
 
+    public static final String USER_LOGIN_COUNT = "loginCount";
+
 
     //如果是主播 1是不是 2是哪个 3主播id
   //  public static final String USER_sta = "user";

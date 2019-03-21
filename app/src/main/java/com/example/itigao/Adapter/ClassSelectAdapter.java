@@ -13,7 +13,7 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.example.itigao.R;
-import com.example.itigao.Utils.Class_select;
+import com.example.itigao.ClassAb.Class_select;
 
 import java.util.List;
 
