@@ -279,6 +279,7 @@ public class UserRegistActivity extends AppCompatActivity{
         formParams.put("user_sort","0");
         formParams.put("user_online_time","0");
         formParams.put("user_picture", "http://ty01.tipass.com/images/head/head_name(2).PNG");
+        formParams.put("user_birth", "2000-10-10");
 
         StringBuffer sb = new StringBuffer();
         for (String key: formParams.keySet()) {

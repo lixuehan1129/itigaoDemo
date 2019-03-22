@@ -31,13 +31,19 @@ import com.example.itigao.AutoProject.Tip;
 import com.example.itigao.Broad.BroadNewActivity;
 import com.example.itigao.ClassAb.Anchor;
 import com.example.itigao.ClassAb.Classes;
+import com.example.itigao.ClassAb.HuDong;
 import com.example.itigao.ClassAb.Record;
 import com.example.itigao.HuDong.HuDongActivity;
 import com.example.itigao.HuDong.HuDongPlayActivity;
 import com.example.itigao.R;
 import com.example.itigao.Utils.StatusBarUtils;
 import com.example.itigao.Video.VideoNewActivity;
+import com.google.gson.JsonArray;
 import com.mysql.jdbc.Connection;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.io.IOException;
 import java.sql.ResultSet;
@@ -80,8 +86,8 @@ public class BaseActivity extends AppCompatActivity {
     private List<Record> records_get;
     private List<Classes> classes_get;
 
-    private ArrayList<String> cover4;
-    private ArrayList<String> add4;
+    private ArrayList<String> cover;
+    private ArrayList<String> add;
 
 
 
@@ -103,7 +109,7 @@ public class BaseActivity extends AppCompatActivity {
             @Override
             public void onReceive(Context context, Intent intent){
                 //收到广播后所作的操作
-                connectRecord();
+               // connectRecord();
             }
         };
         broadcastManager.registerReceiver(mReceiver, intentFilter);
@@ -181,41 +187,6 @@ public class BaseActivity extends AppCompatActivity {
 
     }
 
-
-    private void connectHu(){
-        cover4 = new ArrayList<>();
-        add4 = new ArrayList<>();
-        new Thread(){
-            public void run(){
-                Looper.prepare();
-                try{
-                    Connection conn = JDBCTools.getConnection();
-                    if(conn != null){
-                        Statement stmt = conn.createStatement();
-                        String sql = "SELECT hudong_cover,hudong_add FROM hudong WHERE hudong_classify = " +
-                                mClassify +
-                                " ORDER BY hudong_id DESC LIMIT 2";
-                        ResultSet resultSet = stmt.executeQuery(sql);
-                        while(resultSet.next()){
-                            cover4.add(resultSet.getString("hudong_cover"));
-                            add4.add(resultSet.getString("hudong_add"));
-                        }
-                        Message message = new Message();
-                        message.what = 4;
-                        handler.sendMessage(message);
-                        resultSet.close();
-                        JDBCTools.releaseConnection(stmt,conn);
-                    }else {
-                        Tip.showTip(BaseActivity.this,"请检查网络");
-                    }
-                }catch (SQLException e) {
-                    e.printStackTrace();
-                }
-                Looper.loop();
-            }
-        }.start();
-    }
-
     private Handler handler = new Handler(new Handler.Callback() {
 
         @Override
@@ -245,43 +216,97 @@ public class BaseActivity extends AppCompatActivity {
         }
     });
 
+    private void connectHu(){
+        cover = new ArrayList<>();
+        add = new ArrayList<>();
+        new Thread(){
+            public void run(){
+                Looper.prepare();
+                OkHttpClient okHttpClient = new OkHttpClient();
+                RequestBody requestBody = new FormBody.Builder()
+                        .add("hudong_classify", String.valueOf(mClassify))
+                        .build();
+                //构建一个请求对象
+                Request request = new Request.Builder()
+                        .url("http://39.105.213.41:8080/StudyAppService/StudyServlet/hudongTop2")
+                        .post(requestBody)
+                        .build();
+                //发送请求获取响应
+                Response response = null;
+                try {
+                    response = okHttpClient.newCall(request).execute();
+                    //判断请求是否成功
+                    if(response.isSuccessful()){
+                        assert response.body() != null;
+                        String regData = response.body().string();
+                        System.out.println("返回hudong"+regData);
+                        if(JsonCode.getCode(regData) == 200) {
+                            String jsonData = JsonCode.getData(regData);
+                            try {
+                                JSONArray jsonArray = new JSONArray(jsonData);
+                                for(int i = 0; i<jsonArray.length(); i++){
+                                    JSONObject jsonObject = jsonArray.getJSONObject(i);
+                                    cover.add(jsonObject.getString("hudong_cover"));
+                                    add.add(jsonObject.getString("hudong_add"));
+                                }
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                            }
+
+                        }
+
+                        Message message = new Message();
+                        message.what = 4;
+                        handler.sendMessage(message);
+
+                    }
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+
+                Looper.loop();
+            }
+        }.start();
+    }
+
     private void setImage(){
-//        if(Util.isOnMainThread()) {
-//            if (cover4.size() == 2) {
-//                Glide.with(BaseActivity.this)
-//                        .load(cover4.get(0))
-//                        .asBitmap()  //不可加载动图
-//                        .dontAnimate()//取消淡入淡出动画
-//                        .placeholder(R.mipmap.ic_touxiang11)
-//                        .error(R.mipmap.ic_touxiang11)
-//                        //         .thumbnail(0.1f) //先加载十分之一作为缩略图
-//                        .into(imageView1);
-//                Glide.with(BaseActivity.this)
-//                        .load(cover4.get(1))
-//                        .asBitmap()  //不可加载动图
-//                        .dontAnimate()//取消淡入淡出动画
-//                        .placeholder(R.mipmap.ic_touxiang11)
-//                        .error(R.mipmap.ic_touxiang11)
-//                        //        .thumbnail(0.1f) //先加载十分之一作为缩略图
-//                        .into(imageView2);
-//            } else if (cover4.size() == 1) {
-//                Glide.with(BaseActivity.this)
-//                        .load(cover4.get(0))
-//                        .asBitmap()  //不可加载动图
-//                        .dontAnimate()//取消淡入淡出动画
-//                        .placeholder(R.mipmap.ic_touxiang11)
-//                        .error(R.mipmap.ic_touxiang11)
-//                        //       .thumbnail(0.1f) //先加载十分之一作为缩略图
-//                        .into(imageView2);
-//            }
-//        }
+        if(Util.isOnMainThread()) {
+            if (cover.size() == 2) {
+                Glide.with(BaseActivity.this)
+                        .load(cover.get(0))
+                        .asBitmap()  //不可加载动图
+                        .dontAnimate()//取消淡入淡出动画
+                        .placeholder(R.mipmap.ic_touxiang11)
+                        .error(R.mipmap.ic_touxiang11)
+                        //         .thumbnail(0.1f) //先加载十分之一作为缩略图
+                        .into(imageView1);
+                Glide.with(BaseActivity.this)
+                        .load(cover.get(1))
+                        .asBitmap()  //不可加载动图
+                        .dontAnimate()//取消淡入淡出动画
+                        .placeholder(R.mipmap.ic_touxiang11)
+                        .error(R.mipmap.ic_touxiang11)
+                        //        .thumbnail(0.1f) //先加载十分之一作为缩略图
+                        .into(imageView2);
+            } else if (cover.size() == 1) {
+                Glide.with(BaseActivity.this)
+                        .load(cover.get(0))
+                        .asBitmap()  //不可加载动图
+                        .dontAnimate()//取消淡入淡出动画
+                        .placeholder(R.mipmap.ic_touxiang11)
+                        .error(R.mipmap.ic_touxiang11)
+                        //       .thumbnail(0.1f) //先加载十分之一作为缩略图
+                        .into(imageView2);
+            }
+        }
 
         imageView1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(BaseActivity.this, HuDongPlayActivity.class);
-                if(cover4.size() ==2){
-                    intent.putExtra("hudong_c_add",add4.get(0));
+                if(cover.size() ==2){
+                    intent.putExtra("hudong_c_add",add.get(0));
                 }
                 startActivity(intent);
             }
@@ -290,10 +315,10 @@ public class BaseActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(BaseActivity.this, HuDongPlayActivity.class);
-                if(cover4.size() == 2){
-                    intent.putExtra("hudong_c_add",add4.get(1));
-                }else if(cover4.size() == 1){
-                    intent.putExtra("hudong_c_add",add4.get(0));
+                if(cover.size() == 2){
+                    intent.putExtra("hudong_c_add",add.get(1));
+                }else if(cover.size() == 1){
+                    intent.putExtra("hudong_c_add",add.get(0));
                 }
 
                 startActivity(intent);
@@ -328,14 +353,15 @@ public class BaseActivity extends AppCompatActivity {
                         assert response.body() != null;
                         String regData = response.body().string();
                         System.out.println("返回anchor"+regData);
-                        if(JsonCode.getCode(regData) == 200){
+                        if(JsonCode.getCode(regData) == 200) {
                             //
                             String jsonData = JsonCode.getData(regData);
-                            anchors_get = JsonCode.jsonToList(jsonData,Anchor.class);
-                            Message message = new Message();
-                            message.what = 1;
-                            handler.sendMessage(message);
+                            anchors_get = JsonCode.jsonToList(jsonData, Anchor.class);
                         }
+
+                        Message message = new Message();
+                        message.what = 1;
+                        handler.sendMessage(message);
 
                     }
                 } catch (IOException e) {
@@ -395,13 +421,14 @@ public class BaseActivity extends AppCompatActivity {
                         assert response.body() != null;
                         String regData = response.body().string();
                         System.out.println("返回record"+regData);
-                        if(JsonCode.getCode(regData) == 200){
+                        if(JsonCode.getCode(regData) == 200) {
                             String jsonData = JsonCode.getData(regData);
-                            records_get = JsonCode.jsonToList(jsonData,Record.class);
-                            Message message = new Message();
-                            message.what = 2;
-                            handler.sendMessage(message);
+                            records_get = JsonCode.jsonToList(jsonData, Record.class);
                         }
+
+                        Message message = new Message();
+                        message.what = 2;
+                        handler.sendMessage(message);
 
                     }
                 } catch (IOException e) {

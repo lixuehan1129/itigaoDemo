@@ -5,27 +5,33 @@ public class Register {
             user_password,
             user_name,
             user_create_time,
-            user_picture,
-            user_birth;
+            user_picture;
+    //        user_birth;
     private int user_level,
             user_sex,
             user_sort,
-            user_online_time;
+            user_online_time,
+            user_id;
+
+//    public String getUser_birth() {
+//        return user_birth;
+//    }
+//
+//    public void setUser_birth(String user_birth) {
+//        this.user_birth = user_birth;
+//    }
+
+    public int getUser_id() {
+        return user_id;
+    }
+
+    public void setUser_id(int user_id) {
+        this.user_id = user_id;
+    }
 
     public Register() {
     }
 
-    public Register(String user_phone, String user_password, String user_name, String user_create_time, String user_picture, int user_level, int user_sex, int user_sort, int user_online_time) {
-        this.user_phone = user_phone;
-        this.user_password = user_password;
-        this.user_name = user_name;
-        this.user_create_time = user_create_time;
-        this.user_picture = user_picture;
-        this.user_level = user_level;
-        this.user_sex = user_sex;
-        this.user_sort = user_sort;
-        this.user_online_time = user_online_time;
-    }
 
     public String getUser_phone() {
         return user_phone;

@@ -14,6 +14,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.View;
@@ -25,8 +26,10 @@ import android.widget.RelativeLayout;
 
 import com.example.itigao.AutoProject.AppConstants;
 import com.example.itigao.AutoProject.JDBCTools;
+import com.example.itigao.AutoProject.JsonCode;
 import com.example.itigao.AutoProject.SharePreferences;
 import com.example.itigao.AutoProject.Tip;
+import com.example.itigao.ClassAb.Register;
 import com.example.itigao.Database.DataBaseHelper;
 import com.example.itigao.MainActivity;
 import com.example.itigao.R;
@@ -35,13 +38,21 @@ import com.example.itigao.Utils.PhoneUtils;
 import com.example.itigao.Utils.StatusBarUtils;
 import com.mysql.jdbc.Connection;
 
+import java.io.IOException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
 
 import cn.jpush.im.android.api.JMessageClient;
 import cn.jpush.im.api.BasicCallback;
 import de.hdodenhof.circleimageview.CircleImageView;
+import okhttp3.FormBody;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.RequestBody;
+import okhttp3.Response;
 
 /**
  * Created by 最美人间四月天 on 2018/12/8.
@@ -55,6 +66,8 @@ public class UserLoginActivity extends AppCompatActivity {
     private Button register, forget, login;
     private ImageView imageView;
     private ProgressDialog progressDialog;
+
+    private List<Register> registers = new ArrayList<>();
 
 
     @Override
@@ -115,12 +128,96 @@ public class UserLoginActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if(PhoneUtils.isMobileNO(name.getText().toString()) &&
                         name.getText().toString().length() > 5){
-                    login();
+                    loginGo();
                 }else {
                     Tip.showTip(UserLoginActivity.this,"手机号或密码错误");
                 }
             }
         });
+    }
+
+    private void loginGo(){
+        progressDialog = ProgressDialog.show(UserLoginActivity.this,"","正在登录...",true);
+        new Thread(){
+            public void run(){
+                Looper.prepare();//用于toast
+                postLogin();
+                Looper.loop();
+            }
+        }.start();
+    }
+
+    private void postLogin() {
+        //创建一个OkHttpClient对象
+        OkHttpClient okHttpClient = new OkHttpClient();
+        //构建一个请求体 add参数1 key 参数2 value 发送字段
+        RequestBody requestBody = new FormBody.Builder()
+                .add("user_phone", name.getText().toString())
+                .add("user_password", password.getText().toString())
+                .build();
+        //构建一个请求对象
+        Request request = new Request.Builder()
+                .url("http://39.105.213.41:8080/StudyAppService/StudyServlet/login")
+                .post(requestBody)
+                .build();
+        //发送请求获取响应
+        Response response = null;
+        try {
+            response = okHttpClient.newCall(request).execute();
+            //判断请求是否成功
+            if(response.isSuccessful()){
+                //打印服务端返回结果
+                assert response.body() != null;
+                String regData = response.body().string();
+                System.out.println("返回login"+regData);
+                if(JsonCode.getCode(regData) == 200){
+                    String jsonData = JsonCode.getData(regData);
+                    registers = JsonCode.jsonToList(jsonData,Register.class);
+                    setLocal();
+                }else if(JsonCode.getCode(regData) == 300){
+                    Tip.showTip(UserLoginActivity.this,"密码错误");
+                    progressDialog.dismiss();
+                }else {
+                    Tip.showTip(UserLoginActivity.this,"手机号不存在");
+                    progressDialog.dismiss();
+                }
+
+            }
+        } catch (IOException e) {
+            Tip.showTip(UserLoginActivity.this,"请检查网络");
+            progressDialog.dismiss();
+            e.printStackTrace();
+        }
+    }
+
+    private void setLocal(){
+        SharePreferences.putString(UserLoginActivity.this, AppConstants.USER_PHONE, name.getText().toString());
+        SharePreferences.putString(UserLoginActivity.this, AppConstants.USER_PASSWORD, password.getText().toString());
+        SharePreferences.putInt(UserLoginActivity.this, AppConstants.USER_LOGIN_COUNT, 0);
+
+        SQLiteDatabase sqLiteDatabase = dataBaseHelper.getReadableDatabase();
+        String delete = "delete from user where user_phone ='" +
+                name.getText().toString() +
+                "'";
+        sqLiteDatabase.execSQL(delete);
+
+        ContentValues values = new ContentValues();
+        values.put("user_name",registers.get(0).getUser_name());
+        values.put("user_phone",registers.get(0).getUser_phone());
+        values.put("user_sort",registers.get(0).getUser_sort());
+        values.put("user_sex",registers.get(0).getUser_sex());
+        values.put("user_picture",registers.get(0).getUser_picture());
+        values.put("user_birth","1990-11-22");
+        sqLiteDatabase.insert("user",null,values);
+        sqLiteDatabase.close();
+
+
+        progressDialog.dismiss();
+        Intent intent = new Intent(UserLoginActivity.this,MainActivity.class);
+        startActivity(intent);
+
+
+     //   Im();
     }
 
     private void login(){
@@ -150,7 +247,7 @@ public class UserLoginActivity extends AppCompatActivity {
                                 ContentValues values = new ContentValues();
                                 SharePreferences.putString(UserLoginActivity.this, AppConstants.USER_PHONE, name.getText().toString());
                                 SharePreferences.putString(UserLoginActivity.this, AppConstants.USER_PASSWORD, password.getText().toString());
-                                SharePreferences.putInt(UserLoginActivity.this, AppConstants.USER_LOGIN_COUNT, 1);
+                                SharePreferences.putInt(UserLoginActivity.this, AppConstants.USER_LOGIN_COUNT, 0);
                                // SharePreferences.putInt(UserLoginActivity.this,AppConstants.USER_sta,0);
                                 String phone = resultSet.getString("user_phone");
                                 String name1 = resultSet.getString("user_name");

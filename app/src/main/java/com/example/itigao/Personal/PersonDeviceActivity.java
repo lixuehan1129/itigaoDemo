@@ -65,7 +65,7 @@ public class PersonDeviceActivity extends AppCompatActivity {
 
         new Thread(){
             public void run(){
-              //  postParams();
+               // postParams();
                 postLogin();
             }
         }.start();
@@ -101,7 +101,7 @@ public class PersonDeviceActivity extends AppCompatActivity {
 
         HashMap<String,String> formParams = new HashMap<>();
             //传参
-        formParams.put("user_phone", "17888836861");
+        formParams.put("user_phone", "17888836866");
         formParams.put("user_password", "123456");
         formParams.put("user_name", "智慧云用户");
         formParams.put("user_create_time", DateUtils.StringData());
@@ -110,6 +110,7 @@ public class PersonDeviceActivity extends AppCompatActivity {
         formParams.put("user_sort","0");
         formParams.put("user_online_time","0");
         formParams.put("user_picture", "http://ty01.tipass.com/images/head/head_name(2).PNG");
+        formParams.put("user_birth", "2000-10-10");
 
         StringBuffer sb = new StringBuffer();
         for (String key: formParams.keySet()) {

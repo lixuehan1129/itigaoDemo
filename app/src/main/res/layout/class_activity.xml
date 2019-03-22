@@ -90,14 +90,14 @@
                         android:layout_height="110dp"
                         android:layout_marginRight="10dp"
                         android:adjustViewBounds="true"
-                        android:scaleType="matrix"/>
+                        android:scaleType="centerCrop"/>
 
                     <com.example.itigao.ViewHelper.CustomRoundAngleImageView
                         android:id="@+id/class_activity_iv2"
                         android:layout_width="110dp"
                         android:layout_height="110dp"
                         android:adjustViewBounds="true"
-                        android:scaleType="matrix"/>
+                        android:scaleType="centerCrop"/>
 
                 </LinearLayout>
                 
