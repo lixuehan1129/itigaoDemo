@@ -42,7 +42,7 @@ public class VideoFragment extends BaseFragment {
     private int video_section;
     private int video_bid;
     private int video_select;
-    private int video_record;
+    private int video_record;   //0表示主页推荐内容不计，1表示课程列表加入记录，2观看记录
 
     ArrayList<String> name;
     ArrayList<String> content;

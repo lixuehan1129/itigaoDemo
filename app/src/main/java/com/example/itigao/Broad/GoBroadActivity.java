@@ -57,34 +57,25 @@ public class GoBroadActivity extends AppCompatActivity{
         // response screen rotation event
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_FULL_SENSOR);
 
-
         //2、通过Resources获取
         DisplayMetrics dm = getResources().getDisplayMetrics();
-        int height = dm.heightPixels;
-        int width = dm.widthPixels;
 
 
         btnPublish = (Button) findViewById(R.id.publish);
         btnSwitchCamera = (ImageView) findViewById(R.id.swCam);
 
-        initLiveConfig(height,width);
-
-//
+        initLiveConfig();
     }
 
     /**
      * 设置推流参数
      */
-    public void initLiveConfig(int height, int width) {
+    public void initLiveConfig() {
         mLiveCameraView = (StreamLiveCameraView) findViewById(R.id.stream_previewView);
-
         //参数配置 start
         streamAVOption = new StreamAVOption();
-       // streamAVOption.videoHeight = height;
-       // streamAVOption.videoWidth = width;
         streamAVOption.streamUrl = url + GoBid;
         //参数配置 end
-
         mLiveCameraView.init(this, streamAVOption);
         mLiveCameraView.addStreamStateListener(resConnectionListener);
 

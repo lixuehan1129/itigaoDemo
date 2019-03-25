@@ -4,7 +4,24 @@
             "outputFile": "C:\\lifiles\\clone\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ka\\values-ka.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\ROBOSOFT\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\8924ef5b73f6fb7af384936befbb337b\\res\\values-ka\\values-ka.xml",
+                    "source": "C:\\Users\\ROBOSOFT\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\660377aac3922315acb3f0d80a7aea75\\res\\values-ka\\values-ka.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "52",
+                        "startColumns": "4",
+                        "startOffsets": "4182",
+                        "endColumns": "100",
+                        "endOffsets": "4278"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\ROBOSOFT\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\e9102abb81bb32136e9eb7c34cdf4eed\\res\\values-ka\\values-ka.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -21,7 +38,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\ROBOSOFT\\.gradle\\caches\\transforms-1\\files-1.1\\exoplayer-ui-2.9.1.aar\\118ad3837a253d30f407a1b78b2b3ece\\res\\values-ka\\values-ka.xml",
+                    "source": "C:\\Users\\ROBOSOFT\\.gradle\\caches\\transforms-1\\files-1.1\\exoplayer-ui-2.9.1.aar\\9d5860d4d0141d6a902e9c858413e01e\\res\\values-ka\\values-ka.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -35,23 +52,6 @@
                         "startOffsets": "1878,1957,2042,2117,2182,2247,2323,2404,2487,2567,2642,2718,2785,2857,2922,3000,3073,3154,3239,3292,3353,3401,3462,3526,3587,3653,3716,3782,3834,3896,3972,4048",
                         "endColumns": "78,84,74,64,64,75,80,82,79,74,75,66,71,64,77,72,80,84,52,60,47,60,63,60,65,62,65,51,61,75,75,52",
                         "endOffsets": "1952,2037,2112,2177,2242,2318,2399,2482,2562,2637,2713,2780,2852,2917,2995,3068,3149,3234,3287,3348,3396,3457,3521,3582,3648,3711,3777,3829,3891,3967,4043,4096"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\ROBOSOFT\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\b65d07d070781fc38664792cdae78e19\\res\\values-ka\\values-ka.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    },
-                    "to": {
-                        "startLines": "52",
-                        "startColumns": "4",
-                        "startOffsets": "4182",
-                        "endColumns": "100",
-                        "endOffsets": "4278"
                     }
                 }
             ]

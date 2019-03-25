@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
-
-
+    android:layout_height="fill_parent">
 
     <me.lake.librestreaming.ws.StreamLiveCameraView
         android:id="@+id/stream_previewView"
@@ -13,33 +9,6 @@
         android:layout_height="match_parent">
 
     </me.lake.librestreaming.ws.StreamLiveCameraView>
-
-    <!--<net.ossrs.yasea.SrsCameraView-->
-        <!--android:id="@+id/glsurfaceview_camera"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="match_parent"-->
-        <!--android:layout_alignParentEnd="true"-->
-        <!--android:layout_alignParentLeft="true"-->
-        <!--android:layout_alignParentRight="true"-->
-        <!--android:layout_alignParentStart="true"-->
-        <!--android:layout_alignParentTop="true" />-->
-
-    <!--<Button-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:text="publish"-->
-        <!--android:id="@+id/swCam"-->
-        <!--android:layout_alignParentBottom="true"-->
-        <!--android:layout_alignParentLeft="true"-->
-        <!--android:layout_alignParentStart="true" />-->
-
-    <!--<Button-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:text="switch"-->
-        <!--android:id="@+id/swCam"-->
-        <!--android:layout_alignBottom="@+id/publish"-->
-        <!--android:layout_toRightOf="@+id/publish" />-->
 
     <RelativeLayout
         android:padding="8dp"
@@ -70,26 +39,6 @@
             android:textColor="@color/colorWhite" />
 
     </RelativeLayout>
-
-
-
-    <!--<Button-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:text="record"-->
-        <!--android:id="@+id/record"-->
-        <!--android:layout_alignBottom="@+id/publish"-->
-        <!--android:layout_toRightOf="@id/swCam" />-->
-
-    <!--<Button-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:text="soft encoder"-->
-        <!--android:id="@+id/swEnc"-->
-        <!--android:layout_alignBottom="@+id/publish"-->
-        <!--android:layout_toRightOf="@id/record"-->
-        <!--android:layout_alignParentRight="true"-->
-        <!--android:layout_alignParentEnd="true"/>-->
 
 
 </RelativeLayout>

@@ -24,31 +24,23 @@ import com.bumptech.glide.util.Util;
 import com.example.itigao.Adapter.ClassActivityAdapter;
 import com.example.itigao.Adapter.ClassVideoAdapter;
 import com.example.itigao.AutoProject.AppConstants;
-import com.example.itigao.AutoProject.JDBCTools;
 import com.example.itigao.AutoProject.JsonCode;
 import com.example.itigao.AutoProject.SharePreferences;
-import com.example.itigao.AutoProject.Tip;
 import com.example.itigao.Broad.BroadNewActivity;
 import com.example.itigao.ClassAb.Anchor;
 import com.example.itigao.ClassAb.Classes;
-import com.example.itigao.ClassAb.HuDong;
 import com.example.itigao.ClassAb.Record;
 import com.example.itigao.HuDong.HuDongActivity;
 import com.example.itigao.HuDong.HuDongPlayActivity;
 import com.example.itigao.R;
 import com.example.itigao.Utils.StatusBarUtils;
 import com.example.itigao.Video.VideoNewActivity;
-import com.google.gson.JsonArray;
-import com.mysql.jdbc.Connection;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 

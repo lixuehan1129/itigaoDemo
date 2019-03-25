@@ -207,7 +207,7 @@ public class UserLoginActivity extends AppCompatActivity {
         values.put("user_sort",registers.get(0).getUser_sort());
         values.put("user_sex",registers.get(0).getUser_sex());
         values.put("user_picture",registers.get(0).getUser_picture());
-        values.put("user_birth","1990-11-22");
+        values.put("user_birth",registers.get(0).getUser_birth());
         sqLiteDatabase.insert("user",null,values);
         sqLiteDatabase.close();
 

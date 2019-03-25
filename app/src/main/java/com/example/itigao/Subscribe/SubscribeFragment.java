@@ -116,6 +116,7 @@ public class SubscribeFragment extends BaseFragment {
     /**
      * 判断是否是当日第一次登陆
      */
+    @SuppressLint("SetTextI18n")
     private void isTodayFirstLogin() {
         SharedPreferences preferences = getActivity().getSharedPreferences("LastLoginTime", MODE_PRIVATE);
         int lastTime = preferences.getInt("LoginTime", 20190225);
@@ -130,8 +131,13 @@ public class SubscribeFragment extends BaseFragment {
             SharePreferences.remove(getActivity(),AppConstants.USER_LOGIN_COUNT);
             SharePreferences.putInt(getActivity(),AppConstants.USER_LOGIN_COUNT,loginCount);
             days.setText("" + loginCount);
+            saveExitTime(todayTime);
         }else {
+            loginCount = 1;
+            SharePreferences.remove(getActivity(),AppConstants.USER_LOGIN_COUNT);
+            SharePreferences.putInt(getActivity(),AppConstants.USER_LOGIN_COUNT,loginCount);
             days.setText("" + loginCount);
+            saveExitTime(todayTime);
         }
     }
 
@@ -151,7 +157,7 @@ public class SubscribeFragment extends BaseFragment {
     @Override
     public void onDestroy() {
         super.onDestroy();
-        saveExitTime(todayTime);
+     //   saveExitTime(todayTime);
     }
 
 

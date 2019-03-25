@@ -302,7 +302,7 @@ public class PersonChangeActivity extends AppCompatActivity{
                             + "-" + dayOfMonth);
                 }
                 // 设置初始日期
-                , calendar.get(Calendar.YEAR)
+                ,calendar.get(Calendar.YEAR)
                 ,calendar.get(Calendar.MONTH )
                 ,calendar.get(Calendar.DAY_OF_MONTH)).show();
     }

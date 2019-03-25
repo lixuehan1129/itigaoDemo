@@ -61,7 +61,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         android:hardwareAccelerated="true"
-        android:largeHeap="true">
+        android:largeHeap="true"
+        tools:ignore="GoogleAppIndexingWarning">
         <activity android:name=".InitializeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -192,7 +193,8 @@
 
         <activity android:name=".HuDong.HuDongPlayActivity"
             android:configChanges="orientation|screenSize|keyboardHidden"
-            android:screenOrientation="portrait" /> <!-- or android:screenOrientation="landscape"-->
+            android:screenOrientation="portrait"
+            tools:ignore="InnerclassSeparator" /> <!-- or android:screenOrientation="landscape"-->
 
         <activity android:name=".HuDong.HuDongPutActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"

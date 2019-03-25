@@ -5,21 +5,21 @@ public class Register {
             user_password,
             user_name,
             user_create_time,
-            user_picture;
-    //        user_birth;
+            user_picture,
+            user_birth;
     private int user_level,
             user_sex,
             user_sort,
             user_online_time,
             user_id;
 
-//    public String getUser_birth() {
-//        return user_birth;
-//    }
-//
-//    public void setUser_birth(String user_birth) {
-//        this.user_birth = user_birth;
-//    }
+    public String getUser_birth() {
+        return user_birth;
+    }
+
+    public void setUser_birth(String user_birth) {
+        this.user_birth = user_birth;
+    }
 
     public int getUser_id() {
         return user_id;
