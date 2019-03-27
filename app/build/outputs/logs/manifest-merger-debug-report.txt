@@ -1,148 +1,148 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:2:1-238:12
-INJECTED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:2:1-238:12
-INJECTED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:2:1-238:12
-INJECTED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:2:1-238:12
-MERGED from [cn.smssdk:SMSSDK:3.3.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\SMSSDK-3.3.0.aar\3d20f00153e4e381338d581f5361a65d\AndroidManifest.xml:2:1-11:12
-MERGED from [cn.smssdk:ShortMessageSDKGUI:3.3.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\ShortMessageSDKGUI-3.3.0.aar\62c09246c789585b4b50dc503c702b06\AndroidManifest.xml:2:1-16:12
+ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:2:1-239:12
+INJECTED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:2:1-239:12
+INJECTED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:2:1-239:12
+INJECTED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:2:1-239:12
+MERGED from [cn.smssdk:SMSSDK:3.3.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\SMSSDK-3.3.0.aar\ecf0b1c6198f7382ad548e4ca97621d4\AndroidManifest.xml:2:1-11:12
+MERGED from [cn.smssdk:ShortMessageSDKGUI:3.3.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\ShortMessageSDKGUI-3.3.0.aar\6c28477428f88ff810b7008f7066ee99\AndroidManifest.xml:2:1-16:12
 MERGED from [:silicompressor] C:\lifiles\clone\silicompressor\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-20:12
-MERGED from [com.android.support:design:27.1.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\design-27.1.1.aar\dfa4127981b02c6800efe3e853adb9c5\AndroidManifest.xml:17:1-22:12
-MERGED from [com.shuyu:GSYVideoPlayer:6.0.2] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\GSYVideoPlayer-6.0.2.aar\a243a4dec28c86eb820d3a9f527e15da\AndroidManifest.xml:2:1-17:12
-MERGED from [com.shuyu:gsyVideoPlayer-java:6.0.2] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-java-6.0.2.aar\7e24539fdfecfe5a88ae34ad6b3cf866\AndroidManifest.xml:2:1-17:12
-MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\e9102abb81bb32136e9eb7c34cdf4eed\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\cfd9b62733466a8d03108a9a67539f15\AndroidManifest.xml:2:1-11:12
-MERGED from [com.andkulikov:transitionseverywhere:1.7.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\transitionseverywhere-1.7.0.aar\8a1b4e7a364b785f99e1e83a15a60d00\AndroidManifest.xml:2:1-14:12
-MERGED from [com.android.support:support-v4:27.1.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.1.aar\62fb8a0c05dec1208b80fc41911a4991\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:cardview-v7:27.0.2] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\cardview-v7-27.0.2.aar\dc87c934a79183b3f31a4f080816d3ff\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:recyclerview-v7:27.1.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.1.1.aar\e1ce9490a9a9ec6e0be035f583428ac2\AndroidManifest.xml:17:1-22:12
-MERGED from [com.ashokvarma.android:bottom-navigation-bar:2.0.3] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\bottom-navigation-bar-2.0.3.aar\d353d0fd4ea5e923ca993dd169543c23\AndroidManifest.xml:2:1-13:12
-MERGED from [de.hdodenhof:circleimageview:2.1.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\circleimageview-2.1.0.aar\3b2c1177ded932a22b250ff7d666aac8\AndroidManifest.xml:2:1-11:12
-MERGED from [top.zibin:Luban:1.1.8] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\Luban-1.1.8.aar\7af50323fa4eee93d6336d5ea47f62a9\AndroidManifest.xml:2:1-11:12
-MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\4df1b54d1c26f1cd180853c39c641551\AndroidManifest.xml:2:1-134:12
-MERGED from [cn.jiguang.sdk:jcore:1.2.6] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jcore-1.2.6.aar\02efc3e773680d6191c55af5f51ca48d\AndroidManifest.xml:2:1-14:12
-MERGED from [com.shuyu:gsyVideoPlayer-armv5:6.0.2] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-armv5-6.0.2.aar\885f4f6e6c6cae921765decb6e14c2f1\AndroidManifest.xml:2:1-17:12
-MERGED from [com.shuyu:gsyVideoPlayer-armv7a:6.0.2] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-armv7a-6.0.2.aar\76a89af0ade4de12665f72a47c420d07\AndroidManifest.xml:2:1-17:12
-MERGED from [com.shuyu:gsyVideoPlayer-arm64:6.0.2] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-arm64-6.0.2.aar\8ca279a434ec883d89a64b99d3e719ba\AndroidManifest.xml:2:1-17:12
-MERGED from [com.shuyu:gsyVideoPlayer-x64:6.0.2] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-x64-6.0.2.aar\c8e86a20e05f2ec5d0dd0f24569ac052\AndroidManifest.xml:2:1-17:12
-MERGED from [com.shuyu:gsyVideoPlayer-x86:6.0.2] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-x86-6.0.2.aar\8ee58f9d881bbb67cb3a640513be876e\AndroidManifest.xml:2:1-17:12
-MERGED from [cn.jzvd:jiaozivideoplayer:6.4.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jiaozivideoplayer-6.4.1.aar\4314beeca2fd3979b702c4b803d25d36\AndroidManifest.xml:2:1-13:12
+MERGED from [com.android.support:design:27.1.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\design-27.1.1.aar\12a02d6fce6c83bce39d06523f3dc5a3\AndroidManifest.xml:17:1-22:12
+MERGED from [com.shuyu:GSYVideoPlayer:6.0.2] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\GSYVideoPlayer-6.0.2.aar\e76cdc6e40829737e78f1a0ea8eb7746\AndroidManifest.xml:2:1-17:12
+MERGED from [com.shuyu:gsyVideoPlayer-java:6.0.2] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-java-6.0.2.aar\aa50df5b2165103000ed0402dd889165\AndroidManifest.xml:2:1-17:12
+MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\7aa8e7713e13e9521bfad4187c7aaebe\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\cf870fa83c9c21e62b7ee52b86b8bdc1\AndroidManifest.xml:2:1-11:12
+MERGED from [com.andkulikov:transitionseverywhere:1.7.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\transitionseverywhere-1.7.0.aar\1bbd8c7785f452e993b1541e4ec63523\AndroidManifest.xml:2:1-14:12
+MERGED from [com.android.support:support-v4:27.1.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.1.aar\480fff42f931984a3c901232585546f9\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:cardview-v7:27.0.2] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\cardview-v7-27.0.2.aar\0adac90767c72ff63f4d1f92dff14c53\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:recyclerview-v7:27.1.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.1.1.aar\9123048e0d28aaebd546cf86f31d7907\AndroidManifest.xml:17:1-22:12
+MERGED from [com.ashokvarma.android:bottom-navigation-bar:2.0.3] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\bottom-navigation-bar-2.0.3.aar\6b8c28f58cfcf8374e4856588e83a4ba\AndroidManifest.xml:2:1-13:12
+MERGED from [de.hdodenhof:circleimageview:2.1.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\circleimageview-2.1.0.aar\1e80724069ff4a821c72bcc331658c00\AndroidManifest.xml:2:1-11:12
+MERGED from [top.zibin:Luban:1.1.8] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\Luban-1.1.8.aar\16f261791ab6513adc9f0ffb20734ddc\AndroidManifest.xml:2:1-11:12
+MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\2b7af9f364421841c31e49c60ad0781b\AndroidManifest.xml:2:1-134:12
+MERGED from [cn.jiguang.sdk:jcore:1.2.6] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jcore-1.2.6.aar\07e46928d6e9767df4e7ea45aa041f9f\AndroidManifest.xml:2:1-14:12
+MERGED from [com.shuyu:gsyVideoPlayer-armv5:6.0.2] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-armv5-6.0.2.aar\b52a435fd37e84d050bfa60a5136c729\AndroidManifest.xml:2:1-17:12
+MERGED from [com.shuyu:gsyVideoPlayer-armv7a:6.0.2] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-armv7a-6.0.2.aar\c261dba5aaa9d268262d6301543e94e9\AndroidManifest.xml:2:1-17:12
+MERGED from [com.shuyu:gsyVideoPlayer-arm64:6.0.2] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-arm64-6.0.2.aar\23821575457acb0b568bac1e4defee5d\AndroidManifest.xml:2:1-17:12
+MERGED from [com.shuyu:gsyVideoPlayer-x64:6.0.2] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-x64-6.0.2.aar\9e14c4c0799c5d95eb8e2a7bda609049\AndroidManifest.xml:2:1-17:12
+MERGED from [com.shuyu:gsyVideoPlayer-x86:6.0.2] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-x86-6.0.2.aar\05bf0a87267eddab4cc53af9461d29d0\AndroidManifest.xml:2:1-17:12
+MERGED from [cn.jzvd:jiaozivideoplayer:6.4.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jiaozivideoplayer-6.4.1.aar\def054a8fe9cd164dc5078a810adef72\AndroidManifest.xml:2:1-13:12
 MERGED from [:libWSLive] C:\lifiles\clone\libWSLive\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-25:12
-MERGED from [com.android.support:transition:27.1.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\transition-27.1.1.aar\2d2576dc9238288cb2851385189da326\AndroidManifest.xml:17:1-22:12
-MERGED from [com.shuyu:GSYVideoPlayer-exo2:6.0.2] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\GSYVideoPlayer-exo2-6.0.2.aar\12106f359511a7d5610547bb4e0432ec\AndroidManifest.xml:2:1-11:12
-MERGED from [com.google.android.exoplayer:exoplayer:2.9.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\exoplayer-2.9.1.aar\aca366e30101d754847af5c918011da1\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.exoplayer:exoplayer-ui:2.9.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\exoplayer-ui-2.9.1.aar\9d5860d4d0141d6a902e9c858413e01e\AndroidManifest.xml:17:1-24:12
-MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.1.aar\be9b586055a8d294f74c38fe1f9e8d6b\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\3eba193245f78c9e293b8fae043fdcaa\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:animated-vector-drawable:27.1.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.1.aar\aab681aefd40a45a6d7abee022c1bfd7\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\9cfcfc89bb2c5886ec4586d0d73a5cb8\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\483ba85708f03a5be4ddd9a59ce4e704\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-vector-drawable:27.1.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.1.aar\ecfacb1f3c16cda2ba50453199160c49\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-compat:27.1.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\660377aac3922315acb3f0d80a7aea75\AndroidManifest.xml:17:1-22:12
-MERGED from [com.google.android.exoplayer:extension-rtmp:2.9.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\extension-rtmp-2.9.1.aar\9c1b770f643b3ec78fca1d7e121a809a\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.exoplayer:exoplayer-dash:2.9.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\exoplayer-dash-2.9.1.aar\6f804a9ebf500cb906eaac7009470827\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.exoplayer:exoplayer-hls:2.9.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\exoplayer-hls-2.9.1.aar\ba340da6e677b1314f10e22ad7df84b8\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.exoplayer:exoplayer-smoothstreaming:2.9.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\exoplayer-smoothstreaming-2.9.1.aar\fd21a36b592b492411e0a68c70817441\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.exoplayer:exoplayer-core:2.9.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\exoplayer-core-2.9.1.aar\f571ebd78857f145f4c6a7b128e8601f\AndroidManifest.xml:17:1-26:12
-MERGED from [jp.co.cyberagent.android.gpuimage:gpuimage-library:1.4.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\gpuimage-library-1.4.1.aar\d37b0acd1e42eb4066c72ba3f96a804f\AndroidManifest.xml:2:1-12:12
-MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\89721e34e4d46c3da5c5e088849b9389\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\6490599569a1eb4d4d9ba5cdca06b772\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\1e34a03f534508d8f32f69ffa73221cb\AndroidManifest.xml:17:1-22:12
-MERGED from [com.shuyu:gsyVideoPlayer-base:6.0.2] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-base-6.0.2.aar\25d73026eee1d53d6f36f921409e526d\AndroidManifest.xml:2:1-11:12
-MERGED from [tv.danmaku.ijk.media:ijkplayer-java:0.8.8] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\ijkplayer-java-0.8.8.aar\1fb31c08f378c3cc8b19bfa4cec16c8a\AndroidManifest.xml:2:1-9:12
-MERGED from [com.shuyu:gsyvideoplayer-androidvideocache:6.0.2] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\gsyvideoplayer-androidvideocache-6.0.2.aar\d04132a2f77a5819fdba40c25ff99dce\AndroidManifest.xml:2:1-17:12
-MERGED from [android.arch.core:runtime:1.1.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\7a03870c2ab77337fbe6063ecd01429a\AndroidManifest.xml:17:1-22:12
-MERGED from [net.butterflytv.utils:rtmp-client:3.0.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\rtmp-client-3.0.1.aar\92a5e6a6cfb3dbf1b6fed4dcea750023\AndroidManifest.xml:2:1-13:12
-INJECTED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:2:1-238:12
-INJECTED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:2:1-238:12
-INJECTED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:2:1-238:12
+MERGED from [com.android.support:transition:27.1.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\transition-27.1.1.aar\834482d78834aa8f907a61406d7d4360\AndroidManifest.xml:17:1-22:12
+MERGED from [com.shuyu:GSYVideoPlayer-exo2:6.0.2] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\GSYVideoPlayer-exo2-6.0.2.aar\cd1366158d827c93489e2d54cb2ccdf9\AndroidManifest.xml:2:1-11:12
+MERGED from [com.google.android.exoplayer:exoplayer:2.9.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\exoplayer-2.9.1.aar\79f14847bbe9205fb5ae1e7459dab67b\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.exoplayer:exoplayer-ui:2.9.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\exoplayer-ui-2.9.1.aar\ef19c203f244f4f66eb2e281e581bd64\AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.1.aar\15febec771dbf07f4fa9fe58dfc141ad\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\f307581249a7ce1d759d1b36678b406c\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.1.aar\d12764ac5a0e150e90252b52811ae4aa\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\756bda7727cbbdcb8bf2b66f418c1ebb\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\8919662109f9e5402c48b093bfe2aa47\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:27.1.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.1.aar\f232d6d6b26998ab42d86b5a8dfb8761\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:27.1.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\1a9692e1a8ec29dd3d896c0ab85ac409\AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.exoplayer:extension-rtmp:2.9.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\extension-rtmp-2.9.1.aar\c1c6bf186ec3d781d52aee71941199ef\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.exoplayer:exoplayer-dash:2.9.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\exoplayer-dash-2.9.1.aar\20bcfcb5c85dfb6f8ac6e76b9193005a\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.exoplayer:exoplayer-hls:2.9.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\exoplayer-hls-2.9.1.aar\30b6a0da99d8d684c283bd941c16dbc1\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.exoplayer:exoplayer-smoothstreaming:2.9.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\exoplayer-smoothstreaming-2.9.1.aar\1e45cab9f5e5fc02f564a3dd85917ac8\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.exoplayer:exoplayer-core:2.9.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\exoplayer-core-2.9.1.aar\c7438cc56fcef8fa8d26b818b3f0ae56\AndroidManifest.xml:17:1-26:12
+MERGED from [jp.co.cyberagent.android.gpuimage:gpuimage-library:1.4.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\gpuimage-library-1.4.1.aar\38d7f9f2d72d3adea17dd830697778ee\AndroidManifest.xml:2:1-12:12
+MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\a166d41089773c104a38d6000c6a77ae\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\604376f6720e59b14f37a8563a75482b\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\d4b07011e0593658045863b3a1ffd268\AndroidManifest.xml:17:1-22:12
+MERGED from [com.shuyu:gsyVideoPlayer-base:6.0.2] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-base-6.0.2.aar\0672a19d576c0e8cf6b7ffe498c1f2d2\AndroidManifest.xml:2:1-11:12
+MERGED from [tv.danmaku.ijk.media:ijkplayer-java:0.8.8] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\ijkplayer-java-0.8.8.aar\5036f5e64c92977479d53268bae6c16a\AndroidManifest.xml:2:1-9:12
+MERGED from [com.shuyu:gsyvideoplayer-androidvideocache:6.0.2] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\gsyvideoplayer-androidvideocache-6.0.2.aar\a33d70fcbc7b3ce0c71c122e091af34d\AndroidManifest.xml:2:1-17:12
+MERGED from [android.arch.core:runtime:1.1.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\a3d25b12021229b82c26c3f80edf109f\AndroidManifest.xml:17:1-22:12
+MERGED from [net.butterflytv.utils:rtmp-client:3.0.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\rtmp-client-3.0.1.aar\bdbd10a719ee5507d49c1aefc90aee31\AndroidManifest.xml:2:1-13:12
+INJECTED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:2:1-239:12
+INJECTED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:2:1-239:12
+INJECTED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:2:1-239:12
 	package
 		ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:4:5-33
 		INJECTED from C:\lifiles\clone\app\src\main\AndroidManifest.xml
 		INJECTED from C:\lifiles\clone\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\lifiles\clone\app\src\main\AndroidManifest.xml
-		ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:2:1-238:12
+		ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:2:1-239:12
 		INJECTED from C:\lifiles\clone\app\src\main\AndroidManifest.xml
 	xmlns:tools
 		ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:3:5-51
 	android:versionCode
 		INJECTED from C:\lifiles\clone\app\src\main\AndroidManifest.xml
-		ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:2:1-238:12
+		ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:2:1-239:12
 		INJECTED from C:\lifiles\clone\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:2:11-69
 permission#com.example.itigao.permission.JPUSH_MESSAGE
 ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:6:5-8:46
-MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\4df1b54d1c26f1cd180853c39c641551\AndroidManifest.xml:11:5-13:47
+MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\2b7af9f364421841c31e49c60ad0781b\AndroidManifest.xml:11:5-13:47
 	android:protectionLevel
 		ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:8:9-44
 	android:name
 		ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:7:9-67
 uses-permission#android.permission.INTERNET
 ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:11:5-67
-MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\4df1b54d1c26f1cd180853c39c641551\AndroidManifest.xml:18:5-67
-MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\4df1b54d1c26f1cd180853c39c641551\AndroidManifest.xml:18:5-67
+MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\2b7af9f364421841c31e49c60ad0781b\AndroidManifest.xml:18:5-67
+MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\2b7af9f364421841c31e49c60ad0781b\AndroidManifest.xml:18:5-67
 MERGED from [:libWSLive] C:\lifiles\clone\libWSLive\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:5-67
 MERGED from [:libWSLive] C:\lifiles\clone\libWSLive\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:5-67
-MERGED from [net.butterflytv.utils:rtmp-client:3.0.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\rtmp-client-3.0.1.aar\92a5e6a6cfb3dbf1b6fed4dcea750023\AndroidManifest.xml:11:5-67
-MERGED from [net.butterflytv.utils:rtmp-client:3.0.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\rtmp-client-3.0.1.aar\92a5e6a6cfb3dbf1b6fed4dcea750023\AndroidManifest.xml:11:5-67
+MERGED from [net.butterflytv.utils:rtmp-client:3.0.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\rtmp-client-3.0.1.aar\bdbd10a719ee5507d49c1aefc90aee31\AndroidManifest.xml:11:5-67
+MERGED from [net.butterflytv.utils:rtmp-client:3.0.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\rtmp-client-3.0.1.aar\bdbd10a719ee5507d49c1aefc90aee31\AndroidManifest.xml:11:5-67
 	android:name
 		ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:11:22-64
 uses-permission#android.permission.ACCESS_NETWORK_STATE
 ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:13:5-79
-MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\4df1b54d1c26f1cd180853c39c641551\AndroidManifest.xml:25:5-79
-MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\4df1b54d1c26f1cd180853c39c641551\AndroidManifest.xml:25:5-79
-MERGED from [cn.jzvd:jiaozivideoplayer:6.4.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jiaozivideoplayer-6.4.1.aar\4314beeca2fd3979b702c4b803d25d36\AndroidManifest.xml:11:5-79
-MERGED from [cn.jzvd:jiaozivideoplayer:6.4.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jiaozivideoplayer-6.4.1.aar\4314beeca2fd3979b702c4b803d25d36\AndroidManifest.xml:11:5-79
-MERGED from [com.google.android.exoplayer:exoplayer-core:2.9.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\exoplayer-core-2.9.1.aar\f571ebd78857f145f4c6a7b128e8601f\AndroidManifest.xml:24:5-79
-MERGED from [com.google.android.exoplayer:exoplayer-core:2.9.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\exoplayer-core-2.9.1.aar\f571ebd78857f145f4c6a7b128e8601f\AndroidManifest.xml:24:5-79
+MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\2b7af9f364421841c31e49c60ad0781b\AndroidManifest.xml:25:5-79
+MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\2b7af9f364421841c31e49c60ad0781b\AndroidManifest.xml:25:5-79
+MERGED from [cn.jzvd:jiaozivideoplayer:6.4.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jiaozivideoplayer-6.4.1.aar\def054a8fe9cd164dc5078a810adef72\AndroidManifest.xml:11:5-79
+MERGED from [cn.jzvd:jiaozivideoplayer:6.4.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jiaozivideoplayer-6.4.1.aar\def054a8fe9cd164dc5078a810adef72\AndroidManifest.xml:11:5-79
+MERGED from [com.google.android.exoplayer:exoplayer-core:2.9.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\exoplayer-core-2.9.1.aar\c7438cc56fcef8fa8d26b818b3f0ae56\AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.exoplayer:exoplayer-core:2.9.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\exoplayer-core-2.9.1.aar\c7438cc56fcef8fa8d26b818b3f0ae56\AndroidManifest.xml:24:5-79
 	android:name
 		ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:13:22-76
 uses-permission#android.permission.ACCESS_WIFI_STATE
 ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:15:5-76
-MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\4df1b54d1c26f1cd180853c39c641551\AndroidManifest.xml:27:5-76
-MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\4df1b54d1c26f1cd180853c39c641551\AndroidManifest.xml:27:5-76
+MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\2b7af9f364421841c31e49c60ad0781b\AndroidManifest.xml:27:5-76
+MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\2b7af9f364421841c31e49c60ad0781b\AndroidManifest.xml:27:5-76
 	android:name
 		ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:15:22-73
 uses-permission#android.permission.WAKE_LOCK
 ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:17:5-68
-MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\4df1b54d1c26f1cd180853c39c641551\AndroidManifest.xml:19:5-68
-MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\4df1b54d1c26f1cd180853c39c641551\AndroidManifest.xml:19:5-68
+MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\2b7af9f364421841c31e49c60ad0781b\AndroidManifest.xml:19:5-68
+MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\2b7af9f364421841c31e49c60ad0781b\AndroidManifest.xml:19:5-68
 	android:name
 		ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:17:22-65
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
 ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:19:5-81
 MERGED from [:silicompressor] C:\lifiles\clone\silicompressor\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:5-81
 MERGED from [:silicompressor] C:\lifiles\clone\silicompressor\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:5-81
-MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\4df1b54d1c26f1cd180853c39c641551\AndroidManifest.xml:21:5-81
-MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\4df1b54d1c26f1cd180853c39c641551\AndroidManifest.xml:21:5-81
+MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\2b7af9f364421841c31e49c60ad0781b\AndroidManifest.xml:21:5-81
+MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\2b7af9f364421841c31e49c60ad0781b\AndroidManifest.xml:21:5-81
 	android:name
 		ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:19:22-78
 uses-permission#android.permission.READ_PHONE_STATE
 ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:21:5-75
-MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\4df1b54d1c26f1cd180853c39c641551\AndroidManifest.xml:20:5-75
-MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\4df1b54d1c26f1cd180853c39c641551\AndroidManifest.xml:20:5-75
+MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\2b7af9f364421841c31e49c60ad0781b\AndroidManifest.xml:20:5-75
+MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\2b7af9f364421841c31e49c60ad0781b\AndroidManifest.xml:20:5-75
 	android:name
 		ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:21:22-72
 uses-permission#android.permission.VIBRATE
 ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:23:5-66
-MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\4df1b54d1c26f1cd180853c39c641551\AndroidManifest.xml:23:5-66
-MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\4df1b54d1c26f1cd180853c39c641551\AndroidManifest.xml:23:5-66
+MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\2b7af9f364421841c31e49c60ad0781b\AndroidManifest.xml:23:5-66
+MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\2b7af9f364421841c31e49c60ad0781b\AndroidManifest.xml:23:5-66
 	android:name
 		ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:23:22-63
 uses-permission#android.permission.MOUNT_UNMOUNT_FILESYSTEMS
 ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:25:5-26:47
-MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\4df1b54d1c26f1cd180853c39c641551\AndroidManifest.xml:24:5-84
-MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\4df1b54d1c26f1cd180853c39c641551\AndroidManifest.xml:24:5-84
+MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\2b7af9f364421841c31e49c60ad0781b\AndroidManifest.xml:24:5-84
+MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\2b7af9f364421841c31e49c60ad0781b\AndroidManifest.xml:24:5-84
 	tools:ignore
 		ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:26:9-44
 	android:name
 		ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:25:22-81
 uses-permission#android.permission.CAMERA
 ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:28:5-65
-MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\4df1b54d1c26f1cd180853c39c641551\AndroidManifest.xml:39:5-65
-MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\4df1b54d1c26f1cd180853c39c641551\AndroidManifest.xml:39:5-65
+MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\2b7af9f364421841c31e49c60ad0781b\AndroidManifest.xml:39:5-65
+MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\2b7af9f364421841c31e49c60ad0781b\AndroidManifest.xml:39:5-65
 MERGED from [:libWSLive] C:\lifiles\clone\libWSLive\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:5-65
 MERGED from [:libWSLive] C:\lifiles\clone\libWSLive\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:5-65
 	android:name
@@ -153,20 +153,20 @@ ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:30:5-82
 		ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:30:22-79
 uses-permission#android.permission.ACCESS_COARSE_LOCATION
 ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:32:5-80
-MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\4df1b54d1c26f1cd180853c39c641551\AndroidManifest.xml:31:5-81
-MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\4df1b54d1c26f1cd180853c39c641551\AndroidManifest.xml:31:5-81
+MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\2b7af9f364421841c31e49c60ad0781b\AndroidManifest.xml:31:5-81
+MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\2b7af9f364421841c31e49c60ad0781b\AndroidManifest.xml:31:5-81
 	android:name
 		ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:32:22-78
 uses-permission#android.permission.ACCESS_FINE_LOCATION
 ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:34:5-78
-MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\4df1b54d1c26f1cd180853c39c641551\AndroidManifest.xml:32:5-79
-MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\4df1b54d1c26f1cd180853c39c641551\AndroidManifest.xml:32:5-79
+MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\2b7af9f364421841c31e49c60ad0781b\AndroidManifest.xml:32:5-79
+MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\2b7af9f364421841c31e49c60ad0781b\AndroidManifest.xml:32:5-79
 	android:name
 		ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:34:22-76
 uses-permission#android.permission.CHANGE_WIFI_STATE
 ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:36:5-75
-MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\4df1b54d1c26f1cd180853c39c641551\AndroidManifest.xml:34:5-76
-MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\4df1b54d1c26f1cd180853c39c641551\AndroidManifest.xml:34:5-76
+MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\2b7af9f364421841c31e49c60ad0781b\AndroidManifest.xml:34:5-76
+MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\2b7af9f364421841c31e49c60ad0781b\AndroidManifest.xml:34:5-76
 	android:name
 		ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:36:22-73
 uses-permission#android.permission.READ_LOGS
@@ -177,8 +177,8 @@ ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:38:5-39:47
 		ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:38:22-65
 uses-permission#android.permission.WRITE_SETTINGS
 ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:41:5-42:47
-MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\4df1b54d1c26f1cd180853c39c641551\AndroidManifest.xml:26:5-73
-MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\4df1b54d1c26f1cd180853c39c641551\AndroidManifest.xml:26:5-73
+MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\2b7af9f364421841c31e49c60ad0781b\AndroidManifest.xml:26:5-73
+MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\2b7af9f364421841c31e49c60ad0781b\AndroidManifest.xml:26:5-73
 	tools:ignore
 		ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:42:9-44
 	android:name
@@ -205,8 +205,8 @@ ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:50:5-68
 		ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:50:22-65
 uses-permission#android.permission.RECORD_AUDIO
 ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:53:5-70
-MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\4df1b54d1c26f1cd180853c39c641551\AndroidManifest.xml:38:5-71
-MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\4df1b54d1c26f1cd180853c39c641551\AndroidManifest.xml:38:5-71
+MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\2b7af9f364421841c31e49c60ad0781b\AndroidManifest.xml:38:5-71
+MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\2b7af9f364421841c31e49c60ad0781b\AndroidManifest.xml:38:5-71
 MERGED from [:libWSLive] C:\lifiles\clone\libWSLive\build\intermediates\library_manifest\debug\AndroidManifest.xml:14:5-71
 MERGED from [:libWSLive] C:\lifiles\clone\libWSLive\build\intermediates\library_manifest\debug\AndroidManifest.xml:14:5-71
 	android:name
@@ -215,46 +215,46 @@ uses-permission#android.permission.READ_EXTERNAL_STORAGE
 ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:55:5-79
 MERGED from [:silicompressor] C:\lifiles\clone\silicompressor\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:5-80
 MERGED from [:silicompressor] C:\lifiles\clone\silicompressor\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:5-80
-MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\4df1b54d1c26f1cd180853c39c641551\AndroidManifest.xml:22:5-80
-MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\4df1b54d1c26f1cd180853c39c641551\AndroidManifest.xml:22:5-80
+MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\2b7af9f364421841c31e49c60ad0781b\AndroidManifest.xml:22:5-80
+MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\2b7af9f364421841c31e49c60ad0781b\AndroidManifest.xml:22:5-80
 	android:name
 		ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:55:22-77
 application
-ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:57:5-236:19
-MERGED from [cn.smssdk:ShortMessageSDKGUI:3.3.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\ShortMessageSDKGUI-3.3.0.aar\62c09246c789585b4b50dc503c702b06\AndroidManifest.xml:13:5-14:19
-MERGED from [cn.smssdk:ShortMessageSDKGUI:3.3.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\ShortMessageSDKGUI-3.3.0.aar\62c09246c789585b4b50dc503c702b06\AndroidManifest.xml:13:5-14:19
+ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:57:5-237:19
+MERGED from [cn.smssdk:ShortMessageSDKGUI:3.3.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\ShortMessageSDKGUI-3.3.0.aar\6c28477428f88ff810b7008f7066ee99\AndroidManifest.xml:13:5-14:19
+MERGED from [cn.smssdk:ShortMessageSDKGUI:3.3.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\ShortMessageSDKGUI-3.3.0.aar\6c28477428f88ff810b7008f7066ee99\AndroidManifest.xml:13:5-14:19
 MERGED from [:silicompressor] C:\lifiles\clone\silicompressor\build\intermediates\library_manifest\debug\AndroidManifest.xml:14:5-18:19
 MERGED from [:silicompressor] C:\lifiles\clone\silicompressor\build\intermediates\library_manifest\debug\AndroidManifest.xml:14:5-18:19
-MERGED from [com.shuyu:GSYVideoPlayer:6.0.2] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\GSYVideoPlayer-6.0.2.aar\a243a4dec28c86eb820d3a9f527e15da\AndroidManifest.xml:11:5-15:19
-MERGED from [com.shuyu:GSYVideoPlayer:6.0.2] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\GSYVideoPlayer-6.0.2.aar\a243a4dec28c86eb820d3a9f527e15da\AndroidManifest.xml:11:5-15:19
-MERGED from [com.shuyu:gsyVideoPlayer-java:6.0.2] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-java-6.0.2.aar\7e24539fdfecfe5a88ae34ad6b3cf866\AndroidManifest.xml:11:5-15:19
-MERGED from [com.shuyu:gsyVideoPlayer-java:6.0.2] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-java-6.0.2.aar\7e24539fdfecfe5a88ae34ad6b3cf866\AndroidManifest.xml:11:5-15:19
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\cfd9b62733466a8d03108a9a67539f15\AndroidManifest.xml:9:5-20
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\cfd9b62733466a8d03108a9a67539f15\AndroidManifest.xml:9:5-20
-MERGED from [com.andkulikov:transitionseverywhere:1.7.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\transitionseverywhere-1.7.0.aar\8a1b4e7a364b785f99e1e83a15a60d00\AndroidManifest.xml:12:5-20
-MERGED from [com.andkulikov:transitionseverywhere:1.7.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\transitionseverywhere-1.7.0.aar\8a1b4e7a364b785f99e1e83a15a60d00\AndroidManifest.xml:12:5-20
-MERGED from [com.ashokvarma.android:bottom-navigation-bar:2.0.3] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\bottom-navigation-bar-2.0.3.aar\d353d0fd4ea5e923ca993dd169543c23\AndroidManifest.xml:11:5-47
-MERGED from [com.ashokvarma.android:bottom-navigation-bar:2.0.3] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\bottom-navigation-bar-2.0.3.aar\d353d0fd4ea5e923ca993dd169543c23\AndroidManifest.xml:11:5-47
-MERGED from [de.hdodenhof:circleimageview:2.1.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\circleimageview-2.1.0.aar\3b2c1177ded932a22b250ff7d666aac8\AndroidManifest.xml:9:5-20
-MERGED from [de.hdodenhof:circleimageview:2.1.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\circleimageview-2.1.0.aar\3b2c1177ded932a22b250ff7d666aac8\AndroidManifest.xml:9:5-20
-MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\4df1b54d1c26f1cd180853c39c641551\AndroidManifest.xml:42:5-132:19
-MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\4df1b54d1c26f1cd180853c39c641551\AndroidManifest.xml:42:5-132:19
-MERGED from [cn.jiguang.sdk:jcore:1.2.6] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jcore-1.2.6.aar\02efc3e773680d6191c55af5f51ca48d\AndroidManifest.xml:11:5-12:19
-MERGED from [cn.jiguang.sdk:jcore:1.2.6] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jcore-1.2.6.aar\02efc3e773680d6191c55af5f51ca48d\AndroidManifest.xml:11:5-12:19
-MERGED from [com.shuyu:gsyVideoPlayer-armv5:6.0.2] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-armv5-6.0.2.aar\885f4f6e6c6cae921765decb6e14c2f1\AndroidManifest.xml:11:5-15:19
-MERGED from [com.shuyu:gsyVideoPlayer-armv5:6.0.2] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-armv5-6.0.2.aar\885f4f6e6c6cae921765decb6e14c2f1\AndroidManifest.xml:11:5-15:19
-MERGED from [com.shuyu:gsyVideoPlayer-armv7a:6.0.2] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-armv7a-6.0.2.aar\76a89af0ade4de12665f72a47c420d07\AndroidManifest.xml:11:5-15:19
-MERGED from [com.shuyu:gsyVideoPlayer-armv7a:6.0.2] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-armv7a-6.0.2.aar\76a89af0ade4de12665f72a47c420d07\AndroidManifest.xml:11:5-15:19
-MERGED from [com.shuyu:gsyVideoPlayer-arm64:6.0.2] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-arm64-6.0.2.aar\8ca279a434ec883d89a64b99d3e719ba\AndroidManifest.xml:11:5-15:19
-MERGED from [com.shuyu:gsyVideoPlayer-arm64:6.0.2] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-arm64-6.0.2.aar\8ca279a434ec883d89a64b99d3e719ba\AndroidManifest.xml:11:5-15:19
-MERGED from [com.shuyu:gsyVideoPlayer-x64:6.0.2] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-x64-6.0.2.aar\c8e86a20e05f2ec5d0dd0f24569ac052\AndroidManifest.xml:11:5-15:19
-MERGED from [com.shuyu:gsyVideoPlayer-x64:6.0.2] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-x64-6.0.2.aar\c8e86a20e05f2ec5d0dd0f24569ac052\AndroidManifest.xml:11:5-15:19
-MERGED from [com.shuyu:gsyVideoPlayer-x86:6.0.2] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-x86-6.0.2.aar\8ee58f9d881bbb67cb3a640513be876e\AndroidManifest.xml:11:5-15:19
-MERGED from [com.shuyu:gsyVideoPlayer-x86:6.0.2] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-x86-6.0.2.aar\8ee58f9d881bbb67cb3a640513be876e\AndroidManifest.xml:11:5-15:19
+MERGED from [com.shuyu:GSYVideoPlayer:6.0.2] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\GSYVideoPlayer-6.0.2.aar\e76cdc6e40829737e78f1a0ea8eb7746\AndroidManifest.xml:11:5-15:19
+MERGED from [com.shuyu:GSYVideoPlayer:6.0.2] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\GSYVideoPlayer-6.0.2.aar\e76cdc6e40829737e78f1a0ea8eb7746\AndroidManifest.xml:11:5-15:19
+MERGED from [com.shuyu:gsyVideoPlayer-java:6.0.2] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-java-6.0.2.aar\aa50df5b2165103000ed0402dd889165\AndroidManifest.xml:11:5-15:19
+MERGED from [com.shuyu:gsyVideoPlayer-java:6.0.2] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-java-6.0.2.aar\aa50df5b2165103000ed0402dd889165\AndroidManifest.xml:11:5-15:19
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\cf870fa83c9c21e62b7ee52b86b8bdc1\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\cf870fa83c9c21e62b7ee52b86b8bdc1\AndroidManifest.xml:9:5-20
+MERGED from [com.andkulikov:transitionseverywhere:1.7.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\transitionseverywhere-1.7.0.aar\1bbd8c7785f452e993b1541e4ec63523\AndroidManifest.xml:12:5-20
+MERGED from [com.andkulikov:transitionseverywhere:1.7.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\transitionseverywhere-1.7.0.aar\1bbd8c7785f452e993b1541e4ec63523\AndroidManifest.xml:12:5-20
+MERGED from [com.ashokvarma.android:bottom-navigation-bar:2.0.3] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\bottom-navigation-bar-2.0.3.aar\6b8c28f58cfcf8374e4856588e83a4ba\AndroidManifest.xml:11:5-47
+MERGED from [com.ashokvarma.android:bottom-navigation-bar:2.0.3] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\bottom-navigation-bar-2.0.3.aar\6b8c28f58cfcf8374e4856588e83a4ba\AndroidManifest.xml:11:5-47
+MERGED from [de.hdodenhof:circleimageview:2.1.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\circleimageview-2.1.0.aar\1e80724069ff4a821c72bcc331658c00\AndroidManifest.xml:9:5-20
+MERGED from [de.hdodenhof:circleimageview:2.1.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\circleimageview-2.1.0.aar\1e80724069ff4a821c72bcc331658c00\AndroidManifest.xml:9:5-20
+MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\2b7af9f364421841c31e49c60ad0781b\AndroidManifest.xml:42:5-132:19
+MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\2b7af9f364421841c31e49c60ad0781b\AndroidManifest.xml:42:5-132:19
+MERGED from [cn.jiguang.sdk:jcore:1.2.6] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jcore-1.2.6.aar\07e46928d6e9767df4e7ea45aa041f9f\AndroidManifest.xml:11:5-12:19
+MERGED from [cn.jiguang.sdk:jcore:1.2.6] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jcore-1.2.6.aar\07e46928d6e9767df4e7ea45aa041f9f\AndroidManifest.xml:11:5-12:19
+MERGED from [com.shuyu:gsyVideoPlayer-armv5:6.0.2] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-armv5-6.0.2.aar\b52a435fd37e84d050bfa60a5136c729\AndroidManifest.xml:11:5-15:19
+MERGED from [com.shuyu:gsyVideoPlayer-armv5:6.0.2] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-armv5-6.0.2.aar\b52a435fd37e84d050bfa60a5136c729\AndroidManifest.xml:11:5-15:19
+MERGED from [com.shuyu:gsyVideoPlayer-armv7a:6.0.2] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-armv7a-6.0.2.aar\c261dba5aaa9d268262d6301543e94e9\AndroidManifest.xml:11:5-15:19
+MERGED from [com.shuyu:gsyVideoPlayer-armv7a:6.0.2] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-armv7a-6.0.2.aar\c261dba5aaa9d268262d6301543e94e9\AndroidManifest.xml:11:5-15:19
+MERGED from [com.shuyu:gsyVideoPlayer-arm64:6.0.2] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-arm64-6.0.2.aar\23821575457acb0b568bac1e4defee5d\AndroidManifest.xml:11:5-15:19
+MERGED from [com.shuyu:gsyVideoPlayer-arm64:6.0.2] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-arm64-6.0.2.aar\23821575457acb0b568bac1e4defee5d\AndroidManifest.xml:11:5-15:19
+MERGED from [com.shuyu:gsyVideoPlayer-x64:6.0.2] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-x64-6.0.2.aar\9e14c4c0799c5d95eb8e2a7bda609049\AndroidManifest.xml:11:5-15:19
+MERGED from [com.shuyu:gsyVideoPlayer-x64:6.0.2] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-x64-6.0.2.aar\9e14c4c0799c5d95eb8e2a7bda609049\AndroidManifest.xml:11:5-15:19
+MERGED from [com.shuyu:gsyVideoPlayer-x86:6.0.2] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-x86-6.0.2.aar\05bf0a87267eddab4cc53af9461d29d0\AndroidManifest.xml:11:5-15:19
+MERGED from [com.shuyu:gsyVideoPlayer-x86:6.0.2] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-x86-6.0.2.aar\05bf0a87267eddab4cc53af9461d29d0\AndroidManifest.xml:11:5-15:19
 MERGED from [:libWSLive] C:\lifiles\clone\libWSLive\build\intermediates\library_manifest\debug\AndroidManifest.xml:20:5-23:19
 MERGED from [:libWSLive] C:\lifiles\clone\libWSLive\build\intermediates\library_manifest\debug\AndroidManifest.xml:20:5-23:19
-MERGED from [com.shuyu:gsyvideoplayer-androidvideocache:6.0.2] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\gsyvideoplayer-androidvideocache-6.0.2.aar\d04132a2f77a5819fdba40c25ff99dce\AndroidManifest.xml:11:5-15:19
-MERGED from [com.shuyu:gsyvideoplayer-androidvideocache:6.0.2] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\gsyvideoplayer-androidvideocache-6.0.2.aar\d04132a2f77a5819fdba40c25ff99dce\AndroidManifest.xml:11:5-15:19
+MERGED from [com.shuyu:gsyvideoplayer-androidvideocache:6.0.2] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\gsyvideoplayer-androidvideocache-6.0.2.aar\a33d70fcbc7b3ce0c71c122e091af34d\AndroidManifest.xml:11:5-15:19
+MERGED from [com.shuyu:gsyvideoplayer-androidvideocache:6.0.2] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\gsyvideoplayer-androidvideocache-6.0.2.aar\a33d70fcbc7b3ce0c71c122e091af34d\AndroidManifest.xml:11:5-15:19
 	android:supportsRtl
 		ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:61:9-35
 	android:label
@@ -287,10 +287,10 @@ ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:70:17-77
 		ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:70:27-74
 service#cn.jpush.android.service.PushService
 ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:76:9-86:19
-MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\4df1b54d1c26f1cd180853c39c641551\AndroidManifest.xml:46:9-57:19
-MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\4df1b54d1c26f1cd180853c39c641551\AndroidManifest.xml:46:9-57:19
+MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\2b7af9f364421841c31e49c60ad0781b\AndroidManifest.xml:46:9-57:19
+MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\2b7af9f364421841c31e49c60ad0781b\AndroidManifest.xml:46:9-57:19
 	android:process
-		ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\4df1b54d1c26f1cd180853c39c641551\AndroidManifest.xml:50:13-40
+		ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\2b7af9f364421841c31e49c60ad0781b\AndroidManifest.xml:50:13-40
 	android:enabled
 		ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:78:13-35
 	android:exported
@@ -317,16 +317,16 @@ ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:84:17-76
 		ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:84:25-73
 receiver#cn.jpush.android.service.AlarmReceiver
 ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:89:9-91:40
-MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\4df1b54d1c26f1cd180853c39c641551\AndroidManifest.xml:90:9-92:40
-MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\4df1b54d1c26f1cd180853c39c641551\AndroidManifest.xml:90:9-92:40
+MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\2b7af9f364421841c31e49c60ad0781b\AndroidManifest.xml:90:9-92:40
+MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\2b7af9f364421841c31e49c60ad0781b\AndroidManifest.xml:90:9-92:40
 	android:exported
 		ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:91:13-37
 	android:name
 		ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:90:13-66
 provider#cn.jpush.android.service.DataProvider
 ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:94:9-97:40
-MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\4df1b54d1c26f1cd180853c39c641551\AndroidManifest.xml:95:9-98:40
-MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\4df1b54d1c26f1cd180853c39c641551\AndroidManifest.xml:95:9-98:40
+MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\2b7af9f364421841c31e49c60ad0781b\AndroidManifest.xml:95:9-98:40
+MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\2b7af9f364421841c31e49c60ad0781b\AndroidManifest.xml:95:9-98:40
 	android:authorities
 		ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:96:13-66
 	android:exported
@@ -335,8 +335,8 @@ MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\tra
 		ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:95:13-65
 provider#cn.jpush.im.android.helpers.ipc.IMProvider
 ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:100:9-103:40
-MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\4df1b54d1c26f1cd180853c39c641551\AndroidManifest.xml:114:9-117:40
-MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\4df1b54d1c26f1cd180853c39c641551\AndroidManifest.xml:114:9-117:40
+MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\2b7af9f364421841c31e49c60ad0781b\AndroidManifest.xml:114:9-117:40
+MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\2b7af9f364421841c31e49c60ad0781b\AndroidManifest.xml:114:9-117:40
 	android:authorities
 		ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:102:13-64
 	android:exported
@@ -345,8 +345,8 @@ MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\tra
 		ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:101:13-70
 receiver#cn.jpush.im.android.helpers.IMReceiver
 ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:106:9-110:20
-MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\4df1b54d1c26f1cd180853c39c641551\AndroidManifest.xml:83:9-87:20
-MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\4df1b54d1c26f1cd180853c39c641551\AndroidManifest.xml:83:9-87:20
+MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\2b7af9f364421841c31e49c60ad0781b\AndroidManifest.xml:83:9-87:20
+MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\2b7af9f364421841c31e49c60ad0781b\AndroidManifest.xml:83:9-87:20
 	android:enabled
 		ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:108:13-35
 	android:exported
@@ -355,16 +355,16 @@ MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\tra
 		ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:107:13-66
 meta-data#JPUSH_CHANNEL
 ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:118:9-120:49
-MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\4df1b54d1c26f1cd180853c39c641551\AndroidManifest.xml:125:9-127:48
-MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\4df1b54d1c26f1cd180853c39c641551\AndroidManifest.xml:125:9-127:48
+MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\2b7af9f364421841c31e49c60ad0781b\AndroidManifest.xml:125:9-127:48
+MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\2b7af9f364421841c31e49c60ad0781b\AndroidManifest.xml:125:9-127:48
 	android:value
 		ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:120:13-46
 	android:name
 		ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:119:13-41
 meta-data#JPUSH_APPKEY
 ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:123:9-125:56
-MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\4df1b54d1c26f1cd180853c39c641551\AndroidManifest.xml:129:9-131:47
-MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\4df1b54d1c26f1cd180853c39c641551\AndroidManifest.xml:129:9-131:47
+MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\2b7af9f364421841c31e49c60ad0781b\AndroidManifest.xml:129:9-131:47
+MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\2b7af9f364421841c31e49c60ad0781b\AndroidManifest.xml:129:9-131:47
 	android:value
 		ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:125:13-53
 	android:name
@@ -450,173 +450,175 @@ ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:189:9-192:20
 	android:name
 		ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:189:19-57
 activity#com.example.itigao.HuDong.HuDongPlayActivity
-ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:194:9-196:52
+ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:194:9-197:50
 	android:screenOrientation
 		ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:196:13-49
+	tools:ignore
+		ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:197:13-47
 	android:configChanges
 		ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:195:13-74
 	android:name
 		ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:194:19-60
 activity#com.example.itigao.HuDong.HuDongPutActivity
-ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:198:9-203:20
+ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:199:9-204:20
 	android:screenOrientation
-		ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:200:13-49
+		ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:201:13-49
 	tools:ignore
-		ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:201:13-47
+		ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:202:13-47
 	android:configChanges
-		ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:199:13-74
+		ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:200:13-74
 	android:name
-		ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:198:19-59
+		ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:199:19-59
 activity#com.example.itigao.Broad.GoBroadActivity
-ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:205:9-209:20
+ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:206:9-210:20
 	android:screenOrientation
-		ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:206:13-50
+		ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:207:13-50
 	tools:ignore
-		ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:207:13-47
+		ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:208:13-47
 	android:name
-		ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:205:19-56
+		ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:206:19-56
 activity#com.example.itigao.Classes.BaseActivity
-ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:212:9-214:20
+ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:213:9-215:20
 	tools:ignore
-		ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:213:13-47
+		ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:214:13-47
 	android:name
-		ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:212:19-55
+		ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:213:19-55
 activity#com.example.itigao.None.VideoActivity
-ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:216:9-220:20
+ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:217:9-221:20
 	android:screenOrientation
-		ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:219:13-49
+		ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:220:13-49
 	tools:ignore
-		ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:217:13-47
+		ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:218:13-47
 	android:configChanges
-		ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:218:13-74
+		ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:219:13-74
 	android:name
-		ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:216:19-53
+		ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:217:19-53
 activity#com.example.itigao.Video.VideoNewActivity
-ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:222:9-226:20
+ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:223:9-227:20
 	android:screenOrientation
-		ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:225:13-49
+		ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:226:13-49
 	tools:ignore
-		ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:223:13-47
+		ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:224:13-47
 	android:configChanges
-		ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:224:13-74
+		ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:225:13-74
 	android:name
-		ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:222:19-57
+		ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:223:19-57
 activity#com.example.itigao.Broad.BroadNewActivity
-ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:228:9-232:20
+ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:229:9-233:20
 	android:screenOrientation
-		ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:231:13-49
+		ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:232:13-49
 	tools:ignore
-		ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:229:13-47
+		ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:230:13-47
 	android:configChanges
-		ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:230:13-74
+		ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:231:13-74
 	android:name
-		ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:228:19-57
+		ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml:229:19-57
 uses-sdk
 INJECTED from C:\lifiles\clone\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\lifiles\clone\app\src\main\AndroidManifest.xml
 INJECTED from C:\lifiles\clone\app\src\main\AndroidManifest.xml
-MERGED from [cn.smssdk:SMSSDK:3.3.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\SMSSDK-3.3.0.aar\3d20f00153e4e381338d581f5361a65d\AndroidManifest.xml:7:5-9:41
-MERGED from [cn.smssdk:SMSSDK:3.3.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\SMSSDK-3.3.0.aar\3d20f00153e4e381338d581f5361a65d\AndroidManifest.xml:7:5-9:41
-MERGED from [cn.smssdk:ShortMessageSDKGUI:3.3.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\ShortMessageSDKGUI-3.3.0.aar\62c09246c789585b4b50dc503c702b06\AndroidManifest.xml:8:5-11:45
-MERGED from [cn.smssdk:ShortMessageSDKGUI:3.3.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\ShortMessageSDKGUI-3.3.0.aar\62c09246c789585b4b50dc503c702b06\AndroidManifest.xml:8:5-11:45
+MERGED from [cn.smssdk:SMSSDK:3.3.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\SMSSDK-3.3.0.aar\ecf0b1c6198f7382ad548e4ca97621d4\AndroidManifest.xml:7:5-9:41
+MERGED from [cn.smssdk:SMSSDK:3.3.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\SMSSDK-3.3.0.aar\ecf0b1c6198f7382ad548e4ca97621d4\AndroidManifest.xml:7:5-9:41
+MERGED from [cn.smssdk:ShortMessageSDKGUI:3.3.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\ShortMessageSDKGUI-3.3.0.aar\6c28477428f88ff810b7008f7066ee99\AndroidManifest.xml:8:5-11:45
+MERGED from [cn.smssdk:ShortMessageSDKGUI:3.3.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\ShortMessageSDKGUI-3.3.0.aar\6c28477428f88ff810b7008f7066ee99\AndroidManifest.xml:8:5-11:45
 MERGED from [:silicompressor] C:\lifiles\clone\silicompressor\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
 MERGED from [:silicompressor] C:\lifiles\clone\silicompressor\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
-MERGED from [com.android.support:design:27.1.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\design-27.1.1.aar\dfa4127981b02c6800efe3e853adb9c5\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:design:27.1.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\design-27.1.1.aar\dfa4127981b02c6800efe3e853adb9c5\AndroidManifest.xml:20:5-44
-MERGED from [com.shuyu:GSYVideoPlayer:6.0.2] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\GSYVideoPlayer-6.0.2.aar\a243a4dec28c86eb820d3a9f527e15da\AndroidManifest.xml:7:5-9:41
-MERGED from [com.shuyu:GSYVideoPlayer:6.0.2] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\GSYVideoPlayer-6.0.2.aar\a243a4dec28c86eb820d3a9f527e15da\AndroidManifest.xml:7:5-9:41
-MERGED from [com.shuyu:gsyVideoPlayer-java:6.0.2] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-java-6.0.2.aar\7e24539fdfecfe5a88ae34ad6b3cf866\AndroidManifest.xml:7:5-9:41
-MERGED from [com.shuyu:gsyVideoPlayer-java:6.0.2] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-java-6.0.2.aar\7e24539fdfecfe5a88ae34ad6b3cf866\AndroidManifest.xml:7:5-9:41
-MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\e9102abb81bb32136e9eb7c34cdf4eed\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\e9102abb81bb32136e9eb7c34cdf4eed\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\cfd9b62733466a8d03108a9a67539f15\AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\cfd9b62733466a8d03108a9a67539f15\AndroidManifest.xml:5:5-7:41
-MERGED from [com.andkulikov:transitionseverywhere:1.7.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\transitionseverywhere-1.7.0.aar\8a1b4e7a364b785f99e1e83a15a60d00\AndroidManifest.xml:8:5-10:41
-MERGED from [com.andkulikov:transitionseverywhere:1.7.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\transitionseverywhere-1.7.0.aar\8a1b4e7a364b785f99e1e83a15a60d00\AndroidManifest.xml:8:5-10:41
-MERGED from [com.android.support:support-v4:27.1.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.1.aar\62fb8a0c05dec1208b80fc41911a4991\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-v4:27.1.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.1.aar\62fb8a0c05dec1208b80fc41911a4991\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cardview-v7:27.0.2] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\cardview-v7-27.0.2.aar\dc87c934a79183b3f31a4f080816d3ff\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cardview-v7:27.0.2] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\cardview-v7-27.0.2.aar\dc87c934a79183b3f31a4f080816d3ff\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:recyclerview-v7:27.1.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.1.1.aar\e1ce9490a9a9ec6e0be035f583428ac2\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:recyclerview-v7:27.1.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.1.1.aar\e1ce9490a9a9ec6e0be035f583428ac2\AndroidManifest.xml:20:5-44
-MERGED from [com.ashokvarma.android:bottom-navigation-bar:2.0.3] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\bottom-navigation-bar-2.0.3.aar\d353d0fd4ea5e923ca993dd169543c23\AndroidManifest.xml:7:5-9:41
-MERGED from [com.ashokvarma.android:bottom-navigation-bar:2.0.3] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\bottom-navigation-bar-2.0.3.aar\d353d0fd4ea5e923ca993dd169543c23\AndroidManifest.xml:7:5-9:41
-MERGED from [de.hdodenhof:circleimageview:2.1.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\circleimageview-2.1.0.aar\3b2c1177ded932a22b250ff7d666aac8\AndroidManifest.xml:5:5-7:41
-MERGED from [de.hdodenhof:circleimageview:2.1.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\circleimageview-2.1.0.aar\3b2c1177ded932a22b250ff7d666aac8\AndroidManifest.xml:5:5-7:41
-MERGED from [top.zibin:Luban:1.1.8] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\Luban-1.1.8.aar\7af50323fa4eee93d6336d5ea47f62a9\AndroidManifest.xml:7:5-9:41
-MERGED from [top.zibin:Luban:1.1.8] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\Luban-1.1.8.aar\7af50323fa4eee93d6336d5ea47f62a9\AndroidManifest.xml:7:5-9:41
-MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\4df1b54d1c26f1cd180853c39c641551\AndroidManifest.xml:7:5-9:41
-MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\4df1b54d1c26f1cd180853c39c641551\AndroidManifest.xml:7:5-9:41
-MERGED from [cn.jiguang.sdk:jcore:1.2.6] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jcore-1.2.6.aar\02efc3e773680d6191c55af5f51ca48d\AndroidManifest.xml:7:5-9:41
-MERGED from [cn.jiguang.sdk:jcore:1.2.6] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jcore-1.2.6.aar\02efc3e773680d6191c55af5f51ca48d\AndroidManifest.xml:7:5-9:41
-MERGED from [com.shuyu:gsyVideoPlayer-armv5:6.0.2] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-armv5-6.0.2.aar\885f4f6e6c6cae921765decb6e14c2f1\AndroidManifest.xml:7:5-9:41
-MERGED from [com.shuyu:gsyVideoPlayer-armv5:6.0.2] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-armv5-6.0.2.aar\885f4f6e6c6cae921765decb6e14c2f1\AndroidManifest.xml:7:5-9:41
-MERGED from [com.shuyu:gsyVideoPlayer-armv7a:6.0.2] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-armv7a-6.0.2.aar\76a89af0ade4de12665f72a47c420d07\AndroidManifest.xml:7:5-9:41
-MERGED from [com.shuyu:gsyVideoPlayer-armv7a:6.0.2] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-armv7a-6.0.2.aar\76a89af0ade4de12665f72a47c420d07\AndroidManifest.xml:7:5-9:41
-MERGED from [com.shuyu:gsyVideoPlayer-arm64:6.0.2] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-arm64-6.0.2.aar\8ca279a434ec883d89a64b99d3e719ba\AndroidManifest.xml:7:5-9:41
-MERGED from [com.shuyu:gsyVideoPlayer-arm64:6.0.2] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-arm64-6.0.2.aar\8ca279a434ec883d89a64b99d3e719ba\AndroidManifest.xml:7:5-9:41
-MERGED from [com.shuyu:gsyVideoPlayer-x64:6.0.2] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-x64-6.0.2.aar\c8e86a20e05f2ec5d0dd0f24569ac052\AndroidManifest.xml:7:5-9:41
-MERGED from [com.shuyu:gsyVideoPlayer-x64:6.0.2] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-x64-6.0.2.aar\c8e86a20e05f2ec5d0dd0f24569ac052\AndroidManifest.xml:7:5-9:41
-MERGED from [com.shuyu:gsyVideoPlayer-x86:6.0.2] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-x86-6.0.2.aar\8ee58f9d881bbb67cb3a640513be876e\AndroidManifest.xml:7:5-9:41
-MERGED from [com.shuyu:gsyVideoPlayer-x86:6.0.2] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-x86-6.0.2.aar\8ee58f9d881bbb67cb3a640513be876e\AndroidManifest.xml:7:5-9:41
-MERGED from [cn.jzvd:jiaozivideoplayer:6.4.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jiaozivideoplayer-6.4.1.aar\4314beeca2fd3979b702c4b803d25d36\AndroidManifest.xml:7:5-9:41
-MERGED from [cn.jzvd:jiaozivideoplayer:6.4.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jiaozivideoplayer-6.4.1.aar\4314beeca2fd3979b702c4b803d25d36\AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:design:27.1.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\design-27.1.1.aar\12a02d6fce6c83bce39d06523f3dc5a3\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:design:27.1.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\design-27.1.1.aar\12a02d6fce6c83bce39d06523f3dc5a3\AndroidManifest.xml:20:5-44
+MERGED from [com.shuyu:GSYVideoPlayer:6.0.2] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\GSYVideoPlayer-6.0.2.aar\e76cdc6e40829737e78f1a0ea8eb7746\AndroidManifest.xml:7:5-9:41
+MERGED from [com.shuyu:GSYVideoPlayer:6.0.2] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\GSYVideoPlayer-6.0.2.aar\e76cdc6e40829737e78f1a0ea8eb7746\AndroidManifest.xml:7:5-9:41
+MERGED from [com.shuyu:gsyVideoPlayer-java:6.0.2] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-java-6.0.2.aar\aa50df5b2165103000ed0402dd889165\AndroidManifest.xml:7:5-9:41
+MERGED from [com.shuyu:gsyVideoPlayer-java:6.0.2] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-java-6.0.2.aar\aa50df5b2165103000ed0402dd889165\AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\7aa8e7713e13e9521bfad4187c7aaebe\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\7aa8e7713e13e9521bfad4187c7aaebe\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\cf870fa83c9c21e62b7ee52b86b8bdc1\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\cf870fa83c9c21e62b7ee52b86b8bdc1\AndroidManifest.xml:5:5-7:41
+MERGED from [com.andkulikov:transitionseverywhere:1.7.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\transitionseverywhere-1.7.0.aar\1bbd8c7785f452e993b1541e4ec63523\AndroidManifest.xml:8:5-10:41
+MERGED from [com.andkulikov:transitionseverywhere:1.7.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\transitionseverywhere-1.7.0.aar\1bbd8c7785f452e993b1541e4ec63523\AndroidManifest.xml:8:5-10:41
+MERGED from [com.android.support:support-v4:27.1.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.1.aar\480fff42f931984a3c901232585546f9\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:27.1.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.1.aar\480fff42f931984a3c901232585546f9\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:27.0.2] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\cardview-v7-27.0.2.aar\0adac90767c72ff63f4d1f92dff14c53\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:27.0.2] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\cardview-v7-27.0.2.aar\0adac90767c72ff63f4d1f92dff14c53\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:27.1.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.1.1.aar\9123048e0d28aaebd546cf86f31d7907\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:27.1.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.1.1.aar\9123048e0d28aaebd546cf86f31d7907\AndroidManifest.xml:20:5-44
+MERGED from [com.ashokvarma.android:bottom-navigation-bar:2.0.3] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\bottom-navigation-bar-2.0.3.aar\6b8c28f58cfcf8374e4856588e83a4ba\AndroidManifest.xml:7:5-9:41
+MERGED from [com.ashokvarma.android:bottom-navigation-bar:2.0.3] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\bottom-navigation-bar-2.0.3.aar\6b8c28f58cfcf8374e4856588e83a4ba\AndroidManifest.xml:7:5-9:41
+MERGED from [de.hdodenhof:circleimageview:2.1.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\circleimageview-2.1.0.aar\1e80724069ff4a821c72bcc331658c00\AndroidManifest.xml:5:5-7:41
+MERGED from [de.hdodenhof:circleimageview:2.1.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\circleimageview-2.1.0.aar\1e80724069ff4a821c72bcc331658c00\AndroidManifest.xml:5:5-7:41
+MERGED from [top.zibin:Luban:1.1.8] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\Luban-1.1.8.aar\16f261791ab6513adc9f0ffb20734ddc\AndroidManifest.xml:7:5-9:41
+MERGED from [top.zibin:Luban:1.1.8] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\Luban-1.1.8.aar\16f261791ab6513adc9f0ffb20734ddc\AndroidManifest.xml:7:5-9:41
+MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\2b7af9f364421841c31e49c60ad0781b\AndroidManifest.xml:7:5-9:41
+MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\2b7af9f364421841c31e49c60ad0781b\AndroidManifest.xml:7:5-9:41
+MERGED from [cn.jiguang.sdk:jcore:1.2.6] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jcore-1.2.6.aar\07e46928d6e9767df4e7ea45aa041f9f\AndroidManifest.xml:7:5-9:41
+MERGED from [cn.jiguang.sdk:jcore:1.2.6] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jcore-1.2.6.aar\07e46928d6e9767df4e7ea45aa041f9f\AndroidManifest.xml:7:5-9:41
+MERGED from [com.shuyu:gsyVideoPlayer-armv5:6.0.2] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-armv5-6.0.2.aar\b52a435fd37e84d050bfa60a5136c729\AndroidManifest.xml:7:5-9:41
+MERGED from [com.shuyu:gsyVideoPlayer-armv5:6.0.2] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-armv5-6.0.2.aar\b52a435fd37e84d050bfa60a5136c729\AndroidManifest.xml:7:5-9:41
+MERGED from [com.shuyu:gsyVideoPlayer-armv7a:6.0.2] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-armv7a-6.0.2.aar\c261dba5aaa9d268262d6301543e94e9\AndroidManifest.xml:7:5-9:41
+MERGED from [com.shuyu:gsyVideoPlayer-armv7a:6.0.2] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-armv7a-6.0.2.aar\c261dba5aaa9d268262d6301543e94e9\AndroidManifest.xml:7:5-9:41
+MERGED from [com.shuyu:gsyVideoPlayer-arm64:6.0.2] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-arm64-6.0.2.aar\23821575457acb0b568bac1e4defee5d\AndroidManifest.xml:7:5-9:41
+MERGED from [com.shuyu:gsyVideoPlayer-arm64:6.0.2] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-arm64-6.0.2.aar\23821575457acb0b568bac1e4defee5d\AndroidManifest.xml:7:5-9:41
+MERGED from [com.shuyu:gsyVideoPlayer-x64:6.0.2] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-x64-6.0.2.aar\9e14c4c0799c5d95eb8e2a7bda609049\AndroidManifest.xml:7:5-9:41
+MERGED from [com.shuyu:gsyVideoPlayer-x64:6.0.2] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-x64-6.0.2.aar\9e14c4c0799c5d95eb8e2a7bda609049\AndroidManifest.xml:7:5-9:41
+MERGED from [com.shuyu:gsyVideoPlayer-x86:6.0.2] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-x86-6.0.2.aar\05bf0a87267eddab4cc53af9461d29d0\AndroidManifest.xml:7:5-9:41
+MERGED from [com.shuyu:gsyVideoPlayer-x86:6.0.2] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-x86-6.0.2.aar\05bf0a87267eddab4cc53af9461d29d0\AndroidManifest.xml:7:5-9:41
+MERGED from [cn.jzvd:jiaozivideoplayer:6.4.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jiaozivideoplayer-6.4.1.aar\def054a8fe9cd164dc5078a810adef72\AndroidManifest.xml:7:5-9:41
+MERGED from [cn.jzvd:jiaozivideoplayer:6.4.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jiaozivideoplayer-6.4.1.aar\def054a8fe9cd164dc5078a810adef72\AndroidManifest.xml:7:5-9:41
 MERGED from [:libWSLive] C:\lifiles\clone\libWSLive\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
 MERGED from [:libWSLive] C:\lifiles\clone\libWSLive\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
-MERGED from [com.android.support:transition:27.1.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\transition-27.1.1.aar\2d2576dc9238288cb2851385189da326\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:transition:27.1.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\transition-27.1.1.aar\2d2576dc9238288cb2851385189da326\AndroidManifest.xml:20:5-44
-MERGED from [com.shuyu:GSYVideoPlayer-exo2:6.0.2] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\GSYVideoPlayer-exo2-6.0.2.aar\12106f359511a7d5610547bb4e0432ec\AndroidManifest.xml:7:5-9:41
-MERGED from [com.shuyu:GSYVideoPlayer-exo2:6.0.2] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\GSYVideoPlayer-exo2-6.0.2.aar\12106f359511a7d5610547bb4e0432ec\AndroidManifest.xml:7:5-9:41
-MERGED from [com.google.android.exoplayer:exoplayer:2.9.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\exoplayer-2.9.1.aar\aca366e30101d754847af5c918011da1\AndroidManifest.xml:20:5-22:41
-MERGED from [com.google.android.exoplayer:exoplayer:2.9.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\exoplayer-2.9.1.aar\aca366e30101d754847af5c918011da1\AndroidManifest.xml:20:5-22:41
-MERGED from [com.google.android.exoplayer:exoplayer-ui:2.9.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\exoplayer-ui-2.9.1.aar\9d5860d4d0141d6a902e9c858413e01e\AndroidManifest.xml:20:5-22:41
-MERGED from [com.google.android.exoplayer:exoplayer-ui:2.9.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\exoplayer-ui-2.9.1.aar\9d5860d4d0141d6a902e9c858413e01e\AndroidManifest.xml:20:5-22:41
-MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.1.aar\be9b586055a8d294f74c38fe1f9e8d6b\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.1.aar\be9b586055a8d294f74c38fe1f9e8d6b\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\3eba193245f78c9e293b8fae043fdcaa\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\3eba193245f78c9e293b8fae043fdcaa\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:27.1.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.1.aar\aab681aefd40a45a6d7abee022c1bfd7\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:27.1.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.1.aar\aab681aefd40a45a6d7abee022c1bfd7\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\9cfcfc89bb2c5886ec4586d0d73a5cb8\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\9cfcfc89bb2c5886ec4586d0d73a5cb8\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\483ba85708f03a5be4ddd9a59ce4e704\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\483ba85708f03a5be4ddd9a59ce4e704\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:27.1.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.1.aar\ecfacb1f3c16cda2ba50453199160c49\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:27.1.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.1.aar\ecfacb1f3c16cda2ba50453199160c49\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:27.1.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\660377aac3922315acb3f0d80a7aea75\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:27.1.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\660377aac3922315acb3f0d80a7aea75\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.exoplayer:extension-rtmp:2.9.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\extension-rtmp-2.9.1.aar\9c1b770f643b3ec78fca1d7e121a809a\AndroidManifest.xml:20:5-22:41
-MERGED from [com.google.android.exoplayer:extension-rtmp:2.9.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\extension-rtmp-2.9.1.aar\9c1b770f643b3ec78fca1d7e121a809a\AndroidManifest.xml:20:5-22:41
-MERGED from [com.google.android.exoplayer:exoplayer-dash:2.9.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\exoplayer-dash-2.9.1.aar\6f804a9ebf500cb906eaac7009470827\AndroidManifest.xml:20:5-22:41
-MERGED from [com.google.android.exoplayer:exoplayer-dash:2.9.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\exoplayer-dash-2.9.1.aar\6f804a9ebf500cb906eaac7009470827\AndroidManifest.xml:20:5-22:41
-MERGED from [com.google.android.exoplayer:exoplayer-hls:2.9.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\exoplayer-hls-2.9.1.aar\ba340da6e677b1314f10e22ad7df84b8\AndroidManifest.xml:20:5-22:41
-MERGED from [com.google.android.exoplayer:exoplayer-hls:2.9.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\exoplayer-hls-2.9.1.aar\ba340da6e677b1314f10e22ad7df84b8\AndroidManifest.xml:20:5-22:41
-MERGED from [com.google.android.exoplayer:exoplayer-smoothstreaming:2.9.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\exoplayer-smoothstreaming-2.9.1.aar\fd21a36b592b492411e0a68c70817441\AndroidManifest.xml:20:5-22:41
-MERGED from [com.google.android.exoplayer:exoplayer-smoothstreaming:2.9.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\exoplayer-smoothstreaming-2.9.1.aar\fd21a36b592b492411e0a68c70817441\AndroidManifest.xml:20:5-22:41
-MERGED from [com.google.android.exoplayer:exoplayer-core:2.9.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\exoplayer-core-2.9.1.aar\f571ebd78857f145f4c6a7b128e8601f\AndroidManifest.xml:20:5-22:41
-MERGED from [com.google.android.exoplayer:exoplayer-core:2.9.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\exoplayer-core-2.9.1.aar\f571ebd78857f145f4c6a7b128e8601f\AndroidManifest.xml:20:5-22:41
-MERGED from [jp.co.cyberagent.android.gpuimage:gpuimage-library:1.4.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\gpuimage-library-1.4.1.aar\d37b0acd1e42eb4066c72ba3f96a804f\AndroidManifest.xml:8:5-10:41
-MERGED from [jp.co.cyberagent.android.gpuimage:gpuimage-library:1.4.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\gpuimage-library-1.4.1.aar\d37b0acd1e42eb4066c72ba3f96a804f\AndroidManifest.xml:8:5-10:41
-MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\89721e34e4d46c3da5c5e088849b9389\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\89721e34e4d46c3da5c5e088849b9389\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\6490599569a1eb4d4d9ba5cdca06b772\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\6490599569a1eb4d4d9ba5cdca06b772\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\1e34a03f534508d8f32f69ffa73221cb\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\1e34a03f534508d8f32f69ffa73221cb\AndroidManifest.xml:20:5-44
-MERGED from [com.shuyu:gsyVideoPlayer-base:6.0.2] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-base-6.0.2.aar\25d73026eee1d53d6f36f921409e526d\AndroidManifest.xml:7:5-9:41
-MERGED from [com.shuyu:gsyVideoPlayer-base:6.0.2] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-base-6.0.2.aar\25d73026eee1d53d6f36f921409e526d\AndroidManifest.xml:7:5-9:41
-MERGED from [tv.danmaku.ijk.media:ijkplayer-java:0.8.8] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\ijkplayer-java-0.8.8.aar\1fb31c08f378c3cc8b19bfa4cec16c8a\AndroidManifest.xml:5:5-7:41
-MERGED from [tv.danmaku.ijk.media:ijkplayer-java:0.8.8] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\ijkplayer-java-0.8.8.aar\1fb31c08f378c3cc8b19bfa4cec16c8a\AndroidManifest.xml:5:5-7:41
-MERGED from [com.shuyu:gsyvideoplayer-androidvideocache:6.0.2] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\gsyvideoplayer-androidvideocache-6.0.2.aar\d04132a2f77a5819fdba40c25ff99dce\AndroidManifest.xml:7:5-9:41
-MERGED from [com.shuyu:gsyvideoplayer-androidvideocache:6.0.2] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\gsyvideoplayer-androidvideocache-6.0.2.aar\d04132a2f77a5819fdba40c25ff99dce\AndroidManifest.xml:7:5-9:41
-MERGED from [android.arch.core:runtime:1.1.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\7a03870c2ab77337fbe6063ecd01429a\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.core:runtime:1.1.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\7a03870c2ab77337fbe6063ecd01429a\AndroidManifest.xml:20:5-44
-MERGED from [net.butterflytv.utils:rtmp-client:3.0.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\rtmp-client-3.0.1.aar\92a5e6a6cfb3dbf1b6fed4dcea750023\AndroidManifest.xml:7:5-9:41
-MERGED from [net.butterflytv.utils:rtmp-client:3.0.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\rtmp-client-3.0.1.aar\92a5e6a6cfb3dbf1b6fed4dcea750023\AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:transition:27.1.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\transition-27.1.1.aar\834482d78834aa8f907a61406d7d4360\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:27.1.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\transition-27.1.1.aar\834482d78834aa8f907a61406d7d4360\AndroidManifest.xml:20:5-44
+MERGED from [com.shuyu:GSYVideoPlayer-exo2:6.0.2] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\GSYVideoPlayer-exo2-6.0.2.aar\cd1366158d827c93489e2d54cb2ccdf9\AndroidManifest.xml:7:5-9:41
+MERGED from [com.shuyu:GSYVideoPlayer-exo2:6.0.2] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\GSYVideoPlayer-exo2-6.0.2.aar\cd1366158d827c93489e2d54cb2ccdf9\AndroidManifest.xml:7:5-9:41
+MERGED from [com.google.android.exoplayer:exoplayer:2.9.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\exoplayer-2.9.1.aar\79f14847bbe9205fb5ae1e7459dab67b\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer:2.9.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\exoplayer-2.9.1.aar\79f14847bbe9205fb5ae1e7459dab67b\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-ui:2.9.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\exoplayer-ui-2.9.1.aar\ef19c203f244f4f66eb2e281e581bd64\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-ui:2.9.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\exoplayer-ui-2.9.1.aar\ef19c203f244f4f66eb2e281e581bd64\AndroidManifest.xml:20:5-22:41
+MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.1.aar\15febec771dbf07f4fa9fe58dfc141ad\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.1.aar\15febec771dbf07f4fa9fe58dfc141ad\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\f307581249a7ce1d759d1b36678b406c\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\f307581249a7ce1d759d1b36678b406c\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.1.aar\d12764ac5a0e150e90252b52811ae4aa\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.1.aar\d12764ac5a0e150e90252b52811ae4aa\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\756bda7727cbbdcb8bf2b66f418c1ebb\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\756bda7727cbbdcb8bf2b66f418c1ebb\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\8919662109f9e5402c48b093bfe2aa47\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\8919662109f9e5402c48b093bfe2aa47\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.1.aar\f232d6d6b26998ab42d86b5a8dfb8761\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.1.aar\f232d6d6b26998ab42d86b5a8dfb8761\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\1a9692e1a8ec29dd3d896c0ab85ac409\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\1a9692e1a8ec29dd3d896c0ab85ac409\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.exoplayer:extension-rtmp:2.9.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\extension-rtmp-2.9.1.aar\c1c6bf186ec3d781d52aee71941199ef\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:extension-rtmp:2.9.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\extension-rtmp-2.9.1.aar\c1c6bf186ec3d781d52aee71941199ef\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-dash:2.9.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\exoplayer-dash-2.9.1.aar\20bcfcb5c85dfb6f8ac6e76b9193005a\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-dash:2.9.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\exoplayer-dash-2.9.1.aar\20bcfcb5c85dfb6f8ac6e76b9193005a\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-hls:2.9.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\exoplayer-hls-2.9.1.aar\30b6a0da99d8d684c283bd941c16dbc1\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-hls:2.9.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\exoplayer-hls-2.9.1.aar\30b6a0da99d8d684c283bd941c16dbc1\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-smoothstreaming:2.9.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\exoplayer-smoothstreaming-2.9.1.aar\1e45cab9f5e5fc02f564a3dd85917ac8\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-smoothstreaming:2.9.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\exoplayer-smoothstreaming-2.9.1.aar\1e45cab9f5e5fc02f564a3dd85917ac8\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-core:2.9.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\exoplayer-core-2.9.1.aar\c7438cc56fcef8fa8d26b818b3f0ae56\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-core:2.9.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\exoplayer-core-2.9.1.aar\c7438cc56fcef8fa8d26b818b3f0ae56\AndroidManifest.xml:20:5-22:41
+MERGED from [jp.co.cyberagent.android.gpuimage:gpuimage-library:1.4.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\gpuimage-library-1.4.1.aar\38d7f9f2d72d3adea17dd830697778ee\AndroidManifest.xml:8:5-10:41
+MERGED from [jp.co.cyberagent.android.gpuimage:gpuimage-library:1.4.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\gpuimage-library-1.4.1.aar\38d7f9f2d72d3adea17dd830697778ee\AndroidManifest.xml:8:5-10:41
+MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\a166d41089773c104a38d6000c6a77ae\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\a166d41089773c104a38d6000c6a77ae\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\604376f6720e59b14f37a8563a75482b\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\604376f6720e59b14f37a8563a75482b\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\d4b07011e0593658045863b3a1ffd268\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\d4b07011e0593658045863b3a1ffd268\AndroidManifest.xml:20:5-44
+MERGED from [com.shuyu:gsyVideoPlayer-base:6.0.2] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-base-6.0.2.aar\0672a19d576c0e8cf6b7ffe498c1f2d2\AndroidManifest.xml:7:5-9:41
+MERGED from [com.shuyu:gsyVideoPlayer-base:6.0.2] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\gsyVideoPlayer-base-6.0.2.aar\0672a19d576c0e8cf6b7ffe498c1f2d2\AndroidManifest.xml:7:5-9:41
+MERGED from [tv.danmaku.ijk.media:ijkplayer-java:0.8.8] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\ijkplayer-java-0.8.8.aar\5036f5e64c92977479d53268bae6c16a\AndroidManifest.xml:5:5-7:41
+MERGED from [tv.danmaku.ijk.media:ijkplayer-java:0.8.8] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\ijkplayer-java-0.8.8.aar\5036f5e64c92977479d53268bae6c16a\AndroidManifest.xml:5:5-7:41
+MERGED from [com.shuyu:gsyvideoplayer-androidvideocache:6.0.2] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\gsyvideoplayer-androidvideocache-6.0.2.aar\a33d70fcbc7b3ce0c71c122e091af34d\AndroidManifest.xml:7:5-9:41
+MERGED from [com.shuyu:gsyvideoplayer-androidvideocache:6.0.2] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\gsyvideoplayer-androidvideocache-6.0.2.aar\a33d70fcbc7b3ce0c71c122e091af34d\AndroidManifest.xml:7:5-9:41
+MERGED from [android.arch.core:runtime:1.1.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\a3d25b12021229b82c26c3f80edf109f\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\a3d25b12021229b82c26c3f80edf109f\AndroidManifest.xml:20:5-44
+MERGED from [net.butterflytv.utils:rtmp-client:3.0.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\rtmp-client-3.0.1.aar\bdbd10a719ee5507d49c1aefc90aee31\AndroidManifest.xml:7:5-9:41
+MERGED from [net.butterflytv.utils:rtmp-client:3.0.1] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\rtmp-client-3.0.1.aar\bdbd10a719ee5507d49c1aefc90aee31\AndroidManifest.xml:7:5-9:41
 INJECTED from C:\lifiles\clone\app\src\main\AndroidManifest.xml
 INJECTED from C:\lifiles\clone\app\src\main\AndroidManifest.xml
 	tools:overrideLibrary
-		ADDED from [cn.smssdk:ShortMessageSDKGUI:3.3.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\ShortMessageSDKGUI-3.3.0.aar\62c09246c789585b4b50dc503c702b06\AndroidManifest.xml:11:9-42
+		ADDED from [cn.smssdk:ShortMessageSDKGUI:3.3.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\ShortMessageSDKGUI-3.3.0.aar\6c28477428f88ff810b7008f7066ee99\AndroidManifest.xml:11:9-42
 	android:targetSdkVersion
 		INJECTED from C:\lifiles\clone\app\src\main\AndroidManifest.xml
 		ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml
@@ -626,105 +628,105 @@ INJECTED from C:\lifiles\clone\app\src\main\AndroidManifest.xml
 		ADDED from C:\lifiles\clone\app\src\main\AndroidManifest.xml
 		INJECTED from C:\lifiles\clone\app\src\main\AndroidManifest.xml
 permission#${JPUSH_PKGNAME}.permission.JPUSH_MESSAGE
-MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\4df1b54d1c26f1cd180853c39c641551\AndroidManifest.xml:11:5-13:47
+MERGED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\2b7af9f364421841c31e49c60ad0781b\AndroidManifest.xml:11:5-13:47
 uses-permission#${JPUSH_PKGNAME}.permission.JPUSH_MESSAGE
-ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\4df1b54d1c26f1cd180853c39c641551\AndroidManifest.xml:16:5-81
+ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\2b7af9f364421841c31e49c60ad0781b\AndroidManifest.xml:16:5-81
 	android:name
-		ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\4df1b54d1c26f1cd180853c39c641551\AndroidManifest.xml:16:22-78
+		ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\2b7af9f364421841c31e49c60ad0781b\AndroidManifest.xml:16:22-78
 uses-permission#com.example.itigao.permission.JPUSH_MESSAGE
-ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\4df1b54d1c26f1cd180853c39c641551\AndroidManifest.xml:16:5-81
+ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\2b7af9f364421841c31e49c60ad0781b\AndroidManifest.xml:16:5-81
 	android:name
-		ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\4df1b54d1c26f1cd180853c39c641551\AndroidManifest.xml:16:22-78
+		ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\2b7af9f364421841c31e49c60ad0781b\AndroidManifest.xml:16:22-78
 uses-permission#android.permission.RECEIVE_USER_PRESENT
-ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\4df1b54d1c26f1cd180853c39c641551\AndroidManifest.xml:17:5-79
+ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\2b7af9f364421841c31e49c60ad0781b\AndroidManifest.xml:17:5-79
 	android:name
-		ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\4df1b54d1c26f1cd180853c39c641551\AndroidManifest.xml:17:22-76
+		ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\2b7af9f364421841c31e49c60ad0781b\AndroidManifest.xml:17:22-76
 uses-permission#android.permission.SYSTEM_ALERT_WINDOW
-ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\4df1b54d1c26f1cd180853c39c641551\AndroidManifest.xml:30:5-78
+ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\2b7af9f364421841c31e49c60ad0781b\AndroidManifest.xml:30:5-78
 	android:name
-		ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\4df1b54d1c26f1cd180853c39c641551\AndroidManifest.xml:30:22-75
+		ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\2b7af9f364421841c31e49c60ad0781b\AndroidManifest.xml:30:22-75
 uses-permission#android.permission.ACCESS_LOCATION_EXTRA_COMMANDS
-ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\4df1b54d1c26f1cd180853c39c641551\AndroidManifest.xml:33:5-89
+ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\2b7af9f364421841c31e49c60ad0781b\AndroidManifest.xml:33:5-89
 	android:name
-		ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\4df1b54d1c26f1cd180853c39c641551\AndroidManifest.xml:33:22-86
+		ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\2b7af9f364421841c31e49c60ad0781b\AndroidManifest.xml:33:22-86
 uses-permission#android.permission.CHANGE_NETWORK_STATE
-ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\4df1b54d1c26f1cd180853c39c641551\AndroidManifest.xml:35:5-79
+ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\2b7af9f364421841c31e49c60ad0781b\AndroidManifest.xml:35:5-79
 	android:name
-		ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\4df1b54d1c26f1cd180853c39c641551\AndroidManifest.xml:35:22-76
+		ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\2b7af9f364421841c31e49c60ad0781b\AndroidManifest.xml:35:22-76
 uses-permission#android.permission.MODIFY_AUDIO_SETTINGS
-ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\4df1b54d1c26f1cd180853c39c641551\AndroidManifest.xml:40:5-80
+ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\2b7af9f364421841c31e49c60ad0781b\AndroidManifest.xml:40:5-80
 MERGED from [:libWSLive] C:\lifiles\clone\libWSLive\build\intermediates\library_manifest\debug\AndroidManifest.xml:15:5-80
 MERGED from [:libWSLive] C:\lifiles\clone\libWSLive\build\intermediates\library_manifest\debug\AndroidManifest.xml:15:5-80
 	android:name
-		ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\4df1b54d1c26f1cd180853c39c641551\AndroidManifest.xml:40:22-77
+		ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\2b7af9f364421841c31e49c60ad0781b\AndroidManifest.xml:40:22-77
 receiver#cn.jpush.android.service.PushReceiver
-ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\4df1b54d1c26f1cd180853c39c641551\AndroidManifest.xml:60:9-80:20
+ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\2b7af9f364421841c31e49c60ad0781b\AndroidManifest.xml:60:9-80:20
 	android:enabled
-		ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\4df1b54d1c26f1cd180853c39c641551\AndroidManifest.xml:62:13-35
+		ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\2b7af9f364421841c31e49c60ad0781b\AndroidManifest.xml:62:13-35
 	android:exported
-		ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\4df1b54d1c26f1cd180853c39c641551\AndroidManifest.xml:63:13-37
+		ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\2b7af9f364421841c31e49c60ad0781b\AndroidManifest.xml:63:13-37
 	android:name
-		ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\4df1b54d1c26f1cd180853c39c641551\AndroidManifest.xml:61:13-65
+		ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\2b7af9f364421841c31e49c60ad0781b\AndroidManifest.xml:61:13-65
 intent-filter#action:name:cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY+category:name:${JPUSH_PKGNAME}
-ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\4df1b54d1c26f1cd180853c39c641551\AndroidManifest.xml:64:13-68:29
+ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\2b7af9f364421841c31e49c60ad0781b\AndroidManifest.xml:64:13-68:29
 	android:priority
-		ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\4df1b54d1c26f1cd180853c39c641551\AndroidManifest.xml:64:28-51
+		ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\2b7af9f364421841c31e49c60ad0781b\AndroidManifest.xml:64:28-51
 intent-filter#action:name:cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY+category:name:com.example.itigao
-ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\4df1b54d1c26f1cd180853c39c641551\AndroidManifest.xml:64:13-68:29
+ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\2b7af9f364421841c31e49c60ad0781b\AndroidManifest.xml:64:13-68:29
 	android:priority
-		ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\4df1b54d1c26f1cd180853c39c641551\AndroidManifest.xml:64:28-51
+		ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\2b7af9f364421841c31e49c60ad0781b\AndroidManifest.xml:64:28-51
 action#cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY
-ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\4df1b54d1c26f1cd180853c39c641551\AndroidManifest.xml:65:17-94
+ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\2b7af9f364421841c31e49c60ad0781b\AndroidManifest.xml:65:17-94
 	android:name
-		ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\4df1b54d1c26f1cd180853c39c641551\AndroidManifest.xml:65:25-91
+		ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\2b7af9f364421841c31e49c60ad0781b\AndroidManifest.xml:65:25-91
 category#${JPUSH_PKGNAME}
-ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\4df1b54d1c26f1cd180853c39c641551\AndroidManifest.xml:67:17-61
+ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\2b7af9f364421841c31e49c60ad0781b\AndroidManifest.xml:67:17-61
 	android:name
-		ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\4df1b54d1c26f1cd180853c39c641551\AndroidManifest.xml:67:27-58
+		ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\2b7af9f364421841c31e49c60ad0781b\AndroidManifest.xml:67:27-58
 category#com.example.itigao
-ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\4df1b54d1c26f1cd180853c39c641551\AndroidManifest.xml:67:17-61
+ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\2b7af9f364421841c31e49c60ad0781b\AndroidManifest.xml:67:17-61
 	android:name
-		ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\4df1b54d1c26f1cd180853c39c641551\AndroidManifest.xml:67:27-58
+		ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\2b7af9f364421841c31e49c60ad0781b\AndroidManifest.xml:67:27-58
 intent-filter#action:name:android.intent.action.USER_PRESENT+action:name:android.net.conn.CONNECTIVITY_CHANGE
-ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\4df1b54d1c26f1cd180853c39c641551\AndroidManifest.xml:69:13-72:29
+ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\2b7af9f364421841c31e49c60ad0781b\AndroidManifest.xml:69:13-72:29
 action#android.intent.action.USER_PRESENT
-ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\4df1b54d1c26f1cd180853c39c641551\AndroidManifest.xml:70:17-77
+ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\2b7af9f364421841c31e49c60ad0781b\AndroidManifest.xml:70:17-77
 	android:name
-		ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\4df1b54d1c26f1cd180853c39c641551\AndroidManifest.xml:70:25-74
+		ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\2b7af9f364421841c31e49c60ad0781b\AndroidManifest.xml:70:25-74
 action#android.net.conn.CONNECTIVITY_CHANGE
-ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\4df1b54d1c26f1cd180853c39c641551\AndroidManifest.xml:71:17-79
+ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\2b7af9f364421841c31e49c60ad0781b\AndroidManifest.xml:71:17-79
 	android:name
-		ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\4df1b54d1c26f1cd180853c39c641551\AndroidManifest.xml:71:25-76
+		ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\2b7af9f364421841c31e49c60ad0781b\AndroidManifest.xml:71:25-76
 intent-filter#action:name:android.intent.action.PACKAGE_ADDED+action:name:android.intent.action.PACKAGE_REMOVED+data:scheme:package
-ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\4df1b54d1c26f1cd180853c39c641551\AndroidManifest.xml:74:13-79:29
+ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\2b7af9f364421841c31e49c60ad0781b\AndroidManifest.xml:74:13-79:29
 action#android.intent.action.PACKAGE_ADDED
-ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\4df1b54d1c26f1cd180853c39c641551\AndroidManifest.xml:75:17-78
+ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\2b7af9f364421841c31e49c60ad0781b\AndroidManifest.xml:75:17-78
 	android:name
-		ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\4df1b54d1c26f1cd180853c39c641551\AndroidManifest.xml:75:25-75
+		ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\2b7af9f364421841c31e49c60ad0781b\AndroidManifest.xml:75:25-75
 action#android.intent.action.PACKAGE_REMOVED
-ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\4df1b54d1c26f1cd180853c39c641551\AndroidManifest.xml:76:17-80
+ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\2b7af9f364421841c31e49c60ad0781b\AndroidManifest.xml:76:17-80
 	android:name
-		ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\4df1b54d1c26f1cd180853c39c641551\AndroidManifest.xml:76:25-77
+		ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\2b7af9f364421841c31e49c60ad0781b\AndroidManifest.xml:76:25-77
 data
-ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\4df1b54d1c26f1cd180853c39c641551\AndroidManifest.xml:78:17-50
+ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\2b7af9f364421841c31e49c60ad0781b\AndroidManifest.xml:78:17-50
 	android:scheme
-		ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\4df1b54d1c26f1cd180853c39c641551\AndroidManifest.xml:78:23-47
+		ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\2b7af9f364421841c31e49c60ad0781b\AndroidManifest.xml:78:23-47
 service#cn.jpush.android.service.DaemonService
-ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\4df1b54d1c26f1cd180853c39c641551\AndroidManifest.xml:102:9-111:19
+ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\2b7af9f364421841c31e49c60ad0781b\AndroidManifest.xml:102:9-111:19
 	android:enabled
-		ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\4df1b54d1c26f1cd180853c39c641551\AndroidManifest.xml:104:13-35
+		ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\2b7af9f364421841c31e49c60ad0781b\AndroidManifest.xml:104:13-35
 	android:exported
-		ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\4df1b54d1c26f1cd180853c39c641551\AndroidManifest.xml:105:13-36
+		ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\2b7af9f364421841c31e49c60ad0781b\AndroidManifest.xml:105:13-36
 	android:name
-		ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\4df1b54d1c26f1cd180853c39c641551\AndroidManifest.xml:103:13-66
+		ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\2b7af9f364421841c31e49c60ad0781b\AndroidManifest.xml:103:13-66
 intent-filter#action:name:cn.jpush.android.intent.DaemonService+category:name:${JPUSH_PKGNAME}
-ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\4df1b54d1c26f1cd180853c39c641551\AndroidManifest.xml:106:13-110:29
+ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\2b7af9f364421841c31e49c60ad0781b\AndroidManifest.xml:106:13-110:29
 intent-filter#action:name:cn.jpush.android.intent.DaemonService+category:name:com.example.itigao
-ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\4df1b54d1c26f1cd180853c39c641551\AndroidManifest.xml:106:13-110:29
+ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\2b7af9f364421841c31e49c60ad0781b\AndroidManifest.xml:106:13-110:29
 action#cn.jpush.android.intent.DaemonService
-ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\4df1b54d1c26f1cd180853c39c641551\AndroidManifest.xml:107:17-80
+ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\2b7af9f364421841c31e49c60ad0781b\AndroidManifest.xml:107:17-80
 	android:name
-		ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\4df1b54d1c26f1cd180853c39c641551\AndroidManifest.xml:107:25-77
+		ADDED from [cn.jiguang.sdk:jmessage:2.8.0] C:\Users\ROBOSOFT\.gradle\caches\transforms-1\files-1.1\jmessage-2.8.0.aar\2b7af9f364421841c31e49c60ad0781b\AndroidManifest.xml:107:25-77
 uses-permission#android.permission.FLASHLIGHT
 ADDED from [:libWSLive] C:\lifiles\clone\libWSLive\build\intermediates\library_manifest\debug\AndroidManifest.xml:13:5-69
 	android:name

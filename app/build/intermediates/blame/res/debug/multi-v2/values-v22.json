@@ -4,7 +4,7 @@
             "outputFile": "C:\\lifiles\\clone\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v22\\values-v22.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\ROBOSOFT\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\e9102abb81bb32136e9eb7c34cdf4eed\\res\\values-v22\\values-v22.xml",
+                    "source": "C:\\Users\\ROBOSOFT\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\7aa8e7713e13e9521bfad4187c7aaebe\\res\\values-v22\\values-v22.xml",
                     "from": {
                         "startLines": "2,3,4,9",
                         "startColumns": "4,4,4,4",

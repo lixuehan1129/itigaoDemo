@@ -18,18 +18,27 @@ import android.widget.TextView;
 import com.example.itigao.Adapter.SelectAdapter;
 import com.example.itigao.AutoProject.AppConstants;
 import com.example.itigao.AutoProject.JDBCTools;
+import com.example.itigao.AutoProject.JsonCode;
 import com.example.itigao.AutoProject.SharePreferences;
+import com.example.itigao.ClassAb.Classes;
 import com.example.itigao.R;
 import com.example.itigao.AutoProject.Tip;
 import com.example.itigao.ViewHelper.BaseFragment;
 import com.mysql.jdbc.Connection;
 
+import java.io.IOException;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
+
+import okhttp3.FormBody;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.RequestBody;
+import okhttp3.Response;
 
 /**
  * Created by 最美人间四月天 on 2018/12/11.
@@ -44,12 +53,15 @@ public class VideoFragment extends BaseFragment {
     private int video_select;
     private int video_record;   //0表示主页推荐内容不计，1表示课程列表加入记录，2观看记录
 
-    ArrayList<String> name;
-    ArrayList<String> content;
-    ArrayList<String> nut;
-    ArrayList<String> add;
-    ArrayList<Integer> select,classify;
-    ArrayList<String> cover;
+    private List<Classes> classes;
+
+//    ArrayList<String> name;
+//    ArrayList<String> content;
+//    ArrayList<String> nut;
+//    ArrayList<String> add;
+//    ArrayList<Integer> select,classify;
+//    ArrayList<String> cover;
+
     CallBackValue callBackValue;
 
     /**
@@ -102,108 +114,181 @@ public class VideoFragment extends BaseFragment {
 
     private void connectData(){
 
-        name = new ArrayList<>();
-        content = new ArrayList<>();
-        nut = new ArrayList<>();
-        add = new ArrayList<>();
-        select = new ArrayList<>();
-        classify = new ArrayList<>();
+//        name = new ArrayList<>();
+//        content = new ArrayList<>();
+//        nut = new ArrayList<>();
+//        add = new ArrayList<>();
+//        select = new ArrayList<>();
+//        classify = new ArrayList<>();
+//        cover = new ArrayList<>();
 
-        cover = new ArrayList<>();
-
+        classes = new ArrayList<>();
         new Thread(){
             public void run(){
                 Looper.prepare();
-                try{
-                    Connection conn = JDBCTools.getConnection();
-                    if(conn != null){
-                        Statement stmt = conn.createStatement();
-                        String sql = "SELECT * FROM class WHERE class_bid = " +
-                                video_bid +
-                                " ORDER BY class_select";
-                        ResultSet resultSet = stmt.executeQuery(sql);
-                        while(resultSet.next()){
-                            name.add(resultSet.getString("class_name"));
-                            content.add(resultSet.getString("class_content"));
-                            add.add(resultSet.getString("class_add"));
-                            nut.add(resultSet.getString("class_nut"));
-                            select.add(resultSet.getInt("class_select"));
-                            classify.add(resultSet.getInt("class_classify"));
-                            cover.add(resultSet.getString("class_cover"));
+                OkHttpClient okHttpClient = new OkHttpClient();
+                RequestBody requestBody = new FormBody.Builder()
+                        .add("class_bid", String.valueOf(video_bid))
+                        .add("record_user", SharePreferences.getString(getActivity(),AppConstants.USER_PHONE))
+                        .build();
+                //构建一个请求对象
+                Request request = new Request.Builder()
+                        .url("http://39.105.213.41:8080/StudyAppService/StudyServlet/setRecord")
+                        .post(requestBody)
+                        .build();
+                //发送请求获取响应
+                Response response = null;
+                try {
+                    response = okHttpClient.newCall(request).execute();
+                    //判断请求是否成功
+                    if(response.isSuccessful()){
+                        assert response.body() != null;
+                        String regData = response.body().string();
+                        System.out.println("返回classes_record"+regData);
+                        if(JsonCode.getCode(regData) == 200){
+                            String jsonData = JsonCode.getData(regData);
+                            classes = JsonCode.jsonToList(jsonData,Classes.class);
+                            Message message = new Message();
+                            message.what = 1;
+                            handler.sendMessage(message);
                         }
 
-                        resultSet.close();
-
-                        Message message = new Message();
-                        message.what = 1;
-                        handler.sendMessage(message);
-
-                        //观看记录上传
-                        String sql_query = "SELECT record_bid FROM record WHERE record_bid = " +
-                                video_bid +
-                                " AND record_user ='" +
-                                SharePreferences.getString(getActivity(),AppConstants.USER_PHONE) +
-                                "'";
-                        ResultSet resultSet1 = stmt.executeQuery(sql_query);
-                        if(!resultSet1.next()){
-                            if(video_record == 1 && name.size()>0){
-                                String sql_insert = "INSERT INTO record (record_user,record_classify,record_name,record_bid,record_add," +
-                                        "record_section,record_cover,record_select) values (?,?,?,?,?,?,?,?)";
-                                PreparedStatement preparedStatement = conn.prepareStatement(sql_insert,Statement.RETURN_GENERATED_KEYS);
-                                preparedStatement.setString(1,SharePreferences.getString(getActivity(),AppConstants.USER_PHONE));
-                                preparedStatement.setInt(2,classify.get(0));
-                                preparedStatement.setString(3,name.get(0));
-                                preparedStatement.setInt(4,video_bid);
-                                preparedStatement.setString(5,add.get(0));
-                                preparedStatement.setInt(6,video_section);
-                                preparedStatement.setString(7,cover.get(0));
-                                preparedStatement.setInt(8,1);
-                                preparedStatement.executeUpdate();
-                                preparedStatement.close();
-                                setBroad();
-                            }
-                        }
-                        resultSet1.close();
-
-                        JDBCTools.releaseConnection(stmt,conn);
-                    }else {
-                        Tip.showTip(getActivity(),"请检查网络");
                     }
-                }catch (SQLException e) {
+                } catch (IOException e) {
                     e.printStackTrace();
                 }
+
                 Looper.loop();
             }
         }.start();
+
+//        new Thread(){
+//            public void run(){
+//                Looper.prepare();
+//                try{
+//                    Connection conn = JDBCTools.getConnection();
+//                    if(conn != null){
+//                        Statement stmt = conn.createStatement();
+//                        String sql = "SELECT * FROM class WHERE class_bid = " +
+//                                video_bid +
+//                                " ORDER BY class_select";
+//                        ResultSet resultSet = stmt.executeQuery(sql);
+//                        while(resultSet.next()){
+//                            name.add(resultSet.getString("class_name"));
+//                            content.add(resultSet.getString("class_content"));
+//                            add.add(resultSet.getString("class_add"));
+//                            nut.add(resultSet.getString("class_nut"));
+//                            select.add(resultSet.getInt("class_select"));
+//                            classify.add(resultSet.getInt("class_classify"));
+//                            cover.add(resultSet.getString("class_cover"));
+//                        }
+//
+//                        resultSet.close();
+//
+//                        Message message = new Message();
+//                        message.what = 1;
+//                        handler.sendMessage(message);
+//
+//                        //观看记录上传
+//                        String sql_query = "SELECT record_bid FROM record WHERE record_bid = " +
+//                                video_bid +
+//                                " AND record_user ='" +
+//                                SharePreferences.getString(getActivity(),AppConstants.USER_PHONE) +
+//                                "'";
+//                        ResultSet resultSet1 = stmt.executeQuery(sql_query);
+//                        if(!resultSet1.next()){
+//                            if(video_record == 1 && name.size()>0){
+//                                String sql_insert = "INSERT INTO record (record_user,record_classify,record_name,record_bid,record_add," +
+//                                        "record_section,record_cover,record_select) values (?,?,?,?,?,?,?,?)";
+//                                PreparedStatement preparedStatement = conn.prepareStatement(sql_insert,Statement.RETURN_GENERATED_KEYS);
+//                                preparedStatement.setString(1,SharePreferences.getString(getActivity(),AppConstants.USER_PHONE));
+//                                preparedStatement.setInt(2,classify.get(0));
+//                                preparedStatement.setString(3,name.get(0));
+//                                preparedStatement.setInt(4,video_bid);
+//                                preparedStatement.setString(5,add.get(0));
+//                                preparedStatement.setInt(6,video_section);
+//                                preparedStatement.setString(7,cover.get(0));
+//                                preparedStatement.setInt(8,1);
+//                                preparedStatement.executeUpdate();
+//                                preparedStatement.close();
+//                                setBroad();
+//                            }
+//                        }
+//                        resultSet1.close();
+//
+//                        JDBCTools.releaseConnection(stmt,conn);
+//                    }else {
+//                        Tip.showTip(getActivity(),"请检查网络");
+//                    }
+//                }catch (SQLException e) {
+//                    e.printStackTrace();
+//                }
+//                Looper.loop();
+//            }
+//        }.start();
     }
 
     private void Update(final int select){
-        new Thread(){
-            public void run(){
+        new Thread() {
+            public void run() {
                 Looper.prepare();
-                try{
-                    Connection conn = JDBCTools.getConnection();
-                    if(conn != null){
-                        Statement stmt = conn.createStatement();
-                        String sql = "UPDATE record SET record_add = ?, record_select = ? WHERE record_bid = " +
-                                video_bid +
-                                "";
-                        PreparedStatement preparedStatement = conn.prepareStatement(sql);
-                        preparedStatement.setString(1,add.get(select));
-                        preparedStatement.setInt(2,select + 1);
-                        preparedStatement.executeUpdate();
-                        preparedStatement.close();
-                        JDBCTools.releaseConnection(stmt,conn);
-                        setBroad();
-                    }else {
-                        Tip.showTip(getActivity(),"请检查网络");
+                OkHttpClient okHttpClient = new OkHttpClient();
+                RequestBody requestBody = new FormBody.Builder()
+                        .add("record_add", classes.get(select).getClass_add())
+                        .add("record_select", String.valueOf(select + 1))
+                        .add("record_bid", String.valueOf(video_bid))
+                        .add("record_user", SharePreferences.getString(getActivity(),AppConstants.USER_PHONE))
+                        .build();
+                //构建一个请求对象
+                Request request = new Request.Builder()
+                        .url("http://39.105.213.41:8080/StudyAppService/StudyServlet/recordUpdate")
+                        .post(requestBody)
+                        .build();
+                //发送请求获取响应
+                Response response = null;
+                try {
+                    response = okHttpClient.newCall(request).execute();
+                    //判断请求是否成功
+                    if(response.isSuccessful()){
+                        assert response.body() != null;
+                        String regData = response.body().string();
+                        System.out.println("返回record_update"+regData);
                     }
-                }catch (SQLException e) {
+                } catch (IOException e) {
                     e.printStackTrace();
                 }
                 Looper.loop();
             }
         }.start();
+
+//        new Thread(){
+//            public void run(){
+//                Looper.prepare();
+//                try{
+//                    Connection conn = JDBCTools.getConnection();
+//                    if(conn != null){
+//                        Statement stmt = conn.createStatement();
+//                        String sql = "UPDATE record SET record_add = ?, record_select = ? WHERE record_bid = " +
+//                                video_bid +
+//                                " AND record_user = '" +
+//                                SharePreferences.getString(getActivity(),AppConstants.USER_PHONE) +
+//                                "'";
+//                        PreparedStatement preparedStatement = conn.prepareStatement(sql);
+//                        preparedStatement.setString(1,add.get(select));
+//                        preparedStatement.setInt(2,select + 1);
+//                        preparedStatement.executeUpdate();
+//                        preparedStatement.close();
+//                        JDBCTools.releaseConnection(stmt,conn);
+//                        setBroad();
+//                    }else {
+//                        Tip.showTip(getActivity(),"请检查网络");
+//                    }
+//                }catch (SQLException e) {
+//                    e.printStackTrace();
+//                }
+//                Looper.loop();
+//            }
+//        }.start();
     }
 
     private void setBroad(){
@@ -230,9 +315,9 @@ public class VideoFragment extends BaseFragment {
 
     private void initData(){
 
-        title.setText(name.get(video_select-1));
-        itr.setText(content.get(video_select-1));
-        advice.setText(nut.get(video_select-1));
+        title.setText(classes.get(video_select-1).getClass_name());
+        itr.setText(classes.get(video_select-1).getClass_content());
+        advice.setText(classes.get(video_select-1).getClass_nut());
 
         ArrayList<Integer> id = new ArrayList<>();
         for (int i=1; i<video_section+1; i++){
@@ -254,12 +339,13 @@ public class VideoFragment extends BaseFragment {
             @Override
             public void onItemClick(View view, int position) {
 
-                title.setText(name.get(position));
-                itr.setText(content.get(position));
-                advice.setText(nut.get(position));
+                title.setText(classes.get(position).getClass_name());
+                itr.setText(classes.get(position).getClass_content());
+                advice.setText(classes.get(position).getClass_nut());
 
-                callBackValue.SendMessageValue(add.get(position));
+                callBackValue.SendMessageValue(classes.get(position).getClass_add());
 
+              //  System.out.println("返回classes_update");
                 if(video_record != 0){
                     Update(position);
                 }

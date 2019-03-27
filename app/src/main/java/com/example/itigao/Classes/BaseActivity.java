@@ -94,24 +94,24 @@ public class BaseActivity extends AppCompatActivity {
         StatusBarUtils.setWindowStatusBarColor(BaseActivity.this, R.color.colorWhite);
         initView();
 
-        broadcastManager = LocalBroadcastManager.getInstance(BaseActivity.this.getApplication());
-        intentFilter = new IntentFilter();
-        intentFilter.addAction(AppConstants.BROAD_RECORD);
-        mReceiver = new BroadcastReceiver() {
-            @Override
-            public void onReceive(Context context, Intent intent){
-                //收到广播后所作的操作
-               // connectRecord();
-            }
-        };
-        broadcastManager.registerReceiver(mReceiver, intentFilter);
+//        broadcastManager = LocalBroadcastManager.getInstance(BaseActivity.this.getApplication());
+//        intentFilter = new IntentFilter();
+//        intentFilter.addAction(AppConstants.BROAD_RECORD);
+//        mReceiver = new BroadcastReceiver() {
+//            @Override
+//            public void onReceive(Context context, Intent intent){
+//                //收到广播后所作的操作
+//               // connectRecord();
+//            }
+//        };
+//        broadcastManager.registerReceiver(mReceiver, intentFilter);
     }
 
 
     @Override
     public void onDestroy() {
         super.onDestroy();
-        broadcastManager.unregisterReceiver(mReceiver);
+  //      broadcastManager.unregisterReceiver(mReceiver);
         if (Util.isOnMainThread()) {
             Glide.with(getApplicationContext()).pauseRequests();
         }

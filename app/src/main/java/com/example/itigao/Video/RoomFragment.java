@@ -1,15 +1,10 @@
 package com.example.itigao.Video;
 
-import android.app.Activity;
-import android.content.BroadcastReceiver;
 import android.content.Context;
-import android.content.Intent;
-import android.content.IntentFilter;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
-import android.support.v4.content.LocalBroadcastManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.Editable;
@@ -27,21 +22,19 @@ import android.widget.Toast;
 
 import com.example.itigao.Adapter.InteractAdapter;
 import com.example.itigao.AutoProject.AppConstants;
-import com.example.itigao.AutoProject.JDBCTools;
+import com.example.itigao.AutoProject.JsonCode;
 import com.example.itigao.AutoProject.SharePreferences;
 import com.example.itigao.AutoProject.Tip;
 import com.example.itigao.R;
 import com.example.itigao.ViewHelper.BaseFragment;
-import com.mysql.jdbc.Connection;
 
 import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -51,6 +44,11 @@ import cn.jpush.im.android.api.callback.RequestCallback;
 import cn.jpush.im.android.api.event.ChatRoomMessageEvent;
 import cn.jpush.im.android.api.model.Conversation;
 import cn.jpush.im.api.BasicCallback;
+import okhttp3.FormBody;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.RequestBody;
+import okhttp3.Response;
 
 /**
  * Created by 最美人间四月天 on 2019/3/9.
@@ -134,32 +132,45 @@ public class RoomFragment extends BaseFragment {
         new Thread(){
             public void run(){
                 Looper.prepare();
-                try{
-                    final Connection conn = JDBCTools.getConnection();
-                    if(conn != null){
-                        final Statement stmt = conn.createStatement();
-                        String sql = "SELECT class_group,class_name FROM class WHERE class_bid = " +
-                                video_bid +
-                                " ORDER BY class_select LIMIT 1";
-                        ResultSet resultSet = stmt.executeQuery(sql);
-                        if(resultSet.next()){
-                            groupId = resultSet.getInt("class_group");
-                            if(groupId == 0){
-                                Tip.showTip(getActivity(),"暂时没有聊天室");
+                OkHttpClient okHttpClient = new OkHttpClient();
+                RequestBody requestBody = new FormBody.Builder()
+                        .add("class_bid", String.valueOf(video_bid))
+                        .build();
+                //构建一个请求对象
+                Request request = new Request.Builder()
+                        .url("http://39.105.213.41:8080/StudyAppService/StudyServlet/classOne")
+                        .post(requestBody)
+                        .build();
+                //发送请求获取响应
+                Response response = null;
+                try {
+                    response = okHttpClient.newCall(request).execute();
+                    //判断请求是否成功
+                    if(response.isSuccessful()){
+                        assert response.body() != null;
+                        String regData = response.body().string();
+                        System.out.println("返回room"+regData);
+                        if(JsonCode.getCode(regData) == 200){
+
+                            String jsonData = JsonCode.getData(regData);
+                            try {
+                                JSONArray jsonArray = new JSONArray(jsonData);
+                                JSONObject jsonObject = jsonArray.getJSONObject(0);
+                                groupId = jsonObject.getInt("class_group");
+                                if(groupId == 0){
+                                    Tip.showTip(getActivity(),"暂时没有聊天室");
+                                }
+                                Message message = new Message();
+                                message.what = 11;
+                                handler.sendMessage(message);
+                            } catch (JSONException e) {
+                                e.printStackTrace();
                             }
 
                         }
 
-                        Message message = new Message();
-                        message.what = 11;
-                        handler.sendMessage(message);
-
-                        resultSet.close();
-                        JDBCTools.releaseConnection(stmt,conn);
-                    }else {
-                        Tip.showTip(getActivity(),"请检查网络");
                     }
-                }catch (SQLException e) {
+                } catch (IOException e) {
                     e.printStackTrace();
                 }
                 Looper.loop();

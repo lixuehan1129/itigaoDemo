@@ -4,17 +4,7 @@
             "outputFile": "C:\\lifiles\\clone\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v16\\values-v16.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\ROBOSOFT\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\660377aac3922315acb3f0d80a7aea75\\res\\values-v16\\values-v16.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "65",
-                        "endOffsets": "116"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\ROBOSOFT\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\e9102abb81bb32136e9eb7c34cdf4eed\\res\\values-v16\\values-v16.xml",
+                    "source": "C:\\Users\\ROBOSOFT\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\7aa8e7713e13e9521bfad4187c7aaebe\\res\\values-v16\\values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -30,6 +20,16 @@
                         "endLines": "6",
                         "endColumns": "12",
                         "endOffsets": "289"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\ROBOSOFT\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\1a9692e1a8ec29dd3d896c0ab85ac409\\res\\values-v16\\values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "65",
+                        "endOffsets": "116"
                     }
                 }
             ]

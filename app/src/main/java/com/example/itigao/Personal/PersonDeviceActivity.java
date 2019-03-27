@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.example.itigao.AutoProject.AppConstants;
+import com.example.itigao.AutoProject.JsonCode;
 import com.example.itigao.ClassAb.Register;
 import com.example.itigao.R;
 import com.example.itigao.Utils.DateUtils;
@@ -65,63 +66,20 @@ public class PersonDeviceActivity extends AppCompatActivity {
 
         new Thread(){
             public void run(){
-               // postParams();
-                postLogin();
+                postParams();
             }
         }.start();
 
     }
 
     private void postParams() {
-        //创建一个OkHttpClient对象
         OkHttpClient okHttpClient = new OkHttpClient();
-        //构建一个请求体 add参数1 key 参数2 value 发送字段
-
-//        RequestBody requestBody = new FormBody.Builder()
-//                .add("user_phone", "17888836861")
-//                .add("user_password", "123456")
-//                .add("user_name", "智慧云用户")
-//                .add("user_create_time", DateUtils.StringData())
-//                .add("user_level", "0")
-//                .add("user_sex","0")
-//                .add("user_sort","0")
-//                .add("user_online_time","0")
-////                .add("user_birth", null)
-//                .add("user_picture", "http://ty01.tipass.com/images/head/head_name(2).PNG")
-//                .build();
-
-//        Register register = new Register("17888836861","123456","智慧云用户",DateUtils.StringData(),
-//                "http://ty01.tipass.com/images/head/head_name(2).PNG",
-//                0,0,0,0);
-//
-//        Gson gson = new Gson();
-//        String json = gson.toJson(register);
-//        System.out.println("json"+json);
-//        RequestBody requestBody = RequestBody.create(JSON, json);
-
-        HashMap<String,String> formParams = new HashMap<>();
-            //传参
-        formParams.put("user_phone", "17888836866");
-        formParams.put("user_password", "123456");
-        formParams.put("user_name", "智慧云用户");
-        formParams.put("user_create_time", DateUtils.StringData());
-        formParams.put("user_level", "0");
-        formParams.put("user_sex","0");
-        formParams.put("user_sort","0");
-        formParams.put("user_online_time","0");
-        formParams.put("user_picture", "http://ty01.tipass.com/images/head/head_name(2).PNG");
-        formParams.put("user_birth", "2000-10-10");
-
-        StringBuffer sb = new StringBuffer();
-        for (String key: formParams.keySet()) {
-            sb.append(key+"="+formParams.get(key)+"&");
-        }
-
-        RequestBody requestBody = RequestBody.create(FORM_CONTENT_TYPE, sb.toString());
-
+        RequestBody requestBody = new FormBody.Builder()
+                .add("class_bid", "100001")
+                .build();
         //构建一个请求对象
         Request request = new Request.Builder()
-                .url("http://39.105.213.41:8080/StudyAppService/StudyServlet/register")
+                .url("http://39.105.213.41:8080/StudyAppService/StudyServlet/classOne")
                 .post(requestBody)
                 .build();
         //发送请求获取响应
@@ -130,42 +88,16 @@ public class PersonDeviceActivity extends AppCompatActivity {
             response = okHttpClient.newCall(request).execute();
             //判断请求是否成功
             if(response.isSuccessful()){
-                //打印服务端返回结果
-           //     Log.i("返回",response.body().string());
                 assert response.body() != null;
                 String regData = response.body().string();
                 System.out.println("返回"+regData);
+                if(JsonCode.getCode(regData) == 200){
+                    String jsonData = JsonCode.getData(regData);
 
-
-
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-
-    private void postLogin() {
-        //创建一个OkHttpClient对象
-        OkHttpClient okHttpClient = new OkHttpClient();
-        //构建一个请求体 add参数1 key 参数2 value 发送字段
-        RequestBody requestBody = new FormBody.Builder()
-                .add("user_phone", "17888836861")
-                .add("user_password", "123456")
-                .build();
-        //构建一个请求对象
-        Request request = new Request.Builder()
-                .url("http://39.105.213.41:8080/StudyAppService/StudyServlet/login")
-                .post(requestBody)
-                .build();
-        //发送请求获取响应
-        Response response = null;
-        try {
-            response = okHttpClient.newCall(request).execute();
-            //判断请求是否成功
-            if(response.isSuccessful()){
-                //打印服务端返回结果
-                Log.i("返回",response.body().string());
+//                            Message message = new Message();
+//                            message.what = 11;
+//                            handler.sendMessage(message);
+                }
 
             }
         } catch (IOException e) {

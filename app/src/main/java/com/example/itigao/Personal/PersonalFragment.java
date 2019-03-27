@@ -29,6 +29,7 @@ import com.bumptech.glide.util.Util;
 import com.example.itigao.Adapter.AnchorAdapter;
 import com.example.itigao.AutoProject.AppConstants;
 import com.example.itigao.AutoProject.JDBCTools;
+import com.example.itigao.AutoProject.JsonCode;
 import com.example.itigao.AutoProject.SharePreferences;
 import com.example.itigao.AutoProject.Tip;
 import com.example.itigao.Broad.BroadcastActivity;
@@ -36,8 +37,14 @@ import com.example.itigao.Broad.GoBroadActivity;
 import com.example.itigao.Database.DataBaseHelper;
 import com.example.itigao.R;
 import com.example.itigao.ViewHelper.BaseFragment;
+import com.example.itigao.okHttp.OkHttpBase;
 import com.mysql.jdbc.Connection;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.IOException;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
@@ -45,6 +52,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 import de.hdodenhof.circleimageview.CircleImageView;
+import okhttp3.FormBody;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.RequestBody;
+import okhttp3.Response;
 
 
 /**
@@ -256,70 +268,129 @@ public class PersonalFragment extends BaseFragment {
     private void connect(){
         new Thread(){
             public void run(){
-                try {
-                    Connection conn = JDBCTools.getConnection();
-                    if(conn != null) {
-                        Statement stmt = conn.createStatement();
-                        String sql = "SELECT anchor_state,anchor_bid FROM anchor WHERE anchor_phone = " +
-                                SharePreferences.getString(getActivity(),AppConstants.USER_PHONE) +
-                                " LIMIT 1";
-                        ResultSet resultSet = stmt.executeQuery(sql);
-                        if(resultSet.first()){
-                            goGo = resultSet.getInt("anchor_state");
-                            goBid = resultSet.getInt("anchor_bid");
+                RequestBody requestBody = new FormBody.Builder()
+                        .add("anchor_phone",SharePreferences.getString(getActivity(),AppConstants.USER_PHONE))
+                        .build();
+                String regData = OkHttpBase.getResponse(requestBody,"http://39.105.213.41:8080/StudyAppService/StudyServlet/anchorOnline");
+                //构建一个请求对象
+                if(regData != null){
+                    if(JsonCode.getCode(regData) == 200) {
+                        String jsonData = JsonCode.getData(regData);
+                        try {
+                            JSONArray jsonArray = new JSONArray(jsonData);
+                            JSONObject jsonObject = jsonArray.getJSONObject(0);
+                            goBid = jsonObject.getInt("anchor_bid");
+                            goGo = jsonObject.getInt("anchor_state");
+
+                            Message message = new Message();
+                            message.what = 112;
+                            handler.sendMessage(message);
+
+                        } catch (JSONException e) {
+                            e.printStackTrace();
                         }
 
-                        Message message = new Message();
-                        message.what = 112;
-                        handler.sendMessage(message);
-
-                        resultSet.close();
-                        JDBCTools.releaseConnection(stmt,conn);
                     }
-                }catch (java.sql.SQLException e){
-                    e.printStackTrace();
                 }
             }
         }.start();
+
+//        new Thread(){
+//            public void run(){
+//                try {
+//                    Connection conn = JDBCTools.getConnection();
+//                    if(conn != null) {
+//                        Statement stmt = conn.createStatement();
+//                        String sql = "SELECT anchor_state,anchor_bid FROM anchor WHERE anchor_phone = " +
+//                                SharePreferences.getString(getActivity(),AppConstants.USER_PHONE) +
+//                                " LIMIT 1";
+//                        ResultSet resultSet = stmt.executeQuery(sql);
+//                        if(resultSet.first()){
+//                            goGo = resultSet.getInt("anchor_state");
+//                            goBid = resultSet.getInt("anchor_bid");
+//                        }
+//
+//                        Message message = new Message();
+//                        message.what = 112;
+//                        handler.sendMessage(message);
+//
+//                        resultSet.close();
+//                        JDBCTools.releaseConnection(stmt,conn);
+//                    }
+//                }catch (java.sql.SQLException e){
+//                    e.printStackTrace();
+//                }
+//            }
+//        }.start();
     }
 
     private void connectClass(){
         new Thread(){
             public void run(){
-                try {
-                    Connection conn = JDBCTools.getConnection();
-                    if(conn != null) {
-                        Statement stmt = conn.createStatement();
-                        String sql = "SELECT yu_bid FROM yu WHERE yu_user = " +
-                                SharePreferences.getString(getActivity(),AppConstants.USER_PHONE) +
-                                " ORDER BY yu_time DESC LIMIT 1";
-                        ResultSet resultSet = stmt.executeQuery(sql);
-                        if (resultSet.first()){
-                            int yuBid = resultSet.getInt("yu_bid");
-                            String sqlBid = "SELECT appoint_name,appoint_coach FROM appoint WHERE appoint_bid = " +
-                                    yuBid +
-                                    " LIMIT 1";
-                            ResultSet resultSetAppoint = stmt.executeQuery(sqlBid);
-                            if(resultSetAppoint.first()){
-                                class01 = resultSetAppoint.getString("appoint_name");
-                                class02 = resultSetAppoint.getString("appoint_coach");
-                            }
-                            resultSetAppoint.close();
+                RequestBody requestBody = new FormBody.Builder()
+                        .add("yu_user",SharePreferences.getString(getActivity(),AppConstants.USER_PHONE))
+                        .build();
+                String regData = OkHttpBase.getResponse(requestBody,"http://39.105.213.41:8080/StudyAppService/StudyServlet/appointTop1");
+                if(regData != null){
+                    if(JsonCode.getCode(regData) == 200) {
+                        String jsonData = JsonCode.getData(regData);
+                        try {
+                            JSONArray jsonArray = new JSONArray(jsonData);
+                            JSONObject jsonObject = jsonArray.getJSONObject(0);
+                            class01 = jsonObject.getString("appoint_name");
+                            class02 = jsonObject.getString("appoint_coach");
 
                             Message message = new Message();
                             message.what = 113;
                             handler.sendMessage(message);
 
+                        } catch (JSONException e) {
+                            e.printStackTrace();
                         }
 
-                        resultSet.close();
-                        JDBCTools.releaseConnection(stmt,conn);
                     }
-                }catch (java.sql.SQLException e){
-                    e.printStackTrace();
                 }
+
             }
         }.start();
+
+
+//        new Thread(){
+//            public void run(){
+//                try {
+//                    Connection conn = JDBCTools.getConnection();
+//                    if(conn != null) {
+//                        Statement stmt = conn.createStatement();
+//                        String sql = "SELECT yu_bid FROM yu WHERE yu_user = " +
+//                                SharePreferences.getString(getActivity(),AppConstants.USER_PHONE) +
+//                                " ORDER BY yu_time DESC LIMIT 1";
+//                        ResultSet resultSet = stmt.executeQuery(sql);
+//                        if (resultSet.first()){
+//                            int yuBid = resultSet.getInt("yu_bid");
+//                            String sqlBid = "SELECT appoint_name,appoint_coach FROM appoint WHERE appoint_bid = " +
+//                                    yuBid +
+//                                    " LIMIT 1";
+//                            ResultSet resultSetAppoint = stmt.executeQuery(sqlBid);
+//                            if(resultSetAppoint.first()){
+//                                class01 = resultSetAppoint.getString("appoint_name");
+//                                class02 = resultSetAppoint.getString("appoint_coach");
+//                            }
+//                            resultSetAppoint.close();
+//
+//                            Message message = new Message();
+//                            message.what = 113;
+//                            handler.sendMessage(message);
+//
+//                        }
+//
+//                        resultSet.close();
+//                        JDBCTools.releaseConnection(stmt,conn);
+//                    }
+//                }catch (java.sql.SQLException e){
+//                    e.printStackTrace();
+//                }
+//            }
+//        }.start();
     }
 
     private void updateSta(final int i){
