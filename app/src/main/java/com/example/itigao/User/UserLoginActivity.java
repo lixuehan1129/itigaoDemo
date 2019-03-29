@@ -220,87 +220,87 @@ public class UserLoginActivity extends AppCompatActivity {
      //   Im();
     }
 
-    private void login(){
-        progressDialog = ProgressDialog.show(UserLoginActivity.this,"","正在登录...",true);
-        new Thread(){
-            public void run(){
-                Looper.prepare();//用于toast
-                try{
-                    Connection conn = JDBCTools.getConnection();
-                    if(conn != null){
-                        //根据手机号查找数据库
-                        Statement stmt = conn.createStatement(); //根据返回的Connection对象创建 Statement对象
-                        String sql = "SELECT * FROM user WHERE user_phone = '" +
-                                name.getText().toString() +
-                                "'";
-                        ResultSet resultSet = stmt.executeQuery(sql);
-                        SQLiteDatabase sqLiteDatabase = dataBaseHelper.getReadableDatabase();
-                        String delete = "delete from user where user_phone ='" +
-                                name.getText().toString() +
-                                "'";
-                        sqLiteDatabase.execSQL(delete);
-                        if(resultSet.next()){
-                            //判断输入的密码和数据库是否匹配
-                            String user_password = resultSet.getString("user_password");
-                            if(user_password.equals(password.getText().toString())){
-                                //密码正确，记录手机号和密码
-                                ContentValues values = new ContentValues();
-                                SharePreferences.putString(UserLoginActivity.this, AppConstants.USER_PHONE, name.getText().toString());
-                                SharePreferences.putString(UserLoginActivity.this, AppConstants.USER_PASSWORD, password.getText().toString());
-                                SharePreferences.putInt(UserLoginActivity.this, AppConstants.USER_LOGIN_COUNT, 0);
-                               // SharePreferences.putInt(UserLoginActivity.this,AppConstants.USER_sta,0);
-                                String phone = resultSet.getString("user_phone");
-                                String name1 = resultSet.getString("user_name");
-                                String picture = resultSet.getString("user_picture");
-                                String birth = resultSet.getString("user_birth");
-                                int sex = resultSet.getInt("user_sex");
-                                int sort = resultSet.getInt("user_sort");
-                                values.put("user_name",name1);
-                                values.put("user_phone",phone);
-                                values.put("user_sort",sort);
-                                values.put("user_sex",sex);
-                                values.put("user_picture",picture);
-                                values.put("user_birth",birth);
-                                sqLiteDatabase.insert("user",null,values);
-                                sqLiteDatabase.close();
-                                resultSet.close();
-
-//                                String sqlS = "SELECT * FROM anchor WHERE anchor_phone = '" +
-//                                         name.getText().toString()+
-//                                        "' LIMIT 1";
-//                                ResultSet resultSet1 = stmt.executeQuery(sqlS);
-//                                if(resultSet1.first()){
-//                                    SharePreferences.putInt(UserLoginActivity.this,AppConstants.USER_sta,1);
-//                                    SharePreferences.putInt(UserLoginActivity.this,AppConstants.USER_STYLE,resultSet1.getInt("anchor_classify"));
-//                                    SharePreferences.putInt(UserLoginActivity.this,AppConstants.USER_ID,resultSet1.getInt("anchor_bid"));
-//                                }
-//                                resultSet1.close();
-
-                                JDBCTools.releaseConnection(stmt,conn);
-                                Im();
-                            }else {
-                                Tip.showTip(UserLoginActivity.this,"密码错误");
-                                progressDialog.dismiss();
-                            }
-                        }else {
-                            sqLiteDatabase.close();
-                            Tip.showTip(UserLoginActivity.this,"手机号不存在");
-                            progressDialog.dismiss();
-                        }
-                        resultSet.close();
-
-                        JDBCTools.releaseConnection(stmt,conn);
-                    }else {
-                        Tip.showTip(UserLoginActivity.this,"请检查网络");
-                        progressDialog.dismiss();
-                    }
-                }catch (SQLException e) {
-                    e.printStackTrace();
-                }
-                Looper.loop();
-            }
-        }.start();
-    }
+//    private void login(){
+//        progressDialog = ProgressDialog.show(UserLoginActivity.this,"","正在登录...",true);
+//        new Thread(){
+//            public void run(){
+//                Looper.prepare();//用于toast
+//                try{
+//                    Connection conn = JDBCTools.getConnection();
+//                    if(conn != null){
+//                        //根据手机号查找数据库
+//                        Statement stmt = conn.createStatement(); //根据返回的Connection对象创建 Statement对象
+//                        String sql = "SELECT * FROM user WHERE user_phone = '" +
+//                                name.getText().toString() +
+//                                "'";
+//                        ResultSet resultSet = stmt.executeQuery(sql);
+//                        SQLiteDatabase sqLiteDatabase = dataBaseHelper.getReadableDatabase();
+//                        String delete = "delete from user where user_phone ='" +
+//                                name.getText().toString() +
+//                                "'";
+//                        sqLiteDatabase.execSQL(delete);
+//                        if(resultSet.next()){
+//                            //判断输入的密码和数据库是否匹配
+//                            String user_password = resultSet.getString("user_password");
+//                            if(user_password.equals(password.getText().toString())){
+//                                //密码正确，记录手机号和密码
+//                                ContentValues values = new ContentValues();
+//                                SharePreferences.putString(UserLoginActivity.this, AppConstants.USER_PHONE, name.getText().toString());
+//                                SharePreferences.putString(UserLoginActivity.this, AppConstants.USER_PASSWORD, password.getText().toString());
+//                                SharePreferences.putInt(UserLoginActivity.this, AppConstants.USER_LOGIN_COUNT, 0);
+//                               // SharePreferences.putInt(UserLoginActivity.this,AppConstants.USER_sta,0);
+//                                String phone = resultSet.getString("user_phone");
+//                                String name1 = resultSet.getString("user_name");
+//                                String picture = resultSet.getString("user_picture");
+//                                String birth = resultSet.getString("user_birth");
+//                                int sex = resultSet.getInt("user_sex");
+//                                int sort = resultSet.getInt("user_sort");
+//                                values.put("user_name",name1);
+//                                values.put("user_phone",phone);
+//                                values.put("user_sort",sort);
+//                                values.put("user_sex",sex);
+//                                values.put("user_picture",picture);
+//                                values.put("user_birth",birth);
+//                                sqLiteDatabase.insert("user",null,values);
+//                                sqLiteDatabase.close();
+//                                resultSet.close();
+//
+////                                String sqlS = "SELECT * FROM anchor WHERE anchor_phone = '" +
+////                                         name.getText().toString()+
+////                                        "' LIMIT 1";
+////                                ResultSet resultSet1 = stmt.executeQuery(sqlS);
+////                                if(resultSet1.first()){
+////                                    SharePreferences.putInt(UserLoginActivity.this,AppConstants.USER_sta,1);
+////                                    SharePreferences.putInt(UserLoginActivity.this,AppConstants.USER_STYLE,resultSet1.getInt("anchor_classify"));
+////                                    SharePreferences.putInt(UserLoginActivity.this,AppConstants.USER_ID,resultSet1.getInt("anchor_bid"));
+////                                }
+////                                resultSet1.close();
+//
+//                                JDBCTools.releaseConnection(stmt,conn);
+//                                Im();
+//                            }else {
+//                                Tip.showTip(UserLoginActivity.this,"密码错误");
+//                                progressDialog.dismiss();
+//                            }
+//                        }else {
+//                            sqLiteDatabase.close();
+//                            Tip.showTip(UserLoginActivity.this,"手机号不存在");
+//                            progressDialog.dismiss();
+//                        }
+//                        resultSet.close();
+//
+//                        JDBCTools.releaseConnection(stmt,conn);
+//                    }else {
+//                        Tip.showTip(UserLoginActivity.this,"请检查网络");
+//                        progressDialog.dismiss();
+//                    }
+//                }catch (SQLException e) {
+//                    e.printStackTrace();
+//                }
+//                Looper.loop();
+//            }
+//        }.start();
+//    }
 
     private void Im(){
         JMessageClient.login(name.getText().toString(), AppConstants.IM_PASS, new BasicCallback() {

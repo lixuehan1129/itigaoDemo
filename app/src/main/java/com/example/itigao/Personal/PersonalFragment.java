@@ -44,19 +44,14 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.io.IOException;
 import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 import okhttp3.FormBody;
-import okhttp3.OkHttpClient;
-import okhttp3.Request;
 import okhttp3.RequestBody;
-import okhttp3.Response;
 
 
 /**
@@ -186,6 +181,8 @@ public class PersonalFragment extends BaseFragment {
                     .error(R.mipmap.ic_touxiang11)
                     .into(picture);
         }
+
+        setClick();
     }
 
     @SuppressLint("SetTextI18n")
@@ -394,27 +391,38 @@ public class PersonalFragment extends BaseFragment {
     }
 
     private void updateSta(final int i){
+
         new Thread(){
             public void run(){
-                try {
-                    Connection conn = JDBCTools.getConnection();
-                    if(conn != null) {
-                        Statement stmt = conn.createStatement();
-                        String sql = "UPDATE anchor SET anchor_state = ? WHERE anchor_phone = " +
-                                SharePreferences.getString(getActivity(),AppConstants.USER_PHONE) +
-                                "";
-                        PreparedStatement preparedStatement = conn.prepareStatement(sql);
-                        preparedStatement.setInt(1,i);
-                        preparedStatement.executeUpdate();
-
-                        preparedStatement.close();
-                        JDBCTools.releaseConnection(stmt,conn);
-                    }
-                }catch (java.sql.SQLException e){
-                    e.printStackTrace();
-                }
+                RequestBody requestBody = new FormBody.Builder()
+                        .add("anchor_phone",SharePreferences.getString(getActivity(),AppConstants.USER_PHONE))
+                        .add("anchor_state", String.valueOf(i))
+                        .build();
+                OkHttpBase.getResponse(requestBody,"http://39.105.213.41:8080/StudyAppService/StudyServlet/anchorUpdate");
             }
         }.start();
+
+//        new Thread(){
+//            public void run(){
+//                try {
+//                    Connection conn = JDBCTools.getConnection();
+//                    if(conn != null) {
+//                        Statement stmt = conn.createStatement();
+//                        String sql = "UPDATE anchor SET anchor_state = ? WHERE anchor_phone = " +
+//                                SharePreferences.getString(getActivity(),AppConstants.USER_PHONE) +
+//                                "";
+//                        PreparedStatement preparedStatement = conn.prepareStatement(sql);
+//                        preparedStatement.setInt(1,i);
+//                        preparedStatement.executeUpdate();
+//
+//                        preparedStatement.close();
+//                        JDBCTools.releaseConnection(stmt,conn);
+//                    }
+//                }catch (java.sql.SQLException e){
+//                    e.printStackTrace();
+//                }
+//            }
+//        }.start();
     }
 
     private Handler handler = new Handler(new Handler.Callback() {
@@ -434,7 +442,6 @@ public class PersonalFragment extends BaseFragment {
                         go3.setText("开启直播");
                         go3.setTextColor(getResources().getColor(R.color.colorBlack));
                     }
-                    setClick();
                     break;
                 }
                 case 113:{

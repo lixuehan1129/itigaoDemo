@@ -35,11 +35,13 @@ import com.bumptech.glide.util.Util;
 import com.example.itigao.AutoProject.AppConstants;
 import com.example.itigao.AutoProject.DealBitmap;
 import com.example.itigao.AutoProject.JDBCTools;
+import com.example.itigao.AutoProject.JsonCode;
 import com.example.itigao.AutoProject.SharePreferences;
 import com.example.itigao.AutoProject.Tip;
 import com.example.itigao.Database.DataBaseHelper;
 import com.example.itigao.R;
 import com.example.itigao.Utils.StatusBarUtils;
+import com.example.itigao.okHttp.OkHttpBase;
 import com.example.itigao.okHttp.OkHttpUtil;
 import com.mysql.jdbc.Connection;
 
@@ -52,6 +54,7 @@ import java.sql.Statement;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.HashMap;
 
 import cn.jpush.im.android.api.JMessageClient;
 import cn.jpush.im.android.api.model.UserInfo;
@@ -59,6 +62,9 @@ import cn.jpush.im.api.BasicCallback;
 import de.hdodenhof.circleimageview.CircleImageView;
 import okhttp3.Call;
 import okhttp3.Callback;
+import okhttp3.FormBody;
+import okhttp3.MediaType;
+import okhttp3.RequestBody;
 import okhttp3.Response;
 import top.zibin.luban.CompressionPredicate;
 import top.zibin.luban.Luban;
@@ -71,6 +77,9 @@ import static com.example.itigao.AutoProject.AbsolutePath.getImageAbsolutePath;
  */
 
 public class PersonChangeActivity extends AppCompatActivity{
+
+    public static final MediaType FORM_CONTENT_TYPE
+            = MediaType.parse("application/x-www-form-urlencoded; charset=utf-8");
 
     private DataBaseHelper dataBaseHelper;
     private Uri photoUri;
@@ -281,12 +290,72 @@ public class PersonChangeActivity extends AppCompatActivity{
                 .setItems(items, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        setData(which+1);
-                        Tip.showTip(PersonChangeActivity.this,items[which]);
+                        AlertDialog.Builder builder1;
+                        switch (which){
+                            case 0:{
+                                final String[] item = {"一年级", "二年级", "三年级", "四年级", "五年级", "六年级"};
+                                builder1 = new AlertDialog.Builder(PersonChangeActivity.this)
+                                        .setItems(item, (dialogInterface, i) -> {
+                                            i = i + 1;
+                                            setData(i);
+                                            Tip.showTip(PersonChangeActivity.this,items[which]+item[i-1]);
+                                        });
+                                builder1.create().show();
+
+                                break;
+                            }
+                            case 1:{
+                                final String[] item = {"一年级", "二年级", "三年级"};
+                                builder1 = new AlertDialog.Builder(PersonChangeActivity.this)
+                                        .setItems(item, (dialogInterface, i) -> {
+                                            i = i + 7;
+                                            setData(i);
+                                            Tip.showTip(PersonChangeActivity.this,items[which]+item[i-7]);
+                                        });
+                                builder1.create().show();
+                                break;
+                            }
+                            case 2:{
+                                final String[] item = {"一年级", "二年级", "三年级"};
+                                builder1 = new AlertDialog.Builder(PersonChangeActivity.this)
+                                        .setItems(item, (dialogInterface, i) -> {
+                                            i = i + 10;
+                                            setData(i);
+                                            Tip.showTip(PersonChangeActivity.this,items[which]+item[i-10]);
+                                        });
+                                builder1.create().show();
+                                break;
+                            }
+                            case 3:{
+                                final String[] item = {"一年级", "二年级", "三年级", "四年级"};
+                                builder1 = new AlertDialog.Builder(PersonChangeActivity.this)
+                                        .setItems(item, (dialogInterface, i) -> {
+                                            i = i + 13;
+                                            setData(i);
+                                            Tip.showTip(PersonChangeActivity.this,items[which]+item[i-13]);
+                                        });
+                                builder1.create().show();
+                                break;
+                            }
+                            case 4:{
+                                final String[] item = {"一年级", "二年级", "三年级"};
+                                builder1 = new AlertDialog.Builder(PersonChangeActivity.this)
+                                        .setItems(item, (dialogInterface, i) -> {
+                                            i = i + 17;
+                                            setData(i);
+                                            Tip.showTip(PersonChangeActivity.this,items[which]+item[i-17]);
+                                        });
+                                builder1.create().show();
+                                break;
+                            }
+                        }
+
                     }
                 });
         builder.create().show();
     }
+
+
 
     @SuppressLint("SetTextI18n")
     private void showDatePickerDialog(Activity activity, int themeResId, final TextView tv, Calendar calendar) {
@@ -309,69 +378,107 @@ public class PersonChangeActivity extends AppCompatActivity{
 
     private void setData(int which){
         final ProgressDialog progressDialog = ProgressDialog.show(PersonChangeActivity.this,"","请稍等...",true);
+
         new Thread(){
             public void run(){
-                try {
-                    Connection conn = JDBCTools.getConnection();
-                    if(conn != null) {
-                        Statement stmt = conn.createStatement();
-                        String sqlSize = "SELECT anchor_bid FROM anchor WHERE anchor_classify = " +
-                                which +
-                                " ORDER BY anchor_bid DESC LIMIT 1";
-                        ResultSet resultSet = stmt.executeQuery(sqlSize);
-                        int size = 0;
-                        if(resultSet.first()){
-                            size = resultSet.getInt("anchor_bid") + 1;
-                        }
+                Looper.prepare();
+                HashMap<String,String> formParams = new HashMap<>();
+                //传参
+                formParams.put("anchor_classify", String.valueOf(which));
+                formParams.put("anchor_phone", phone);
+                formParams.put("anchor_name", userName);
+                formParams.put("anchor_cover", picPath);
 
-                        String sql = "SELECT room_num FROM room WHERE room_sta = 0 LIMIT 1";
-                        ResultSet resultSet1 = stmt.executeQuery(sql);
-                        if(resultSet1.first()){
-                            int roomId = resultSet1.getInt("room_num");
-
-                            String sql1 = "INSERT INTO anchor (anchor_classify,anchor_phone,anchor_name,anchor_bid,anchor_num,anchor_cover,anchor_state,anchor_room) VALUES (?,?,?,?,?,?,?,?)";
-                            PreparedStatement preparedStatement = conn.prepareStatement(sql1,Statement.RETURN_GENERATED_KEYS);
-                            preparedStatement.setInt(1,which);
-                            preparedStatement.setString(2,phone);
-                            preparedStatement.setString(3,userName);
-                            preparedStatement.setInt(4,size);
-                            preparedStatement.setInt(5,0);
-                            preparedStatement.setString(6,picPath);
-                            preparedStatement.setInt(7,0);
-                            preparedStatement.setInt(8,roomId);
-                            preparedStatement.executeUpdate();
-                            preparedStatement.close();
-
-                            String sql2 = "UPDATE room SET room_sta = ? WHERE room_num = " +
-                                    roomId +
-                                    "";
-                            PreparedStatement preparedStatement1 = conn.prepareStatement(sql2,Statement.RETURN_GENERATED_KEYS);
-                            preparedStatement1.setInt(1,1);
-                            preparedStatement1.executeUpdate();
-                            preparedStatement1.close();
-
-//                            SharePreferences.remove(PersonChangeActivity.this,AppConstants.USER_sta);
-//                            SharePreferences.putInt(PersonChangeActivity.this,AppConstants.USER_sta,1);
-//                            SharePreferences.putInt(PersonChangeActivity.this,AppConstants.USER_STYLE,which);
-//                            SharePreferences.putInt(PersonChangeActivity.this,AppConstants.USER_ID,size);
-
-                            Message message = new Message();
-                            message.what = 101;
-                            handler.sendMessage(message);
-                        }
-
-                        resultSet.close();
-                        resultSet1.close();
-                        JDBCTools.releaseConnection(stmt,conn);
-                    }
-                    progressDialog.dismiss();
-                }catch (SQLException e){
-                    e.printStackTrace();
-                    progressDialog.dismiss();
-                    Tip.showTip(PersonChangeActivity.this,"请检查网络");
+                StringBuffer sb = new StringBuffer();
+                for (String key: formParams.keySet()) {
+                    sb.append(key+"="+formParams.get(key)+"&");
                 }
+
+                RequestBody requestBody = RequestBody.create(FORM_CONTENT_TYPE, sb.toString());
+                String regData = OkHttpBase.getResponse(requestBody,"http://39.105.213.41:8080/StudyAppService/StudyServlet/toAnchor");
+                if(regData != null){
+                    if(JsonCode.getCode(regData) == 200){
+                        Message message = new Message();
+                        message.what = 101;
+                        handler.sendMessage(message);
+
+                        Tip.showTip(PersonChangeActivity.this,"修改成功");
+                        progressDialog.dismiss();
+                    }else {
+                        Tip.showTip(PersonChangeActivity.this,"请稍后再试");
+                        progressDialog.dismiss();
+                    }
+                }else {
+                    Tip.showTip(PersonChangeActivity.this,"请稍后再试");
+                    progressDialog.dismiss();
+                }
+                Looper.loop();
             }
         }.start();
+
+//        new Thread(){
+//            public void run(){
+//                try {
+//                    Connection conn = JDBCTools.getConnection();
+//                    if(conn != null) {
+//                        Statement stmt = conn.createStatement();
+//                        String sqlSize = "SELECT anchor_bid FROM anchor WHERE anchor_classify = " +
+//                                which +
+//                                " ORDER BY anchor_bid DESC LIMIT 1";
+//                        ResultSet resultSet = stmt.executeQuery(sqlSize);
+//                        int size = 0;
+//                        if(resultSet.first()){
+//                            size = resultSet.getInt("anchor_bid") + 1;
+//                        }
+//
+//                        String sql = "SELECT room_num FROM room WHERE room_sta = 0 LIMIT 1";
+//                        ResultSet resultSet1 = stmt.executeQuery(sql);
+//                        if(resultSet1.first()){
+//                            int roomId = resultSet1.getInt("room_num");
+//
+//                            String sql1 = "INSERT INTO anchor (anchor_classify,anchor_phone,anchor_name,anchor_bid,anchor_num,anchor_cover,anchor_state,anchor_room) VALUES (?,?,?,?,?,?,?,?)";
+//                            PreparedStatement preparedStatement = conn.prepareStatement(sql1,Statement.RETURN_GENERATED_KEYS);
+//                            preparedStatement.setInt(1,which);
+//                            preparedStatement.setString(2,phone);
+//                            preparedStatement.setString(3,userName);
+//                            preparedStatement.setInt(4,size);
+//                            preparedStatement.setInt(5,0);
+//                            preparedStatement.setString(6,picPath);
+//                            preparedStatement.setInt(7,0);
+//                            preparedStatement.setInt(8,roomId);
+//                            preparedStatement.executeUpdate();
+//                            preparedStatement.close();
+//
+//                            String sql2 = "UPDATE room SET room_sta = ? WHERE room_num = " +
+//                                    roomId +
+//                                    "";
+//                            PreparedStatement preparedStatement1 = conn.prepareStatement(sql2,Statement.RETURN_GENERATED_KEYS);
+//                            preparedStatement1.setInt(1,1);
+//                            preparedStatement1.executeUpdate();
+//                            preparedStatement1.close();
+//
+////                            SharePreferences.remove(PersonChangeActivity.this,AppConstants.USER_sta);
+////                            SharePreferences.putInt(PersonChangeActivity.this,AppConstants.USER_sta,1);
+////                            SharePreferences.putInt(PersonChangeActivity.this,AppConstants.USER_STYLE,which);
+////                            SharePreferences.putInt(PersonChangeActivity.this,AppConstants.USER_ID,size);
+//
+//                            Message message = new Message();
+//                            message.what = 101;
+//                            handler.sendMessage(message);
+//                        }
+//
+//                        resultSet.close();
+//                        resultSet1.close();
+//                        JDBCTools.releaseConnection(stmt,conn);
+//                    }
+//                    progressDialog.dismiss();
+//                }catch (SQLException e){
+//                    e.printStackTrace();
+//                    progressDialog.dismiss();
+//                    Tip.showTip(PersonChangeActivity.this,"请检查网络");
+//                }
+//            }
+//        }.start();
     }
 
     private Handler handler = new Handler(new Handler.Callback() {
@@ -394,23 +501,24 @@ public class PersonChangeActivity extends AppCompatActivity{
     private void upload(){
         new Thread(){
             public void run(){
-                Looper.prepare();
-                try{
-                    Connection conn = JDBCTools.getConnection();
-                    if(conn != null){
-                        Statement stmt = conn.createStatement();
-                        String sql = "UPDATE user SET user_name = ?, user_sex = ?, user_picture = ?, user_sort = ? , user_birth = ? WHERE user_phone = '" +
-                                phone +
-                                "'";
-                        PreparedStatement preparedStatement = conn.prepareStatement(sql);
-                        preparedStatement.setString(1,editText.getText().toString());
-                        preparedStatement.setInt(2,userSex);
-                        preparedStatement.setString(3,picPath);
-                        preparedStatement.setInt(4,userSta);
-                        preparedStatement.setString(5,birth.getText().toString());
-                        preparedStatement.executeUpdate();
-                        preparedStatement.close();
-                        JDBCTools.releaseConnection(stmt,conn);
+                HashMap<String,String> formParams = new HashMap<>();
+                //传参
+                formParams.put("user_phone", phone);
+                formParams.put("user_name", editText.getText().toString());
+                formParams.put("user_sex", String.valueOf(userSex));
+                formParams.put("user_picture", picPath);
+                formParams.put("user_sort", String.valueOf(userSta));
+                formParams.put("user_birth", birth.getText().toString());
+
+                StringBuffer sb = new StringBuffer();
+                for (String key: formParams.keySet()) {
+                    sb.append(key+"="+formParams.get(key)+"&");
+                }
+
+                RequestBody requestBody = RequestBody.create(FORM_CONTENT_TYPE, sb.toString());
+                String regData = OkHttpBase.getResponse(requestBody,"http://39.105.213.41:8080/StudyAppService/StudyServlet/userUpdate");
+                if(regData != null){
+                    if(JsonCode.getCode(regData) == 200){
                         SQLiteDatabase sqLiteDatabase = dataBaseHelper.getWritableDatabase();
                         ContentValues contentValues = new ContentValues();
                         contentValues.put("user_name",editText.getText().toString());
@@ -426,16 +534,59 @@ public class PersonChangeActivity extends AppCompatActivity{
 
                         Im();
                     }else {
-                        Tip.showTip(PersonChangeActivity.this,"请检查网络");
                         progressDialog.dismiss();
                     }
-                }catch (SQLException e) {
-                    e.printStackTrace();
+                }else {
                     progressDialog.dismiss();
                 }
-                Looper.loop();
             }
         }.start();
+
+
+//        new Thread(){
+//            public void run(){
+//                Looper.prepare();
+//                try{
+//                    Connection conn = JDBCTools.getConnection();
+//                    if(conn != null){
+//                        Statement stmt = conn.createStatement();
+//                        String sql = "UPDATE user SET user_name = ?, user_sex = ?, user_picture = ?, user_sort = ? , user_birth = ? WHERE user_phone = '" +
+//                                phone +
+//                                "'";
+//                        PreparedStatement preparedStatement = conn.prepareStatement(sql);
+//                        preparedStatement.setString(1,editText.getText().toString());
+//                        preparedStatement.setInt(2,userSex);
+//                        preparedStatement.setString(3,picPath);
+//                        preparedStatement.setInt(4,userSta);
+//                        preparedStatement.setString(5,birth.getText().toString());
+//                        preparedStatement.executeUpdate();
+//                        preparedStatement.close();
+//                        JDBCTools.releaseConnection(stmt,conn);
+//                        SQLiteDatabase sqLiteDatabase = dataBaseHelper.getWritableDatabase();
+//                        ContentValues contentValues = new ContentValues();
+//                        contentValues.put("user_name",editText.getText().toString());
+//                        contentValues.put("user_sex",userSex);
+//                        contentValues.put("user_picture",picPath);
+//                        contentValues.put("user_sort",userSta);
+//                        contentValues.put("user_birth",birth.getText().toString());
+//                        sqLiteDatabase.update("user",contentValues,"user_phone = ?",new String[]{phone});
+//                        sqLiteDatabase.close();
+//
+//                        Intent intent_broad = new Intent(AppConstants.BROAD_CHANGE);
+//                        LocalBroadcastManager.getInstance(PersonChangeActivity.this).sendBroadcast(intent_broad);
+//
+//                        Im();
+//                    }else {
+//                        Tip.showTip(PersonChangeActivity.this,"请检查网络");
+//                        progressDialog.dismiss();
+//                    }
+//                }catch (SQLException e) {
+//                    e.printStackTrace();
+//                    progressDialog.dismiss();
+//                }
+//                Looper.loop();
+//            }
+//        }.start();
     }
 
 

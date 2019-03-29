@@ -170,77 +170,77 @@ public class UserRegistActivity extends AppCompatActivity{
     }
 
 
-    private void CheckPhone(final String phone){
-        new Thread(){
-            public void run(){
-                Looper.prepare();//用于toast
-                try{
-                    Connection conn = JDBCTools.getConnection();
-                    if(conn != null){
-                        //首先判断手机号是否存在
-                        Statement stmt = conn.createStatement(); //根据返回的Connection对象创建 Statement对象
-                        String sql = "SELECT user_phone FROM user WHERE user_phone = '" +
-                                phone +
-                                "'";
-                        ResultSet resultSet = stmt.executeQuery(sql);
-                        if(resultSet.next()){
-                            Tip.showTip(UserRegistActivity.this,"手机号已存在");
-                        }else {
-                            mCountDownTimerUtils.start();
-                            SMSSDK.getVerificationCode("86", name.getText().toString()); // 发送验证码给号码的 phone 的手机
-                        }
-                        resultSet.close();
-                        JDBCTools.releaseConnection(stmt,conn);
-                    }else {
-                        Tip.showTip(UserRegistActivity.this,"请检查网络");
-                    }
-                }catch (SQLException e) {
-                    e.printStackTrace();
-                }
-                Looper.loop();
-            }
-        }.start();
-    }
-
-    private void update(){
-   //     final ProgressDialog progressDialog = ProgressDialog.show(UserRegistActivity.this,"","正在注册",true);
-        new Thread(){
-            public void run(){
-                Looper.prepare();//用于toast
-                try{
-                    Connection conn = JDBCTools.getConnection();
-                    if(conn != null){
-                        //首先判断手机号是否存在
-                        Statement stmt = conn.createStatement(); //根据返回的Connection对象创建 Statement对象
-                        String sql = "INSERT INTO user (user_phone,user_password,user_create_time,user_level,user_name,user_sex,user_sort,user_picture) VALUES (?,?,?,?,?,?,?,?)";
-                        PreparedStatement preparedStatement = conn.prepareStatement(sql,Statement.RETURN_GENERATED_KEYS);
-                        preparedStatement.setString(1,name.getText().toString());
-                        preparedStatement.setString(2,password.getText().toString());
-                        preparedStatement.setString(3, DateUtils.StringData());
-                        preparedStatement.setInt(4,1);
-                        preparedStatement.setString(5,"智慧云用户");
-                        preparedStatement.setInt(6,0);
-                        preparedStatement.setInt(7,0);
-                        preparedStatement.setString(8,"http://ty01.tipass.com/images/head/head_name(2).PNG");
-                        preparedStatement.executeUpdate();
-                        preparedStatement.close();
-                        JDBCTools.releaseConnection(stmt,conn);
-               //         progressDialog.dismiss();
-
-                        Im();
-                      //  finish();
-                    }else {
-                        Tip.showTip(UserRegistActivity.this,"请检查网络");
-              //          progressDialog.dismiss();
-                    }
-                }catch (SQLException e) {
-                    e.printStackTrace();
-             //       progressDialog.dismiss();
-                }
-                Looper.loop();
-            }
-        }.start();
-    }
+//    private void CheckPhone(final String phone){
+//        new Thread(){
+//            public void run(){
+//                Looper.prepare();//用于toast
+//                try{
+//                    Connection conn = JDBCTools.getConnection();
+//                    if(conn != null){
+//                        //首先判断手机号是否存在
+//                        Statement stmt = conn.createStatement(); //根据返回的Connection对象创建 Statement对象
+//                        String sql = "SELECT user_phone FROM user WHERE user_phone = '" +
+//                                phone +
+//                                "'";
+//                        ResultSet resultSet = stmt.executeQuery(sql);
+//                        if(resultSet.next()){
+//                            Tip.showTip(UserRegistActivity.this,"手机号已存在");
+//                        }else {
+//                            mCountDownTimerUtils.start();
+//                            SMSSDK.getVerificationCode("86", name.getText().toString()); // 发送验证码给号码的 phone 的手机
+//                        }
+//                        resultSet.close();
+//                        JDBCTools.releaseConnection(stmt,conn);
+//                    }else {
+//                        Tip.showTip(UserRegistActivity.this,"请检查网络");
+//                    }
+//                }catch (SQLException e) {
+//                    e.printStackTrace();
+//                }
+//                Looper.loop();
+//            }
+//        }.start();
+//    }
+//
+//    private void update(){
+//   //     final ProgressDialog progressDialog = ProgressDialog.show(UserRegistActivity.this,"","正在注册",true);
+//        new Thread(){
+//            public void run(){
+//                Looper.prepare();//用于toast
+//                try{
+//                    Connection conn = JDBCTools.getConnection();
+//                    if(conn != null){
+//                        //首先判断手机号是否存在
+//                        Statement stmt = conn.createStatement(); //根据返回的Connection对象创建 Statement对象
+//                        String sql = "INSERT INTO user (user_phone,user_password,user_create_time,user_level,user_name,user_sex,user_sort,user_picture) VALUES (?,?,?,?,?,?,?,?)";
+//                        PreparedStatement preparedStatement = conn.prepareStatement(sql,Statement.RETURN_GENERATED_KEYS);
+//                        preparedStatement.setString(1,name.getText().toString());
+//                        preparedStatement.setString(2,password.getText().toString());
+//                        preparedStatement.setString(3, DateUtils.StringData());
+//                        preparedStatement.setInt(4,1);
+//                        preparedStatement.setString(5,"智慧云用户");
+//                        preparedStatement.setInt(6,0);
+//                        preparedStatement.setInt(7,0);
+//                        preparedStatement.setString(8,"http://ty01.tipass.com/images/head/head_name(2).PNG");
+//                        preparedStatement.executeUpdate();
+//                        preparedStatement.close();
+//                        JDBCTools.releaseConnection(stmt,conn);
+//               //         progressDialog.dismiss();
+//
+//                        Im();
+//                      //  finish();
+//                    }else {
+//                        Tip.showTip(UserRegistActivity.this,"请检查网络");
+//              //          progressDialog.dismiss();
+//                    }
+//                }catch (SQLException e) {
+//                    e.printStackTrace();
+//             //       progressDialog.dismiss();
+//                }
+//                Looper.loop();
+//            }
+//        }.start();
+//    }
 
     private void Im(){
         RegisterOptionalUserInfo registerOptionalUserInfo = new RegisterOptionalUserInfo();

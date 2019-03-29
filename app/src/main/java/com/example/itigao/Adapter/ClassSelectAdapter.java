@@ -83,13 +83,6 @@ public class ClassSelectAdapter extends RecyclerView.Adapter<ClassSelectAdapter.
         }else {
             holder.imageView.setImageResource(R.mipmap.ic_run1111);
         }
-//        if(class_select.getPlace() == 0){
-//            holder.itr.setText(class_select.getItr());
-//        }else {
-//            String s = "<font color=\"#000000\">" + class_select.getItr() + "</font>" +
-//                    "<font color=\"#FF0000\">" + "(现场)" + "</font>";
-//            holder.itr.setText(Html.fromHtml(s));
-//        }
         holder.itr.setText(class_select.getItr());
 
         holder.coach.setText(class_select.getCoach());
@@ -122,9 +115,9 @@ public class ClassSelectAdapter extends RecyclerView.Adapter<ClassSelectAdapter.
     /**
      * 添加并更新数据，同时具有动画效果
      */
-    public void addDataAt(int position, Class_select data) {
-        mDataSet.add(position, data);
-        notifyItemInserted(position);//更新数据集，注意如果用adapter.notifyDataSetChanged()将没有动画效果
+    public void addDataAt(List<Class_select> data) {
+        mDataSet = data;
+        notifyDataSetChanged();
     }
 
 

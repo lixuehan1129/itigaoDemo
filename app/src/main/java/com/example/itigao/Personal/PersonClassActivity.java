@@ -103,7 +103,6 @@ public class PersonClassActivity extends AppCompatActivity {
                             }
                             resultSetAppoint.close();
                             stmt1.close();
-
                         }
                         Message message = new Message();
                         message.what = 117;
@@ -127,14 +126,8 @@ public class PersonClassActivity extends AppCompatActivity {
             switch (msg.what){
                 case 117:{
                     if(class_selects.size() != 0){
-                        for(int i = 0; i<class_selects.size(); i++){
-                            classSelectAdapter.addDataAt(0,class_selects.get(i));
-                        }
+                        classSelectAdapter.addDataAt(class_selects);
                     }
-//                    if(classSelect != null){
-//                        System.out.println("序列2    "+classSelect.getBid());
-//                        classSelectAdapter.addDataAt(0,classSelect);
-//                    }
                     break;
                 }
                 default:

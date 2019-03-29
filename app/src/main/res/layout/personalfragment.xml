@@ -59,7 +59,8 @@
                 android:background="@color/colorGray_White"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:focusableInTouchMode="true">
 
                 <de.hdodenhof.circleimageview.CircleImageView
                     android:id="@+id/personalFragment_picture"
@@ -67,11 +68,13 @@
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_gravity="center"
+                    android:clickable="false"
                     app:civ_border_color="@color/colorGray_1"
                     app:civ_border_width="2dp"/>
 
                 <LinearLayout
                     android:paddingLeft="25dp"
+                    android:clickable="false"
                     android:layout_gravity="center"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -115,7 +118,8 @@
                     android:layout_height="wrap_content"
                     android:padding="10dp"
                     android:orientation="vertical"
-                    android:background="@drawable/round_gb">
+                    android:background="@drawable/round_gb"
+                    android:focusableInTouchMode="true">
 
                     <TextView
                         android:layout_width="match_parent"
@@ -124,7 +128,8 @@
                         android:textSize="12sp"
                         android:paddingBottom="6dp"
                         android:textColor="@color/colorBlack"
-                        android:padding="3dp"/>
+                        android:padding="3dp"
+                        android:clickable="false"/>
 
                     <TextView
                         android:id="@+id/personalFragment_device2"
@@ -132,7 +137,8 @@
                         android:layout_height="wrap_content"
                         android:text="已经添加的设备"
                         android:textSize="12sp"
-                        android:padding="3dp"/>
+                        android:padding="3dp"
+                        android:clickable="false"/>
 
                 </LinearLayout>
 
@@ -143,7 +149,8 @@
                     android:layout_height="wrap_content"
                     android:padding="10dp"
                     android:orientation="vertical"
-                    android:background="@drawable/round_gb">
+                    android:background="@drawable/round_gb"
+                    android:focusableInTouchMode="true">
 
                     <TextView
                         android:paddingLeft="5dp"
@@ -153,7 +160,8 @@
                         android:layout_height="wrap_content"
                         android:text="我喜欢的课程"
                         android:textSize="12sp"
-                        android:textColor="@color/colorBlack"/>
+                        android:textColor="@color/colorBlack"
+                        android:clickable="false"/>
 
                     <TextView
                         android:id="@+id/personalFragment_class1"
@@ -162,7 +170,8 @@
                         android:layout_height="wrap_content"
                         android:text="学习课程"
                         android:textSize="15sp"
-                        android:textColor="@color/colorBlack"/>
+                        android:textColor="@color/colorBlack"
+                        android:clickable="false"/>
                     <TextView
                         android:id="@+id/personalFragment_class2"
                         android:paddingTop="2dp"
@@ -171,7 +180,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="刘老师    已经学习2课时,继续坚持"
-                        android:textSize="7sp" />
+                        android:textSize="7sp"
+                        android:clickable="false"/>
 
                     <!--<TextView-->
                         <!--android:id="@+id/personalFragment_class3"-->
@@ -197,7 +207,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="......"/>
+                        android:text="......"
+                        android:clickable="false"/>
 
                 </LinearLayout>
 
@@ -243,7 +254,8 @@
                     android:layout_height="wrap_content"
                     android:padding="10dp"
                     android:orientation="vertical"
-                    android:background="@drawable/round_gb">
+                    android:background="@drawable/round_gb"
+                    android:focusableInTouchMode="true">
 
                     <TextView
                         android:layout_width="match_parent"
@@ -252,7 +264,8 @@
                         android:textSize="12sp"
                         android:paddingBottom="6dp"
                         android:textColor="@color/colorBlack"
-                        android:padding="3dp"/>
+                        android:padding="3dp"
+                        android:clickable="false"/>
 
                     <TextView
                         android:id="@+id/personalFragment_exam2"
@@ -260,7 +273,8 @@
                         android:layout_height="wrap_content"
                         android:text="我的校园生活，点击查看详情"
                         android:textSize="12sp"
-                        android:padding="3dp"/>
+                        android:padding="3dp"
+                        android:clickable="false"/>
 
                 </LinearLayout>
 
@@ -271,7 +285,8 @@
                     android:layout_height="wrap_content"
                     android:padding="10dp"
                     android:orientation="vertical"
-                    android:background="@drawable/round_gb">
+                    android:background="@drawable/round_gb"
+                    android:focusableInTouchMode="true">
 
                     <TextView
                         android:layout_width="match_parent"
@@ -280,7 +295,8 @@
                         android:textSize="12sp"
                         android:paddingBottom="6dp"
                         android:textColor="@color/colorBlack"
-                        android:padding="3dp"/>
+                        android:padding="3dp"
+                        android:clickable="false"/>
 
                     <TextView
                         android:id="@+id/personalFragment_indoor2"
@@ -288,7 +304,8 @@
                         android:layout_height="wrap_content"
                         android:text="记录了我的学习历程，点击查看详情"
                         android:textSize="12sp"
-                        android:padding="3dp"/>
+                        android:padding="3dp"
+                        android:clickable="false"/>
 
                 </LinearLayout>
 
@@ -299,7 +316,8 @@
                     android:layout_height="wrap_content"
                     android:padding="10dp"
                     android:orientation="vertical"
-                    android:background="@drawable/round_gb">
+                    android:background="@drawable/round_gb"
+                    android:focusableInTouchMode="true">
 
                     <TextView
                         android:id="@+id/personalFragment_go3"
@@ -308,7 +326,8 @@
                         android:textSize="12sp"
                         android:paddingBottom="6dp"
                         android:textColor="@color/colorBlack"
-                        android:padding="3dp"/>
+                        android:padding="3dp"
+                        android:clickable="false"/>
 
                     <TextView
                         android:id="@+id/personalFragment_go2"
@@ -316,7 +335,8 @@
                         android:layout_height="wrap_content"
                         android:textSize="12sp"
                         android:visibility="gone"
-                        android:padding="3dp"/>
+                        android:padding="3dp"
+                        android:clickable="false"/>
 
                 </LinearLayout>
 
