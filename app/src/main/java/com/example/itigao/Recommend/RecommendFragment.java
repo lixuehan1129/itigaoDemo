@@ -60,12 +60,20 @@ public class RecommendFragment extends BaseFragment implements TabLayout.OnTabSe
         //设置TabLayout点击事件
         mTabLayout.setOnTabSelectedListener(this);
 
+        for (int i = 1; i<6; i++){
+            DataBaseFragment dataBaseFragment = new DataBaseFragment();
+            Bundle bundle = new Bundle();
+            bundle.putInt("appoint_classify_yu",i);
+            dataBaseFragment.setArguments(bundle);
+            fragments.add(dataBaseFragment);
+        }
+
         //课程选择跳转
-        fragments.add(new RunningFragment());
-        fragments.add(new CyclingFragment());
-        fragments.add(new FitFragment());
-        fragments.add(new YogaFragment());
-        fragments.add(new DanceFragment());
+//        fragments.add(new RunningFragment());
+//        fragments.add(new CyclingFragment());
+//        fragments.add(new FitFragment());
+//        fragments.add(new YogaFragment());
+//        fragments.add(new DanceFragment());
 
 
         TabLayoutAdapter mTabLayoutAdapter = new TabLayoutAdapter(getChildFragmentManager(), titles, fragments);

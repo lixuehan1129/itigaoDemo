@@ -12,6 +12,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.example.itigao.ClassAb.Appoint;
 import com.example.itigao.R;
 import com.example.itigao.ClassAb.Class_select;
 
@@ -26,7 +27,7 @@ public class ClassSelectAdapter extends RecyclerView.Adapter<ClassSelectAdapter.
     private OnItemClickListener mOnItemClickListener;
     private OnItemLongClickListener mOnItemLongClickListener;
     private Context mContext;
-    private List<Class_select> mDataSet;
+    private List<Appoint> mDataSet;
 
 
     class ViewHolder extends RecyclerView.ViewHolder {
@@ -55,21 +56,21 @@ public class ClassSelectAdapter extends RecyclerView.Adapter<ClassSelectAdapter.
         return (ViewHolder) vh;
     }
 
-    public ClassSelectAdapter(List<Class_select> data) {
+    public ClassSelectAdapter(List<Appoint> data) {
         mDataSet = data;
     }
 
     @SuppressLint("ResourceAsColor")
     @Override
     public void onBindViewHolder(final ClassSelectAdapter.ViewHolder holder, int position) {
-        Class_select class_select = mDataSet.get(position);
-        if(class_select.getCheck() == 1){
+        Appoint class_select = mDataSet.get(position);
+        if(class_select.getAppoint_yu_check() == 1){
             holder.relativeLayout.setBackgroundColor(mContext.getResources().getColor(R.color.colorBlue_W));
         }else {
             holder.relativeLayout.setBackgroundColor(mContext.getResources().getColor(R.color.colorWhite));
         }
-        if(class_select.getImage() != null){
-            String url = class_select.getImage();
+        if(class_select.getAppoint_cover() != null){
+            String url = class_select.getAppoint_cover();
             if(url!=null){
                 Glide.with(mContext)
                         .load(url)
@@ -83,10 +84,16 @@ public class ClassSelectAdapter extends RecyclerView.Adapter<ClassSelectAdapter.
         }else {
             holder.imageView.setImageResource(R.mipmap.ic_run1111);
         }
-        holder.itr.setText(class_select.getItr());
+        holder.itr.setText(class_select.getAppoint_name());
 
-        holder.coach.setText(class_select.getCoach());
-        holder.time.setText(class_select.getTime());
+        holder.coach.setText(class_select.getAppoint_coach());
+        String rTime;
+        if(class_select.getAppoint_time() == 1){
+            rTime = "08:30-10:00";
+        }else {
+            rTime = "14:30-16:00";
+        }
+        holder.time.setText(rTime);
 
         //判断是否设置了监听器
         if (mOnItemClickListener != null) {
@@ -115,9 +122,14 @@ public class ClassSelectAdapter extends RecyclerView.Adapter<ClassSelectAdapter.
     /**
      * 添加并更新数据，同时具有动画效果
      */
-    public void addDataAt(List<Class_select> data) {
+    public void addDataAt(List<Appoint> data) {
         mDataSet = data;
         notifyDataSetChanged();
+    }
+
+    public void changeData(int position,  Appoint data) {
+        mDataSet.set(position, data);
+        notifyItemChanged(position);//更新数据集，注意如果用adapter.notifyDataSetChanged()将没有动画效果
     }
 
 
@@ -143,66 +155,4 @@ public class ClassSelectAdapter extends RecyclerView.Adapter<ClassSelectAdapter.
         this.mOnItemLongClickListener = mOnItemLongClickListener;
     }
 
-//    public  class Class_Select {
-//        private String itr,coach,time;
-//        private String image;
-//        private int check,place;
-//
-//        public int getPlace() {
-//            return place;
-//        }
-//
-//        public void setPlace(int place) {
-//            this.place = place;
-//        }
-//
-//        public int getCheck() {
-//            return check;
-//        }
-//
-//        public void setCheck(int check) {
-//            this.check = check;
-//        }
-//
-//        public String getItr() {
-//            return itr;
-//        }
-//
-//        public void setItr(String itr) {
-//            this.itr = itr;
-//        }
-//
-//        public String getCoach() {
-//            return coach;
-//        }
-//
-//        public void setCoach(String coach) {
-//            this.coach = coach;
-//        }
-//
-//        public String getTime() {
-//            return time;
-//        }
-//
-//        public void setTime(String time) {
-//            this.time = time;
-//        }
-//
-//        public String getImage() {
-//            return image;
-//        }
-//
-//        public void setImage(String image) {
-//            this.image = image;
-//        }
-//
-//        public Class_Select(String itr, String coach, String time, String image, int check, int place) {
-//            this.itr = itr;
-//            this.coach = coach;
-//            this.time = time;
-//            this.image = image;
-//            this.check = check;
-//            this.place = place;
-//        }
-//    }
 }

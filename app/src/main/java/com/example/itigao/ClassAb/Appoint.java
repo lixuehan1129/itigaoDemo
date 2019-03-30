@@ -18,12 +18,13 @@ public class Appoint {
     public Appoint() {
     }
 
-    public Appoint(String appoint_name, String appoint_coach, int appoint_time, String appoint_cover, int appoint_yu_check) {
+    public Appoint(String appoint_name, String appoint_coach, int appoint_time, String appoint_cover, int appoint_yu_check,int appoint_bid) {
         this.appoint_name = appoint_name;
         this.appoint_coach = appoint_coach;
         this.appoint_time = appoint_time;
         this.appoint_cover = appoint_cover;
         this.appoint_yu_check = appoint_yu_check;
+        this.appoint_bid = appoint_bid;
     }
 
     public int getAppoint_id() {

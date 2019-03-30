@@ -13,6 +13,7 @@ import com.example.itigao.Adapter.ClassSelectAdapter;
 import com.example.itigao.AutoProject.AppConstants;
 import com.example.itigao.AutoProject.JDBCTools;
 import com.example.itigao.AutoProject.SharePreferences;
+import com.example.itigao.ClassAb.Appoint;
 import com.example.itigao.R;
 import com.example.itigao.ClassAb.Class_select;
 import com.example.itigao.Utils.DateUtils;
@@ -32,8 +33,8 @@ public class PersonClassActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
     private ClassSelectAdapter classSelectAdapter;
-    private List<Class_select> class_selects = new ArrayList<>();
-    private Class_select classSelect;
+    private List<Appoint> class_selects = new ArrayList<>();
+    private Appoint classSelect;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -97,8 +98,8 @@ public class PersonClassActivity extends AppCompatActivity {
                                 }else {
                                     rTime = "14:30-16:00";
                                 }
-                                classSelect = new Class_select(name+bid, coach,rTime,cover,
-                                        0,place,bid,week);
+                                classSelect = new Appoint(name+bid, coach,time,cover,
+                                        0,bid);
                                 class_selects.add(classSelect);
                             }
                             resultSetAppoint.close();
