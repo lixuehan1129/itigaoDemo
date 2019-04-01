@@ -59,8 +59,7 @@
                 android:background="@color/colorGray_White"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:focusableInTouchMode="true">
+                android:orientation="horizontal">
 
                 <de.hdodenhof.circleimageview.CircleImageView
                     android:id="@+id/personalFragment_picture"
@@ -118,8 +117,7 @@
                     android:layout_height="wrap_content"
                     android:padding="10dp"
                     android:orientation="vertical"
-                    android:background="@drawable/round_gb"
-                    android:focusableInTouchMode="true">
+                    android:background="@drawable/round_gb">
 
                     <TextView
                         android:layout_width="match_parent"
@@ -149,8 +147,7 @@
                     android:layout_height="wrap_content"
                     android:padding="10dp"
                     android:orientation="vertical"
-                    android:background="@drawable/round_gb"
-                    android:focusableInTouchMode="true">
+                    android:background="@drawable/round_gb">
 
                     <TextView
                         android:paddingLeft="5dp"
@@ -254,8 +251,7 @@
                     android:layout_height="wrap_content"
                     android:padding="10dp"
                     android:orientation="vertical"
-                    android:background="@drawable/round_gb"
-                    android:focusableInTouchMode="true">
+                    android:background="@drawable/round_gb">
 
                     <TextView
                         android:layout_width="match_parent"
@@ -285,8 +281,7 @@
                     android:layout_height="wrap_content"
                     android:padding="10dp"
                     android:orientation="vertical"
-                    android:background="@drawable/round_gb"
-                    android:focusableInTouchMode="true">
+                    android:background="@drawable/round_gb">
 
                     <TextView
                         android:layout_width="match_parent"
@@ -316,8 +311,7 @@
                     android:layout_height="wrap_content"
                     android:padding="10dp"
                     android:orientation="vertical"
-                    android:background="@drawable/round_gb"
-                    android:focusableInTouchMode="true">
+                    android:background="@drawable/round_gb">
 
                     <TextView
                         android:id="@+id/personalFragment_go3"
