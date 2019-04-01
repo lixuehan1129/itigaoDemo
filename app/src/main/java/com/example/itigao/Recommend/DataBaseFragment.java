@@ -21,23 +21,16 @@ import android.widget.TextView;
 
 import com.example.itigao.Adapter.ClassSelectAdapter;
 import com.example.itigao.AutoProject.AppConstants;
-import com.example.itigao.AutoProject.JDBCTools;
 import com.example.itigao.AutoProject.JsonCode;
 import com.example.itigao.AutoProject.SharePreferences;
 import com.example.itigao.AutoProject.Tip;
 import com.example.itigao.ClassAb.Appoint;
-import com.example.itigao.ClassAb.Class_select;
 import com.example.itigao.R;
 import com.example.itigao.Utils.DateUtils;
 import com.example.itigao.ViewHelper.BaseFragment;
 import com.example.itigao.ViewHelper.DividerItemChange;
 import com.example.itigao.okHttp.OkHttpBase;
-import com.mysql.jdbc.Connection;
 
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 

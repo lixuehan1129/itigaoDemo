@@ -126,26 +126,14 @@
 
         <activity android:name=".MainActivity"
             tools:ignore="InnerclassSeparator">
-
         </activity>
-
-        <activity android:name=".None.VideoPlayActivity"
-            tools:ignore="InnerclassSeparator"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:screenOrientation="portrait">
-
-        </activity>
-
-
 
         <activity android:name=".User.UserRegistActivity"
             tools:ignore="InnerclassSeparator">
-
         </activity>
 
         <activity android:name=".User.UserLoginActivity"
             tools:ignore="InnerclassSeparator">
-
         </activity>
 
 
@@ -153,42 +141,30 @@
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:screenOrientation="portrait"
             tools:ignore="InnerclassSeparator">
-
         </activity>
 
         <activity android:name=".HuDong.HuDongActivity"
             tools:ignore="InnerclassSeparator">
-
         </activity>
 
         <activity android:name=".Personal.PersonClassActivity"
             tools:ignore="InnerclassSeparator">
-
         </activity>
 
         <activity android:name=".Personal.PersonDeviceActivity"
             tools:ignore="InnerclassSeparator">
-
         </activity>
 
         <activity android:name=".Personal.PersonChangeActivity"
             tools:ignore="InnerclassSeparator">
-
         </activity>
 
         <activity android:name=".Personal.PersonExamActivity"
             tools:ignore="InnerclassSeparator">
-
         </activity>
 
         <activity android:name=".Personal.PersonIndoorActivity"
             tools:ignore="InnerclassSeparator">
-
-        </activity>
-
-        <activity android:name=".None.VideoRankActivity"
-            tools:ignore="InnerclassSeparator">
-
         </activity>
 
         <activity android:name=".HuDong.HuDongPlayActivity"
@@ -200,7 +176,6 @@
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:screenOrientation="portrait"
             tools:ignore="InnerclassSeparator">
-
         </activity>
 
         <activity android:name=".Broad.GoBroadActivity"
@@ -209,15 +184,8 @@
 
         </activity>
 
-
         <activity android:name=".Classes.BaseActivity"
             tools:ignore="InnerclassSeparator">
-        </activity>
-
-        <activity android:name=".None.VideoActivity"
-            tools:ignore="InnerclassSeparator"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:screenOrientation="portrait">
         </activity>
 
         <activity android:name=".Video.VideoNewActivity"
@@ -231,8 +199,6 @@
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:screenOrientation="portrait">
         </activity>
-
-
 
     </application>
 

@@ -25,7 +25,6 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
 import com.example.itigao.AutoProject.AppConstants;
-import com.example.itigao.AutoProject.JDBCTools;
 import com.example.itigao.AutoProject.JsonCode;
 import com.example.itigao.AutoProject.SharePreferences;
 import com.example.itigao.AutoProject.Tip;
@@ -36,12 +35,8 @@ import com.example.itigao.R;
 import com.example.itigao.Utils.PermissionUtils;
 import com.example.itigao.Utils.PhoneUtils;
 import com.example.itigao.Utils.StatusBarUtils;
-import com.mysql.jdbc.Connection;
 
 import java.io.IOException;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 

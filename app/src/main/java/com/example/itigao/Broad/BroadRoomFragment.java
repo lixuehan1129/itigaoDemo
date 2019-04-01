@@ -22,21 +22,17 @@ import android.widget.Toast;
 
 import com.example.itigao.Adapter.InteractAdapter;
 import com.example.itigao.AutoProject.AppConstants;
-import com.example.itigao.AutoProject.JDBCTools;
 import com.example.itigao.AutoProject.SharePreferences;
 import com.example.itigao.AutoProject.Tip;
 import com.example.itigao.R;
 import com.example.itigao.ViewHelper.BaseFragment;
-import com.mysql.jdbc.Connection;
+
 
 import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
