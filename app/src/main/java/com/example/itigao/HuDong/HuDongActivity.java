@@ -19,9 +19,12 @@ import android.widget.ImageView;
 import com.example.itigao.Adapter.HuDongAdapter;
 import com.example.itigao.AutoProject.AppConstants;
 import com.example.itigao.AutoProject.JDBCTools;
+import com.example.itigao.AutoProject.JsonCode;
 import com.example.itigao.AutoProject.Tip;
+import com.example.itigao.ClassAb.HuDong;
 import com.example.itigao.R;
 import com.example.itigao.Utils.StatusBarUtils;
+import com.example.itigao.okHttp.OkHttpBase;
 import com.mysql.jdbc.Connection;
 
 import java.sql.ResultSet;
@@ -29,6 +32,9 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
+
+import okhttp3.FormBody;
+import okhttp3.RequestBody;
 
 /**
  * Created by 最美人间四月天 on 2018/12/14.
@@ -39,10 +45,13 @@ public class HuDongActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private ImageView imageView;
 
-    private ArrayList<String> image;
-    private ArrayList<String> title;
-    private ArrayList<String> content;
-    private ArrayList<String> add;
+//    private ArrayList<String> image;
+//    private ArrayList<String> title;
+//    private ArrayList<String> content;
+//    private ArrayList<String> add;
+
+    private HuDongAdapter huDongAdapter;
+    private List<HuDong> huDongs = new ArrayList<>();
 
     private int hudong_classify;
 
@@ -90,6 +99,9 @@ public class HuDongActivity extends AppCompatActivity {
         StaggeredGridLayoutManager recyclerViewLayoutManager =
                 new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL);
         recyclerView.setLayoutManager(recyclerViewLayoutManager);
+        huDongAdapter = new HuDongAdapter(huDongs);
+        recyclerView.setAdapter(huDongAdapter);
+
 
         imageView = (ImageView) findViewById(R.id.hudong_video);
         imageView.setOnClickListener(new View.OnClickListener() {
@@ -105,42 +117,61 @@ public class HuDongActivity extends AppCompatActivity {
     }
 
     private void connectData(){
-        image = new ArrayList<>();
-        title = new ArrayList<>();
-        content = new ArrayList<>();
-        add = new ArrayList<>();
-
         new Thread(){
             public void run(){
                 Looper.prepare();
-                try{
-                    Connection conn = JDBCTools.getConnection();
-                    if(conn != null){
-                        Statement stmt = conn.createStatement();
-                        String sql = "SELECT * FROM hudong WHERE hudong_classify = " +
-                                hudong_classify +
-                                " ORDER BY hudong_id DESC LIMIT 40";
-                        ResultSet resultSet = stmt.executeQuery(sql);
-                        while(resultSet.next()){
-                            image.add(resultSet.getString("hudong_cover"));
-                            title.add(resultSet.getString("hudong_name"));
-                            content.add(resultSet.getString("hudong_content"));
-                            add.add(resultSet.getString("hudong_add"));
-                        }
+                RequestBody requestBody = new FormBody.Builder()
+                        .add("hudong_classify", String.valueOf(hudong_classify))
+                        .build();
+                String regData = OkHttpBase.getResponse(requestBody,"http://39.105.213.41:8080/StudyAppService/StudyServlet/hudong");
+                if(regData != null){
+                    if(JsonCode.getCode(regData) == 200){
+                        String jsonString = JsonCode.getData(regData);
+                        huDongs = JsonCode.jsonToList(jsonString, HuDong.class);
                         Message message = new Message();
                         message.what = 1;
                         handler.sendMessage(message);
-                        resultSet.close();
-                        JDBCTools.releaseConnection(stmt,conn);
-                    }else {
-                        Tip.showTip(HuDongActivity.this,"请检查网络");
                     }
-                }catch (SQLException e) {
-                    e.printStackTrace();
                 }
                 Looper.loop();
             }
         }.start();
+//        image = new ArrayList<>();
+//        title = new ArrayList<>();
+//        content = new ArrayList<>();
+//        add = new ArrayList<>();
+//
+//        new Thread(){
+//            public void run(){
+//                Looper.prepare();
+//                try{
+//                    Connection conn = JDBCTools.getConnection();
+//                    if(conn != null){
+//                        Statement stmt = conn.createStatement();
+//                        String sql = "SELECT * FROM hudong WHERE hudong_classify = " +
+//                                hudong_classify +
+//                                " ORDER BY hudong_id DESC LIMIT 40";
+//                        ResultSet resultSet = stmt.executeQuery(sql);
+//                        while(resultSet.next()){
+//                            image.add(resultSet.getString("hudong_cover"));
+//                            title.add(resultSet.getString("hudong_name"));
+//                            content.add(resultSet.getString("hudong_content"));
+//                            add.add(resultSet.getString("hudong_add"));
+//                        }
+//                        Message message = new Message();
+//                        message.what = 1;
+//                        handler.sendMessage(message);
+//                        resultSet.close();
+//                        JDBCTools.releaseConnection(stmt,conn);
+//                    }else {
+//                        Tip.showTip(HuDongActivity.this,"请检查网络");
+//                    }
+//                }catch (SQLException e) {
+//                    e.printStackTrace();
+//                }
+//                Looper.loop();
+//            }
+//        }.start();
     }
 
     private Handler handler = new Handler(new Handler.Callback() {
@@ -162,20 +193,14 @@ public class HuDongActivity extends AppCompatActivity {
 
 
     private void setAdapter(){
-        List<HuDongAdapter.HuDong> huDongs = new ArrayList<>();
-        for(int i=0; i<image.size(); i++){
-            HuDongAdapter huDongAdapter = new HuDongAdapter(huDongs);
-            HuDongAdapter.HuDong huDong = huDongAdapter.new HuDong(image.get(i), title.get(i), content.get(i));
-            huDongs.add(huDong);
+        if(huDongs.size() > 0){
+            huDongAdapter.addDataAt(huDongs);
         }
-
-        HuDongAdapter huDongAdapter = new HuDongAdapter(huDongs);
-        recyclerView.setAdapter(huDongAdapter);
         huDongAdapter.setOnItemClickListener(new HuDongAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(View view, int position) {
                 Intent intent = new Intent(HuDongActivity.this, HuDongPlayActivity.class);
-                intent.putExtra("hudong_c_add",add.get(position));
+                intent.putExtra("hudong_c_add",huDongs.get(position).getHudong_add());
                 startActivity(intent);
             }
         });

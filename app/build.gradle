@@ -37,6 +37,10 @@ android {
         targetCompatibility 1.8
     }
 
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
 
 
 }
@@ -45,7 +49,6 @@ MobSDK {
     appKey "2a628933960e4"
     appSecret "b98fbea375084b85a024410f43754ff6"
     SMSSDK {}
-//    MobIM {}
 }
 
 dependencies {

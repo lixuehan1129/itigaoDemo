@@ -31,7 +31,6 @@ import com.example.itigao.AutoProject.AppConstants;
 import com.example.itigao.AutoProject.JsonCode;
 import com.example.itigao.AutoProject.SharePreferences;
 import com.example.itigao.AutoProject.Tip;
-import com.example.itigao.Broad.BroadcastActivity;
 import com.example.itigao.Broad.GoBroadActivity;
 import com.example.itigao.Database.DataBaseHelper;
 import com.example.itigao.R;
@@ -486,8 +485,8 @@ public class PersonalFragment extends BaseFragment {
             @Override
             public void onItemClick(View view, int position) {
                 if(state.get(position) == 0){
-                    Intent intent = new Intent(getActivity(),BroadcastActivity.class);
-                    startActivity(intent);
+//                    Intent intent = new Intent(getActivity(),BroadcastActivity.class);
+//                    startActivity(intent);
                 }else {
                     Tip.showTip(getActivity(),"当前未开播");
                 }

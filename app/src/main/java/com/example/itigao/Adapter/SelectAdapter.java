@@ -78,6 +78,12 @@ public class SelectAdapter extends RecyclerView.Adapter<SelectAdapter.ViewHolder
         return selects.size();
     }
 
+    public void addDataAt(List<Select> data) {
+        selects = data;
+        notifyDataSetChanged();
+    }
+
+
     public interface OnItemClickListener {
         void onItemClick(View view, int position);
     }

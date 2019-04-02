@@ -9,6 +9,12 @@ public class HuDong {
     private String hudong_cover;
     private String hudong_add;
 
+    public HuDong(String hudong_name, String hudong_content, String hudong_cover) {
+        this.hudong_name = hudong_name;
+        this.hudong_content = hudong_content;
+        this.hudong_cover = hudong_cover;
+    }
+
     public int getHudong_id() {
         return hudong_id;
     }

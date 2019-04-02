@@ -98,10 +98,9 @@ public class RoomFragment extends BaseFragment {
         imageView = (TextView) view.findViewById(R.id.video_room_iv);
 
 
-        recyclerView.setLayoutManager(setNoSco());
         interactAdapter = new InteractAdapter(interacts);
-        recyclerView.setAdapter(interactAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+        recyclerView.setAdapter(interactAdapter);
 
         editText.setEnabled(false);
 
@@ -345,14 +344,6 @@ public class RoomFragment extends BaseFragment {
 
     }
 
-    private LinearLayoutManager setNoSco(){
-        return new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false) {
-            @Override
-            public boolean canScrollVertically() {
-                return false;
-            }
-        };
-    }
 
     @Override
     public void onDestroy(){

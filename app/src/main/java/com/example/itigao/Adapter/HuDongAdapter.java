@@ -9,6 +9,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.example.itigao.ClassAb.Appoint;
+import com.example.itigao.ClassAb.HuDong;
 import com.example.itigao.R;
 
 import java.util.List;
@@ -50,10 +52,10 @@ public class HuDongAdapter extends RecyclerView.Adapter<HuDongAdapter.ViewHolder
     public void onBindViewHolder(final HuDongAdapter.ViewHolder holder, int position) {
 
         HuDong huDong = mDataSet.get(position);
-        holder.textView1.setText(huDong.getTv1());
-        holder.textView2.setText(huDong.getTv2());
-        if(huDong.getIv() != null){
-            String url = huDong.getIv();
+        holder.textView1.setText(huDong.getHudong_name());
+        holder.textView2.setText(huDong.getHudong_content());
+        if(huDong.getHudong_cover() != null){
+            String url = huDong.getHudong_cover();
             if(url!=null){
                 Glide.with(mContext)
                         .load(url)
@@ -87,6 +89,14 @@ public class HuDongAdapter extends RecyclerView.Adapter<HuDongAdapter.ViewHolder
         return mDataSet.size();
     }
 
+    /**
+     * 添加并更新数据，同时具有动画效果
+     */
+    public void addDataAt(List<HuDong> data) {
+        mDataSet = data;
+        notifyDataSetChanged();
+    }
+
     public interface OnItemClickListener{
         void onItemClick(View view, int position);
     }
@@ -95,39 +105,4 @@ public class HuDongAdapter extends RecyclerView.Adapter<HuDongAdapter.ViewHolder
         this.mOnItemClickListener = mOnItemClickListener;
     }
 
-
-    public class HuDong {
-        private String tv1, tv2;
-        private String iv;
-
-        public HuDong(String iv, String tv1, String tv2) {
-            this.tv1 = tv1;
-            this.tv2 = tv2;
-            this.iv = iv;
-        }
-
-        public String getTv1() {
-            return tv1;
-        }
-
-        public void setTv1(String tv1) {
-            this.tv1 = tv1;
-        }
-
-        public String getTv2() {
-            return tv2;
-        }
-
-        public void setTv2(String tv2) {
-            this.tv2 = tv2;
-        }
-
-        public String getIv() {
-            return iv;
-        }
-
-        public void setIv(String iv) {
-            this.iv = iv;
-        }
-    }
 }

@@ -12,7 +12,6 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.itigao.Adapter.SelectAdapter;
@@ -47,13 +46,6 @@ public class VideoFragment extends BaseFragment {
     private int video_record;   //0表示主页推荐内容不计，1表示课程列表加入记录，2观看记录
 
     private List<Classes> classes;
-
-//    ArrayList<String> name;
-//    ArrayList<String> content;
-//    ArrayList<String> nut;
-//    ArrayList<String> add;
-//    ArrayList<Integer> select,classify;
-//    ArrayList<String> cover;
 
     CallBackValue callBackValue;
 
@@ -101,6 +93,7 @@ public class VideoFragment extends BaseFragment {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity());
         linearLayoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
         recyclerView.setLayoutManager(linearLayoutManager);
+
 
         connectData();
     }
@@ -331,18 +324,15 @@ public class VideoFragment extends BaseFragment {
         selectAdapter.setOnItemClickListener(new SelectAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(View view, int position) {
-
                 title.setText(classes.get(position).getClass_name());
                 itr.setText(classes.get(position).getClass_content());
                 advice.setText(classes.get(position).getClass_nut());
 
                 callBackValue.SendMessageValue(classes.get(position).getClass_add());
-
               //  System.out.println("返回classes_update");
                 if(video_record != 0){
                     Update(position);
                 }
-
             }
         });
     }
