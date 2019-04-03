@@ -10,8 +10,8 @@ import android.media.ThumbnailUtils;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
+import android.os.Looper;
 import android.provider.MediaStore;
-import android.support.v4.content.LocalBroadcastManager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
@@ -24,31 +24,29 @@ import android.widget.TextView;
 
 import com.example.itigao.AutoProject.AppConstants;
 import com.example.itigao.AutoProject.DealBitmap;
-import com.example.itigao.AutoProject.JDBCTools;
 import com.example.itigao.AutoProject.SharePreferences;
 import com.example.itigao.AutoProject.Tip;
 import com.example.itigao.R;
 import com.example.itigao.Utils.StatusBarUtils;
+import com.example.itigao.okHttp.OkHttpBase;
 import com.example.itigao.okHttp.OkHttpUtil;
 import com.iceteck.silicompressorr.VideoCompress;
-import com.mysql.jdbc.Connection;
 
 import java.io.BufferedOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
-import java.sql.Statement;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.HashMap;
 
 import cn.jzvd.Jzvd;
 import cn.jzvd.JzvdStd;
 import okhttp3.Call;
 import okhttp3.Callback;
+import okhttp3.MediaType;
+import okhttp3.RequestBody;
 import okhttp3.Response;
-import top.zibin.luban.CompressionPredicate;
 import top.zibin.luban.Luban;
 import top.zibin.luban.OnCompressListener;
 
@@ -57,6 +55,9 @@ import top.zibin.luban.OnCompressListener;
  */
 
 public class HuDongPutActivity extends AppCompatActivity {
+
+    public static final MediaType FORM_CONTENT_TYPE
+            = MediaType.parse("application/x-www-form-urlencoded; charset=utf-8");
 
     private ProgressDialog progressDialog;
     private TextView button;
@@ -120,22 +121,14 @@ public class HuDongPutActivity extends AppCompatActivity {
                     int id = cursor.getInt(cursor.getColumnIndex(MediaStore.Video.VideoColumns._ID));
                     // 视频路径
                     filePath = cursor.getString(cursor.getColumnIndex(MediaStore.Video.VideoColumns.DATA));
-                    // ThumbnailUtils类2.2以上可用  Todo 获取视频缩略图
                     System.out.println("地址"+filePath);
                     bitmap = ThumbnailUtils.createVideoThumbnail(filePath, MediaStore.Images.Thumbnails.FULL_SCREEN_KIND);
-                    // 图片Bitmap转file
-                 //   imageView.setImageBitmap(bitmap);
 
                     jzvdStd.fullscreenButton.setVisibility(View.INVISIBLE);
                     jzvdStd.fullscreenButton.setOnClickListener(null);
                     jzvdStd.thumbImageView.setImageBitmap(bitmap);
                     jzvdStd.setUp(filePath,"", Jzvd.SCREEN_WINDOW_NORMAL);
 
-
-                  //  File file = CommonUtils.compressImage(bitmap);
-                    // 保存成功后插入到图库，其中的file是保存成功后的图片path。这里只是插入单张图片
-                    // 通过发送广播将视频和图片插入相册
-//                    sendBroadcast(new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE, Uri.fromFile(file)));
                     cursor.close();
                 }
             }
@@ -179,10 +172,7 @@ public class HuDongPutActivity extends AppCompatActivity {
         String postUrl = "http://39.105.213.41:8080/upLoadVideo/UploadFileServlet";
 
         OkHttpUtil.postFile(postUrl, (currentBytes, contentLength, done) -> {
-            Log.i("看一下", "currentBytes==" + currentBytes + "==contentLength==" + contentLength + "==done==" + done);
-            int progress = (int) (currentBytes * 100 / contentLength);
-//                post_progress.setProgress(progress);
-//                post_text.setText(progress + "%");
+            Log.i("上传视频", "currentBytes==" + currentBytes + "==contentLength==" + contentLength + "==done==" + done);
         }, new Callback() {
             @Override
             public void onFailure(Call call, IOException e) {
@@ -194,7 +184,7 @@ public class HuDongPutActivity extends AppCompatActivity {
             public void onResponse(Call call, Response response) throws IOException {
                 if (response != null) {
                     String result = response.body().string();
-                    Log.i("再看一下", "result===" + result);
+                    Log.i("video", "result===" + result);
                     pathVideo = result;
                     upLoadPic();
                 }
@@ -223,12 +213,7 @@ public class HuDongPutActivity extends AppCompatActivity {
         Luban.with(this)
                 .load(file)
                 .ignoreBy(100)
-                .filter(new CompressionPredicate() {
-                    @Override
-                    public boolean apply(String path) {
-                        return !(TextUtils.isEmpty(path) || path.toLowerCase().endsWith(".gif"));
-                    }
-                })
+                .filter(path -> !(TextUtils.isEmpty(path) || path.toLowerCase().endsWith(".gif")))
                 .setCompressListener(new OnCompressListener() {
                     @Override
                     public void onStart() {
@@ -239,7 +224,6 @@ public class HuDongPutActivity extends AppCompatActivity {
                     public void onSuccess(File file) {
                         // TODO 压缩成功后调用，返回压缩后的图片文件
                         upPic(file);
-
                     }
 
                     @Override
@@ -254,11 +238,11 @@ public class HuDongPutActivity extends AppCompatActivity {
         String postUrl = "http://39.105.213.41:8080/upLoadVideo/UploadFileServlet";
 
         OkHttpUtil.postFile(postUrl, (currentBytes, contentLength, done) -> {
-            Log.i("看一下图片", "currentBytes==" + currentBytes + "==contentLength==" + contentLength + "==done==" + done);
+            Log.i("图片", "currentBytes==" + currentBytes + "==contentLength==" + contentLength + "==done==" + done);
         }, new Callback() {
             @Override
             public void onFailure(Call call, IOException e) {
-                System.out.println("开始上传失败" + call.toString() + e);
+                System.out.println("上传失败" + call.toString() + e);
                 progressDialog.dismiss();
             }
 
@@ -266,9 +250,11 @@ public class HuDongPutActivity extends AppCompatActivity {
             public void onResponse(Call call, Response response) throws IOException {
                 if (response != null) {
                     String result = response.body().string();
-                    Log.i("再看一下", "result===" + result);
+                    Log.i("pic", "result===" + result);
                     pathPic = result;
-                    updateHu();
+                    if(pathPic != null && pathVideo != null){
+                        updateHu();
+                    }
                 }
             }
         }, file);
@@ -289,32 +275,34 @@ public class HuDongPutActivity extends AppCompatActivity {
 
         new Thread(){
             public void run(){
-                try{
-                    Connection conn = JDBCTools.getConnection();
-                    if(conn != null) {
-                        String sql = "INSERT INTO hudong (hudong_user,hudong_classify,hudong_name,hudong_content,hudong_cover,hudong_add) VALUES (?,?,?,?,?,?)";
-                        PreparedStatement preparedStatement = conn.prepareStatement(sql,Statement.RETURN_GENERATED_KEYS);
-                        preparedStatement.setString(1,name);
-                        preparedStatement.setInt(2,hudong_classify);
-                        preparedStatement.setString(3, finalTitle);
-                        preparedStatement.setString(4, finalContent);
-                        preparedStatement.setString(5,pathPic);
-                        preparedStatement.setString(6,pathVideo);
-                        preparedStatement.executeUpdate();
-                        preparedStatement.close();
-
-                        Intent intent_broad = new Intent(AppConstants.BROAD_HU);
-                        LocalBroadcastManager.getInstance(HuDongPutActivity.this).sendBroadcast(intent_broad);
-                        progressDialog.dismiss();
-                        finish();
-                    }
-                }catch (SQLException e){
-                    e.printStackTrace();
-                    progressDialog.dismiss();
-                    Tip.showTip(HuDongPutActivity.this,"请检查网络");
+                Looper.prepare();
+                HashMap<String,String> formParams = new HashMap<>();
+                //传参
+                formParams.put("hudong_user", name);
+                formParams.put("hudong_classify", String.valueOf(hudong_classify));
+                formParams.put("hudong_name", finalTitle);
+                formParams.put("hudong_content", finalContent);
+                formParams.put("hudong_cover", pathPic);
+                formParams.put("hudong_add", pathVideo);
+                StringBuffer sb = new StringBuffer();
+                for (String key: formParams.keySet()) {
+                    sb.append(key+"="+formParams.get(key)+"&");
                 }
+
+                RequestBody requestBody = RequestBody.create(FORM_CONTENT_TYPE, sb.toString());
+                String regData = OkHttpBase.getResponse(requestBody,"http://39.105.213.41:8080/StudyAppService/StudyServlet/huDongPut");
+                if(regData != null){
+                    Tip.showTip(HuDongPutActivity.this,"上传成功");
+                    progressDialog.dismiss();
+                    finish();
+                }else {
+                    Tip.showTip(HuDongPutActivity.this,"上传失败，请稍后再试");
+                    progressDialog.dismiss();
+                }
+                Looper.loop();
             }
         }.start();
+
     }
 
     //根据宽高比设置控件宽高, 如设置宽高比为5:4，那么widthRatio为5，heightRatio为4

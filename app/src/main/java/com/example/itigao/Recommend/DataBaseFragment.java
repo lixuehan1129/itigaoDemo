@@ -466,7 +466,6 @@ public class DataBaseFragment extends BaseFragment {
                         .add("yu_time", String.valueOf(DateUtils.IntTime(week)))
                         .add("yu_bid", String.valueOf(bid))
                         .build();
-                System.out.println("dsdjs"+bid);
                 String regData = OkHttpBase.getResponse(requestBody,"http://39.105.213.41:8080/StudyAppService/StudyServlet/insertYu");
                 if(regData != null){
                     progressDialog.dismiss();

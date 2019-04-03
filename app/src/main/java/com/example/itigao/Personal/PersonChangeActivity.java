@@ -34,7 +34,6 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.util.Util;
 import com.example.itigao.AutoProject.AppConstants;
 import com.example.itigao.AutoProject.DealBitmap;
-import com.example.itigao.AutoProject.JDBCTools;
 import com.example.itigao.AutoProject.JsonCode;
 import com.example.itigao.AutoProject.SharePreferences;
 import com.example.itigao.AutoProject.Tip;
@@ -43,14 +42,9 @@ import com.example.itigao.R;
 import com.example.itigao.Utils.StatusBarUtils;
 import com.example.itigao.okHttp.OkHttpBase;
 import com.example.itigao.okHttp.OkHttpUtil;
-import com.mysql.jdbc.Connection;
 
 import java.io.File;
 import java.io.IOException;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -138,6 +132,27 @@ public class PersonChangeActivity extends AppCompatActivity{
 
 
         localData();
+        onClick();
+
+    }
+
+    private void localData(){
+        SQLiteDatabase sqLiteDatabase = dataBaseHelper.getReadableDatabase();
+        Cursor cursor = sqLiteDatabase.query("user",null,"user_phone = ?",new String[]{
+                 phone
+        },null,null,null,"1");
+        if(cursor.moveToFirst()){
+            userName = cursor.getString(cursor.getColumnIndex("user_name"));
+            userPicture = cursor.getString(cursor.getColumnIndex("user_picture"));
+            userSex = cursor.getInt(cursor.getColumnIndex("user_sex"));
+            userBirth = cursor.getString(cursor.getColumnIndex("user_birth"));
+        }
+        picPath = userPicture;
+        cursor.close();
+        sqLiteDatabase.close();
+
+        System.out.println(picPath);
+
         editText.setText(userName);
         if(!TextUtils.isEmpty(userBirth)){
             birth.setText(userBirth);
@@ -175,26 +190,6 @@ public class PersonChangeActivity extends AppCompatActivity{
         }
 
         sta.setText(userSta == 0 ? "普通会员":"正式主播  : " + "房间号（" + anchorId + ")");
-
-
-        onClick();
-
-    }
-
-    private void localData(){
-        SQLiteDatabase sqLiteDatabase = dataBaseHelper.getReadableDatabase();
-        Cursor cursor = sqLiteDatabase.query("user",null,"user_phone = ?",new String[]{
-                 phone
-        },null,null,null,"1");
-        if(cursor.moveToFirst()){
-            userName = cursor.getString(cursor.getColumnIndex("user_name"));
-            userPicture = cursor.getString(cursor.getColumnIndex("user_picture"));
-            userSex = cursor.getInt(cursor.getColumnIndex("user_sex"));
-            userBirth = cursor.getString(cursor.getColumnIndex("user_birth"));
-        }
-        picPath = userPicture;
-        cursor.close();
-        sqLiteDatabase.close();
     }
 
 
@@ -415,70 +410,6 @@ public class PersonChangeActivity extends AppCompatActivity{
                 Looper.loop();
             }
         }.start();
-
-//        new Thread(){
-//            public void run(){
-//                try {
-//                    Connection conn = JDBCTools.getConnection();
-//                    if(conn != null) {
-//                        Statement stmt = conn.createStatement();
-//                        String sqlSize = "SELECT anchor_bid FROM anchor WHERE anchor_classify = " +
-//                                which +
-//                                " ORDER BY anchor_bid DESC LIMIT 1";
-//                        ResultSet resultSet = stmt.executeQuery(sqlSize);
-//                        int size = 0;
-//                        if(resultSet.first()){
-//                            size = resultSet.getInt("anchor_bid") + 1;
-//                        }
-//
-//                        String sql = "SELECT room_num FROM room WHERE room_sta = 0 LIMIT 1";
-//                        ResultSet resultSet1 = stmt.executeQuery(sql);
-//                        if(resultSet1.first()){
-//                            int roomId = resultSet1.getInt("room_num");
-//
-//                            String sql1 = "INSERT INTO anchor (anchor_classify,anchor_phone,anchor_name,anchor_bid,anchor_num,anchor_cover,anchor_state,anchor_room) VALUES (?,?,?,?,?,?,?,?)";
-//                            PreparedStatement preparedStatement = conn.prepareStatement(sql1,Statement.RETURN_GENERATED_KEYS);
-//                            preparedStatement.setInt(1,which);
-//                            preparedStatement.setString(2,phone);
-//                            preparedStatement.setString(3,userName);
-//                            preparedStatement.setInt(4,size);
-//                            preparedStatement.setInt(5,0);
-//                            preparedStatement.setString(6,picPath);
-//                            preparedStatement.setInt(7,0);
-//                            preparedStatement.setInt(8,roomId);
-//                            preparedStatement.executeUpdate();
-//                            preparedStatement.close();
-//
-//                            String sql2 = "UPDATE room SET room_sta = ? WHERE room_num = " +
-//                                    roomId +
-//                                    "";
-//                            PreparedStatement preparedStatement1 = conn.prepareStatement(sql2,Statement.RETURN_GENERATED_KEYS);
-//                            preparedStatement1.setInt(1,1);
-//                            preparedStatement1.executeUpdate();
-//                            preparedStatement1.close();
-//
-////                            SharePreferences.remove(PersonChangeActivity.this,AppConstants.USER_sta);
-////                            SharePreferences.putInt(PersonChangeActivity.this,AppConstants.USER_sta,1);
-////                            SharePreferences.putInt(PersonChangeActivity.this,AppConstants.USER_STYLE,which);
-////                            SharePreferences.putInt(PersonChangeActivity.this,AppConstants.USER_ID,size);
-//
-//                            Message message = new Message();
-//                            message.what = 101;
-//                            handler.sendMessage(message);
-//                        }
-//
-//                        resultSet.close();
-//                        resultSet1.close();
-//                        JDBCTools.releaseConnection(stmt,conn);
-//                    }
-//                    progressDialog.dismiss();
-//                }catch (SQLException e){
-//                    e.printStackTrace();
-//                    progressDialog.dismiss();
-//                    Tip.showTip(PersonChangeActivity.this,"请检查网络");
-//                }
-//            }
-//        }.start();
     }
 
     private Handler handler = new Handler(new Handler.Callback() {
@@ -541,52 +472,6 @@ public class PersonChangeActivity extends AppCompatActivity{
                 }
             }
         }.start();
-
-
-//        new Thread(){
-//            public void run(){
-//                Looper.prepare();
-//                try{
-//                    Connection conn = JDBCTools.getConnection();
-//                    if(conn != null){
-//                        Statement stmt = conn.createStatement();
-//                        String sql = "UPDATE user SET user_name = ?, user_sex = ?, user_picture = ?, user_sort = ? , user_birth = ? WHERE user_phone = '" +
-//                                phone +
-//                                "'";
-//                        PreparedStatement preparedStatement = conn.prepareStatement(sql);
-//                        preparedStatement.setString(1,editText.getText().toString());
-//                        preparedStatement.setInt(2,userSex);
-//                        preparedStatement.setString(3,picPath);
-//                        preparedStatement.setInt(4,userSta);
-//                        preparedStatement.setString(5,birth.getText().toString());
-//                        preparedStatement.executeUpdate();
-//                        preparedStatement.close();
-//                        JDBCTools.releaseConnection(stmt,conn);
-//                        SQLiteDatabase sqLiteDatabase = dataBaseHelper.getWritableDatabase();
-//                        ContentValues contentValues = new ContentValues();
-//                        contentValues.put("user_name",editText.getText().toString());
-//                        contentValues.put("user_sex",userSex);
-//                        contentValues.put("user_picture",picPath);
-//                        contentValues.put("user_sort",userSta);
-//                        contentValues.put("user_birth",birth.getText().toString());
-//                        sqLiteDatabase.update("user",contentValues,"user_phone = ?",new String[]{phone});
-//                        sqLiteDatabase.close();
-//
-//                        Intent intent_broad = new Intent(AppConstants.BROAD_CHANGE);
-//                        LocalBroadcastManager.getInstance(PersonChangeActivity.this).sendBroadcast(intent_broad);
-//
-//                        Im();
-//                    }else {
-//                        Tip.showTip(PersonChangeActivity.this,"请检查网络");
-//                        progressDialog.dismiss();
-//                    }
-//                }catch (SQLException e) {
-//                    e.printStackTrace();
-//                    progressDialog.dismiss();
-//                }
-//                Looper.loop();
-//            }
-//        }.start();
     }
 
 

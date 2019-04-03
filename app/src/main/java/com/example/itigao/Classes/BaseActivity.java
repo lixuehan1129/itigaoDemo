@@ -1,14 +1,10 @@
 package com.example.itigao.Classes;
 
-import android.content.BroadcastReceiver;
-import android.content.Context;
 import android.content.Intent;
-import android.content.IntentFilter;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
-import android.support.v4.content.LocalBroadcastManager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
@@ -56,16 +52,11 @@ import okhttp3.Response;
 
 public class BaseActivity extends AppCompatActivity {
 
-
     private int mClassify;
 
     private RecyclerView recyclerView1, recyclerView2, recyclerView3;
     private ImageView imageView1, imageView2;
     private TextView textView;
-
-    private LocalBroadcastManager broadcastManager;
-    private IntentFilter intentFilter;
-    private BroadcastReceiver mReceiver;
 
     private ClassVideoAdapter videoAdapter;
     private ClassActivityAdapter anchorAdapter, recordAdapter;
@@ -81,8 +72,6 @@ public class BaseActivity extends AppCompatActivity {
     private ArrayList<String> cover;
     private ArrayList<String> add;
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -90,28 +79,14 @@ public class BaseActivity extends AppCompatActivity {
         Intent intent = getIntent();
         mClassify = intent.getIntExtra("NianJi",1);
 
-        //mActivity = this;
         StatusBarUtils.setWindowStatusBarColor(BaseActivity.this, R.color.colorWhite);
         initView();
-
-//        broadcastManager = LocalBroadcastManager.getInstance(BaseActivity.this.getApplication());
-//        intentFilter = new IntentFilter();
-//        intentFilter.addAction(AppConstants.BROAD_RECORD);
-//        mReceiver = new BroadcastReceiver() {
-//            @Override
-//            public void onReceive(Context context, Intent intent){
-//                //收到广播后所作的操作
-//               // connectRecord();
-//            }
-//        };
-//        broadcastManager.registerReceiver(mReceiver, intentFilter);
     }
 
 
     @Override
     public void onDestroy() {
         super.onDestroy();
-  //      broadcastManager.unregisterReceiver(mReceiver);
         if (Util.isOnMainThread()) {
             Glide.with(getApplicationContext()).pauseRequests();
         }
@@ -131,14 +106,12 @@ public class BaseActivity extends AppCompatActivity {
         toolbar.setTitle(item[mClassify-1]);
         back(toolbar);
 
-
         recyclerView1 = (RecyclerView) findViewById(R.id.class_activity_rv1);//anchor
         recyclerView2 = (RecyclerView) findViewById(R.id.class_activity_rv2);//record
         recyclerView3 = (RecyclerView) findViewById(R.id.class_activity_rv3);//video
         imageView1 = (ImageView) findViewById(R.id.class_activity_iv1);
         imageView2 = (ImageView) findViewById(R.id.class_activity_iv2);
         textView = (TextView) findViewById(R.id.class_activity_tv1);
-
 
         LinearLayoutManager linearLayoutManager1 = new LinearLayoutManager(this);
         linearLayoutManager1.setOrientation(LinearLayoutManager.HORIZONTAL);
@@ -168,44 +141,36 @@ public class BaseActivity extends AppCompatActivity {
         imageView1.setImageResource(R.mipmap.ic_touxiang41);
         imageView2.setImageResource(R.mipmap.ic_touxiang51);
 
-        textView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(BaseActivity.this, HuDongActivity.class);
-                intent.putExtra("hudong_classify",mClassify);
-                startActivity(intent);
-            }
+        textView.setOnClickListener(view -> {
+            Intent intent = new Intent(BaseActivity.this, HuDongActivity.class);
+            intent.putExtra("hudong_classify",mClassify);
+            startActivity(intent);
         });
-
     }
 
-    private Handler handler = new Handler(new Handler.Callback() {
-
-        @Override
-        public boolean handleMessage(Message msg) {
-            // TODO Auto-generated method stub
-            switch (msg.what){
-                case 1:{
-                    initDataAnchor();
-                    break;
-                }
-                case 2:{
-                    initDataRecord();
-                    break;
-                }
-                case 3:{
-                    initDataVideo();
-                    break;
-                }
-                case 4:{
-                    setImage();
-                    break;
-                }
-                default:
-                    break;
+    private Handler handler = new Handler(msg -> {
+        // TODO Auto-generated method stub
+        switch (msg.what){
+            case 1:{
+                initDataAnchor();
+                break;
             }
-            return false;
+            case 2:{
+                initDataRecord();
+                break;
+            }
+            case 3:{
+                initDataVideo();
+                break;
+            }
+            case 4:{
+                setImage();
+                break;
+            }
+            default:
+                break;
         }
+        return false;
     });
 
     private void connectHu(){
@@ -250,13 +215,10 @@ public class BaseActivity extends AppCompatActivity {
                         Message message = new Message();
                         message.what = 4;
                         handler.sendMessage(message);
-
                     }
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
-
-
                 Looper.loop();
             }
         }.start();
@@ -293,15 +255,12 @@ public class BaseActivity extends AppCompatActivity {
             }
         }
 
-        imageView1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(BaseActivity.this, HuDongPlayActivity.class);
-                if(cover.size() ==2){
-                    intent.putExtra("hudong_c_add",add.get(0));
-                }
-                startActivity(intent);
+        imageView1.setOnClickListener(view -> {
+            Intent intent = new Intent(BaseActivity.this, HuDongPlayActivity.class);
+            if(cover.size() ==2){
+                intent.putExtra("hudong_c_add",add.get(0));
             }
+            startActivity(intent);
         });
         imageView2.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -346,15 +305,12 @@ public class BaseActivity extends AppCompatActivity {
                         String regData = response.body().string();
                         System.out.println("返回anchor"+regData);
                         if(JsonCode.getCode(regData) == 200) {
-                            //
                             String jsonData = JsonCode.getData(regData);
                             anchors_get = JsonCode.jsonToList(jsonData, Anchor.class);
                         }
-
                         Message message = new Message();
                         message.what = 1;
                         handler.sendMessage(message);
-
                     }
                 } catch (IOException e) {
                     e.printStackTrace();
@@ -373,14 +329,11 @@ public class BaseActivity extends AppCompatActivity {
                                 anchors_get.get(i).getAnchor_cover()));
             }
 
-            anchorAdapter.setOnItemClickListener(new ClassActivityAdapter.OnItemClickListener() {
-                @Override
-                public void onItemClick(View view, int position) {
-                    Intent intent = new Intent(BaseActivity.this, BroadNewActivity.class);
-                    intent.putExtra("anchor_bid",anchors_get.get(position).getAnchor_bid());
-                    intent.putExtra("anchor_room",anchors_get.get(position).getAnchor_room());
-                    startActivity(intent);
-                }
+            anchorAdapter.setOnItemClickListener((view, position) -> {
+                Intent intent = new Intent(BaseActivity.this, BroadNewActivity.class);
+                intent.putExtra("anchor_bid",anchors_get.get(position).getAnchor_bid());
+                intent.putExtra("anchor_room",anchors_get.get(position).getAnchor_room());
+                startActivity(intent);
             });
         }else {
             anchorAdapter.addDataAt(0,anchorAdapter.new Class_Activity("暂无",null));
@@ -417,16 +370,13 @@ public class BaseActivity extends AppCompatActivity {
                             String jsonData = JsonCode.getData(regData);
                             records_get = JsonCode.jsonToList(jsonData, Record.class);
                         }
-
                         Message message = new Message();
                         message.what = 2;
                         handler.sendMessage(message);
-
                     }
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
-
                 Looper.loop();
             }
         }.start();
@@ -440,17 +390,14 @@ public class BaseActivity extends AppCompatActivity {
                                 records_get.get(i).getRecord_cover()));
             }
 
-            recordAdapter.setOnItemClickListener(new ClassActivityAdapter.OnItemClickListener() {
-                @Override
-                public void onItemClick(View view, int position) {
-                    Intent intent = new Intent(BaseActivity.this, VideoNewActivity.class);
-                    intent.putExtra("video_bid",records_get.get(position).getRecord_bid());
-                    intent.putExtra("video_section",records_get.get(position).getRecord_section());
-                    intent.putExtra("video_add",records_get.get(position).getRecord_add());
-                    intent.putExtra("video_select",records_get.get(position).getRecord_select());
-                    intent.putExtra("video_record",2);
-                    startActivity(intent);
-                }
+            recordAdapter.setOnItemClickListener((view, position) -> {
+                Intent intent = new Intent(BaseActivity.this, VideoNewActivity.class);
+                intent.putExtra("video_bid",records_get.get(position).getRecord_bid());
+                intent.putExtra("video_section",records_get.get(position).getRecord_section());
+                intent.putExtra("video_add",records_get.get(position).getRecord_add());
+                intent.putExtra("video_select",records_get.get(position).getRecord_select());
+                intent.putExtra("video_record",2);
+                startActivity(intent);
             });
         }else {
             recordAdapter.addDataAt(0,recordAdapter.new Class_Activity("暂无",null));
@@ -495,7 +442,6 @@ public class BaseActivity extends AppCompatActivity {
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
-
                 Looper.loop();
             }
         }.start();
@@ -508,7 +454,6 @@ public class BaseActivity extends AppCompatActivity {
                         videoAdapter.new Class_Video(classes_get.get(i).getClass_name(),
                                 classes_get.get(i).getClass_cover()));
             }
-
             videoAdapter.setOnItemClickListener(new ClassVideoAdapter.OnItemClickListener() {
                 @Override
                 public void onItemClick(View view, int position) {
@@ -527,12 +472,7 @@ public class BaseActivity extends AppCompatActivity {
 
     //返回注销事件
     private void back(Toolbar toolbar){
-        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
+        toolbar.setNavigationOnClickListener(v -> finish());
     }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

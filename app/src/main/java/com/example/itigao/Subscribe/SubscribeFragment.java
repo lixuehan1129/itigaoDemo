@@ -57,7 +57,7 @@ public class SubscribeFragment extends BaseFragment {
     private TextView days;
     private ViewFlipper viewFlipper;
     private ClassVideoAdapter classVideoAdapter;
-    List<ClassVideoAdapter.Class_Video> class_videos = new ArrayList<>();
+    private List<ClassVideoAdapter.Class_Video> class_videos = new ArrayList<>();
     private List<Classes> classes;
     private static final int OVER = 1;
 
