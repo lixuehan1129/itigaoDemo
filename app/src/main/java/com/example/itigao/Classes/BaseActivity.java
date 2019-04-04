@@ -329,6 +329,7 @@ public class BaseActivity extends AppCompatActivity {
                                 anchors_get.get(i).getAnchor_cover()));
             }
 
+
             anchorAdapter.setOnItemClickListener((view, position) -> {
                 Intent intent = new Intent(BaseActivity.this, BroadNewActivity.class);
                 intent.putExtra("anchor_bid",anchors_get.get(position).getAnchor_bid());
