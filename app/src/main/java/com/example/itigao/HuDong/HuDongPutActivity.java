@@ -338,7 +338,7 @@ public class HuDongPutActivity extends AppCompatActivity {
 
 
     private String createPath(){
-        String saveDir = Environment.getExternalStorageDirectory() + "/com.example.fitdemo/video/";
+        String saveDir = Environment.getExternalStorageDirectory() + "/com.example.itigao/video/";
         // 新建目录
         File dir = new File(saveDir);
         if (! dir.exists()) {
@@ -351,7 +351,7 @@ public class HuDongPutActivity extends AppCompatActivity {
     }
 
     private String createPicPath(){
-        String saveDir = Environment.getExternalStorageDirectory() + "/com.example.fitdemo/Vpic/";
+        String saveDir = Environment.getExternalStorageDirectory() + "/com.example.itigao/Vpic/";
         // 新建目录
         File dir = new File(saveDir);
         if (! dir.exists()) {

@@ -26,12 +26,20 @@ android {
         ]
     }
     buildTypes {
-//        release {
-//            minifyEnabled false
-//            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-//
-//            shrinkResources true
-//        }
+        debug {
+            debuggable true
+            minifyEnabled false
+        }
+        release {
+            //开启代码混淆
+            minifyEnabled true
+            //Zipalign优化
+            zipAlignEnabled true
+            // 移除无用的resource文件
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
     }
 
     compileOptions {
@@ -75,8 +83,8 @@ dependencies {
     implementation 'com.ashokvarma.android:bottom-navigation-bar:2.0.3'
     implementation 'de.hdodenhof:circleimageview:2.1.0'
     implementation 'com.github.bumptech.glide:glide:3.7.0'
-    implementation files('libs/mysql-connector-java-5.1.40-bin.jar')
-    //compile 'cn.yc:YCVideoPlayerLib:2.4.9'
+    //implementation files('libs/mysql-connector-java-5.1.40-bin.jar')
+
     implementation 'top.zibin:Luban:1.1.8'
 
     implementation 'cn.jiguang.sdk:jmessage:2.8.0'

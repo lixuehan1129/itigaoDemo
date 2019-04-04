@@ -478,7 +478,7 @@ public class PersonChangeActivity extends AppCompatActivity{
     //调用相机拍照
     private void take_photo(){
         // 获取 SD 卡根目录
-        String saveDir = Environment.getExternalStorageDirectory() + "/com.example.fitDemo.park/";
+        String saveDir = Environment.getExternalStorageDirectory() + "/com.example.itigao/";
         // 新建目录
         File dir = new File(saveDir);
         if (! dir.exists()) {
