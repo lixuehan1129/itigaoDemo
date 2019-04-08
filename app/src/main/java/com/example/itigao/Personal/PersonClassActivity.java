@@ -34,7 +34,6 @@ public class PersonClassActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private ClassSelectAdapter classSelectAdapter;
     private List<Appoint> class_selects = new ArrayList<>();
-    private Appoint classSelect;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,12 +47,10 @@ public class PersonClassActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.person_class_mainTool);
         toolbar.setTitle("课程");
         back(toolbar);
-
         recyclerView = (RecyclerView) findViewById(R.id.person_class_rv);
         classSelectAdapter = new ClassSelectAdapter(class_selects);
         recyclerView.setLayoutManager(new LinearLayoutManager(PersonClassActivity.this));
         recyclerView.setAdapter(classSelectAdapter);
-
         connectClass();
     }
 
@@ -77,63 +74,6 @@ public class PersonClassActivity extends AppCompatActivity {
                 }
             }
         }.start();
-
-//        new Thread(){
-//            public void run(){
-//                try {
-//                    Connection conn = JDBCTools.getConnection();
-//                    if(conn != null) {
-//                        class_selects = new ArrayList<>();
-//                        Statement stmt = conn.createStatement();
-//                        String sql = "SELECT yu_bid FROM yu WHERE yu_user = " +
-//                                SharePreferences.getString(PersonClassActivity.this, AppConstants.USER_PHONE) +
-//                                " AND yu_time > " +
-//                                (DateUtils.IntTime(0)-1) +
-//                                " ORDER BY yu_time DESC";
-//                        ResultSet resultSet = stmt.executeQuery(sql);
-//                        while (resultSet.next()){
-//                            int yuBid = resultSet.getInt("yu_bid");
-//                            String sqlBid = "SELECT * FROM appoint WHERE appoint_bid = " +
-//                                    yuBid +
-//                                    " LIMIT 1";
-//                            Statement stmt1 = conn.createStatement();
-//                            ResultSet resultSetAppoint = stmt1.executeQuery(sqlBid);
-//                            if (resultSetAppoint.first()){
-//                                int bid = resultSetAppoint.getInt("appoint_bid");
-//                                int week = resultSetAppoint.getInt("appoint_week");
-//                                int time = resultSetAppoint.getInt("appoint_time");
-//
-//                                String name = resultSetAppoint.getString("appoint_name");
-//                                String coach = resultSetAppoint.getString("appoint_coach");
-//                                String cover = resultSetAppoint.getString("appoint_cover");
-//                                int place = resultSetAppoint.getInt("appoint_place");
-//
-//                                String rTime;
-//                                if(time == 1){
-//                                    rTime = "08:30-10:00";
-//                                }else {
-//                                    rTime = "14:30-16:00";
-//                                }
-//                                classSelect = new Appoint(name+bid, coach,time,cover,
-//                                        0,bid);
-//                                class_selects.add(classSelect);
-//                            }
-//                            resultSetAppoint.close();
-//                            stmt1.close();
-//                        }
-//                        Message message = new Message();
-//                        message.what = 117;
-//                        handler.sendMessage(message);
-//
-//
-//                        resultSet.close();
-//                        JDBCTools.releaseConnection(stmt,conn);
-//                    }
-//                }catch (java.sql.SQLException e){
-//                    e.printStackTrace();
-//                }
-//            }
-//        }.start();
     }
 
     private Handler handler = new Handler(new Handler.Callback() {

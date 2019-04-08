@@ -66,7 +66,7 @@ public class PersonDeviceActivity extends AppCompatActivity {
 
         new Thread(){
             public void run(){
-                postParams();
+             //   postParams();
             }
         }.start();
 
