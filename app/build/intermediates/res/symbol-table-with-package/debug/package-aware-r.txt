@@ -1378,6 +1378,7 @@ id fixed_bottom_navigation_icon_container
 id fixed_bottom_navigation_title
 id fixed_height
 id fixed_width
+id focus
 id forever
 id full_id
 id fullscreen

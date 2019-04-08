@@ -11,6 +11,15 @@ public class Anchor {
     private int anchor_state;
     private String anchor_data;
     private int anchor_room;
+    private int anchor_focus;
+
+    public int getAnchor_focus() {
+        return anchor_focus;
+    }
+
+    public void setAnchor_focus(int anchor_focus) {
+        this.anchor_focus = anchor_focus;
+    }
 
     public int getAnchor_id() {
         return anchor_id;

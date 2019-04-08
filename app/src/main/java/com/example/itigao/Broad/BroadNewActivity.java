@@ -1,13 +1,18 @@
 package com.example.itigao.Broad;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
@@ -15,11 +20,15 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.itigao.Adapter.TabLayoutAdapter;
+import com.example.itigao.AutoProject.AppConstants;
+import com.example.itigao.AutoProject.JsonCode;
+import com.example.itigao.AutoProject.SharePreferences;
 import com.example.itigao.R;
 import com.example.itigao.Utils.StatusBarUtils;
 import com.example.itigao.Video.HuDongFragment;
 import com.example.itigao.Video.RankFragment;
 import com.example.itigao.Video.RoomFragment;
+import com.example.itigao.okHttp.OkHttpBase;
 import com.shuyu.gsyvideoplayer.GSYVideoManager;
 import com.shuyu.gsyvideoplayer.player.IjkPlayerManager;
 import com.shuyu.gsyvideoplayer.player.PlayerFactory;
@@ -32,6 +41,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 
+import okhttp3.FormBody;
+import okhttp3.RequestBody;
+
 import static cn.jzvd.JZUtils.dip2px;
 
 /**
@@ -41,7 +53,7 @@ import static cn.jzvd.JZUtils.dip2px;
 public class BroadNewActivity extends AppCompatActivity implements TabLayout.OnTabSelectedListener{
 
 
-    private int anchorId, anchorRoom;
+    private int anchorId, anchorRoom, anchorFocus, anchorPosition;
     private String url;
     private String URL_F = "rtmp://zb.tipass.com:1935/live/";
 
@@ -50,6 +62,7 @@ public class BroadNewActivity extends AppCompatActivity implements TabLayout.OnT
 
     private TabLayout tabLayout;
     private ViewPager mViewPager;
+    private TextView focus;
 
 
     private String[] titles = new String[]{" 聊天 ", " 视频 ", " 互动 ", " 排行 "};
@@ -64,6 +77,8 @@ public class BroadNewActivity extends AppCompatActivity implements TabLayout.OnT
         Intent intent = getIntent();
         anchorId = intent.getIntExtra("anchor_bid",0);
         anchorRoom = intent.getIntExtra("anchor_room",0);
+        anchorFocus = intent.getIntExtra("anchor_focus",0);
+        anchorPosition = intent.getIntExtra("anchor_position",0);
         initView();
     }
 
@@ -71,6 +86,13 @@ public class BroadNewActivity extends AppCompatActivity implements TabLayout.OnT
         videoPlayer = (StandardGSYVideoPlayer) findViewById(R.id.broad_new_vv);
         tabLayout = (TabLayout) findViewById(R.id.broad_new_layout);
         mViewPager = (ViewPager) findViewById(R.id.broad_new_viewpager);
+        focus = (TextView) findViewById(R.id.focus);
+
+        if(anchorFocus == 1){
+            focus.setText(" 取消关注 ");
+        }else {
+            focus.setText(" + 关注 ");
+        }
 
 
         //获取屏幕宽
@@ -79,11 +101,10 @@ public class BroadNewActivity extends AppCompatActivity implements TabLayout.OnT
         int width = wm.getDefaultDisplay().getWidth();
         setWidthHeightWithRatio(videoPlayer,width,16,9);
 
+        viewClick();
         initTab();
-
         setPlay();
     }
-
 
     private void setPlay(){
         url = URL_F + anchorId;
@@ -101,12 +122,10 @@ public class BroadNewActivity extends AppCompatActivity implements TabLayout.OnT
          */
         videoPlayer.setShrinkImageRes(R.mipmap.ic_full_b);
 
-
         videoPlayer.setUp(url,false,null);
         videoPlayer.getBackButton().setVisibility(View.VISIBLE);
         videoPlayer.setNeedShowWifiTip(true);
         videoPlayer.setIsTouchWiget(false);
-
 
         //设置旋转
         orientationUtils = new OrientationUtils(this, videoPlayer);
@@ -130,16 +149,97 @@ public class BroadNewActivity extends AppCompatActivity implements TabLayout.OnT
 //        videoPlayer.setRotateViewAuto(true);
 
         //设置返回按键功能
-        videoPlayer.getBackButton().setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                onBackPressed();
-            }
-        });
-
+        videoPlayer.getBackButton().setOnClickListener(v -> onBackPressed());
 
         videoPlayer.startPlayLogic();
     }
+
+    private void viewClick(){
+
+        if(focus.getText().toString().contentEquals(" 取消关注 ")){
+            focus.setOnClickListener(v -> {
+                AlertDialog.Builder normalDialog =
+                        new AlertDialog.Builder(this);
+                normalDialog.setMessage("\n取消关注，我是认真的!\n");
+                normalDialog.setPositiveButton("去意已决",
+                        (dialog, which) -> {
+                            //...To-do
+                            new Thread(){
+                                public void run(){
+                                    RequestBody requestBody = new FormBody.Builder()
+                                            .add("focus_user", SharePreferences.getString(BroadNewActivity.this, AppConstants.USER_PHONE))
+                                            .add("focus_anchor", String.valueOf(anchorId))
+                                            .build();
+                                    String regData = OkHttpBase.getResponse(requestBody,"http://39.105.213.41:8080/StudyAppService/StudyServlet/deleteFocus");
+                                    if(JsonCode.getCode(regData) == 200){
+                                        Message message = new Message();
+                                        message.what = 105;
+                                        handler.sendMessage(message);
+                                    }
+                                }
+                            }.start();
+                        });
+                normalDialog.setNegativeButton("再三考虑",
+                        (dialog, which) -> {
+                            //...To-do
+                        });
+                // 显示
+                normalDialog.show();
+            });
+        }else {
+            focus.setOnClickListener(v -> {
+                AlertDialog.Builder normalDialog =
+                        new AlertDialog.Builder(this);
+                normalDialog.setMessage("\n关注主播，不再迷路!\n");
+                normalDialog.setPositiveButton("确定关注",
+                        (dialog, which) -> {
+                            //...To-do
+                            new Thread(){
+                                public void run(){
+                                    RequestBody requestBody = new FormBody.Builder()
+                                            .add("focus_user", SharePreferences.getString(BroadNewActivity.this, AppConstants.USER_PHONE))
+                                            .add("focus_anchor", String.valueOf(anchorId))
+                                            .build();
+                                    String regData = OkHttpBase.getResponse(requestBody,"http://39.105.213.41:8080/StudyAppService/StudyServlet/insertFocus");
+                                    if(JsonCode.getCode(regData) == 200){
+                                        Message message = new Message();
+                                        message.what = 106;
+                                        handler.sendMessage(message);
+                                    }
+                                }
+                            }.start();
+                        });
+                normalDialog.setNegativeButton("残忍放弃",
+                        (dialog, which) -> {
+                            //...To-do
+                        });
+                // 显示
+                normalDialog.show();
+            });
+        }
+
+    }
+
+    private Handler handler = new Handler(msg -> {
+        // TODO Auto-generated method stub
+        switch (msg.what){
+            case 105:{
+                anchorFocus = 0;
+                focus.setText(" + 关注 ");
+                viewClick();
+                break;
+            }
+            case 106:{
+                anchorFocus = 1;
+                focus.setText(" 取消关注 ");
+                viewClick();
+                break;
+            }
+            default:
+                break;
+        }
+        return false;
+    });
 
     private void initTab(){
         mViewPager.setOffscreenPageLimit(4);
@@ -151,8 +251,7 @@ public class BroadNewActivity extends AppCompatActivity implements TabLayout.OnT
         //设置TabLayout点击事件
         tabLayout.setOnTabSelectedListener(this);
 
-
-        Fragment fragment1 = new RoomFragment();
+        Fragment fragment1 = new BroadRoomFragment();
         Bundle bundle1 = new Bundle();
         bundle1.putInt("broad_new_bid",anchorRoom);
         fragment1.setArguments(bundle1);
@@ -211,7 +310,6 @@ public class BroadNewActivity extends AppCompatActivity implements TabLayout.OnT
                         params.leftMargin = dp10;
                         params.rightMargin = dp10;
                         tabView.setLayoutParams(params);
-
                         tabView.invalidate();
                     }
 
@@ -235,6 +333,20 @@ public class BroadNewActivity extends AppCompatActivity implements TabLayout.OnT
             layoutParams.width = width;
             view.setLayoutParams(layoutParams);
         }
+    }
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
+            Intent intent = this.getIntent();
+            intent.putExtra("extra_position",anchorPosition);
+            intent.putExtra("extra_focus",anchorFocus);
+            setResult(10032,intent);
+            finish();
+            return true;
+        }
+        return super.onKeyDown(keyCode, event);
     }
 
 
@@ -261,6 +373,7 @@ public class BroadNewActivity extends AppCompatActivity implements TabLayout.OnT
     protected void onDestroy() {
         // TODO Auto-generated method stub
         videoPlayer.onVideoResume();
+
         super.onDestroy();
     }
 

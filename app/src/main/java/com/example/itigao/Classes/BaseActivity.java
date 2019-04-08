@@ -10,6 +10,7 @@ import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
@@ -289,6 +290,7 @@ public class BaseActivity extends AppCompatActivity {
                 RequestBody requestBody = new FormBody.Builder()
                         .add("anchor_classify", String.valueOf(mClassify))
                         .add("anchor_state","1")
+                        .add("focus_user",SharePreferences.getString(BaseActivity.this,AppConstants.USER_PHONE))
                         .build();
                 //构建一个请求对象
                 Request request = new Request.Builder()
@@ -334,7 +336,9 @@ public class BaseActivity extends AppCompatActivity {
                 Intent intent = new Intent(BaseActivity.this, BroadNewActivity.class);
                 intent.putExtra("anchor_bid",anchors_get.get(position).getAnchor_bid());
                 intent.putExtra("anchor_room",anchors_get.get(position).getAnchor_room());
-                startActivity(intent);
+                intent.putExtra("anchor_focus",anchors_get.get(position).getAnchor_focus());
+                intent.putExtra("anchor_position",position);
+                startActivityForResult(intent,10032);
             });
         }else {
             anchorAdapter.addDataAt(0,anchorAdapter.new Class_Activity("暂无",null));
@@ -455,21 +459,29 @@ public class BaseActivity extends AppCompatActivity {
                         videoAdapter.new Class_Video(classes_get.get(i).getClass_name(),
                                 classes_get.get(i).getClass_cover()));
             }
-            videoAdapter.setOnItemClickListener(new ClassVideoAdapter.OnItemClickListener() {
-                @Override
-                public void onItemClick(View view, int position) {
-                    Intent intent = new Intent(BaseActivity.this, VideoNewActivity.class);
-                    intent.putExtra("video_bid",classes_get.get(position).getClass_bid());
-                    intent.putExtra("video_section",classes_get.get(position).getClass_section());
-                    intent.putExtra("video_add",classes_get.get(position).getClass_add());
-                    intent.putExtra("video_select",1);
-                    intent.putExtra("video_record",1);
-                    startActivity(intent);
-                }
+            videoAdapter.setOnItemClickListener((view, position) -> {
+                Intent intent = new Intent(BaseActivity.this, VideoNewActivity.class);
+                intent.putExtra("video_bid",classes_get.get(position).getClass_bid());
+                intent.putExtra("video_section",classes_get.get(position).getClass_section());
+                intent.putExtra("video_add",classes_get.get(position).getClass_add());
+                intent.putExtra("video_select",1);
+                intent.putExtra("video_record",1);
+                startActivity(intent);
             });
 
         }
     }
+
+
+    protected void onActivityResult(int requestCode,int resultCode,Intent intent) {
+        super.onActivityResult(requestCode, resultCode, intent);
+        if (resultCode == 10032) {
+            int po = intent.getIntExtra("extra_position",0);
+            int fo = intent.getIntExtra("extra_focus",0);
+            anchors_get.get(po).setAnchor_focus(fo);
+        }
+    }
+
 
     //返回注销事件
     private void back(Toolbar toolbar){
