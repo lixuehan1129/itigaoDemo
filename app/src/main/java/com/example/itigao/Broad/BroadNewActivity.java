@@ -346,6 +346,7 @@ public class BroadNewActivity extends AppCompatActivity implements TabLayout.OnT
             finish();
             return true;
         }
+        videoPlayer.onVideoResume();
         return super.onKeyDown(keyCode, event);
     }
 

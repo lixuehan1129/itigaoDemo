@@ -101,7 +101,9 @@ dependencies {
     implementation 'com.shuyu:gsyVideoPlayer-arm64:6.0.2'
     implementation 'com.shuyu:gsyVideoPlayer-x64:6.0.2'
     implementation 'com.shuyu:gsyVideoPlayer-x86:6.0.2'
+
     implementation 'cn.jzvd:jiaozivideoplayer:6.4.1'
+
     implementation project(':silicompressor')
     implementation project(':libWSLive')
     implementation 'com.google.code.gson:gson:2.8.2'

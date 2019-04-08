@@ -13,7 +13,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 
 
     //定义数据库文件名
-    public static final String TABLE_NAME = "FitDemo.db";
+    public static final String TABLE_NAME = "iTiGao.db";
 
     public static final String CREATE_USER = "create table user ("
             + "id integer primary key autoincrement, "
@@ -24,8 +24,6 @@ public class DataBaseHelper extends SQLiteOpenHelper {
             + "user_birth text, "
             + "user_picture text)";
 
-
-    private Context mContext;
 
     /**
      * @param context
