@@ -150,7 +150,6 @@ public class RoomFragment extends BaseFragment {
                         String regData = response.body().string();
                         System.out.println("返回room"+regData);
                         if(JsonCode.getCode(regData) == 200){
-
                             String jsonData = JsonCode.getData(regData);
                             try {
                                 JSONArray jsonArray = new JSONArray(jsonData);
@@ -165,9 +164,7 @@ public class RoomFragment extends BaseFragment {
                             } catch (JSONException e) {
                                 e.printStackTrace();
                             }
-
                         }
-
                     }
                 } catch (IOException e) {
                     e.printStackTrace();

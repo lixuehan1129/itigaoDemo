@@ -99,15 +99,6 @@ public class VideoFragment extends BaseFragment {
     }
 
     private void connectData(){
-
-//        name = new ArrayList<>();
-//        content = new ArrayList<>();
-//        nut = new ArrayList<>();
-//        add = new ArrayList<>();
-//        select = new ArrayList<>();
-//        classify = new ArrayList<>();
-//        cover = new ArrayList<>();
-
         classes = new ArrayList<>();
         new Thread(){
             public void run(){

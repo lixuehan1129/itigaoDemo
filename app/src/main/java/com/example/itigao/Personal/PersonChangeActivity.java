@@ -195,53 +195,38 @@ public class PersonChangeActivity extends AppCompatActivity{
 
     private void onClick(){
         //修改头像
-        relativeLayout1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                final String[] items = new String[] {"选择图片","拍摄图片"};
-                AlertDialog.Builder builder = new AlertDialog.Builder(PersonChangeActivity.this);
-                builder.setItems(items, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        if(i == 0){
-                            select_photo();
-                        }else if(i == 1){
-                            take_photo();
-                        }
-                    }
-                }).create().show();
-            }
+        relativeLayout1.setOnClickListener(view -> {
+            final String[] items = new String[] {"选择图片","拍摄图片"};
+            AlertDialog.Builder builder = new AlertDialog.Builder(PersonChangeActivity.this);
+            builder.setItems(items, (dialogInterface, i) -> {
+                if(i == 0){
+                    select_photo();
+                }else if(i == 1){
+                    take_photo();
+                }
+            }).create().show();
         });
 
         //修改昵称
-        relativeLayout2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                editText.setCursorVisible(true);
-                editText.setFocusableInTouchMode(true);
-                editText.requestFocus();
-            }
+        relativeLayout2.setOnClickListener(view -> {
+            editText.setCursorVisible(true);
+            editText.setFocusableInTouchMode(true);
+            editText.requestFocus();
         });
         //修改昵称，同上
-        editText.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                editText.setCursorVisible(true);
-                editText.setFocusableInTouchMode(true);
-                editText.requestFocus();
-            }
+        editText.setOnClickListener(view -> {
+            editText.setCursorVisible(true);
+            editText.setFocusableInTouchMode(true);
+            editText.requestFocus();
         });
 
         //修改性别
         relativeLayout3.setOnClickListener(view -> {
             final String[] items = new String[] {"男","女"};
             AlertDialog.Builder builder = new AlertDialog.Builder(PersonChangeActivity.this);
-            builder.setItems(items, new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialogInterface, int i) {
-                    userSex = i;
-                    textView1.setText(userSex == 0 ? "男":"女");
-                }
+            builder.setItems(items, (dialogInterface, i) -> {
+                userSex = i;
+                textView1.setText(userSex == 0 ? "男":"女");
             }).create().show();
         });
 
@@ -252,12 +237,9 @@ public class PersonChangeActivity extends AppCompatActivity{
 
         //申请主播
         if(sta.getText().toString().equals("普通会员")){
-            relativeLayout4.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                 //   Tip.showTip(PersonChangeActivity.this,"申请");
-                    showDialog();
-                }
+            relativeLayout4.setOnClickListener(view -> {
+             //   Tip.showTip(PersonChangeActivity.this,"申请");
+                showDialog();
             });
         }
 
