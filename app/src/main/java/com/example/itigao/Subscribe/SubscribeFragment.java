@@ -163,7 +163,7 @@ public class SubscribeFragment extends BaseFragment {
                         .add("class_classify", "1")
                         .build();
 
-                String regData = OkHttpBase.getResponse(requestBody,"http://39.105.213.41:8080/StudyAppService/StudyServlet/classFour");
+                String regData = OkHttpBase.getResponse(requestBody,"classFour");
                 if(regData != null){
                     if(JsonCode.getCode(regData) == 200){
                         String jsonData = JsonCode.getData(regData);

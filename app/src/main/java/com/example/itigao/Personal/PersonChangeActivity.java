@@ -43,6 +43,10 @@ import com.example.itigao.Utils.StatusBarUtils;
 import com.example.itigao.okHttp.OkHttpBase;
 import com.example.itigao.okHttp.OkHttpUtil;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
@@ -151,7 +155,6 @@ public class PersonChangeActivity extends AppCompatActivity{
         cursor.close();
         sqLiteDatabase.close();
 
-        System.out.println(picPath);
 
         editText.setText(userName);
         if(!TextUtils.isEmpty(userBirth)){
@@ -372,7 +375,7 @@ public class PersonChangeActivity extends AppCompatActivity{
                 }
 
                 RequestBody requestBody = RequestBody.create(FORM_CONTENT_TYPE, sb.toString());
-                String regData = OkHttpBase.getResponse(requestBody,"http://39.105.213.41:8080/StudyAppService/StudyServlet/toAnchor");
+                String regData = OkHttpBase.getResponse(requestBody,"toAnchor");
                 if(regData != null){
                     if(JsonCode.getCode(regData) == 200){
                         Message message = new Message();
@@ -429,7 +432,7 @@ public class PersonChangeActivity extends AppCompatActivity{
                 }
 
                 RequestBody requestBody = RequestBody.create(FORM_CONTENT_TYPE, sb.toString());
-                String regData = OkHttpBase.getResponse(requestBody,"http://39.105.213.41:8080/StudyAppService/StudyServlet/userUpdate");
+                String regData = OkHttpBase.getResponse(requestBody,"userUpdate");
                 if(regData != null){
                     if(JsonCode.getCode(regData) == 200){
                         SQLiteDatabase sqLiteDatabase = dataBaseHelper.getWritableDatabase();
@@ -560,7 +563,7 @@ public class PersonChangeActivity extends AppCompatActivity{
     }
 
     private void upPic(File file){
-        String postUrl = "http://39.105.213.41:8080/upLoadVideo/UploadFileServlet";
+        String postUrl = "http://tg01.tipass.com/Study/tp5/public/index.php?s=study/Study/uploadFile";
 
         OkHttpUtil.postFile(postUrl, (currentBytes, contentLength, done) -> {
             Log.i("看一下图片", "currentBytes==" + currentBytes + "==contentLength==" + contentLength + "==done==" + done);
@@ -576,8 +579,14 @@ public class PersonChangeActivity extends AppCompatActivity{
                 if (response != null) {
                     String result = response.body().string();
                     Log.i("再看一下", "result===" + result);
-                    picPath = result;
-                    upload();
+                    if(JsonCode.getCode(result) == 200) {
+                        String jsonData = JsonCode.getData(result);
+                        picPath = jsonData;
+                        upload();
+                    }else {
+                        progressDialog.dismiss();
+                        Tip.showTip(PersonChangeActivity.this,"上传失败");
+                    }
                 }
             }
         }, file);

@@ -61,7 +61,7 @@ public class PersonClassActivity extends AppCompatActivity {
                         .add("yu_user",SharePreferences.getString(PersonClassActivity.this, AppConstants.USER_PHONE))
                         .add("yu_time", String.valueOf(DateUtils.IntTime(0)-1))
                         .build();
-                String regData = OkHttpBase.getResponse(requestBody,"http://39.105.213.41:8080/StudyAppService/StudyServlet/appointAll");
+                String regData = OkHttpBase.getResponse(requestBody,"appointAll");
                 if(regData != null){
                     if(JsonCode.getCode(regData) == 200){
                         String jsonData = JsonCode.getData(regData);

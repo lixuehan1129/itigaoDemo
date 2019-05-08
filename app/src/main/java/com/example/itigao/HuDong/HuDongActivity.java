@@ -113,7 +113,7 @@ public class HuDongActivity extends AppCompatActivity {
                 RequestBody requestBody = new FormBody.Builder()
                         .add("hudong_classify", String.valueOf(hudong_classify))
                         .build();
-                String regData = OkHttpBase.getResponse(requestBody,"http://39.105.213.41:8080/StudyAppService/StudyServlet/hudong");
+                String regData = OkHttpBase.getResponse(requestBody,"hudong");
                 if(regData != null){
                     if(JsonCode.getCode(regData) == 200){
                         String jsonString = JsonCode.getData(regData);

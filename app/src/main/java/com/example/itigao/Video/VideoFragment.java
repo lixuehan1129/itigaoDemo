@@ -110,7 +110,7 @@ public class VideoFragment extends BaseFragment {
                         .build();
                 //构建一个请求对象
                 Request request = new Request.Builder()
-                        .url("http://39.105.213.41:8080/StudyAppService/StudyServlet/setRecord")
+                        .url(AppConstants.URL + "setRecord")
                         .post(requestBody)
                         .build();
                 //发送请求获取响应
@@ -139,70 +139,6 @@ public class VideoFragment extends BaseFragment {
             }
         }.start();
 
-//        new Thread(){
-//            public void run(){
-//                Looper.prepare();
-//                try{
-//                    Connection conn = JDBCTools.getConnection();
-//                    if(conn != null){
-//                        Statement stmt = conn.createStatement();
-//                        String sql = "SELECT * FROM class WHERE class_bid = " +
-//                                video_bid +
-//                                " ORDER BY class_select";
-//                        ResultSet resultSet = stmt.executeQuery(sql);
-//                        while(resultSet.next()){
-//                            name.add(resultSet.getString("class_name"));
-//                            content.add(resultSet.getString("class_content"));
-//                            add.add(resultSet.getString("class_add"));
-//                            nut.add(resultSet.getString("class_nut"));
-//                            select.add(resultSet.getInt("class_select"));
-//                            classify.add(resultSet.getInt("class_classify"));
-//                            cover.add(resultSet.getString("class_cover"));
-//                        }
-//
-//                        resultSet.close();
-//
-//                        Message message = new Message();
-//                        message.what = 1;
-//                        handler.sendMessage(message);
-//
-//                        //观看记录上传
-//                        String sql_query = "SELECT record_bid FROM record WHERE record_bid = " +
-//                                video_bid +
-//                                " AND record_user ='" +
-//                                SharePreferences.getString(getActivity(),AppConstants.USER_PHONE) +
-//                                "'";
-//                        ResultSet resultSet1 = stmt.executeQuery(sql_query);
-//                        if(!resultSet1.next()){
-//                            if(video_record == 1 && name.size()>0){
-//                                String sql_insert = "INSERT INTO record (record_user,record_classify,record_name,record_bid,record_add," +
-//                                        "record_section,record_cover,record_select) values (?,?,?,?,?,?,?,?)";
-//                                PreparedStatement preparedStatement = conn.prepareStatement(sql_insert,Statement.RETURN_GENERATED_KEYS);
-//                                preparedStatement.setString(1,SharePreferences.getString(getActivity(),AppConstants.USER_PHONE));
-//                                preparedStatement.setInt(2,classify.get(0));
-//                                preparedStatement.setString(3,name.get(0));
-//                                preparedStatement.setInt(4,video_bid);
-//                                preparedStatement.setString(5,add.get(0));
-//                                preparedStatement.setInt(6,video_section);
-//                                preparedStatement.setString(7,cover.get(0));
-//                                preparedStatement.setInt(8,1);
-//                                preparedStatement.executeUpdate();
-//                                preparedStatement.close();
-//                                setBroad();
-//                            }
-//                        }
-//                        resultSet1.close();
-//
-//                        JDBCTools.releaseConnection(stmt,conn);
-//                    }else {
-//                        Tip.showTip(getActivity(),"请检查网络");
-//                    }
-//                }catch (SQLException e) {
-//                    e.printStackTrace();
-//                }
-//                Looper.loop();
-//            }
-//        }.start();
     }
 
     private void Update(final int select){
@@ -218,7 +154,7 @@ public class VideoFragment extends BaseFragment {
                         .build();
                 //构建一个请求对象
                 Request request = new Request.Builder()
-                        .url("http://39.105.213.41:8080/StudyAppService/StudyServlet/recordUpdate")
+                        .url(AppConstants.URL + "recordUpdate")
                         .post(requestBody)
                         .build();
                 //发送请求获取响应
@@ -237,35 +173,6 @@ public class VideoFragment extends BaseFragment {
                 Looper.loop();
             }
         }.start();
-
-//        new Thread(){
-//            public void run(){
-//                Looper.prepare();
-//                try{
-//                    Connection conn = JDBCTools.getConnection();
-//                    if(conn != null){
-//                        Statement stmt = conn.createStatement();
-//                        String sql = "UPDATE record SET record_add = ?, record_select = ? WHERE record_bid = " +
-//                                video_bid +
-//                                " AND record_user = '" +
-//                                SharePreferences.getString(getActivity(),AppConstants.USER_PHONE) +
-//                                "'";
-//                        PreparedStatement preparedStatement = conn.prepareStatement(sql);
-//                        preparedStatement.setString(1,add.get(select));
-//                        preparedStatement.setInt(2,select + 1);
-//                        preparedStatement.executeUpdate();
-//                        preparedStatement.close();
-//                        JDBCTools.releaseConnection(stmt,conn);
-//                        setBroad();
-//                    }else {
-//                        Tip.showTip(getActivity(),"请检查网络");
-//                    }
-//                }catch (SQLException e) {
-//                    e.printStackTrace();
-//                }
-//                Looper.loop();
-//            }
-//        }.start();
     }
 
     private void setBroad(){

@@ -204,7 +204,7 @@ public class DataBaseFragment extends BaseFragment {
                         .add("yu_user",SharePreferences.getString(getActivity(), AppConstants.USER_PHONE))
                         .add("yu_time", String.valueOf(DateUtils.IntTime(0)-1))
                         .build();
-                String regData = OkHttpBase.getResponse(requestBody,"http://39.105.213.41:8080/StudyAppService/StudyServlet/getAppoint");
+                String regData = OkHttpBase.getResponse(requestBody,"getAppoint");
                 if(regData != null){
                     if(JsonCode.getCode(regData) == 200){
                         String jsonData = JsonCode.getData(regData);
@@ -259,107 +259,6 @@ public class DataBaseFragment extends BaseFragment {
             }
         }.start();
 
-//        new Thread(){
-//            public void run(){
-//                Looper.prepare();
-//                try{
-//                    Connection conn = JDBCTools.getConnection();
-//                    if(conn != null){
-//                        Statement stmt = conn.createStatement();
-//                        String sql = "SELECT * FROM appoint WHERE appoint_classify = " +
-//                                appoint_classify_yu +
-//                                " ORDER BY appoint_time";
-//                        ResultSet resultSet = stmt.executeQuery(sql);
-//                        //   ResultSet resultSet1 = null;
-//                        while(resultSet.next()){
-//                            int bid = resultSet.getInt("appoint_bid");
-//                            int week = resultSet.getInt("appoint_week");
-//                            int time = resultSet.getInt("appoint_time");
-//                            int check = 0;
-//                            int Today = DateUtils.IntTime(0)-1;//是否大于当前日期
-//                            String sql_check = "SELECT * From yu WHERE yu_user = '" +
-//                                    SharePreferences.getString(getActivity(), AppConstants.USER_PHONE) +
-//                                    "' AND yu_bid = " +
-//                                    bid +
-//                                    " AND yu_time > " +
-//                                    Today +
-//                                    "";
-//
-//                            Statement stmt1 = conn.createStatement();
-//                            ResultSet resultSet1 = stmt1.executeQuery(sql_check);
-//                            if(resultSet1.first()){
-//                                check = 1;
-//                            }
-//                            resultSet1.close();
-//                            String rTime;
-//                            if(time == 1){
-//                                rTime = "08:30-10:00";
-//                            }else {
-//                                rTime = "14:30-16:00";
-//                            }
-//                            switch (week){
-//                                case 1:{
-//                                    data1.add(new Class_select(resultSet.getString("appoint_name"),
-//                                            resultSet.getString("appoint_coach"),rTime,resultSet.getString("appoint_cover"),
-//                                            check,resultSet.getInt("appoint_place"),bid,week));
-//                                    break;
-//                                }
-//                                case 2:{
-//                                    data2.add(new Class_select(resultSet.getString("appoint_name"),
-//                                            resultSet.getString("appoint_coach"),rTime,resultSet.getString("appoint_cover"),
-//                                            check,resultSet.getInt("appoint_place"),bid,week));
-//                                    break;
-//                                }
-//                                case 3:{
-//                                    data3.add(new Class_select(resultSet.getString("appoint_name"),
-//                                            resultSet.getString("appoint_coach"),rTime,resultSet.getString("appoint_cover"),
-//                                            check,resultSet.getInt("appoint_place"),bid,week));
-//                                    break;
-//                                }
-//                                case 4:{
-//                                    data4.add(new Class_select(resultSet.getString("appoint_name"),
-//                                            resultSet.getString("appoint_coach"),rTime,resultSet.getString("appoint_cover"),
-//                                            check,resultSet.getInt("appoint_place"),bid,week));
-//                                    break;
-//                                }
-//                                case 5:{
-//                                    data5.add(new Class_select(resultSet.getString("appoint_name"),
-//                                            resultSet.getString("appoint_coach"),rTime,resultSet.getString("appoint_cover"),
-//                                            check,resultSet.getInt("appoint_place"),bid,week));
-//                                    break;
-//                                }
-//                                case 6:{
-//                                    data6.add(new Class_select(resultSet.getString("appoint_name"),
-//                                            resultSet.getString("appoint_coach"),rTime,resultSet.getString("appoint_cover"),
-//                                            check,resultSet.getInt("appoint_place"),bid,week));
-//                                    break;
-//                                }
-//                                case 7:{
-//                                    data7.add(new Class_select(resultSet.getString("appoint_name"),
-//                                            resultSet.getString("appoint_coach"),rTime,resultSet.getString("appoint_cover"),
-//                                            check,resultSet.getInt("appoint_place"),bid,week));
-//                                    break;
-//                                }
-//                                default:
-//                                    break;
-//                            }
-//                        }
-//
-//                        Message message = new Message();
-//                        message.what = 1;
-//                        handler.sendMessage(message);
-//
-//                        resultSet.close();
-//                        JDBCTools.releaseConnection(stmt,conn);
-//                    }else {
-//                        Tip.showTip(getActivity(),"请检查网络");
-//                    }
-//                }catch (SQLException e) {
-//                    e.printStackTrace();
-//                }
-//                Looper.loop();
-//            }
-//        }.start();
     }
 
 
@@ -398,12 +297,9 @@ public class DataBaseFragment extends BaseFragment {
 
     private void initAdapter(final ClassSelectAdapter classSelectAdapter, final List<Appoint> class_selects, final int week){
         classSelectAdapter.addDataAt(class_selects);
-        classSelectAdapter.setOnItemClickListener(new ClassSelectAdapter.OnItemClickListener() {
-            @Override
-            public void onItemClick(View view, int position) {
-                if(class_selects.get(position) != null){
-                    showNormalDialog(classSelectAdapter,position,class_selects.get(position),week);
-                }
+        classSelectAdapter.setOnItemClickListener((view, position) -> {
+            if(class_selects.get(position) != null){
+                showNormalDialog(classSelectAdapter,position,class_selects.get(position),week);
             }
         });
 
@@ -466,7 +362,7 @@ public class DataBaseFragment extends BaseFragment {
                         .add("yu_time", String.valueOf(DateUtils.IntTime(week)))
                         .add("yu_bid", String.valueOf(bid))
                         .build();
-                String regData = OkHttpBase.getResponse(requestBody,"http://39.105.213.41:8080/StudyAppService/StudyServlet/insertYu");
+                String regData = OkHttpBase.getResponse(requestBody,"insertYu");
                 if(regData != null){
                     progressDialog.dismiss();
                 }else {
@@ -477,34 +373,6 @@ public class DataBaseFragment extends BaseFragment {
             }
         }.start();
 
-//        new Thread(){
-//            public void run(){
-//                Looper.prepare();//用于toast
-//                try{
-//                    Connection conn = JDBCTools.getConnection();
-//                    if(conn != null){
-//                        //根据手机号查找数据库
-//                        Statement stmt = conn.createStatement();
-//                        String sql = "INSERT INTO yu (yu_user,yu_time,yu_bid) VALUES (?,?,?)";
-//                        PreparedStatement preparedStatement = conn.prepareStatement(sql,Statement.RETURN_GENERATED_KEYS);
-//                        preparedStatement.setString(1,SharePreferences.getString(getActivity(),AppConstants.USER_PHONE));
-//                        preparedStatement.setInt(2,DateUtils.IntTime(week));
-//                        preparedStatement.setInt(3,bid);
-//                        preparedStatement.executeUpdate();
-//                        preparedStatement.close();
-//                        JDBCTools.releaseConnection(stmt,conn);
-//                        progressDialog.dismiss();
-//                    }else {
-//                        Tip.showTip(getActivity(),"请检查网络");
-//                        progressDialog.dismiss();
-//                    }
-//                }catch (SQLException e) {
-//                    e.printStackTrace();
-//                    progressDialog.dismiss();
-//                }
-//                Looper.loop();
-//            }
-//        }.start();
     }
 
     private void deleteCheck(final int bid){
@@ -517,7 +385,7 @@ public class DataBaseFragment extends BaseFragment {
                         .add("yu_user",SharePreferences.getString(getActivity(),AppConstants.USER_PHONE))
                         .add("yu_bid", String.valueOf(bid))
                         .build();
-                String regData = OkHttpBase.getResponse(requestBody,"http://39.105.213.41:8080/StudyAppService/StudyServlet/deleteYu");
+                String regData = OkHttpBase.getResponse(requestBody,"deleteYu");
                 if(regData != null){
                     progressDialog.dismiss();
                 }else {
@@ -528,35 +396,6 @@ public class DataBaseFragment extends BaseFragment {
             }
         }.start();
 
-
-//        new Thread(){
-//            public void run(){
-//                Looper.prepare();//用于toast
-//                try{
-//                    Connection conn = JDBCTools.getConnection();
-//                    if(conn != null){
-//                        //根据手机号查找数据库
-//                        Statement stmt = conn.createStatement();
-//                        String sql = "DELETE FROM yu WHERE yu_bid = " +
-//                                bid +
-//                                "";
-//                        PreparedStatement preparedStatement = conn.prepareStatement(sql,Statement.RETURN_GENERATED_KEYS);
-//                        preparedStatement.executeUpdate();
-//                        preparedStatement.close();
-//                        preparedStatement.close();
-//                        JDBCTools.releaseConnection(stmt,conn);
-//                        progressDialog.dismiss();
-//                    }else {
-//                        Tip.showTip(getActivity(),"请检查网络");
-//                        progressDialog.dismiss();
-//                    }
-//                }catch (SQLException e) {
-//                    e.printStackTrace();
-//                    progressDialog.dismiss();
-//                }
-//                Looper.loop();
-//            }
-//        }.start();
     }
 
     private void initGroup(){

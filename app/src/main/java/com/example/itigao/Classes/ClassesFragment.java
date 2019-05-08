@@ -55,12 +55,9 @@ public class ClassesFragment extends BaseFragment {
             builder = new AlertDialog.Builder(getActivity())
                     .setItems(items, (dialogInterface, i) -> {
                         i = i + 1;
-                        if(i<5){
-                            Intent intent = new Intent(getActivity(),BaseActivity.class);
-                            intent.putExtra("NianJi",i);
-                            startActivity(intent);
-                        }
-
+                        Intent intent = new Intent(getActivity(),BaseActivity.class);
+                        intent.putExtra("NianJi",i);
+                        startActivity(intent);
                     });
             builder.create().show();
 

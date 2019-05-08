@@ -24,8 +24,10 @@ import android.widget.TextView;
 
 import com.example.itigao.AutoProject.AppConstants;
 import com.example.itigao.AutoProject.DealBitmap;
+import com.example.itigao.AutoProject.JsonCode;
 import com.example.itigao.AutoProject.SharePreferences;
 import com.example.itigao.AutoProject.Tip;
+import com.example.itigao.Personal.PersonChangeActivity;
 import com.example.itigao.R;
 import com.example.itigao.Utils.StatusBarUtils;
 import com.example.itigao.okHttp.OkHttpBase;
@@ -169,7 +171,7 @@ public class HuDongPutActivity extends AppCompatActivity {
 
     private void upLoadVideo(String path){
         File file = new File(path);
-        String postUrl = "http://39.105.213.41:8080/upLoadVideo/UploadFileServlet";
+        String postUrl = "http://tg01.tipass.com/Study/tp5/public/index.php?s=study/Study/uploadFile";
 
         OkHttpUtil.postFile(postUrl, (currentBytes, contentLength, done) -> {
             Log.i("上传视频", "currentBytes==" + currentBytes + "==contentLength==" + contentLength + "==done==" + done);
@@ -185,8 +187,15 @@ public class HuDongPutActivity extends AppCompatActivity {
                 if (response != null) {
                     String result = response.body().string();
                     Log.i("video", "result===" + result);
-                    pathVideo = result;
-                    upLoadPic();
+                    if(JsonCode.getCode(result) == 200) {
+                        String jsonData = JsonCode.getData(result);
+                        pathVideo = jsonData;
+                        upLoadPic();
+                    }else {
+                        Tip.showTip(HuDongPutActivity.this,"上传失败");
+                        progressDialog.dismiss();
+                    }
+
                 }
             }
         }, file);
@@ -235,7 +244,7 @@ public class HuDongPutActivity extends AppCompatActivity {
     }
 
     private void upPic(File file){
-        String postUrl = "http://39.105.213.41:8080/upLoadVideo/UploadFileServlet";
+        String postUrl = "http://tg01.tipass.com/Study/tp5/public/index.php?s=study/Study/uploadFile";
 
         OkHttpUtil.postFile(postUrl, (currentBytes, contentLength, done) -> {
             Log.i("图片", "currentBytes==" + currentBytes + "==contentLength==" + contentLength + "==done==" + done);
@@ -251,10 +260,17 @@ public class HuDongPutActivity extends AppCompatActivity {
                 if (response != null) {
                     String result = response.body().string();
                     Log.i("pic", "result===" + result);
-                    pathPic = result;
-                    if(pathPic != null && pathVideo != null){
-                        updateHu();
+                    if(JsonCode.getCode(result) == 200) {
+                        String jsonData = JsonCode.getData(result);
+                        pathPic = jsonData;
+                        if(pathPic != null && pathVideo != null){
+                            updateHu();
+                        }
+                    }else {
+                        progressDialog.dismiss();
+                        Tip.showTip(HuDongPutActivity.this,"上传失败");
                     }
+
                 }
             }
         }, file);
@@ -290,7 +306,7 @@ public class HuDongPutActivity extends AppCompatActivity {
                 }
 
                 RequestBody requestBody = RequestBody.create(FORM_CONTENT_TYPE, sb.toString());
-                String regData = OkHttpBase.getResponse(requestBody,"http://39.105.213.41:8080/StudyAppService/StudyServlet/huDongPut");
+                String regData = OkHttpBase.getResponse(requestBody,"huDongPut");
                 if(regData != null){
                     Tip.showTip(HuDongPutActivity.this,"上传成功");
                     progressDialog.dismiss();

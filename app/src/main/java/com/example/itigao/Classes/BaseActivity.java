@@ -186,7 +186,7 @@ public class BaseActivity extends AppCompatActivity {
                         .build();
                 //构建一个请求对象
                 Request request = new Request.Builder()
-                        .url("http://39.105.213.41:8080/StudyAppService/StudyServlet/hudongTop2")
+                        .url(AppConstants.URL + "hudongTop2")
                         .post(requestBody)
                         .build();
                 //发送请求获取响应
@@ -294,7 +294,7 @@ public class BaseActivity extends AppCompatActivity {
                         .build();
                 //构建一个请求对象
                 Request request = new Request.Builder()
-                        .url("http://39.105.213.41:8080/StudyAppService/StudyServlet/anchor")
+                        .url(AppConstants.URL + "anchor")
                         .post(requestBody)
                         .build();
                 //发送请求获取响应
@@ -359,7 +359,7 @@ public class BaseActivity extends AppCompatActivity {
                         .build();
                 //构建一个请求对象
                 Request request = new Request.Builder()
-                        .url("http://39.105.213.41:8080/StudyAppService/StudyServlet/record")
+                        .url(AppConstants.URL + "record")
                         .post(requestBody)
                         .build();
                 //发送请求获取响应
@@ -423,7 +423,7 @@ public class BaseActivity extends AppCompatActivity {
                         .build();
                 //构建一个请求对象
                 Request request = new Request.Builder()
-                        .url("http://39.105.213.41:8080/StudyAppService/StudyServlet/class")
+                        .url(AppConstants.URL + "getClassMessage")
                         .post(requestBody)
                         .build();
                 //发送请求获取响应

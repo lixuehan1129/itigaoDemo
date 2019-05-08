@@ -263,7 +263,7 @@ public class PersonalFragment extends BaseFragment {
                 RequestBody requestBody = new FormBody.Builder()
                         .add("anchor_phone",SharePreferences.getString(getActivity(),AppConstants.USER_PHONE))
                         .build();
-                String regData = OkHttpBase.getResponse(requestBody,"http://39.105.213.41:8080/StudyAppService/StudyServlet/anchorOnline");
+                String regData = OkHttpBase.getResponse(requestBody,"anchorOnline");
                 //构建一个请求对象
                 if(regData != null){
                     if(JsonCode.getCode(regData) == 200) {
@@ -287,33 +287,6 @@ public class PersonalFragment extends BaseFragment {
             }
         }.start();
 
-//        new Thread(){
-//            public void run(){
-//                try {
-//                    Connection conn = JDBCTools.getConnection();
-//                    if(conn != null) {
-//                        Statement stmt = conn.createStatement();
-//                        String sql = "SELECT anchor_state,anchor_bid FROM anchor WHERE anchor_phone = " +
-//                                SharePreferences.getString(getActivity(),AppConstants.USER_PHONE) +
-//                                " LIMIT 1";
-//                        ResultSet resultSet = stmt.executeQuery(sql);
-//                        if(resultSet.first()){
-//                            goGo = resultSet.getInt("anchor_state");
-//                            goBid = resultSet.getInt("anchor_bid");
-//                        }
-//
-//                        Message message = new Message();
-//                        message.what = 112;
-//                        handler.sendMessage(message);
-//
-//                        resultSet.close();
-//                        JDBCTools.releaseConnection(stmt,conn);
-//                    }
-//                }catch (java.sql.SQLException e){
-//                    e.printStackTrace();
-//                }
-//            }
-//        }.start();
     }
 
     private void connectClass(){
@@ -322,7 +295,7 @@ public class PersonalFragment extends BaseFragment {
                 RequestBody requestBody = new FormBody.Builder()
                         .add("yu_user",SharePreferences.getString(getActivity(),AppConstants.USER_PHONE))
                         .build();
-                String regData = OkHttpBase.getResponse(requestBody,"http://39.105.213.41:8080/StudyAppService/StudyServlet/appointTop1");
+                String regData = OkHttpBase.getResponse(requestBody,"appointTop1");
                 if(regData != null){
                     if(JsonCode.getCode(regData) == 200) {
                         String jsonData = JsonCode.getData(regData);
@@ -345,44 +318,6 @@ public class PersonalFragment extends BaseFragment {
 
             }
         }.start();
-
-
-//        new Thread(){
-//            public void run(){
-//                try {
-//                    Connection conn = JDBCTools.getConnection();
-//                    if(conn != null) {
-//                        Statement stmt = conn.createStatement();
-//                        String sql = "SELECT yu_bid FROM yu WHERE yu_user = " +
-//                                SharePreferences.getString(getActivity(),AppConstants.USER_PHONE) +
-//                                " ORDER BY yu_time DESC LIMIT 1";
-//                        ResultSet resultSet = stmt.executeQuery(sql);
-//                        if (resultSet.first()){
-//                            int yuBid = resultSet.getInt("yu_bid");
-//                            String sqlBid = "SELECT appoint_name,appoint_coach FROM appoint WHERE appoint_bid = " +
-//                                    yuBid +
-//                                    " LIMIT 1";
-//                            ResultSet resultSetAppoint = stmt.executeQuery(sqlBid);
-//                            if(resultSetAppoint.first()){
-//                                class01 = resultSetAppoint.getString("appoint_name");
-//                                class02 = resultSetAppoint.getString("appoint_coach");
-//                            }
-//                            resultSetAppoint.close();
-//
-//                            Message message = new Message();
-//                            message.what = 113;
-//                            handler.sendMessage(message);
-//
-//                        }
-//
-//                        resultSet.close();
-//                        JDBCTools.releaseConnection(stmt,conn);
-//                    }
-//                }catch (java.sql.SQLException e){
-//                    e.printStackTrace();
-//                }
-//            }
-//        }.start();
     }
 
     private void updateSta(final int i){
@@ -393,31 +328,10 @@ public class PersonalFragment extends BaseFragment {
                         .add("anchor_phone",SharePreferences.getString(getActivity(),AppConstants.USER_PHONE))
                         .add("anchor_state", String.valueOf(i))
                         .build();
-                OkHttpBase.getResponse(requestBody,"http://39.105.213.41:8080/StudyAppService/StudyServlet/anchorUpdate");
+                OkHttpBase.getResponse(requestBody,"anchorUpdate");
             }
         }.start();
 
-//        new Thread(){
-//            public void run(){
-//                try {
-//                    Connection conn = JDBCTools.getConnection();
-//                    if(conn != null) {
-//                        Statement stmt = conn.createStatement();
-//                        String sql = "UPDATE anchor SET anchor_state = ? WHERE anchor_phone = " +
-//                                SharePreferences.getString(getActivity(),AppConstants.USER_PHONE) +
-//                                "";
-//                        PreparedStatement preparedStatement = conn.prepareStatement(sql);
-//                        preparedStatement.setInt(1,i);
-//                        preparedStatement.executeUpdate();
-//
-//                        preparedStatement.close();
-//                        JDBCTools.releaseConnection(stmt,conn);
-//                    }
-//                }catch (java.sql.SQLException e){
-//                    e.printStackTrace();
-//                }
-//            }
-//        }.start();
     }
 
     private Handler handler = new Handler(new Handler.Callback() {

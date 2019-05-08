@@ -1,9 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: cn.jiguang.sdk:jmessage:2.8.0@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/jmessage-2.8.0.aar/73ba615d690733da994bb11b5f8c6f5e/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/jmessage-2.8.0.aar/73ba615d690733da994bb11b5f8c6f5e/jars/classes.jar!/" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/jmessage-2.8.0.aar/73ba615d690733da994bb11b5f8c6f5e/jars/libs/jmessage-sdk-android-2.8.0.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/jmessage-2.8.0.aar/975bcd3b81abc9b0d96c611dc796f1ac/jars/libs/jmessage-sdk-android-2.8.0.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/jmessage-2.8.0.aar/975bcd3b81abc9b0d96c611dc796f1ac/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/jmessage-2.8.0.aar/975bcd3b81abc9b0d96c611dc796f1ac/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

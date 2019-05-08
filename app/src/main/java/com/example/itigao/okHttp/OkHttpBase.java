@@ -27,7 +27,7 @@ public class OkHttpBase {
         OkHttpClient okHttpClient = new OkHttpClient();
         //构建一个请求对象
         Request request = new Request.Builder()
-                .url(url)
+                .url(AppConstants.URL + url)
                 .post(requestBody)
                 .build();
         //发送请求获取响应

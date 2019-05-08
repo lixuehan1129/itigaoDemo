@@ -170,7 +170,7 @@ public class BroadNewActivity extends AppCompatActivity implements TabLayout.OnT
                                             .add("focus_user", SharePreferences.getString(BroadNewActivity.this, AppConstants.USER_PHONE))
                                             .add("focus_anchor", String.valueOf(anchorId))
                                             .build();
-                                    String regData = OkHttpBase.getResponse(requestBody,"http://39.105.213.41:8080/StudyAppService/StudyServlet/deleteFocus");
+                                    String regData = OkHttpBase.getResponse(requestBody,"deleteFocus");
                                     if(JsonCode.getCode(regData) == 200){
                                         Message message = new Message();
                                         message.what = 105;
@@ -200,7 +200,7 @@ public class BroadNewActivity extends AppCompatActivity implements TabLayout.OnT
                                             .add("focus_user", SharePreferences.getString(BroadNewActivity.this, AppConstants.USER_PHONE))
                                             .add("focus_anchor", String.valueOf(anchorId))
                                             .build();
-                                    String regData = OkHttpBase.getResponse(requestBody,"http://39.105.213.41:8080/StudyAppService/StudyServlet/insertFocus");
+                                    String regData = OkHttpBase.getResponse(requestBody,"insertFocus");
                                     if(JsonCode.getCode(regData) == 200){
                                         Message message = new Message();
                                         message.what = 106;

@@ -213,7 +213,7 @@ public class UserRegistActivity extends AppCompatActivity{
 
         //构建一个请求对象
         Request request = new Request.Builder()
-                .url("http://39.105.213.41:8080/StudyAppService/StudyServlet/register")
+                .url(AppConstants.URL + "register")
                 .post(requestBody)
                 .build();
         //发送请求获取响应
