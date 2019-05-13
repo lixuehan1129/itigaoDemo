@@ -26,6 +26,6 @@
         android:singleLine="false"
         android:text="2014年9月，来到北京科技大学"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="wrap_content" />
 
 </LinearLayout>

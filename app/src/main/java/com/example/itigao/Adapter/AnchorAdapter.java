@@ -7,6 +7,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.bumptech.glide.Glide;
+import com.example.itigao.ClassAb.Anchor;
 import com.example.itigao.R;
 
 import java.util.List;
@@ -53,13 +55,20 @@ public class AnchorAdapter extends RecyclerView.Adapter<AnchorAdapter.ViewHolder
 
         Anchor anchor = mAnchor.get(position);
 
-        if(anchor.getImage() != null){
-            holder.imageView.setImageResource(anchor.getImage());
+        if(anchor.getAnchor_cover() != null && !anchor.getAnchor_cover().equals("null")){
+            Glide.with(mContext)
+                    .load(anchor.getAnchor_cover())
+                    .asBitmap()  //不可加载动图
+                    .dontAnimate()//取消淡入淡出动画
+                    .placeholder(R.mipmap.ic_download)
+                    .error(R.mipmap.ic_download)
+                    .thumbnail(0.1f) //先加载十分之一作为缩略图
+                    .into(holder.imageView);
         }else {
             holder.imageView.setImageResource(R.mipmap.ic_touxiang21);
         }
 
-        if(anchor.getState() == 0){
+        if(anchor.getAnchor_state() == 1){
             holder.imageView.setBorderColorResource(R.color.colorDarkBlue);
         }else {
             holder.imageView.setBorderColorResource(R.color.colorGray_1);
@@ -93,6 +102,14 @@ public class AnchorAdapter extends RecyclerView.Adapter<AnchorAdapter.ViewHolder
         return mAnchor.size();
     }
 
+    /**
+     * 添加并更新数据，同时具有动画效果
+     */
+    public void addDataAt(List<Anchor> data) {
+        mAnchor = data;
+        notifyDataSetChanged();//更新数据集，注意如果用adapter.notifyDataSetChanged()将没有动画效果
+    }
+
     public interface OnItemClickListener {
         void onItemClick(View view, int position);
     }
@@ -110,30 +127,30 @@ public class AnchorAdapter extends RecyclerView.Adapter<AnchorAdapter.ViewHolder
     }
 
 
-    public class Anchor{
-        private Integer image;
-        private int state;
-
-        public Anchor(Integer image, int state) {
-            this.image = image;
-            this.state = state;
-        }
-
-        public int getState() {
-            return state;
-        }
-
-        public void setState(int state) {
-            this.state = state;
-        }
-
-        public Integer getImage() {
-            return image;
-        }
-
-        public void setImage(Integer image) {
-            this.image = image;
-        }
-
-    }
+//    public class Anchor{
+//        private Integer image;
+//        private int state;
+//
+//        public Anchor(Integer image, int state) {
+//            this.image = image;
+//            this.state = state;
+//        }
+//
+//        public int getState() {
+//            return state;
+//        }
+//
+//        public void setState(int state) {
+//            this.state = state;
+//        }
+//
+//        public Integer getImage() {
+//            return image;
+//        }
+//
+//        public void setImage(Integer image) {
+//            this.image = image;
+//        }
+//
+//    }
 }

@@ -9,6 +9,7 @@ import android.os.Handler;
 import android.os.Message;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
+import android.support.v4.content.LocalBroadcastManager;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -23,6 +24,7 @@ import com.example.itigao.Adapter.TabLayoutAdapter;
 import com.example.itigao.AutoProject.AppConstants;
 import com.example.itigao.AutoProject.JsonCode;
 import com.example.itigao.AutoProject.SharePreferences;
+import com.example.itigao.ClassAb.Anchor;
 import com.example.itigao.R;
 import com.example.itigao.Utils.StatusBarUtils;
 import com.example.itigao.Video.HuDongFragment;
@@ -50,10 +52,11 @@ import static cn.jzvd.JZUtils.dip2px;
  * Created by 最美人间四月天 on 2019/3/11.
  */
 
-public class BroadNewActivity extends AppCompatActivity implements TabLayout.OnTabSelectedListener{
+public class BroadNewActivity extends AppCompatActivity implements TabLayout.OnTabSelectedListener,AboutFragment.CallBackValueAn{
 
 
-    private int anchorId, anchorRoom, anchorFocus, anchorPosition;
+    private int anchorId, anchorRoom, anchorFocus;
+    private Anchor anchor;
     private String url;
     private String URL_F = "rtmp://zb.tipass.com:1935/live/";
 
@@ -65,7 +68,7 @@ public class BroadNewActivity extends AppCompatActivity implements TabLayout.OnT
     private TextView focus;
 
 
-    private String[] titles = new String[]{" 聊天 ", " 视频 ", " 互动 ", " 排行 "};
+    private String[] titles = new String[]{" 聊天 ", " 简介 ", " 排行 ", " 推荐 "};
     private List<Fragment> fragments = new ArrayList<>();
 
     @Override
@@ -75,14 +78,24 @@ public class BroadNewActivity extends AppCompatActivity implements TabLayout.OnT
         StatusBarUtils.setWindowStatusBarColor(BroadNewActivity.this, R.color.colorWhite);
         PlayerFactory.setPlayManager(IjkPlayerManager.class);//ijk模式
         Intent intent = getIntent();
-        anchorId = intent.getIntExtra("anchor_bid",0);
-        anchorRoom = intent.getIntExtra("anchor_room",0);
-        anchorFocus = intent.getIntExtra("anchor_focus",0);
-        anchorPosition = intent.getIntExtra("anchor_position",0);
+        anchor = (Anchor) intent.getSerializableExtra("anchor_all");
+//        anchorId = intent.getIntExtra("anchor_bid",0);
+//        anchorRoom = intent.getIntExtra("anchor_room",0);
+//        anchorFocus = intent.getIntExtra("anchor_focus",0);
+        initView();
+    }
+
+    @Override
+    public void SendMessageValueAn(Anchor strValue) {
+        anchor = strValue;
         initView();
     }
 
     private void initView(){
+        anchorId = anchor.getAnchor_bid();
+        anchorRoom = anchor.getAnchor_room();
+        anchorFocus = anchor.getAnchor_focus();
+
         videoPlayer = (StandardGSYVideoPlayer) findViewById(R.id.broad_new_vv);
         tabLayout = (TabLayout) findViewById(R.id.broad_new_layout);
         mViewPager = (ViewPager) findViewById(R.id.broad_new_viewpager);
@@ -106,6 +119,50 @@ public class BroadNewActivity extends AppCompatActivity implements TabLayout.OnT
         setPlay();
     }
 
+    private void initTab(){
+        tabLayout.clearOnTabSelectedListeners();
+        mViewPager.clearOnPageChangeListeners();
+        fragments = new ArrayList<>();
+
+        mViewPager.setOffscreenPageLimit(4);
+        //设置TabLayout标签的显示方式
+        tabLayout.setTabMode(TabLayout.MODE_FIXED);
+        for (String tab:titles){
+            tabLayout.addTab(tabLayout.newTab().setText(tab));
+        }
+        //设置TabLayout点击事件
+        tabLayout.setOnTabSelectedListener(this);
+
+        Fragment fragment1 = new BroadRoomFragment();
+        Bundle bundle1 = new Bundle();
+        bundle1.putInt("broad_new_bid",anchorRoom);
+        fragment1.setArguments(bundle1);
+
+        Fragment fragment2 = new IntroduceFragment();
+        Bundle bundle2 = new Bundle();
+        bundle2.putSerializable("broad_intro_all",anchor);
+        fragment2.setArguments(bundle2);
+
+        Fragment fragment3 = new RankFragment();
+
+        Fragment fragment4 = new AboutFragment();
+        Bundle bundle4 = new Bundle();
+        bundle4.putInt("broad_go_classify",anchor.getAnchor_classify());
+        fragment4.setArguments(bundle4);
+
+        fragments.add(fragment1);
+        fragments.add(fragment2);
+        fragments.add(fragment3);
+        fragments.add(fragment4);
+
+        TabLayoutAdapter mTabLayoutAdapter = new TabLayoutAdapter(getSupportFragmentManager(),titles, fragments);
+        mViewPager.setAdapter(mTabLayoutAdapter);
+
+        tabLayout.setupWithViewPager(mViewPager);
+
+        reflex(tabLayout);
+    }
+
     private void setPlay(){
         url = URL_F + anchorId;
 
@@ -127,6 +184,8 @@ public class BroadNewActivity extends AppCompatActivity implements TabLayout.OnT
         videoPlayer.setNeedShowWifiTip(true);
         videoPlayer.setIsTouchWiget(false);
 
+        videoPlayer.setBottomProgressBarDrawable(null);
+
         //设置旋转
         orientationUtils = new OrientationUtils(this, videoPlayer);
         //初始化不打开外部的旋转
@@ -143,15 +202,12 @@ public class BroadNewActivity extends AppCompatActivity implements TabLayout.OnT
 
         //是否根据视频尺寸，自动选择竖屏全屏或者横屏全屏
         videoPlayer.setAutoFullWithSize(true);
-//        //音频焦点冲突时是否释放
-//        videoPlayer.setReleaseWhenLossAudio(false);
-//        //自动转屏
-//        videoPlayer.setRotateViewAuto(true);
 
         //设置返回按键功能
         videoPlayer.getBackButton().setOnClickListener(v -> onBackPressed());
-
         videoPlayer.startPlayLogic();
+
+
     }
 
     private void viewClick(){
@@ -175,6 +231,8 @@ public class BroadNewActivity extends AppCompatActivity implements TabLayout.OnT
                                         Message message = new Message();
                                         message.what = 105;
                                         handler.sendMessage(message);
+                                        Intent intent_broad = new Intent(AppConstants.BROAD_FOCUS);
+                                        LocalBroadcastManager.getInstance(BroadNewActivity.this).sendBroadcast(intent_broad);
                                     }
                                 }
                             }.start();
@@ -205,6 +263,8 @@ public class BroadNewActivity extends AppCompatActivity implements TabLayout.OnT
                                         Message message = new Message();
                                         message.what = 106;
                                         handler.sendMessage(message);
+                                        Intent intent_broad = new Intent(AppConstants.BROAD_FOCUS);
+                                        LocalBroadcastManager.getInstance(BroadNewActivity.this).sendBroadcast(intent_broad);
                                     }
                                 }
                             }.start();
@@ -240,38 +300,6 @@ public class BroadNewActivity extends AppCompatActivity implements TabLayout.OnT
         }
         return false;
     });
-
-    private void initTab(){
-        mViewPager.setOffscreenPageLimit(4);
-        //设置TabLayout标签的显示方式
-        tabLayout.setTabMode(TabLayout.MODE_FIXED);
-        for (String tab:titles){
-            tabLayout.addTab(tabLayout.newTab().setText(tab));
-        }
-        //设置TabLayout点击事件
-        tabLayout.setOnTabSelectedListener(this);
-
-        Fragment fragment1 = new BroadRoomFragment();
-        Bundle bundle1 = new Bundle();
-        bundle1.putInt("broad_new_bid",anchorRoom);
-        fragment1.setArguments(bundle1);
-
-        Fragment fragment2 = new HuDongFragment();
-        Fragment fragment3 = new HuDongFragment();
-        Fragment fragment4 = new RankFragment();
-
-        fragments.add(fragment1);
-        fragments.add(fragment2);
-        fragments.add(fragment3);
-        fragments.add(fragment4);
-
-        TabLayoutAdapter mTabLayoutAdapter = new TabLayoutAdapter(getSupportFragmentManager(),titles, fragments);
-        mViewPager.setAdapter(mTabLayoutAdapter);
-
-        tabLayout.setupWithViewPager(mViewPager);
-
-        reflex(tabLayout);
-    }
 
 
     public void reflex(final TabLayout tabLayout){
@@ -337,15 +365,6 @@ public class BroadNewActivity extends AppCompatActivity implements TabLayout.OnT
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
-
-        if (keyCode == KeyEvent.KEYCODE_BACK) {
-            Intent intent = this.getIntent();
-            intent.putExtra("extra_position",anchorPosition);
-            intent.putExtra("extra_focus",anchorFocus);
-            setResult(10032,intent);
-            finish();
-            return true;
-        }
         videoPlayer.onVideoResume();
         return super.onKeyDown(keyCode, event);
     }
@@ -354,8 +373,6 @@ public class BroadNewActivity extends AppCompatActivity implements TabLayout.OnT
     @Override
     public void onStart() {
         super.onStart();
-        //注册
-//        JMessageClient.registerEventReceiver(this);
     }
 
     @Override

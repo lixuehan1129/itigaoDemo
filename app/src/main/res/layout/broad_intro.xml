@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:background="@color/colorWhite">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="主播简介"
+        android:textColor="@color/colorBlack"
+        android:textSize="16sp"/>
+
+    <LinearLayout
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/intro_fra_iv"
+            android:src="@mipmap/ic_touxiang21"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:civ_border_color="@color/colorBlue"
+            app:civ_border_width="1dp"/>
+
+        <TextView
+            android:id="@+id/intro_fra_name"
+            android:text="智慧体育云用户"
+            android:layout_marginLeft="20dp"
+            android:padding="10dp"
+            android:textColor="@color/colorBlack"
+            android:textSize="16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@drawable/bottom_lay">
+    </View>
+
+    <TextView
+        android:id="@+id/intro_fra_in"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="每天10点直播"
+        android:textColor="@color/colorBlack"
+        android:textSize="15sp"/>
+
+
+</LinearLayout>

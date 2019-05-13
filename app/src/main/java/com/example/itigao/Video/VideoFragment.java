@@ -175,10 +175,6 @@ public class VideoFragment extends BaseFragment {
         }.start();
     }
 
-    private void setBroad(){
-        Intent intent = new Intent(AppConstants.BROAD_RECORD);
-        LocalBroadcastManager.getInstance(getActivity()).sendBroadcast(intent);
-    }
 
     private Handler handler = new Handler(new Handler.Callback() {
         @Override

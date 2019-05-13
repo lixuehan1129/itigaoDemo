@@ -1,6 +1,8 @@
 package com.example.itigao.ClassAb;
 
-public class Anchor {
+import java.io.Serializable;
+
+public class Anchor implements Serializable {
     private int anchor_id;
     private int anchor_classify;
     private String anchor_phone;

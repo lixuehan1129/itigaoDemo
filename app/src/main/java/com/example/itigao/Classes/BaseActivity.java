@@ -1,10 +1,14 @@
 package com.example.itigao.Classes;
 
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
+import android.support.v4.content.LocalBroadcastManager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
@@ -18,6 +22,7 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.util.Util;
+import com.example.itigao.Adapter.AnchorActivityAdapter;
 import com.example.itigao.Adapter.ClassActivityAdapter;
 import com.example.itigao.Adapter.ClassVideoAdapter;
 import com.example.itigao.AutoProject.AppConstants;
@@ -53,6 +58,10 @@ import okhttp3.Response;
 
 public class BaseActivity extends AppCompatActivity {
 
+    private LocalBroadcastManager broadcastManager;
+    private IntentFilter intentFilter;
+    private BroadcastReceiver mReceiver;
+
     private int mClassify;
 
     private RecyclerView recyclerView1, recyclerView2, recyclerView3;
@@ -60,13 +69,14 @@ public class BaseActivity extends AppCompatActivity {
     private TextView textView;
 
     private ClassVideoAdapter videoAdapter;
-    private ClassActivityAdapter anchorAdapter, recordAdapter;
+    private ClassActivityAdapter recordAdapter;
+    private AnchorActivityAdapter anchorAdapter;
 
-    private List<ClassActivityAdapter.Class_Activity> anchors = new ArrayList<>();
+  //  private List<ClassActivityAdapter.Class_Activity> anchors = new ArrayList<>();
     private List<ClassActivityAdapter.Class_Activity> records = new ArrayList<>();
     private List<ClassVideoAdapter.Class_Video> videos = new ArrayList<>();
 
-    private List<Anchor> anchors_get;
+    private List<Anchor> anchors_get = new ArrayList<>();
     private List<Record> records_get;
     private List<Classes> classes_get;
 
@@ -91,6 +101,22 @@ public class BaseActivity extends AppCompatActivity {
         if (Util.isOnMainThread()) {
             Glide.with(getApplicationContext()).pauseRequests();
         }
+        broadcastManager.unregisterReceiver(mReceiver);
+    }
+
+
+    private void getBroad(){
+        broadcastManager = LocalBroadcastManager.getInstance(BaseActivity.this);
+        intentFilter = new IntentFilter();
+        intentFilter.addAction(AppConstants.BROAD_FOCUS);
+        mReceiver = new BroadcastReceiver() {
+            @Override
+            public void onReceive(Context context, Intent intent){
+                //收到广播后所作的操作
+                connectAnchor();
+            }
+        };
+        broadcastManager.registerReceiver(mReceiver, intentFilter);
     }
 
     @Override
@@ -116,7 +142,7 @@ public class BaseActivity extends AppCompatActivity {
 
         LinearLayoutManager linearLayoutManager1 = new LinearLayoutManager(this);
         linearLayoutManager1.setOrientation(LinearLayoutManager.HORIZONTAL);
-        anchorAdapter = new ClassActivityAdapter(anchors);
+        anchorAdapter = new AnchorActivityAdapter(anchors_get);
         recyclerView1.setLayoutManager(linearLayoutManager1);
         recyclerView1.setAdapter(anchorAdapter);
 
@@ -130,6 +156,8 @@ public class BaseActivity extends AppCompatActivity {
         recyclerView3.setNestedScrollingEnabled(false);
         videoAdapter = new ClassVideoAdapter(videos);
         recyclerView3.setAdapter(videoAdapter);
+
+        getBroad();
 
         connectAnchor();
         connectRecord();
@@ -325,23 +353,16 @@ public class BaseActivity extends AppCompatActivity {
 
     private void initDataAnchor(){
         if(anchors_get.size() > 0){
-            for(int i = 0; i<anchors_get.size(); i++){
-                anchorAdapter.addDataAt(anchorAdapter.getItemCount(),
-                        anchorAdapter.new Class_Activity(anchors_get.get(i).getAnchor_name(),
-                                anchors_get.get(i).getAnchor_cover()));
-            }
-
-
+            anchorAdapter = new AnchorActivityAdapter(anchors_get);
+            recyclerView1.setAdapter(anchorAdapter);
             anchorAdapter.setOnItemClickListener((view, position) -> {
                 Intent intent = new Intent(BaseActivity.this, BroadNewActivity.class);
-                intent.putExtra("anchor_bid",anchors_get.get(position).getAnchor_bid());
-                intent.putExtra("anchor_room",anchors_get.get(position).getAnchor_room());
-                intent.putExtra("anchor_focus",anchors_get.get(position).getAnchor_focus());
-                intent.putExtra("anchor_position",position);
-                startActivityForResult(intent,10032);
+                intent.putExtra("anchor_all",anchors_get.get(position));
+                startActivity(intent);
             });
         }else {
-            anchorAdapter.addDataAt(0,anchorAdapter.new Class_Activity("暂无",null));
+            anchors_get.add(new Anchor("暂无",null));
+            anchorAdapter.addDataAt(anchors_get);
         }
     }
 

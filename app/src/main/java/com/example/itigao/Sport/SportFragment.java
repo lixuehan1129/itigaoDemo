@@ -20,7 +20,7 @@ import com.example.itigao.ViewHelper.BaseFragment;
 
 public class SportFragment extends BaseFragment {
 
-    private TextView tv1, tv2, tv3, tv4, tv5, tv6, tv7, tv8, tv9, tv10, tv11, tv12, tv13, tv14;
+    private TextView tv1, tv2, tv3, tv4;
 
     @Override
     public void onStart(){
@@ -45,16 +45,6 @@ public class SportFragment extends BaseFragment {
         tv2 = (TextView) view.findViewById(R.id.sportFragment_data2);
         tv3 = (TextView) view.findViewById(R.id.sportFragment_data3);
         tv4 = (TextView) view.findViewById(R.id.sportFragment_data4);
-//        tv5 = (TextView) view.findViewById(R.id.sportFragment_data5);
-//        tv6 = (TextView) view.findViewById(R.id.sportFragment_data6);
-//        tv7 = (TextView) view.findViewById(R.id.sportFragment_data7);
-//        tv8 = (TextView) view.findViewById(R.id.sportFragment_data8);
-//        tv9 = (TextView) view.findViewById(R.id.sportFragment_data9);
-//        tv10 = (TextView) view.findViewById(R.id.sportFragment_data10);
-//        tv11 = (TextView) view.findViewById(R.id.sportFragment_data11);
-//        tv12 = (TextView) view.findViewById(R.id.sportFragment_data12);
-//        tv13 = (TextView) view.findViewById(R.id.sportFragment_data13);
-//        tv14 = (TextView) view.findViewById(R.id.sportFragment_data14);
 
         setData();
 
@@ -65,15 +55,5 @@ public class SportFragment extends BaseFragment {
         tv2.setText("127");
         tv3.setText("15");
         tv4.setText("85");
-//        tv5.setText("6337");
-//        tv6.setText("32400");
-//        tv7.setText("1.7");
-//        tv8.setText("12");
-//        tv9.setText("0");
-//        tv10.setText("8");
-//        tv11.setText("2.3");
-//        tv12.setText("35");
-//        tv13.setText("30");
-//        tv14.setText("130");
     }
 }

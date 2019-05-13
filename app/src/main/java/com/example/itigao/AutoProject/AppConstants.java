@@ -14,9 +14,10 @@ public class AppConstants {
 
     public static final String IM_PASS = "123456";
 
-    public static final String BROAD_RECORD = "android.intent.action.broadcast.record2";
     public static final String BROAD_CHANGE = "android.intent.action.broadcast.change";
     public static final String BROAD_HU = "android.intent.action.broadcast.huDong";
+
+    public static final String BROAD_FOCUS = "android.intent.action.broadcast.focus";
 
     public static final String URL = "http://tg01.tipass.com/Study/tp5/public/index.php?s=study/Study/";
 

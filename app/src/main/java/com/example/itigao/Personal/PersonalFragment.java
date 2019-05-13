@@ -31,7 +31,9 @@ import com.example.itigao.AutoProject.AppConstants;
 import com.example.itigao.AutoProject.JsonCode;
 import com.example.itigao.AutoProject.SharePreferences;
 import com.example.itigao.AutoProject.Tip;
+import com.example.itigao.Broad.BroadNewActivity;
 import com.example.itigao.Broad.GoBroadActivity;
+import com.example.itigao.ClassAb.Anchor;
 import com.example.itigao.Database.DataBaseHelper;
 import com.example.itigao.R;
 import com.example.itigao.ViewHelper.BaseFragment;
@@ -42,6 +44,8 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 import de.hdodenhof.circleimageview.CircleImageView;
@@ -58,8 +62,8 @@ public class PersonalFragment extends BaseFragment {
     private DataBaseHelper dataBaseHelper;
 
     private LocalBroadcastManager broadcastManager;
-    private IntentFilter intentFilter;
-    private BroadcastReceiver mReceiver;
+    private IntentFilter intentFilter,intentFilterF;
+    private BroadcastReceiver mReceiver,mReceiverF;
 
     private ImageView code, set;
     private CircleImageView picture;
@@ -73,6 +77,9 @@ public class PersonalFragment extends BaseFragment {
     private String userName,userPicture;
     private int userLevel = 1, userSta, goGo = 2;
     private int goBid;
+
+    private AnchorAdapter anchorAdapter;
+    private List<Anchor> anchors = new ArrayList<>();
 
     @Override
     public void onStart(){
@@ -93,7 +100,6 @@ public class PersonalFragment extends BaseFragment {
         broadcastManager = LocalBroadcastManager.getInstance(getActivity());
         intentFilter = new IntentFilter();
         intentFilter.addAction(AppConstants.BROAD_CHANGE);
-        // intentFilter.addAction(AppConstants.BROAD_LOGIN);
         mReceiver = new BroadcastReceiver() {
             @Override
             public void onReceive(Context context, Intent intent){
@@ -102,7 +108,17 @@ public class PersonalFragment extends BaseFragment {
                 localData();
             }
         };
-        broadcastManager.registerReceiver(mReceiver, intentFilter);
+
+        intentFilterF = new IntentFilter();
+        intentFilterF.addAction(AppConstants.BROAD_FOCUS);
+        mReceiverF = new BroadcastReceiver() {
+            @Override
+            public void onReceive(Context context, Intent intent){
+                //收到广播后所作的操作
+                setData();
+            }
+        };
+        broadcastManager.registerReceiver(mReceiverF, intentFilterF);
     }
 
 
@@ -111,10 +127,10 @@ public class PersonalFragment extends BaseFragment {
     private void initView(View view){
         Toolbar toolbar = (Toolbar) view.findViewById(R.id.personalFragment_mainTool);
         toolbar.setTitle("个人信息");
-        
 
-        code = (ImageView) view.findViewById(R.id.personalFragment_code);
-        set = (ImageView) view.findViewById(R.id.personalFragment_set);
+
+//        code = (ImageView) view.findViewById(R.id.personalFragment_code);
+//        set = (ImageView) view.findViewById(R.id.personalFragment_set);
 
         picture = (CircleImageView) view.findViewById(R.id.personalFragment_picture);
         name = (TextView) view.findViewById(R.id.personalFragment_name);
@@ -142,6 +158,8 @@ public class PersonalFragment extends BaseFragment {
         recyclerView = (RecyclerView) view.findViewById(R.id.personalFragment_rv);
         recyclerView.setNestedScrollingEnabled(false); //禁止滑动
         recyclerView.setLayoutManager(new GridLayoutManager(getActivity(),7));
+        anchorAdapter = new AnchorAdapter(anchors);
+        recyclerView.setAdapter(anchorAdapter);
 
         dataBaseHelper = new DataBaseHelper(getActivity(), AppConstants.SQL_VISION);
         localData();
@@ -358,6 +376,10 @@ public class PersonalFragment extends BaseFragment {
                     class2.setText(class02);
                     break;
                 }
+                case 10256:{
+                    setAdapter();
+                    break;
+                }
                 default:
                     break;
             }
@@ -369,43 +391,47 @@ public class PersonalFragment extends BaseFragment {
 
     //关注的主播列表
     private void setData(){
-        ArrayList<Integer> image = new ArrayList<>();
-        ArrayList<Integer> state = new ArrayList<>();
-        image.add(R.mipmap.ic_touxiang11);
-        state.add(0);
-        image.add(R.mipmap.ic_touxiang21);
-        state.add(0);
-        image.add(R.mipmap.ic_touxiang3);
-        state.add(0);
-        image.add(R.mipmap.ic_touxiang41);
-        state.add(1);
-        image.add(R.mipmap.ic_touxiang51);
-        state.add(1);
+        anchors = new ArrayList<>();
+        new Thread(){
+            public void run(){
+                RequestBody requestBody = new FormBody.Builder()
+                        .add("focus_user",SharePreferences.getString(getActivity(),AppConstants.USER_PHONE))
+                        .build();
+                String reg = OkHttpBase.getResponse(requestBody,"getAnchorByFocusUser");
+                if(reg != null){
+                    if(JsonCode.getCode(reg) == 200){
+                        String jsonData = JsonCode.getData(reg);
+                        anchors = JsonCode.jsonToList(jsonData,Anchor.class);
 
-        setAdapter(image, state);
-    }
-    private void setAdapter(ArrayList<Integer> image, final ArrayList<Integer> state){
-        List<AnchorAdapter.Anchor> anchors = new ArrayList<>();
-        for(int i=0; i<image.size(); i++){
-            AnchorAdapter nAnchorAdapter = new AnchorAdapter(anchors);
-            AnchorAdapter.Anchor anchor = nAnchorAdapter.new Anchor(image.get(i), state.get(i));
-            anchors.add(anchor);
-        }
-
-
-        AnchorAdapter anchorAdapter = new AnchorAdapter(anchors);
-        recyclerView.setAdapter(anchorAdapter);
-        anchorAdapter.setOnItemClickListener(new AnchorAdapter.OnItemClickListener() {
-            @Override
-            public void onItemClick(View view, int position) {
-                if(state.get(position) == 0){
-//                    Intent intent = new Intent(getActivity(),BroadcastActivity.class);
-//                    startActivity(intent);
-                }else {
-                    Tip.showTip(getActivity(),"当前未开播");
+                        Message message = new Message();
+                        message.what = 10256;
+                        handler.sendMessage(message);
+                    }
                 }
-
             }
+        }.start();
+    }
+    private void setAdapter(){
+        for (int i = 0; i<anchors.size(); i++){
+            anchors.get(i).setAnchor_focus(1);
+        }
+        Collections.sort(anchors, new Comparator<Anchor>() {
+            @Override
+            public int compare(Anchor o1, Anchor o2) {
+                return o2.getAnchor_state() - o1.getAnchor_state();
+            }
+        });
+        anchorAdapter.addDataAt(anchors);
+        recyclerView.setAdapter(anchorAdapter);
+        anchorAdapter.setOnItemClickListener((view, position) -> {
+            if(anchors.get(position).getAnchor_state() == 1){
+                Intent intent = new Intent(getActivity(), BroadNewActivity.class);
+                intent.putExtra("anchor_all",anchors.get(position));
+                startActivity(intent);
+            }else {
+                Tip.showTip(getActivity(),"当前未开播");
+            }
+
         });
 
     }

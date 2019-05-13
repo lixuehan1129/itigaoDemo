@@ -1,5 +1,6 @@
 package com.example.itigao.Video;
 
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -17,6 +18,7 @@ import android.widget.TextView;
 import com.example.itigao.Adapter.TabLayoutAdapter;
 import com.example.itigao.AutoProject.AppConstants;
 import com.example.itigao.AutoProject.SharePreferences;
+import com.example.itigao.ClassAb.Classes;
 import com.example.itigao.Media.JZMediaIjkplayer;
 import com.example.itigao.R;
 import com.example.itigao.Utils.StatusBarUtils;
@@ -34,18 +36,21 @@ import static cn.jzvd.JZUtils.dip2px;
  * Created by 最美人间四月天 on 2019/3/9.
  */
 
-public class VideoNewActivity extends AppCompatActivity implements TabLayout.OnTabSelectedListener,VideoFragment.CallBackValue{
+public class VideoNewActivity extends AppCompatActivity implements TabLayout.OnTabSelectedListener,VideoFragment.CallBackValue
+        ,HuDongFragment.CallBackValueHu{
 
     private JzvdStd jzvdStd;
     private TabLayout tabLayout;
     private ViewPager mViewPager;
+    private TextView textView;
 
 
-    private String[] titles = new String[]{" 聊天 ", " 视频 ", " 互动 ", " 排行 "};
+    private String[] titles = new String[]{" 聊天 ", " 视频 ", " 排行 ", " 推荐 "};
     private List<Fragment> fragments = new ArrayList<>();
 
     private String userPhone;
     private String video_add;
+    private int video_classify;
     private int video_bid;
     private int video_section;
     private int video_select;
@@ -66,6 +71,8 @@ public class VideoNewActivity extends AppCompatActivity implements TabLayout.OnT
         video_select = intent.getIntExtra("video_select",1);
         video_record = intent.getIntExtra("video_record",1);
 
+        video_classify = intent.getIntExtra("video_classify",1);
+
         userPhone = SharePreferences.getString(VideoNewActivity.this, AppConstants.USER_PHONE);
 
         initView();
@@ -75,6 +82,7 @@ public class VideoNewActivity extends AppCompatActivity implements TabLayout.OnT
         jzvdStd = (JzvdStd) findViewById(R.id.video_new_vv);
         tabLayout = (TabLayout) findViewById(R.id.video_new_layout);
         mViewPager = (ViewPager) findViewById(R.id.video_new_viewpager);
+        textView = (TextView) findViewById(R.id.video_new_go);
         //获取屏幕宽
         WindowManager wm = (WindowManager) this
                 .getSystemService(Context.WINDOW_SERVICE);
@@ -85,6 +93,42 @@ public class VideoNewActivity extends AppCompatActivity implements TabLayout.OnT
         initTab();
 
         setPlay(video_add);
+
+
+        textView.setOnClickListener(v -> {
+            if(textView.getText().toString().equals(" + 收藏 ")){
+                ProgressDialog progressDialog = ProgressDialog.show(VideoNewActivity.this,"","",true);
+                new Thread(() -> {
+                    try {
+                        Thread.sleep(800);
+                        progressDialog.dismiss();
+                        runOnUiThread(() -> {
+                            textView.setText("已收藏");
+                            textView.setBackgroundColor(getResources().getColor(R.color.colorGray_1));
+                        });
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                        progressDialog.dismiss();
+                    }
+                }).start();
+
+            }else {
+                ProgressDialog progressDialog = ProgressDialog.show(VideoNewActivity.this,"","",true);
+                new Thread(() -> {
+                    try {
+                        Thread.sleep(800);
+                        progressDialog.dismiss();
+                        runOnUiThread(() -> {
+                            textView.setText(" + 收藏 ");
+                            textView.setBackgroundColor(getResources().getColor(R.color.colorOrange));
+                        });
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                        progressDialog.dismiss();
+                    }
+                }).start();
+            }
+        });
 
     }
 
@@ -101,10 +145,31 @@ public class VideoNewActivity extends AppCompatActivity implements TabLayout.OnT
         setPlay(strValue);
     }
 
+    @Override
+    public void SendMessageValueHu(Classes strValue) {
+        Jzvd.releaseAllVideos();
+        // setPlay(strValue);
+        video_add = strValue.getClass_add();
+        video_bid = strValue.getClass_bid();
+        video_section = strValue.getClass_section();
+        video_select = 1;
+        video_record = 1;
+
+        video_classify = strValue.getClass_classify();
+
+        initView();
+    }
+
 
     private void initTab(){
+        tabLayout.clearOnTabSelectedListeners();
+        mViewPager.clearOnPageChangeListeners();
+        fragments = new ArrayList<>();
+
+
         mViewPager.setOffscreenPageLimit(4);
         //设置TabLayout标签的显示方式
+
         tabLayout.setTabMode(TabLayout.MODE_FIXED);
         for (String tab:titles){
             tabLayout.addTab(tabLayout.newTab().setText(tab));
@@ -126,21 +191,28 @@ public class VideoNewActivity extends AppCompatActivity implements TabLayout.OnT
         bundle2.putInt("video_play_select",video_select);
         fragment2.setArguments(bundle2);
 
-        Fragment fragment3 = new HuDongFragment();
-        Fragment fragment4 = new RankFragment();
+        Fragment fragment3 = new RankFragment();
+
+
+        Fragment fragment4 = new HuDongFragment();
+        Bundle bundle4 = new Bundle();
+        bundle4.putInt("video_play_classify",video_classify);
+        fragment4.setArguments(bundle4);
+
 
         fragments.add(fragment1);
         fragments.add(fragment2);
         fragments.add(fragment3);
         fragments.add(fragment4);
 
-        TabLayoutAdapter mTabLayoutAdapter = new TabLayoutAdapter(getSupportFragmentManager(),titles, fragments);
+        TabLayoutAdapter mTabLayoutAdapter = new TabLayoutAdapter(getSupportFragmentManager(), titles, fragments);
         mViewPager.setAdapter(mTabLayoutAdapter);
 
         tabLayout.setupWithViewPager(mViewPager);
 
         reflex(tabLayout);
     }
+
 
 
     public void reflex(final TabLayout tabLayout){

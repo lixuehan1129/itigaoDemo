@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@color/colorWhite">
+    android:orientation="vertical">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="10dp"
-        android:text="查看本组排名"
+        android:text="为你推荐的主播"
         android:textColor="@color/colorBlack"
-        android:textSize="16sp"/>
+        android:textSize="20sp"/>
 
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/video_rank_rv"
-        android:padding="5dp"
+        android:id="@+id/broad_about_rv"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
     </android.support.v7.widget.RecyclerView>
-
 
 </LinearLayout>
