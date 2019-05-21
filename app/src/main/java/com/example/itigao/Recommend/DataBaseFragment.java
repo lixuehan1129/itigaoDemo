@@ -386,6 +386,7 @@ public class DataBaseFragment extends BaseFragment {
                         .add("yu_bid", String.valueOf(bid))
                         .build();
                 String regData = OkHttpBase.getResponse(requestBody,"deleteYu");
+                System.out.println("regD" + regData);
                 if(regData != null){
                     progressDialog.dismiss();
                 }else {

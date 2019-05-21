@@ -415,12 +415,9 @@ public class PersonalFragment extends BaseFragment {
         for (int i = 0; i<anchors.size(); i++){
             anchors.get(i).setAnchor_focus(1);
         }
-        Collections.sort(anchors, new Comparator<Anchor>() {
-            @Override
-            public int compare(Anchor o1, Anchor o2) {
-                return o2.getAnchor_state() - o1.getAnchor_state();
-            }
-        });
+
+        Collections.sort(anchors, (o1, o2) -> o2.getAnchor_state() - o1.getAnchor_state());
+
         anchorAdapter.addDataAt(anchors);
         recyclerView.setAdapter(anchorAdapter);
         anchorAdapter.setOnItemClickListener((view, position) -> {

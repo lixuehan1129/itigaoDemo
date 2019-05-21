@@ -58,7 +58,7 @@ public class BroadNewActivity extends AppCompatActivity implements TabLayout.OnT
     private int anchorId, anchorRoom, anchorFocus;
     private Anchor anchor;
     private String url;
-    private String URL_F = "rtmp://zb.tipass.com:1935/live/";
+    private String URL_F = "rtmp://114.115.150.93:1935/live/";
 
     private StandardGSYVideoPlayer videoPlayer;
     private OrientationUtils orientationUtils;
