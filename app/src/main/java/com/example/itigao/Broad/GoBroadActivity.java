@@ -40,6 +40,7 @@ public class GoBroadActivity extends AppCompatActivity{
 
     private int GoBid;
 
+
     private String url = "rtmp://114.115.150.93:1935/live/";
 
    // private SrsPublisher mPublisher;
