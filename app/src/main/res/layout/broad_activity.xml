@@ -10,6 +10,10 @@
         android:layout_width="match_parent"
         android:layout_height="210dp" />
 
+    <!--<cn.jzvd.JzvdStd-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="210dp"></cn.jzvd.JzvdStd>-->
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

@@ -14,6 +14,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.example.itigao.AutoProject.AppConstants;
 import com.example.itigao.R;
 
 
@@ -41,7 +42,7 @@ public class GoBroadActivity extends AppCompatActivity{
     private int GoBid;
 
 
-    private String url = "rtmp://114.115.150.93:1935/live/";
+    //private String url = "rtmp://114.115.150.93:1935/live/";
 
    // private SrsPublisher mPublisher;
 
@@ -75,7 +76,7 @@ public class GoBroadActivity extends AppCompatActivity{
         mLiveCameraView = (StreamLiveCameraView) findViewById(R.id.stream_previewView);
         //参数配置 start
         streamAVOption = new StreamAVOption();
-        streamAVOption.streamUrl = url + GoBid;
+        streamAVOption.streamUrl = AppConstants.BROAD_URL + GoBid;
         //参数配置 end
         mLiveCameraView.init(this, streamAVOption);
         mLiveCameraView.addStreamStateListener(resConnectionListener);
@@ -91,7 +92,7 @@ public class GoBroadActivity extends AppCompatActivity{
             public void onClick(View v) {
                 if (btnPublish.getText().toString().contentEquals("Push")) {
                     if(!mLiveCameraView.isStreaming()){
-                        mLiveCameraView.startStreaming(url + GoBid);
+                        mLiveCameraView.startStreaming(AppConstants.BROAD_URL + GoBid);
                     }
                     //    Tip.showTip(GoBroadActivity.this,"开始直播");
                     btnPublish.setText("Stop");
@@ -118,7 +119,7 @@ public class GoBroadActivity extends AppCompatActivity{
         @Override
         public void onOpenConnectionResult(int result) {
             //result 0成功  1 失败
-            Toast.makeText(GoBroadActivity.this,"打开推流连接 状态："+result+ " 推流地址："+ url + GoBid,Toast.LENGTH_LONG).show();
+            Toast.makeText(GoBroadActivity.this,"打开推流连接 状态："+result+ " 推流地址："+ AppConstants.BROAD_URL + GoBid,Toast.LENGTH_LONG).show();
         }
 
         @Override

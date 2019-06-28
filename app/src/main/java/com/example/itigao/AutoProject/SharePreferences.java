@@ -2,6 +2,7 @@ package com.example.itigao.AutoProject;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 
 /**
  * Created by 最美人间四月天 on 2018/4/4.
@@ -14,6 +15,15 @@ import android.content.SharedPreferences;
 
 public class SharePreferences {
     private static final String spFileName = "app";
+
+    public static SharedPreferences mPreference;
+
+    public static SharedPreferences getPreference(Context context) {
+        if (mPreference == null)
+            mPreference = PreferenceManager
+                    .getDefaultSharedPreferences(context);
+        return mPreference;
+    }
 
 
     public static String getString(Context context, String strKey) {
@@ -106,6 +116,14 @@ public class SharePreferences {
         SharedPreferences.Editor editor = activityPreferences.edit();
         editor.putLong(strKey, strData);
         editor.commit();
+    }
+
+    public static void setInteger(Context context, String name, int value) {
+        getPreference(context).edit().putInt(name, value).commit();
+    }
+
+    public static int getInteger(Context context, String name, int default_i) {
+        return getPreference(context).getInt(name, default_i);
     }
 
     /**

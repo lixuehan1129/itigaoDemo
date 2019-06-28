@@ -6,6 +6,8 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.View;
 
+import com.example.itigao.Emotion.fragment.BackHandleInterface;
+
 /**
  * Created by 最美人间四月天 on 2018/1/26.
  *
@@ -25,6 +27,10 @@ public abstract class BaseFragment extends Fragment {
     private boolean isReuseView;
     private boolean isFirstVisible;
     private View rootView;
+
+    //传递过来的参数Bundle，供子类使用
+    protected Bundle args;
+
 
 
     //setUserVisibleHint()在Fragment创建时会先被调用一次，传入isVisibleToUser = false
@@ -54,10 +60,35 @@ public abstract class BaseFragment extends Fragment {
         }
     }
 
+    /**
+     * 创建fragment的静态方法，方便传递参数
+     * @param args 传递的参数
+     * @return
+     */
+    public static <T extends Fragment>T newInstance(Class clazz,Bundle args) {
+        T mFragment=null;
+        try {
+            mFragment= (T) clazz.newInstance();
+        } catch (java.lang.InstantiationException e) {
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        }
+        mFragment.setArguments(args);
+        return mFragment;
+    }
+
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         initVariable();
+        args = getArguments();
+
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
     }
 
     @Override

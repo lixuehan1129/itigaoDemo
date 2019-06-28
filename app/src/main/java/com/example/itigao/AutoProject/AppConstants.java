@@ -21,6 +21,8 @@ public class AppConstants {
 
     public static final String URL = "http://tg01.tipass.com/Study/tp5/public/index.php?s=study/Study/";
 
+    public static final String BROAD_URL = "rtmp://101.132.167.250:1935/live/";
+
 
     public static final int SQL_VISION = 1;
 

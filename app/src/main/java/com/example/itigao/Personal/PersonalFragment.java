@@ -10,11 +10,13 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.Looper;
 import android.os.Message;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.content.LocalBroadcastManager;
 import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
@@ -27,6 +29,7 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.util.Util;
 import com.example.itigao.Adapter.AnchorAdapter;
+import com.example.itigao.Adapter.ClassActivityAdapter;
 import com.example.itigao.AutoProject.AppConstants;
 import com.example.itigao.AutoProject.JsonCode;
 import com.example.itigao.AutoProject.SharePreferences;
@@ -34,8 +37,10 @@ import com.example.itigao.AutoProject.Tip;
 import com.example.itigao.Broad.BroadNewActivity;
 import com.example.itigao.Broad.GoBroadActivity;
 import com.example.itigao.ClassAb.Anchor;
+import com.example.itigao.ClassAb.Classes;
 import com.example.itigao.Database.DataBaseHelper;
 import com.example.itigao.R;
+import com.example.itigao.Video.VideoNewActivity;
 import com.example.itigao.ViewHelper.BaseFragment;
 import com.example.itigao.okHttp.OkHttpBase;
 
@@ -43,14 +48,19 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.HashSet;
 import java.util.List;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 import okhttp3.FormBody;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
 import okhttp3.RequestBody;
+import okhttp3.Response;
 
 
 /**
@@ -70,7 +80,7 @@ public class PersonalFragment extends BaseFragment {
     private TextView name, level;
     private LinearLayout per, device1, class0, exam1, indoor1, go1;
     private TextView class1, class2, class3, class4, device2, exam2, indoor2, go2, go3;
-    private RecyclerView recyclerView;
+    private RecyclerView recyclerView,recyclerViewC;
 
     private String class01,class02;
 
@@ -79,7 +89,11 @@ public class PersonalFragment extends BaseFragment {
     private int goBid;
 
     private AnchorAdapter anchorAdapter;
+    private ClassActivityAdapter classActivityAdapter;
+
+    private List<ClassActivityAdapter.Class_Activity> records = new ArrayList<>();
     private List<Anchor> anchors = new ArrayList<>();
+    private List<Classes> classes = new ArrayList<>();
 
     @Override
     public void onStart(){
@@ -161,11 +175,19 @@ public class PersonalFragment extends BaseFragment {
         anchorAdapter = new AnchorAdapter(anchors);
         recyclerView.setAdapter(anchorAdapter);
 
+        recyclerViewC = (RecyclerView) view.findViewById(R.id.personalFragment_rvC);
+        LinearLayoutManager linearLayoutManager2 = new LinearLayoutManager(getActivity());
+        linearLayoutManager2.setOrientation(LinearLayoutManager.HORIZONTAL);
+        classActivityAdapter = new ClassActivityAdapter(records);
+        recyclerViewC.setLayoutManager(linearLayoutManager2);
+        recyclerViewC.setAdapter(classActivityAdapter);
+
         dataBaseHelper = new DataBaseHelper(getActivity(), AppConstants.SQL_VISION);
         localData();
 
         connect();
         connectClass();
+        connectF();
 
         setData();
        // setClick();
@@ -257,7 +279,7 @@ public class PersonalFragment extends BaseFragment {
                                 updateSta(1);
                                 go3.setText("关闭直播");
                                 go3.setTextColor(getResources().getColor(R.color.colorRed));
-                                go2.setText("直播地址:rtmp://114.115.150.93:1935/live" + "\n" + "直播码:" + goBid);
+                                go2.setText("直播地址:" + AppConstants.BROAD_URL + "\n" + "直播码:" + goBid);
                                 go2.setVisibility(View.VISIBLE);
                                 break;
                             }
@@ -338,6 +360,54 @@ public class PersonalFragment extends BaseFragment {
         }.start();
     }
 
+    private void connectF(){
+        classes = new ArrayList<>();
+        new Thread() {
+            public void run() {
+                Looper.prepare();
+                RequestBody requestBody = new FormBody.Builder()
+                        .add("classFocus_user", SharePreferences.getString(getActivity(),AppConstants.USER_PHONE))
+                        .build();
+                String reg = OkHttpBase.getResponse(requestBody,"getClassByClassFocus");
+               // System.out.println("djkfjdslfds" + reg + SharePreferences.getString(getActivity(),AppConstants.USER_PHONE));
+                if(reg != null){
+                    if(JsonCode.getCode(reg) == 200){
+                        String data = JsonCode.getData(reg);
+                        classes = JsonCode.jsonToList(data, Class.class);
+
+                        Message message = new Message();
+                        message.what = 1156;
+                        handler.sendMessage(message);
+                    }
+                }
+
+                Looper.loop();
+            }
+        }.start();
+    }
+
+    private void initDataF(){
+        if(classes.size() > 0){
+            for(int i = 0; i<classes.size(); i++){
+                classActivityAdapter.addDataAt(classActivityAdapter.getItemCount(),
+                        classActivityAdapter.new Class_Activity(classes.get(i).getClass_name(),
+                                classes.get(i).getClass_cover()));
+            }
+
+            classActivityAdapter.setOnItemClickListener((view, position) -> {
+                Intent intent = new Intent(getActivity(), VideoNewActivity.class);
+                intent.putExtra("video_bid",classes.get(position).getClass_bid());
+                intent.putExtra("video_section",classes.get(position).getClass_section());
+                intent.putExtra("video_add",classes.get(position).getClass_add());
+                intent.putExtra("video_select",1);
+                intent.putExtra("video_record",1);
+                startActivity(intent);
+            });
+        }else {
+            classActivityAdapter.addDataAt(0,classActivityAdapter.new Class_Activity("暂无",null));
+        }
+    }
+
     private void updateSta(final int i){
 
         new Thread(){
@@ -380,6 +450,10 @@ public class PersonalFragment extends BaseFragment {
                     setAdapter();
                     break;
                 }
+                case 1156:{
+                    initDataF();
+                    break;
+                }
                 default:
                     break;
             }
@@ -412,18 +486,27 @@ public class PersonalFragment extends BaseFragment {
         }.start();
     }
     private void setAdapter(){
-        for (int i = 0; i<anchors.size(); i++){
-            anchors.get(i).setAnchor_focus(1);
+        List<Anchor> anchorT = new ArrayList<>();
+        List<Integer> anchorBid = new ArrayList<>();
+        for(int i = 0; i<anchors.size(); i++){
+            if(!anchorBid.contains(anchors.get(i).getAnchor_bid())){
+                anchorBid.add(anchors.get(i).getAnchor_bid());
+                anchorT.add(anchors.get(i));
+            }
         }
 
-        Collections.sort(anchors, (o1, o2) -> o2.getAnchor_state() - o1.getAnchor_state());
+        for (int i = 0; i<anchorT.size(); i++){
+            anchorT.get(i).setAnchor_focus(1);
+        }
 
-        anchorAdapter.addDataAt(anchors);
+        Collections.sort(anchorT, (o1, o2) -> o2.getAnchor_state() - o1.getAnchor_state());
+
+        anchorAdapter.addDataAt(anchorT);
         recyclerView.setAdapter(anchorAdapter);
         anchorAdapter.setOnItemClickListener((view, position) -> {
-            if(anchors.get(position).getAnchor_state() == 1){
+            if(anchorT.get(position).getAnchor_state() == 1){
                 Intent intent = new Intent(getActivity(), BroadNewActivity.class);
-                intent.putExtra("anchor_all",anchors.get(position));
+                intent.putExtra("anchor_all",anchorT.get(position));
                 startActivity(intent);
             }else {
                 Tip.showTip(getActivity(),"当前未开播");
@@ -432,6 +515,7 @@ public class PersonalFragment extends BaseFragment {
         });
 
     }
+
 
     @Override
     public void onDestroy() {

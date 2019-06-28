@@ -15,29 +15,6 @@
         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
 
-        <!--<LinearLayout-->
-            <!--android:paddingRight="15dp"-->
-            <!--android:layout_gravity="right"-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="match_parent"-->
-            <!--android:orientation="horizontal">-->
-
-            <!--<ImageView-->
-                <!--android:id="@+id/personalFragment_code"-->
-                <!--android:layout_marginRight="12dp"-->
-                <!--android:layout_width="21dp"-->
-                <!--android:layout_height="21dp"-->
-                <!--android:background="@mipmap/ic_code"-->
-                <!--tools:ignore="ContentDescription" />-->
-
-            <!--<ImageView-->
-                <!--android:id="@+id/personalFragment_set"-->
-                <!--android:layout_width="23dp"-->
-                <!--android:layout_height="23dp"-->
-                <!--android:background="@mipmap/ic_set"-->
-                <!--tools:ignore="ContentDescription" />-->
-
-        <!--</LinearLayout>-->
     </android.support.v7.widget.Toolbar>
 
     <android.support.v4.widget.NestedScrollView
@@ -155,7 +132,7 @@
                         android:paddingBottom="10dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="我喜欢的课程"
+                        android:text="我预约的课程"
                         android:textSize="12sp"
                         android:textColor="@color/colorBlack"
                         android:clickable="false"/>
@@ -180,25 +157,6 @@
                         android:textSize="7sp"
                         android:clickable="false"/>
 
-                    <!--<TextView-->
-                        <!--android:id="@+id/personalFragment_class3"-->
-                        <!--android:paddingTop="5dp"-->
-                        <!--android:paddingLeft="5dp"-->
-                        <!--android:layout_width="match_parent"-->
-                        <!--android:layout_height="wrap_content"-->
-                        <!--android:text="瑜伽训练课堂（钻石班）"-->
-                        <!--android:textSize="15sp"-->
-                        <!--android:textColor="@color/colorBlack"/>-->
-                    <!--<TextView-->
-                        <!--android:id="@+id/personalFragment_class4"-->
-                        <!--android:paddingTop="2dp"-->
-                        <!--android:paddingLeft="5dp"-->
-                        <!--android:paddingBottom="3dp"-->
-                        <!--android:layout_width="match_parent"-->
-                        <!--android:layout_height="wrap_content"-->
-                        <!--android:text="已经学习3课时,继续坚持"-->
-                        <!--android:textSize="7sp" />-->
-
                     <TextView
                         android:padding="5dp"
                         android:layout_width="match_parent"
@@ -206,6 +164,40 @@
                         android:gravity="center"
                         android:text="......"
                         android:clickable="false"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:orientation="vertical"
+                    android:background="@drawable/round_gb">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="我收藏的课程"
+                        android:textSize="12sp"
+                        android:paddingBottom="6dp"
+                        android:textColor="@color/colorBlack"
+                        android:padding="3dp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="看到喜欢的就收藏一下吧"
+                        android:textSize="10sp"
+                        android:padding="3dp"/>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/personalFragment_rvC"
+                        android:padding="3dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    </android.support.v7.widget.RecyclerView>
 
                 </LinearLayout>
 

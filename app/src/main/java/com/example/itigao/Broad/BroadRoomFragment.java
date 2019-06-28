@@ -1,30 +1,23 @@
 package com.example.itigao.Broad;
 
-import android.content.Context;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Looper;
-import android.os.Message;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.text.Editable;
-import android.text.TextUtils;
-import android.text.TextWatcher;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.inputmethod.InputMethodManager;
-import android.widget.EditText;
-import android.widget.LinearLayout;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.itigao.Adapter.InteractAdapter;
 import com.example.itigao.AutoProject.AppConstants;
 import com.example.itigao.AutoProject.SharePreferences;
 import com.example.itigao.AutoProject.Tip;
+import com.example.itigao.Emotion.fragment.BackDataListener;
+import com.example.itigao.Emotion.fragment.DataListener;
+import com.example.itigao.Emotion.fragment.EmotionMainFragment;
 import com.example.itigao.R;
+import com.example.itigao.Video.RoomFragment;
 import com.example.itigao.ViewHelper.BaseFragment;
 
 
@@ -51,13 +44,14 @@ public class BroadRoomFragment extends BaseFragment {
 
 
     private RecyclerView recyclerView;
-    private EditText editText;
-    private TextView imageView;
-    private LinearLayout linearLayout;
     private int video_bid;
     private long groupId = 0;
     private InteractAdapter interactAdapter;
     private List<InteractAdapter.Interact> interacts = new ArrayList<>();
+
+    private EmotionMainFragment emotionMainFragment;
+
+    private static DataListener mDataListener;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -68,9 +62,9 @@ public class BroadRoomFragment extends BaseFragment {
         video_bid = bundle.getInt("broad_new_bid",0);
         initView(view);
         if(video_bid != 0){
+            groupId = video_bid;
             ImRoom();
         }
-    //    getGroup();
         return view;
     }
 
@@ -89,39 +83,35 @@ public class BroadRoomFragment extends BaseFragment {
 
     private void initView(View view){
         recyclerView = (RecyclerView) view.findViewById(R.id.room_rv);
-        linearLayout = (LinearLayout) view.findViewById(R.id.video_room_li);
-        editText = (EditText) view.findViewById(R.id.video_room_et);
-        imageView = (TextView) view.findViewById(R.id.video_room_iv);
-
-
         recyclerView.setLayoutManager(setNoSco());
         interactAdapter = new InteractAdapter(interacts);
         recyclerView.setAdapter(interactAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 
-        editText.setEnabled(false);
+        initEmotionMainFragment();
+    }
 
-        editText.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
-            }
-
-            @Override
-            public void afterTextChanged(Editable editable) {
-                if(TextUtils.isEmpty(editText.getText().toString())){
-                    imageView.setTextColor(getResources().getColor(R.color.colorGray_1));
-                }else {
-                    imageView.setTextColor(getResources().getColor(R.color.colorGreen));
-                }
-            }
-        });
-
+    /**
+     * 初始化表情面板
+     */
+    public void initEmotionMainFragment(){
+        //构建传递参数
+        Bundle bundle = new Bundle();
+        //绑定主内容编辑框
+        bundle.putBoolean(EmotionMainFragment.BIND_TO_EDITTEXT,true);
+        //隐藏控件
+        bundle.putBoolean(EmotionMainFragment.HIDE_BAR_EDITTEXT_AND_BTN,false);
+        //替换fragment
+        //创建修改实例
+        emotionMainFragment = EmotionMainFragment.newInstance(EmotionMainFragment.class,bundle);
+        emotionMainFragment.bindToContentView(recyclerView);
+        FragmentTransaction transaction = getChildFragmentManager().beginTransaction();
+        // Replace whatever is in thefragment_container view with this fragment,
+        // and add the transaction to the backstack
+        transaction.replace(R.id.fl_emotionview_main,emotionMainFragment);
+        transaction.addToBackStack(null);
+        //提交修改
+        transaction.commit();
     }
 
 
@@ -140,8 +130,8 @@ public class BroadRoomFragment extends BaseFragment {
             @Override
             public void gotResult(int i, String s, Conversation conversation) {
                 Tip.showTip(getActivity(),"现在可以发出消息");
-                editText.setEnabled(true);
-                imageOnClick();
+                mDataListener.onData(groupId);
+                EmotionMainFragment.setOnDataListener(new OnBackDataListener());
             }
         });
 
@@ -164,10 +154,6 @@ public class BroadRoomFragment extends BaseFragment {
          */
         JMessageClient.getChatRoomConversation(groupId);
 
-//        onEventMainThread(new ChatRoomMessageEvent(0,null,null));
-
-
-
     }
 
     private void ImRemove(){
@@ -188,49 +174,22 @@ public class BroadRoomFragment extends BaseFragment {
         });
     }
 
-    private void imageOnClick(){
-        imageView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(!TextUtils.isEmpty(editText.getText())){
-                    //将输入法隐藏，mPasswordEditText 代表密码输入框
-                    InputMethodManager imm =(InputMethodManager)getActivity().getSystemService(
-                            Context.INPUT_METHOD_SERVICE);
-                    assert imm != null;
-                    imm.hideSoftInputFromWindow(editText.getWindowToken(), 0);
-
-                    // 发送聊天室消息
-                    Conversation conv = JMessageClient.getChatRoomConversation(groupId);
-                    if (null == conv) {
-                        conv = Conversation.createChatRoomConversation(groupId);
-                    }
-                    String text = editText.getText().toString();
-                    final cn.jpush.im.android.api.model.Message msg = conv.createSendTextMessage(text);
-                    msg.setOnSendCompleteCallback(new BasicCallback() {
-                        @Override
-                        public void gotResult(int responseCode, String responseMessage) {
-                            if (0 == responseCode) {
-                                System.out.println("MessageSent" + responseCode + responseMessage + msg);
-                            } else {
-                                System.out.println("MessageSent" + responseCode + responseMessage + "失败");
-                            }
-                        }
-                    });
-                    JMessageClient.sendMessage(msg);
-                    editText.setText("");
-                    InteractAdapter.Interact interact = interactAdapter.new Interact("我", text);
-                    interactAdapter.addDataAt(interactAdapter.getItemCount(),interact);
-
-                    recyclerView.smoothScrollToPosition(interactAdapter.getItemCount()-1);
-//                    if(interactAdapter.getItemCount() != 0){
-//                        recyclerView.scrollToPosition(interactAdapter.getItemCount()-1);
-//                    }
-                }else {
-                    Toast.makeText(getActivity(),"内容不能为空",Toast.LENGTH_LONG).show();
-                }
-            }
-        });
+    //用于实现回调的类,实现的是处理回调的接口,并实现接口里面的函数
+    class OnBackDataListener implements BackDataListener {
+        //实现接口中处理数据的函数,只要右边的Fragment调用onData函数,这里就会收到传递的数据
+        public void backData(String data) {
+            InteractAdapter.Interact interact = interactAdapter.new Interact("我", data);
+            interactAdapter.addDataAt(interactAdapter.getItemCount(),interact);
+            recyclerView.smoothScrollToPosition(interactAdapter.getItemCount()-1);
+        }
     }
+
+    //创建注册回调的函数
+    public static void setOnDataListener(DataListener dataListener){
+        //将参数赋值给接口类型的成员变量
+        mDataListener = dataListener;
+    }
+
 
     // 接收聊天室消息
     // 主线程

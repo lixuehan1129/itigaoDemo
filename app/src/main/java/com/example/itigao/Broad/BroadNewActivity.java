@@ -25,6 +25,7 @@ import com.example.itigao.AutoProject.AppConstants;
 import com.example.itigao.AutoProject.JsonCode;
 import com.example.itigao.AutoProject.SharePreferences;
 import com.example.itigao.ClassAb.Anchor;
+import com.example.itigao.Media.JZMediaIjkplayer;
 import com.example.itigao.R;
 import com.example.itigao.Utils.StatusBarUtils;
 import com.example.itigao.Video.HuDongFragment;
@@ -43,6 +44,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 
+import cn.jzvd.Jzvd;
+import cn.jzvd.JzvdStd;
 import okhttp3.FormBody;
 import okhttp3.RequestBody;
 
@@ -58,10 +61,12 @@ public class BroadNewActivity extends AppCompatActivity implements TabLayout.OnT
     private int anchorId, anchorRoom, anchorFocus;
     private Anchor anchor;
     private String url;
-    private String URL_F = "rtmp://114.115.150.93:1935/live/";
+    //private String URL_F = "rtmp://114.115.150.93:1935/live/";
 
     private StandardGSYVideoPlayer videoPlayer;
     private OrientationUtils orientationUtils;
+
+    //private JzvdStd jzvdStd;
 
     private TabLayout tabLayout;
     private ViewPager mViewPager;
@@ -79,10 +84,9 @@ public class BroadNewActivity extends AppCompatActivity implements TabLayout.OnT
         PlayerFactory.setPlayManager(IjkPlayerManager.class);//ijk模式
         Intent intent = getIntent();
         anchor = (Anchor) intent.getSerializableExtra("anchor_all");
-//        anchorId = intent.getIntExtra("anchor_bid",0);
-//        anchorRoom = intent.getIntExtra("anchor_room",0);
-//        anchorFocus = intent.getIntExtra("anchor_focus",0);
+        Jzvd.setMediaInterface(new JZMediaIjkplayer());
         initView();
+
     }
 
     @Override
@@ -100,6 +104,7 @@ public class BroadNewActivity extends AppCompatActivity implements TabLayout.OnT
         tabLayout = (TabLayout) findViewById(R.id.broad_new_layout);
         mViewPager = (ViewPager) findViewById(R.id.broad_new_viewpager);
         focus = (TextView) findViewById(R.id.focus);
+      //  jzvdStd = (JzvdStd) findViewById(R.id.jz_vv);
 
         if(anchorFocus == 1){
             focus.setText(" 取消关注 ");
@@ -164,7 +169,7 @@ public class BroadNewActivity extends AppCompatActivity implements TabLayout.OnT
     }
 
     private void setPlay(){
-        url = URL_F + anchorId;
+        url = AppConstants.BROAD_URL + anchorId;
 
         /**
          * 设置右下角 显示切换到全屏 的按键资源
@@ -207,7 +212,9 @@ public class BroadNewActivity extends AppCompatActivity implements TabLayout.OnT
         videoPlayer.getBackButton().setOnClickListener(v -> onBackPressed());
         videoPlayer.startPlayLogic();
 
-
+     //   JzvdStd jzvdStd = (JzvdStd) findViewById(R.id.person_indoor_ij);
+    //    jzvdStd.setUp(url,"",Jzvd.SCREEN_WINDOW_NORMAL);
+    //    jzvdStd.startVideo();
     }
 
     private void viewClick(){
@@ -379,24 +386,29 @@ public class BroadNewActivity extends AppCompatActivity implements TabLayout.OnT
     protected void onPause() {
         super.onPause();
         videoPlayer.onVideoPause();
+       // JzvdStd.goOnPlayOnPause();
     }
 
     @Override
     protected void onResume() {
         super.onResume();
         videoPlayer.onVideoResume();
+       // JzvdStd.goOnPlayOnResume();
     }
 
     @Override
     protected void onDestroy() {
         // TODO Auto-generated method stub
         videoPlayer.onVideoResume();
-
+       // JzvdStd.releaseAllVideos();
         super.onDestroy();
     }
 
     @Override
     public void onBackPressed() {
+        if (Jzvd.backPress()) {
+            return;
+        }
 //        先返回正常状态
         if (orientationUtils.getScreenType() == ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE) {
             videoPlayer.getFullscreenButton().performClick();
@@ -409,6 +421,7 @@ public class BroadNewActivity extends AppCompatActivity implements TabLayout.OnT
 
         //释放所有
         videoPlayer.setVideoAllCallBack(null);
+      //  jzvdStd.release();
         super.onBackPressed();
     }
 

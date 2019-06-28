@@ -173,6 +173,9 @@
 
 -keep class com.example.itigao.ClassAb.**{*;}
 
+-dontwarn com.tencent.bugly.**
+-keep public class com.tencent.bugly.**{*;}
+-keep class android.support.**{*;}
 
 -keep class com.mob.**{*;}
 -keep class cn.smssdk.**{*;}

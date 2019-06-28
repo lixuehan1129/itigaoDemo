@@ -4,6 +4,8 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
@@ -17,11 +19,16 @@ import android.widget.TextView;
 
 import com.example.itigao.Adapter.TabLayoutAdapter;
 import com.example.itigao.AutoProject.AppConstants;
+import com.example.itigao.AutoProject.JsonCode;
 import com.example.itigao.AutoProject.SharePreferences;
 import com.example.itigao.ClassAb.Classes;
+import com.example.itigao.Emotion.fragment.BackHandleFragment;
+import com.example.itigao.Emotion.fragment.BackHandleInterface;
 import com.example.itigao.Media.JZMediaIjkplayer;
 import com.example.itigao.R;
 import com.example.itigao.Utils.StatusBarUtils;
+import com.example.itigao.ViewHelper.BaseFragment;
+import com.example.itigao.okHttp.OkHttpBase;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
@@ -29,6 +36,8 @@ import java.util.List;
 
 import cn.jzvd.Jzvd;
 import cn.jzvd.JzvdStd;
+import okhttp3.FormBody;
+import okhttp3.RequestBody;
 
 import static cn.jzvd.JZUtils.dip2px;
 
@@ -37,7 +46,7 @@ import static cn.jzvd.JZUtils.dip2px;
  */
 
 public class VideoNewActivity extends AppCompatActivity implements TabLayout.OnTabSelectedListener,VideoFragment.CallBackValue
-        ,HuDongFragment.CallBackValueHu{
+        ,HuDongFragment.CallBackValueHu, BackHandleInterface {
 
     private JzvdStd jzvdStd;
     private TabLayout tabLayout;
@@ -48,7 +57,8 @@ public class VideoNewActivity extends AppCompatActivity implements TabLayout.OnT
     private String[] titles = new String[]{" 聊天 ", " 视频 ", " 排行 ", " 推荐 "};
     private List<Fragment> fragments = new ArrayList<>();
 
-    private String userPhone;
+    private BackHandleFragment backHandleFragment;
+    private String userPhone = null;
     private String video_add;
     private int video_classify;
     private int video_bid;
@@ -83,6 +93,7 @@ public class VideoNewActivity extends AppCompatActivity implements TabLayout.OnT
         tabLayout = (TabLayout) findViewById(R.id.video_new_layout);
         mViewPager = (ViewPager) findViewById(R.id.video_new_viewpager);
         textView = (TextView) findViewById(R.id.video_new_go);
+        textView.setClickable(false);
         //获取屏幕宽
         WindowManager wm = (WindowManager) this
                 .getSystemService(Context.WINDOW_SERVICE);
@@ -94,43 +105,88 @@ public class VideoNewActivity extends AppCompatActivity implements TabLayout.OnT
 
         setPlay(video_add);
 
+        classFocus();
 
         textView.setOnClickListener(v -> {
             if(textView.getText().toString().equals(" + 收藏 ")){
-                ProgressDialog progressDialog = ProgressDialog.show(VideoNewActivity.this,"","",true);
-                new Thread(() -> {
-                    try {
-                        Thread.sleep(800);
-                        progressDialog.dismiss();
-                        runOnUiThread(() -> {
-                            textView.setText("已收藏");
-                            textView.setBackgroundColor(getResources().getColor(R.color.colorGray_1));
-                        });
-                    } catch (Exception e) {
-                        e.printStackTrace();
+                ProgressDialog progressDialog = ProgressDialog.show(VideoNewActivity.this,
+                        "","",true);
+                new Thread(){
+                    public void run(){
+                        RequestBody requestBody = new FormBody.Builder()
+                                .add("classFocus_user", userPhone)
+                                .add("classFocus_bid", String.valueOf(video_bid))
+                                .build();
+                        String reg = OkHttpBase.getResponse(requestBody,"insertClassFocus");
+                        if(reg != null){
+                            if(JsonCode.getCode(reg) == 200){
+                                runOnUiThread(() -> {
+                                    textView.setText("已收藏");
+                                    textView.setBackgroundColor(getResources().getColor(R.color.colorGray_1));
+                                });
+                            }
+                        }
                         progressDialog.dismiss();
                     }
-                }).start();
+                }.start();
 
             }else {
-                ProgressDialog progressDialog = ProgressDialog.show(VideoNewActivity.this,"","",true);
-                new Thread(() -> {
-                    try {
-                        Thread.sleep(800);
-                        progressDialog.dismiss();
-                        runOnUiThread(() -> {
-                            textView.setText(" + 收藏 ");
-                            textView.setBackgroundColor(getResources().getColor(R.color.colorOrange));
-                        });
-                    } catch (Exception e) {
-                        e.printStackTrace();
+                ProgressDialog progressDialog = ProgressDialog.show(VideoNewActivity.this,
+                        "","",true);
+                new Thread(){
+                    public void run(){
+                        RequestBody requestBody = new FormBody.Builder()
+                                .add("classFocus_user", userPhone)
+                                .add("classFocus_bid", String.valueOf(video_bid))
+                                .build();
+                        String reg = OkHttpBase.getResponse(requestBody,"deleteClassFocus");
+                        if(reg != null){
+                            if(JsonCode.getCode(reg) == 200){
+                                runOnUiThread(() -> {
+                                    textView.setText(" + 收藏 ");
+                                    textView.setBackgroundColor(getResources().getColor(R.color.colorOrange));
+                                });
+                            }
+                        }
                         progressDialog.dismiss();
                     }
-                }).start();
+                }.start();
+
             }
         });
 
     }
+
+    private void classFocus(){
+
+        new Thread(){
+            public void run(){
+                System.out.println("fdsfdfs"+userPhone+String.valueOf(video_bid));
+                RequestBody requestBody = new FormBody.Builder()
+                        .add("classFocus_user", userPhone)
+                        .add("classFocus_bid", String.valueOf(video_bid))
+                        .build();
+                String reg = OkHttpBase.getResponse(requestBody,"findClassFocus");
+                if(reg != null){
+                    if(JsonCode.getCode(reg) == 400){
+                        runOnUiThread(() -> {
+                            textView.setText("已收藏");
+                            textView.setBackgroundColor(getResources().getColor(R.color.colorGray_1));
+                            textView.setClickable(true);
+                        });
+                    }else {
+                        runOnUiThread(() -> {
+                            textView.setText(" + 收藏 ");
+                            textView.setBackgroundColor(getResources().getColor(R.color.colorOrange));
+                            textView.setClickable(true);
+                        });
+                    }
+                }
+            }
+        }.start();
+
+    }
+
 
     private void setPlay(String url){
         jzvdStd.setUp(url, "", Jzvd.SCREEN_WINDOW_NORMAL);
@@ -213,6 +269,10 @@ public class VideoNewActivity extends AppCompatActivity implements TabLayout.OnT
         reflex(tabLayout);
     }
 
+    @Override
+    public void onSelectedFragment(BackHandleFragment backHandleFragment) {
+        this.backHandleFragment = backHandleFragment;
+    }
 
 
     public void reflex(final TabLayout tabLayout){
@@ -306,6 +366,16 @@ public class VideoNewActivity extends AppCompatActivity implements TabLayout.OnT
             return;
         }
         super.onBackPressed();
+
+        //if判断里面就调用了来自Fragment的onBackPressed()
+        //一样！！，如果onBackPressed是返回false，就会进入条件内进行默认的操作
+        if(backHandleFragment == null || !backHandleFragment.onBackPressed()){
+            if(getSupportFragmentManager().getBackStackEntryCount() == 0){
+                super.onBackPressed();
+            }else{
+                getSupportFragmentManager().popBackStack();
+            }
+        }
     }
 
     @Override

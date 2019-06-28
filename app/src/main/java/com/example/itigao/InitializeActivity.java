@@ -10,6 +10,8 @@ import android.view.WindowManager;
 import com.example.itigao.AutoProject.AppConstants;
 import com.example.itigao.AutoProject.SharePreferences;
 import com.example.itigao.User.UserLoginActivity;
+import com.tencent.bugly.Bugly;
+import com.tencent.bugly.beta.Beta;
 
 import cn.jpush.im.android.api.JMessageClient;
 
@@ -26,6 +28,11 @@ public class InitializeActivity extends AppCompatActivity {
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         JMessageClient.setDebugMode(true);
         JMessageClient.init(this); //极光IM
+
+        Bugly.init(getApplicationContext(), "e7d42394fe", false);
+        Beta.autoInit = true;
+        Beta.autoCheckUpgrade = true;
+        Beta.smallIconId = R.mipmap.ic_launcher1;
 
         if(!SharePreferences.getString(InitializeActivity.this, AppConstants.USER_PHONE).isEmpty()){
             Intent intent = new Intent(InitializeActivity.this,MainActivity.class);

@@ -176,20 +176,17 @@ public class VideoFragment extends BaseFragment {
     }
 
 
-    private Handler handler = new Handler(new Handler.Callback() {
-        @Override
-        public boolean handleMessage(Message msg) {
-            // TODO Auto-generated method stub
-            switch (msg.what){
-                case 1:{
-                    initData();
-                    break;
-                }
-                default:
-                    break;
+    private Handler handler = new Handler(msg -> {
+        // TODO Auto-generated method stub
+        switch (msg.what){
+            case 1:{
+                initData();
+                break;
             }
-            return false;
+            default:
+                break;
         }
+        return false;
     });
 
 

@@ -1,0 +1,78 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/video_room_li"
+        android:background="@color/colorGray_White"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="7dp"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/room_zan"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginStart="15dp"
+            android:background="@mipmap/ic_zan"/>
+
+        <EditText
+            android:id="@+id/video_room_et"
+            android:textSize="16sp"
+            android:textColor="@color/colorBlack"
+            android:padding="5dp"
+            android:hint="发布你的评论吧。。。"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:background="@drawable/button_shape_lo"
+            tools:ignore="HardcodedText,InefficientWeight" />
+
+        <ImageView
+            android:id="@+id/room_emotion"
+            android:layout_width="31dp"
+            android:layout_height="31dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="15dp"
+            android:background="@mipmap/ic_emotion"
+            tools:ignore="ContentDescription" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp">
+
+            <ImageView
+                android:id="@+id/room_send"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignStart="@+id/room_sendT"
+                android:layout_alignEnd="@+id/room_sendT"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="7dp"
+                android:background="@mipmap/ic_send"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/room_sendT"
+                android:gravity="center"
+                android:background="@drawable/send_ro"
+                android:text="发送"
+                android:visibility="invisible"
+                android:textSize="15sp"
+                android:textColor="@color/colorWhite"
+                android:layout_width="46dp"
+                android:layout_height="30dp"
+                tools:ignore="HardcodedText" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

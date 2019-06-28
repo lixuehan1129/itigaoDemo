@@ -1,5 +1,6 @@
 package com.example.itigao.Adapter;
 
+import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.text.Html;
 import android.view.LayoutInflater;
@@ -7,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.example.itigao.Emotion.utils.SpanStringUtils;
 import com.example.itigao.R;
 
 import java.util.ArrayList;
@@ -20,21 +22,24 @@ public class InteractAdapter extends RecyclerView.Adapter<InteractAdapter.ViewHo
 
     private OnItemClickListener mOnItemClickListener;
     private List<Interact> interacts = new ArrayList<>();
+    private Context mContext;
 
 
     class ViewHolder extends RecyclerView.ViewHolder{
 
-        TextView textView;
+        TextView textView,textViewN;
 
         public ViewHolder(View itemView) {
             super(itemView);
             textView = (TextView) itemView.findViewById(R.id.interact_tv);
+            textViewN = (TextView) itemView.findViewById(R.id.interact_name);
         }
     }
 
     @Override
     public InteractAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.interact_item, parent, false);
+        mContext = parent.getContext();
         final RecyclerView.ViewHolder vh = new ViewHolder(v);
         return (ViewHolder) vh;
     }
@@ -43,18 +48,17 @@ public class InteractAdapter extends RecyclerView.Adapter<InteractAdapter.ViewHo
     public void onBindViewHolder(final InteractAdapter.ViewHolder holder, int position) {
 
         Interact interact = interacts.get(position);
-        String s = "<font color=\"#FF7F24\">" + interact.getName() + "\t" + ":" + "\t\t" + "</font>" +
-                "<font color=\"#757575\">" + interact.getContent() + "</font>";
-        holder.textView.setText(Html.fromHtml(s));
+        holder.textViewN.setText(interact.getName() + " :");
+        StringBuilder sb = new StringBuilder(interact.content);
+        holder.textView.setText(SpanStringUtils.getEmotionContent(1,
+                mContext, holder.textView, sb.toString()));
+        //holder.textView.setText(interact.getContent());
 
         if (mOnItemClickListener != null) {
             //为ItemView设置监听器
-            holder.itemView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    int position = holder.getLayoutPosition(); // 1
-                    mOnItemClickListener.onItemClick(holder.itemView, position); // 2
-                }
+            holder.itemView.setOnClickListener(v -> {
+                int position1 = holder.getLayoutPosition(); // 1
+                mOnItemClickListener.onItemClick(holder.itemView, position1); // 2
             });
         }
 
