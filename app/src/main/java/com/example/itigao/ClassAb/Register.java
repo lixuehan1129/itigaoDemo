@@ -11,7 +11,16 @@ public class Register {
             user_sex,
             user_sort,
             user_online_time,
-            user_id;
+            user_id,
+            user_classify;
+
+    public int getUser_classify() {
+        return user_classify;
+    }
+
+    public void setUser_classify(int user_classify) {
+        this.user_classify = user_classify;
+    }
 
     public String getUser_birth() {
         return user_birth;

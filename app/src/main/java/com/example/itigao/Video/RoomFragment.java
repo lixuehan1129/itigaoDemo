@@ -11,6 +11,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 
 import com.example.itigao.Adapter.InteractAdapter;
@@ -306,13 +307,15 @@ public class RoomFragment extends BackHandleFragment {
     public boolean onBackPressed() {
         /**
          * 判断是否拦截返回键操作
+         *
          */
-//        if (emotionMainFragment.isInterceptBackPress()) {
-//            return false;
-//        }else {
-//            return true;
-//        }
-        return false;
+
+        if (!emotionMainFragment.isInterceptBackPress()) {
+            return false;
+        }else {
+            return true;
+        }
+
     }
 
     @Override

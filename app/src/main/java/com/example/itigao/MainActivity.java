@@ -25,6 +25,7 @@ import com.example.itigao.AutoProject.SharePreferences;
 import com.example.itigao.Classes.ClassesFragment;
 import com.example.itigao.Database.DataBaseHelper;
 import com.example.itigao.Personal.PersonalFragment;
+import com.example.itigao.Recommend.DataBaseFragment;
 import com.example.itigao.Recommend.RecommendFragment;
 import com.example.itigao.Sport.SportFragment;
 import com.example.itigao.Subscribe.SubscribeFragment;
@@ -143,7 +144,8 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationB
         List<Fragment> fragments = new ArrayList<Fragment>();
         fragments.add(new SubscribeFragment());
         fragments.add(new ClassesFragment());
-        fragments.add(new RecommendFragment());
+       // fragments.add(new RecommendFragment());
+        fragments.add(new DataBaseFragment());
         fragments.add(new SportFragment());
         fragments.add(new PersonalFragment());
         viewPager.setAdapter(new SectionsPagerAdapter(getSupportFragmentManager(), fragments));

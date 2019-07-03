@@ -14,7 +14,9 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 
+import com.example.itigao.AutoProject.Tip;
 import com.example.itigao.Emotion.utils.LogUtils;
+import com.example.itigao.R;
 
 /**
  * author : zejian
@@ -102,12 +104,15 @@ public class EmotionKeyboard {
 					lockContentHeight();//显示软件盘时，锁定内容高度，防止跳闪。
 					hideEmotionLayout(true);//隐藏表情布局，显示软件盘
 					unlockContentHeightDelayed();//软件盘显示后，释放内容高度
+					emotionButton.setBackgroundResource(R.mipmap.ic_emotion);
 				} else {
 					if (isSoftInputShown()) {//同上
+                        emotionButton.setBackgroundResource(R.mipmap.ic_keyboard);
 						lockContentHeight();
 						showEmotionLayout();
 						unlockContentHeightDelayed();
 					} else {
+                        emotionButton.setBackgroundResource(R.mipmap.ic_keyboard);
 						showEmotionLayout();//两者都没显示，直接显示表情布局
 					}
 				}

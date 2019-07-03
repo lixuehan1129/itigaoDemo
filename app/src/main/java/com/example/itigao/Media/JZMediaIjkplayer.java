@@ -46,6 +46,21 @@ public class JZMediaIjkplayer extends JZMediaInterface implements IMediaPlayer.O
         ijkMediaPlayer.setOnSeekCompleteListener(JZMediaIjkplayer.this);
         ijkMediaPlayer.setOnTimedTextListener(JZMediaIjkplayer.this);
 
+        //某些视频在SeekTo的时候，会跳回到拖动前的位置，这是因为视频的关键帧的问题，通俗一点就是FFMPEG不兼容，视频压缩过于厉害，seek只支持关键帧，出现这个情况就是原始的视频文件中i 帧比较少
+        ijkMediaPlayer.setOption(IjkMediaPlayer.OPT_CATEGORY_PLAYER, "enable-accurate-seek", 1);
+        //播放前的探测Size，默认是1M, 改小一点会出画面更快
+        //ijkMediaPlayer.setOption(IjkMediaPlayer.OPT_CATEGORY_FORMAT, "probesize", 1024 * 10);
+        //播放重连次数
+        ijkMediaPlayer.setOption(IjkMediaPlayer.OPT_CATEGORY_PLAYER,"reconnect",5);
+        //
+        ijkMediaPlayer.setOption(1, "analyzemaxduration", 100L);
+        ijkMediaPlayer.setOption(1, "probesize", 10240L);
+        ijkMediaPlayer.setOption(1, "flush_packets", 1L);
+        ijkMediaPlayer.setOption(4, "packet-buffering", 0L);
+        ijkMediaPlayer.setOption(4, "framedrop", 1L);
+        ijkMediaPlayer.setOption(IjkMediaPlayer.OPT_CATEGORY_PLAYER, "mediacodec", 1);
+        ijkMediaPlayer.setOption(IjkMediaPlayer.OPT_CATEGORY_PLAYER, "mediacodec-auto-rotate", 1);
+        ijkMediaPlayer.setOption(IjkMediaPlayer.OPT_CATEGORY_PLAYER, "mediacodec-handle-resolution-change", 1);
         try {
             ijkMediaPlayer.setDataSource(jzDataSource.getCurrentUrl().toString());
             ijkMediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);

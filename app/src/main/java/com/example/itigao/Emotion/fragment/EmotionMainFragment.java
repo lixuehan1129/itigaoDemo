@@ -69,6 +69,8 @@ public class EmotionMainFragment extends BaseFragment {
     private ImageView zan,emotion,send;
     private LinearLayout linearLayout;
 
+    private ImageView imageView;
+
     private static BackDataListener mDataListener;
 
 
@@ -123,6 +125,8 @@ public class EmotionMainFragment extends BaseFragment {
             globalOnItemClickManager.attachToEditText((EditText) contentView);
             mEmotionKeyboard.bindToEditText((EditText)contentView);
         }
+
+
 
         return rootView;
 
@@ -180,7 +184,7 @@ public class EmotionMainFragment extends BaseFragment {
 
         FloatingText floatingText = new FloatingText.FloatingTextBuilder(getActivity())
                 .textColor(Color.RED) // 漂浮字体的颜色
-                .textSize(25)   // 浮字体的大小
+                .textSize(40)   // 浮字体的大小
                 .textContent("+1") // 浮字体的内容
                 .offsetX(10) // FloatingText 相对其所贴附View的水平位移偏移量
                 .offsetY(-10) // FloatingText 相对其所贴附View的垂直位移偏移量
@@ -194,6 +198,7 @@ public class EmotionMainFragment extends BaseFragment {
                 floatingText.startFloating(zan)
         );
     }
+
 
     //用于实现回调的类,实现的是处理回调的接口,并实现接口里面的函数
     class OnDataListener implements DataListener{
@@ -332,6 +337,7 @@ public class EmotionMainFragment extends BaseFragment {
      *         false 则不拦截返回键操作
      */
     public boolean isInterceptBackPress(){
+        emotion.setBackgroundResource(R.mipmap.ic_emotion);
         return mEmotionKeyboard.interceptBackPress();
     }
 

@@ -21,6 +21,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
             + "user_phone text, "
             + "user_sort integer, "
             + "user_sex integer, "
+            + "user_classify integer, "
             + "user_birth text, "
             + "user_picture text)";
 

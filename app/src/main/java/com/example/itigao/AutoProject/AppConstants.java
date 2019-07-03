@@ -8,6 +8,7 @@ public class AppConstants {
 
     public static final String USER_PHONE = "phone";
     public static final String USER_PASSWORD = "pass";
+    public static final String USER_CLASSIFY = "classify";
 
     public static final String USER_LOGIN_COUNT = "loginCount";
 

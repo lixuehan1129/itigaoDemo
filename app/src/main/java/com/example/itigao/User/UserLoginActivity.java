@@ -188,6 +188,7 @@ public class UserLoginActivity extends AppCompatActivity {
     private void setLocal(){
         SharePreferences.putString(UserLoginActivity.this, AppConstants.USER_PHONE, name.getText().toString());
         SharePreferences.putString(UserLoginActivity.this, AppConstants.USER_PASSWORD, password.getText().toString());
+        SharePreferences.putInt(UserLoginActivity.this, AppConstants.USER_CLASSIFY, registers.get(0).getUser_classify());
         SharePreferences.putInt(UserLoginActivity.this, AppConstants.USER_LOGIN_COUNT, 0);
 
         SQLiteDatabase sqLiteDatabase = dataBaseHelper.getReadableDatabase();
@@ -200,6 +201,7 @@ public class UserLoginActivity extends AppCompatActivity {
         values.put("user_name",registers.get(0).getUser_name());
         values.put("user_phone",registers.get(0).getUser_phone());
         values.put("user_sort",registers.get(0).getUser_sort());
+        values.put("user_classify",registers.get(0).getUser_classify());
         values.put("user_sex",registers.get(0).getUser_sex());
         values.put("user_picture",registers.get(0).getUser_picture());
         values.put("user_birth",registers.get(0).getUser_birth());

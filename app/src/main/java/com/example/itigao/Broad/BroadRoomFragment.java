@@ -14,6 +14,7 @@ import com.example.itigao.AutoProject.AppConstants;
 import com.example.itigao.AutoProject.SharePreferences;
 import com.example.itigao.AutoProject.Tip;
 import com.example.itigao.Emotion.fragment.BackDataListener;
+import com.example.itigao.Emotion.fragment.BackHandleFragment;
 import com.example.itigao.Emotion.fragment.DataListener;
 import com.example.itigao.Emotion.fragment.EmotionMainFragment;
 import com.example.itigao.R;
@@ -40,7 +41,7 @@ import cn.jpush.im.api.BasicCallback;
  * Created by 最美人间四月天 on 2019/3/11.
  */
 
-public class BroadRoomFragment extends BaseFragment {
+public class BroadRoomFragment extends BackHandleFragment {
 
 
     private RecyclerView recyclerView;
@@ -71,6 +72,16 @@ public class BroadRoomFragment extends BaseFragment {
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
+    }
+
+    @Override
+    public boolean onBackPressed() {
+
+        if (!emotionMainFragment.isInterceptBackPress()) {
+            return false;
+        }else {
+            return true;
+        }
     }
 
     @Override

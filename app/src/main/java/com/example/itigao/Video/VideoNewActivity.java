@@ -21,6 +21,7 @@ import com.example.itigao.Adapter.TabLayoutAdapter;
 import com.example.itigao.AutoProject.AppConstants;
 import com.example.itigao.AutoProject.JsonCode;
 import com.example.itigao.AutoProject.SharePreferences;
+import com.example.itigao.AutoProject.Tip;
 import com.example.itigao.ClassAb.Classes;
 import com.example.itigao.Emotion.fragment.BackHandleFragment;
 import com.example.itigao.Emotion.fragment.BackHandleInterface;
@@ -364,18 +365,25 @@ public class VideoNewActivity extends AppCompatActivity implements TabLayout.OnT
     public void onBackPressed() {
         if (Jzvd.backPress()) {
             return;
+        }else if(backHandleFragment == null || !backHandleFragment.onBackPressed()){
+                if(getSupportFragmentManager().getBackStackEntryCount() == 0){
+                    super.onBackPressed();
+                    jzvdStd.release();
+                }else{
+                    getSupportFragmentManager().popBackStack();
+                }
         }
-        super.onBackPressed();
+
+
+
+
+    //    super.onBackPressed();
 
         //if判断里面就调用了来自Fragment的onBackPressed()
         //一样！！，如果onBackPressed是返回false，就会进入条件内进行默认的操作
-        if(backHandleFragment == null || !backHandleFragment.onBackPressed()){
-            if(getSupportFragmentManager().getBackStackEntryCount() == 0){
-                super.onBackPressed();
-            }else{
-                getSupportFragmentManager().popBackStack();
-            }
-        }
+
+
+
     }
 
     @Override

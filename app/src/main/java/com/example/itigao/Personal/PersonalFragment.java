@@ -373,7 +373,7 @@ public class PersonalFragment extends BaseFragment {
                 if(reg != null){
                     if(JsonCode.getCode(reg) == 200){
                         String data = JsonCode.getData(reg);
-                        classes = JsonCode.jsonToList(data, Class.class);
+                        classes = JsonCode.jsonToList(data, Classes.class);
 
                         Message message = new Message();
                         message.what = 1156;

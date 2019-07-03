@@ -86,15 +86,18 @@ public class PersonChangeActivity extends AppCompatActivity{
 
     private ProgressDialog progressDialog;
 
-    private RelativeLayout relativeLayout1,relativeLayout2,relativeLayout3,relativeLayout4,relativeLayout5;
+    private RelativeLayout relativeLayout1,relativeLayout2,relativeLayout3,
+            relativeLayout4,relativeLayout5,relativeLayout6;
     private CircleImageView circleImageView;
     private EditText editText;
-    private TextView ok,sta,textView1,textView2,birth;
-
+    private TextView ok,sta,textView1,textView2,birth,classify;
+    private int classifyId = 0;
     private int userLevel,userSta,userSex,anchorId;
     private String userName,userPicture,userBirth;
     private boolean picIs;
     private String picImagePath = null; //这是拍照的照片地址
+
+    private final String[] itemCs = new String[] { "小学", "初中", "高中", "大学", "研究生" };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -120,11 +123,13 @@ public class PersonChangeActivity extends AppCompatActivity{
         relativeLayout3 = (RelativeLayout) findViewById(R.id.person_change_rv3);
         relativeLayout4 = (RelativeLayout) findViewById(R.id.person_change_rv4);
         relativeLayout5 = (RelativeLayout) findViewById(R.id.person_change_rv5);
+        relativeLayout6 = (RelativeLayout) findViewById(R.id.person_change_rv6);
         circleImageView = (CircleImageView) findViewById(R.id.person_change_ci);
         ok = (TextView) findViewById(R.id.person_change_ok);
         sta = (TextView) findViewById(R.id.person_change_sta);
         editText = (EditText) findViewById(R.id.person_change_name);
         textView1 = (TextView) findViewById(R.id.person_change_sex); //性别
+        classify = (TextView) findViewById(R.id.person_change_classify); //分类
         textView2 = (TextView) findViewById(R.id.person_change_level); //等级
         birth = (TextView) findViewById(R.id.person_change_bir);
 
@@ -150,6 +155,7 @@ public class PersonChangeActivity extends AppCompatActivity{
             userPicture = cursor.getString(cursor.getColumnIndex("user_picture"));
             userSex = cursor.getInt(cursor.getColumnIndex("user_sex"));
             userBirth = cursor.getString(cursor.getColumnIndex("user_birth"));
+            classifyId = cursor.getInt(cursor.getColumnIndex("user_classify"));
         }
         picPath = userPicture;
         cursor.close();
@@ -172,6 +178,8 @@ public class PersonChangeActivity extends AppCompatActivity{
                     .into(circleImageView);
         }
         textView1.setText(userSex == 0 ? "男":"女");
+
+        classify.setText(itemCs[classifyId]);
 
         switch (userLevel){
             case 1:textView2.setText("废铁会员1级");
@@ -237,6 +245,16 @@ public class PersonChangeActivity extends AppCompatActivity{
             showDatePickerDialog(this,3,birth,Calendar.getInstance());
         });
 
+        relativeLayout6.setOnClickListener(View ->{
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setTitle(null).setItems(itemCs,(dialog,which)->{
+               classify.setText(itemCs[which]);
+               classifyId = which;
+            });
+
+            builder.create().show();
+        });
+
 
         //申请主播
         if(sta.getText().toString().equals("普通会员")){
@@ -244,20 +262,18 @@ public class PersonChangeActivity extends AppCompatActivity{
              //   Tip.showTip(PersonChangeActivity.this,"申请");
                 showDialog();
             });
+
         }
 
         //保存
-        ok.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                progressDialog = ProgressDialog.show(PersonChangeActivity.this,"","修改中...",true);
-                if(picIs){
-                    compressWithLs(new File(picImagePath));
-                }else {
-                    upload();
-                }
-
+        ok.setOnClickListener(view -> {
+            progressDialog = ProgressDialog.show(PersonChangeActivity.this,"","修改中...",true);
+            if(picIs){
+                compressWithLs(new File(picImagePath));
+            }else {
+                upload();
             }
+
         });
     }
 
@@ -267,70 +283,67 @@ public class PersonChangeActivity extends AppCompatActivity{
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         // 设置参数
         builder.setTitle("选择后不能修改，请慎重~~~")
-                .setItems(items, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        AlertDialog.Builder builder1;
-                        switch (which){
-                            case 0:{
-                                final String[] item = {"一年级", "二年级", "三年级", "四年级", "五年级", "六年级"};
-                                builder1 = new AlertDialog.Builder(PersonChangeActivity.this)
-                                        .setItems(item, (dialogInterface, i) -> {
-                                            i = i + 1;
-                                            setData(i);
-                                            Tip.showTip(PersonChangeActivity.this,items[which]+item[i-1]);
-                                        });
-                                builder1.create().show();
+                .setItems(items, (dialog, which) -> {
+                    AlertDialog.Builder builder1;
+                    switch (which){
+                        case 0:{
+                            final String[] item = {"一年级", "二年级", "三年级", "四年级", "五年级", "六年级"};
+                            builder1 = new AlertDialog.Builder(PersonChangeActivity.this)
+                                    .setItems(item, (dialogInterface, i) -> {
+                                        i = i + 1;
+                                        setData(i);
+                                        Tip.showTip(PersonChangeActivity.this,items[which]+item[i-1]);
+                                    });
+                            builder1.create().show();
 
-                                break;
-                            }
-                            case 1:{
-                                final String[] item = {"一年级", "二年级", "三年级"};
-                                builder1 = new AlertDialog.Builder(PersonChangeActivity.this)
-                                        .setItems(item, (dialogInterface, i) -> {
-                                            i = i + 7;
-                                            setData(i);
-                                            Tip.showTip(PersonChangeActivity.this,items[which]+item[i-7]);
-                                        });
-                                builder1.create().show();
-                                break;
-                            }
-                            case 2:{
-                                final String[] item = {"一年级", "二年级", "三年级"};
-                                builder1 = new AlertDialog.Builder(PersonChangeActivity.this)
-                                        .setItems(item, (dialogInterface, i) -> {
-                                            i = i + 10;
-                                            setData(i);
-                                            Tip.showTip(PersonChangeActivity.this,items[which]+item[i-10]);
-                                        });
-                                builder1.create().show();
-                                break;
-                            }
-                            case 3:{
-                                final String[] item = {"一年级", "二年级", "三年级", "四年级"};
-                                builder1 = new AlertDialog.Builder(PersonChangeActivity.this)
-                                        .setItems(item, (dialogInterface, i) -> {
-                                            i = i + 13;
-                                            setData(i);
-                                            Tip.showTip(PersonChangeActivity.this,items[which]+item[i-13]);
-                                        });
-                                builder1.create().show();
-                                break;
-                            }
-                            case 4:{
-                                final String[] item = {"一年级", "二年级", "三年级"};
-                                builder1 = new AlertDialog.Builder(PersonChangeActivity.this)
-                                        .setItems(item, (dialogInterface, i) -> {
-                                            i = i + 17;
-                                            setData(i);
-                                            Tip.showTip(PersonChangeActivity.this,items[which]+item[i-17]);
-                                        });
-                                builder1.create().show();
-                                break;
-                            }
+                            break;
                         }
-
+                        case 1:{
+                            final String[] item = {"一年级", "二年级", "三年级"};
+                            builder1 = new AlertDialog.Builder(PersonChangeActivity.this)
+                                    .setItems(item, (dialogInterface, i) -> {
+                                        i = i + 7;
+                                        setData(i);
+                                        Tip.showTip(PersonChangeActivity.this,items[which]+item[i-7]);
+                                    });
+                            builder1.create().show();
+                            break;
+                        }
+                        case 2:{
+                            final String[] item = {"一年级", "二年级", "三年级"};
+                            builder1 = new AlertDialog.Builder(PersonChangeActivity.this)
+                                    .setItems(item, (dialogInterface, i) -> {
+                                        i = i + 10;
+                                        setData(i);
+                                        Tip.showTip(PersonChangeActivity.this,items[which]+item[i-10]);
+                                    });
+                            builder1.create().show();
+                            break;
+                        }
+                        case 3:{
+                            final String[] item = {"一年级", "二年级", "三年级", "四年级"};
+                            builder1 = new AlertDialog.Builder(PersonChangeActivity.this)
+                                    .setItems(item, (dialogInterface, i) -> {
+                                        i = i + 13;
+                                        setData(i);
+                                        Tip.showTip(PersonChangeActivity.this,items[which]+item[i-13]);
+                                    });
+                            builder1.create().show();
+                            break;
+                        }
+                        case 4:{
+                            final String[] item = {"一年级", "二年级", "三年级"};
+                            builder1 = new AlertDialog.Builder(PersonChangeActivity.this)
+                                    .setItems(item, (dialogInterface, i) -> {
+                                        i = i + 17;
+                                        setData(i);
+                                        Tip.showTip(PersonChangeActivity.this,items[which]+item[i-17]);
+                                    });
+                            builder1.create().show();
+                            break;
+                        }
                     }
+
                 });
         builder.create().show();
     }
@@ -422,8 +435,9 @@ public class PersonChangeActivity extends AppCompatActivity{
                 formParams.put("user_phone", phone);
                 formParams.put("user_name", editText.getText().toString());
                 formParams.put("user_sex", String.valueOf(userSex));
+                formParams.put("user_classify", String.valueOf(classifyId));
                 formParams.put("user_picture", picPath);
-                formParams.put("user_sort", String.valueOf(userSta));
+          //      formParams.put("user_sort", String.valueOf(userSta));
                 formParams.put("user_birth", birth.getText().toString());
 
                 StringBuffer sb = new StringBuffer();
@@ -439,11 +453,15 @@ public class PersonChangeActivity extends AppCompatActivity{
                         ContentValues contentValues = new ContentValues();
                         contentValues.put("user_name",editText.getText().toString());
                         contentValues.put("user_sex",userSex);
+                        contentValues.put("user_classify",classifyId);
                         contentValues.put("user_picture",picPath);
                         contentValues.put("user_sort",userSta);
                         contentValues.put("user_birth",birth.getText().toString());
                         sqLiteDatabase.update("user",contentValues,"user_phone = ?",new String[]{phone});
                         sqLiteDatabase.close();
+
+                        SharePreferences.remove(PersonChangeActivity.this,AppConstants.USER_CLASSIFY);
+                        SharePreferences.putInt(PersonChangeActivity.this,AppConstants.USER_CLASSIFY,classifyId);
 
                         Intent intent_broad = new Intent(AppConstants.BROAD_CHANGE);
                         LocalBroadcastManager.getInstance(PersonChangeActivity.this).sendBroadcast(intent_broad);

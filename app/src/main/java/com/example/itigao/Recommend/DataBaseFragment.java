@@ -9,6 +9,7 @@ import android.os.Looper;
 import android.os.Message;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -53,7 +54,8 @@ public class DataBaseFragment extends BaseFragment {
     private ClassSelectAdapter classSelectAdapter1,classSelectAdapter2,classSelectAdapter3,classSelectAdapter4,classSelectAdapter5,
                                classSelectAdapter6,classSelectAdapter7;
 
-    private int appoint_classify_yu;
+    private int appoint_classify_yu = 0;
+    private String[] titles = {"小学预约","初中预约","高中预约","大学预约","研究生预约"};
 
 
     @Override
@@ -62,9 +64,10 @@ public class DataBaseFragment extends BaseFragment {
         View view = inflater.inflate(R.layout.class_check, container, false);
         Bundle bundle = getArguments();
         assert bundle != null;
-        appoint_classify_yu = bundle.getInt("appoint_classify_yu",0);
-        if(appoint_classify_yu == 5){
-            appoint_classify_yu = 4;
+        appoint_classify_yu = SharePreferences.getInt(getActivity(),AppConstants.USER_CLASSIFY);
+        //appoint_classify_yu = bundle.getInt("appoint_classify_yu",0);
+        if(appoint_classify_yu == 4){
+            appoint_classify_yu = 3;
         }
         initView(view);
         initGroup();
@@ -95,6 +98,8 @@ public class DataBaseFragment extends BaseFragment {
     }
 
     private void initView(View view){
+        Toolbar toolbar = (Toolbar)view.findViewById(R.id.class_check_mainTool);
+        toolbar.setTitle(titles[appoint_classify_yu]);
         //这是什么弱智代码
         radioGroup = view.findViewById(R.id.class_check_group);
         button1 = view.findViewById(R.id.class_check_button1);
@@ -200,7 +205,7 @@ public class DataBaseFragment extends BaseFragment {
                 Looper.prepare();
 
                 RequestBody requestBody = new FormBody.Builder()
-                        .add("appoint_classify", String.valueOf(appoint_classify_yu))
+                        .add("appoint_classify", String.valueOf(appoint_classify_yu + 1))
                         .add("yu_user",SharePreferences.getString(getActivity(), AppConstants.USER_PHONE))
                         .add("yu_time", String.valueOf(DateUtils.IntTime(0)-1))
                         .build();
@@ -422,17 +427,12 @@ public class DataBaseFragment extends BaseFragment {
     }
 
     private void setButton(Button button, final LinearLayout linearLayout){
-        button.setOnClickListener(new View.OnClickListener() {
+        button.setOnClickListener(view -> scrollView.post(new Runnable() {
             @Override
-            public void onClick(View view) {
-                scrollView.post(new Runnable() {
-                    @Override
-                    public void run() {
-                        scrollView.smoothScrollTo(0,linearLayout.getTop());
-                    }
-                });
+            public void run() {
+                scrollView.smoothScrollTo(0,linearLayout.getTop());
             }
-        });
+        }));
     }
 
 

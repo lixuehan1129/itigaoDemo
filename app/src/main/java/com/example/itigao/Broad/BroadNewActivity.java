@@ -25,6 +25,8 @@ import com.example.itigao.AutoProject.AppConstants;
 import com.example.itigao.AutoProject.JsonCode;
 import com.example.itigao.AutoProject.SharePreferences;
 import com.example.itigao.ClassAb.Anchor;
+import com.example.itigao.Emotion.fragment.BackHandleFragment;
+import com.example.itigao.Emotion.fragment.BackHandleInterface;
 import com.example.itigao.Media.JZMediaIjkplayer;
 import com.example.itigao.R;
 import com.example.itigao.Utils.StatusBarUtils;
@@ -43,11 +45,9 @@ import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;
 
-
-import cn.jzvd.Jzvd;
-import cn.jzvd.JzvdStd;
 import okhttp3.FormBody;
 import okhttp3.RequestBody;
+import tv.danmaku.ijk.media.exo2.Exo2PlayerManager;
 
 import static cn.jzvd.JZUtils.dip2px;
 
@@ -55,8 +55,11 @@ import static cn.jzvd.JZUtils.dip2px;
  * Created by 最美人间四月天 on 2019/3/11.
  */
 
-public class BroadNewActivity extends AppCompatActivity implements TabLayout.OnTabSelectedListener,AboutFragment.CallBackValueAn{
+public class BroadNewActivity extends AppCompatActivity implements
+        TabLayout.OnTabSelectedListener,AboutFragment.CallBackValueAn, BackHandleInterface {
 
+
+    private BackHandleFragment backHandleFragment;
 
     private int anchorId, anchorRoom, anchorFocus;
     private Anchor anchor;
@@ -81,10 +84,10 @@ public class BroadNewActivity extends AppCompatActivity implements TabLayout.OnT
         super.onCreate(savedInstanceState);
         setContentView(R.layout.broad_activity);
         StatusBarUtils.setWindowStatusBarColor(BroadNewActivity.this, R.color.colorWhite);
-        PlayerFactory.setPlayManager(IjkPlayerManager.class);//ijk模式
+        PlayerFactory.setPlayManager(Exo2PlayerManager.class);//ijk模式
         Intent intent = getIntent();
         anchor = (Anchor) intent.getSerializableExtra("anchor_all");
-        Jzvd.setMediaInterface(new JZMediaIjkplayer());
+        //Jzvd.setMediaInterface(new JZMediaIjkplayer());
         initView();
 
     }
@@ -188,6 +191,7 @@ public class BroadNewActivity extends AppCompatActivity implements TabLayout.OnT
         videoPlayer.getBackButton().setVisibility(View.VISIBLE);
         videoPlayer.setNeedShowWifiTip(true);
         videoPlayer.setIsTouchWiget(false);
+
 
         videoPlayer.setBottomProgressBarDrawable(null);
 
@@ -308,6 +312,11 @@ public class BroadNewActivity extends AppCompatActivity implements TabLayout.OnT
         return false;
     });
 
+    @Override
+    public void onSelectedFragment(BackHandleFragment backHandleFragment) {
+        this.backHandleFragment = backHandleFragment;
+    }
+
 
     public void reflex(final TabLayout tabLayout){
         //了解源码得知 线的宽度是根据 tabView的宽度来设置的
@@ -373,6 +382,7 @@ public class BroadNewActivity extends AppCompatActivity implements TabLayout.OnT
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         videoPlayer.onVideoResume();
+        GSYVideoManager.releaseAllVideos();
         return super.onKeyDown(keyCode, event);
     }
 
@@ -399,30 +409,33 @@ public class BroadNewActivity extends AppCompatActivity implements TabLayout.OnT
     @Override
     protected void onDestroy() {
         // TODO Auto-generated method stub
-        videoPlayer.onVideoResume();
+        //videoPlayer.onVid
+        GSYVideoManager.releaseAllVideos();
        // JzvdStd.releaseAllVideos();
         super.onDestroy();
     }
 
     @Override
     public void onBackPressed() {
-        if (Jzvd.backPress()) {
-            return;
-        }
-//        先返回正常状态
         if (orientationUtils.getScreenType() == ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE) {
             videoPlayer.getFullscreenButton().performClick();
             return;
-        }
-
-        if (GSYVideoManager.backFromWindowFull(this)) {
+        }else if (GSYVideoManager.backFromWindowFull(this)) {
             return;
+        }else if(backHandleFragment == null || !backHandleFragment.onBackPressed()){
+            if(getSupportFragmentManager().getBackStackEntryCount() == 0){
+               // videoPlayer.setVideoAllCallBack(null);
+                GSYVideoManager.releaseAllVideos();
+                super.onBackPressed();
+            }else{
+                getSupportFragmentManager().popBackStack();
+            }
         }
 
         //释放所有
-        videoPlayer.setVideoAllCallBack(null);
+     //   videoPlayer.setVideoAllCallBack(null);
       //  jzvdStd.release();
-        super.onBackPressed();
+     //   super.onBackPressed();
     }
 
     @Override

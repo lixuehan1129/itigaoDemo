@@ -176,9 +176,40 @@
         </RelativeLayout>
 
         <RelativeLayout
+            android:id="@+id/person_change_rv6"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/bottom_lay"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:padding="3dp"
+                android:text="分类"
+                android:textColor="@color/colorBlack"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/person_change_classify"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:padding="5dp"
+                android:text="小学"
+                android:textColor="@color/colorGray_1"
+                android:textSize="15sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
             android:orientation="horizontal"
             android:padding="8dp">
 
@@ -212,7 +243,7 @@
         android:id="@+id/person_change_rv4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/bottom_lay"
+        android:background="@color/colorWhite"
         android:orientation="horizontal"
         android:paddingTop="8dp"
         android:paddingBottom="8dp"
