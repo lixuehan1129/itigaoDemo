@@ -38,16 +38,19 @@
             android:layout_height="wrap_content"
             android:text="课程教练 教练介绍 几星教练"
             android:textSize="10sp"
-            android:textColor="@color/colorBlack"
+            android:textColor="@color/colorGray_1"
             android:maxLines="1"/>
 
         <TextView
-            android:paddingTop="2dp"
+            android:paddingTop="3dp"
             android:id="@+id/class_select_item_time"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="end"
             android:text="开课时间"
-            android:textSize="10sp"
+            android:layout_marginEnd="15dp"
+            android:textColor="@color/colorRed"
+            android:textSize="13sp"
             android:maxLines="1"/>
     </LinearLayout>
 

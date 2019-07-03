@@ -8,6 +8,7 @@ import android.os.Handler;
 import android.os.Message;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
+import android.support.v4.content.LocalBroadcastManager;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -22,6 +23,7 @@ import com.example.itigao.AutoProject.AppConstants;
 import com.example.itigao.AutoProject.JsonCode;
 import com.example.itigao.AutoProject.SharePreferences;
 import com.example.itigao.AutoProject.Tip;
+import com.example.itigao.Broad.BroadNewActivity;
 import com.example.itigao.ClassAb.Classes;
 import com.example.itigao.Emotion.fragment.BackHandleFragment;
 import com.example.itigao.Emotion.fragment.BackHandleInterface;
@@ -125,6 +127,8 @@ public class VideoNewActivity extends AppCompatActivity implements TabLayout.OnT
                                     textView.setText("已收藏");
                                     textView.setBackgroundColor(getResources().getColor(R.color.colorGray_1));
                                 });
+                                Intent intent_broad = new Intent(AppConstants.BROAD_FOCUSF);
+                                LocalBroadcastManager.getInstance(VideoNewActivity.this).sendBroadcast(intent_broad);
                             }
                         }
                         progressDialog.dismiss();
@@ -147,6 +151,8 @@ public class VideoNewActivity extends AppCompatActivity implements TabLayout.OnT
                                     textView.setText(" + 收藏 ");
                                     textView.setBackgroundColor(getResources().getColor(R.color.colorOrange));
                                 });
+                                Intent intent_broad = new Intent(AppConstants.BROAD_FOCUSF);
+                                LocalBroadcastManager.getInstance(VideoNewActivity.this).sendBroadcast(intent_broad);
                             }
                         }
                         progressDialog.dismiss();

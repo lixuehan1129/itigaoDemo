@@ -19,6 +19,7 @@ public class AppConstants {
     public static final String BROAD_HU = "android.intent.action.broadcast.huDong";
 
     public static final String BROAD_FOCUS = "android.intent.action.broadcast.focus";
+    public static final String BROAD_FOCUSF = "android.intent.action.broadcast.focusf";
 
     public static final String URL = "http://tg01.tipass.com/Study/tp5/public/index.php?s=study/Study/";
 

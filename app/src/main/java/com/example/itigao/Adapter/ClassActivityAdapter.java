@@ -100,9 +100,9 @@ public class ClassActivityAdapter extends RecyclerView.Adapter<ClassActivityAdap
     /**
      * 添加并更新数据，同时具有动画效果
      */
-    public void addDataAt(int position,  Class_Activity data) {
-        mDataSet.add(position, data);
-        notifyItemInserted(position);//更新数据集，注意如果用adapter.notifyDataSetChanged()将没有动画效果
+    public void addDataAt(List<Class_Activity> data) {
+        mDataSet = data;
+        notifyDataSetChanged();//更新数据集，注意如果用adapter.notifyDataSetChanged()将没有动画效果
     }
 
 

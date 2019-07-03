@@ -34,7 +34,7 @@ public class ClassSelectAdapter extends RecyclerView.Adapter<ClassSelectAdapter.
         ImageView imageView;
         TextView itr, coach, time;
         RelativeLayout relativeLayout;
-        LinearLayout linearLayout;
+       // LinearLayout linearLayout;
 
         public ViewHolder(View itemView) {
             super(itemView);
@@ -43,7 +43,7 @@ public class ClassSelectAdapter extends RecyclerView.Adapter<ClassSelectAdapter.
             coach = (TextView) itemView.findViewById(R.id.class_select_item_coach);
             time = (TextView) itemView.findViewById(R.id.class_select_item_time);
             relativeLayout = (RelativeLayout) itemView.findViewById(R.id.class_select_item_relative);
-            linearLayout = (LinearLayout) itemView.findViewById(R.id.class_select_item_l);
+            //linearLayout = (LinearLayout) itemView.findViewById(R.id.class_select_item_l);
         }
     }
 

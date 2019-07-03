@@ -72,8 +72,8 @@ public class PersonalFragment extends BaseFragment {
     private DataBaseHelper dataBaseHelper;
 
     private LocalBroadcastManager broadcastManager;
-    private IntentFilter intentFilter,intentFilterF;
-    private BroadcastReceiver mReceiver,mReceiverF;
+    private IntentFilter intentFilter;
+    private BroadcastReceiver mReceiver;
 
     private ImageView code, set;
     private CircleImageView picture;
@@ -112,27 +112,43 @@ public class PersonalFragment extends BaseFragment {
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         broadcastManager = LocalBroadcastManager.getInstance(getActivity());
+       // broadcastManagerF = LocalBroadcastManager.getInstance(getActivity());
         intentFilter = new IntentFilter();
         intentFilter.addAction(AppConstants.BROAD_CHANGE);
+        intentFilter.addAction(AppConstants.BROAD_FOCUS);
+        intentFilter.addAction(AppConstants.BROAD_FOCUSF);
         mReceiver = new BroadcastReceiver() {
             @Override
             public void onReceive(Context context, Intent intent){
                 //收到广播后所作的操作
-                connect();
-                localData();
-            }
-        };
+                String action = intent.getAction();
+                switch (action) {
+                    case AppConstants.BROAD_CHANGE:
+                        connect();
+                        localData();
+                        break;
+                    case AppConstants.BROAD_FOCUS:
+                        setData();
+                        break;
+                    case AppConstants.BROAD_FOCUSF:
+                        connectF();
+                        break;
+                }
 
-        intentFilterF = new IntentFilter();
-        intentFilterF.addAction(AppConstants.BROAD_FOCUS);
-        mReceiverF = new BroadcastReceiver() {
-            @Override
-            public void onReceive(Context context, Intent intent){
-                //收到广播后所作的操作
-                setData();
             }
         };
-        broadcastManager.registerReceiver(mReceiverF, intentFilterF);
+        broadcastManager.registerReceiver(mReceiver, intentFilter);
+
+//        intentFilterF = new IntentFilter();
+//        intentFilterF.addAction(AppConstants.BROAD_FOCUS);
+//        mReceiverF = new BroadcastReceiver() {
+//            @Override
+//            public void onReceive(Context context, Intent intent){
+//                //收到广播后所作的操作
+//                setData();
+//            }
+//        };
+//        broadcastManagerF.registerReceiver(mReceiverF, intentFilterF);
     }
 
 
@@ -387,13 +403,14 @@ public class PersonalFragment extends BaseFragment {
     }
 
     private void initDataF(){
+        records = new ArrayList<>();
         if(classes.size() > 0){
             for(int i = 0; i<classes.size(); i++){
-                classActivityAdapter.addDataAt(classActivityAdapter.getItemCount(),
-                        classActivityAdapter.new Class_Activity(classes.get(i).getClass_name(),
-                                classes.get(i).getClass_cover()));
+                records.add(classActivityAdapter.new Class_Activity(classes.get(i).getClass_name(),
+                        classes.get(i).getClass_cover()));
             }
-
+            classActivityAdapter.addDataAt(records);
+            recyclerViewC.setAdapter(classActivityAdapter);
             classActivityAdapter.setOnItemClickListener((view, position) -> {
                 Intent intent = new Intent(getActivity(), VideoNewActivity.class);
                 intent.putExtra("video_bid",classes.get(position).getClass_bid());
@@ -404,7 +421,9 @@ public class PersonalFragment extends BaseFragment {
                 startActivity(intent);
             });
         }else {
-            classActivityAdapter.addDataAt(0,classActivityAdapter.new Class_Activity("暂无",null));
+            records.add(classActivityAdapter.new Class_Activity("暂无",null));
+            classActivityAdapter.addDataAt(records);
+            //classActivityAdapter.addDataAt(0,classActivityAdapter.new Class_Activity("暂无",null));
         }
     }
 
@@ -521,6 +540,7 @@ public class PersonalFragment extends BaseFragment {
     public void onDestroy() {
         super.onDestroy();
         broadcastManager.unregisterReceiver(mReceiver);
+        //broadcastManagerF.unregisterReceiver(mReceiverF);
         if (Util.isOnMainThread()) {
             Glide.with(getActivity()).pauseRequests();
         }

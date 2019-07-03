@@ -1,12 +1,23 @@
 package com.example.itigao.Recommend;
 
+import android.app.AlarmManager;
 import android.app.AlertDialog;
+import android.app.PendingIntent;
 import android.app.ProgressDialog;
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
+import android.content.IntentFilter;
+import android.icu.util.Calendar;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
+import android.os.SystemClock;
+import android.support.annotation.RequiresApi;
+import android.support.v4.content.LocalBroadcastManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
@@ -40,6 +51,10 @@ import okhttp3.RequestBody;
 
 public class DataBaseFragment extends BaseFragment {
 
+    private LocalBroadcastManager broadcastManager;
+    private IntentFilter intentFilter;
+    private BroadcastReceiver mReceiver;
+
     private RadioGroup radioGroup;
     private RadioButton button1, button2, button3, button4, button5, button6, button7;
     private ScrollView scrollView;
@@ -59,11 +74,35 @@ public class DataBaseFragment extends BaseFragment {
 
 
     @Override
+    public void onActivityCreated(Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        broadcastManager = LocalBroadcastManager.getInstance(getActivity());
+        intentFilter = new IntentFilter();
+        intentFilter.addAction(AppConstants.BROAD_CHANGE);
+        mReceiver = new BroadcastReceiver() {
+            @Override
+            public void onReceive(Context context, Intent intent){
+                //收到广播后所作的操作
+                appoint_classify_yu = SharePreferences.getInt(getActivity(),AppConstants.USER_CLASSIFY);
+                //appoint_classify_yu = bundle.getInt("appoint_classify_yu",0);
+                if(appoint_classify_yu == 4){
+                    appoint_classify_yu = 3;
+                }
+                initView(getView());
+                initGroup();
+                connectData();
+            }
+        };
+
+        broadcastManager.registerReceiver(mReceiver, intentFilter);
+    }
+
+    @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.class_check, container, false);
-        Bundle bundle = getArguments();
-        assert bundle != null;
+//        Bundle bundle = getArguments();
+//        assert bundle != null;
         appoint_classify_yu = SharePreferences.getInt(getActivity(),AppConstants.USER_CLASSIFY);
         //appoint_classify_yu = bundle.getInt("appoint_classify_yu",0);
         if(appoint_classify_yu == 4){
@@ -75,10 +114,6 @@ public class DataBaseFragment extends BaseFragment {
         return view;
     }
 
-    @Override
-    public void onActivityCreated(Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-    }
 
     @Override
     public void setUserVisibleHint(boolean isVisibleToUser) {
@@ -337,10 +372,10 @@ public class DataBaseFragment extends BaseFragment {
                         //...To-do
                         if(class_selects.getAppoint_yu_check() == 0){
                             class_selects.setAppoint_yu_check(1);
-                            setCheck(class_selects.getAppoint_bid(),week);
+                            setCheck(class_selects,week);
                         }else {
                             class_selects.setAppoint_yu_check(0);
-                            deleteCheck(class_selects.getAppoint_bid());
+                            deleteCheck(class_selects,week);
                         }
 
                         classSelectAdapter.changeData(position,class_selects);
@@ -357,19 +392,39 @@ public class DataBaseFragment extends BaseFragment {
         normalDialog.show();
     }
 
-    private void setCheck(final int bid, final int week){
+    private void setCheck(final Appoint class_selects, final int week){
         final ProgressDialog progressDialog = ProgressDialog.show(getActivity(),"","请稍后...",true);
         new Thread(){
+            @RequiresApi(api = Build.VERSION_CODES.N)
             public void run(){
                 Looper.prepare();
                 RequestBody requestBody = new FormBody.Builder()
                         .add("yu_user",SharePreferences.getString(getActivity(),AppConstants.USER_PHONE))
                         .add("yu_time", String.valueOf(DateUtils.IntTime(week)))
-                        .add("yu_bid", String.valueOf(bid))
+                        .add("yu_bid", String.valueOf(class_selects.getAppoint_bid()))
                         .build();
                 String regData = OkHttpBase.getResponse(requestBody,"insertYu");
                 if(regData != null){
                     progressDialog.dismiss();
+
+                    Intent intent = new Intent(getActivity(), AutoReceiver.class);
+                    /***/
+                    intent.setAction(class_selects.getAppoint_bid() + "_" + DateUtils.IntTime(week));
+                    // PendingIntent这个类用于处理即将发生的事情 
+                    PendingIntent sender = PendingIntent.getBroadcast(getActivity(), 0, intent, 0);
+                    AlarmManager am = (AlarmManager) getActivity().getSystemService(Context.ALARM_SERVICE);
+                    // AlarmManager.ELAPSED_REALTIME_WAKEUP表示闹钟在睡眠状态下会唤醒系统并执行提示功能，该状态下闹钟使用相对时间
+                    // SystemClock.elapsedRealtime()表示手机开始到现在经过的时间
+                    Calendar calendar = Calendar.getInstance();
+                    int year = Integer.parseInt(String.valueOf(DateUtils.IntTime(week)).substring(0,4));
+                    int month = Integer.parseInt(String.valueOf(DateUtils.IntTime(week)).substring(4,6));
+                    int day = Integer.parseInt(String.valueOf(DateUtils.IntTime(week)).substring(6,8));
+                    int hour = class_selects.getAppoint_time() == 1? 8:14;
+                    int minute = 20;
+                    calendar.set(year, month - 1, day, hour, minute);
+                   // calendar.set(2019, 6, 3, 17, 3);
+                    am.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), sender);
+
                 }else {
                     Tip.showTip(getActivity(),"请检查网络");
                     progressDialog.dismiss();
@@ -380,7 +435,7 @@ public class DataBaseFragment extends BaseFragment {
 
     }
 
-    private void deleteCheck(final int bid){
+    private void deleteCheck(final Appoint class_selects,final int week){
         final ProgressDialog progressDialog = ProgressDialog.show(getActivity(),"","请稍后...",true);
 
         new Thread(){
@@ -388,12 +443,21 @@ public class DataBaseFragment extends BaseFragment {
                 Looper.prepare();
                 RequestBody requestBody = new FormBody.Builder()
                         .add("yu_user",SharePreferences.getString(getActivity(),AppConstants.USER_PHONE))
-                        .add("yu_bid", String.valueOf(bid))
+                        .add("yu_bid", String.valueOf(class_selects.getAppoint_bid()))
                         .build();
                 String regData = OkHttpBase.getResponse(requestBody,"deleteYu");
-                System.out.println("regD" + regData);
                 if(regData != null){
                     progressDialog.dismiss();
+
+                    Intent intent = new Intent(getActivity(), AutoReceiver.class);
+                    /***/
+                    intent.setAction(class_selects.getAppoint_bid() + "_" + DateUtils.IntTime(week));
+                    // PendingIntent这个类用于处理即将发生的事情 
+                    PendingIntent sender = PendingIntent.getBroadcast(getActivity(), 0, intent, 0);
+                    // 与上面的intent匹配（filterEquals(intent)）的闹钟会被取消
+                    AlarmManager am = (AlarmManager) getActivity().getSystemService(Context.ALARM_SERVICE);
+                    am.cancel(sender);
+
                 }else {
                     Tip.showTip(getActivity(),"请检查网络");
                     progressDialog.dismiss();
@@ -443,6 +507,7 @@ public class DataBaseFragment extends BaseFragment {
     }
     @Override
     public void onDestroy() {
+        broadcastManager.unregisterReceiver(mReceiver);
         super.onDestroy();
     }
 }

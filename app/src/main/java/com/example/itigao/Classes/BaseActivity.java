@@ -409,12 +409,18 @@ public class BaseActivity extends AppCompatActivity {
     }
 
     private void initDataRecord(){
+        records = new ArrayList<>();
+
         if(records_get.size() > 0){
             for(int i = 0; i<records_get.size(); i++){
-                recordAdapter.addDataAt(recordAdapter.getItemCount(),
-                        recordAdapter.new Class_Activity(records_get.get(i).getRecord_name(),
-                                records_get.get(i).getRecord_cover()));
+                records.add(recordAdapter.new Class_Activity(records_get.get(i).getRecord_name(),
+                        records_get.get(i).getRecord_cover()));
+//                recordAdapter.addDataAt(recordAdapter.getItemCount(),
+//                        recordAdapter.new Class_Activity(records_get.get(i).getRecord_name(),
+//                                records_get.get(i).getRecord_cover()));
             }
+
+            recordAdapter.addDataAt(records);
 
             recordAdapter.setOnItemClickListener((view, position) -> {
                 Intent intent = new Intent(BaseActivity.this, VideoNewActivity.class);
@@ -426,7 +432,8 @@ public class BaseActivity extends AppCompatActivity {
                 startActivity(intent);
             });
         }else {
-            recordAdapter.addDataAt(0,recordAdapter.new Class_Activity("暂无",null));
+            records.add(recordAdapter.new Class_Activity("暂无",null));
+            recordAdapter.addDataAt(records);
         }
     }
 
