@@ -1,23 +1,40 @@
 package com.example.itigao.Personal;
 
+import android.content.ContentValues;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.TextView;
+import android.widget.Button;
+import android.widget.EditText;
 
-import com.example.itigao.Media.JZMediaIjkplayer;
+import com.example.itigao.Adapter.OtherAdapter;
+import com.example.itigao.AutoProject.AppConstants;
+import com.example.itigao.Database.DataBaseHelper;
 import com.example.itigao.R;
 import com.example.itigao.Utils.StatusBarUtils;
 
-import cn.jzvd.Jzvd;
-import cn.jzvd.JzvdStd;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by 最美人间四月天 on 2018/12/15.
  */
 
 public class PersonIndoorActivity extends AppCompatActivity {
+
+    private RecyclerView recyclerView;
+    private OtherAdapter otherAdapter;
+    private DataBaseHelper dataBaseHelper;
+    private List<String> mOther = new ArrayList<>();
+    private static int C_ID = 2;
+    private EditText editText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,8 +49,47 @@ public class PersonIndoorActivity extends AppCompatActivity {
         toolbar.setTitle("学习历程");
         back(toolbar);
 
-        TextView textView = (TextView) findViewById(R.id.person_exam_tv);
-        textView.setText("坚持学习 35天\n背单词 235个\n写代码 220小时\n阅读 5本\n打游戏 100小时\n看论文 15篇\n。。。。。。");
+        mOther = new ArrayList<>();
+        dataBaseHelper = new DataBaseHelper(PersonIndoorActivity.this, AppConstants.SQL_VISION);
+        SQLiteDatabase sqLiteDatabase = dataBaseHelper.getWritableDatabase();
+        Cursor cursor = sqLiteDatabase.query("other",null,"other_i = ?",new String[]{String.valueOf(C_ID)},
+                null,null,"id");
+        while (cursor.moveToNext()){
+            mOther.add(cursor.getString(cursor.getColumnIndex("other_con")));
+        }
+        if(mOther.size() == 0){
+            mOther.add("开启你的新生活!!!!");
+        }
+        cursor.close();
+        sqLiteDatabase.close();
+
+
+        recyclerView = findViewById(R.id.person_exam_rv);
+        recyclerView.setLayoutManager(new LinearLayoutManager(PersonIndoorActivity.this));
+        otherAdapter = new OtherAdapter(mOther);
+        recyclerView.setAdapter(otherAdapter);
+
+        Button button = findViewById(R.id.person_exam_bt);
+        button.setOnClickListener(v -> {
+            LayoutInflater factory = LayoutInflater.from(PersonIndoorActivity.this);//提示框
+            final View view = factory.inflate(R.layout.other_edit, null);//这里必须是final的
+            editText = view.findViewById(R.id.other_ed);
+            new AlertDialog.Builder(this)
+                    .setView(view)
+                    .setPositiveButton("确定", (dialogInterface, i) -> {
+
+                        SQLiteDatabase sqLiteDatabase1 = dataBaseHelper.getWritableDatabase();
+
+                        ContentValues values = new ContentValues();
+                        values.put("other_con",editText.getText().toString());
+                        values.put("other_i",C_ID);
+                        sqLiteDatabase1.insert("other",null,values);
+                        sqLiteDatabase1.close();
+                        otherAdapter.addDataAt(editText.getText().toString(),otherAdapter.getItemCount());
+                    }).setNegativeButton("取消",null).show();
+
+        });
+
 
     }
 
@@ -47,59 +103,5 @@ public class PersonIndoorActivity extends AppCompatActivity {
         });
     }
 
-//    @Override
-//    protected void onCreate(Bundle savedInstanceState) {
-//        super.onCreate(savedInstanceState);
-//        setContentView(R.layout.person_indoor);
-//        StatusBarUtils.setWindowStatusBarColor(PersonIndoorActivity.this, R.color.colorWhite);
-//        Jzvd.setMediaInterface(new JZMediaIjkplayer());
-//        initView();
-//    }
-//
-//    private void initView(){
-//        Toolbar toolbar = (Toolbar) findViewById(R.id.person_indoor_mainTool);
-//        toolbar.setTitle("室内监测");
-//        back(toolbar);
-//
-//        TextView textView = (TextView) findViewById(R.id.person_indoor_tv);
-//        textView.setText("室内环境监测");
-//
-//        JzvdStd jzvdStd = (JzvdStd) findViewById(R.id.person_indoor_ij);
-//        jzvdStd.setUp("rtmp://zb.tipass.com:1935/live/1233","",Jzvd.SCREEN_WINDOW_NORMAL);
-//        jzvdStd.startVideo();
-//    }
-//
-//    //返回注销事件
-//    private void back(Toolbar toolbar){
-//        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                finish();
-//            }
-//        });
-//    }
-//
-//    @Override
-//    protected void onStop() {
-//        super.onStop();
-//    }
-//
-//    @Override
-//    public void onBackPressed() {
-//        if (Jzvd.backPress()) {
-//            return;
-//        }
-//        super.onBackPressed();
-//    }
-//    @Override
-//    protected void onPause() {
-//        super.onPause();
-//        Jzvd.releaseAllVideos();
-//    }
-//
-//    @Override
-//    protected void onDestroy() {
-//        // TODO Auto-generated method stub
-//        super.onDestroy();
-//    }
+
 }

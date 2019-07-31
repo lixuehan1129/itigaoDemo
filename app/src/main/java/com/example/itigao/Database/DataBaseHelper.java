@@ -25,6 +25,11 @@ public class DataBaseHelper extends SQLiteOpenHelper {
             + "user_birth text, "
             + "user_picture text)";
 
+    public static final String CREATE_OTHER = "create table other ("
+            + "id integer primary key autoincrement, "
+            + "other_con text, "
+            + "other_i integer)";
+
 
     /**
      * @param context
@@ -48,12 +53,14 @@ public class DataBaseHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(CREATE_USER);
+        db.execSQL(CREATE_OTHER);
     }
 
     //数据库升级
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("drop table if exists user");
+        db.execSQL("drop table if exists other");
         onCreate(db);
     }
 

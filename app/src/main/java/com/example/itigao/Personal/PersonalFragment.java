@@ -48,19 +48,13 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Comparator;
-import java.util.HashSet;
 import java.util.List;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 import okhttp3.FormBody;
-import okhttp3.OkHttpClient;
-import okhttp3.Request;
 import okhttp3.RequestBody;
-import okhttp3.Response;
 
 
 /**
@@ -168,7 +162,7 @@ public class PersonalFragment extends BaseFragment {
 
         per = (LinearLayout) view.findViewById(R.id.personalFragment_l);
         class0 = (LinearLayout) view.findViewById(R.id.personalFragment_class);
-        device1 = (LinearLayout) view.findViewById(R.id.personalFragment_device1);
+//        device1 = (LinearLayout) view.findViewById(R.id.personalFragment_device1);
         exam1 = (LinearLayout) view.findViewById(R.id.personalFragment_exam1);
         indoor1 = (LinearLayout) view.findViewById(R.id.personalFragment_indoor1);
         go1 = (LinearLayout) view.findViewById(R.id.personalFragment_go);
@@ -178,7 +172,7 @@ public class PersonalFragment extends BaseFragment {
         class2 = (TextView) view.findViewById(R.id.personalFragment_class2);
 //        class3 = (TextView) view.findViewById(R.id.personalFragment_class3);
 //        class4 = (TextView) view.findViewById(R.id.personalFragment_class4);
-        device2 = (TextView) view.findViewById(R.id.personalFragment_device2);
+ //       device2 = (TextView) view.findViewById(R.id.personalFragment_device2);
         exam2 = (TextView) view.findViewById(R.id.personalFragment_exam2);
         indoor2 = (TextView) view.findViewById(R.id.personalFragment_indoor2);
         go2 = (TextView) view.findViewById(R.id.personalFragment_go2);
@@ -247,10 +241,10 @@ public class PersonalFragment extends BaseFragment {
             startActivity(intent);
         });
         //设备
-        device1.setOnClickListener(view -> {
-            Intent intent = new Intent(getActivity(),PersonDeviceActivity.class);
-            startActivity(intent);
-        });
+//        device1.setOnClickListener(view -> {
+//            Intent intent = new Intent(getActivity(),PersonDeviceActivity.class);
+//            startActivity(intent);
+//        });
         //课程
         class0.setOnClickListener(view -> {
             Intent intent = new Intent(getActivity(),PersonClassActivity.class);

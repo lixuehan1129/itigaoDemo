@@ -9,7 +9,6 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.Gravity;
-import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
@@ -23,6 +22,8 @@ import android.widget.TextView;
 import com.cy.cyflowlayoutlibrary.FlowLayoutAdapter;
 import com.cy.cyflowlayoutlibrary.FlowLayoutScrollView;
 import com.example.itigao.Adapter.WeekTarAdapter;
+import com.example.itigao.AutoProject.AppConstants;
+import com.example.itigao.AutoProject.SharePreferences;
 import com.example.itigao.ClassAb.Target;
 import com.example.itigao.R;
 import com.example.itigao.ViewHelper.BaseFragment;
@@ -53,6 +54,8 @@ public class SportFragment extends BaseFragment {
     private LinearLayout linearLayoutT;
     private PopupWindow popupWindow;
     private View contentView;
+
+
 
     @Override
     public void onStart(){
@@ -113,9 +116,21 @@ public class SportFragment extends BaseFragment {
     }
 
     private void setData(){
-        tv1.setText("165");
+        switch (SharePreferences.getInt(getActivity(), AppConstants.USER_CLASSIFY)){
+            case 0: tv1.setText("小学");
+                    break;
+            case 1: tv1.setText("初中");
+                break;
+            case 2: tv1.setText("高中");
+                break;
+            case 3: tv1.setText("大学");
+                break;
+            case 4: tv1.setText("研究生");
+                break;
+        }
+
         tv2.setText("127");
-        tv3.setText("15");
+        tv3.setText("" + SharePreferences.getInt(getActivity(), AppConstants.USER_LOGIN_COUNT));
         tv4.setText("85");
     }
 
@@ -176,9 +191,7 @@ public class SportFragment extends BaseFragment {
                 flowLayoutAdapterT.remove(position);
                 flowLayoutAdapterA.add(bean);
                 LitePal.deleteAll(Target.class,"cont = ?", bean);
-//                listT.add(bean);
 
-//                weekTarAdapterT.notifyItemRemoved(position);
             }
 
             @Override
@@ -191,51 +204,7 @@ public class SportFragment extends BaseFragment {
     }
 
     private void addFlow(){
-//        listA = new ArrayList<>();
-//        listA.add("本周背单词  200个");
-//        listA.add("看视频  50分钟");
-//        listA.add("阅读文章  5篇");
-//        listA.add("习题册  10页");
-//        listA.add("上课  12课时");
-//        listA.add("累积背单词  2000个");
-//        listA.add("读书  2小时");
-//        listA.add("玩游戏  4小时");
-//        listA.add("数学卷  2套");
-//        listA.add("口语练习  10次");
-//        listA.add("课外交流  2次");
-//        listA.add("综合练习  1次");
-//        listA.add("班会  2小时");
-//        listA.add("实践  1天");
-//
-//        listA.add("本周背单词  300个");
-//        listA.add("看视频  120分钟");
-//        listA.add("阅读文章  9篇");
-//        listA.add("习题册  15页");
-//        listA.add("上课  19课时");
-//        listA.add("累积背单词  2400个");
-//        listA.add("读书  4小时");
-//        listA.add("玩游戏  4小时");
-//        listA.add("数学卷  5套");
-//        listA.add("口语练习  15次");
-//        listA.add("课外交流  4次");
-//        listA.add("综合练习  7次");
-//        listA.add("班会  1小时");
-//        listA.add("实践  2天");
-//
-//        listA.add("本周背单词  800个");
-//        listA.add("看视频  500分钟");
-//        listA.add("阅读文章  50篇");
-//        listA.add("习题册  100页");
-//        listA.add("上课  102课时");
-//        listA.add("累积背单词  6000个");
-//        listA.add("读书  20小时");
-//        listA.add("玩游戏  40小时");
-//        listA.add("数学卷  24套");
-//        listA.add("口语练习  21次");
-//        listA.add("课外交流  21次");
-//        listA.add("综合练习  10次");
-//        listA.add("班会  7小时");
-//        listA.add("实践  3天");
+
 
         flowLayoutAdapterA = new FlowLayoutAdapter<String>(list) {
 
@@ -251,8 +220,6 @@ public class SportFragment extends BaseFragment {
                 flowLayoutAdapterT.add(bean);
                 new Target(bean).save();
 
-//                weekTarAdapterT.addDataAt(weekTarAdapterT.new WeekTar(bean,0,0),
-//                        weekTarAdapterT.getItemCount());
             }
 
             @Override
@@ -334,27 +301,20 @@ public class SportFragment extends BaseFragment {
         super.onResume();
         getView().setFocusableInTouchMode(true);
         getView().requestFocus();
-        getView().setOnKeyListener(new View.OnKeyListener() {
-            @Override
-            public boolean onKey(View v, int keyCode, KeyEvent event) {
-                if (keyCode == KeyEvent.KEYCODE_BACK && event.getAction() == KeyEvent.ACTION_UP) {
-                    if (popupWindow != null && popupWindow.isShowing()) {
-                        System.out.println("弹出1");
-                        popupWindow.dismiss();
-                        initList();
-                        return true;
+        getView().setOnKeyListener((v, keyCode, event) -> {
+            if (popupWindow != null && popupWindow.isShowing()) {
+                System.out.println("弹出1");
+                popupWindow.dismiss();
+                initList();
+                return true;
 
-                    }else {
-                        System.out.println("弹出2");
-                        return false;
-                    }
-                }else {
-                    System.out.println("弹出3");
-                    return true;
-                }
+            }else {
+                System.out.println("弹出2");
+                return false;
             }
         });
     }
+
 
 
 

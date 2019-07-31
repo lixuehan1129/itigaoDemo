@@ -28,17 +28,13 @@ import com.example.itigao.Video.VideoNewActivity;
 import com.example.itigao.ViewHelper.BaseFragment;
 import com.example.itigao.okHttp.OkHttpBase;
 
-import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
 import okhttp3.FormBody;
-import okhttp3.OkHttpClient;
-import okhttp3.Request;
 import okhttp3.RequestBody;
-import okhttp3.Response;
 
 import static android.content.Context.MODE_PRIVATE;
 
@@ -103,7 +99,8 @@ public class SubscribeFragment extends BaseFragment {
 
     private void LoginCount(){
         loginCount = SharePreferences.getInt(getActivity(),AppConstants.USER_LOGIN_COUNT);
-        isTodayFirstLogin();
+        days.setText("" + loginCount);
+      //  isTodayFirstLogin();
     }
 
     /**

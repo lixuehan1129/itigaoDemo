@@ -88,38 +88,37 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <LinearLayout
-                    android:id="@+id/personalFragment_device1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp"
-                    android:orientation="vertical"
-                    android:background="@drawable/round_gb">
+                <!--<LinearLayout-->
+                    <!--android:id="@+id/personalFragment_device1"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:padding="10dp"-->
+                    <!--android:orientation="vertical"-->
+                    <!--android:background="@drawable/round_gb">-->
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="我的智能学习设备"
-                        android:textSize="12sp"
-                        android:paddingBottom="6dp"
-                        android:textColor="@color/colorBlack"
-                        android:padding="3dp"
-                        android:clickable="false"/>
+                    <!--<TextView-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:text="我的智能学习设备"-->
+                        <!--android:textSize="12sp"-->
+                        <!--android:paddingBottom="6dp"-->
+                        <!--android:textColor="@color/colorBlack"-->
+                        <!--android:padding="3dp"-->
+                        <!--android:clickable="false"/>-->
 
-                    <TextView
-                        android:id="@+id/personalFragment_device2"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="已经添加的设备"
-                        android:textSize="12sp"
-                        android:padding="3dp"
-                        android:clickable="false"/>
+                    <!--<TextView-->
+                        <!--android:id="@+id/personalFragment_device2"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:text="已经添加的设备"-->
+                        <!--android:textSize="12sp"-->
+                        <!--android:padding="3dp"-->
+                        <!--android:clickable="false"/>-->
 
-                </LinearLayout>
+                <!--</LinearLayout>-->
 
                 <LinearLayout
                     android:id="@+id/personalFragment_class"
-                    android:layout_marginTop="10dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="10dp"
