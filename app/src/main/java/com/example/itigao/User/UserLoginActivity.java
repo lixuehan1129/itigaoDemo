@@ -14,7 +14,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.util.Log;
 import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.View;
@@ -40,8 +39,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import cn.jpush.im.android.api.JMessageClient;
-import cn.jpush.im.api.BasicCallback;
 import de.hdodenhof.circleimageview.CircleImageView;
 import okhttp3.FormBody;
 import okhttp3.OkHttpClient;
@@ -190,6 +187,7 @@ public class UserLoginActivity extends AppCompatActivity {
         SharePreferences.putString(UserLoginActivity.this, AppConstants.USER_PASSWORD, password.getText().toString());
         SharePreferences.putInt(UserLoginActivity.this, AppConstants.USER_CLASSIFY, registers.get(0).getUser_classify());
         SharePreferences.putInt(UserLoginActivity.this, AppConstants.USER_LOGIN_COUNT, 0);
+        SharePreferences.putString(UserLoginActivity.this, AppConstants.USER_NAME, registers.get(0).getUser_name());
 
         SQLiteDatabase sqLiteDatabase = dataBaseHelper.getReadableDatabase();
         String delete = "delete from user where user_phone ='" +

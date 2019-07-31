@@ -211,6 +211,18 @@
 -keep class okio.**{*;}
 -dontwarn okio.**
 
+-keep class org.litepal.** {
+    *;
+}
+
+-keep class * extends org.litepal.crud.DataSupport {
+    *;
+}
+
+-keep class * extends org.litepal.crud.LitePalSupport {
+    *;
+}
+
 
 # Glide
 -keep public class * implements com.bumptech.glide.module.GlideModule

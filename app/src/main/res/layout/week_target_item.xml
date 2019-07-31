@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="4dp">
+
+    <TextView
+        android:id="@+id/week_tar_con"
+        android:layout_weight="4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:singleLine="false"
+        android:textSize="12sp"
+        android:textColor="@color/colorBlack"
+        android:lineSpacingExtra="5dp"
+        android:text=" 写作目标：5000"/>
+
+    <TextView
+        android:id="@+id/week_tar_pro"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:singleLine="false"
+        android:textSize="12sp"
+        android:lineSpacingExtra="5dp"
+        android:textColor="@color/colorGreen1"
+        android:text="√"/>
+
+</LinearLayout>

@@ -7,8 +7,8 @@ android {
         applicationId "com.example.itigao"
         minSdkVersion 21
         targetSdkVersion 27
-        versionCode 3
-        versionName "2.0"
+        versionCode 4
+        versionName "2.2"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         multiDexEnabled true
 
@@ -109,6 +109,9 @@ dependencies {
     implementation 'com.google.code.gson:gson:2.8.2'
 
     implementation 'com.ufreedom.uikit:FloatingTextLibrary:0.2.0'
+
+    implementation 'com.github.AnJiaoDe:MultiFlowLayout:V1.1.2'
+    implementation 'org.litepal.android:java:3.0.0'
 
 
     implementation 'com.tencent.bugly:crashreport_upgrade:1.4.0'//其中latest.release指代最新版本号，也可以指定明确的版本号，例如1.2.0

@@ -9,6 +9,7 @@ public class AppConstants {
     public static final String USER_PHONE = "phone";
     public static final String USER_PASSWORD = "pass";
     public static final String USER_CLASSIFY = "classify";
+    public static final String USER_NAME = "name";
 
     public static final String USER_LOGIN_COUNT = "loginCount";
 
@@ -26,7 +27,7 @@ public class AppConstants {
     public static final String BROAD_URL = "rtmp://101.132.167.250:1935/live/";
 
 
-    public static final int SQL_VISION = 1;
+    public static final int SQL_VISION = 2;
 
     public static final int CAMERA = 1;
     public static final int ALBUM = 2;

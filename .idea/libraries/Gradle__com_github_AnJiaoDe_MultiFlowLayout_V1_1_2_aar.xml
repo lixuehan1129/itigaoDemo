@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.AnJiaoDe:MultiFlowLayout:V1.1.2@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/MultiFlowLayout-V1.1.2.aar/7fc80d6538f291ae28a46cffd971825e/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/MultiFlowLayout-V1.1.2.aar/7fc80d6538f291ae28a46cffd971825e/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.AnJiaoDe/MultiFlowLayout/V1.1.2/8420f2f3a60f55460f9c9d92b529b550c95060ee/MultiFlowLayout-V1.1.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

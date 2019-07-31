@@ -6,7 +6,6 @@ import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.app.ProgressDialog;
 import android.content.ContentValues;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -21,11 +20,10 @@ import android.os.Message;
 import android.provider.MediaStore;
 import android.support.v4.content.LocalBroadcastManager;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
-import android.support.v7.widget.Toolbar;
-import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -43,10 +41,6 @@ import com.example.itigao.Utils.StatusBarUtils;
 import com.example.itigao.okHttp.OkHttpBase;
 import com.example.itigao.okHttp.OkHttpUtil;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
@@ -60,7 +54,6 @@ import cn.jpush.im.api.BasicCallback;
 import de.hdodenhof.circleimageview.CircleImageView;
 import okhttp3.Call;
 import okhttp3.Callback;
-import okhttp3.FormBody;
 import okhttp3.MediaType;
 import okhttp3.RequestBody;
 import okhttp3.Response;
@@ -459,6 +452,9 @@ public class PersonChangeActivity extends AppCompatActivity{
                         contentValues.put("user_birth",birth.getText().toString());
                         sqLiteDatabase.update("user",contentValues,"user_phone = ?",new String[]{phone});
                         sqLiteDatabase.close();
+
+                        SharePreferences.remove(PersonChangeActivity.this,AppConstants.USER_NAME);
+                        SharePreferences.putString(PersonChangeActivity.this,AppConstants.USER_NAME,editText.getText().toString());
 
                         SharePreferences.remove(PersonChangeActivity.this,AppConstants.USER_CLASSIFY);
                         SharePreferences.putInt(PersonChangeActivity.this,AppConstants.USER_CLASSIFY,classifyId);

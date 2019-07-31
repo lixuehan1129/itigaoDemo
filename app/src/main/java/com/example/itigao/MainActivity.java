@@ -3,13 +3,12 @@ package com.example.itigao;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.util.TypedValue;
 import android.view.Gravity;
-import android.view.KeyEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
@@ -26,14 +25,12 @@ import com.example.itigao.Classes.ClassesFragment;
 import com.example.itigao.Database.DataBaseHelper;
 import com.example.itigao.Personal.PersonalFragment;
 import com.example.itigao.Recommend.DataBaseFragment;
-import com.example.itigao.Recommend.RecommendFragment;
 import com.example.itigao.Sport.SportFragment;
 import com.example.itigao.Subscribe.SubscribeFragment;
 import com.example.itigao.Utils.PermissionUtils;
 import com.example.itigao.Utils.StatusBarUtils;
 import com.example.itigao.ViewHelper.NoScollViewPager;
 import com.mob.MobSDK;
-
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
@@ -163,18 +160,26 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationB
 
    //
    // Android按返回键，程序进入后台运行，不关闭程序
-    @Override
-    public boolean onKeyDown(int keyCode, KeyEvent event) {
+//    @Override
+//    public boolean onKeyDown(int keyCode, KeyEvent event) {
+//
+//        if (keyCode == KeyEvent.KEYCODE_BACK) {
+//            // moveTaskToBack(false);
+//            Intent intent = new Intent(Intent.ACTION_MAIN);
+//            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+//            intent.addCategory(Intent.CATEGORY_HOME);
+//            startActivity(intent);
+//            return true;
+//        }
+//        return super.onKeyDown(keyCode, event);
+//    }
 
-        if (keyCode == KeyEvent.KEYCODE_BACK) {
-            // moveTaskToBack(false);
-            Intent intent = new Intent(Intent.ACTION_MAIN);
-            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            intent.addCategory(Intent.CATEGORY_HOME);
-            startActivity(intent);
-            return true;
-        }
-        return super.onKeyDown(keyCode, event);
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(Intent.ACTION_MAIN);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        intent.addCategory(Intent.CATEGORY_HOME);
+        startActivity(intent);
     }
 
     @Override
@@ -263,4 +268,5 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationB
         final float scale = getApplication().getResources().getDisplayMetrics().density;
         return (int) (dpValue * scale + 0.5f);
     }
+
 }

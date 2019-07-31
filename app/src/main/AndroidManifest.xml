@@ -56,12 +56,13 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher1"
+        android:icon="@mipmap/ic_launcher2"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         android:hardwareAccelerated="true"
         android:largeHeap="true"
+        android:name="org.litepal.LitePalApplication"
         tools:ignore="GoogleAppIndexingWarning">
         <activity android:name=".InitializeActivity">
             <intent-filter>

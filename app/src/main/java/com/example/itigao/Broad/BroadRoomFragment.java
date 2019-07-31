@@ -189,7 +189,7 @@ public class BroadRoomFragment extends BackHandleFragment {
     class OnBackDataListener implements BackDataListener {
         //实现接口中处理数据的函数,只要右边的Fragment调用onData函数,这里就会收到传递的数据
         public void backData(String data) {
-            InteractAdapter.Interact interact = interactAdapter.new Interact("我", data);
+            InteractAdapter.Interact interact = interactAdapter.new Interact(SharePreferences.getString(getActivity(), AppConstants.USER_NAME), data);
             interactAdapter.addDataAt(interactAdapter.getItemCount(),interact);
             recyclerView.smoothScrollToPosition(interactAdapter.getItemCount()-1);
         }
@@ -220,17 +220,17 @@ public class BroadRoomFragment extends BackHandleFragment {
             }
             if(getCon != null){
                 //System.out.println("我的数字"+interacts.size());
-                if(msg.getFromID().equals(SharePreferences.getString(getActivity(), AppConstants.USER_PHONE))){
-                    InteractAdapter.Interact interact = interactAdapter.new Interact("我", getCon);
-                    interactAdapter.addDataAt(interactAdapter.getItemCount(),interact);
-
-                    recyclerView.smoothScrollToPosition(interactAdapter.getItemCount()-1);
-                }else {
+//                if(msg.getFromID().equals(SharePreferences.getString(getActivity(), AppConstants.USER_PHONE))){
+//                    InteractAdapter.Interact interact = interactAdapter.new Interact("我", getCon);
+//                    interactAdapter.addDataAt(interactAdapter.getItemCount(),interact);
+//
+//                    recyclerView.smoothScrollToPosition(interactAdapter.getItemCount()-1);
+//                }else {
                     InteractAdapter.Interact interact = interactAdapter.new Interact(msg.getFromName(), getCon);
                     interactAdapter.addDataAt(interactAdapter.getItemCount(),interact);
 
                     recyclerView.smoothScrollToPosition(interactAdapter.getItemCount()-1);
-                }
+          //      }
 //                if(interactAdapter.getItemCount() != 0){
 //                    recyclerView.scrollToPosition(interactAdapter.getItemCount()-1);
 //                }

@@ -152,6 +152,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/sportFragment_ly"
                 android:layout_marginTop="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -159,40 +160,30 @@
                 android:orientation="vertical"
                 android:background="@drawable/round_gb_gray">
 
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="每周目标"
-                            android:textSize="12sp"
-                            android:textColor="@color/colorBlack"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="每周目标"
+                    android:textSize="12sp"
+                    android:textColor="@color/colorBlack"/>
+
+                <TextView
+                    android:paddingTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="点击添加目标"
+                    android:textSize="10sp" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:clickable="false"
+                    android:paddingTop="8dp"
+                    android:id="@+id/sportFragment_rvT"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </android.support.v7.widget.RecyclerView>
 
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            android:paddingTop="10dp">
-
-                            <TextView
-                                android:layout_weight="4"
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
-                                android:singleLine="false"
-                                android:textSize="12sp"
-                                android:lineSpacingExtra="5dp"
-                                android:text=" 写作目标：5000\n 每日读书：30分钟\n 背单词：50个\n 数学题：1套\n 教学视频: 30分钟\n   ......"/>
-
-                            <TextView
-                                android:layout_weight="1"
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
-                                android:singleLine="false"
-                                android:textSize="12sp"
-                                android:lineSpacingExtra="5dp"
-                                android:textColor="@color/colorGreen1"
-                                android:text=" √\n √\n √\n √\n √\n"/>
-
-                        </LinearLayout>
 
 
             </LinearLayout>

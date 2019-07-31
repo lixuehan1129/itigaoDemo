@@ -11,8 +11,6 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
-
 
 import com.example.itigao.Adapter.InteractAdapter;
 import com.example.itigao.AutoProject.AppConstants;
@@ -256,7 +254,7 @@ public class RoomFragment extends BackHandleFragment {
     class OnBackDataListener implements BackDataListener {
         //实现接口中处理数据的函数,只要右边的Fragment调用onData函数,这里就会收到传递的数据
         public void backData(String data) {
-            InteractAdapter.Interact interact = interactAdapter.new Interact("我", data);
+            InteractAdapter.Interact interact = interactAdapter.new Interact(SharePreferences.getString(getActivity(), AppConstants.USER_NAME), data);
             interactAdapter.addDataAt(interactAdapter.getItemCount(),interact);
             recyclerView.smoothScrollToPosition(interactAdapter.getItemCount()-1);
         }
@@ -287,17 +285,17 @@ public class RoomFragment extends BackHandleFragment {
             }
             if(getCon != null){
                 //System.out.println("我的数字"+interacts.size());
-                if(msg.getFromID().equals(SharePreferences.getString(getActivity(), AppConstants.USER_PHONE))){
-                    InteractAdapter.Interact interact = interactAdapter.new Interact("我", getCon);
-                    interactAdapter.addDataAt(interactAdapter.getItemCount(),interact);
-
-                    recyclerView.smoothScrollToPosition(interactAdapter.getItemCount()-1);
-                }else {
+//                if(msg.getFromID().equals(SharePreferences.getString(getActivity(), AppConstants.USER_PHONE))){
+//                    InteractAdapter.Interact interact = interactAdapter.new Interact("我", getCon);
+//                    interactAdapter.addDataAt(interactAdapter.getItemCount(),interact);
+//
+//                    recyclerView.smoothScrollToPosition(interactAdapter.getItemCount()-1);
+//                }else {
                     InteractAdapter.Interact interact = interactAdapter.new Interact(msg.getFromName(), getCon);
                     interactAdapter.addDataAt(interactAdapter.getItemCount(),interact);
 
                     recyclerView.smoothScrollToPosition(interactAdapter.getItemCount()-1);
-                }
+            //    }
             }
         }
 

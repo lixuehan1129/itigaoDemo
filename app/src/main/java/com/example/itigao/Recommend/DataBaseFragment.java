@@ -422,7 +422,7 @@ public class DataBaseFragment extends BaseFragment {
                     int hour = class_selects.getAppoint_time() == 1? 8:14;
                     int minute = 20;
                     calendar.set(year, month - 1, day, hour, minute);
-                   // calendar.set(2019, 6, 3, 17, 3);
+                    //calendar.set(2019, 6, 4, 9, 54);
                     am.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), sender);
 
                 }else {
